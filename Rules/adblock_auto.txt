@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 3bQrm5TV0AGmTlf3zgJjoQ
+! Checksum: GcfFtM629yhKbOUoJwbl8Q
 ! Title: 混合规则(自动更新)
-! Version: 20240324001518
+! Version: 20240324083431
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-03-24 00:15:18
-! Total Count: 136728
-! Blocked Filters: 136728
+! Last modified: 2024-03-24 08:34:31
+! Total Count: 136741
+! Blocked Filters: 136741
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -18644,6 +18644,7 @@
 ||count.prx.org^
 ||count.rin.ru^
 ||count.rtl.de^
+||count.sibbo.net^
 ||count.webstatistik-bw.de^
 ||count.xxxssk.com^
 ||count.xxxssk.com^$third-party
@@ -39375,6 +39376,7 @@
 ||jtwlvpux.com^
 ||jtxh.net^$third-party
 ||jtxw.cloud^
+||jtyusia.top^
 ||ju427bv7an9n.com^
 ||juajmrpo.com^
 ||juandou.com^$third-party
@@ -42336,6 +42338,7 @@
 ||lgse.com^
 ||lgsmartad.com^
 ||lgtdkpfnor.com^
+||lgtpdt.xyz^
 ||lguaud.icu^
 ||lgugsnp.cn^
 ||lgviqkrimvmy.xyz^
@@ -52451,6 +52454,7 @@
 ||oxkhifobfkky.com^
 ||oxkpbuv.com^
 ||oxkxuvoecktrv.com^
+||oxkyaq.xyz^
 ||oxlandvoicing.digital^
 ||oxlfhifzfynll.com^
 ||oxllyobna.com^
@@ -54183,6 +54187,7 @@
 ||pilsarde.net^
 ||piltockcurt.top^
 ||piluleruggy.com^
+||pimg2023.com^
 ||pimpleinterference.com^
 ||pimpmypr.de^
 ||pimpoopo.com^
@@ -59800,6 +59805,7 @@
 ||rhythmmassacre.com^
 ||rhythmxchange.com^
 ||rhytic.com^
+||rhzvlcu.xyz^
 ||ri1.site/wp-content/uploads/*x400.
 ||riamiavid.com^
 ||riastats.com^
@@ -69795,6 +69801,7 @@
 ||tns.simba.taobao.com^
 ||tnsmufijcnulqtl.com^
 ||tnudztz.com^
+||tnvnnn.xyz^
 ||tnwlpbxyto.com^
 ||to.getnitropack.com^
 ||to8to.com/assets/wap//common/widgets/appGuide/appGuide.
@@ -81149,6 +81156,7 @@
 ||yystzl.cn^
 ||yyttc.top^
 ||yyttm.top^
+||yyttmyy.cn^
 ||yytxzct.xyz^
 ||yyuivw6.com^
 ||yyujke.top^
@@ -106346,6 +106354,7 @@ $websocket,domain=4archive.org|5nj.com|allthetests.com|boards2go.com|cechi8.com|
 /adserve_
 /adserver-
 /adserver.$popup
+/adserver.$~xmlhttprequest
 /adserver.$~xmlhttprequest,domain=~konograma.com
 /adserver/*
 /adserver01.
@@ -110365,18 +110374,20 @@ $websocket,domain=4archive.org|5nj.com|allthetests.com|boards2go.com|cechi8.com|
 /scn.php?
 /scr/wtixyd.js
 /script-adv-
-/script/aclib.js$third-party
+/script/aclib.js
 /script/ad.$~script
 /script/ads_
 /script/awesome.js
 /script/java.php?$xmlhttprequest
 /script/nasu.js$third-party
 /script/nrsu.js$third-party
+/script/nwsu.js
 /script/nwsu.js$third-party
 /script/oas/*
 /script/suurl4.php?$third-party
 /script/ut.js?cb=$third-party
 /script/wait.php?*=$xmlhttprequest
+/scriptFileV2.js
 /scriptonline.js?uin=
 /scripts/AdService_
 /scripts/ad-
@@ -110449,6 +110460,7 @@ $websocket,domain=4archive.org|5nj.com|allthetests.com|boards2go.com|cechi8.com|
 /shenmago_download_app_
 /shortmediads/*
 /show-ad.
+/show-ad.js
 /show.ad?
 /show.cgi?adp
 /show.js?aid=*&pushid=
@@ -110460,6 +110472,7 @@ $websocket,domain=4archive.org|5nj.com|allthetests.com|boards2go.com|cechi8.com|
 /showJsAd/*
 /showSp.php?
 /show_ad.
+/show_ad.js
 /show_ad?
 /show_ad_
 /show_ads_
@@ -110474,6 +110487,7 @@ $websocket,domain=4archive.org|5nj.com|allthetests.com|boards2go.com|cechi8.com|
 /showadvertising.
 /showban.asp?
 /showbanner.
+/showbanner.js
 /showcasead/*
 /showcode?adids=
 /showflashad.
@@ -132046,7 +132060,6 @@ zle.com$script
 ##A[href*=".com/?Agent="]
 ##A[href="http://t.cn/A6hQCVsv"]
 ##A[href^="/e/public/ClickAd?adid="]
-##A[target="_blank"][href^="https://js."][href$=".com/download/4122_0.html"]
 ##DFP-AD
 ##[ad_display_dot]
 ##[ad_dot_url]
