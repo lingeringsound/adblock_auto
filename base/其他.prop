@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: V4HVjgB01JGXsd3bud9nHA
+! Checksum: SMrvDsWF1B9tedbjj2pfnw
 ! Title: 自用去广告Adblock规则
-! Version: 20240314153135
-! Last modified: 2024-03-14 15:31:35
-! Total Count: 3842
+! Version: 20240326161737
+! Last modified: 2024-03-26 16:17:37
+! Total Count: 3859
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -332,6 +332,7 @@
 ##.textadv
 ##.thumb-ad
 ##.thumb-nat-ad
+##.tonglanad
 ##.top-ads-container
 ##.top-ads-content
 ##.topads
@@ -442,9 +443,11 @@
 ##[href*="https://zi.nvurz.com"]
 ##[href="/adad.html"]
 ##[href="https://05.zde95.vip/"]
+##[href="https://ztmzxnl633.xyz"]
 ##[href] > .add
 ##[href^="https://cdgjv8760.xyz"]
 ##[href^="https://jbc568.com/"]
+##[href^="https://www.7227bw.com"]
 ##[id$="-ad-box"]
 ##[id$="-ads-box"]
 ##[id$="_ad_box"]
@@ -469,6 +472,7 @@
 ##[id^="player-advertising"]
 ##[id^="section-ad-banner"]
 ##[id^="syad"]
+##[id^="tonglanad_"]
 ##[id^="xqad"]
 ##[name^="google_ads_iframe"]
 ##[onclick*="//xxl.skdvkslkdb.com"]
@@ -635,6 +639,7 @@
 ##a[href="https://kdocs.cn/l/cvrhLsljwX1C"]
 ##a[href="https://kds03.net"][target="_blank"]
 ##a[href="https://mbfbf022.xyz"][target="_blank"]
+##a[href="https://nbfbb009.xyz"]
 ##a[href="https://sk83k.com"][target="_blank"]
 ##a[href="https://ttzzz11.com"]
 ##a[href="https://ttzzz22.com"]
@@ -713,6 +718,7 @@
 ##a[rel="nofollow"][href][target="_blank"] > div[class^="q-responsive"]
 ##a[rel="nofollow"][href][target="_blank"] > img[rel="nofollow"][height][width][style]
 ##a[style*="width:99%"][style*="z-index:100000"][style*="block"]
+##a[style="position:fixed;bottom:5px;width:100%;height:130px;;z-index:10000;display:block;"]
 ##a[target=" _blank"] > img[src$=".gif"][style*="width:100%"]
 ##a[target="_blank"] > img[src$="-150-300.gif"]
 ##a[target="_blank"] > img[src$="-150x300.gif"]
@@ -1113,6 +1119,7 @@
 ##img[src^="https://sbb.bbb.byjykj.xyz"]
 ##img[src^="https://sbb.bbb.wzguosutang.com"]
 ##img[src^="https://shaonvxueyuan.top"]
+##img[src^="https://sm2ff.net"]
 ##img[src^="https://static.missav"][data-src^="https://static.missav"][alt][class="lozad"][data-loaded="true"]
 ##img[src^="https://u10"][src*=".com"][src$=".gif"]
 ##img[src^="https://vip2.loli.io"]
@@ -1137,6 +1144,7 @@
 ##script + .show-app2
 ##script + .show-app3
 ##script + .show-app4
+##script + [class^="float-app"]
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
 ##section > .friendlylink > .w
@@ -1198,6 +1206,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .adwolf.
 .ae/ads/
 .ai/ads.
+.app/js/gg.js$script
 .at/ads/
 .au/ads/
 .be/ads/
@@ -1206,6 +1215,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .biz/ad/
 .biz/ad2/
 .biz/ads/
+.buzz/js/gg.js$script
 .buzz/video-ads/
 .buzz:*/api/v4/g?kyurl=$third-party
 .buzz:80*/cc/*?is_not=$third-party
@@ -1226,6 +1236,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn/api/getPos?jspath=/$~third-party
 .cn/cg/*-*.cg$third-party
 .cn/j/*$script,third-party
+.cn/js/gg.js$script
 .cn/k/*$script,third-party
 .cn/s/*.xc$third-party
 .cn/sc/*?n=$third-party
@@ -1287,6 +1298,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/ev/*?type=impressions
 .com/in/multy$third-party
 .com/j/*$script,third-party
+.com/js/gg.js$script
 .com/k/*$script,third-party
 .com/o.js$third-party
 .com/rs/to/*?n=cbh&p=false&t=16$third-party
@@ -1363,11 +1375,13 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/*/20*/*/16*.gif$image,third-party
 .icu/?token=$third-party
 .icu/biyys*.js$third-party,script
+.icu/js/gg.js$script
 .icu/pssbk?$third-party
 .icu/release*ts?*16$third-party
 .icu:28883/*/*$third-party
 .la/8WaadBLH/*.js
 .live/j/*/*?$third-party
+.live/js/gg.js$script
 .live/k/*/*?$third-party
 .live/kallss?$third-party
 .live/r/*/*?$third-party
@@ -1380,6 +1394,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .live:80*/cc/*?is_not=$third-party
 .live:80*/sc/*?is_not=$third-party
 .net/20*/*/*.txt$third-party
+.org/js/gg.js$script
 .ph/ads/
 .php/ad/
 .php/ads/
@@ -1451,6 +1466,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz/iutfkdfnshsdfk.js$third-party
 .xyz/jque*.js?
 .xyz/js/adlm$third-party,script
+.xyz/js/gg.js$script
 .xyz/kallss?$third-party
 .xyz/mithril?$third-party
 .xyz/o.js
@@ -2351,6 +2367,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.com/*M*M*M*M*M*M*==$third-party,domain=youtube.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
+@@/?utm_source=*&utm_campaign=$domain=dlsite.com
 @@/api/ad/*$domain=pinduoduo.com
 @@/api/ads?$domain=nmkjxy.com
 @@/api/models?$domain=tik.porn
