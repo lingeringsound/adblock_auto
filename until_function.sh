@@ -347,13 +347,13 @@ done
 function wipe_same_selector_fiter(){
 local file="${1}"
 test ! -f "${file}" && return 0
-local target_fiter=$(cat "${file}" | grep -E '^(\|\|).*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | sed '/domain=/d')
+local target_fiter=$(cat "${file}" | grep -E '^(\|\|).*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d')
 for i in ${target_fiter}
 do
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
 	same_fiter_escape=`escape_special_chars "${same_fiter}"`
 	rule=`escape_special_chars "${i}"`
-	grep -qE "^${same_fiter_escape}$" "${file}" && sed -Ei "/^${rule}$/d" "${file}" || continue
+	grep -qE "^${same_fiter_escape}$" "${file}" && busybox sed -Ei "/^${rule}$/d" "${file}" || continue
 done
 }
 
