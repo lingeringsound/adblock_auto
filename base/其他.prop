@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2MU5xBGcq3hYXX7H6kjdrQ
+! Checksum: JAkxxCxMMiebq0FiG7DsLg
 ! Title: 自用去广告Adblock规则
-! Version: 20240329194742
-! Last modified: 2024-03-29 19:47:42
-! Total Count: 4045
+! Version: 20240329195739
+! Last modified: 2024-03-29 19:57:39
+! Total Count: 4053
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2592,6 +2592,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||guokr.com/apis/flowingboard/item/m_
 @@||heytapimage.com^$third-party,domain=news.heytapdownload.com
 @@||imasdk.googleapis.com/*/ima3.js$domain=player.glomex.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=4gtv.tv|881903.com|ani.gamer.com.tw|appledaily.com|hamivideo.hinet.net|line.me|linetv.tw|litv.tv|mytvsuper.com|nextmedia.com|now.com|shahid.mbc.net|tvb.com|udn.com|ulifestyle.com.hk
 @@||mix.sina.com.cn^
 @@||os2023001.oss-cn-quanzhou.kz.cc$script
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=androidrepublic.org|apkmirror.com|b00.tw|boo.tw|cleodesktop.com|dl.ccbluex.net|freeopenvpn.org|hexviewer.iblogbox.com|lolalytics.com|onlinemschool.com|roaddir.com|smsget.net|streetdir.com|thewebflash.com|up-4ever.com
@@ -3510,6 +3511,7 @@ zle.com$script
 ||c-ctrip.com/train/*/*.jpg
 ||c.autohome.com.cn^
 ||c.j0rd.vip^
+||capaciousdrewreligion.com^
 ||cdn-aousoce.org/*/musoapp.js$third-party
 ||celcxjb.cn^
 ||cer.niaideren.icu^
@@ -3667,6 +3669,12 @@ zle.com$script
 ||iewtwo.xyz^
 ||ifengimg.com^*/sta_collection
 ||image.hxgmcml.cn^
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=hoy.tv|line.me
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=linetv.tw
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=hoy.tv|line.me
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,important,domain=linetv.tw
+||imasdk.googleapis.com^$important,script,redirect=noopjs,domain=ampproject.net|debilizator.tv|dplay.dk|mojpieknyogrod.pl|news18.com|onnetwork.tv|shahid.mbc.net|tvzavr.ru|winknews.com
+||imasdk.googleapis.com^$xmlhttprequest,redirect-rule=noop.txt
 ||img.imimimi.top^
 ||img.jygdb.com^$script,third-party
 ||img.zfzys.top^$third-party,image
