@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: mZyenaGp79gb3VaQDnSCOg
+! Checksum: 2MU5xBGcq3hYXX7H6kjdrQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240329121244
-! Last modified: 2024-03-29 12:12:44
-! Total Count: 4043
+! Version: 20240329194742
+! Last modified: 2024-03-29 19:47:42
+! Total Count: 4045
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -932,7 +932,6 @@
 ##body > div[id][style="display: block; width: 100%; position: relative; height: 127.188px; margin: 0px; padding: 0px; border: 0px none; background: none;"]
 ##body > embed[id][src*="://"][src$="="]
 ##body > embed[id][src^="https:///"]
-##body > script
 ##body > script + *[id][class][classname]
 ##body > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##body#app.pc.mobile
@@ -2500,6 +2499,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://dpic.*.cn/*.js$third-party
 ://dpic.*.cn/*.txt$third-party
 ://e.*.xyz/apps/sdk$third-party
+://go.*.com/smartpop/*?*=$third-party
 ://im.ifengsong888.com/*.gif
 ://im.ifengsong888.com/*.jpg
 ://im.yfled888.com/*.gif
@@ -2591,6 +2591,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||guokr.com/apis/flowingboard/item/guokrapp_
 @@||guokr.com/apis/flowingboard/item/m_
 @@||heytapimage.com^$third-party,domain=news.heytapdownload.com
+@@||imasdk.googleapis.com/*/ima3.js$domain=player.glomex.com
 @@||mix.sina.com.cn^
 @@||os2023001.oss-cn-quanzhou.kz.cc$script
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=androidrepublic.org|apkmirror.com|b00.tw|boo.tw|cleodesktop.com|dl.ccbluex.net|freeopenvpn.org|hexviewer.iblogbox.com|lolalytics.com|onlinemschool.com|roaddir.com|smsget.net|streetdir.com|thewebflash.com|up-4ever.com
@@ -3617,6 +3618,7 @@ zle.com$script
 ||go.adltserv.com^
 ||go.goaserv.com$third-party
 ||go.meiweifood.xyz^
+||go.mnaspm.com^
 ||go.superchatlive.com^
 ||go.xlirdr.com^
 ||go.xlivrdr.com^
