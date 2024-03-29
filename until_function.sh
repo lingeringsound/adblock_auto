@@ -286,6 +286,7 @@ local IFS=$'\n'
 local target_adblock_file="${1}"
 test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_file} 规则文件不存在！！！" && return
 sort_domain_Combine "${target_adblock_file}"
+wipe_same_selector_fiter "${target_adblock_file}"
 }
 
 
@@ -342,6 +343,19 @@ do
 done
 }
 
+#去除部分选择器
+function wipe_same_selector_fiter(){
+local file="${1}"
+test ! -f "${file}" && return 0
+local target_fiter=$(cat "${file}" | grep -E '^(\|\|).*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | sed '/domain=/d')
+for i in ${target_fiter}
+do
+	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
+	same_fiter_escape=`escape_special_chars "${same_fiter}"`
+	rule=`escape_special_chars "${i}"`
+	grep -qE "^${same_fiter_escape}$" "${file}" && sed -Ei "/^${rule}$/d" "${file}" || continue
+done
+}
 
 
 #更新README信息
