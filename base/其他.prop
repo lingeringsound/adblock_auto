@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 4mAmF+J13iXeOMzhFZ4d7A
+! Checksum: JYEUDfZgXzSSHXvlqdzyGg
 ! Title: 自用去广告Adblock规则
-! Version: 20240327102335
-! Last modified: 2024-03-27 10:23:35
-! Total Count: 4037
+! Version: 20240329111329
+! Last modified: 2024-03-29 11:13:29
+! Total Count: 4042
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1059,6 +1059,7 @@
 ##div[id^="test"][style*="fixed"][style*="position:"]
 ##div[id^="ts_ad_native"]
 ##div[id^="video-player-ads"]
+##div[id^="yandex_rtb"]
 ##div[onclick*="window.location.href"][onclick*=".biqu"][onclick*="app"]
 ##div[onclick^="window.location.href"][onclick*=".bcebos."]
 ##div[onclick^="window.location.href"][onclick*="apps.apple.com/cn/"]
@@ -2616,6 +2617,7 @@ ali213.net##iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][widt
 amateur8.com##.rmp-container
 anime1.me##div[id^="ad-"] > a
 animehentaihub.com,bestjavporn.com,hentaiasmr.moe,koreanstreamer.xyz,youporntube.net##.happy-header
+asmregg.xyz##a[href^="https://asmregg.xyz"] > img[src$=".gif"]
 autohome.com.cn###float_bottom_button
 autohome.com.cn###float_new_button
 autohome.com.cn###recommand-article
@@ -3046,6 +3048,7 @@ mydrivers.com#@#a[href*="/bp.ashx"]
 n6h7m.com##a[href="/pwa/lottery"],img[src*="://ad.xmmnsl.com"],a[referrerpolicy="unsafe-url"][target="_blank"],.float-ad
 news.heytapdownload.com##[class^="oppo-cec-new"]
 news.heytapdownload.com##div.news-wrapper
+noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
 nr19.cn,bilibili.com,youku.com,v.qq.com,acfun.cn#@#img[alt*="广告"][src]
 nsfwr34.com##body > div[id][class]:has(img[src*="-ads-block-detector"])
 nxnba.com##.bootom-fixed
@@ -3403,6 +3406,7 @@ zle.com$script
 ||888bb111ww.com^
 ||888xx222kk.com^
 ||888xx555kk.com^
+||a-ads.com^
 ||a.adtng.com^
 ||a.shukriya90.com^
 ||aaenv48847h.com^$script
@@ -4041,3 +4045,4 @@ zle.com$script
 ||zgwsnw.xyz^$third-party
 ||zkappsart.com^$third-party,xmlhttprequest
 ||zz.bdstatic.com^
+~esetnod32.ru##.b-banner
