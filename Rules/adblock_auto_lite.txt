@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: /yqDieHW+btX+T87LrDAIg
+! Checksum: jDsg/HyaqVOXLOxc1V51Iw
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240330161135
+! Version: 20240330181702
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-03-30 16:11:35
-! Total Count: 26005
-! Blocked Filters: 26005
+! Last modified: 2024-03-30 18:17:02
+! Total Count: 26136
+! Blocked Filters: 26136
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -1337,7 +1337,6 @@
 ||aacoffee.cn^
 ||aadmei.xyz^
 ||aaenv48847h.com^
-||aaenv48847h.com^$script
 ||aafuck.xyz^$third-party
 ||aag.yahooapis.jp^
 ||aagomsi.xyz^
@@ -1404,7 +1403,6 @@
 ||ac.tc.qq.com/store_file_download?*&dir_path=/admin/swf/
 ||ac1.pingpingw.com^
 ||acc.3gbizhi.com^
-||acc.3gbizhi.com^$script
 ||acceptableauthority.com^$third-party
 ||accid.xyz^
 ||aceik.xyz^
@@ -4294,7 +4292,6 @@
 ||bydzfldt.xyz^
 ||byjdg.xyz^$third-party
 ||byjykj.xyz^
-||byjykj.xyz^$third-party,image
 ||bymahuxv.xyz^
 ||byscy.cn^$third-party
 ||bytegoofy.com/goofy/*/push.js?
@@ -7448,7 +7445,6 @@
 ||hxpmbb.xyz^
 ||hxqu.com^$third-party
 ||hxsxw.com/hx8899/
-||hxsxw.com/hx8899/$image
 ||hxsxw.com/js/float.js
 ||hy.huangye88.com.cn^
 ||hy.huangye88.net^
@@ -12663,7 +12659,6 @@
 ||talkfx.*/showTKImg?
 ||tamedia.com.tw^$third-party
 ||tangrenjie.tv/gg/
-||tangrenjie.tv/gg/$image
 ||tangsanshu.net/*/*.js
 ||tangyamount.com^$third-party
 ||tanju.vip/nyindex.
@@ -16880,6 +16875,17 @@ pinflix.com,pornhd.com###inVidZone
 pinflix.com,pornhd.com##.zone-area
 pinloker.com,sekilastekno.com,sektekomik.com,pornve.com###teaser2
 piratia.su###block-warning
+pixiv.net##._illust-upload + div[style*="968px;"][style*="170px;"]
+pixiv.net##._premium-lead-function-banner
+pixiv.net##.ad-frame
+pixiv.net##.ad-frame-container
+pixiv.net##.ad-iframe
+pixiv.net##.ad-mobile-anchor
+pixiv.net##a[target="premium_noads"]
+pixiv.net##div[id^="adsdk-"]
+pixiv.net##div[style="font-size: 0px;"] a[target="premium_noads"]
+pixiv.net##iframe[src^="https://pixon.ads-pixiv.net/"]
+pixiv.net##iframe[width="300"][height="250"]
 pkmods.com##body > div[style*="z-index"][style*="background"]
 play44.net,videobug.net,videofun.me,vidzur.com,yucache.net##[style^="position: absolute; width: 100%;"]
 player.javbraze.com,stream4free.live###closeButton
@@ -22749,7 +22755,11 @@ zle.com$script
 ##.ad-couplet-common
 ##.ad-declaration
 ##.ad-desktop
+##.ad-frame
+##.ad-frame-container
 ##.ad-group
+##.ad-iframe
+##.ad-iframe-container
 ##.ad-left
 ##.ad-left-down
 ##.ad-mod
@@ -22763,6 +22773,8 @@ zle.com$script
 ##.ad-site
 ##.ad-title
 ##.ad-top
+##.ad-wireframe
+##.ad-wireframe-wrapper
 ##.ad.mi_btcon
 ##.ad.noadmo
 ##.ad.none
@@ -22792,9 +22804,16 @@ zle.com$script
 ##.adBlockWarning
 ##.adContainer[style="margin-top: -5px"]
 ##.adDingT
+##.adFrame
+##.adFrameCnt
+##.adFrameContainer
+##.adFrameMobile
+##.adFrames
 ##.adHF
 ##.adHF3
 ##.adHF6
+##.adIframe
+##.adIframeCount
 ##.adInfo
 ##.adLink
 ##.adNone
@@ -22809,6 +22828,7 @@ zle.com$script
 ##.ad_banner
 ##.ad_bar
 ##.ad_before.happy-inside-player
+##.ad_belowfirstpost_frame
 ##.ad_bg
 ##.ad_block_detected
 ##.ad_block_off
@@ -22819,10 +22839,13 @@ zle.com$script
 ##.ad_content_mask
 ##.ad_couplebanner
 ##.ad_footerbanner
+##.ad_frame
+##.ad_frame_around
 ##.ad_headerbanner
 ##.ad_hf
 ##.ad_hover_href
 ##.ad_id_1,.ad_id_2,.ad_id_3,.ad_id_4,.ad_id_5
+##.ad_iframe2
 ##.ad_img
 ##.ad_mod
 ##.ad_news
@@ -22842,6 +22865,16 @@ zle.com$script
 ##.adb-detect.simple-alert-boxes
 ##.adb-enabled
 ##.adbanner
+##.adbanner-300-250
+##.adbanner-bottom
+##.adbanner1
+##.adbanner2nd
+##.adbannerbox
+##.adbanneriframe
+##.adbannerright
+##.adbannertop
+##.adbase
+##.adbbox
 ##.adbd-background
 ##.adbd-message
 ##.adbd-wrapper
@@ -22885,8 +22918,13 @@ zle.com$script
 ##.adcontent
 ##.add-gg
 ##.addddddwarp
+##.adframe
+##.adframe2
+##.adframe_banner
+##.adframe_rectangle
 ##.adh5
 ##.adhesion.orange.horizontal.sporcle-promo
+##.adiframe
 ##.adisclaimer
 ##.adline
 ##.adlist
@@ -22924,8 +22962,96 @@ zle.com$script
 ##.adsblocked
 ##.adsbyexoclick
 ##.adsbytrafficjunky
+##.adsens
+##.adsense-250
+##.adsense-300-600
+##.adsense-336
+##.adsense-336-280
+##.adsense-468
+##.adsense-728-90
+##.adsense-ad-results
+##.adsense-ads
+##.adsense-afterpost
+##.adsense-area
+##.adsense-article
+##.adsense-block
+##.adsense-box
+##.adsense-center
+##.adsense-code
+##.adsense-container
+##.adsense-content
+##.adsense-div
+##.adsense-float
+##.adsense-googleAds
+##.adsense-header
+##.adsense-heading
+##.adsense-iframe-container
+##.adsense-inline
+##.adsense-left
+##.adsense-links
+##.adsense-loading
+##.adsense-module
+##.adsense-overlay
+##.adsense-post
+##.adsense-resposivo-meio
+##.adsense-right
+##.adsense-slot
+##.adsense-square
+##.adsense-sticky-slide
+##.adsense-title
+##.adsense-top
+##.adsense-unit
+##.adsense-widget
+##.adsense-wrapper
+##.adsense1
 ##.adsense160
+##.adsense160x600
 ##.adsense200
+##.adsense250
+##.adsense3
+##.adsense300
+##.adsense300x250
+##.adsense728
+##.adsense728x90
+##.adsenseAds
+##.adsenseBannerArea
+##.adsenseBlock
+##.adsenseContainer
+##.adsenseList
+##.adsenseRow
+##.adsenseSky
+##.adsenseWrapper
+##.adsense_200
+##.adsense_336_280
+##.adsense_728x90_container
+##.adsense_ad
+##.adsense_block
+##.adsense_bottom
+##.adsense_container
+##.adsense_content_300x250
+##.adsense_div_wrapper
+##.adsense_inner
+##.adsense_label
+##.adsense_leader
+##.adsense_media
+##.adsense_menu
+##.adsense_mpu
+##.adsense_rectangle
+##.adsense_results
+##.adsense_right
+##.adsense_sidebar
+##.adsense_sidebar_top
+##.adsense_single
+##.adsense_top
+##.adsense_top_ad
+##.adsense_unit
+##.adsense_wrapper
+##.adsensebig
+##.adsensefloat
+##.adsenseformat
+##.adsenseframe
+##.adsenseleaderboard
+##.adsensemobile
 ##.adsoho
 ##.adspace
 ##.adspop
@@ -22953,7 +23079,9 @@ zle.com$script
 ##.adx-wrapper-middle
 ##.adx_center
 ##.afc_popup
+##.aff-iframe
 ##.affTpllay[style]
+##.affiliate-mrec-iframe
 ##.alert_windows > .q-card__actions > a
 ##.amp-ad container
 ##.amp-ad-container
@@ -23073,6 +23201,7 @@ zle.com$script
 ##.col-md-10 > .banner-table-block
 ##.col5 > dl#randomBox
 ##.col6 > a[onclick*="横幅"]
+##.colBoxAdframe
 ##.comiis_ad
 ##.comiis_adbox
 ##.comiis_guanggao
@@ -23116,12 +23245,14 @@ zle.com$script
 ##.cui-pt-item[data-qhb]
 ##.d_banner_inner
 ##.dabc > .ng-star-inserted
+##.dartiframe
 ##.davwheat-ad
 ##.ddd.ng-star-inserted
 ##.deadblocker-header-bar
 ##.deadblocker-header-bar-inner
 ##.detectBlockBox
 ##.detected-block-modal
+##.dfp_frame
 ##.dipiao
 ##.dispositifAdblock
 ##.dispositifAdblockContent
