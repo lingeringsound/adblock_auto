@@ -351,9 +351,9 @@ local target_fiter=$(cat "${file}" | grep -E '^(\|\|).*\$(third-party|popup|thir
 for i in ${target_fiter}
 do
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
-	same_fiter_escape=`escape_special_chars "${same_fiter}"`
-	rule=`escape_special_chars "${i}"`
-	grep -qE "^${same_fiter_escape}$" "${file}" && busybox sed -Ei "/^${rule}$/d" "${file}" || continue
+	same_fiter_escape=`escape_special_chars ${same_fiter}`
+	rule=`escape_special_chars ${i}`
+	grep -qE "^${same_fiter_escape}$" "${file}" && {busybox sed -Ei "/^${rule}$/d" "${file}" ; echo "※去除域名规则${i}" } || continue
 done
 }
 
