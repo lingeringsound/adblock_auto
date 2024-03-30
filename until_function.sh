@@ -286,7 +286,6 @@ local IFS=$'\n'
 local target_adblock_file="${1}"
 test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_file} 规则文件不存在！！！" && return
 sort_domain_Combine "${target_adblock_file}"
-wipe_same_selector_fiter "${target_adblock_file}"
 }
 
 
@@ -350,7 +349,6 @@ local IFS=$'\n'
 test ! -f "${file}" && return
 for i in $(cat "${file}" | busybox grep -E '^\|\|.*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d;/^!/d;/^[[:space:]]*$/d')
 do
-	echo "※检测规则 ${i} "
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
 	same_fiter_escape=`escape_special_chars ${same_fiter}`
 	same_fiter_rule=`escape_special_chars ${i}`
