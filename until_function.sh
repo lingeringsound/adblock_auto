@@ -347,7 +347,7 @@ done
 function wipe_same_selector_fiter(){
 local file="${1}"
 test ! -f "${file}" && return 0
-local target_fiter=$(cat "${file}" | grep -E '^(\|\|).*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d;/^!/d;/^[[:space:]]*$/d' )
+local target_fiter=$(cat "${file}" | grep -E '^\|\|.*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d;/^!/d;/^[[:space:]]*$/d' )
 echo "※目前所有选择器规则 `echo "${target_fiter}" | wc -l`"
 for i in ${target_fiter}
 do
