@@ -348,14 +348,16 @@ function wipe_same_selector_fiter(){
 local file="${1}"
 test ! -f "${file}" && return 0
 local target_fiter=$(cat "${file}" | grep -E '^(\|\|).*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d')
+echo "※目前所有选择器规则 `echo ${target_fiter} | wc -l`"
 for i in ${target_fiter}
 do
+	echo "※检测规则 ${i} "
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
 	same_fiter_escape=`escape_special_chars ${same_fiter}`
 	rule=`escape_special_chars ${i}`
 	if grep -qE "^${same_fiter_escape}$" "${file}" ;then
 		busybox sed -Ei "/^${rule}$/d" "${file}"
-		echo "※去除域名规则${i}" 
+		echo "※去除域名规则 ${i}" 
 	fi
 done
 }
