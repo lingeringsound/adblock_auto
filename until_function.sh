@@ -347,7 +347,7 @@ function wipe_same_selector_fiter(){
 local file="${1}"
 local IFS=$'\n'
 test ! -f "${file}" && return
-for i in $(cat "${file}" | busybox sed '/^\|\|/!d' | busybox sed -E 's/\$third-party$//g;s/\$popup$//g;s/\$third-party,script$//g;s/\$third-party,important$//g;s/\$popup,third-party$//g;/domain=/d;/^!/d;/^[[:space:]]*$/d' | sort | uniq -d)
+for i in $(cat "${file}" | busybox sed '/^\|\|/!d' | busybox sed -E 's/\$third-party$//g;s/\$popup$//g;s/\$third-party,important$//g;s/\$popup,third-party$//g;s/\$third-party,popup$//g;s/\$script$//g;s/\$image$//g;s/\$image,third-party$//g;s/\$third-party,image$//g;s/\$script,third-party$//g;s/\$third-party,script$//g;/domain=/d;/^!/d;/^[[:space:]]*$/d' | sort | uniq -d)
 do
 	same_fiter_rule=`escape_special_chars ${i}`
 	if test "$(busybox grep -E "^${same_fiter_rule}$" "${file}")" != "" ;then
