@@ -346,14 +346,15 @@ done
 #去除部分选择器
 function wipe_same_selector_fiter(){
 local file="${1}"
+local IFS=$'\n'
 test ! -f "${file}" && return
-for i in `cat "${file}" | grep -E '^\|\|.*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d;/^!/d;/^[[:space:]]*$/d'`
+for i in $(cat "${file}" | busybox grep -E '^\|\|.*\$(third-party|popup|third-party,script|third-party,important|popup,third-party)$' | busybox sed '/domain=/d;/^!/d;/^[[:space:]]*$/d')
 do
 	echo "※检测规则 ${i} "
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
 	same_fiter_escape=`escape_special_chars ${same_fiter}`
 	same_fiter_rule=`escape_special_chars ${i}`
-	if grep -qE "^${same_fiter_escape}$" "${file}" ;then
+	if busybox grep -qE "^${same_fiter_escape}$" "${file}" ;then
 		busybox sed -Ei "/^${same_fiter_rule}$/d" "${file}"
 		echo "※去除域名规则 ${i}" 
 	fi
