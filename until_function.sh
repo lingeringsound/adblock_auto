@@ -352,8 +352,8 @@ do
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
 	same_fiter_escape=`escape_special_chars ${same_fiter}`
 	same_fiter_rule=`escape_special_chars ${i}`
-	if busybox grep -qE "^${same_fiter_escape}$" "${file}" ;then
-		busybox sed -Ei "/^${same_fiter_rule}$/d" "${file}"
+	if busybox timeout 5s grep -qE "^${same_fiter_escape}$" "${file}" ;then
+		busybox timeout 5s sed -Ei "/^${same_fiter_rule}$/d" "${file}"
 		echo "※去除域名规则 ${i}" 
 	fi
 done
