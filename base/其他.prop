@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JAkxxCxMMiebq0FiG7DsLg
+! Checksum: gO3p/K0MYHIfnzEusylS5Q
 ! Title: 自用去广告Adblock规则
-! Version: 20240329195739
-! Last modified: 2024-03-29 19:57:39
-! Total Count: 4053
+! Version: 20240330180206
+! Last modified: 2024-03-30 18:02:06
+! Total Count: 4191
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -158,17 +158,49 @@
 ##.above_video_banner
 ##.ad-box
 ##.ad-container
+##.ad-frame
+##.ad-frame-container
+##.ad-iframe
+##.ad-iframe-container
 ##.ad-placement
 ##.ad-title
+##.ad-wireframe
+##.ad-wireframe-wrapper
 ##.ad.noadmo
 ##.ad.none
 ##.ad.w
+##.adFrame
+##.adFrameCnt
+##.adFrameContainer
+##.adFrameMobile
+##.adFrames
+##.adIframe
+##.adIframeCount
+##.ad_belowfirstpost_frame
+##.ad_frame
+##.ad_frame_around
 ##.ad_id_1,.ad_id_2,.ad_id_3,.ad_id_4,.ad_id_5
+##.ad_iframe2
 ##.ad_img
 ##.adbanner
+##.adbanner-300-250
+##.adbanner-bottom
+##.adbanner1
+##.adbanner2nd
+##.adbannerbox
+##.adbanneriframe
+##.adbannerright
+##.adbannertop
+##.adbase
+##.adbbox
 ##.adbox250
 ##.adbox900
+##.adframe
+##.adframe2
+##.adframe_banner
+##.adframe_rectangle
 ##.adh5
+##.adiframe
 ##.adpc
 ##.ads > img
 ##.ads-all
@@ -176,6 +208,96 @@
 ##.ads_
 ##.adsbygoogle
 ##.adsbytrafficjunky
+##.adsens
+##.adsense-250
+##.adsense-300-600
+##.adsense-336
+##.adsense-336-280
+##.adsense-468
+##.adsense-728-90
+##.adsense-ad-results
+##.adsense-ads
+##.adsense-afterpost
+##.adsense-area
+##.adsense-article
+##.adsense-block
+##.adsense-box
+##.adsense-center
+##.adsense-code
+##.adsense-container
+##.adsense-content
+##.adsense-div
+##.adsense-float
+##.adsense-googleAds
+##.adsense-header
+##.adsense-heading
+##.adsense-iframe-container
+##.adsense-inline
+##.adsense-left
+##.adsense-links
+##.adsense-loading
+##.adsense-module
+##.adsense-overlay
+##.adsense-post
+##.adsense-resposivo-meio
+##.adsense-right
+##.adsense-slot
+##.adsense-square
+##.adsense-sticky-slide
+##.adsense-title
+##.adsense-top
+##.adsense-unit
+##.adsense-widget
+##.adsense-wrapper
+##.adsense1
+##.adsense160
+##.adsense160x600
+##.adsense200
+##.adsense250
+##.adsense3
+##.adsense300
+##.adsense300x250
+##.adsense728
+##.adsense728x90
+##.adsenseAds
+##.adsenseBannerArea
+##.adsenseBlock
+##.adsenseContainer
+##.adsenseList
+##.adsenseRow
+##.adsenseSky
+##.adsenseWrapper
+##.adsense_200
+##.adsense_336_280
+##.adsense_728x90_container
+##.adsense_ad
+##.adsense_block
+##.adsense_bottom
+##.adsense_container
+##.adsense_content_300x250
+##.adsense_div_wrapper
+##.adsense_inner
+##.adsense_label
+##.adsense_leader
+##.adsense_media
+##.adsense_menu
+##.adsense_mpu
+##.adsense_rectangle
+##.adsense_results
+##.adsense_right
+##.adsense_sidebar
+##.adsense_sidebar_top
+##.adsense_single
+##.adsense_top
+##.adsense_top_ad
+##.adsense_unit
+##.adsense_wrapper
+##.adsensebig
+##.adsensefloat
+##.adsenseformat
+##.adsenseframe
+##.adsenseleaderboard
+##.adsensemobile
 ##.adswarning
 ##.adv-overlay
 ##.adx-300x250-container
@@ -184,7 +306,9 @@
 ##.adx-wrapper
 ##.adx-wrapper-middle
 ##.adx_center
+##.aff-iframe
 ##.affTpllay[style]
+##.affiliate-mrec-iframe
 ##.app-abk
 ##.appguide-wrap
 ##.articleads
@@ -228,6 +352,7 @@
 ##.cailyzad
 ##.cctv_banner_dv
 ##.center-div.sponsor
+##.colBoxAdframe
 ##.commentads
 ##.common_banner[style="width: 100%;"] > a[target="_blank"][style="width: 375px; height: 75px; max-width: 100%; max-height: 75px; display: block; margin: 0px auto; overflow: hidden;"]
 ##.conch-ads-box
@@ -241,6 +366,8 @@
 ##.content-advert
 ##.content-advertisment
 ##.cpcad.nopc
+##.dartiframe
+##.dfp_frame
 ##.dlad
 ##.exo-ad-ins-container
 ##.fed-play-advs
@@ -3059,6 +3186,17 @@ o8tv.com,dmdy1.vip,dmdy2.vip,dmdy3.vip,dmdy4.vip,dami2.me,dami3.me,dami4.me,dami
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 pan.baidu.com##.share-error-ad
 php?ad=
+pixiv.net##._illust-upload + div[style*="968px;"][style*="170px;"]
+pixiv.net##._premium-lead-function-banner
+pixiv.net##.ad-frame
+pixiv.net##.ad-frame-container
+pixiv.net##.ad-iframe
+pixiv.net##.ad-mobile-anchor
+pixiv.net##a[target="premium_noads"]
+pixiv.net##div[id^="adsdk-"]
+pixiv.net##div[style="font-size: 0px;"] a[target="premium_noads"]
+pixiv.net##iframe[src^="https://pixon.ads-pixiv.net/"]
+pixiv.net##iframe[width="300"][height="250"]
 porndoe.com##[class^="-banner"],[href*="//ads"],[href^="/redirect"]
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##.container-fluid > .links
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##.no-gutters
