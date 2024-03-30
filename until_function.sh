@@ -354,9 +354,9 @@ do
 	echo "※检测规则 ${i} "
 	same_fiter=`echo "${i}" | sed 's|\$.*||g'`
 	same_fiter_escape=`escape_special_chars ${same_fiter}`
-	rule=`escape_special_chars ${i}`
+	same_fiter_rule=`escape_special_chars ${i}`
 	if grep -qE "^${same_fiter_escape}$" "${file}" ;then
-		busybox sed -Ei "/^${rule}$/d" "${file}"
+		busybox sed -Ei "/^${same_fiter_rule}$/d" "${file}"
 		echo "※去除域名规则 ${i}" 
 	fi
 done
