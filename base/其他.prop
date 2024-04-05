@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: gO3p/K0MYHIfnzEusylS5Q
+! Checksum: dPcZd+VqWy/0AV041OopBQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240330180206
-! Last modified: 2024-03-30 18:02:06
-! Total Count: 4191
+! Version: 20240405114431
+! Last modified: 2024-04-05 11:44:31
+! Total Count: 4193
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -797,7 +797,6 @@
 ##[style*="cos.ap-nanjing.myqcloud.com/img/"][style*=".js"]
 ##[style*="display:none"] + iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
 ##[style*="https://fjkb.tyvzyn.com/"]
-##[style="position: absolute; inset: 0px;"]
 ##[style="text-align: center; margin: 20px 0; color: blue; font-size: larger;"]
 ##[style="text-align: center; margin: 40px 0; color: blue; font-size: larger;"]
 ##[style^="display: inline-block;"][style*="margin:"] > a[target="_blank"][href][title]
@@ -2297,6 +2296,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /ledad.
 /lv/esnk/*$script,third-party
 /lv/esnk/*/code.js$script,third-party
+/m-*-*$third-party,domain=manhuagou.com
 /matomo.js$third-party,script
 /mdzzxttss.php?s=
 /modalad.
@@ -3403,6 +3403,7 @@ tieba.baidu.com##div[add-shield-track]
 tinghaobook.com,haitangkan.com,tinghaobook.com,nosadfun.com,ebook8.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,mobidushu.com,fuwen123.com,lengmen.org,newhaitang.com,tinghaodebook.com,haitangdushu.com,myshenye.com,myfeiyanqing.com,tinghaodebook.com,zongcai666.com,iyungong.com,lookmht.com,peakread.com,lengmenread.com##[style*="0vw"][style*="0vh"][style*="0px"],[style*="z-index"][style*="background:"]
 tnaflix.com##.bannerBlock
 tnaflix.com##.rbsd
+twitter.com#@#[style="position: absolute; inset: 0px;"]
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
 up.taoseye.com##a[target="_blank"],[ontouchstart]
@@ -3705,6 +3706,7 @@ zle.com$script
 ||doyougothere.com^$third-party
 ||dpic.wxddid.cn^$third-party
 ||drfvtgbyk.xyz^$third-party
+||dsjhcgvhjsvc.com^
 ||dspmnt.autohome.com.cn^
 ||dtscout.com^
 ||dvnsdo.com^$third-party
