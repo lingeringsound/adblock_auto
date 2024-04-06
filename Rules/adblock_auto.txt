@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: ri8kjszucjXf5VS0jyFW8A
+! Checksum: KoDb5YIIm2pywZ0JVat/xg
 ! Title: 混合规则(自动更新)
-! Version: 20240406160905
+! Version: 20240407000825
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-06 16:09:05
-! Total Count: 135941
-! Blocked Filters: 135941
+! Last modified: 2024-04-07 00:08:25
+! Total Count: 135969
+! Blocked Filters: 135969
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -80859,6 +80859,7 @@
 ||zjttaqx.cn^
 ||zjtu.tv/add.
 ||zjupukgjuez.com^
+||zjvpjl.xyz^
 ||zjws.xyz^
 ||zjxc.com/source/plugin/e6_xc_ad/
 ||zjybqqaleeva.top^
@@ -83850,6 +83851,7 @@ asianmirror.lk,catholicregister.org,crown.co.za,marengo-uniontimes.com,nikktech.
 asianporn.life,asiansex.life##.top-mo-ave
 asianporn.life,asiansex.life,teenpornvideo.fun##.full-ave
 asianpornfilms.com,bigwank.com,bigwank.tv,fapguru.com,porngo.com,pornpapa.com,titshub.com,veryfreeporn.com,videojav.com,xxxfiles.com,xxxfiles.tv##.underplayer_banner
+asianpornq.com##.upp
 asiansex.life,katestube.com,mybestxtube.com,nudeteenwhore.com,sexroom.xxx,teencumpot.com,xtits.*##.spot-holder
 ask.com##.PartialKelkooResults
 askapache.com##.GAD
@@ -98444,6 +98446,7 @@ toolfk.com##wavy ~ a
 tools.2345.com##._hb-box + .mod
 toolslib.net##.custom
 toolslib.net##.row > .col-md-7 > .panel-default
+top.gg##[class*="__AdContainer-"]
 top16.net##.img_wrap
 topeuropix.site,123europix.pro###closex
 topfiveforex.com###wcfloatDiv
@@ -101950,6 +101953,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/*/js/8*/8*/8*/8*?r=https$third-party
 .com/*/ua.php$third-party
 .com/*/uagu.php$third-party
+.com/*=bT1zdXY1JnI9
 .com/*?key=*&submetric=$document
 .com/*?key=*&submetric=$~third-party
 .com/*_*.js?*16$third-party
@@ -102021,6 +102025,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/api/ipv4check?mark
 .com/api/posts?token=$third-party
 .com/api/senddata?$third-party
+.com/api/spots/*?p=1&s1=$third-party
 .com/appinstall.js$third-party,script
 .com/assets/public/chart.1.js$script,~third-party
 .com/bads/
@@ -102090,6 +102095,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/logo/ad.js
 .com/logo/logo.js
 .com/logo/logoxia.js
+.com/m-*-*$third-party,domain=manhuagou.com
 .com/m-2594|$script,third-party
 .com/m.aspx?action=$third-party,script
 .com/mediaController.php?pid=$script,third-party
@@ -102119,6 +102125,19 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/sc/*?n=$script,third-party
 .com/sc/*?n=$third-party
 .com/sc/*?x=$third-party
+.com/script/a.js
+.com/script/asset.js
+.com/script/cdn.js
+.com/script/compatibility.js
+.com/script/document.js
+.com/script/file.js$third-party
+.com/script/foundation.js
+.com/script/frustration.js
+.com/script/image.js
+.com/script/mui.js
+.com/script/script.js$third-party
+.com/script/utils.js$third-party
+.com/script/xbox.js
 .com/sh/*.js$third-party
 .com/sh/back/*$third-party
 .com/sh/to/$script,third-party,xmlhttprequest
@@ -102498,6 +102517,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .org/js/gg.js$script
 .org/pops.js
 .org/s.php?id=$script,third-party
+.org/script/compatibility.js
 .org/topjs/
 .ph/ads/
 .php/ad/
@@ -108492,7 +108512,6 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /lteee/ad/*
 /lv/esnk/*$script,third-party
 /lv/esnk/*/code.js$script,third-party
-/m-*-*$third-party,domain=manhuagou.com
 /m-ad.css?
 /m.html?rmid=*&yd=$document
 /m.html?rmid=*&yd=$~third-party
@@ -109535,16 +109554,25 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /script/aclib.js
 /script/ad.$~script
 /script/ads_
+/script/antd.js
 /script/app_settings.js$third-party
+/script/atg.js
+/script/atga.js
 /script/awesome.js
+/script/intrf.js
+/script/ippg.js
 /script/java.php?$xmlhttprequest
 /script/naN.js
 /script/nasu.js$third-party
+/script/native_render.js
+/script/native_server.js
+/script/npa2.min.js
 /script/nrsu.js$third-party
 /script/nwsu.js
 /script/nwsu.js$third-party
 /script/oas/*
 /script/suurl4.php?$third-party
+/script/suv4r.js
 /script/ut.js?cb=$third-party
 /script/wait.php?*=$xmlhttprequest
 /scriptFileV2.js
@@ -112656,7 +112684,6 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 =affiliate_ad_viewed&
 =ajaxGetAds&type=
 =akiba_ads_
-=bT1zdXY1JnI9$third-party,xmlhttprequest
 =banners_ad&
 =big-ad-switch_
 =clkads/
@@ -131971,6 +131998,7 @@ zle.com$script
 ##a[href*="/industrialproductsfind.com"]
 ##a[href*="/jdr29jlir.com"]
 ##a[href*="/jianjianjiao.top"]
+##a[href*="/jump/next.php?r="]
 ##a[href*="/k023055.com"]
 ##a[href*="/k849.top"]
 ##a[href*="/kanxiuren.com/?"]
