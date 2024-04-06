@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dPcZd+VqWy/0AV041OopBQ
+! Checksum: HzFwLe29h94b8LzOVLLE8w
 ! Title: 自用去广告Adblock规则
-! Version: 20240405114431
-! Last modified: 2024-04-05 11:44:31
-! Total Count: 4193
+! Version: 20240406221524
+! Last modified: 2024-04-06 22:15:24
+! Total Count: 4196
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1594,6 +1594,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/api/getPos?jspath=/$~third-party
 .com/api/ipv4check?mark
 .com/api/senddata?$third-party
+.com/api/spots/*?p=1&s1=$third-party
 .com/assets/public/chart.1.js$script,~third-party
 .com/candy*.js$third-party
 .com/ev/*?type=events&event=
@@ -1602,6 +1603,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/j/*$script,third-party
 .com/js/gg.js$script
 .com/k/*$script,third-party
+.com/m-*-*$third-party,domain=manhuagou.com
 .com/o.js$third-party
 .com/rs/to/*?n=cbh&p=false&t=16$third-party
 .com/s/*.xc$third-party
@@ -2296,7 +2298,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /ledad.
 /lv/esnk/*$script,third-party
 /lv/esnk/*/code.js$script,third-party
-/m-*-*$third-party,domain=manhuagou.com
 /matomo.js$third-party,script
 /mdzzxttss.php?s=
 /modalad.
@@ -2747,6 +2748,7 @@ ali213.net##iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][widt
 amateur8.com##.rmp-container
 anime1.me##div[id^="ad-"] > a
 animehentaihub.com,bestjavporn.com,hentaiasmr.moe,koreanstreamer.xyz,youporntube.net##.happy-header
+asianpornq.com##.upp
 asmregg.xyz##a[href^="https://asmregg.xyz"] > img[src$=".gif"]
 autohome.com.cn###float_bottom_button
 autohome.com.cn###float_new_button
@@ -4194,6 +4196,7 @@ zle.com$script
 ||zgwsnw.buzz^$third-party
 ||zgwsnw.live^$third-party
 ||zgwsnw.xyz^$third-party
+||zjvpjl.xyz^
 ||zkappsart.com^$third-party,xmlhttprequest
 ||zz.bdstatic.com^
 ~esetnod32.ru##.b-banner
