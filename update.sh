@@ -34,7 +34,7 @@ sort_web_rules "${Sort_Folder}" "${Download_Folder}/easylist.txt"
 echo "※`date +'%F %T'` 开始处理精简版规则……"
 sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_Chinese.txt" '^\|\||^#'
 sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_mobile.txt" '^\|\||^#'
-sort_web_rules "${Sort_Folder}" "${Download_Folder}/Adguard_mobile.txt"
+sort_web_rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_mobile.txt"
 #full规则
 echo "※`date +'%F %T'` 开始处理完整版规则……"
 wipe_white_list "${Sort_Folder}" "${Download_Folder}/Adguard_Chinese.txt" '^\@\@|^[[:space:]]\@\@\|\||^<<|<<1023<<|\@\@\|\|'
