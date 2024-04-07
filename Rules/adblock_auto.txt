@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: ES08V8jq+8CT7DkCI/Ga0A
+! Checksum: im3GUeCUeanpM+i4pTVFOA
 ! Title: 混合规则(自动更新)
-! Version: 20240407161117
+! Version: 20240408000840
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-07 16:11:17
-! Total Count: 136011
-! Blocked Filters: 136011
+! Last modified: 2024-04-08 00:08:40
+! Total Count: 136020
+! Blocked Filters: 136020
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -127,6 +127,7 @@
 ||02m830l.cn^
 ||02wq.com/script/
 ||02wq.com/script1/
+||0322cfmtl.cc^
 ||033.com^$third-party
 ||033dfgh.com^
 ||0342b40dd6.com^
@@ -88085,6 +88086,7 @@ fctables.com##div[style^="background:#e3e3e3;position:fixed"]
 fctvhd.com##.mw-adblock
 fcw45.com##div[id^="layui-layer"]
 fdc.com.cn##.yifangbanner
+fedex.com###shop-runner-banner-link
 fedex.com##.atTile1
 feebee.com.tw###afsh_bsearch_list_top
 feebee.com.tw###bottom-ad-after-search-result
@@ -105379,6 +105381,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /ads?zone=
 /ads?zone_id=
 /adsAPI.$domain=~snap.com|~snapchat.com
+/adsAPI.js
 /adsDateValidation.
 /adsDesktop.
 /adsEnd.
@@ -105401,6 +105404,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /ads_banners/*
 /ads_bg.
 /ads_bottom.
+/ads_bottom.js
 /ads_bottom_
 /ads_box_
 /ads_check.
@@ -105411,6 +105415,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /ads_controller.js
 /ads_detect.
 /ads_dfp/*
+/ads_dfp/resources/*
 /ads_display.
 /ads_door.
 /ads_event.
@@ -105491,7 +105496,9 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /adscontent.
 /adscontent2.
 /adscontrol.
+/adscontrol.js
 /adscontroller.
+/adscontroller.js
 /adscot/*
 /adscpc/*
 /adscpv/*
@@ -131651,6 +131658,7 @@ zle.com$script
 ##a[href*=".5250.cn"]
 ##a[href*=".5599722.com"]
 ##a[href*=".613639.com/"]
+##a[href*=".68hantang.com"]
 ##a[href*=".7wkw.com"]
 ##a[href*=".832103.top"]
 ##a[href*=".832112.top"]
@@ -135006,6 +135014,7 @@ zle.com$script
 @@||imfeifan.com/adv/$~third-party
 @@||img.ads.tvb.com^
 @@||img4399.com/static/huodong/daily/fpv2.js
+@@||infotop.jp/html/ad/$image,~third-party
 @@||inoreader.com^$genericblock,generichide
 @@||inpad.com.tw/data/adv/
 @@||inskinmedia.com^*/js/base/api/$domain=appledaily.com|nextmedia.com
