@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: CEWs0O8NhYoNezZ/z90VrQ
+! Checksum: VMuQENZq0DqmOeVV1UkWeQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240408034225
-! Last modified: 2024-04-08 03:42:25
-! Total Count: 4423
+! Version: 20240409200703
+! Last modified: 2024-04-09 20:07:03
+! Total Count: 4434
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -796,6 +796,7 @@
 ##.mpu-ad-river
 ##.mpu-ad-top
 ##.mpu-advert
+##.mx-auto > .grid + .modal
 ##.myplayer_ima-ad-container
 ##.naicon.btn.btn-raised
 ##.nonepc.mad
@@ -1415,6 +1416,7 @@
 ##embed[width="468"][height="60"]
 ##embed[width="600"][height="160"]
 ##embed[width="728"][height="90"]
+##fa.fa-times-circle
 ##font > #float_boxcode
 ##font > .topfixed
 ##gpt-ad
@@ -1551,6 +1553,7 @@
 ##img[alt^="免费AV"]
 ##img[alt^="知阴"]
 ##img[class*="cctv"][alt="null"][src]
+##img[class="banner960x80"]
 ##img[class][src$=".mp3"]
 ##img[class][src$=".txt"]
 ##img[id][height$="0001"][width="100%"][border="0"]
@@ -1616,6 +1619,7 @@
 ##img[src*="yslulu"][src*=".xyz"]
 ##img[src*="z4a.net"][src*="/images/20"]
 ##img[src*="zhanlangimg.dingjiancdn.com"][src$=".gif"]
+##img[src*="新葡京送"]
 ##img[src="/apijs/image/960x100.gif"]
 ##img[src][style*="width:100%;height:auto;"][id^="hengfu"]
 ##img[src^="/uploads/aidou/adlist/"]
@@ -2868,6 +2872,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://p.qlogo.cn/qqmail_head/*
 ://pic.*.*/*0*.txt$third-party
 ://pic.*.cn/*/*.js$third-party,script
+://ra*.xyz/z/*/code.js$third-party,script
+://rou*.*/js/exo.js$script,-third-party
 ://rou*/_next/static/chunks/pages/home-$~third-party
 ://s.*srv.com/*.php?idzone=$third-party
 ://shiold*.zhaosw.com$script
@@ -4013,6 +4019,7 @@ zle.com$script
 ||hanguomanhua.me/style*/js20*.js?v=
 ||hb.vhsrv.com^
 ||hbcfdp.com^
+||hdmp4.cc/js/foot.js
 ||hdpornfree.xxx/sup/*.js
 ||hetang123.com/assets/public/$script
 ||hffxc.com^$third-party,script
@@ -4089,6 +4096,8 @@ zle.com$script
 ||kairuxinxi.xyz^$third-party
 ||kcieo.xyz^$third-party
 ||keiow.xyz^$third-party
+||keymp4.cc/js/foot.js
+||keymp4.com/js/foot.js
 ||kkkkim.skar.top^$image
 ||kl.67it.com^
 ||kme.zygehty.cn^
@@ -4162,6 +4171,8 @@ zle.com$script
 ||oqedci.xyz^$third-party
 ||orbsrv.com^
 ||oronwg.xyz^$third-party
+||padmp4.cc/js/foot.js
+||padmp4.com/js/foot.js
 ||pagead2.googlesyndication.com^
 ||pavfazbwiap.com^
 ||pcd.autohome.com.cn^
