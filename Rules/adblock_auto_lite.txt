@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: fDd1QbfPl2gXuE8p302jaQ
+! Checksum: u7cZX+E9fBY6mdOim0K1yQ
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240411083357
+! Version: 20240411092030
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-11 08:33:57
-! Total Count: 31041
-! Blocked Filters: 31041
+! Last modified: 2024-04-11 09:20:30
+! Total Count: 31045
+! Blocked Filters: 31045
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -23246,6 +23246,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cn:*/?channelCode=$document
 .cn:*/?channelCode=$~third-party
 .cn:*/c.php?s=
+.cn:*/d/*?t=
 .cn:*/mnrt/*.json
 .cn:*/sc/*?c=$third-party
 .cn:*/sc/*?n=$third-party
@@ -23254,7 +23255,10 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cn:*/vh5/$third-party
 .cn:*/vj5/$third-party
 .cn:12443/ty/$third-party
+.cn:80*/cc/*?*=$third-party
 .cn:80*/cc/*?is_not=$third-party
+.cn:80*/d/*?*=$third-party
+.cn:80*/sc/*?*=$third-party
 .cn:8001/cc/*?is_not=
 .cn:8001/sc/*?is_not=
 .cn:8002/cc/*?is_not=
