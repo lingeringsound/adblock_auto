@@ -1,0 +1,25 @@
+name: Sync to Bitbucket
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "${{ secrets.BITBUCKET_EMAIL }}"
+          git config --global user.name "${{ secrets.BITBUCKET_EMAIL }}"
+
+      - name: Add Bitbucket remote
+        run: git remote add origin https://bitbucket.org/ktooelazy-adblock/adblock_auto
+
+      - name: Push to Bitbucket
+        run: git push origin main
