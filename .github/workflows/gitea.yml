@@ -15,7 +15,11 @@ jobs:
         run: |
           git config --local user.name "${{ secrets.GITEA_NAME }}"
           git config --local user.email "${{ secrets.GITEA_EMAIL }}"
-          git remote remove origin
-          git remote add origin "git@gitea.com:lonely_dog/adblock_auto.git"
+          git remote set-url --add "git@gitea.com:lonely_dog/adblock_auto.git"
           git checkout main
           git merge origin/main
+          git add .
+          git commit -a -m "update Rules"
+          git branch -m main
+          git push --force --set-upstream origin main
+
