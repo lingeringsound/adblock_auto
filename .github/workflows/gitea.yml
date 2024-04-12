@@ -1,0 +1,23 @@
+name: Sync Code to GITEA
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-to-bitbucket:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Git push assets to GITEA
+        run: |
+          git config --local user.name "${{ secrets.GITEA_NAME }}"
+          git config --local user.email "${{ secrets.GITEA_EMAIL }}"
+          git remote add origin "https://gitea.com/lonely_dog/adblock_auto.git"
+          git checkout --orphan clearhistory
+          git add .
+          git commit -am "update Adblock"
+          git branch -m main
+          git push --force --set-upstream origin main
