@@ -16,6 +16,6 @@ jobs:
           git config --local user.name "${{ secrets.GITEA_NAME }}"
           git config --local user.email "${{ secrets.GITEA_EMAIL }}"
           git remote remove origin
-          git remote add origin "https://lonely_dog:${{ secrets.GITEA_TOKEN }}@gitea.com/adblock_auto.git"
+          git remote add origin "git@gitea.com:lonely_dog/adblock_auto.git"
           git checkout main
           git merge origin/main
