@@ -15,7 +15,7 @@ jobs:
         run: |
           git config --local user.name "${{ secrets.GITEA_NAME }}"
           git config --local user.email "${{ secrets.GITEA_EMAIL }}"
-          git remote add origin "https://gitea.com/lonely_dog/adblock_auto.git"
+          git remote add origin "https://lonely_dog:${{ secrets.GITEA_TOKEN }}@gitea.com/adblock_auto.git"
           git checkout --orphan clearhistory
           git add .
           git commit -am "update Adblock"
