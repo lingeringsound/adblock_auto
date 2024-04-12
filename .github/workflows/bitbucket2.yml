@@ -19,7 +19,7 @@ jobs:
           git config --global user.name "${{ secrets.BITBUCKET_EMAIL }}"
 
       - name: Add Bitbucket remote
-        run: git remote add origin https://bitbucket.org/ktooelazy-adblock/adblock_auto
+        run: git remote add origin https://ktooelazy@bitbucket.org/ktooelazy-adblock/adblock_auto.git
 
       - name: Push to Bitbucket
         run: git push origin main
