@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: yWbnIXjqL14uOlEJmmYvWg
+! Checksum: Exf/ZyPeCSmTAqRcUoQ9tA
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240415142323
+! Version: 20240415160938
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-15 14:23:23
-! Total Count: 31156
-! Blocked Filters: 31156
+! Last modified: 2024-04-15 16:09:38
+! Total Count: 31162
+! Blocked Filters: 31162
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -12294,6 +12294,7 @@
 ||sitescout.com^
 ||sitewithg.com^
 ||sitv.com.cn/cookiead.php
+||sj.zol.com.cn/down.php
 ||sjaaquj.cn^
 ||sjalipa.cn^
 ||sjbaiduadv1.redou.com^
@@ -23181,6 +23182,11 @@ zmovs.com#?#.player-spot__title:contains(Advertisement)
 zn-ua.cdn.ampproject.org,zn.ua##div[class^="mix_advert_ads_"]
 znak.com##.SVKNative-Widget li[data-unit-type="promo"]
 zockify.de#?#.embed-responsive:has(> .embed-responsive-item > .vm-placement)
+zol.com.cn###bottom-fixed-wrapper
+zol.com.cn###top-fixed-wrapper
+zol.com.cn##.banner-ad
+zol.com.cn##[class*="app"][class*="bottom"],[class*="app"][class*="open"]
+zol.com.cn##[data-bottom-fixed] > img[style]
 zoomtventertainment.com##.art-below-taboola
 zoomtventertainment.com##amp-img[alt="taboola"]
 zoomtventertainment.com,timesnownews.com##div[class^="Layout-atfAd-"]
