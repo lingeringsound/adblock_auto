@@ -286,6 +286,8 @@ local IFS=$'\n'
 local target_adblock_file="${1}"
 test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_file} 规则文件不存在！！！" && return
 sort_domain_Combine "${target_adblock_file}"
+wipe_same_selector_fiter "${target_adblock_file}"
+clear_domain_white_list "${target_adblock_file}"
 }
 
 
@@ -354,6 +356,17 @@ do
 		busybox sed -Ei "/^${same_fiter_rule}\\$/d" "${file}"
 		echo "※去除域名规则 ${i}" 
 	fi
+done
+}
+
+#去除重复的域名规则
+function clear_domain_white_list(){
+local file="${1}"
+test ! -f "${file}" && return
+cat "${file}" | sed '/^\!/d;/\#/d;/\$/d' | grep -E '^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(:[0-9]{1,5})?(/[^ ]*)?' | sort -u | while read line
+do
+	transfer_content=`escape_special_chars ${line}`
+	grep -E "^\|\|${transfer_content}\^" "${file}" && busybox sed -i -E "/^${transfer_content}$/d" "${file}"
 done
 }
 

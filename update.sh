@@ -81,9 +81,6 @@ Running_sort_domain_Combine "${Rules_Folder}/adblock_auto.txt"
 Running_sort_Css_Combine "${Rules_Folder}/adblock_auto.txt"
 #再次净化去重
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
-#再次净化去重
-wipe_same_selector_fiter "${Rules_Folder}/adblock_auto.txt"
-modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
 #规则分类
 sort_and_optimum_adblock "${Rules_Folder}/adblock_auto.txt"
 #写入头信息
@@ -127,9 +124,6 @@ Running_sort_domain_Combine "${Rules_Folder}/adblock_auto_lite.txt"
 #去除指定重复的Css
 Running_sort_Css_Combine "${Rules_Folder}/adblock_auto_lite.txt"
 #再次净化去重
-modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"
-#再次净化去重
-wipe_same_selector_fiter "${Rules_Folder}/adblock_auto_lite.txt"
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"
 #规则分类
 sort_and_optimum_adblock "${Rules_Folder}/adblock_auto_lite.txt"
