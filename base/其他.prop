@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: u5xOAY/EfW2h6G8V9cSbeA
+! Checksum: 23wpX40MnfFI3NQ3zwG6Wg
 ! Title: 自用去广告Adblock规则
-! Version: 20240415151649
-! Last modified: 2024-04-15 15:16:50
-! Total Count: 4485
+! Version: 20240417160623
+! Last modified: 2024-04-17 16:06:23
+! Total Count: 4492
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2563,6 +2563,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /original/ad_
 /os230718.oss-
 /other/ads/*
+/owa.NativeAdList.js$domain=outlook.live.com
 /pagead2.
 /picture/ad/*
 /pictureads/*
@@ -2898,6 +2899,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
 @@/?utm_source=*&utm_campaign=$domain=dlsite.com
+@@/adbar/*$domain=outlook.live.com
 @@/api/ad/*$domain=pinduoduo.com
 @@/api/ads?$domain=nmkjxy.com
 @@/api/models?$domain=tik.porn
@@ -2927,6 +2929,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@yetianlian.la/xxgg/read.js
 @@ysjdm.net/template/conch/asset/js/hlhtml.
 @@||150075.com^$domain=tecms.net
+@@||adnxs.com/ast/static/$domain=outlook.live.com
 @@||adserver.juicyads.com/js/jads.js$domain=netflav.com
 @@||bdad.123pan.cn^
 @@||bili96.co^$image
@@ -3426,6 +3429,10 @@ nr19.cn,bilibili.com,youku.com,v.qq.com,acfun.cn#@#img[alt*="广告"][src]
 nsfwr34.com##body > div[id][class]:has(img[src*="-ads-block-detector"])
 nxnba.com##.bootom-fixed
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
+omofun.link##.module-adslist + div[id]
+outlook.live.com##.VdboX[tabindex="0"]:has(img[src="https://res.cdn.office.net/assets/ads/adbarmetrochoice.svg"])
+outlook.live.com##div:has(> div > div.fbAdLink)
+outlook.live.com##main[aria-hidden] > div[class] > div[style] > div[class][style="position: absolute; left: 0px; top: 0px; height: 80px; width: 100%;"]:has(> div[class] > div[role="group"] > #OwaContainer)
 pan.baidu.com##.share-error-ad
 php?ad=
 pixiv.net##._illust-upload + div[style*="968px;"][style*="170px;"]
