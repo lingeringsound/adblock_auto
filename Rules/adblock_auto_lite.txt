@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: m+yTed1r2SBa9DQt6bVwUg
+! Checksum: FIblBu9/tqC049AsTQmLEg
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240419000932
+! Version: 20240419083308
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-19 00:09:32
-! Total Count: 31312
-! Blocked Filters: 31312
+! Last modified: 2024-04-19 08:33:08
+! Total Count: 31317
+! Blocked Filters: 31317
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -19636,6 +19636,8 @@ md4u.ru###pagecontent > div[style*="background-color"]
 mdaily.bhaskar.com###atf_ad
 mdhstream.cc,taradinhos.com,sexseeimage.com,hotxfans.com,dotadostube.com#?#.video-block-happy:upward(1)
 mdpr.jp##.recommend-dd-link
+mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###mobile-list-banner.justify-content-center
+mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###top-mobile-banner
 med1.de#$#div[id^="imAd_"] { visibility: hidden!important; }
 mediafire.com###abnotify
 mediafire.com##+js(set-constant, InfCustomSTAMobileFunc, noopFunc)
@@ -23126,6 +23128,7 @@ youporn.*##.ad-remove + .responsiveIframe
 youporn.*##a[href][data-tracking="track-close-btn-ad"]
 youporn.com###mobileContainer div[class$="Ad"] > div[class*=" "]
 youporn.com##.playWrapper > #videoWrapper + div[class*=" "]:has(> div[id]:only-child > .adsbytrafficjunky)
+youporn.com##.watchTopAd
 youporn.com##aside:has(a.ad-remove)
 youporn.com#?#.playWrapper > #videoWrapper + div[class*=" "]:has(> div[id]:only-child > .adsbytrafficjunky)
 youporn.com#?#div[class] > a[data-tracking="track-close-btn-ad"]:upward(1)
@@ -28581,6 +28584,7 @@ zle.com$script
 ##.kjk-flo
 ##.ksads
 ##.kuandu > .bottommob
+##.left > .b300
 ##.leftAd
 ##.leftadv
 ##.leftd + .rightd
@@ -28899,6 +28903,7 @@ zle.com$script
 ##.recommended-grids > .file[style="margin: 5px 2px 5px 2px;"]
 ##.remove-adblock-msg
 ##.remove-ads
+##.right > .b300
 ##.right > .content > .ads
 ##.right-ad
 ##.rightAD
