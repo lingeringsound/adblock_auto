@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: jqTj9i5No1hdhlplb6odbw
+! Checksum: Voy/748+tE7KspP/CnqNIw
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240420083239
+! Version: 20240420131054
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-20 08:32:39
-! Total Count: 31340
-! Blocked Filters: 31340
+! Last modified: 2024-04-20 13:10:54
+! Total Count: 31347
+! Blocked Filters: 31347
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -1048,6 +1048,8 @@
 ||88lm07.com^
 ||88lm08.com^
 ||88lm09.com^
+||88lm10.com^
+||88lm11.com^
 ||88p2p.com^$popup
 ||88ys.cc/js/abcd.js
 ||8961.jianbihua.com^
@@ -5084,6 +5086,7 @@
 ||cuioxbqi.com^
 ||cupfox.app^$third-party
 ||cupid.iqiyi.com/mixer?
+||cupid.iqiyi.com/show2?
 ||curvycry.com^$third-party
 ||cutechin.com^$third-party
 ||cuvtnzv.cn^
@@ -8723,6 +8726,7 @@
 ||kkbbjtfp.xyz^
 ||kkeojk.xyz^
 ||kkisoo.com^
+||kkjhgfds.top^
 ||kkjshsj.com^
 ||kkkaii.cn^
 ||kkkjpg-522.cc^$third-party
@@ -20536,6 +20540,8 @@ pluginsaddonsextensions.com#?#.col-md-4 > .mapbox > .adsbygoogle:upward(1)
 pluginsaddonsextensions.com#?#.col-md-4 > .rightcol:has(> #google_ad)
 plush-fortune.jp##a[href*="?adv_id="]
 pnp.de###aufmacher > div[style*="color:#aaa"]
+po18wen.net##[style*="pointer-events: none;"]
+po18wen.net##img[style="border: 1px inset #00FF00"]
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__SlotTopMobileStyled-"]
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__VirtualListStyled-"] > div[style] > div[class^="styles__RowWrapper-"] > div:not([class], [id]) > div[class^="styles__Slot"][class*="Ad-"]
 poder360.com.br##.box-banner-footer
@@ -30176,6 +30182,7 @@ zle.com$script
 ##script + .show-app4
 ##script + [class^="float-app"]
 ##script + [id][style="width:100%;height:auto;min-height:120px;position:relative;display:block;"]
+##script + [style="padding:0;margin:0;border:0"] + article[id]
 ##script + a[href] > img[src*="lbsugc.cdn.bcebos.com"]
 ##script + a[target="_bank"] > img[src*=".c-ctrip.com"][style="width:100%;height:auto;"]
 ##script + div[id^="a-loading-"]
