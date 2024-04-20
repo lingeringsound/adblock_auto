@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 1+AUojrRqx3gVblOJmfILQ
+! Checksum: 2ykrrlk/aoVNyK/oCNwn6A
 ! Title: 自用去广告Adblock规则
-! Version: 20240419024443
-! Last modified: 2024-04-19 02:44:43
-! Total Count: 4498
+! Version: 20240420130643
+! Last modified: 2024-04-20 13:06:43
+! Total Count: 4502
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1663,6 +1663,7 @@
 ##script + .show-app3
 ##script + .show-app4
 ##script + [class^="float-app"]
+##script + [style="padding:0;margin:0;border:0"] + article[id]
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
 ##section > .friendlylink > .w
@@ -3452,6 +3453,8 @@ pixiv.net##div[id^="adsdk-"]
 pixiv.net##div[style="font-size: 0px;"] a[target="premium_noads"]
 pixiv.net##iframe[src^="https://pixon.ads-pixiv.net/"]
 pixiv.net##iframe[width="300"][height="250"]
+po18wen.net##[style*="pointer-events: none;"]
+po18wen.net##img[style="border: 1px inset #00FF00"]
 porn4days.red##div > b:has(> div.alert > a[href^="https://www.brazzersnetwork.com/"])
 pornboss.org###menu-menue-1 > li:has(> a[href^="http://toplist.raidrush.ws/"])
 pornclassic.tube,tubepornclassic.com##.video__wrapper > .partners-wrap + div[class]:has(div[id^="suggestion_"])
@@ -4164,6 +4167,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||keiow.xyz^$third-party
 ||keymp4.cc/js/foot.js
 ||keymp4.com/js/foot.js
+||kkjhgfds.top^
 ||kkkkim.skar.top^$image
 ||kl.67it.com^
 ||kme.zygehty.cn^
