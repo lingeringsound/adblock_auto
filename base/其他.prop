@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2ykrrlk/aoVNyK/oCNwn6A
+! Checksum: SDZmoLBx4jr0FTmEu65YDw
 ! Title: 自用去广告Adblock规则
-! Version: 20240420130643
-! Last modified: 2024-04-20 13:06:43
-! Total Count: 4502
+! Version: 20240422112253
+! Last modified: 2024-04-22 11:22:54
+! Total Count: 4504
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2962,6 +2962,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||static.tieba.baidu.com/tb/editor/images/client/image_emoticon*.png
 @@||tv.bili96.co^
 @@||tyue.me^$image
+@@||wan.douyu.com^$domain=wan.douyu.com
 Banner-Ad
 Banner-Adv
 _728x90_
@@ -3757,7 +3758,8 @@ xiashuyun.com##[id^="downapp"]
 xiashuyun.com##div#navdown
 xiuren5.com,xgmn02.com##a[href] > img[src$=".gif"]
 xn--*.*/ins/js/*16$third-party,script
-xnxx.com##[class*="ad-"]
+xnxx.com#@#.exo-ad-ins-container
+xnxx.com#@#[class*="ad-"]
 xnxx.com,xvideos.com##[id^="ad-"]
 xs77.cc,xs77.com,xs77.buzz,xs77.cn,xs77.xyz##body > div[style*="margin:"] > div
 xvideos.com##[id^="ads-"]
