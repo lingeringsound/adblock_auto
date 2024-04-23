@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: SDZmoLBx4jr0FTmEu65YDw
+! Checksum: siedo7C5HPWC2YxyIUUUpg
 ! Title: 自用去广告Adblock规则
-! Version: 20240422112253
-! Last modified: 2024-04-22 11:22:54
-! Total Count: 4504
+! Version: 20240423014546
+! Last modified: 2024-04-23 01:45:46
+! Total Count: 4522
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2060,7 +2060,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /^https?:\/\/www\.[a-z]{8,14}\.(bid|club|co|com|me|pro|info)\/[a-z]{1,12}\.js$/$script,third-party,domain=2ddl.vg|guard.link|anidl.org|srt.am|widestream.io|xxxstreams.me|animeforce.it|streamporn.me|speedporn.net|youwatchporn.com|oke.io|2ddl.unblocked.vc|gaypornwave.com|watchpornfree.ws|hentaimoe.me|sportsgala.xyz
 /^https?:\/\/xxximage\.org\/[a-z\d]+\.js$/$domain=xxximage.org
 /^https?:\/\/zoomgirls\.net\/[a-z\d]+\.(js)$/$domain=zoomgirls.net
-/_next/static/chunks/$script,domain=hentaipaw.com
 /_xa/ads?
 /_xa/ads_
 /aas/r45d/vki/*$third-party
@@ -2902,6 +2901,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
 @@/?utm_source=*&utm_campaign=$domain=dlsite.com
+@@/_next/static/chunks/$script,domain=hentaipaw.com
 @@/adbar/*$domain=outlook.live.com
 @@/api/ad/*$domain=pinduoduo.com
 @@/api/ads?$domain=nmkjxy.com
@@ -2951,6 +2951,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||heytapimage.com^$third-party,domain=news.heytapdownload.com
 @@||imasdk.googleapis.com/*/ima3.js$domain=player.glomex.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=4gtv.tv|881903.com|ani.gamer.com.tw|appledaily.com|hamivideo.hinet.net|line.me|linetv.tw|litv.tv|mytvsuper.com|nextmedia.com|now.com|shahid.mbc.net|tvb.com|udn.com|ulifestyle.com.hk
+@@||kxcdn.com^$domain=wikiwand.com
 @@||miaozhen.com^$~third-party
 @@||mix.sina.com.cn^
 @@||os2023001.oss-cn-quanzhou.kz.cc$script
@@ -3137,6 +3138,10 @@ crazyporn.xxx##.margin-fix > .item:has(> .ads)
 cupfox.app##[class^="jsx-"] > img[src$=".gif"]
 d1bzw.com##[id="appurl"],[id="bbsurl"]
 daftsex.com,pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com,spankbang.party##a[href*="?ats="]
+darknessporn.com,familyporner.com,freepublicporn.com,pisshamster.com,punishworld.com,xanimu.com##div[id^="after-boxes"]
+darknessporn.com,familyporner.com,freepublicporn.com,pisshamster.com,punishworld.com,xanimu.com##div[id^="beside-video"]
+darknessporn.com,familyporner.com,freepublicporn.com,pisshamster.com,punishworld.com,xanimu.com##div[id^="native-boxes"]
+darknessporn.com,familyporner.com,freepublicporn.com,pisshamster.com,punishworld.com,xanimu.com##div[id^="related-boxes-footer"]
 ddav.xyz,ddav.com##img[id^="GGADIMG"][src],a[href*="://asiav.cyou"][target="_blank"],a[href][target="_blank"][style],[class^="happy_undie"],[class^="touchy-wrapper"]
 ddys.tv,ddys.art,ddys.*,ddrk.me,ddys.pro,ddys2.me##a[href="###"] img:not(#trk_hcaptcha):not([src^="https://captcha.su.baidu.com"])
 ddys.tv,ddys.art,ddys.*,ddrk.me,ddys.pro,ddys2.me##a[href^="javascript"] img:not(#trk_hcaptcha):not([src^="https://captcha.su.baidu.com"])
@@ -3145,7 +3150,7 @@ ddys.tv,ddys.art,ddys.*,ddrk.me,ddys.pro,ddys2.me##div > span > a > img
 ddzzxs.com###inglestore
 diantaiwang.com##a[href^="https://s.click.taobao.com/"][target="_blank"]
 diantaiwang.com##img[src^="/js/imgs"]
-dm590.com##.external
+dm590.com,hentaipaw.com##.external
 dm88.me,dmh8.me,dm99.me##.padding-0 > ul[style]
 dm88.me,dmh8.me,dm99.me##[style^="display: block;"]
 dmh8.me,dm88.me##div[style^="width:300px;height:300px;position:fixed;bottom:0;left:0;z-index:2147483647;"]
@@ -3161,6 +3166,8 @@ e-kei.com,britaku.com##div[class="row"][style="margin:3px 0px;display:flex;flex-
 efukt.com##[data-ad-type]
 eporner.com##[id^="admobile"]
 eporner.com##[id^="admobile"],[class^="admobile"]
+eromanga-show.com,hentai-one.com,hentaipaw.com##+js(no-setTimeout-if, /[a-z]\(!0\)/, 800)
+eromanga-show.com,hentai-one.com,hentaipaw.com##div[id^="ts_ad_"]
 events.baidu.com##.bottom-img
 fanyi.baidu.com##.app-bar
 fanyi.baidu.com##.bottom-intro
@@ -3223,8 +3230,15 @@ hanyu.baidu.com###download-wrapper
 hanyu.baidu.com##[id^="fengchao_els"]
 hdmoli.com##a[href][target="_blank"] > img[id*="_banner"]
 hentai.io##.script_manager_video_master
+hentai2read.com##div[data-type="leaderboard-top"]
 hentaicity.com##[class^="adn-posty_"]
-hentaipaw.com##.header-ad,.middle-ad,[id^="ts_ad_native"]
+hentaimama.io##div[class^="in-between-ad"]
+hentaipaw.com##+js(noeval-if, _0x)
+hentaipaw.com##.header-ad
+hentaipaw.com##.middle-ad
+hentaipaw.com##.middle-ad2
+hentaipaw.com##[id^="ts_ad_native"]
+hentaistream.com##div[id^="adx_ad-"]
 hkcards.com#@##ad-slot
 hoho.tv##[class^="hoho-ad"],[data-ad-client]
 https://*.*/TC/*/*.gif$third-party,image
@@ -3489,10 +3503,13 @@ pornktube.porn###main_content > div.pornkvideos:has(> div.wrap > h2 > a:not([hre
 pornoeggs.com##.col > .card-deck:has(> .card > .card-img > div[class^="ib-"])
 pornpics2u.com,porngifs2u.com##.elementor-section-wrap > section.elementor-section:has( div[align="center"] > a > img[src^="https://adultwebmasters.org"])
 pornpictureshq.com##.masonry_thumbs > div.grid > div.thumb:has(> iframe)
+pornsitetest.com##div[id^="eroti-"]
 pornstar-scenes.com##.row > div.portfolio-item:has(> div.card > div[id^="chaturbate"])
+pornstarbyface.com##div[id^="sponcored-content-"]
 porntrex.com##.content > div[class]:has(> div[style*="text-align"] > center > script)
 pornwhite.com##.container-side:has(> b:first-child + div[data-banner]:last-child)
 pornwhite.com##.items-container > div.items-holder:has(> div[data-banner])
+pornwhite.com,sleazyneasy.com##div[data-banner]
 ppys66.com##a[title="成人深夜福利"]
 proporn.com##.thrcol > .thr-rcol:has(> .refill > .trailerspots)
 pussyspace.com,pussyspace.net###main-area-box div[id]:has(> iframe[src*="/lazyload"])
@@ -3680,6 +3697,7 @@ theav.xyz##div[id*="theav"][style*="margin"] > div > span
 theav.xyz,theporn.cc##[class*="-gg"]
 theporn.cc##a[rel="nofollow"][href][target="_blank"]
 theporn.cc##div[id*="theporn"][style*="margin"] > div > span
+theyarehuge.com##div[data-nosnippet]
 tianyancha.com##[class^="download-"]
 tianyancha.com##[id^="banner_mobile_"]
 tieba.baidu.com##.fengchao-banner-defensive
