@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: KoMumhYvX/U9zADkJHzYFA
+! Checksum: axU9dNcYvOU54/7OLTR/+Q
 ! Title: 混合规则(自动更新)
-! Version: 20240425161104
+! Version: 20240425180220
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-25 16:11:04
-! Total Count: 142303
-! Blocked Filters: 142303
+! Last modified: 2024-04-25 18:02:20
+! Total Count: 142308
+! Blocked Filters: 142308
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -4430,6 +4430,7 @@
 ||ad.leap.app^
 ||ad.letmeads.com^
 ||ad.lgappstv.com^
+||ad.line-scdn.net^
 ||ad.linkprice.com^
 ||ad.linksynergy.com^
 ||ad.lomadee.com^
@@ -39535,6 +39536,7 @@
 ||js.ruiwen.com^
 ||js.rush-member.com^
 ||js.shangxueba.com^
+||js.shunqi.com^
 ||js.spreton.com^
 ||js.stroeermediabrands.de^
 ||js.tlt.cn/js/
@@ -95103,6 +95105,7 @@ jiaodong.net###leftBanner
 jiaodong.net###rightBanner
 jiayongluyou.com#?#.widget_html_myimg:has(> ins.adsbygoogle)
 jiayongluyou.com,tmioe.com##.widget_image_myimg
+jieav.com###jieav_a1,#jieav_a2,#jieav_a3,#jieav_a4,#jieav_a5,#jieav_a6,#jieav_b1,#jieav_b2,#jieav_b3,#jieav_b4,#jieav_b4,#jieav_b5,#jieav_b6
 jieav.com##ul[id^="jieav_"]
 jieav.com#$##comment { margin-bottom: 0 !important; }
 jieav.com,miliav.com##.b300
@@ -141988,12 +141991,14 @@ zle.com$script
 @@||youneed.win^$generichide
 @@||youporn.com/embed/$domain=porndollz.com
 @@||youporn.com/embed/$subdocument
+@@||youporn.com/media/$domain=you-porn.com|youporngay.com|youpornru.com|youporn.*|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 @@||youtube.com/ads/preferences/$popup
 @@||youtube.com/embed/$domain=masterani.me
 @@||youtube.com/get_video_info*&el=editpage
 @@||youtube.com/get_video_info?$xmlhttprequest,domain=music.youtube.com|tv.youtube.com
 @@||youtube.com/get_video_info?*embedded$~third-party
 @@||youtube.com/my_video_ad$document
+@@||ypncdn.com^$domain=you-porn.com|youporngay.com|youpornru.com|youporn.*|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 @@||ytimg.com^*_banner$domain=youtube.com
 @@||yummy.best^$generichide
 @@||yunduanxin.xyz/static/js/banger.js
