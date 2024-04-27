@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 2o0eYp+QzPX81KosA8VpnA
+! Checksum: wj713s/TE05j9tRiXKevwA
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240427083331
+! Version: 20240427161124
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-27 08:33:31
-! Total Count: 31507
-! Blocked Filters: 31507
+! Last modified: 2024-04-27 16:11:24
+! Total Count: 31513
+! Blocked Filters: 31513
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -11213,6 +11213,7 @@
 ||qbswezw.cn^
 ||qc1.cheshipin.com^
 ||qcb2xeg.icu^
+||qcepqj.icu^
 ||qcohkm.xyz^
 ||qcsvku.xyz^
 ||qcvf.ifeng.com^
@@ -21234,6 +21235,10 @@ quiz-facts.com##+js(addEventListener-defuser, DOMContentLoaded, interstitial-pop
 quiz-facts.com##.content-network-space
 quoka.de#$#.headroom--banner-top { top: 0 !important; }
 quora.com#$#body.q-platform--mobile { position: static !important; }
+quotes.sina.cn##.app-footer-sina
+quotes.sina.cn##.js-app-header
+quotes.sina.cn##[class*="callup"]
+quotes.sina.cn##[class*="wb-btn-wrap"]
 quotidiano.net##+js(set-local-storage-item, pwa_show, true)
 r10.net##.container > div > a[target="_blank"] > img
 r7.com###adsMobileFixed
@@ -29734,6 +29739,7 @@ zle.com$script
 ##a[href^="https://xlivesex.com/"]
 ##a[href^="https://xxuudxdu.live?"]
 ##a[href^="https://ycmw647.com"][target="_blank"]
+##a[href^="intent://"]
 ##a[href^="javascript:GoDb"]
 ##a[href^="javascript:gl012"]
 ##a[href^="javascript:gl012"] + img
