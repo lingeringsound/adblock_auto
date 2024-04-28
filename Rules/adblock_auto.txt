@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: ErDKgDxl/h8DubmD/m2Jlw
+! Checksum: OTIz5o/Iw9kav9kcNuCH2Q
 ! Title: 混合规则(自动更新)
-! Version: 20240428161124
+! Version: 20240428182955
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-28 16:11:24
-! Total Count: 142682
-! Blocked Filters: 142682
+! Last modified: 2024-04-28 18:29:55
+! Total Count: 142687
+! Blocked Filters: 142687
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -84763,6 +84763,8 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 5iyq.com##div[class^="index_ad"]
 5nd.com##.songAds
 5pillarsuk.com,babeltechreviews.com,cybersecuritynews.com,fukutubu.jp,sonorannews.com,techviral.net,thestonedsociety.com,weekendspecial.co.za##.td-header-sp-recs
+5xsq.com##[class^="ad-index"]
+5xsq.com##section:has(img[src*="/ads/"])
 5yfz.com##.wrapper > p
 5yfz.com##table[style="width:100%;text-align:center;font-weight:700;"]
 5ykj.com##.ls-b-large-margin
@@ -89369,6 +89371,7 @@ dailykos.com##.ad__placeholder
 dailykos.com##.story-banner-ad-placeholder
 dailymail.co.uk###promo-unit
 dailymail.co.uk###sky-right
+dailymail.co.uk##.footballco-container
 dailymail.co.uk##.mol-fe-vouchercodes-redesign
 dailymail.co.uk##.mpu_puff_wrapper
 dailymail.co.uk##.puff_pastel
@@ -140130,6 +140133,7 @@ zle.com$script
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
 ##script[src$="/base.js"] + #couplet
+##script[src$="/js/jads.js"] + ins[id]
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##script[src="/template/kuhei2/skin/base.js"] + #couplet
 ##section > .friendlylink > .w
@@ -142327,6 +142331,7 @@ zle.com$script
 @@||winwk.com^$generichide
 @@||wl.jd.com/joya.js
 @@||wl.jd.com/wl.js
+@@||woocall.sina.com.cn^$domain=sina.cn
 @@||wuyong.fun^$generichide
 @@||wuyou.com.cn/Js/ad.js
 @@||wwads.cn/js/makemoney.js$domain=nodejs.cn

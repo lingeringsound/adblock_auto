@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: W3qxig4aESJu7V45F6B51A
+! Checksum: bwyEGOi63REdc64eHrQ95Q
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240428161143
+! Version: 20240428183014
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-04-28 16:11:43
-! Total Count: 31521
-! Blocked Filters: 31521
+! Last modified: 2024-04-28 18:30:14
+! Total Count: 31525
+! Blocked Filters: 31525
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -15541,6 +15541,8 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 5ch.net##.ads_conten_main
 5chan.jp###advertise_main_header
 5chan.jp##.threadlist_adv_more
+5xsq.com##[class^="ad-index"]
+5xsq.com##section:has(img[src*="/ads/"])
 6446.tv,lgyy.tv,lgyy.cc##[id^="bfad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="mhbottom_ad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="syad"]
@@ -30324,6 +30326,7 @@ zle.com$script
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
 ##script[src$="/base.js"] + #couplet
+##script[src$="/js/jads.js"] + ins[id]
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##section > .friendlylink > .w
 ##section > span[style="display:block;clear:both;overflow:hidden;z-index:2147483647"]
@@ -31444,6 +31447,7 @@ zle.com$script
 @@||v.fwmrm.net/ad/g/1?$xmlhttprequest,domain=www.mycanal.fr
 @@||wamiz.com/css/ads.css
 @@||wan.douyu.com^$domain=wan.douyu.com
+@@||woocall.sina.com.cn^$domain=sina.cn
 @@||www.ifon.ca^$generichide
 @@||xpornium.net/imgs/160x600.jpg
 @@||xvideos.com/*/?_=$document
