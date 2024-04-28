@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: apXqrnmWH4D+RzIHaGFp9Q
+! Checksum: Jbnmtb4b+9eEy7wr+HY9PQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240428233131
-! Last modified: 2024-04-28 23:31:32
-! Total Count: 4688
+! Version: 20240429012714
+! Last modified: 2024-04-29 01:27:14
+! Total Count: 4719
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1283,6 +1283,13 @@
 ##a[target="_blank"][href*="/jump-"] > img[src][style]
 ##a[target="_blank"][href="/adjump/acg_show_right.html"]
 ##a[target="_blank"][href^="https://365fun.sng.link"]
+##ad-shield-ads
+##ad-slot
+##amp-ad
+##amp-ad-custom
+##amp-connatix-player
+##amp-embed[type="taboola"]
+##amp-fx-flying-carpet
 ##bkveng
 ##body > #app > .adv-frame
 ##body > #showcloneshengxiaon
@@ -1423,7 +1430,20 @@
 ##div[class^="swiper-"] > a[href][alt^="领"][alt$="元"][target="_blank"]
 ##div[class^="swiper-"] > a[onclick][rel="nofollow"] > img[style="width: 100%; height: 100%"]
 ##div[class^="swiper-"] > ul > li > a[target="_blank"]
+##div[data-ad-placeholder]
+##div[data-ad-targeting]
+##div[data-ad-wrapper]
+##div[data-adname]
+##div[data-adunit-path]
+##div[data-adunit]
+##div[data-adzone]
 ##div[data-element="empty"][data-izone="main"]
+##div[data-google-query-id]
+##div[data-id-advertdfpconf]
+##div[data-insertion]
+##div[data-mini-ad-unit]
+##div[data-native-ad]
+##div[data-native_ad]
 ##div[id*="_"][classname$="_f"][class$="_f"]
 ##div[id*="playerAdvLayer"][class="adv-layer"]
 ##div[id*="po-s0"] > div > div[class^="jsv"] > div[class^="container-"] > .row > [class*="col-sm"] > a[rel="noopener nofollow"]
@@ -3020,6 +3040,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||fapcat.com^$~third-party
 @@||fusacq.com/javascript/advertising.js|$script
 @@||gk.sina.cn^
+@@||google.com/adsense/search/ads.js$domain=news.biglobe.ne.jp
+@@||google.com/analytics/web/$document
+@@||google.com/analytics/web/$~third-party
 @@||guokr.com/apis/flowingboard/item/guokrapp_
 @@||guokr.com/apis/flowingboard/item/m_
 @@||heytapimage.com^$third-party,domain=news.heytapdownload.com
@@ -4262,6 +4285,13 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||godpvqnszo.com^$third-party
 ||goo.kkjshsj.com^
 ||google-analytics.com^
+||google.com/ads/search/app?
+||google.com/adsense/ad
+||google.com/adsense/domains
+||google.com/adsense/search/$third-party
+||google.com/afs/ads?
+||google.com/dp/ads
+||google.com/pagead/
 ||googletagmanager.com^
 ||gov-cn.website^
 ||guchihyfa.pro^
@@ -4386,6 +4416,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||lwksxs.com^$third-party
 ||lwonclbench.com^$third-party
 ||magsrv.com^$third-party
+||mail-ads.google.com^
 ||mail.kguapp.com^
 ||mamalqakba.com^
 ||matomo.cloud^
