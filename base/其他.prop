@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: WxawNM2B7CDT2DRDXxw8iA
+! Checksum: jprYlG0Ly7v6nTeeonjqVQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240427150020
-! Last modified: 2024-04-27 15:00:20
-! Total Count: 4545
+! Version: 20240428150843
+! Last modified: 2024-04-28 15:08:43
+! Total Count: 4549
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1667,6 +1667,7 @@
 ##script + [style="padding:0;margin:0;border:0"] + article[id]
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
+##script[src$="/js/jads.js"] + ins[id]
 ##section > .friendlylink > .w
 ##section > span[style="display:block;clear:both;overflow:hidden;z-index:2147483647"]
 ##section[class^="container"][class*="section section-relate-"] > [class^="content"][class*="relate"]
@@ -2788,6 +2789,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 3movs.com,3movs.xxx,3prn.com,alexandriagazette.com,arlingtonconnection.com,bravotube.net,burkeconnection.com,camhub.tv,camvideos.tv,centre-view.com,cluset.com,coincost.net,connection-sports.com,deviants.com,dixyporn.com,fairfaxconnection.com,fairfaxstationconnection.com,familyporn.tv,feetporno.com,fetishshrine.com,forum.xda-developers.com,freehardcore.com,gaygo.tv,greatfallsconnection.com,hdzog.com,hello.porn,herndonconnection.com,katestube.com,litecoin-faucet.com,max.porn,mcleanconnection.com,momvids.com,motherporno.com,mountvernongazette.com,moviesand.com,phonearena.com,pornbimbo.com,pornicom.com,pornomovies.com,pornsexxxer.com,potomacalmanac.com,ratedgross.com,reston-connection.com,sextaped.com,sleazyneasy.com,springfieldconnection.com,videocelebs.net,viennaconnection.com,vjav.com##.spot
 4x4magazin.hu,8tracks.com,aan.com,aarp.org,additudemag.com,animax-asia.com,annapurnapost.com,apkforpc.com,audioxpress.com,axn-asia.com,blavity.com,bravotv.com,cinestaan.com,citiblog.co.uk,cnbctv18.com,cnn59.com,controleng.com,cumlouder.com,digiday-com.cdn.ampproject.org,discordemoji.com,dw.com,dwturkce.com,escapeatx.com,flyingjizz.com,foodsforbetterhealth.com,gemtvasia.com,generatorlinkpremium.com,gotporn.com,gramfile.com,hcn.org,huffingtonpost.co.uk,ichgcp.net,indaily.com.au,inqld.com.au,internationalnewsandviews.com,investmentnews.com,jagonews24.com,japan-whores.com,jewishworldreview.com,legion.org,lifezette.com,livestly.com,magtheweekly.com,mathopenref.com,moneyland.ch,motoroctane.com,nuvid.*,offshore-energy.biz,onetvasia.com,operanews.com,outlookindia.com,oxygen.com,pch.com,perfectgirls.net,playlive.pw,porntube.com,prospectmagazine.co.uk,prothomalo.com,readamericanfootball.com,readarsenal.com,readastonvilla.com,readbasketball.com,readbetting.com,readbournemouth.com,readboxing.com,readbrighton.com,readbundesliga.com,readburnley.com,readcars.co,readceltic.com,readchampionship.com,readchelsea.com,readcricket.com,readcrystalpalace.com,readersdigest.ca,readeverton.com,readeverything.co,readfashion.co,readfilm.co,readfood.co,readfootball.co,readgaming.co,readgolf.com,readhorseracing.com,readhuddersfield.com,readhull.com,readinternationalfootball.com,readlaliga.com,readleicester.com,readliverpoolfc.com,readmancity.com,readmanutd.com,readmiddlesbrough.com,readmma.com,readmotorsport.com,readmusic.co,readnewcastle.com,readnorwich.com,readnottinghamforest.com,readolympics.com,readpl.com,readrangers.com,readrugbyunion.com,readseriea.com,readshowbiz.co,readsouthampton.com,readsport.co,readstoke.com,readsunderland.com,readswansea.com,readtech.co,readtennis.co,readtottenham.com,readtv.co,readussoccer.com,readwatford.com,readwestbrom.com,readwestham.com,readwsl.com,reason.com,redvoicemedia.com,revolver.news,rogerebert.com,serverhunter.com,smithsonianmag.com,soft112.com,streamingmedia.com,tasteofhome.com,the-scientist.com,thecatholicthing.org,therighthairstyles.com,weatherwatch.co.nz,wheels.ca,woot.com,worldofbitco.in##.advertisement
 555dd1.com,555dd2.com,555dd3.com,555dd4.com,555dd5.com,555dd6.com,555dd7.com,555dd8.com,555dd9.com,555dy.cn,555dy.com,555dy.com.cn,555dy.fun,555dy3.com,555dy4.com,555kan.net,555pian.com,555yy1.com,555yy2.com,555yy3.com,555yy4.com,555yy5.com,5dy7.vip,dami10.me,dami2.me,dami3.me,dami4.me,dami5.me,dami6.me,dami9.me,dmdy1.vip,dmdy2.vip,dmdy3.vip,dmdy4.vip,myd666.tv,o8tv.com,zxk555.com##.is_mb
+5xsq.com##[class^="ad-index"]
+5xsq.com##section:has(img[src*="/ads/"])
 6446.tv,lgyy.tv,lgyy.cc##[id^="bfad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="mhbottom_ad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="syad"]
@@ -2973,6 +2976,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||tv.bili96.co^
 @@||tyue.me^$image
 @@||wan.douyu.com^$domain=wan.douyu.com
+@@||woocall.sina.com.cn^$domain=sina.cn
 @@||youporn.com/media/$domain=you-porn.com|youporngay.com|youpornru.com|youporn.*|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 @@||ypncdn.com^$domain=you-porn.com|youporngay.com|youpornru.com|youporn.*|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 Banner-Ad
