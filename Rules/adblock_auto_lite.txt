@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 2jp9JDFaUGJw66lRYNt5IA
+! Checksum: UPsZnO3rRgmniVaQHSiyDQ
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240502194014
+! Version: 20240503001012
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-02 19:40:14
-! Total Count: 32002
-! Blocked Filters: 32002
+! Last modified: 2024-05-03 00:10:12
+! Total Count: 32013
+! Blocked Filters: 32013
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -4492,6 +4492,7 @@
 ||cdmnlxtu.xyz^
 ||cdn*-sites.porntube.com/tb/banner/
 ||cdn-99-pic.cc^
+||cdn-ad.wtzw.com^
 ||cdn-adn-*.rayjump.com^
 ||cdn-adn.rayjump.com^
 ||cdn-aousoce.org/*/musoapp.js$third-party
@@ -22721,15 +22722,17 @@ txxx.com##a[href][rel="nofollow"][target="_blank"]
 txxx.com##div[class^="rek-"]
 txxx.com,txxx.*##.video-content > div:first-child > div[class]:has(> div > a[href="#"])
 txxx.com,txxx.tube##.index-page > .wrapper > .row + div[class]
-txxx.com,txxx.tube##.pwa-ad
+txxx.com,txxx.tube,txxxporn.tube,vxxx.com##.pwa-ad
 txxxporn.tube##.iwhhmigmngx
 txxxporn.tube##.mangxgxnnaa
+txxxporn.tube##.sugggestion:nth-child(n+1)
 txxxporn.tube##.video-content > div[class] > div:has(> div.pplayer) + div[class]
 txxxporn.tube##.video-content > div[class]:has(> div[class] > div[id] > noscript > iframe[src^="https://syndication.realsrv.com"])
 txxxporn.tube##.video-videos-slider + div[class] + div[class]
 txxxporn.tube#?#.video-content > div[class] > div:has(> div.pplayer) + div[class]
 txxxporn.tube#?#.video-content > div[class]:has(> div[class] > div[id] > noscript > iframe[src^="https://syndication.realsrv.com"])
 txxxporn.tube#?#div.text:upward(1)
+txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi])
 tyla.com,ladbible.com##div[class^="css-"][class$="-ArticleContent"] > div[class^="css-"]:empty
 tz.de##a[href^="https://www.outbrain.com/what-is/default/"]
 tz.de##a[href^="https://www.outbrain.com/what-is/default/"] + div[style="margin-top: 5px;"]
@@ -22987,6 +22990,11 @@ vtc.vn##.sys-ads
 vtuber-matome.com##.AD-frame
 vulture.com##.nym-ad
 vxjbdagjdec-eviewporn-com.cdn.ampproject.org###popups
+vxxx.com###player-1 > div[style="display:flex !important"] > div
+vxxx.com##.video-page-content + div[class]
+vxxx.com##.video-page-content-left + div[class]:last-child
+vxxx.com##.videoplayer + div > div[class]
+vxxx.com##.wrapper-margin + div[class]:last-child
 vxxx.com#$?#.video-page div[class]:not([style]):not([class*=" "]):not([class*="-"]):is(:has(> div[id][class]), :has(> div[class] > div[id][class])):contains(Advertisement) { remove: true; }
 vyatka-grad.ru##.f-w-f1
 vyatka-grad.ru##.widget-wrapper
@@ -23723,6 +23731,7 @@ zeenews.india.com##.outbrain-bg
 zehnporn.com,freyalist.com,jennylist.xyz,sharkyporn.com,zoompussy.com##.stripper
 zeiri4.com##div[class^="adContainer"]
 zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru##.article-render-mobile__block_embed
+zentrum-der-gesundheit.de##.container > div.fixed:has(> button:contains(Interessante Produkte für Sie))
 zerohedge.com###leaderboard-mobile
 zerohedge.com##div[class^="ContentPack_cp__"]:has(> div[id^="rc-widget-"])
 zerohedge.com##iframe[src^="//www.dianomi.com"]
@@ -30299,6 +30308,7 @@ zle.com$script
 ##div > ul > li > a[href][title="APP下载"]
 ##div#ad_id
 ##div#xinxi
+##div._ccw-wrapper[data-role="content"]
 ##div.ad-nav-box
 ##div.ad_popper
 ##div.ad_txt_li,div.ad_txt
@@ -30563,6 +30573,7 @@ zle.com$script
 ##iframe[src^="https://av.ageverify.co/"]
 ##iframe[src^="https://baimei511.mom"]
 ##iframe[src^="https://creative."][src*="/widgets/"]
+##iframe[src^="https://poloptrex.com"]
 ##iframe[src^="https://tsyndicate.com/"]
 ##iframe[src^="https://vidsservices.space/"]
 ##iframe[style$="margin: auto 0px !important; padding: 0px; border: none; outline: none; box-sizing: border-box; position: fixed; color-scheme: none; inset: 0px 0px 0px auto !important; overflow: hidden; z-index: 2147483647;"]
