@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: mxPHdNMz3ARe4IsjvJRTiA
+! Checksum: CDrNld3jdC2put2wiDHwhQ
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240502093614
+! Version: 20240502123933
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-02 09:36:14
-! Total Count: 33996
-! Blocked Filters: 33996
+! Last modified: 2024-05-02 12:39:33
+! Total Count: 34005
+! Blocked Filters: 34005
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -6017,6 +6017,7 @@
 ||ewandlw.top^
 ||ewefbeu.cn^$document
 ||ewefbeu.cn^$~third-party
+||eweriow.top^
 ||ewfsef.com^
 ||ewioud.com^
 ||ewjhic.cn^
@@ -8453,6 +8454,7 @@
 ||jsvmkcpnpnbepp.cccsccn.com^
 ||jswz8.com/images/
 ||jsx.luyouwang.com^
+||jsxwfb.xyz^
 ||jsyefc.com^
 ||jszavs1.com^
 ||jsztl.com/img/particular/tbyhq.jpg
@@ -13410,6 +13412,7 @@
 ||udnfunlife.com/mall/cus/cat/OutWebAd.do
 ||udpdmeb.cn^
 ||udsahkln.xyz^
+||udxhzqg.cn^
 ||udykkl.cn^
 ||ue8im.com^
 ||uebipacy.xyz^
@@ -13506,11 +13509,13 @@
 ||uogtrmjz.xyz^
 ||uohvxrvd.xyz^
 ||uojoqx.icu^
+||uoosqk.xyz^
 ||uoowu.com/a/zh*.js
 ||uooyoo.com/hz/*str.js
 ||uoqsxdpx.xyz^
 ||uosxdmk.cn^
 ||up.qingdaonews.com/up/$object,script
+||upailek.cn^
 ||upaiyun.com/system/post_tile/new_web_banners/
 ||upasiansex.com^
 ||uphcrjth.xyz^
@@ -13872,6 +13877,7 @@
 ||vuvxpf.xyz^
 ||vuwjv7sjvg7.zedporn.com^
 ||vuxxtn.xyz^
+||vuyibsm.icu^
 ||vv1.pyhfxdm.cn^
 ||vvdzucs.cn^
 ||vvlhrz.xyz^
@@ -26372,6 +26378,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 .icu/js/gg.js$script
 .icu/pssbk?$third-party
 .icu/pssbk?*16$third-party
+.icu/reacre*?$third-party
 .icu/release*ts?*16$third-party
 .icu:$third-party,domain=btmovi.kim|btsj6.com|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|d53px.com|dm99.me|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|yhdmp.net|yhdmz.org|yhpdm.com|yinghua8.tv|yinghuacd.com|yinghuavideo.com|ziyungong.org|zongcai666.com|tangsanshu.la
 .icu:28883/*/*$third-party
@@ -32246,6 +32253,7 @@ zle.com$script
 ##body > [style$="background-size: 407px 95px !important;"]
 ##body > [style$="width:9.6vw;height:8.5vw;background: #000;opacity:0.01;"]
 ##body > [style$="width:9.6vw;height:8.5vw;background:#000;opacity:0.01;"]
+##body > [style*="background"][style*="#000"][style$="opacity:0.01;"]
 ##body > [style*="position:fixed; bottom:0vw; left:0vw; z-index:"]
 ##body > [style^="display: block; z-index: 2147483647; width: 10%;"][style$="!important;"]
 ##body > div[class$="c"][style="bottom: 135px;"]
@@ -32776,6 +32784,7 @@ zle.com$script
 ##script > .p-screen-dialog
 ##script[src$="/base.js"] + #couplet
 ##script[src$="/js/jads.js"] + ins[id]
+##script[src*=".icu/"] + script + script + div[id]
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##section > .friendlylink > .w
 ##section > span[style="display:block;clear:both;overflow:hidden;z-index:2147483647"]
