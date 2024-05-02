@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Tbod/EYjDBF7Pz2Z8xaVnw
+! Checksum: JSfl2DfVj/mAqNdPiwItOg
 ! Title: 自用去广告Adblock规则
-! Version: 20240502093215
-! Last modified: 2024-05-02 09:32:15
-! Total Count: 7090
+! Version: 20240502122931
+! Last modified: 2024-05-02 12:29:31
+! Total Count: 7095
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1307,6 +1307,7 @@
 ##body > [style$="background-size: 407px 95px !important;"]
 ##body > [style$="width:9.6vw;height:8.5vw;background: #000;opacity:0.01;"]
 ##body > [style$="width:9.6vw;height:8.5vw;background:#000;opacity:0.01;"]
+##body > [style*="background"][style*="#000"][style$="opacity:0.01;"]
 ##body > [style*="position:fixed; bottom:0vw; left:0vw; z-index:"]
 ##body > [style^="display: block; z-index: 2147483647; width: 10%;"][style$="!important;"]
 ##body > div[class$="c"][style="bottom: 135px;"]
@@ -1751,6 +1752,7 @@
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
 ##script[src$="/js/jads.js"] + ins[id]
+##script[src*=".icu/"] + script + script + div[id]
 ##section > .friendlylink > .w
 ##section > span[style="display:block;clear:both;overflow:hidden;z-index:2147483647"]
 ##section[class^="container"][class*="section section-relate-"] > [class^="content"][class*="relate"]
@@ -1992,6 +1994,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/biyys*.js$third-party,script
 .icu/js/gg.js$script
 .icu/pssbk?$third-party
+.icu/reacre*?$third-party
 .icu/release*ts?*16$third-party
 .icu:28883/*/*$third-party
 .la/8WaadBLH/*.js
@@ -6967,6 +6970,7 @@ zozovideo.com##.cactus-single-content > div.content-top-sidebar-wrap:has(> .zozo
 ||union.macoms.la^
 ||unionadjs.com^
 ||unm.zzxmcp.com^$third-party
+||uoosqk.xyz^
 ||upkkccfxai.com^$third-party
 ||us-west1.cdngcloud.com^
 ||usjbwvtqwv.com^$third-party
@@ -6987,6 +6991,7 @@ zozovideo.com##.cactus-single-content > div.content-top-sidebar-wrap:has(> .zozo
 ||voxar.xyz^
 ||vs*.bozhou666.com^$third-party
 ||vuhbgtsi.xyz^$third-party
+||vuyibsm.icu^
 ||vvmeirihd.feijied.xyz^
 ||vxinzheng.xyz^$third-party
 ||vzigttqgqx.com^
