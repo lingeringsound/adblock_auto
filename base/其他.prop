@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: klhXMcoWvz9env0qohDbmg
+! Checksum: Kw7PdGjmupflsuHXyZYwyA
 ! Title: 自用去广告Adblock规则
-! Version: 20240502193619
-! Last modified: 2024-05-02 19:36:19
-! Total Count: 5002
+! Version: 20240502213125
+! Last modified: 2024-05-02 21:31:25
+! Total Count: 5012
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1441,6 +1441,7 @@
 ##div > iframe[src*="&width=300&height=100&"]
 ##div > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##div > ul > li > a[href][title="APP下载"]
+##div._ccw-wrapper[data-role="content"]
 ##div.ad-nav-box
 ##div.ad_popper
 ##div.ad_txt_li,div.ad_txt
@@ -1659,6 +1660,7 @@
 ##iframe[src^="https://av.ageverify.co/"]
 ##iframe[src^="https://baimei511.mom"]
 ##iframe[src^="https://creative."][src*="/widgets/"]
+##iframe[src^="https://poloptrex.com"]
 ##iframe[src^="https://tsyndicate.com/"]
 ##iframe[src^="https://vidsservices.space/"]
 ##iframe[style$="margin: auto 0px !important; padding: 0px; border: none; outline: none; box-sizing: border-box; position: fixed; color-scheme: none; inset: 0px 0px 0px auto !important; overflow: hidden; z-index: 2147483647;"]
@@ -4136,8 +4138,11 @@ twitter.com#@#[style="position: absolute; inset: 0px;"]
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
 txxx.com,txxx.*##.video-content > div:first-child > div[class]:has(> div > a[href="#"])
+txxxporn.tube##.sugggestion:nth-child(n+1)
 txxxporn.tube##.video-content > div[class] > div:has(> div.pplayer) + div[class]
 txxxporn.tube##.video-content > div[class]:has(> div[class] > div[id] > noscript > iframe[src^="https://syndication.realsrv.com"])
+txxxporn.tube,vxxx.com##.pwa-ad
+txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi])
 up.taoseye.com##a[target="_blank"],[ontouchstart]
 video.sina.cn##section.Card_Mb16
 view.inews.qq.com##[class*="downloader-"]
@@ -4145,6 +4150,11 @@ view.inews.qq.com##[class^="style_floatingRight__"]
 view.inews.qq.com##[data-action-id="2"],[dt-eid="em_pull_news"]
 voflix.com##[class*="module-adslist"]
 voflix.com##img[importance="low"][onclick*="window.open"][src][lazyload]
+vxxx.com###player-1 > div[style="display:flex !important"] > div
+vxxx.com##.video-page-content + div[class]
+vxxx.com##.video-page-content-left + div[class]:last-child
+vxxx.com##.videoplayer + div > div[class]
+vxxx.com##.wrapper-margin + div[class]:last-child
 wandoujia.com##[class="infos download-rank"],[class^="brand-"],[class^="midbanner"],li[class="new-app"],[class*="relative"],[class="infos similar-app"]
 weibo.com##.card-content > ul > li:has(> p > .icon-txt-recommend)
 weibo.com##.card-content > ul > li:has(>a[action-type="realtimehot_ad"])
