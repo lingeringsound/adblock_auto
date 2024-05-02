@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JSfl2DfVj/mAqNdPiwItOg
+! Checksum: 1x02wDiU9N9E1biroxRlIA
 ! Title: 自用去广告Adblock规则
-! Version: 20240502122931
-! Last modified: 2024-05-02 12:29:31
-! Total Count: 7095
+! Version: 20240502140307
+! Last modified: 2024-05-02 14:03:07
+! Total Count: 7126
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1638,6 +1638,7 @@
 ##img[id^="GGADIMG"][src]
 ##img[id^="daohang_hengfu"][width="100%"]
 ##img[onclick^="golh"][onclick$=")"][width="100%"],img[onclick^="golh"][onclick$=")"][src$=".gif"]
+##img[spm*="广告"]
 ##img[src$="-960x100.gif"]
 ##img[src$="-960x60.gif"]
 ##img[src$="-960x80.gif"]
@@ -1868,24 +1869,34 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn:80*/d/*?*=$third-party
 .cn:80*/sc/*?*=$third-party
 .cn:8001/cc/*?is_not=
+.cn:8001/d/*?*=$third-party
 .cn:8001/sc/*?is_not=
 .cn:8002/cc/*?is_not=
+.cn:8002/d/*?*=$third-party
 .cn:8002/sc/*?is_not=
 .cn:8003/cc/*?is_not=
+.cn:8003/d/*?*=$third-party
 .cn:8003/sc/*?is_not=
 .cn:8004/cc/*?is_not=
+.cn:8004/d/*?*=$third-party
 .cn:8004/sc/*?is_not=
 .cn:8005/cc/*?is_not=
+.cn:8005/d/*?*=$third-party
 .cn:8005/sc/*?is_not=
 .cn:8006/cc/*?is_not=
+.cn:8006/d/*?*=$third-party
 .cn:8006/sc/*?is_not=
 .cn:8007/cc/*?is_not=
+.cn:8007/d/*?*=$third-party
 .cn:8007/sc/*?is_not=
 .cn:8008/cc/*?is_not=
+.cn:8008/d/*?*=$third-party
 .cn:8008/sc/*?is_not=
 .cn:8009/cc/*?is_not=
+.cn:8009/d/*?*=$third-party
 .cn:8009/sc/*?is_not=
 .cn:8010/cc/*?is_not=
+.cn:8010/d/*?*=$third-party
 .cn:8010/sc/*?is_not=
 .co/ajd.php?pid=$third-party
 .co/ajtop.php?pid=*$third-party
@@ -1962,26 +1973,36 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:80*/cc/*?is_not=$third-party
 .com:80*/d/*?c=*&$third-party,script
 .com:8001/cc/*?*=$third-party
+.com:8001/d/*?*=$third-party
 .com:8001/sc/*?*=$third-party
 .com:8001/sc/*?n=$third-party
 .com:8001/sc/*?x=$third-party
 .com:8002/cc/*?*=$third-party
+.com:8002/d/*?*=$third-party
 .com:8002/sc/*?*=$third-party
 .com:8003/cc/*?*=$third-party
+.com:8003/d/*?*=$third-party
 .com:8003/sc/*?*=$third-party
 .com:8004/cc/*?*=$third-party
+.com:8004/d/*?*=$third-party
 .com:8004/sc/*?*=$third-party
 .com:8005/cc/*?*=$third-party
+.com:8005/d/*?*=$third-party
 .com:8005/sc/*?*=$third-party
+.com:8006/d/*?*=$third-party
 .com:8007/cc/*?*=$third-party
 .com:8007/cc/*?is_not=$third-party
+.com:8007/d/*?*=$third-party
 .com:8007/d/*?c=
 .com:8007/sc/*?*=$third-party
 .com:8008/cc/*?*=$third-party
+.com:8008/d/*?*=$third-party
 .com:8008/sc/*?*=$third-party
 .com:8009/cc/*?*=$third-party
+.com:8009/d/*?*=$third-party
 .com:8009/sc/*?*=$third-party
 .com:8010/cc/*?*=$third-party
+.com:8010/d/*?*=$third-party
 .com:8010/sc/*?*=$third-party
 .com:8891/vh3/
 .com:8891/vj3/
@@ -2116,6 +2137,16 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:*/mnrt/*.json
 .xyz:30009/d/*?t=
 .xyz:80*/sc/*?is_not=$third-party
+.xyz:8001/d/*?*=$third-party
+.xyz:8002/d/*?*=$third-party
+.xyz:8003/d/*?*=$third-party
+.xyz:8004/d/*?*=$third-party
+.xyz:8005/d/*?*=$third-party
+.xyz:8006/d/*?*=$third-party
+.xyz:8007/d/*?*=$third-party
+.xyz:8008/d/*?*=$third-party
+.xyz:8009/d/*?*=$third-party
+.xyz:8010/d/*?*=$third-party
 /*.php?pid=*&n=$third-party
 /*/*/*.gif?bdSecret=*&DdTime=*$third-party
 /*/*/chart*.js$domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com
