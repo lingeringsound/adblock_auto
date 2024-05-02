@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 1x02wDiU9N9E1biroxRlIA
+! Checksum: v9EUunllZA03RWJ4MYfghA
 ! Title: 自用去广告Adblock规则
-! Version: 20240502140307
-! Last modified: 2024-05-02 14:03:07
-! Total Count: 7126
+! Version: 20240502145645
+! Last modified: 2024-05-02 14:56:45
+! Total Count: 7221
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -642,6 +642,98 @@
 ##.inPlayerGGdiv
 ##.index-center-tc-index2.index-center-tc > a
 ##.j-cctv-click
+##.js-ad
+##.js-ad-banner-container
+##.js-ad-buttons
+##.js-ad-container
+##.js-ad-dynamic
+##.js-ad-frame
+##.js-ad-home
+##.js-ad-hover
+##.js-ad-loader-bottom
+##.js-ad-slot
+##.js-ad-static
+##.js-ad-unit
+##.js-ad-unit-bottom
+##.js-ad-whitelist-notice
+##.js-ad-wrapper
+##.js-adExternalPage
+##.js-ad_iframe
+##.js-ad_iframe_wrap
+##.js-adb-msg
+##.js-adfliction-iframe
+##.js-adfliction-standard
+##.js-ads
+##.js-ads-carousel
+##.js-ads-header-content
+##.js-adv-rotator-image
+##.js-advert
+##.js-advert--responsive
+##.js-advert--vc
+##.js-advert-container
+##.js-advert-upsell-popup
+##.js-advertising__placeholder1
+##.js-adzone
+##.js-anchor-ad
+##.js-article-advert-injected
+##.js-billboard-advert
+##.js-cardview_ad-320x180
+##.js-cardview_ad-320x50
+##.js-checkad-warning
+##.js-cui-pt-item[data-qhb]
+##.js-dfp-ad
+##.js-dfp-ad-bottom
+##.js-dfp-ad-top
+##.js-footer-zerg
+##.js-googleAdSuperHeader-wrapper
+##.js-gpt-ad
+##.js-gptAd
+##.js-header-ad
+##.js-header-ad-wrapper
+##.js-lazy-ad
+##.js-mapped-ad
+##.js-mpu
+##.js-native-ad
+##.js-no-sticky-ad
+##.js-outbrain-container
+##.js-overlay_ad
+##.js-product-ad-slider
+##.js-react-simple-ad
+##.js-results-ads
+##.js-right-ad-block
+##.js-sidebar-ads
+##.js-site-header-advert
+##.js-skyscraper-ad
+##.js-slide-right-ad
+##.js-slide-top-ad
+##.js-slim-nav-ad
+##.js-sticky-ad
+##.js-sticky-advert-details-mpu
+##.js-stream-ad
+##.js-stream-featured-ad
+##.js-toggle-ad
+##.js-underplayerAd
+##.jsAdSlot
+##.jsMPUSponsor
+##.jsOneAd
+##.js_ad-sticky-footer
+##.js_adContainer
+##.js_ad_wrapper
+##.js_contained-ad-container
+##.js_deferred-ad
+##.js_desktop-horizontal-ad
+##.js_midbanner_ad_slot
+##.js_movable_ad_slot
+##.js_preheader-ad-container
+##.js_related-stories-inset
+##.js_slideshow-full-width-ad
+##.js_slideshow-sidebar-ad
+##.js_sticky-top-ad
+##.jsv > .mobile-adv
+##.jumboAd
+##.jw-ad
+##.jw-ad-block
+##.jw-ad-label
 ##.left > .b300
 ##.leftd + .rightd
 ##.leftd1 + .rightd1
@@ -872,6 +964,8 @@
 ##.slide-ad
 ##.slide-hd > ul > li > a
 ##.slider-ad[adid]
+##.swiper-android > .swiper-wrapper > .swiper-slide[style="width: 407px;"]
+##.swiper-ios > .swiper-wrapper > .swiper-slide[style="width: 407px;"]
 ##.swiper-wrapper.gpwggaoh
 ##.swipercctv
 ##.synopsisAd
@@ -3322,8 +3416,9 @@ apkmirror.com##div[id^="adtester-container-"]
 apkmirror.com#$##ezmob-wrapper { display: none !important; }
 apkmirror.com#$#html > body { padding-top: 0 !important; }
 apkmonk.com##.col > div[class]:has(> ins.adsbygoogle)
-apkpure.com,apkpure.*###iframe_download + .slide-wrap > .bd > .tempWrap > ul[style^="width: 1656px;"] > li[style*="float: left; width: 828px;"]:has(> a[href^="https://yaksgames.com/?utm_source"])
-apkpure.com,apkpure.*##.right > div[style*="position: relative;"][style*="height:"]:has(a[href="https://www.macblurayplayer.com/spyhunter-malware-removal-windows.htm"])
+apkpure.com,apkpure.net,apkpure##.js-ad-slot
+apkpure.com,apkpure.net,apkpure.*###iframe_download + .slide-wrap > .bd > .tempWrap > ul[style^="width: 1656px;"] > li[style*="float: left; width: 828px;"]:has(> a[href^="https://yaksgames.com/?utm_source"])
+apkpure.com,apkpure.net,apkpure.*##.right > div[style*="position: relative;"][style*="height:"]:has(a[href="https://www.macblurayplayer.com/spyhunter-malware-removal-windows.htm"])
 app-liv.jp##.c-app-card:not([class^="js-native-ranking-card"]):has(> div > span.app-ranking_label--pr)
 appbank.net##.entry-content > div.sp.fixed-height:has( > div[id^="div-gpt-ad"])
 appbank.net##.entry-content > div.sp.fixed-height:has(> div#elseScript)
