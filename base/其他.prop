@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Kw7PdGjmupflsuHXyZYwyA
+! Checksum: klfOrfXvrwIJ7TheHlfKGw
 ! Title: 自用去广告Adblock规则
-! Version: 20240502213125
-! Last modified: 2024-05-02 21:31:25
-! Total Count: 5012
+! Version: 20240503031635
+! Last modified: 2024-05-03 03:16:35
+! Total Count: 5014
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -3168,7 +3168,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.com/*M*M*M*M*M*M*==$third-party,domain=youtube.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
-@@/?utm_source=*&utm_campaign=$domain=dlsite.com
+@@/?utm_source=*&utm_campaign=$domain=dlsite.com|yandex.kz|yandex.ru|yandex.com|yandex.fr|yandex.com.tr|yandex.ru|yandex.by|yandex.eu|yandex.net|yandex.uz|yandex.ua|yandex.*
 @@/_next/static/chunks/$script,domain=hentaipaw.com
 @@/adbar/*$domain=outlook.live.com
 @@/api/ad/*$domain=pinduoduo.com
@@ -4290,6 +4290,8 @@ youtube.com##body > ytd-app > #content.ytd-app.style-scope > ytd-page-manager#pa
 youtube.com##ytd-rich-grid-row > #contents > ytd-rich-item-renderer:has(> #content > ytd-display-ad-renderer)
 youtube.com##ytd-rich-item-renderer:has(> #content > ytd-ad-slot-renderer)
 youtube.com##ytd-rich-item-renderer:has(ytd-display-ad-renderer)
+ysgcfun.com##body > [style*="base64"]
+ysgcfun.com##table:has(> tbody > tr > td > .cvbcvxvb)
 yydstv.net##body > div[class][style]
 yydy.cc##a[onclick^="window"] > img[id][width="1"],a[style*="width:99%"][style*="z-index:100000"][style*="block"]
 yz.m.sm.cn##[id^="dl-banner-"]
