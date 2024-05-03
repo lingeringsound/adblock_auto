@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Dnbuh5jl+ls8G500MTUGOw
+! Checksum: 4aXXxbs08ScwGWxdfEz7kQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240503144106
-! Last modified: 2024-05-03 14:41:06
-! Total Count: 5026
+! Version: 20240503180111
+! Last modified: 2024-05-03 18:01:11
+! Total Count: 5033
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -339,6 +339,7 @@
 ##.adsenseframe
 ##.adsenseleaderboard
 ##.adsensemobile
+##.adss-mob
 ##.adswarning
 ##.adv-overlay
 ##.adx-300x250-container
@@ -2834,6 +2835,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /popads_
 /popunder1000.js$third-party,script
 /redbaiduct.com?s=$third-party
+/resource?zones=$domain=pornpics.com|pornpics.de
 /rs/js/temp_1.js$script,third-party
 /rs/shto/*?n=*&p=false&t=16$third-party
 /sad3.js?$third-party
@@ -3827,7 +3829,6 @@ news.heytapdownload.com##div.news-wrapper
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
 noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
 noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
-nr19.cn,bilibili.com,youku.com,v.qq.com,acfun.cn#@#img[alt*="广告"][src]
 nxnba.com##.bootom-fixed
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.ads_w + div[id][style]
@@ -3928,6 +3929,12 @@ pornhub.com,pornhubthbh7ap3u.onion,redtube.com,spankbang.com,tube8.com,tube8.es,
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr#@#[src^="bLob:"]
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com,youporngay.com##[style*="blob:"]:not(video)
 pornhub.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporngay.com##img[src*="blob:" i]:not(video)
+pornpics.com,pornpics.de##.ad-text
+pornpics.com,pornpics.de##.adss-mob
+pornpics.com,pornpics.de##.r-frame
+pornpics.com,pornpics.de##.stamp-bn-1
+pornpics.com,pornpics.de##.thumbwook + li[class]:has(.ad-text)
+pornpics.com,pornpics.de,nr19.cn,bilibili.com,youku.com,v.qq.com,acfun.cn#@#img[alt*="广告"][src]
 pornsitetest.com##div[id^="eroti-"]
 pornstarbyface.com##div[id^="sponcored-content-"]
 porntrex.com##.content > div[class]:has(> div[style*="text-align"] > center > script)
