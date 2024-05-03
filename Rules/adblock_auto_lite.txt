@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: m+S+Gu74YwRld+YnbzmPjA
+! Checksum: U5j2ZzezIcpI9RDQdyDq3A
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240503161132
+! Version: 20240504001013
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-03 16:11:32
-! Total Count: 31987
-! Blocked Filters: 31987
+! Last modified: 2024-05-04 00:10:13
+! Total Count: 31996
+! Blocked Filters: 31996
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -11258,6 +11258,7 @@
 ||qdtzbbh.xyz^
 ||qdzyspjx.com^
 ||qejjhnq.cn^
+||qescaen.com^
 ||qetskupch581.shop^
 ||qetskupyka61.shop^
 ||qeuckn.icu^
@@ -11656,6 +11657,7 @@
 ||right.com.cn/logo/yyb.png
 ||riju.com/pr/$domain=jpfans.com|jpseek.com
 ||rilwzsit.icu^
+||ringingneo.com^
 ||riqmqrd.icu^
 ||riscil.com^
 ||rising.cn/js/haoAdData.js
@@ -11808,6 +11810,7 @@
 ||rwarwf.icu^
 ||rwftzx.xyz^
 ||rwnmcum.cn^
+||rxfygd.cn^
 ||rxojynr.icu^
 ||rxrdjb.xyz^
 ||rxyggrq.cn^
@@ -17959,6 +17962,7 @@ gridoto.com,kompasiana.com###sticky-mobile-r
 gruenderszene.de##.content-ad-article
 gsminfo.com.ua###custom_html-10
 gsminfo.com.ua###custom_html-15
+gsmservice.pl###tdi_14
 gsp.ro##.banner-branding
 gsp.ro##div[style="height: 601px"]
 gta.com.ua##body > div[id][style*="background"][style*="visible"]
@@ -21228,12 +21232,15 @@ pornpapa.com##.mobile-device
 pornpapa.com,videojav.com##.js-mob-popup
 pornpaw.com##div[style="height:250px;display:block;"]
 pornpics.app##main > ul.pics:first-child > li
-pornpics.com##.r-frame
 pornpics.com##a[href^="https://www.pornpics.com/to/"]
 pornpics.com#?##container2 > div:has(> span:contains(Brought By:))
+pornpics.com,pornpics.de##.ad-text
+pornpics.com,pornpics.de##.adss-mob
 pornpics.com,pornpics.de##.adss-rel
+pornpics.com,pornpics.de##.r-frame
 pornpics.com,pornpics.de##.sponsor-type-4
 pornpics.com,pornpics.de##.stamp-bn-1
+pornpics.com,pornpics.de##.thumbwook + li[class]:has(.ad-text)
 pornpics.network###hidden
 pornpics2u.com,porngifs2u.com##div[data-elementor-type="footer"] > div.elementor-section-wrap > section:first-child
 pornpics2u.com,porngifs2u.com#?#.elementor-section-wrap > section.elementor-section:has( div[align="center"] > a > img[src^="https://adultwebmasters.org"])
@@ -25409,6 +25416,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 /pornpictureshq\.com\/[A-Za-z]+\d+\.html/$domain=pornpictureshq.com
 /pornrabbit.com\/[a-z0-9]{1,2}.php/$domain=pornrabbit.com
 /redbaiduct.com?s=$third-party
+/resource?zones=$domain=pornpics.com|pornpics.de
 /rs/js/temp_1.js$script,third-party
 /rs/shto/*?n=*&p=false&t=16$third-party
 /sad3.js?$third-party
@@ -28505,6 +28513,7 @@ zle.com$script
 ##.adsoho
 ##.adspace
 ##.adspop
+##.adss-mob
 ##.adswarning
 ##.adtable
 ##.adtop
@@ -31927,6 +31936,7 @@ zle.com$script
 @@||ytimg.com^*_banner$domain=youtube.com
 @@||zagaz.com/img/blogads.css
 aca.best#@#body > noscript + #app
+acfun.cn,bilibili.com,nr19.cn,pornpics.com,pornpics.de,v.qq.com,youku.com#@#img[alt*="广告"][src]
 ads.google.com,youtube.com#@#.video-ads
 advancedrenamer.com,alotof.software,android-doc.com,androidrepublic.org,anonymousemail.me,apk.tw,apkmirror.com,blog.reh.tw,chaojizhibo.net,chtoen.com,demos.krajee.com,dizhishengcheng.com,doitwell.tw,epicbundle.com,epinv.com,ff14angler.com,fxpan.com,gamaniak.com,haoweichi.com,hs-exp.jp,kadinlarkulubu.com,korail.pe.kr,logi.im,lspdfrcn.com,moa.tw,moe123.net,numberempire.com,phcorner.net,pixiz.com,playok.com,reh.tw,rockmods.net,shenfendaquan.com,slashview.com,sockscap64.com,spoilertv.com,vaptcha.com,willyoupressthebutton.com,yabook.org#@#ins.adsbygoogle
 aiqicha.baidu.com#@#[class*="ad"][class*="recommend" i]
@@ -31978,7 +31988,6 @@ masseurporn.com#@#.advertisement
 mi.com#@#[style*="mi-img.com"]
 mpo18.com#@#.bottomad
 mydrivers.com#@#a[href*="/bp.ashx"]
-nr19.cn,bilibili.com,youku.com,v.qq.com,acfun.cn#@#img[alt*="广告"][src]
 okmilfporn.com#@#.ads-link
 ot-boutique.fr#@##publicite
 pl#@#.ad
