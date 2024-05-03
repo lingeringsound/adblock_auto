@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 4EUf2kmerJdO/CDCJQlZxw
+! Checksum: Dnbuh5jl+ls8G500MTUGOw
 ! Title: 自用去广告Adblock规则
-! Version: 20240503100505
-! Last modified: 2024-05-03 10:05:05
-! Total Count: 5018
+! Version: 20240503144106
+! Last modified: 2024-05-03 14:41:06
+! Total Count: 5026
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -966,8 +966,14 @@
 ##.slide-ad
 ##.slide-hd > ul > li > a
 ##.slider-ad[adid]
-##.swiper-android > .swiper-wrapper > .swiper-slide[style="width: 407px;"]
-##.swiper-ios > .swiper-wrapper > .swiper-slide[style="width: 407px;"]
+##.swiper-android > .swiper-wrapper > .swiper-slide[style*="width: 387px;"]
+##.swiper-android > .swiper-wrapper > .swiper-slide[style*="width: 407px;"]
+##.swiper-container-android > .swiper-wrapper > .swiper-slide[style*="width: 387px;"]
+##.swiper-container-android > .swiper-wrapper > .swiper-slide[style*="width: 407px;"]
+##.swiper-container-ios > .swiper-wrapper > .swiper-slide[style*="width: 387px;"]
+##.swiper-container-ios > .swiper-wrapper > .swiper-slide[style*="width: 407px;"]
+##.swiper-ios > .swiper-wrapper > .swiper-slide[style*="width: 387px;"]
+##.swiper-ios > .swiper-wrapper > .swiper-slide[style*="width: 407px;"]
 ##.swiper-wrapper.gpwggaoh
 ##.swipercctv
 ##.synopsisAd
@@ -2217,6 +2223,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz/send?$third-party
 .xyz/stimulus?$third-party
 .xyz/svelte?$third-party
+.xyz/ty/*-*-*.$third-party,~image,~script
 .xyz/ty/*-*.alpha$third-party
 .xyz/ty/*-*.blpha$third-party
 .xyz/vendors?$third-party
@@ -4293,6 +4300,7 @@ youtube.com##body > ytd-app > #content.ytd-app.style-scope > ytd-page-manager#pa
 youtube.com##ytd-rich-grid-row > #contents > ytd-rich-item-renderer:has(> #content > ytd-display-ad-renderer)
 youtube.com##ytd-rich-item-renderer:has(> #content > ytd-ad-slot-renderer)
 youtube.com##ytd-rich-item-renderer:has(ytd-display-ad-renderer)
+ypcgw.com##[class$="_acmsd"]
 ysgcfun.com##body > [style*="base64"]
 ysgcfun.com##table:has(> tbody > tr > td > .cvbcvxvb)
 yydstv.net##body > div[class][style]
