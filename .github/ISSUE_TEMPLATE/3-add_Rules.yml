@@ -15,7 +15,21 @@ body:
         - 放行
     validations:
       required: false
-  
+
+  - type: dropdown
+    id: targetwebsite
+    attributes:
+      label: 提交到
+      description: |
+       选择提交到那个规则
+      multiple: true
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: false
+
   - type: textarea
     id: targetRules
     attributes:
