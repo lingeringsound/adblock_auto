@@ -98,7 +98,7 @@ cp -rf "${Base_Rules_Folder}/常用广告的顶级域名.prop" "${Combine_Folder
 cp -rf "${Base_Rules_Folder}/拦截H转跳.prop" "${Combine_Folder}/lite/拦截H转跳.txt"
 cp -rf "${Base_Rules_Folder}/网址批量规则.prop" "${Combine_Folder}/lite/网址批量规则.txt"
 cp -rf "${Base_Rules_Folder}/youtube.prop" "${Combine_Folder}/lite/youtube.txt"
-cp -rf "${Base_Rules_Folder}/反Adblock.prop" "${Combine_Folder}/反Adblock.txt"
+cp -rf "${Base_Rules_Folder}/反Adblock.prop" "${Combine_Folder}/lite/反Adblock.txt"
 
 
 
