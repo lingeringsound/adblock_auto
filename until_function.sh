@@ -388,7 +388,7 @@ done
 function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|redirect=|\,replace=|redirect-rule=|\$badfilter|\,badfilter$|\,badfilter\,|\$generichide|\,generichide\,|\,generichide$|\$important|\,important\,|\,important$|\$empty|\,empty\,|\,empty$|\$match-case|\,match-case\,|\,match-case$|\$popup|\,popup\,|\,popup$|\$media|\,media\,|\,media$|\$csp|\,csp=|\:matches-path' | sort | uniq)"
+local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|redirect=|\,replace=|redirect-rule=|\$badfilter|\,badfilter$|\,badfilter\,|\$generichide|\,generichide\,|\,generichide$|\$important|\,important\,|\,important$|\$empty|\,empty\,|\,empty$|\$match-case|\,match-case\,|\,match-case$|\$popup|\,popup\,|\,popup$|\$media|\,media\,|\,media$|\$csp|\,csp=|\,denyallow=|\:matches-path' | sort | uniq)"
 echo "${lite_content}" > "${file}"
 }
 
