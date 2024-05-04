@@ -1,0 +1,23 @@
+name: 拦截请求
+description: 反馈你想要拦截的网站或者内容。
+labels: ["拦截请求"]
+assignees: 
+  -  lingeringsound
+body:  
+  - type: input
+    id: targetbolckwebsite
+    attributes:
+      label: 网址
+      description: 输入要拦截的网址
+      placeholder: ……
+      render: 
+    validations:
+      required: true
+
+  - type: textarea
+    id: blockotheradd
+    attributes:
+      label: 补充说明
+      placeholder: 补充描述你的要求
+    validations:
+      required: false
