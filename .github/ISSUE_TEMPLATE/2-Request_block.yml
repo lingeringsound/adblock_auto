@@ -20,3 +20,32 @@ body:
       placeholder: 补充描述你的要求
     validations:
       required: false
+
+  - type: dropdown
+    id: blocklists
+    attributes:
+      label: 你使用的是那个规则?
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: false
+
+  - type: dropdown
+    id: adblocker
+    attributes:
+      label: 使用的拦截器
+      description: |
+        就是你在什么应用或者拓展里使用规则
+      options:
+        - Via
+        - Xbrowser(X浏览器)
+        - 嗅觉浏览器
+        - B仔浏览器
+        - Rians浏览器
+        - AdGuard
+        - uBlock
+    validations:
+      required: false
+
