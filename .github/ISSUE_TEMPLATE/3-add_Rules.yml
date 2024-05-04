@@ -15,13 +15,12 @@ body:
         - 拦截
         - 放行
     validations:
-      required: true
+      required: false
   
   - type: input
     id: targetRules
     attributes:
       label: 规则
-      multiple: true
       description: 输入您的规则
       placeholder: 请输入Adblock语法的规则……
     validations:
