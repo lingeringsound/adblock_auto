@@ -26,13 +26,20 @@ body:
     id: blocklists
     attributes:
       label: 你使用的是那个规则?
-      multiple: true
       options:
         - 混合规则精简版
         - 混合规则
         - 其他
     validations:
       required: true
+
+  - type: input
+    id: blocklistothers
+    attributes:
+      label: 其他规则
+      placeholder: 如果上面没有选择其他规则可以忽略……
+    validations:
+      required: false
 
   - type: textarea
     id: content
