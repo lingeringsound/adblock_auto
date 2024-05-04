@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: rVfwq1ehZ2bxEllhuCF8tA
+! Checksum: smzRjyoPDQQ1V/ZAGcwtwg
 ! Title: 自用去广告Adblock规则
-! Version: 20240504170857
-! Last modified: 2024-05-04 17:08:57
-! Total Count: 5036
+! Version: 20240504225013
+! Last modified: 2024-05-04 22:50:13
+! Total Count: 5041
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1139,6 +1139,7 @@
 ##[name^="google_ads_iframe"]
 ##[onclick*="//xxl.skdvkslkdb.com"]
 ##[onclick*="content.ad/"]
+##[onclick*="https://xxl."][onclick*=".com/bd-"]
 ##[onclick="ga('send', 'event', { eventCategory: 'tlavban', eventAction: 'mobile', eventLabel: '台灣情趣用品'});"]
 ##[onclick="window.open(this.url)"][src]
 ##[onclick][style="position:absolute;top:0;right:0;z-index:2147483647;"],[ontouchstart][style="position:absolute;top:0;right:0;z-index:2147483647;"]
@@ -2022,6 +2023,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*interstitial*.js$third-party,script
 .com/20*/*/*.txt$third-party
 .com/?channelCode=$~third-party
+.com/VVAvcnms/$third-party
 .com/ad-provider.js$third-party
 .com/api/getPos?jspath=/$~third-party
 .com/api/ipv4check?mark
@@ -3509,6 +3511,8 @@ facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div
 fanyi.baidu.com##.app-bar
 fanyi.baidu.com##.bottom-intro
 fanyi.baidu.com##[class^="jifeng-"]
+fcwei.com##div:has(> [style*=".myqcloud.com/img/"])
+fcwei.com##script + [id$="_rfymty"]
 fqys1.com##[class^="ads"][style]
 gamcore.com##[class*="adn-"]
 game2.baifumeiba.com###gotoPlay
@@ -4517,6 +4521,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||dcba.zle.com^
 ||deliver.ptgncdn.com^
 ||dfes68.com^
+||dflkndkzf.com^$third-party
 ||dicouksa.com^
 ||dif1qbzytaymu.cloudfront.net^
 ||dilidili*.com/js/wap2-jm-ms.js$script
