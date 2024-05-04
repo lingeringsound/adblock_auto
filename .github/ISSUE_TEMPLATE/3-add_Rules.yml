@@ -25,3 +25,12 @@ body:
       render: 
     validations:
       required: true
+
+  - type: textarea
+    id: addreason
+    attributes:
+      label: 提交此规则的原因
+      description: 可留空
+      placeholder: 描述提交规则的原因
+    validations:
+      required: false
