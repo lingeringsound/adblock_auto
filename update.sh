@@ -117,6 +117,7 @@ fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" ',_____,domain=' ',domain='
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"
+lite_Adblock_Rules "${Rules_Folder}/adblock_auto_lite.txt"
 #读取白名单 剔除规则
 make_white_rules "${Rules_Folder}/adblock_auto_lite.txt" "`pwd`/white_list/white_list.prop"
 #剔除冲突的CSS规则
@@ -127,6 +128,8 @@ Running_sort_domain_Combine "${Rules_Folder}/adblock_auto_lite.txt"
 Running_sort_Css_Combine "${Rules_Folder}/adblock_auto_lite.txt"
 #再次净化去重
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"
+#精简规则，剔除Via不支持的规则
+lite_Adblock_Rules "${Rules_Folder}/adblock_auto_lite.txt"
 #规则分类
 sort_and_optimum_adblock "${Rules_Folder}/adblock_auto_lite.txt"
 #写入头信息

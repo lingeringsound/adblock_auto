@@ -384,6 +384,16 @@ do
 done
 }
 
+#精简规则，剔除Via不支持的规则
+function lite_Adblock_Rules(){
+local file="${1}"
+test ! -f "${file}" && return
+local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|redirect=|\,replace=|redirect-rule=|\$badfilter|\,badfilter$|\,badfilter\,|\$generichide|\,generichide\,|\,generichide$|\$important|\,important\,|\,important$|\$empty|\,empty\,|\,empty$|\$match-case|\,match-case\,|\,match-case$|\$popup|\,popup\,|\,popup$|\$media|\,media\,|\,media$|\$csp|\,csp=|\:matches-path' | sort | uniq)"
+echo "${lite_content}" > "${file}"
+}
+
+
+
 #更新README信息
 function update_README_info(){
 local file="`pwd`/README.md"
