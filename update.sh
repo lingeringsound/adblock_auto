@@ -70,7 +70,7 @@ fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$third-party,script,_____,domain=
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ',_____,domain=' ',domain='
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-has(' ':has('
 #fix_Rules "${Rules_Folder}/adblock_auto.txt" ' { remove: true; }' ':remove()'
-
+fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-contains(' ':has-text('
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
