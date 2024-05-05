@@ -68,12 +68,13 @@ fix_Rules "${Rules_Folder}/adblock_auto.txt" '##tr:-abp-has' '#\?#tr:-abp-has'
 fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$~media,~subdocument,third-party,domain=mixdrp\.co,123movies\.tw\|' '\$~media,~subdocument,third-party,domain=mixdrp\.co\|123movies\.tw\|'
 fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$third-party,script,_____,domain=' '\$third-party,script,domain='
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ',_____,domain=' ',domain='
-fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-properties(' ':matches-css('
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-has(' ':has('
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" ' { remove: true; }' ':remove()'
 
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
+lite_Uadblock_Rules "${Rules_Folder}/adblock_auto.txt"
 #读取白名单 剔除规则
 make_white_rules "${Rules_Folder}/adblock_auto.txt" "`pwd`/white_list/white_list.prop"
 #剔除冲突的CSS规则
