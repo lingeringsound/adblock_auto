@@ -68,6 +68,8 @@ fix_Rules "${Rules_Folder}/adblock_auto.txt" '##tr:-abp-has' '#\?#tr:-abp-has'
 fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$~media,~subdocument,third-party,domain=mixdrp\.co,123movies\.tw\|' '\$~media,~subdocument,third-party,domain=mixdrp\.co\|123movies\.tw\|'
 fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$third-party,script,_____,domain=' '\$third-party,script,domain='
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ',_____,domain=' ',domain='
+fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-properties(' ':matches-css('
+fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-has(' ':has('
 
 
 #净化去重规则
