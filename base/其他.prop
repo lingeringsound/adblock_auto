@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: hinBuwiG1JmgzwhDyaFSCw
+! Checksum: zXNL5zkg0ANr2wBYy5JK4w
 ! Title: 自用去广告Adblock规则
-! Version: 20240505134009
-! Last modified: 2024-05-05 13:40:10
-! Total Count: 5037
+! Version: 20240505161409
+! Last modified: 2024-05-05 16:14:09
+! Total Count: 5045
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -125,6 +125,8 @@
 ###ima_ads-4
 ###imgad1
 ###imu_ad_module
+###inPlayerGGzone
+###inPlayerGGzone + [data-content-type="result"]
 ###leftAD
 ###leftCouple
 ###leftCouple + #rightFloat
@@ -636,6 +638,7 @@
 ##.googlepostads
 ##.googley_ads
 ##.gpt-ad
+##.happy_undie-mob
 ##.headThreeImg > .block > a > img
 ##.header-ad-desktop
 ##.header-ad-mobile
@@ -1095,6 +1098,7 @@
 ##[href*="https://zi.nvurz.com"]
 ##[href="/adad.html"]
 ##[href="https://05.zde95.vip/"]
+##[href="https://fkxl.xyz/zafs"]
 ##[href="https://ztmzxnl633.xyz"]
 ##[href] > .add
 ##[href^="https://cdgjv8760.xyz"]
@@ -1218,6 +1222,8 @@
 ##a[href*="//go.hpyrdr.com/"]
 ##a[href*="//go.julrdr.com/"]
 ##a[href*="//go.markets.com/visit/?bta="]
+##a[href*="//go.mnaspm.com"]
+##a[href*="//go.mnaspm.com/"]
 ##a[href*="//go.nordvpn.net/aff"] > img
 ##a[href*="//go.skinstrip.net"][href*="?campaignId="]
 ##a[href*="//go.strpjmp.com/"]
@@ -1623,6 +1629,7 @@
 ##iframe[src*="//go.hpyrdr.com/"]
 ##iframe[src*="//go.julrdr.com/"]
 ##iframe[src*="//go.markets.com/visit/?bta="]
+##iframe[src*="//go.mnaspm.com"]
 ##iframe[src*="//go.nordvpn.net/aff"]
 ##iframe[src*="//go.skinstrip.net"][src*="?campaignId="]
 ##iframe[src*="//go.static-srv.com/"]
@@ -1700,6 +1707,7 @@
 ##img[alt="91抖阴"]
 ##img[alt="91茄子视频"]
 ##img[alt="Bet365"]
+##img[alt="adposter"]
 ##img[alt="亚星体育"]
 ##img[alt="免费AV动漫"]
 ##img[alt="免费VPN"]
@@ -2160,6 +2168,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .ru/ads/
 .shop/r/*$xmlhttprequest
 .shop/xling_*_*.js?
+.shop:*/apps/sdk$third-party
 .shop:*/i.js$third-party,script
 .shop:*/o.js$third-party,script
 .site:*/*/*.js
@@ -3050,7 +3059,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 69xx.one,69xx487.xyz,8mav.cc,av411.xyz,cable2055.cc,theav.xyz,thep178.com,theporn.cc,weav.xyz##[class]:has(>a>.q-responsive)
 69xx.one,8mav.cc,theav.xyz,thep178.com,theporn.cc##div[class]:has(>a>.q-responsive)
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
-7mmtv.sx,adultdeepfakes.com,missav.com,missav123.com,missav789.com,missav888.com,thisav.com,yourlust.com##[class^="root--"]
+7mmtv.sx,adultdeepfakes.com,missav.com,missav123.com,missav789.com,missav888.com,pornhk.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,camhub.cc,camhub.world,fuckit.cc,thothd.com,watchporn.to#@#.ads-iframe
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.adspop
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.post-card:has(div[style*="data:image/gif"])
@@ -3201,9 +3210,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@mwfimsvfast.co/static/upload/ads/files/300x250*.gif
 @@p2p.$domain=tecms.net
 @@tangsanshu.net/js/comm.js
-@@yetianlian.la/js/comm.js
-@@yetianlian.la/xxgg/common.js
-@@yetianlian.la/xxgg/read.js
 @@ysjdm.net/template/conch/asset/js/hlhtml.
 @@||150075.com^$domain=tecms.net
 @@||adnxs.com/ast/static/$domain=outlook.live.com
@@ -3874,17 +3880,18 @@ porn-w.org##.align-items-center.list-row:has(.col:empty)
 porn300.com##.primary-nav > ul.main-menu > li.main-menu__item:has(> a[href^="http://traffic.bannerator.com/"]#tabcams-desk)
 porn4days.red##div > b:has(> div.alert > a[href^="https://www.brazzersnetwork.com/"])
 porn5f.com##.row:has(> div.col-lg-3 > div[style] > div.carousel-inner > p.ad-title)
+pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##.no-gutters
+pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##div.links.row
+pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##div.row.links
 pornboss.org###menu-menue-1 > li:has(> a[href^="http://toplist.raidrush.ws/"])
 porndoe.com##[class^="-banner"],[href*="//ads"],[href^="/redirect"]
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##.container-fluid > .links
-pornfind.org,pornbest.org,ptt.sex,pornlulu.com##.no-gutters
-pornfind.org,pornbest.org,ptt.sex,pornlulu.com##div.links.row
-pornfind.org,pornbest.org,ptt.sex,pornlulu.com##div.row.links
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##div[class^="col-"][style] > a[target="_blank"] > img[alt]
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##img[src*="/images/friend"]
 porngames.com##.contentbox:has(a[href="javascript:void(0);"])
 porngames.com##.contentbox:has(iframe[src^="//"])
 pornhd.com###pageContent > .thumbs > li.video-list-corner-block:has(> .corner-block-element > .remove-ad-block)
+pornhk.org##video[preload][playsinline="true"]
 pornhub-com.appspot.com,pornhub.com,pornhub.net,pornhubthbh7ap3u.onion,tube8.com,tube8.es,tube8.fr,tube8.net,youporn.com###pb_template
 pornhub.com###relatedVideosCenter > .wrapVideoBlock:has(> .videoSpiceVidsBlock span.bg-spice-badge)
 pornhub.com###relatedVideosCenter > li[class^="related"]
@@ -4725,6 +4732,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||lskjwica.cn^
 ||lwksxs.com^$third-party
 ||lwonclbench.com^$third-party
+||m.biqooge.com/js/wap.js
 ||magsrv.com^$third-party
 ||mail-ads.google.com^
 ||mail.kguapp.com^
