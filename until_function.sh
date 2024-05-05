@@ -396,7 +396,7 @@ echo "${lite_content}" > "${file}"
 function lite_Uadblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\$|\$@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\%#\/\/scriptlet|\$dnsrewrite=|\,replace=|:-abp-properties|:matches-attr|:matches-property|:nth-ancestor' | sort | uniq)"
+local lite_content="$(cat ${file} | grep -Ev '\$\$|\$@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\%#\/\/scriptlet|\$dnsrewrite=|\,replace=|:-abp-properties|:matches-attr|:matches-property|:nth-ancestor' | sort | uniq)"
 echo "${lite_content}" > "${file}"
 }
 
