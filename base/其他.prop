@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: MtDF1Goc2+CFKDLCWXEVpA
+! Checksum: HxvoxV3G1YCoX+ZPjY9UbA
 ! Title: 自用去广告Adblock规则
-! Version: 20240506000057
-! Last modified: 2024-05-06 00:00:57
-! Total Count: 5046
+! Version: 20240506115830
+! Last modified: 2024-05-06 11:58:30
+! Total Count: 5073
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -24,6 +24,9 @@
 ###LeftAd1
 ###__ads_dp
 ###ad-index
+###adAreaForLookOnline1
+###adAreaForLookOnline2
+###adAreaForLookOnline3
 ###adBrandDev
 ###adBrandingStation
 ###adBreak
@@ -164,6 +167,7 @@
 ###modalAblockWrapper
 ###modalAdblock
 ###playerJsvLayer.jsv-layer
+###playertopads
 ###popup-overlay0.popup-overlay
 ###popup-overlay1.popup-overlay
 ###rightAD
@@ -3185,6 +3189,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.icu/js/gg.js$script,domain=kwoo50.icu
 @@/?utm_source=*&utm_campaign=$domain=dlsite.com|yandex.kz|yandex.ru|yandex.com|yandex.fr|yandex.com.tr|yandex.ru|yandex.by|yandex.eu|yandex.net|yandex.uz|yandex.ua|yandex.*
 @@/_next/static/chunks/$script,domain=hentaipaw.com
+@@/ad.php?id=$domain=jav777.cc|jav777.xyz
+@@/ad/ads.php?$domain=jav777.cc|jav777.xyz
 @@/adbar/*$domain=outlook.live.com
 @@/api/ad/*$domain=pinduoduo.com
 @@/api/ads?$domain=nmkjxy.com
@@ -3696,6 +3702,9 @@ jable.tv##div[class^="root-"]
 jablickar.cz##.content > p:has(> a[rel^="attachment"])
 jav-desu.xyz##.home-img-box:has(> div.related-ad)
 jav4tv.com##aside:has(.ads_300_250)
+jav777.cc,jav777.xyz###playertopads
+jav777.cc,jav777.xyz##[style="margin-left:5px; margin-right:5px; text-align:center"]
+jav777.cc,jav777.xyz##script[src*="/ad.php?"] + a[href]
 jav777.xyz##[class^="myad_alert"]
 jav789.com##.container > div.box:has(> div.porn-videos-ads)
 javadecompilers.com##.row > .col-xs-12.col-md-5:has(> .row > .adsbygoogle)
@@ -3744,6 +3753,12 @@ koreaporn.net##div.bb_mobile
 ktmukmx.com##.container > div[style] > div.row > .col-sm-3 > a[target="_blank"]
 kwoo50.icu##div.mod:has(.biaoti)
 kxyes.com##span[style*="393px"][style*="0px 0px"][style*="border-image-source:url"],img[src*="//image.suning.cn/uimg/ZR/share_order"],.cpcad.nopc
+last.fm##.chartlist-row--interlist-ad
+last.fm##.full-bleed-ad-container
+last.fm##.mpu-subscription-upsell
+last.fm##.recs-feed-item--ad
+last.fm##.tonefuze
+last.fm##[data-ads-placement]
 lovedan.net##[style^="display: block; z-index: 2147483646;"],[style$="!important;"],[style*="0vw;"],[class^="tsgg"],[id*="ggsj"]
 luoqiuzw.com##.show-app2
 m.bilibili.com##.home-float-openapp.launch-app-btn
@@ -3879,7 +3894,18 @@ po18wen.net##img[style="border: 1px inset #00FF00"]
 porn-w.org##.align-items-center.list-row:has(.col:empty)
 porn300.com##.primary-nav > ul.main-menu > li.main-menu__item:has(> a[href^="http://traffic.bannerator.com/"]#tabcams-desk)
 porn4days.red##div > b:has(> div.alert > a[href^="https://www.brazzersnetwork.com/"])
+porn5f.com###dprecommend
+porn5f.com###main_video_block > .m-t-5.pull-right
+porn5f.com##.aa-dd-body
+porn5f.com##.alb_320x250
+porn5f.com##.bxslider
+porn5f.com##.mobframe
+porn5f.com##.position_fix_bottom
+porn5f.com##.preroll-adv-popup-iframe
+porn5f.com##.preroll-adv-popup-overlay
+porn5f.com##.preroll-adv-two
 porn5f.com##.row:has(> div.col-lg-3 > div[style] > div.carousel-inner > p.ad-title)
+porn5f.com##.video-promote-adv
 pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##.no-gutters
 pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##div.links.row
 pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##div.row.links
@@ -5023,6 +5049,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||yxvoud.com^
 ||yy4480qpgyy.com^
 ||yyefao.com^
+||zatnoh.com^$third-party
 ||zawqwpajq.live^
 ||zb.mtwie.com^
 ||zdabnt.*$third-party
