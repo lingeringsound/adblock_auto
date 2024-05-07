@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: cMhbJPhqjR4YMUxgYvI8pw
+! Checksum: yeuZ43wpuB3ciVpk1xeEDA
 ! Title: 自用去广告Adblock规则
-! Version: 20240506232327
-! Last modified: 2024-05-06 23:23:27
-! Total Count: 5101
+! Version: 20240507124509
+! Last modified: 2024-05-07 12:45:09
+! Total Count: 5112
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2273,6 +2273,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*_*_*_min.css?$third-party,domain=lfwx2.com
 /*_*_/bigREDcat.$third-party
 /*_*_/bigREDdog.$third-party
+/17mb/script/f*.js$~third-party,script,domain=longtengxiaoshuo.org|longtengxiaoshuo.net|longtengxiaoshuo.app|longtengxiaoshuo.com
 /?channelCode=bfy$document
 /AdS/RAD.
 /AdServer/*$popup,third-party
@@ -3884,6 +3885,16 @@ outlook.live.com##div:has(> div > div.fbAdLink)
 outlook.live.com##div[data-app-section="MessageList"] div[role="listbox"] .customScrollBar > div[style] > div[style^="position: absolute"]:first-child:has(i[data-icon-name="Delete"] + div + button)
 outlook.live.com##main[aria-hidden] > div[class] > div[style] > div[class][style="position: absolute; left: 0px; top: 0px; height: 80px; width: 100%;"]:has(> div[class] > div[role="group"] > #OwaContainer)
 pan.baidu.com##.share-error-ad
+pconline.com.cn###JBestRecomm
+pconline.com.cn###JmallLazy
+pconline.com.cn###art-bottom-nq
+pconline.com.cn##.hiup_bar
+pconline.com.cn##.m-auto-tg
+pconline.com.cn##.page-float-box
+pconline.com.cn##[class*="bottom"]:has([class*="open-app"])
+pconline.com.cn##[class*="box"]:has(a[href*="#ad="])
+pconline.com.cn##a[href*="html#ad="]
+pconline.com.cn##a[href*="newrank#ad="]
 perfectgirls.xxx,hentaihaven.xxx,hentai.tv,animeidhentai.com,hanime.tv##iframe[src^="https://a.adtng.com/"]
 php?ad=
 pixiv.net##._illust-upload + div[style*="968px;"][style*="170px;"]
