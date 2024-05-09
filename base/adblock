@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
-! Checksum: uNNf1HtGkn/Ic79wEaDY1w
+! Checksum: AZ9vdx/VwQOarA5+0zB95w
 ! Title: 混合规则
-! Version: 20240509102631
+! Version: 20240509122811
 ! Expires: 7 days (update frequency)
-! Last modified: 2024-05-09 11:04:00
-! Total Count: 133390
+! Last modified: 2024-05-09 13:06:41
+! Total Count: 133413
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
-! Blocked Filters: 133390
+! Blocked Filters: 133413
 ! Homepage: https://lingeringsound.github.io/adblock
 ! Gitea Homepage: https://gitea.com/lonely_dog/adblock/src/branch/master/README.md
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock
@@ -102631,7 +102631,7 @@ zzztube.com,videoporn.tube##.b-random-column
 zzzyk.com###Tinfo
 !<<<<<网站单独规则 结束>>>>>
 
-!<<<<<通配符规则>>>>>10850
+!<<<<<通配符规则>>>>>10873
 $domain=ads.adxadserv.com|adserver.juicyads.com|cs.adxpansion.com|googleads.g.doubleclick.net|olmsoneenh.info|static.javhd.com|syndication.exosrv.com
 $image,third-party,denyallow=cdn77.org|fpbns.net|others-cdn.com|rncdn7.com|sb-cd.com|stream.highwebmedia.com|upsiloncdn.net|xvideos-cdn.com|youjizz.com|ypncdn.com,domain=pussyspace.com|pussyspace.net
 $image,third-party,domain=258zw.com|lady1.top
@@ -103196,6 +103196,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .adsbox.$domain=~adsbox.in
 .adsby.
 .adsdk.
+.adsense.
 .adserv/
 .adserve.$domain=~adserve.com
 .adserve2.
@@ -103261,6 +103262,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cc/?ch=rxpp$~third-party
 .cc/?channelCode=$~third-party
 .cc/ad/
+.cc/ads/
 .cc/api/getPos?jspath=/$~third-party
 .cc/js/ads/
 .cc/o.js$third-party,script
@@ -103301,9 +103303,11 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cn/?ss=
 .cn/?ss=$script,third-party
 .cn/Report/*-*-$third-party,other
+.cn/a.gif?
 .cn/ads/
 .cn/api/LM/GetBaiDuCode?placeUUID=$third-party
 .cn/api/getPos?jspath=/$~third-party
+.cn/b.gif?
 .cn/cg/*-*.cg$third-party
 .cn/gg/$script,third-party
 .cn/h.html?id=$document
@@ -103312,6 +103316,8 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cn/js/ads/
 .cn/js/gg.js$script
 .cn/k/*$script,third-party
+.cn/r.gif?
+.cn/s.gif?
 .cn/s.php?id=$script,third-party
 .cn/s/*.xc$third-party
 .cn/sc/*?n=$script,third-party
@@ -103325,6 +103331,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cn/vj5/$third-party
 .cn/vs.php?id=$script,third-party
 .cn/x/*-*-*.as$third-party
+.cn/z.gif?
 .cn:*/?channelCode=$document
 .cn:*/?channelCode=$~third-party
 .cn:*/c.php?s=
@@ -103372,6 +103379,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .cn:8010/d/*?*=$third-party
 .cn:8010/sc/*?is_not=
 .co/*/*.js$domain=23ddw.app|23ddw.cc|23ddw.cn|23ddw.co|23ddw.com|23ddw.info|23ddw.la|23ddw.me|23ddw.net|23ddw.org|23ddw.so|23ddw.tw|23ddw.us|81zw.app|81zw.cc|81zw.cn|81zw.co|81zw.com|81zw.info|81zw.la|81zw.me|81zw.net|81zw.org|81zw.so|81zw.tw|81zw.us|biquge.app|biquge.cc|biquge.cn|biquge.co|biquge.com|biquge.info|biquge.la|biquge.me|biquge.net|biquge.org|biquge.so|biquge.tw|biquge.us|biqugu.app|biqugu.cc|biqugu.cn|biqugu.co|biqugu.com|biqugu.info|biqugu.la|biqugu.me|biqugu.net|biqugu.org|biqugu.so|biqugu.tw|biqugu.us|dingdian.app|dingdian.cc|dingdian.cn|dingdian.co|dingdian.com|dingdian.info|dingdian.la|dingdian.me|dingdian.net|dingdian.org|dingdian.so|dingdian.tw|dingdian.us|kbookzw.app|kbookzw.cc|kbookzw.cn|kbookzw.co|kbookzw.com|kbookzw.info|kbookzw.la|kbookzw.me|kbookzw.net|kbookzw.org|kbookzw.so|kbookzw.tw|kbookzw.us|kudushu.app|kudushu.cc|kudushu.cn|kudushu.co|kudushu.com|kudushu.info|kudushu.la|kudushu.me|kudushu.net|kudushu.org|kudushu.so|kudushu.tw|kudushu.us|luoqiu.app|luoqiu.cc|luoqiu.cn|luoqiu.co|luoqiu.com|luoqiu.info|luoqiu.la|luoqiu.me|luoqiu.net|luoqiu.org|luoqiu.so|luoqiu.tw|luoqiu.us|qishuta.app|qishuta.cc|qishuta.cn|qishuta.co|qishuta.com|qishuta.info|qishuta.la|qishuta.me|qishuta.net|qishuta.org|qishuta.so|qishuta.tw|qishuta.us|tangsanshu.app|tangsanshu.cc|tangsanshu.cn|tangsanshu.co|tangsanshu.com|tangsanshu.info|tangsanshu.la|tangsanshu.me|tangsanshu.net|tangsanshu.org|tangsanshu.so|tangsanshu.tw|tangsanshu.us|wxshuku.app|wxshuku.cc|wxshuku.cn|wxshuku.co|wxshuku.com|wxshuku.info|wxshuku.la|wxshuku.me|wxshuku.net|wxshuku.org|wxshuku.so|wxshuku.tw|wxshuku.us|yetianlian.app|yetianlian.cc|yetianlian.cn|yetianlian.co|yetianlian.com|yetianlian.info|yetianlian.la|yetianlian.me|yetianlian.net|yetianlian.org|yetianlian.so|yetianlian.tw|yetianlian.us
+.co/ads/
 .co/ads/$popup
 .co/ads?
 .co/ajd.php?pid=$third-party
@@ -103420,7 +103428,9 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/a_d/
 .com/aaasi/*.js
 .com/ad-provider.js$third-party
+.com/ad.$~script,domain=~ad-tuning.de
 .com/ad/$~image,third-party,domain=~mediaplex.com|~warpwire.com|~wsj.com
+.com/ad/$~third-party,domain=~blogs.technet.microsoft.com|~channel4.com|~mediaplex.com
 .com/ad1/
 .com/ad2/
 .com/ad6/
@@ -103431,8 +103441,10 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/adinf/
 .com/adlib/
 .com/ads-
+.com/ads.
 .com/ads.$~script,~xmlhttprequest
 .com/ads/$domain=pornbraze.com|hdbraze.com
+.com/ads/$image,object,subdocument
 .com/ads/$image,object,subdocument,domain=~developers.google.com|~sabotage-films.com
 .com/ads/ada.js
 .com/ads/adb.js
@@ -103463,6 +103475,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/assets/public/chart.1.js$script,~third-party
 .com/bads/
 .com/banner_list.js
+.com/c.gif?
 .com/candy*.js$third-party
 .com/code.php?a=index&z=$script,third-party,xmlhttprequest
 .com/code.php?z=$script,third-party
@@ -103504,10 +103517,12 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/java/xia1.js
 .com/java/youxia.js
 .com/java/zuoxia.js
+.com/js.ng/
 .com/js/LAD.js
 .com/js/a_d/
 .com/js/ad_
 .com/js/addp.js
+.com/js/ads/
 .com/js/alls_foot.js
 .com/js/alls_top.js
 .com/js/bnnr_
@@ -103540,6 +103555,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .com/piaozi/*.js
 .com/pm/ad-
 .com/pp.php?uid=$script,third-party
+.com/pv.gif?
 .com/qxads/
 .com/rmb/bofang*.js
 .com/rmb/daohang*.js
@@ -103742,7 +103758,9 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .gif?ad=
 .gif|$domain=7mshipin.org|99a67.com|99re.com|viidii.info|xgan.cn
 .gr/ads/
+.hk/ad2/
 .hk/ads/
+.hk/groupon/ads/
 .hr/ads.
 .html?$domain=wap.dulaidw.com
 .html?$third-party,domain=m.800xs.net
@@ -103899,13 +103917,17 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .net/20*/*/*.txt$third-party
 .net/?ss=$script,third-party
 .net/_adv/
+.net/ad-
+.net/ad/$~object-subrequest
 .net/ad2/$~xmlhttprequest
 .net/ad_
 .net/adj;
 .net/ads-
+.net/ads/
 .net/ads?
 .net/ads_
 .net/adt?
+.net/adv/
 .net/adx.php?$popup
 .net/bnr/
 .net/gads/
@@ -104025,6 +104047,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 .so/*/*.js$domain=23ddw.app|23ddw.cc|23ddw.cn|23ddw.co|23ddw.com|23ddw.info|23ddw.la|23ddw.me|23ddw.net|23ddw.org|23ddw.so|23ddw.tw|23ddw.us|81zw.app|81zw.cc|81zw.cn|81zw.co|81zw.com|81zw.info|81zw.la|81zw.me|81zw.net|81zw.org|81zw.so|81zw.tw|81zw.us|biquge.app|biquge.cc|biquge.cn|biquge.co|biquge.com|biquge.info|biquge.la|biquge.me|biquge.net|biquge.org|biquge.so|biquge.tw|biquge.us|biqugu.app|biqugu.cc|biqugu.cn|biqugu.co|biqugu.com|biqugu.info|biqugu.la|biqugu.me|biqugu.net|biqugu.org|biqugu.so|biqugu.tw|biqugu.us|dingdian.app|dingdian.cc|dingdian.cn|dingdian.co|dingdian.com|dingdian.info|dingdian.la|dingdian.me|dingdian.net|dingdian.org|dingdian.so|dingdian.tw|dingdian.us|kbookzw.app|kbookzw.cc|kbookzw.cn|kbookzw.co|kbookzw.com|kbookzw.info|kbookzw.la|kbookzw.me|kbookzw.net|kbookzw.org|kbookzw.so|kbookzw.tw|kbookzw.us|kudushu.app|kudushu.cc|kudushu.cn|kudushu.co|kudushu.com|kudushu.info|kudushu.la|kudushu.me|kudushu.net|kudushu.org|kudushu.so|kudushu.tw|kudushu.us|luoqiu.app|luoqiu.cc|luoqiu.cn|luoqiu.co|luoqiu.com|luoqiu.info|luoqiu.la|luoqiu.me|luoqiu.net|luoqiu.org|luoqiu.so|luoqiu.tw|luoqiu.us|qishuta.app|qishuta.cc|qishuta.cn|qishuta.co|qishuta.com|qishuta.info|qishuta.la|qishuta.me|qishuta.net|qishuta.org|qishuta.so|qishuta.tw|qishuta.us|tangsanshu.app|tangsanshu.cc|tangsanshu.cn|tangsanshu.co|tangsanshu.com|tangsanshu.info|tangsanshu.la|tangsanshu.me|tangsanshu.net|tangsanshu.org|tangsanshu.so|tangsanshu.tw|tangsanshu.us|wxshuku.app|wxshuku.cc|wxshuku.cn|wxshuku.co|wxshuku.com|wxshuku.info|wxshuku.la|wxshuku.me|wxshuku.net|wxshuku.org|wxshuku.so|wxshuku.tw|wxshuku.us|yetianlian.app|yetianlian.cc|yetianlian.cn|yetianlian.co|yetianlian.com|yetianlian.info|yetianlian.la|yetianlian.me|yetianlian.net|yetianlian.org|yetianlian.so|yetianlian.tw|yetianlian.us
 .sponsorads.
 .streamads.
+.swf?clicktag=
 .test15./
 .text-link-ads.
 .textads.
