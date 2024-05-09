@@ -388,7 +388,7 @@ done
 function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|redirect=|\,replace=|redirect-rule=|\$badfilter|\,badfilter$|\,badfilter\,|\$generichide|\,generichide\,|\,generichide$|\$important|\,important\,|\,important$|\$empty|\,empty\,|\,empty$|\$match-case|\,match-case\,|\,match-case$|\$popup|\,popup\,|\,popup$|\$media|\,media\,|\,media$|\$object-subrequest|\$~object-subrequest|\$csp|\,csp=|\,denyallow=|\:matches-path' | sort | uniq)"
+local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|redirect=|\,replace=|redirect-rule=|\$badfilter|\$empty|\$generichide|\$important|\$match-case|\$media|\$object|\$object-subrequest|\$popup|\$~badfilter|\$~empty|\$~generichide|\$~important|\$~match-case|\$~media|\$~object|\$~object-subrequest|\$~popup|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,important$|\,important\,|\,match-case$|\,match-case\,|\,media$|\,media\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,popup$|\,popup\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~important$|\,~important\,|\,~match-case$|\,~match-case\,|\,~media$|\,~media\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\,~popup$|\,~popup\,\$csp|\,csp=|\,denyallow=|\:matches-path' | sort | uniq)"
 echo "${lite_content}" > "${file}"
 }
 
