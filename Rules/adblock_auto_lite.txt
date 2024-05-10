@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 4horfcyu2ybDmQVAinB58g
+! Checksum: sUc7SGEX7qKIxc1yfxCWMw
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240510161201
+! Version: 20240511001119
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-10 16:12:01
-! Total Count: 28378
-! Blocked Filters: 28378
+! Last modified: 2024-05-11 00:11:19
+! Total Count: 28383
+! Blocked Filters: 28383
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -16,7 +16,7 @@
 ! Gitlink Raw Link: https://www.gitlink.org.cn/api/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main
 
 
-!<<<<<域名规则>>>>>14977
+!<<<<<域名规则>>>>>14980
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 |http://*/ts.js$domain=172.86.179.138|208.94.244.100|208.94.244.98|a88.us|ac168.info|ac88.info|aisex.com|cnnice.biz|go543.com
 |https://m.frgls.com/js/*.js?v=
@@ -3528,6 +3528,7 @@
 ||baidu.com/xpage/interface/sourcecontent?
 ||baidu.com/xpage/interface/structrec?
 ||baidu.com^$domain=pos.baidu.com
+||baidu.com^*/directad?
 ||baidu.com^*/getrelatedbusiness?
 ||baidu.com^*/interface/ad?
 ||baidu1.cardbaobao.com^
@@ -5227,6 +5228,7 @@
 ||djponj.xyz^
 ||djs.baomihua.com^
 ||djxpnuo.xyz^
+||djxzk.top^
 ||dk45h.icu^
 ||dkcwnsu.xyz^
 ||dkjwbv.xyz^
@@ -7314,6 +7316,7 @@
 ||iads.xinmin.cn^
 ||iadsdk.apple.com^
 ||iam.datasavannah.com^
+||iaosua.com^
 ||iapolo.com/myjs/
 ||iask.ca/img/*.gif
 ||iask.cn^*.data.
@@ -14996,7 +14999,7 @@
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>7253
+!<<<<<网站单独规则>>>>>7255
 $script,third-party,domain=hitomi.la|rule34hentai.net
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fastpic.ru|fileone.tv|filmlinks4u.is|imagefap.com|keepvid.com|megaup.net|olympicstreams.me|pocketnow.com|pornhub.com|pornhubthbh7ap3u.onion|powvideo.net|redtube.com|redtube.com.br|roadracerunner.com|shorte.st|tribune.com.pk|tube8.com|tube8.es|tube8.fr|tune.pk|vcpost.com|vidmax.com|vidoza.net|vidtodo.com|xtube.com|youporn.com|youporngay.com
@@ -18908,6 +18911,7 @@ maturefatporn.com##.player > div.play
 matureporn.com##.b-spot-section
 matureporn.com,machotube.tv##.b-randoms-col
 maturesex.fun,teenpornvideo.fun,xteensex.net,oosex.net,theteensexy.com,nakedteens.fun###spot-holder
+mavikadin.com,tgrthaber.com,turkiyegazetesi.com.tr##.footer-sticky-ad
 maxfoodfun.com###article-hot-wrapper
 maxfoodfun.com##.discover-stream
 maxfoodfun.com##.recommend-diy
@@ -19414,6 +19418,7 @@ novinky.cz##.ogm-advert-static
 novoporn.com##a[href^="/click/o/"]
 novostroy-m.ru###advert_result
 nsfwyoutube.com##img[src*="data"]
+ntv.com.tr##.mobile-mpu-area
 nu.nl##div[data-type="tealium"]
 nudeteenwhore.com##.mobile-block
 nudevista.at,nudevista.be,nudevista.com,nudevista.com.br,nudevista.com.pl,nudevista.es,nudevista.it,nudevista.net,nudevista.nl,nudevista.se,nudevista.tw##.mob_adv
@@ -21283,6 +21288,7 @@ trinixy.ru##div.mdl-card[style^="text-align: center;"]
 tripeditor.com,mag2.com##.page_bottom_fixed_ad_wap
 tripnote.jp###button-booking
 tripnote.jp##article > div[style="text-align:center; margin:10px 0px; aspect-ratio: 1.2;"]
+trthaber.com##.mobile-masthead-ads-container
 trustedreviews.com###dfpIdtop
 trustedreviews.com##.ebay-deals-container
 trustedreviews.com##.ipc-advert
@@ -21324,7 +21330,6 @@ turbopages.org##.page__result > div[class*="type_native"]
 turbopages.org##.turbo-advert
 turbopages.org##div[class*="type_adfox"]
 turizmekstra.com##img[src^="https://www.turizminsesi.com/d/banner/"]
-turkiyegazetesi.com.tr,mavikadin.com##.footer-sticky-ad
 tut.by##body > div[style*="position: fixed;"][style*="right: 0;"]
 tutudao.net##.m_adv > a[href="https://m.13xp.com/"]
 tutudao.net##a[href="https://hhyy33.com/"][target="_blank"]
