@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: YRf7qc3theVGsH/PqtLbMQ
+! Checksum: ZtiWZsRXRS65pNX08ohV5g
 ! Title: 自用去广告Adblock规则
-! Version: 20240511161859
-! Last modified: 2024-05-11 16:18:59
-! Total Count: 5118
+! Version: 20240514212248
+! Last modified: 2024-05-14 21:22:48
+! Total Count: 5140
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -118,6 +118,7 @@
 ###gpt-poster
 ###gpt-sticky
 ###hfad
+###ifadmiddle
 ###iframe-ad
 ###iframeAd_2
 ###iframe_ad_2
@@ -1652,6 +1653,7 @@
 ##iframe[src*="//go.xxxjmp.com"]
 ##iframe[src*="//go.xxxviijmp.com"]
 ##iframe[src*="//go.zybrdr.com"]
+##iframe[src*="//its.fusrv.com/"]
 ##iframe[src*="//rtbrenab.com/get"]
 ##iframe[src*="//tfosrv.com"]
 ##iframe[src*="//tsyndicate.com/"]
@@ -3087,7 +3089,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 69vj.com##[href^="https://b2pk.com/b/a/d/ck.php"]
 69xx.one,69xx487.xyz,8mav.cc,av411.xyz,cable2055.cc,theav.xyz,thep178.com,theporn.cc,weav.xyz##[class]:has(>a>.q-responsive)
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
-7mmtv.sx,adultdeepfakes.com,missav.com,missav123.com,missav789.com,missav888.com,pornhk.org,thisav.com,yourlust.com##[class^="root--"]
+7mmtv.sx,adultdeepfakes.com,kemono.su,missav.com,missav123.com,missav789.com,missav888.com,pornhk.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,camhub.cc,camhub.world,fuckit.cc,thothd.com,watchporn.to#@#.ads-iframe
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.adspop
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.post-card:has(div[style*="data:image/gif"])
@@ -3845,6 +3847,7 @@ madou.club##a[href*="//www.pssy.xyz"]
 madou.club##a[href*="www.pssy.xyz"]
 madou.club##a[href][target="_blank"][rel="nofollow noopener"]
 maigoo.com##[class*="ads"]
+mat6tube.com##.main > .c_video > .container > [style]:not(.video_player)
 mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###mobile-list-banner.justify-content-center
 mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###top-mobile-banner
 mfsft.com,xgmeitu.com##.apptur
@@ -4340,6 +4343,16 @@ xxxvideos.ink##.curiosity
 ya.ru,yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##.SearchBlock:has(> div.DirectStripe)
 ya.ru,yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div.Organic-Columns > div.Organic-Column > a[href][data-event-required])
 ya.ru,yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="VanillaReact"] > a[href][data-event-required])
+yahoo.com##[class*="ads-"]
+yahoo.com##[class*="bg-Ad"]
+yahoo.com##[class*="gemini-ad"]
+yahoo.com##[id^="gemini-ad-"]
+yahoo.com##[id^="gemini-item-"]
+yahoo.com##[style*="/ads/"]
+yahoo.com##div[data-content="Advertisement"]
+yahoo.com##div[data-content="廣告"]
+yahoo.com##div[id^="ads-"]
+yahoo.com##li[class*="-ad-"]
 yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##.AdvRsyaCrossPage
 yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##.ImagesTouchViewer-DirectSkeleton.SimpleSkeleton
 yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##.i-bem.justifier__incut_fixed
@@ -4458,6 +4471,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adb.*.online/slot?$third-party
 ||adda.ljhhhhrt.top^
 ||addthis.com^
+||adfox.yandex.ru^$domain=d3ward.github.io
 ||adfsda005.xyz^$third-party
 ||adfstat.yandex.ru^
 ||adl-hunter.com^
@@ -4465,13 +4479,20 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adnewnc.app.autohome.com.cn^
 ||adprosrv.com^
 ||adproxy.autohome.com.cn^
+||ads-api.twitter.com^$domain=d3ward.github.io
 ||ads.traffichaus.com^
 ||adsco.re^
 ||adscustsrv.com^
 ||adsession.exacdn.com^
 ||adsessionserv.com^$third-party
+||adtech.yahooinc.com^$domain=d3ward.github.io
 ||adtrue.com^
 ||adultfriendfinder.com^$third-party
+||advertising-api-eu.amazon.com^$domain=d3ward.github.io
+||advertising.apple.com^$domain=d3ward.github.io
+||advertising.yahoo.com^$domain=d3ward.github.io
+||advertising.yandex.ru^$domain=d3ward.github.io
+||advice-ads.s3.amazonaws.com^$domain=d3ward.github.io
 ||adxadserv.com^$third-party
 ||afenjkopoqwm.com^$third-party
 ||agdcdf.live^
@@ -4647,6 +4668,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||gadscc.xyz^
 ||gdqrcloud.com/adBanner
 ||ge.zacuin.com^
+||geo.yahoo.com^
 ||getcdnpix.name^
 ||gibzz.xyz^
 ||gl.zle.com^
