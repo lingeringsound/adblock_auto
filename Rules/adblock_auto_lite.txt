@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: m6ByimRIDy3260bnz213vw
+! Checksum: 7yCUo7TsDjpP5hiANi7QCw
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240514195953
+! Version: 20240515001110
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-14 19:59:53
-! Total Count: 29658
-! Blocked Filters: 29658
+! Last modified: 2024-05-15 00:11:10
+! Total Count: 29673
+! Blocked Filters: 29673
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -16,7 +16,7 @@
 ! Gitlink Raw Link: https://www.gitlink.org.cn/api/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main
 
 
-!<<<<<域名规则>>>>>16257
+!<<<<<域名规则>>>>>16258
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 |http://*/ts.js$domain=172.86.179.138|208.94.244.100|208.94.244.98|a88.us|ac168.info|ac88.info|aisex.com|cnnice.biz|go543.com
 |https://m.frgls.com/js/*.js?v=
@@ -6799,6 +6799,7 @@
 ||gelbjvl.cn^
 ||generalprose.com^$third-party
 ||generateoffice.com^$third-party
+||geo.yahoo.com^
 ||geobanner.blacksexmatch.com^$third-party
 ||geobanner.sexfinder.com^$third-party
 ||geoloc.yospace.com^
@@ -16276,7 +16277,7 @@
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>7254
+!<<<<<网站单独规则>>>>>7266
 $script,third-party,domain=hitomi.la|rule34hentai.net
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fastpic.ru|fileone.tv|filmlinks4u.is|imagefap.com|keepvid.com|megaup.net|olympicstreams.me|pocketnow.com|pornhub.com|pornhubthbh7ap3u.onion|powvideo.net|redtube.com|redtube.com.br|roadracerunner.com|shorte.st|tribune.com.pk|tube8.com|tube8.es|tube8.fr|tune.pk|vcpost.com|vidmax.com|vidoza.net|vidtodo.com|xtube.com|youporn.com|youporngay.com
@@ -16496,7 +16497,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 7days.ru###GPM_7days_M_Top
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
 7mmtv.sx##.ut_cg1_top
-7mmtv.sx,adultdeepfakes.com,missav.com,missav123.com,missav789.com,missav888.com,pornhk.org,thisav.com,yourlust.com##[class^="root--"]
+7mmtv.sx,adultdeepfakes.com,kemono.su,missav.com,missav123.com,missav789.com,missav888.com,pornhk.org,thisav.com,yourlust.com##[class^="root--"]
 7sim.net##html > body ~ div
 8mato.jp###article_contents > div.uk-margin-bottom.uk-text-center
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.adspop
@@ -20174,6 +20175,7 @@ masseurporn.com##.video_cums1
 masturbation22.com,playallvideos.com,pron.co,ratedxbiz.com,taporn.com##.ima
 masutabe.info###sp_top_middle
 masutabe.info,nukistream.com,poyopara.com##div[id="sp_footer"]
+mat6tube.com##.main > .c_video > .container > [style]:not(.video_player)
 mat6tube.com,zeenite.com##div[style*="height:100px;"][style*="width:300px;"]
 mat6tube.com,zeenite.com##div[style*="height:250px;"][style*="width:300px;"]
 match-apps.jp##.cv-over-bt
@@ -20972,6 +20974,7 @@ pixlr.com##body > .pro-app-wrap
 pixnet.net###main > div.header-fixed-area:has(> div#header-ad-fixed)
 pixnet.net##.in-read-ad
 pixnet.net##.octopus
+pixwox##.ah-box
 pkmods.com##body > div[style*="z-index"][style*="background"]
 play44.net,videobug.net,videofun.me,vidzur.com,yucache.net##[style^="position: absolute; width: 100%;"]
 playai.nu##div[style="width:100%;height:300px"]
@@ -23247,9 +23250,19 @@ yahoo.com##.gemini-item-lite
 yahoo.com##.js-gemini-ad
 yahoo.com##.stream-items > li.stream-item[data-wf-image-beacons]
 yahoo.com##.stream-sm-ad
+yahoo.com##[class*="ads-"]
+yahoo.com##[class*="bg-Ad"]
+yahoo.com##[class*="gemini-ad"]
+yahoo.com##[id^="gemini-ad-"]
+yahoo.com##[id^="gemini-item-"]
+yahoo.com##[style*="/ads/"]
 yahoo.com##body .caas-da
 yahoo.com##div.controller[class*="smartphone_Px"][data-reactid]
+yahoo.com##div[data-content="Advertisement"]
+yahoo.com##div[data-content="廣告"]
 yahoo.com##div[id$="PencilAd"]
+yahoo.com##div[id^="ads-"]
+yahoo.com##li[class*="-ad-"]
 yahoo.com##li[data-test-locator="ntk-ad"]
 yahoo.com##ul.stream-items > li[class=""]:not([data-wf-toggle-class]) > .stream-item[data-wf-beacons^="https://beap.gemini.yahoo.com/"]
 yamagata-np.jp##.ad_mobile_area
@@ -25478,7 +25491,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 zle.com$script
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<通用Css规则>>>>>3308
+!<<<<<通用Css规则>>>>>3310
 ###ADbox
 ###ADtip
 ###AdBlockDialog
@@ -25866,6 +25879,7 @@ zle.com$script
 ###hfad
 ###hj-right-aside[style="float: right;"]
 ###homead
+###ifadmiddle
 ###iframe-ad
 ###iframeAd_2
 ###iframe_ad_2
@@ -28508,6 +28522,7 @@ zle.com$script
 ##iframe[src*="//go.xxxjmp.com"]
 ##iframe[src*="//go.xxxviijmp.com"]
 ##iframe[src*="//go.zybrdr.com"]
+##iframe[src*="//its.fusrv.com/"]
 ##iframe[src*="//rtbrenab.com/get"]
 ##iframe[src*="//syndication.exosrv.com/"]
 ##iframe[src*="//tfosrv.com"]
