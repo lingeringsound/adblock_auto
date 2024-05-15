@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Yy8sMqTXy8VoCAJOpzwchQ
+! Checksum: Jgdf7XvXCLTvb/G/O6rkgw
 ! Title: 自用去广告Adblock规则
-! Version: 20240515121647
-! Last modified: 2024-05-15 12:16:48
-! Total Count: 5143
+! Version: 20240516020037
+! Last modified: 2024-05-16 02:00:37
+! Total Count: 5147
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -117,6 +117,7 @@
 ###gpt-mpu
 ###gpt-poster
 ###gpt-sticky
+###header + #shang
 ###hfad
 ###ifadmiddle
 ###iframe-ad
@@ -455,6 +456,7 @@
 ##.fixed_adslot
 ##.fixed_advert_banner
 ##.float-ad
+##.float-app > a[href="#"][onclick]
 ##.floating_ads
 ##.foot-dp-fix
 ##.footads
@@ -3214,7 +3216,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.com/*M*M*M*M*M*M*==$third-party,domain=youtube.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
-@@.icu/js/gg.js$script,domain=kwoo50.icu
+@@.icu/js/gg.js$script,domain=kwoo50.icu|kwuu83.icu
 @@/?utm_source=*&utm_campaign=$domain=dlsite.com|yandex.kz|yandex.ru|yandex.com|yandex.fr|yandex.com.tr|yandex.ru|yandex.by|yandex.eu|yandex.net|yandex.uz|yandex.ua|yandex.*
 @@/_next/static/chunks/$script,domain=hentaipaw.com
 @@/ad.php?$domain=jav777.cc|jav777.xyz|520cc.cc|520cc.com
@@ -3779,7 +3781,9 @@ kissjav.li##img[id="player-fluid_logo_image"],[id^="player-advertising"]
 kiutaku.com##div[class^="i"][class*="9"]
 koreaporn.net##div.bb_mobile
 ktmukmx.com##.container > div[style] > div.row > .col-sm-3 > a[target="_blank"]
-kwoo50.icu##div.mod:has(.biaoti)
+kwoo50.icu,kwuu83.icu##div.float-app
+kwoo50.icu,kwuu83.icu##div.mod:has(.biaoti)
+kwoo50.icu,kwuu83.icu##div[class^="grid-box-"]
 kxyes.com##span[style*="393px"][style*="0px 0px"][style*="border-image-source:url"],img[src*="//image.suning.cn/uimg/ZR/share_order"],.cpcad.nopc
 last.fm##.chartlist-row--interlist-ad
 last.fm##.full-bleed-ad-container
