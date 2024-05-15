@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Jgdf7XvXCLTvb/G/O6rkgw
+! Checksum: X6QwUmIIdlXXZjuYPcNIPQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240516020037
-! Last modified: 2024-05-16 02:00:37
-! Total Count: 5147
+! Version: 20240516041424
+! Last modified: 2024-05-16 04:14:24
+! Total Count: 5150
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2051,6 +2051,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/js/gg.js$script
 .com/k/*$script,third-party
 .com/m-*-*$third-party,domain=manhuagou.com
+.com/m-2697|$third-party
 .com/o.js$third-party
 .com/rs/to/*?n=cbh&p=false&t=16$third-party
 .com/s/*.xc$third-party
@@ -3507,6 +3508,7 @@ coolapk.com#@#[id$="ad-box"]
 cupfox.app###outer-container > .model:has(> .model-content > a[href*=".jd.com"])
 cupfox.app##.model:has(> .model-content > a[href*=".jd.com"])
 cupfox.app##[class^="jsx-"] > img[src$=".gif"]
+czzytv77.com##.stui-pannel + table
 d1bzw.com##[id="appurl"],[id="bbsurl"]
 daftsex.com,pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,spankbang.party,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com##a[href*="?ats="]
 darknessporn.com,familyporner.com,freepublicporn.com,pisshamster.com,punishworld.com,xanimu.com##div[id^="after-boxes"]
@@ -4406,7 +4408,7 @@ youtube.com##ytd-rich-item-renderer:has(> #content > ytd-ad-slot-renderer)
 youtube.com##ytd-rich-item-renderer:has(ytd-display-ad-renderer)
 ypcgw.com##[class$="_acmsd"]
 ysgcfun.com##body > [style*="base64"]
-ysgcfun.com##table:has(> tbody > tr > td > .cvbcvxvb)
+ysgcfun.com,czzytv77.com##table:has(> tbody > tr > td > .cvbcvxvb)
 yydstv.net##body > div[class][style]
 yydy.cc##a[onclick^="window"] > img[id][width="1"],a[style*="width:99%"][style*="z-index:100000"][style*="block"]
 yz.m.sm.cn##[id^="dl-banner-"]
@@ -4946,6 +4948,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||sedoparking.com^
 ||sejieboxapi.yingyangdj.com^
 ||sentry-cdn.com^$domain=adblock-tester.com|d3ward.github.io
+||sfkldbkldgdgh.com^
 ||sfvsjv.com/sh$third-party,script
 ||sgoijw.com^$third-party
 ||shabby-constant.com^
