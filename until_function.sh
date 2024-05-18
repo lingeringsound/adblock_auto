@@ -24,6 +24,7 @@ test "$(echo "${i}" | grep -E '^#' )" && continue
 	name=`echo "${i}" | cut -d '|' -f2`
 		URL=`echo "${i}" | cut -d '|' -f1`
 	test ! -f "${target_dir}/${name}" && curl -k -L -o "${target_dir}/${name}" "${URL}" >/dev/null 2>&1 && echo "※ `date +'%F %T'` ${name} 下载成功！"
+sed -i 's/\\n/换行符正则表达式nn/g' "${target_dir}/${name}"
 dos2unix "${target_dir}/${name}" >/dev/null 2>&1
 done
 }
