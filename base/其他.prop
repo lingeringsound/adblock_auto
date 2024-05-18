@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: G54Vdf/0jKVuTIAP6GoGQw
+! Checksum: eWxtTTfAQORkMcdknUdVIA
 ! Title: 自用去广告Adblock规则
-! Version: 20240519013752
-! Last modified: 2024-05-19 01:37:52
-! Total Count: 5153
+! Version: 20240519071337
+! Last modified: 2024-05-19 07:13:38
+! Total Count: 5160
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -3279,6 +3279,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||google.com/adsense/search/ads.js$domain=news.biglobe.ne.jp
 @@||google.com/analytics/web/$document
 @@||google.com/analytics/web/$~third-party
+@@||gstatic.com^$script,domain=pch.com|pornhub.com|pornhub.net|pornhub.org
 @@||guokr.com/apis/flowingboard/item/guokrapp_
 @@||guokr.com/apis/flowingboard/item/m_
 @@||heytapimage.com^$third-party,domain=news.heytapdownload.com
@@ -3293,6 +3294,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||realsrv.com/video-outstream.js$domain=chutlunds.com
 @@||sexwebvideo.me/js/advertising.js
 @@||shouji.com.cn/static/v1/js/appinfo.js
+@@||static-ppp.portalcdn.com/$script,domain=pornhub.com
 @@||static.tieba.baidu.com/tb/editor/images/client/image_emoticon*.png
 @@||tv.bili96.co^
 @@||tyue.me^$image
@@ -3966,15 +3968,20 @@ porngames.com##.contentbox:has(iframe[src^="//"])
 pornhd.com###pageContent > .thumbs > li.video-list-corner-block:has(> .corner-block-element > .remove-ad-block)
 pornhk.org##video[preload][playsinline="true"]
 pornhub-com.appspot.com,pornhub.com,pornhub.net,pornhubthbh7ap3u.onion,tube8.com,tube8.es,tube8.fr,tube8.net,youporn.com###pb_template
+pornhub.com###pb_block
+pornhub.com###relatedVideosCenter > .wrapVideoBlock
 pornhub.com###relatedVideosCenter > .wrapVideoBlock:has(> .videoSpiceVidsBlock span.bg-spice-badge)
 pornhub.com###relatedVideosCenter > li[class^="related"]
 pornhub.com###singleFeedSection > .emptyBlockSpace
 pornhub.com##.sectionWrapper:has(> #bottomVideos > .wrapVideoBlock)
 pornhub.com##.sniperModeEngaged
+pornhub.com##.video-wrapper > #player ~ .hd.clear
 pornhub.com##.videoPremiumBlock
 pornhub.com##[srcset*="bloB:"]
 pornhub.com##a[href^="https://www.uviu.com"]
+pornhub.com##div.container:style(margin-top: 0px !important)
 pornhub.com##div[class="video-wrapper"] > .clear.hd:has(.adsbytrafficjunky)
+pornhub.com##div[id^="customSkin"]
 pornhub.com##img[srcset]
 pornhub.com,pornhub.net,pornhub.org##.realsex
 pornhub.com,pornhub.org,pornhub.net###abAlert
