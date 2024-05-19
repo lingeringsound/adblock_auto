@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: u9H2kc9Qmo6oenobi+v/sA
+! Checksum: FaOSlSHxahfNGgd2nAVMcQ
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240519063449
+! Version: 20240519083740
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-19 06:34:49
-! Total Count: 29794
-! Blocked Filters: 29794
+! Last modified: 2024-05-19 08:37:40
+! Total Count: 29819
+! Blocked Filters: 29819
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -16,7 +16,7 @@
 ! Gitlink Raw Link: https://www.gitlink.org.cn/api/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main
 
 
-!<<<<<域名规则>>>>>16338
+!<<<<<域名规则>>>>>16355
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 |http://*/ts.js$domain=172.86.179.138|208.94.244.100|208.94.244.98|a88.us|ac168.info|ac88.info|aisex.com|cnnice.biz|go543.com
 |https://m.frgls.com/js/*.js?v=
@@ -1121,6 +1121,7 @@
 ||999bb222ww.com^
 ||999d.com^$third-party
 ||999db.cn^
+||999fb.cn^
 ||999hentai.net/aaifrm
 ||999meiju.com/js/tj
 ||999pro.top^
@@ -2325,7 +2326,7 @@
 ||ads.wetpussy.sexy^
 ||ads.xlxtra.com^
 ||ads.yahoo.com^$~image
-||ads.youtube.com^
+||ads.youtube.com^$domain=~ads.youtube.com
 ||ads01.com^$third-party
 ||ads1-adnow.com^
 ||ads2.hsoub.com^
@@ -6525,6 +6526,7 @@
 ||fortunatemark.com^$third-party
 ||fortxfq.cn^
 ||forum.lowyat.net/random-mobile.php
+||foscvbu.icu^
 ||fotao9.com^
 ||fotaxf.xyz^
 ||fotoable.com/Advertise/
@@ -7040,6 +7042,8 @@
 ||googlesyndication.com^$domain=blogto.com|youtube.com
 ||googletagmanager.com^
 ||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
+||googlevideo.com/initplayback?source=youtube*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
+||googlevideo.com/videoplayback*&ctier=L&*%2Cctier%2C$xmlhttprequest,third-party,domain=m.youtube.com|music.youtube.com|www.youtube.com
 ||goproxy.cc/api.php
 ||gorgeousground.com^$third-party
 ||gorpgeu.xyz^
@@ -9540,6 +9544,7 @@
 ||lnifdlal.top^
 ||lniwe.xyz^
 ||lnpqqq.com^
+||lnxkrd.xyz^
 ||lnxpdj.xyz^
 ||lnzjlr.xyz^
 ||lnzqw.net/js/
@@ -9618,6 +9623,7 @@
 ||lsntzzy3.com/Runtime/js/psData.js
 ||lsnzxzy1.com/Runtime/js/psData.js
 ||ltbyw.top/data/images/*.gif
+||ltfpbp.xyz^
 ||lthmfx.xyz^
 ||ltienll.top^
 ||ltkbyfd.icu^
@@ -9783,6 +9789,7 @@
 ||m.yeniakit.com.tr/anlasma
 ||m.ygexing.com/d/js/acmsd
 ||m.yhdm.so/bar/yfgg.js
+||m.youtube.com/*/ad.js$script
 ||m.youtube.com/get_midroll_$domain=youtube.com
 ||m.ysxs8.com/js/content_db.js
 ||m05ib.xyz^
@@ -11005,6 +11012,7 @@
 ||owyame.xyz^
 ||ox8.topsexhdvideos.com^
 ||oxkyaq.xyz^
+||oxmvcg.xyz^
 ||oxrvfsi.xyz^
 ||oxvlxwz.xyz^
 ||oyfnkle.cn^
@@ -14313,6 +14321,7 @@
 ||uflybplr.xyz^
 ||ufz.doesxyz.com^
 ||ugbler.icu^
+||ugidskit.top^
 ||ugkpsi.xyz^
 ||ugolue.xyz^
 ||ugpibtpk.xyz^
@@ -15180,6 +15189,13 @@
 ||www.tjjd*.live^$third-party
 ||www.tjjd*.xyz^$third-party
 ||www.xihufe.com^
+||www.youtube.com/@Channel-Links/
+||www.youtube.com/@DOWNLOAD-LINKK/
+||www.youtube.com/channel/UCCmzcphyrH6Br5eNUnQR2mw/
+||www.youtube.com/channel/UCS9ql1ylQmDx7o_6v15X7mw/
+||www.youtube.com/channel/UCq4LVl85fFC88_G5pT54dbw/
+||www.youtube.com/channel/UCuHeiORKwgjZ5-n8xoq_zVA/
+||www.youtube.com/channel/UCwmnsubfOCTN_xMhg4czo5A/
 ||www.youtube.com/get_midroll_$domain=youtube.com
 ||www.zb272.help^$~third-party
 ||www.ztolm.com^
@@ -15864,6 +15880,7 @@
 ||youtube.com/ad_companion
 ||youtube.com/api/stats/ads
 ||youtube.com/embed/$domain=akhbarelyom.com|icutit.ca|onionplay.*|sxyprn.net
+||youtube.com/embed/*$domain=1shortlink.com
 ||youtube.com/embed/*?*&origin=*.filma24.*&widgetid$domain=filma24.*
 ||youtube.com/embed/s64CHqUrzYY?autoplay=$domain=instadp.com
 ||youtube.com/embed/wqLWTeNBEEQ?
@@ -15875,7 +15892,7 @@
 ||youtube.com/iframe_api$domain=nownews.com
 ||youtube.com/pagead/
 ||youtube.com/ptracking?
-||youtube.com^$domain=sarapbabe.com
+||youtube.com^$domain=1link.vip|sarapbabe.com|tejtime24.com|thevouz.in
 ||youtube.local^
 ||youtube4kdownloader.com/scripts/stats.js
 ||youtubecenter.net^
@@ -16357,7 +16374,7 @@
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>7282
+!<<<<<网站单独规则>>>>>7287
 $script,third-party,domain=hitomi.la|rule34hentai.net
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fastpic.ru|fileone.tv|filmlinks4u.is|imagefap.com|keepvid.com|megaup.net|olympicstreams.me|pocketnow.com|pornhub.com|pornhubthbh7ap3u.onion|powvideo.net|redtube.com|redtube.com.br|roadracerunner.com|shorte.st|tribune.com.pk|tube8.com|tube8.es|tube8.fr|tune.pk|vcpost.com|vidmax.com|vidoza.net|vidtodo.com|xtube.com|youporn.com|youporngay.com
@@ -21330,15 +21347,19 @@ pornhdin.com##.remove-ad-block
 pornhdin.com,pornhd.com##.vp-under-video-spot
 pornhk.org##video[preload][playsinline="true"]
 pornhub-com.appspot.com,pornhub.com,pornhub.net,pornhubthbh7ap3u.onion,tube8.com,tube8.es,tube8.fr,tube8.net,youporn.com###pb_template
+pornhub.com###relatedVideosCenter > .wrapVideoBlock
 pornhub.com###relatedVideosCenter > .wrapVideoBlock:has(> .videoSpiceVidsBlock span.bg-spice-badge)
 pornhub.com###relatedVideosCenter > li[class^="related"]
 pornhub.com###singleFeedSection > .emptyBlockSpace
 pornhub.com##.sectionWrapper:has(> #bottomVideos > .wrapVideoBlock)
 pornhub.com##.sniperModeEngaged
+pornhub.com##.video-wrapper > #player ~ .hd.clear
 pornhub.com##.videoPremiumBlock
 pornhub.com##[srcset*="bloB:"]
 pornhub.com##a[href^="https://www.uviu.com"]
+pornhub.com##div.container:style(margin-top: 0px !important)
 pornhub.com##div[class="video-wrapper"] > .clear.hd:has(.adsbytrafficjunky)
+pornhub.com##div[id^="customSkin"]
 pornhub.com##img[srcset]
 pornhub.com,pornhub.net,pornhub.org##.realsex
 pornhub.com,pornhub.org,pornhub.net###abAlert
@@ -21370,6 +21391,7 @@ pornhub.com,pornhubthbh7ap3u.onion,redtube.com,spankbang.com,spankbang.party,tub
 pornhub.com,pornhubthbh7ap3u.onion,redtube.com,spankbang.com,spankbang.party,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com,youporngay.com##div[onclick*="bp1.com"]
 pornhub.com,pornhubthbh7ap3u.onion,redtube.com,spankbang.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com,youporngay.com,spankbang.party##[src^="bLob:"]
 pornhub.com,pornhubthbh7ap3u.onion,redtube.com,spankbang.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com,youporngay.com,spankbang.party##[style*="blob:"]
+pornhub.com,redtube.com,redtube.com.br,redtube.net,youporngay.com###pb_block
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com,youporngay.com##[style*="blob:"]:not(video)
 pornhub.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporngay.com##img[src*="blob:" i]:not(video)
 pornicom.com###data > #related_videos_col + #related_videos_col
@@ -21703,7 +21725,6 @@ redtube.com###as_131
 redtube.com###pornstars_list > ul#recommended_pornstars_block > li:not([data-pornstar-id])
 redtube.com###slidePanelContainerAB
 redtube.com##.qb
-redtube.com,redtube.com.br,redtube.net,youporngay.com###pb_block
 redtube.com,redtube.net###content_container > div[class]:not(.show_page_modals):not([id]):not([style]):not([class^="content"])
 redtube.com,redtube.net##.after-header
 redtube.com,redtube.net##.between-videos
@@ -23521,6 +23542,7 @@ youtube.com##.ytd-rich-item-renderer > ytd-ad-slot-renderer
 youtube.com##.ytd-search-pyv-renderer
 youtube.com##.ytd-video-masthead-ad-primary-video-overlay-renderer
 youtube.com##.ytd-video-masthead-ad-v3-renderer
+youtube.com##.ytlr-horizontal-list-renderer__items > .yt-virtual-list__container > .yt-virtual-list__item--visible.yt-virtual-list__item--selected.yt-virtual-list__item:has-text(Ad)
 youtube.com##.ytp-ad-action-interstitial-background-container
 youtube.com##.ytp-ad-action-interstitial-slot
 youtube.com##.ytp-ad-button
@@ -28928,7 +28950,7 @@ zle.com$script
 ~manwa1.vip,~manwa2.vip,~manwa3.vip,~manwa4.vip,~manwa5.vip,~manwa6.vip,~manwa7.vip,~manwa8.vip,~manwa9.vip,~manwa10.vip,~manwa.vip,~manwa1.site,~manwa2.site,~manwa3.site,~manwa4.site,~manwa5.site,~manwa6.site,~manwa7.site,~manwa8.site,~manwa9.site,~manwa10.site,~manwa.site,~manwa1.me,~manwa2.me,~manwa3.me,~manwa4.me,~manwa5.me,~manwa6.me,~manwa7.me,~manwa8.me,~manwa9.me,~manwa10.me,~manwa.me,~mwcomic1.cc,~mwcomic2.cc,~mwcomic3.cc,~mwcomic4.cc,~mwcomic5.cc,~mwcomic6.cc,~mwcomic7.cc,~mwcomic8.cc,~mwcomic9.cc,~mwcomic10.cc,~mwcomic.cc,~mwcomic1.biz,~mwcomic2.biz,~mwcomic3.biz,~mwcomic4.biz,~mwcomic5.biz,~mwcomic6.biz,~mwcomic7.biz,~mwcomic8.biz,~mwcomic9.biz,~mwcomic10.biz,~mwcomic.biz,~mwcomic1.xyz,~mwcomic2.xyz,~mwcomic3.xyz,~mwcomic4.xyz,~mwcomic5.xyz,~mwcomic6.xyz,~mwcomic7.xyz,~mwcomic8.xyz,~mwcomic9.xyz,~mwcomic10.xyz,~mwcomic.xyz,~mwcomic1.top,~mwcomic2.top,~mwcomic3.top,~mwcomic4.top,~mwcomic5.top,~mwcomic6.top,~mwcomic7.top,~mwcomic8.top,~mwcomic9.top,~mwcomic10.top,~mwcomic.top,~manwa1.xyz,~manwa2.xyz,~manwa3.xyz,~manwa4.xyz,~manwa5.xyz,~manwa6.xyz,~manwa7.xyz,~manwa8.xyz,~manwa9.xyz,~manwa10.xyz,~manwa.xyz,~mwcomic1.co,~mwcomic2.co,~mwcomic3.co,~mwcomic4.co,~mwcomic5.co,~mwcomic6.co,~mwcomic7.co,~mwcomic8.co,~mwcomic9.co,~mwcomic10.co,~mwcomic.co,~mwcomic1.online,~mwcomic2.online,~mwcomic3.online,~mwcomic4.online,~mwcomic5.online,~mwcomic6.online,~mwcomic7.online,~mwcomic8.online,~mwcomic9.online,~mwcomic10.online,~mwcomic.online,~manwafei1.cc,~manwafei2.cc,~manwafei3.cc,~manwafei4.cc,~manwafei5.cc,~manwafei6.cc,~manwafei7.cc,~manwafei8.cc,~manwafei9.cc,~manwafei10.cc,~manwafei.cc,~manwafei1.com,~manwafei2.com,~manwafei3.com,~manwafei4.com,~manwafei5.com,~manwafei6.com,~manwafei7.com,~manwafei8.com,~manwafei9.com,~manwafei10.com,~manwafei.com,~manwafei1.xyz,~manwafei2.xyz,~manwafei3.xyz,~manwafei4.xyz,~manwafei5.xyz,~manwafei6.xyz,~manwafei7.xyz,~manwafei8.xyz,~manwafei9.xyz,~manwafei10.xyz,~manwafei.xyz,~manwafei1.top,~manwafei2.top,~manwafei3.top,~manwafei4.top,~manwafei5.top,~manwafei6.top,~manwafei7.top,~manwafei8.top,~manwafei9.top,~manwafei10.top,~manwafei.top,~manwafei1.me,~manwafei2.me,~manwafei3.me,~manwafei4.me,~manwafei5.me,~manwafei6.me,~manwafei7.me,~manwafei8.me,~manwafei9.me,~manwafei10.me,~manwafei.me,~manwafei1.site,~manwafei2.site,~manwafei3.site,~manwafei4.site,~manwafei5.site,~manwafei6.site,~manwafei7.site,~manwafei8.site,~manwafei9.site,~manwafei10.site,~manwafei.site,~manwafei1.biz,~manwafei2.biz,~manwafei3.biz,~manwafei4.biz,~manwafei5.biz,~manwafei6.biz,~manwafei7.biz,~manwafei8.biz,~manwafei9.biz,~manwafei10.biz,~manwafei.biz,~manwafei1.online,~manwafei2.online,~manwafei3.online,~manwafei4.online,~manwafei5.online,~manwafei6.online,~manwafei7.online,~manwafei8.online,~manwafei9.online,~manwafei10.online,~manwafei.online,~manwaq1.vip,~manwaq2.vip,~manwaq3.vip,~manwaq4.vip,~manwaq5.vip,~manwaq6.vip,~manwaq7.vip,~manwaq8.vip,~manwaq9.vip,~manwaq10.vip,~manwaq.vip,~manwaqq1.vip,~manwaqq2.vip,~manwaqq3.vip,~manwaqq4.vip,~manwaqq5.vip,~manwaqq6.vip,~manwaqq7.vip,~manwaqq8.vip,~manwaqq9.vip,~manwaqq10.vip,~manwaqq.vip##.ad-area
 !<<<<<通用Css规则 结束>>>>>
 
-!<<<<<放行白名单>>>>>894
+!<<<<<放行白名单>>>>>897
 #@##Ad300x145
 #@##Ad300x250
 #@##Ad728x90
@@ -29452,6 +29474,7 @@ zle.com$script
 @@||grattable.com/blogads.css
 @@||gstatic.com/cast/sdk/libs/sender/*/cast_framework.js$domain=pornhub.com|pornhub.org|pornhub.net
 @@||gstatic.com/cv/js/sender/*/cast_sender.js$domain=pornhub.com|pornhub.org|pornhub.net
+@@||gstatic.com^$script,domain=pch.com|pornhub.com|pornhub.net|pornhub.org
 @@||guokr.com/apis/flowingboard/item/guokrapp_
 @@||guokr.com/apis/flowingboard/item/m_
 @@||hdnumerique.com/tpl/jscript/advert.js
@@ -29522,6 +29545,7 @@ zle.com$script
 @@||spankbang.com^*/prebid-ads.js$domain=spankbang.com
 @@||speedtest.net/javascript/ads.js
 @@||sports.ru^*/adfox.$xmlhttprequest
+@@||static-ppp.portalcdn.com/$script,domain=pornhub.com
 @@||static.adsafeprotected.com/favicon.ico$domain=tf1info.fr
 @@||static.anyporn.com/bravoplayer/custom/anyporncom/scripts/bpcc.js
 @@||static.anyporn.com/bravoplayer/fluidplayer.js
@@ -29552,6 +29576,7 @@ zle.com$script
 @@||youtube.com/get_video_info?$xmlhttprequest,domain=music.youtube.com|tv.youtube.com
 @@||youtube.com/get_video_info?*embedded$~third-party
 @@||youtube.com/get_video_info?*embedded$~third-party,other
+@@||youtube.com/yts/jsbin/*$script,domain=breathecast.com|classicalite.com|crossmap.com|hallels.com|newseveryday.com|returnofkings.com
 @@||ypncdn.com^$domain=you-porn.com|youporngay.com|youpornru.com|youporn.*|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 @@||ytimg.com^*_banner$domain=youtube.com
 @@||zagaz.com/img/blogads.css
