@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: RUIdpEmCrEpAU+/gsQESOw
+! Checksum: 8mchC6YAyzYpTu7FcHSruA
 ! Title: 混合规则精简版(自动更新)
-! Version: 20240523161208
+! Version: 20240524001139
 ! Expires: 12 hours (update frequency)
-! Last modified: 2024-05-23 16:12:08
-! Total Count: 30377
-! Blocked Filters: 30377
+! Last modified: 2024-05-24 00:11:39
+! Total Count: 30380
+! Blocked Filters: 30380
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -16,7 +16,7 @@
 ! Gitlink Raw Link: https://www.gitlink.org.cn/api/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main
 
 
-!<<<<<域名规则>>>>>16710
+!<<<<<域名规则>>>>>16712
 |http*://*?$third-party,domain=forums.socialmediagirls.com|pornhub.com|redtube.com|tube8.com|youporn.com|youporngay.com
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 |http://*/ts.js$domain=172.86.179.138|208.94.244.100|208.94.244.98|a88.us|ac168.info|ac88.info|aisex.com|cnnice.biz|go543.com
@@ -4771,7 +4771,7 @@
 ||chengdu.cn/acts/phoneqss/openCornerWin/
 ||chengtongled.com/gg/
 ||chengtu.com/api.php?mod=ad&adid=
-||chengzijianzhan.cc^$third-party,subdocument
+||chengzijianzhan.cc^$subdocument,third-party
 ||chenhaishan.info^
 ||chenjiayu.cn/gg.js
 ||chenyuzhou1.cn^
@@ -6671,6 +6671,7 @@
 ||foizico.cn^
 ||fol9v.xyz^
 ||followborder.com^$third-party
+||fonfn.com^
 ||fontke.com/custom/
 ||foodmate.net/file/script/A
 ||fooid.xyz^
@@ -14613,6 +14614,7 @@
 ||udajswf.cn^
 ||udb3n.icu^
 ||udeztrb.cn^
+||udheansv.com^
 ||udiab1.jianshu.com^
 ||udjdpyrt.xyz^
 ||udkpcc.xyz^
@@ -26175,7 +26177,7 @@ zle.com$script
 |javascript:*window.location
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<通用Css规则>>>>>3320
+!<<<<<通用Css规则>>>>>3321
 ###ADbox
 ###ADtip
 ###AdBlockDialog
@@ -28531,6 +28533,7 @@ zle.com$script
 ##a[href*=".asd252466.com:"]
 ##a[href*=".biquge"][href*="app"]
 ##a[href*=".bright.cn/?utm_"]
+##a[href*=".bsy3.xyz"]
 ##a[href*=".bvftxy.com/"]
 ##a[href*=".cc:"] > img[src]
 ##a[href*=".cc:"][target="_blank"][class] > span
@@ -28671,6 +28674,7 @@ zle.com$script
 ##a[href*="/dsf66.cc"]
 ##a[href*="/dsf71.cc"]
 ##a[href*="/dsf88.cc"]
+##a[href*="/entry/register"][href*="i_code"]
 ##a[href*="/h91.tv"]
 ##a[href*="/hgcool360.top"]
 ##a[href*="/hgcoolaa.top"]
@@ -28695,7 +28699,6 @@ zle.com$script
 ##a[href*="://4"][href*="/vod."]
 ##a[href*="://mgzs.cdn.bcebos.com/"]
 ##a[href*=":10443/"] > img[src$="gif"]
-##a[href*=":6001/entry/register"]
 ##a[href*=":7888/?register="]
 ##a[href*=":8701/?register="]
 ##a[href*="?adCode="][target="_blank"]
