@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: i9R++BI/lT5Yy+sncptkUw
+! Checksum: nZOcveSmOnb4CK/njilzvw
 ! Title: 自用去广告Adblock规则
-! Version: 20240527143301
-! Last modified: 2024-05-27 14:33:01
-! Total Count: 5190
+! Version: 20240528215332
+! Last modified: 2024-05-28 21:53:32
+! Total Count: 5196
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1779,6 +1779,7 @@
 ##img[src*="//upliadli.yingxuguoji.xyz/images"][src$=".txt"]
 ##img[src*="/?url=https://imgsrc.baidu.com/forum/pic/item/"]
 ##img[src*="/Ayi-GG"]
+##img[src*="/ads/"]
 ##img[src*="/advertise/"]
 ##img[src*="/gg/"][src$=".gif"]
 ##img[src*="/image/gg"][width]
@@ -1965,6 +1966,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cc/o.js$third-party,script
 .club/r/*$xmlhttprequest
 .cn/*-*-*.xc$script,third-party
+.cn/*.txt$third-party,domain=1anime.me
 .cn/20*/*/*.txt$third-party
 .cn/Report/*-*-$third-party,other
 .cn/api/LM/GetBaiDuCode?placeUUID=$third-party
@@ -2025,6 +2027,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .co/ajd.php?pid=$third-party
 .co/ajtop.php?pid=*$third-party
 .com./$popup,domain=pornhub.com
+.com/*.txt$third-party,domain=1anime.me
 .com/*/ddd1.js
 .com/*/ddd2.js
 .com/*/ddd3.js
@@ -4927,6 +4930,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||piankudy.com/gg$script
 ||pic.dibtvft.cn^$script,third-party
 ||pic.ivzfpwm.cn^$script,third-party
+||pic.uscelestecc.com^
 ||pic.usphflorence.com^
 ||picfourlai.com^
 ||pjy55d.com^
@@ -4935,6 +4939,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||pojuko.buzz^
 ||porn5f.com/nb/*.php?
 ||ppdod.com^$third-party
+||ppfannypp.com^$third-party
 ||profitablegatetocontent.com^
 ||pssy.xyz^$third-party
 ||pstatp.com^*/push.js
@@ -5010,6 +5015,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||srnov.top^
 ||srv.dropkickmedia.com$third-party
 ||ss.zuixinyiqi.com^
+||ssestherssa.com^$third-party
 ||ssl.qhres2.com/ssl/
 ||stats.autohome.com.cn^
 ||stgowan.com^
