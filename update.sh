@@ -91,7 +91,7 @@ modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
 #规则分类
 sort_and_optimum_adblock "${Rules_Folder}/adblock_auto.txt"
 #写入头信息
-write_head "${Rules_Folder}/adblock_auto.txt" "混合规则(自动更新)" "合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器" && echo "※`date +'%F %T'` 混合规则合并完成！"
+write_head "${Rules_Folder}/adblock_auto.txt" "混合规则(更新日期`date '+%F %T'`)" "合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器" && echo "※`date +'%F %T'` 混合规则合并完成！"
 
 #lite
 Combine_adblock_original_file "${Combine_Folder}/lite/adblock_combine.txt" "${Sort_Folder}/lite"
@@ -140,7 +140,7 @@ lite_Adblock_Rules "${Rules_Folder}/adblock_auto_lite.txt"
 #规则分类
 sort_and_optimum_adblock "${Rules_Folder}/adblock_auto_lite.txt"
 #写入头信息
-write_head "${Rules_Folder}/adblock_auto_lite.txt" "混合规则精简版(自动更新)" "合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器" && echo "※`date +'%F %T'` 混合规则精简版合并完成！"
+write_head "${Rules_Folder}/adblock_auto_lite.txt" "混合规则精简版(更新日期`date '+%F %T'`)" "合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器" && echo "※`date +'%F %T'` 混合规则精简版合并完成！"
 
 rm -rf "`pwd`/temple"
 #更新README信息
