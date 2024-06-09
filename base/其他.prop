@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: h2Y087FoabnHdjEzJPeQqA
+! Checksum: BQN8H8WcCiHuu4wqK3CuDg
 ! Title: 自用去广告Adblock规则
-! Version: 20240604185703
-! Last modified: 2024-06-04 18:57:03
-! Total Count: 5230
+! Version: 20240609064046
+! Last modified: 2024-06-09 06:40:47
+! Total Count: 5232
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1338,6 +1338,7 @@
 ##a[href][target="_blank"][rel="noopener noreferrer"] > img[src][alt][class="pc"],a[href][target="_blank"][rel="noopener noreferrer"] > img[src][alt][class="h5"]
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".gif"]
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".png"]
+##a[href^="advslog.php?advid="][target="_blank"]
 ##a[href^="http://2kkfof.vip"]
 ##a[href^="http://googleads.g.doubleclick.net/pcs/click"]
 ##a[href^="http://intent.bingads.com/"]
@@ -4098,6 +4099,7 @@ sina.cn##[href*="://sax"]
 sina.cn##[href^="https://finance.sina.cn/app/"]
 sina.cn##div[sax-type="proxy"]
 sinpornx.com##.zyz,div[id="jue"]
+sisurl.net##div#ad_mobileHeader
 sm.cn###download-uc
 sm.cn###download-uc-v2
 sm.cn###index_banner
