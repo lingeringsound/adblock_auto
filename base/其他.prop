@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dmCOpyybv3H0tC15glbN6Q
+! Checksum: KLmDNbEXIwgxR1UPKWg3uw
 ! Title: 自用去广告Adblock规则
-! Version: 20240620225316
-! Last modified: 2024-06-20 22:53:16
-! Total Count: 5250
+! Version: 20240620234251
+! Last modified: 2024-06-20 23:42:51
+! Total Count: 5256
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -168,6 +168,7 @@
 ###modal-adblocker
 ###modalAblockWrapper
 ###modalAdblock
+###myads
 ###playerJsvLayer.jsv-layer
 ###playertopads
 ###popup-overlay0.popup-overlay
@@ -2275,6 +2276,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz/vue?$third-party
 .xyz/wb/*-*-*.yb$third-party
 .xyz/wiseindex*?$third-party
+.xyz/xfb_*.js$third-party
 .xyz/xfb_m.js$third-party,script
 .xyz/xling_*_*.js?
 .xyz/z/*/code.js$script,third-party
@@ -2512,6 +2514,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /adblockpopup.
 /adclick?
 /adclickcv.php
+/addons/adplan/assets/js/adshow.js
 /adfox/*
 /adgpt.js
 /ads.dp.js?
@@ -3549,6 +3552,7 @@ coolapk.com#@#[id$="ad-box"]
 cupfox.app###outer-container > .model:has(> .model-content > a[href*=".jd.com"])
 cupfox.app##.model:has(> .model-content > a[href*=".jd.com"])
 cupfox.app##[class^="jsx-"] > img[src$=".gif"]
+cupfoxappp.com##table:has(.cvbcvxvb)
 czzytv77.com##.stui-pannel + table
 d1bzw.com##[id="appurl"],[id="bbsurl"]
 daftsex.com,pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,spankbang.party,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com##a[href*="?ats="]
@@ -4457,6 +4461,7 @@ youporn.com,youporn.*##aside:has(a.ad-remove)
 youporn.com,youporngay.com,youporn.*##.footer-element-container
 youramateurporn.com###videoTopCarousel:has(a[target="blank"][rel="nofollow"] > img)
 youramateurporn.com##.owl-stage > div.owl-item:has(> div.item-col > a[href^="https://www.youramateurporn.com/video/ad-"])
+youtiao.vip##div.index-ad1
 youtube.com###contents > ytd-rich-item-renderer:has( > #content > ytd-ad-slot-renderer)
 youtube.com###shorts-inner-container > .ytd-shorts:has(> .ytd-reel-video-renderer > ytd-ad-slot-renderer)
 youtube.com##body > ytd-app > #content.ytd-app.style-scope > ytd-page-manager#page-manager.ytd-app.style-scope > ytd-browse.ytd-page-manager.style-scope > ytd-two-column-browse-results-renderer.grid-disabled.grid.ytd-browse.style-scope > #primary.ytd-two-column-browse-results-renderer.style-scope > ytd-rich-grid-renderer.ytd-two-column-browse-results-renderer.style-scope > #contents.ytd-rich-grid-renderer.style-scope > ytd-rich-grid-row.ytd-rich-grid-renderer.style-scope > #contents.ytd-rich-grid-row.style-scope > ytd-rich-item-renderer.ytd-rich-grid-row.style-scope:has(> #content.ytd-rich-item-renderer.style-scope > ytd-ad-slot-renderer.ytd-rich-item-renderer.style-scope)
@@ -4465,7 +4470,7 @@ youtube.com##ytd-rich-item-renderer:has(> #content > ytd-ad-slot-renderer)
 youtube.com##ytd-rich-item-renderer:has(ytd-display-ad-renderer)
 ypcgw.com##[class$="_acmsd"]
 ysgcfun.com##body > [style*="base64"]
-ysgcfun.com,czzytv77.com##table:has(> tbody > tr > td > .cvbcvxvb)
+ysgcfun.com,czzytv77.com,cupfoxappp.com##table:has(> tbody > tr > td > .cvbcvxvb)
 yydstv.net##body > div[class][style]
 yydy.cc##a[onclick^="window"] > img[id][width="1"],a[style*="width:99%"][style*="z-index:100000"][style*="block"]
 yz.m.sm.cn##[id^="dl-banner-"]
@@ -5186,6 +5191,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||xn--gov-x68dy61b.club^
 ||xn--lms23v745btkai5c.net^$third-party,script
 ||xn--qrq171dxpq.com^
+||xn--wgvp78a61swpe6zdozj.cn^$third-party
 ||xozilla.xxx/static/js/ppndr*.js
 ||xplme.xyz^
 ||xtdsxjlk.club^
