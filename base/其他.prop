@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: KLmDNbEXIwgxR1UPKWg3uw
+! Checksum: 11LpUs5lJD0qjhGZvutKpQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240620234251
-! Last modified: 2024-06-20 23:42:51
-! Total Count: 5256
+! Version: 20240624110421
+! Last modified: 2024-06-24 11:04:22
+! Total Count: 5264
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1676,6 +1676,7 @@
 ##iframe[src^="/ad"][src$=".html"]
 ##iframe[src^="/ai/s/s/su.php"]
 ##iframe[src^="/frd5/s/s/su.php?"]
+##iframe[src^="https://adsxyz.com"]
 ##iframe[src^="https://av.ageverify.co/"]
 ##iframe[src^="https://baimei511.mom"]
 ##iframe[src^="https://creative."][src*="/widgets/"]
@@ -1829,6 +1830,7 @@
 ##img[src^="https://888bb111ww.com/"]
 ##img[src^="https://888xx222kk.com/"]
 ##img[src^="https://888xx555kk.com"]
+##img[src^="https://adsxyz.com"]
 ##img[src^="https://bejjci.twqtf.boats"]
 ##img[src^="https://img"][src*="//upload/"][src$=".js"]
 ##img[src^="https://imgsrc.baidu.com/forum/pic/item/"][class]
@@ -3204,6 +3206,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://dpic.*.cn/*.js$third-party
 ://dpic.*.cn/*.txt$third-party
 ://e.*.xyz/apps/sdk$third-party
+://go.*.com/*=WidgetV4Universal
 ://go.*.com/smartpop/*?*=$third-party
 ://hf.*.com/*m-2697$third-party,other
 ://im.ifengsong888.com/*.gif
@@ -3825,6 +3828,7 @@ justdial.com###gptAds2
 justdial.com###gptAdsDiv
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
 kdslife.com##[class*="DownloadGuide"]
+kikibobo.com##.boxzilla-overlay
 kissjav.li##img[id="player-fluid_logo_image"],[id^="player-advertising"]
 kiutaku.com##div[class^="i"][class*="9"]
 koreaporn.net##div.bb_mobile
@@ -4573,6 +4577,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adscustsrv.com^
 ||adsession.exacdn.com^
 ||adsessionserv.com^$third-party
+||adsxyz.com^
 ||adtech.yahooinc.com^$domain=d3ward.github.io
 ||adtrue.com^
 ||adultfriendfinder.com^$third-party
@@ -4615,6 +4620,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||awunktf85.shop^
 ||axkq.xyz^$third-party,script
 ||ayq3nsx.icu^$third-party
+||azenka.one^
 ||b2skdf.com^
 ||b9282.vip^
 ||baby.thinkmore.top^
@@ -4770,6 +4776,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||gloaphoo.net^
 ||gnrty.kmjkwe.xyz^
 ||go.adltserv.com^
+||go.bbrdbr.com^
 ||go.goaserv.com$third-party
 ||go.meiweifood.xyz^
 ||go.mnaspm.com^
@@ -5101,6 +5108,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||toutiaoimg.com^$image,domain=350xs.com
 ||tpic.kszvmqo.cn^$third-party
 ||tpic.mhslbqk.cn^
+||trackwilltrk.com^
 ||traffer.net^
 ||trafficfactory.biz^
 ||traffichaus.com^
