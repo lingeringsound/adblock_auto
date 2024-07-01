@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: nBAl5iUDKuZU3cGVqsE/2Q
+! Checksum: m/l+L9DKStREsyBbkQSpOQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240701100440
-! Last modified: 2024-07-01 10:04:40
-! Total Count: 5289
+! Version: 20240701130539
+! Last modified: 2024-07-01 13:05:39
+! Total Count: 5304
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1095,6 +1095,7 @@
 ##[data-m-ad-id]
 ##[data-mobile-ad-id]
 ##[data-name="adaptiveConstructorAd"]
+##[data-provider="GoAdServer"]
 ##[data-rc-widget]
 ##[data-revive-zoneid]
 ##[data-role="tile-ads-module"]
@@ -1674,7 +1675,9 @@
 ##iframe[src*="/lvesnk.html?zoneid="]
 ##iframe[src*="/redbaiduct.com?s="]
 ##iframe[src*="/smartpop/"]
+##iframe[src*="d000d.com/"]
 ##iframe[src*="deliver.ptgncdn.com"]
+##iframe[src*="listeamed.net/"]
 ##iframe[src="/ad.html"]
 ##iframe[src^="//ad.a-ads.com/"]
 ##iframe[src^="//ads."]
@@ -3365,6 +3368,7 @@ aaread.club##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[
 abjav.com##.header__item
 abjav.com##section
 aca.best#@#body > noscript + #app
+acfun.cn,bilibili.com,lxapk.com,nr19.cn,pornpics.com,pornpics.de,v.qq.com,youku.com#@#img[alt*="广告"][src]
 acgrw.com##img[src^="data:"],[style*="131px"]
 adultfilmdatabase.com,animeidhentai.com,babeforums.org,bos.so,camvideos.tv,camwhores.tv,cutscenes.net,devporn.net,f95zone.to,fritchy.com,gifsauce.com,hentai2read.com,hotpornfile.org,hpjav.com,imagebam.com,imgbox.com,imgtaxi.com,motherless.com,myporn.club,pandamovies.pw,planetsuzy.org,pussyspace.com,redgifs.com,sendvid.com,sexgalaxy.net,sextvx.com,sexuria.com,thefappeningblog.com,vintage-erotica-forum.com,vipergirls.to,waxtube.com,xfantazy.com,yeapornpls.com##a[href*="theporndude.com"]
 advancedrenamer.com,alotof.software,android-doc.com,androidrepublic.org,anonymousemail.me,apk.tw,apkmirror.com,blog.reh.tw,chaojizhibo.net,chtoen.com,demos.krajee.com,dizhishengcheng.com,doitwell.tw,epicbundle.com,epinv.com,ff14angler.com,fxpan.com,gamaniak.com,haoweichi.com,hs-exp.jp,kadinlarkulubu.com,korail.pe.kr,logi.im,lspdfrcn.com,moa.tw,moe123.net,numberempire.com,phcorner.net,pixiz.com,playok.com,reh.tw,rockmods.net,shenfendaquan.com,slashview.com,sockscap64.com,spoilertv.com,vaptcha.com,willyoupressthebutton.com,yabook.org#@#ins.adsbygoogle
@@ -4027,6 +4031,7 @@ pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##div.links.row
 pornbest.org,pornfind.org,pornhk.org,pornlulu.com,ptt.sex##div.row.links
 pornboss.org###menu-menue-1 > li:has(> a[href^="http://toplist.raidrush.ws/"])
 porndoe.com##[class^="-banner"],[href*="//ads"],[href^="/redirect"]
+porndoe.com##div.-ad-top-wrap
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##.container-fluid > .links
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##div[class^="col-"][style] > a[target="_blank"] > img[alt]
 pornfind.org,pornbest.org,ptt.sex,pornlulu.com##img[src*="/images/friend"]
@@ -4091,7 +4096,6 @@ pornpics.com,pornpics.de##.adss-mob
 pornpics.com,pornpics.de##.r-frame
 pornpics.com,pornpics.de##.stamp-bn-1
 pornpics.com,pornpics.de##.thumbwook + li[class]:has(.ad-text)
-pornpics.com,pornpics.de,nr19.cn,bilibili.com,youku.com,v.qq.com,acfun.cn#@#img[alt*="广告"][src]
 pornsitetest.com##div[id^="eroti-"]
 pornstarbyface.com##div[id^="sponcored-content-"]
 porntrex.com##.content > div[class]:has(> div[style*="text-align"] > center > script)
@@ -4317,8 +4321,15 @@ twitter.com##div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com##div[data-testid="placementTracking"]:has(div[data-testid$="-impression-pixel"])
 twitter.com##div[data-testid="trend"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com#@#[style="position: absolute; inset: 0px;"]
+txxx.com##.gfpl-wrapper
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
+txxx.com##div.nwnjjmmsxmnjmsnsnxxnnimjssmxxn
+txxx.com##div.undp
+txxx.com##div.unxjzxxnxnnnuu
+txxx.com##div.video-videos-slider
+txxx.com##div[class$="xxn"]
+txxx.com##iframe[src*=".com/get?"]
 txxx.com,txxx.*##.video-content > div:first-child > div[class]:has(> div > a[href="#"])
 txxxporn.tube##.sugggestion:nth-child(n+1)
 txxxporn.tube##.video-content > div[class] > div:has(> div.pplayer) + div[class]
@@ -4575,6 +4586,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||ad-*.cos.accelerate.myqcloud.com^$third-party
 ||ad.a-ads.com^
 ||ad.hailangouwu.com^
+||ad.twinrdengine.com^
 ||ad999.biz^$third-party
 ||adactioner.com^$third-party
 ||adb.*.online/o.js$third-party
@@ -4715,6 +4727,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||crjpgate.com^$document
 ||crulxoits.com^$third-party
 ||cvmjf.xyz^$third-party
+||d000d.com/e/
 ||d1ezlc9vy4yc7g.cloudfront.net^$third-party
 ||d2un76zvb5mgzx.cloudfront.net^
 ||d2wy8f7a9ursnm.cloudfront.net^$third-party
@@ -4948,6 +4961,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||lhotajl.icu^$third-party
 ||liktufmruav.com^$third-party
 ||limurol.com^$third-party
+||listeamed.net^
 ||ln.tian-ting.ink^
 ||log.m.sm.cn^
 ||lppgjf.xyz^
@@ -5025,6 +5039,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||poh.uoydhco.cn^
 ||pojuko.buzz^
 ||porn5f.com/nb/*.php?
+||porntube.com/image/0/0/0/*/*/*/*/*/*/*_*x*.$image
 ||ppdod.com^$third-party
 ||ppfannypp.com^$third-party
 ||profitablegatetocontent.com^
