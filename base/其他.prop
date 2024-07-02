@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: HWTUvc6LegYOZq3u7wH1dA
+! Checksum: qcPMmYHbZu1vBLSI3sPYjg
 ! Title: 自用去广告Adblock规则
-! Version: 20240702012352
-! Last modified: 2024-07-02 01:23:52
-! Total Count: 5315
+! Version: 20240702153454
+! Last modified: 2024-07-02 15:34:54
+! Total Count: 5326
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1374,6 +1374,7 @@
 ##a[href^="https://www.hnhflqgc.com"]
 ##a[href^="https://www.loufengsq.com/"]
 ##a[href^="https://www.zhao-zupu.com"]
+##a[href^="https://xchina.click/"]
 ##a[href^="https://xlivesex.com/"]
 ##a[href^="https://xxuudxdu.live?"]
 ##a[href^="https://ycmw647.com"][target="_blank"]
@@ -1594,6 +1595,7 @@
 ##div[id^="ts_ad_native"]
 ##div[id^="video-player-ads"]
 ##div[id^="yandex_rtb"]
+##div[linkurl^="https://xchina.click/"]
 ##div[onclick*="window.location.href"][onclick*=".biqu"][onclick*="app"]
 ##div[onclick^="window.location.href"][onclick*=".bcebos."]
 ##div[onclick^="window.location.href"][onclick*="apps.apple.com/cn/"]
@@ -4390,9 +4392,13 @@ www.zhihu.com,zhihu.com##.Sticky > .Card[data-za-detail-view-path-module="Conten
 www.zhihu.com,zhihu.com##.TopstoryItem--advertCard
 www.zhihu.com,zhihu.com##.WeiboAd-wrap
 www.zhihu.com,zhihu.com##div[data-type="ad"]
-xbbs.me,xchina.co,xchina.fun,xchina.tv##.push-bottom
+xbbs.me,xbookcn.org,xchina.co,xchina.fun,xchina.tv##.push-bottom
+xbookcn.org##.banner_ad
+xbookcn.org##.outer-banner
+xbookcn.org##[class*="banner"]
+xbookcn.org##[class^="push-"]
+xbookcn.org,xchina.co,xchina.fun,xchina.tv##.push-top
 xchina.co,xchina.fun,xchina.tv##.exoclick_300x250
-xchina.co,xchina.fun,xchina.tv##.push-top
 xchina.co,xchina.fun,xchina.tv##[adid]
 xchina.co,xchina.fun,xchina.tv##[class*="ad"]
 xchina.co,xchina.fun,xchina.tv##[class*="fa-ban"]
@@ -4963,6 +4969,9 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||lby2kd27c.com^$third-party
 ||leads.api.autohome.com.cn^
 ||leads.autohome.com.cn^
+||lekfez.icu^
+||leku99.net/js/*/ytou.js
+||leku99.net/js/bottom.js
 ||leng8.cc/assets/public/$script
 ||lengmen.cc/assets/public/$script
 ||lezhutv.com/static/jquerys.js
@@ -5229,6 +5238,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||www.ztolm.com^
 ||wyhifdpatl.com^
 ||wyqaafplm.live^
+||xbookcn.org/scripts/my_*.js
 ||xchina.co/redirect/ad-
 ||xchina.fun/redirect/ad-
 ||xchina.tv/upload/ad/
@@ -5253,6 +5263,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||xplme.xyz^
 ||xtdsxjlk.club^
 ||xuexiwa.com^$script,third-party
+||xunsu.cc/js/indexbottom.js
 ||xv.leirsw.com^
 ||xvliqsa.cn^
 ||xw.ooegpip.cn^$third-party,image
