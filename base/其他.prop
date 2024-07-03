@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Wgc17xVWrjhg+OoIVMPqbw
+! Checksum: luYwe7cQSo01pq3hOjW1vg
 ! Title: 自用去广告Adblock规则
-! Version: 20240703133259
-! Last modified: 2024-07-03 13:32:59
-! Total Count: 5340
+! Version: 20240703193239
+! Last modified: 2024-07-03 19:32:39
+! Total Count: 5343
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -3926,8 +3926,10 @@ m.qidian.com##.txt-read
 m.qidian.com##[id*="readTopTip"]
 m.qidian.com##div.jsAuthorSay.read-author-say
 m.sohu.com##.art-rec-news
+m.sohu.com##.common-ad
 m.sohu.com##a[href="javascript:void(0);"]
 m.sohu.com##div#CallAppContainer
+m.sohu.com##section > div:has(div > script[assporiginsrc])
 m.thepaper.cn##.index_footer_banner__Mcr_R
 m.thepaper.cn##[class*="index_details_ad"]
 m.wannianli8.com,wannianli8.com##.cesuankuang
@@ -5090,6 +5092,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||qisaoba.com^
 ||qlogo1.store.qq.com^
 ||qlspx.com:$third-party
+||qpb1.sohu.com^
 ||qpolkmbbf.com$third-party
 ||qq.xxiaoguaishou.com^$third-party
 ||qwfbiujsknjk.com^
