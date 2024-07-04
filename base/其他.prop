@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: zRLqzgLxsM32/Q3izJm9UQ
+! Checksum: rZKoVOUDf71YLG0HTDmSjg
 ! Title: 自用去广告Adblock规则
-! Version: 20240703210134
-! Last modified: 2024-07-03 21:01:35
-! Total Count: 5344
+! Version: 20240704134853
+! Last modified: 2024-07-04 13:48:53
+! Total Count: 5347
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2176,6 +2176,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .gif$third-party,domain=lfwx2.com|likeav2.buzz|likeav2.cc|likeav2.com|likeav2.live|likeav2.xyz|www-xnxx-com.mom|037hdmovie.com
 .html?channelCode=$third-party
 .icu/*/20*/*/16*.gif$image,third-party
+.icu/*zpp50*?$third-party
 .icu/?token=$third-party
 .icu/biyys*.js$third-party,script
 .icu/js/gg.js$script
@@ -3156,8 +3157,11 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
 7mmtv.sx,adultdeepfakes.com,kemono.su,missav.com,missav123.com,missav789.com,missav888.com,pornhk.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,camhub.cc,camhub.world,fuckit.cc,thothd.com,watchporn.to#@#.ads-iframe
-91-short.com,91short.com##.player-info
-91-short.com,91short.com##[class$="i"][style*="bottom"],[class$="h"][style*="bottom"],[class$="_b"],[class$="c"][style*="bottom"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"],img[src*="cn-chengdu.aliyuncs.com/"],a[href*=".top"] > img[src],div[class^="shortcuts-"][class$="-overlay"],a[href] > h3,[class][style*="131px"]
+91-short.com,91cg.com,91short.com##.adm
+91-short.com,91cg.com,91short.com##.player-info
+91-short.com,91cg.com,91short.com##[class$="i"][style*="bottom"],[class$="h"][style*="bottom"],[class$="_b"],[class$="c"][style*="bottom"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"],img[src*="cn-chengdu.aliyuncs.com/"],a[href*=".top"] > img[src],div[class^="shortcuts-"][class$="-overlay"],a[href] > h3,[class][style*="131px"]
+91-short.com,91cg.com,91short.com##a > img[style="width: 100%;border-radius: 15px"]
+91-short.com,91cg.com,91short.com##a[href="javascript:void(0)"]
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.adspop
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##.post-card:has(div[style*="data:image/gif"])
 91cg1.com,51cg1.com,h3tgz4.uysdpthc.com,h3tgz3.woqrzdwcl.org,h3tgz2.ytorthjii.com,h3tgz1.ytorthjii.com,h3tgz4.ytorthjii.com,h3tgz3.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz8.ytorthjii.com,h3tgz7.ytorthjii.com##[class*="-ads"]
@@ -3167,8 +3171,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 91porn.com###videodetails > div:has(> a[href][target="_blank"])
 91porn.com##.vjs-preroll
 91porny.org,haijiao35.com,jiuse.io##.card:has(>.card-image>a[href^="http"])
-91short.com,91-short.com##.adm
-91short.com,91-short.com##a > img[style="width: 100%;border-radius: 15px"]
 99re.com##a[href][target="_blank"] > img[src]
 :*/*/sv?gp=*=*=$third-party
 :*/api/v1/api2/tongji/start?pid=$third-party
@@ -4753,6 +4755,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||creative.xxxjmp.com^
 ||crjpgate.com^$document
 ||crulxoits.com^$third-party
+||cuaeblh.icu^
 ||cvmjf.xyz^$third-party
 ||d000d.com/e/
 ||d1ezlc9vy4yc7g.cloudfront.net^$third-party
