@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: gHx7OJzbNI4mzy0tabSCLA
+! Checksum: osin5aEPOZFJjy1tgnLSnw
 ! Title: 自用去广告Adblock规则
-! Version: 20240709154024
-! Last modified: 2024-07-09 15:40:24
-! Total Count: 5352
+! Version: 20240711085104
+! Last modified: 2024-07-11 08:51:04
+! Total Count: 5370
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2928,8 +2928,21 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /rs/shto/*?n=*&p=false&t=16$third-party
 /sad3.js?$third-party
 /sbar.json?key=
+/scripts/AdService_
+/scripts/ads/*
 /sdk/push_web/?zid=
+/search/ads?
+/search/ads_
 /search/tsc.php?
+/searchAdsIframe.
+/search_ads.
+/searchad.
+/searchad_
+/searchads/*$domain=~searchads.apple.com
+/secondads.
+/secondads_
+/secureads.
+/securepubads.
 /sign?v=$domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 /splash.php?cat=&idzone=*
 /static/resources/*/*.gif$domain=18-comic.work|18-comicblade.art|18-comicblade.club|18-comicblade.org|18-comicblade.xyz|18-comicfreedom.org|18-comicfreedom.xyz|18-comicstellar.art|18-comicstellar.xyz|18comic-erdtree.xyz|18comic.org|18comic.vip|jm-comic1.cc|jm-comic2.cc|jmcomic.me|jmcomic1.city|jmcomic1.group|jmcomic1.me|jmcomic1.win|jmcomic2.me
@@ -4315,6 +4328,8 @@ taotu.org##img[src*="/adimages/"]
 tasexy.com##[id^="sexy_b"]
 tbssp66.top##.app,a[rel="external nofollow noopener"][target="_blank"][data-original]
 tecms.net##[class$="i"][style],[class$="h"][style],[class$="_b"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"],[class$="m"][style*="display"][style*="block"][style*="100%"],span > video[poster*="-1316632262.cos.ap-"],[class$="c"][style$="131px;"]
+the-boys.fandom.com##.cnx-main-container
+the-boys.fandom.com##div.notifications-box
 theav.xyz##[class*="absolute-"]
 theav.xyz##div[id*="theav"][style*="margin"] > div > span
 theav.xyz,theporn.cc##[class*="-gg"]
@@ -4661,6 +4676,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||alert.autohome.com.cn^
 ||alibaba.com/ts?
 ||alskfdf.com^
+||amazon-adsystem.com^
 ||amung.us^
 ||an.yandex.ru^
 ||analyti*.woozooo.com^$third-party
@@ -4779,6 +4795,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||difficult-help.com^$third-party
 ||dilidili*.com/js/wap2-jm-ms.js$script
 ||dizhi.men/js/*ad*.js$third-party,script
+||doubleverify.com^$third-party
 ||doyougothere.com^$third-party
 ||dpic.wxddid.cn^$third-party
 ||drfvtgbyk.xyz^$third-party
@@ -5037,6 +5054,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||mouton.foramscoypou.com^
 ||mqsq.vip^
 ||mrkthei.cn^$third-party
+||ms-ads-monitoring-events.presage.io
 ||mtu.hlkcowp.cn^
 ||mylengmen.com/assets/public/$script
 ||net.huaduys.net/guding*.js
