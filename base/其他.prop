@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: osin5aEPOZFJjy1tgnLSnw
+! Checksum: 0zI6wVZ8XQ/hv7veCTCrXg
 ! Title: 自用去广告Adblock规则
-! Version: 20240711085104
-! Last modified: 2024-07-11 08:51:04
-! Total Count: 5370
+! Version: 20240712170656
+! Last modified: 2024-07-12 17:06:56
+! Total Count: 5376
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -24,6 +24,7 @@
 ###LeftAd1
 ###__ads_dp
 ###ad-index
+###ad.slide
 ###adAreaForLookOnline1
 ###adAreaForLookOnline2
 ###adAreaForLookOnline3
@@ -2075,6 +2076,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*/ua.php$third-party
 .com/*/uagu.php$third-party
 .com/*interstitial*.js$third-party,script
+.com/17mb/script/f*.js$~third-party,script
 .com/20*/*/*.txt$third-party
 .com/?channelCode=$~third-party
 .com/VVAvcnms/$third-party
@@ -2090,6 +2092,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/in/multy$third-party
 .com/j/*$script,third-party
 .com/js/gg.js$script
+.com/js/xuanfu.js$script
 .com/k/*$script,third-party
 .com/m-*-*$third-party,domain=manhuagou.com
 .com/o.js$third-party
@@ -4152,7 +4155,7 @@ seajav.com##.under_player,img[border="0"][width="300"][height="80"],[class*="lg:
 search.bilibili.com##.video-list > div.col_3:has(> div.bili-video-card > div.bili-video-card__wrap > a[href*="&csource="])
 search.bilibili.com##.video-list > div.col_3:has(> div.bili-video-card a[href*="//cm.bilibili.com/"])
 send-anywhere.com###gpt-container
-sewen.life,sewen.net,sewen.com,sewen.buzz,sewen.xyz,sewen.top,sewen4.top##img[src*=".xyz/"][src*="16"],[style*="bottom: 0px; left: 0px; z-index:"][style*="100vw;"],.hotcmd-box,.links-top,table[border="1"]
+sewen.buzz,sewen.com,sewen.life,sewen.net,sewen.top,sewen.xyz,sewen4.top,sewen7.com,sewen7.life,sewen7.top,sewen8.life,sewen8.net,sewen8.top##img[src*=".xyz/"][src*="16"],[style*="bottom: 0px; left: 0px; z-index:"][style*="100vw;"],.hotcmd-box,.links-top,table[border="1"]
 sexmod.pw,md91av.top,twavbook999.cc,siaoredbook.cc,mitaonuhai.cc,gipinreba.cc,r18lumod.cc##[class*="topads"],[class*="tads"],[class*="bottomads"],[class*="bads"],[class*="leftd"],[class*="rightd"],a[target="_blank"][href][onclick]
 shushudu.com##[style*="width:"][style*="100%"],[style*="width:"][style*="99%"],[width*="99%"],[width*="100%"],div[class][style*="display: block;"][style*="131px;"],div[class][style*="width: 100%;"][style*="131px;"],div[class][style*="z-index: 2147483646;"][style*="131px"],div[class][style*="position: fixed;"][style*="131px"]
 shzsmy.net##.tp_advertising
@@ -4894,6 +4897,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||gz-yunxi.com^
 ||ha.liuye.club^
 ||halihali*.com/js/wap2-jm-ms.js?$script
+||haloshuwu.com/css/js/apps.js
 ||hanguomanhua.me/style*/js20*.js?v=
 ||hb.vhsrv.com^
 ||hbcfdp.com^
@@ -4901,6 +4905,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||hdpornfree.xxx/sup/*.js
 ||hetang123.com/assets/public/$script
 ||hffxc.com^$third-party,script
+||hhplayer.com/cdn/fb.js
 ||hhxsp.xyz/hf.js$script
 ||highperformancedisplayformat.com^
 ||highwaycpmrevenue.com^$third-party
@@ -5155,6 +5160,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||sedoparking.com^
 ||sejieboxapi.yingyangdj.com^
 ||sentry-cdn.com^$domain=adblock-tester.com|d3ward.github.io
+||sewen8.life/ad
 ||sexad.net^
 ||sfkldbkldgdgh.com^
 ||sfvsjv.com/sh$third-party,script
