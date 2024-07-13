@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: boZaFX1xVJOE7tfNqU1VOA
+! Checksum: jLkxF3STLGMe4TXGraP9Lw
 ! Title: 自用去广告Adblock规则
-! Version: 20240712230037
-! Last modified: 2024-07-12 23:00:37
-! Total Count: 5379
+! Version: 20240713211725
+! Last modified: 2024-07-13 21:17:25
+! Total Count: 5389
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -422,6 +422,7 @@
 ##.content-advertisment
 ##.cpcad.nopc
 ##.dartiframe
+##.dbhf
 ##.dfp_frame
 ##.dlad
 ##.etn-ad-text
@@ -1021,6 +1022,7 @@
 ##.wrapperad
 ##.yuepa-list
 ##.yuepa-warp
+##.zdhf
 ##[ad_display_dot]
 ##[ad_dot_url]
 ##[class$="-ad-box"]
@@ -1360,6 +1362,8 @@
 ##a[href^="http://www.lovetoytw.com/"][onclick]
 ##a[href^="https://adthree.top"]
 ##a[href^="https://adultfriendfinder.com"]
+##a[href^="https://apk1.led-rymx.com"]
+##a[href^="https://apk2.led-rymx.com"]
 ##a[href^="https://app.kmtgsopq.com?agentId="][target="_blank"]
 ##a[href^="https://as.sexad.net"]
 ##a[href^="https://b9556.vip"]
@@ -1458,6 +1462,8 @@
 ##body#app.pc.mobile
 ##body.page > .popup
 ##body[ontouchstart] > #topBox
+##body[style] > script + .app
+##body[style] > script + .app + #htmlContenthtml
 ##body[style^="padding"] > [style$="background-size: 407px 148.5px !important;"]
 ##center[style="display: none;"] > span[style][onclick]
 ##citrus-ad-wrapper
@@ -4351,6 +4357,8 @@ tieba.baidu.com##.nav-bar-bottom
 tieba.baidu.com##a[href*="/baidu.php?url="]
 tieba.baidu.com##div[add-shield-track]
 tinghaobook.com,haitangkan.com,tinghaobook.com,nosadfun.com,ebook8.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,mobidushu.com,fuwen123.com,lengmen.org,newhaitang.com,tinghaodebook.com,haitangdushu.com,myshenye.com,myfeiyanqing.com,tinghaodebook.com,zongcai666.com,iyungong.com,lookmht.com,peakread.com,lengmenread.com##[style*="0vw"][style*="0vh"][style*="0px"],[style*="z-index"][style*="background:"]
+tjk3.com,myfriendjeff.net##.app,#htmlContenthtml,.dbfh,.zdhf
+tjk3.com,myfriendjeff.net##script + [class$="hf"]
 tnaflix.com##.bannerBlock
 tnaflix.com##.rbsd
 tube8.com###flvplayer > div[id]:has(> div[id] > div[id] > ins.adsbytrafficjunky)
@@ -5211,6 +5219,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||thyn.renzhen8.cn^$third-party
 ||tinghao8.com/assets/publish/$script
 ||tinghaolook.com/assets/publish/$script
+||tjk3.com/static/*/*17mb.js
 ||tongji.click^
 ||toutiaoimg.com^$image,domain=350xs.com
 ||tpic.kszvmqo.cn^$third-party
@@ -5271,6 +5280,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||vxinzheng.xyz^$third-party
 ||vzigttqgqx.com^
 ||wap.gonb.org/qjlm_wap.js
+||wbqqo.com^$third-party
 ||wdrpmu632.shop^
 ||wdwdwd3d.com^
 ||weixiaoke.top^
