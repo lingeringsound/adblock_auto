@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Uz8l5lujztc54Rv1yMFX9g
+! Checksum: mupifUXKfcFpphEOF87zFA
 ! Title: 自用去广告Adblock规则
-! Version: 20240713212251
-! Last modified: 2024-07-13 21:22:51
-! Total Count: 5390
+! Version: 20240714110404
+! Last modified: 2024-07-14 11:04:04
+! Total Count: 5392
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1458,12 +1458,12 @@
 ##body > embed[id][src*="://"][src$="="]
 ##body > embed[id][src^="https:///"]
 ##body > script + *[id][class][classname]
+##body > script + .app
+##body > script + .app + #htmlContenthtml
 ##body > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##body#app.pc.mobile
 ##body.page > .popup
 ##body[ontouchstart] > #topBox
-##body[style] > script + .app
-##body[style] > script + .app + #htmlContenthtml
 ##body[style^="padding"] > [style$="background-size: 407px 148.5px !important;"]
 ##center[style="display: none;"] > span[style][onclick]
 ##citrus-ad-wrapper
@@ -3632,6 +3632,8 @@ ddys.tv,ddys.art,ddys.*,ddrk.me,ddys.pro,ddys2.me##div > span > a > img
 ddzzxs.com###inglestore
 diantaiwang.com##a[href^="https://s.click.taobao.com/"][target="_blank"]
 diantaiwang.com##img[src^="/js/imgs"]
+dippens.net,mei222.com,myfriendjeff.net,tjk3.com##.app,#htmlContenthtml,.dbfh,.zdhf
+dippens.net,mei222.com,myfriendjeff.net,tjk3.com##script + [class$="hf"]
 dm590.com,hentaipaw.com##.external
 dm88.me,dmh8.me,dm99.me##.padding-0 > ul[style]
 dm88.me,dmh8.me,dm99.me##[style^="display: block;"]
@@ -4357,8 +4359,6 @@ tieba.baidu.com##.nav-bar-bottom
 tieba.baidu.com##a[href*="/baidu.php?url="]
 tieba.baidu.com##div[add-shield-track]
 tinghaobook.com,haitangkan.com,tinghaobook.com,nosadfun.com,ebook8.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,mobidushu.com,fuwen123.com,lengmen.org,newhaitang.com,tinghaodebook.com,haitangdushu.com,myshenye.com,myfeiyanqing.com,tinghaodebook.com,zongcai666.com,iyungong.com,lookmht.com,peakread.com,lengmenread.com##[style*="0vw"][style*="0vh"][style*="0px"],[style*="z-index"][style*="background:"]
-tjk3.com,myfriendjeff.net##.app,#htmlContenthtml,.dbfh,.zdhf
-tjk3.com,myfriendjeff.net##script + [class$="hf"]
 tnaflix.com##.bannerBlock
 tnaflix.com##.rbsd
 tube8.com###flvplayer > div[id]:has(> div[id] > div[id] > ins.adsbytrafficjunky)
@@ -4468,6 +4468,8 @@ xhofficial.com,xhamster.com,xhamster2.com,xhamster.desi,xhamster18.desi,xhamster
 xhofficial.com,xhamster.com,xhamster2.com,xhamster.desi,xhamster18.desi,xhamster2.desi,xhamster19.com,xhofficial.desi,xhamster1.desi##aside:nth-child(n+1)
 xhofficial.com,xhamster.com,xhamster2.com,xhamster.desi,xhamster18.desi,xhamster2.desi,xhamster19.com,xhofficial.desi,xhamster1.desi##div[class]:has(> div > a[href*="live."])
 xhzysh.com,rujiapawn.com,sysjbz.com,zq3q.com,j1069.com,tvyb03.com,tvyb01.com,tvyb02.com,tvyb06.com,hktv02.com,hktv06.com,meijumi.xyz,meijumi.buzz,meijumi.com,sbdm.net,fantuanhd.com,kankanju.cc,renren.pro,sstv.fun##*[style*="bottom"],[class$="_b"]
+xiakexsw.com##a[href^="/"][rel="nofollow"]
+xiakexsw.com##script + div[style]
 xiashuyun.com##[id^="downapp"]
 xiashuyun.com##div#navdown
 xiuren5.com,xgmn02.com##a[href] > img[src$=".gif"]
