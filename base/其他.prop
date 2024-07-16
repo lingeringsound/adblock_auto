@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2Va54jZyFQvF4+pX0+a0iA
+! Checksum: Udl6T13lD5n4nUX6brzKjw
 ! Title: 自用去广告Adblock规则
-! Version: 20240716232621
-! Last modified: 2024-07-16 23:26:21
-! Total Count: 5415
+! Version: 20240717002655
+! Last modified: 2024-07-17 00:26:55
+! Total Count: 5421
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2818,6 +2818,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/home/ad/ad.
 /js/jads.js$script
 /js/jads.js?
+/js/new-kk-27k.js?$~third-party,script
 /js/pfadll*.js
 /js/profit.js$~third-party
 /js/sp_ad.js$script
@@ -3247,8 +3248,13 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*:*/dayu*.html?channelCode=$document
 ://*:*/yeyue.html?k=$csp=script-src
 ://*:*/yeyue.html?k=$document
+://*dilidili*.com/js/*.js?ver=
+://*dilidili*.org/js/*.js?ver=
+://*halihali*.com/js/*.js?ver=
+://*halihali*.org/js/*.js?ver=
 ://*yhdm*.com/js/*.js?ver=
 ://*yhdm*.com/js/new-kk-27k.js?
+://*yhdm*.org/js/*.js?ver=
 ://16*.com:*/wap_*_*_16*$third-party
 ://888bb*ww.com/$image,third-party
 ://888xx*kk.com/$image,third-party
