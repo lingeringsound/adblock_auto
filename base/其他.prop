@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: yT30B6pzdoGey0dGxTAIvA
+! Checksum: gLUTcLn13QascDvxAwl19g
 ! Title: 自用去广告Adblock规则
-! Version: 20240715183838
-! Last modified: 2024-07-15 18:38:39
-! Total Count: 5404
+! Version: 20240716121052
+! Last modified: 2024-07-16 12:10:52
+! Total Count: 5412
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2261,6 +2261,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz/*_*_1_*.js?$third-party
 .xyz/*_*_1_*.js?*16$third-party
 .xyz/*_*_2_*.js?*16$third-party
+.xyz//qby_*.js?$third-party
 .xyz/?ch=ssmh
 .xyz/?channelCode=$document
 .xyz/?channelCode=$~third-party
@@ -3406,7 +3407,7 @@ Banner-Ad
 Banner-Adv
 _728x90_
 _ads_banner
-aaread.club##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[id^="GGADIMG"][src]
+aabook.cyou,aabook.xyz,aaread.club,aastory.space,fqbook.cc,fqbook.cyou##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[id^="GGADIMG"][src],div[class][id]:has(img[src][alt="xxx"]),a[href^="https://fkxl.xyz"]
 abjav.com##.header__item
 abjav.com##section
 aca.best#@#body > noscript + #app
@@ -3611,6 +3612,9 @@ ciyuanshe6.com##body > div[id] > div[class="fixed"],body > div[id] > div[class*=
 cj.sina.cn,finance.sina.cn##.carousel
 colamanhua.com,colamanga.com##[class$="i"][style*="bottom"],[class$="h"][style*="bottom"],[class$="_b"],[class$="c"][style*="bottom"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"]
 colamanhua.com,colamanga.com#@#.gg_950
+colamanhua.com,colamanga.com#@#ADFooter
+colamanhua.com,colamanga.com#@#ADInfo
+colamanhua.com,colamanga.com#@#ADLeader
 colamanhua.com,ddgys.com,ddg66.com,ddg44.com,ddg33.com,dadagui.me,colamanga.com##[class$="i"][style*="bottom"],[class$="h"][style*="bottom"],[class$="_b"],[class$="c"][style*="bottom"]
 comgk.com,okdyy.com##a[ontouchstart],a[onclick],[class^="cvbcvxvb"],[href*="baidujkdjklvvsbvk.com"]
 coolapk.com#@#[class$="ad-box"]
@@ -4374,6 +4378,7 @@ tnaflix.com##.rbsd
 tube8.com###flvplayer > div[id]:has(> div[id] > div[id] > ins.adsbytrafficjunky)
 tubepornclassic.com##.left > .videoplayer + .underplayer
 tubepornclassic.com##.video__wrapper > section:has(> div > div:empty)
+tucao.buzz,tucao.cfd##div.header_rmb
 twitter.com##.tweet:has(.promo)
 twitter.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com##div[data-testid="UserCell"]:has(path[d$="10H8.996V8h7v7z"])
@@ -4851,6 +4856,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||etahub.com^$third-party
 ||euosicjxjv.com^
 ||eurodomo.cn^
+||ex5tsc73m4.xyz^
 ||exdynsrv.com^
 ||exe*.spankbang.com^$xmlhttprequest
 ||exe*.spankbang.party^$xmlhttprequest
@@ -4866,6 +4872,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||fg.knlk2md.cn^$third-party
 ||fhn.hnw6.icu^
 ||fileinvite.top^
+||fkxl.xyz^
 ||fluentfixing.com^
 ||fourier.alibaba.com^
 ||friendshipmale.com^
@@ -5323,6 +5330,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||xhzysh.com/runtime/ad$~third-party
 ||xiakeaa.com/css/js/tools.js
 ||xiangzishop.com^$third-party
+||xinfubao.site^
 ||xinyumingad.com^$third-party
 ||xlyzjs.com$third-party
 ||xmsflzmygw.com^
