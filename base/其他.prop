@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: teU1vI6M+ZIKwrHmNVVNIg
+! Checksum: VS46KMWTbb7bzjjEQcW7fg
 ! Title: 自用去广告Adblock规则
-! Version: 20240717141719
-! Last modified: 2024-07-17 14:17:19
-! Total Count: 5449
+! Version: 20240717143410
+! Last modified: 2024-07-17 14:34:10
+! Total Count: 5454
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1029,11 +1029,13 @@
 ##[class$="-ad-box"]
 ##[class$="-ad-container"]
 ##[class$="_ad-container"]
+##[class$="ads-banners"]
 ##[class$="ads-box"]
 ##[class$="ads-container"]
 ##[class$="card-ad-video"]
 ##[class$="play-adv"]
 ##[class$="video-ads"]
+##[class*="__ads"]
 ##[class*="ads-block"]
 ##[class*="ads_"]
 ##[class*="ads_border"]
@@ -1106,6 +1108,7 @@
 ##[data-revive-zoneid]
 ##[data-role="tile-ads-module"]
 ##[data-template-type="nativead"]
+##[data-title="广告"]
 ##[href*="//ad.addizhi."][href$=".html"]
 ##[href*="//sejieboxapi.yingyangdj.com"]
 ##[href*="https://at.umtrack.com"]
@@ -1700,6 +1703,7 @@
 ##iframe[src^="//tempest.services.disqus.com/ads-iframe/"]
 ##iframe[src^="//us-west1."][src*="/api/spots/"]
 ##iframe[src^="/ad"][src$=".html"]
+##iframe[src^="/adv-agent.php?spot="]
 ##iframe[src^="/ai/s/s/su.php"]
 ##iframe[src^="/frd5/s/s/su.php?"]
 ##iframe[src^="https://adsxyz.com"]
@@ -1713,6 +1717,7 @@
 ##iframe[style$="margin: auto 0px !important; padding: 0px; border: none; outline: none; box-sizing: border-box; position: fixed; color-scheme: none; inset: 0px 0px 0px auto !important; overflow: hidden; z-index: 2147483647;"]
 ##iframe[style^="width: 100% !important; height: 100% !important; margin: 0px; padding: 0px; border: none; outline: none; box-sizing: border-box; position: fixed; color-scheme: none; inset: 0px; overflow: hidden; z-index: 21474"]
 ##iframe[title="Advertisement"]
+##iframe[title="广告"]
 ##iframe[width="0"][height="0"]
 ##iframe[width="100%"][height="120"]
 ##iframe[width="100%"][height="90"]
