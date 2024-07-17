@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: stW6AbmnB6JKljeKlcXzBw
+! Checksum: V7Ku7XT8s8Tl/BQmOjBZUg
 ! Title: 自用去广告Adblock规则
-! Version: 20240717021614
-! Last modified: 2024-07-17 02:16:15
-! Total Count: 5421
+! Version: 20240717113707
+! Last modified: 2024-07-17 11:37:07
+! Total Count: 5440
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2197,6 +2197,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/reacre*?$third-party
 .icu/release*ts?*16$third-party
 .icu:28883/*/*$third-party
+.js?type=adult&v=$domain=netflav.com
 .la/8WaadBLH/*.js
 .live/j/*/*?$third-party
 .live/js/gg.js$script
@@ -3336,6 +3337,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
 @@/index.m3u8
+@@/js/popup.js?advertiser=popup$domain=netflav.com
 @@/matomo.js$domain=github.com|trcet77.com
 @@/template/conch/asset/js/hlhtml.
 @@/videos/*$domain=pornhub.com|pornhub.org|pornhub.net|pornhubthbh7ap3u.onion
@@ -4021,6 +4023,8 @@ msn.com,msn.cn##[class^="nativeAd-"]
 msn.com,msn.cn##[data-t*="NativeAd"]
 mydrivers.com#@#a[href*="/bp.ashx"]
 n6h7m.com##a[href="/pwa/lottery"],img[src*="://ad.xmmnsl.com"],a[referrerpolicy="unsafe-url"][target="_blank"],.float-ad
+netflav.com##.ads_head_banner_container
+netflav.com##.ads_video_overlay_mobile
 news.heytapdownload.com##[class^="oppo-cec-new"]
 news.heytapdownload.com##div.news-wrapper
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
@@ -4711,6 +4715,11 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||ajcode.co^$third-party
 ||ajkjbcjbaaaed.com^$third-party
 ||ajtdumo.cn^$third-party
+||ak.aungudie.com^
+||ak.hesoorda.com^
+||ak.jeekomih.com^
+||ak.stoorgel.com^
+||ak.zougreek.com^
 ||al.autohome.com.cn^
 ||alert.autohome.com.cn^
 ||alibaba.com/ts?
@@ -4799,6 +4808,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||cmx.autohome.com.cn^
 ||cnt.xhamster.com^
 ||comm.app.autohome.com.cn^
+||concedederaserskyline.com^
 ||cos.ap-*.myqcloud.com^$third-party
 ||cpro.baidustatic.com^
 ||creative.ohmycams.com^
@@ -4813,6 +4823,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||crjpgate.com^$document
 ||crulxoits.com^$third-party
 ||cuaeblh.icu^
+||cupoabie.net^
 ||cvmjf.xyz^$third-party
 ||d000d.com/e/
 ||d1ezlc9vy4yc7g.cloudfront.net^$third-party
@@ -4834,6 +4845,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||difficult-help.com^$third-party
 ||dilidili*.com/js/wap2-jm-ms.js$script
 ||dizhi.men/js/*ad*.js$third-party,script
+||documentaryselfless.com^
 ||doubleverify.com^$third-party
 ||doyougothere.com^$third-party
 ||dpic.wxddid.cn^$third-party
@@ -4898,6 +4910,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||getcdnpix.name^
 ||gibzz.xyz^
 ||gl.zle.com^
+||glersakr.com^
 ||gloaphoo.net^
 ||gnrty.kmjkwe.xyz^
 ||go.adltserv.com^
@@ -5063,6 +5076,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||listeamed.net^
 ||ln.tian-ting.ink^
 ||log.m.sm.cn^
+||lorswhowishe.com^
 ||lppgjf.xyz^
 ||lqglqq.com^$third-party
 ||lskjwica.cn^
@@ -5108,6 +5122,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||nosadfun.com/assets/public/$script
 ||nsclick.baidu.com^
 ||nscxbr.com^$third-party
+||nv3tosjqd.com^
 ||nwecd.xyz^$third-party
 ||oce.nexithrom.com^$third-party
 ||oclasrv.com^
@@ -5119,6 +5134,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||orbsrv.com^
 ||oronwg.xyz^$third-party
 ||oss-cn-beijing.aliyuncs.com/llv3/*.js$third-party
+||ossmightyenar.net^
 ||padmp4.cc/js/foot.js
 ||padmp4.com/js/foot.js
 ||pagead2.googlesyndication.com^
@@ -5185,6 +5201,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||rtbrenab.com^
 ||rtbrennab.com^
 ||rtmark.net^
+||rw.pleatpipe.com^
 ||s.69vj.com/assets/DIY.$image,media
 ||s.htkk*.top:20443^$script
 ||s.uuidksinc.net^
@@ -5302,6 +5319,8 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||vmsolxc.cn^
 ||volgreal.com^$third-party
 ||voxar.xyz^
+||vpnrice.com^$third-party
+||vpnrice.onelink.me^$third-party
 ||vs*.bozhou666.com^$third-party
 ||vuhbgtsi.xyz^$third-party
 ||vuyibsm.icu^
