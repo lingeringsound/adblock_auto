@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: V7Ku7XT8s8Tl/BQmOjBZUg
+! Checksum: teU1vI6M+ZIKwrHmNVVNIg
 ! Title: 自用去广告Adblock规则
-! Version: 20240717113707
-! Last modified: 2024-07-17 11:37:07
-! Total Count: 5440
+! Version: 20240717141719
+! Last modified: 2024-07-17 14:17:19
+! Total Count: 5449
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -257,6 +257,7 @@
 ##.ads-all
 ##.ads-img
 ##.ads_
+##.adsbyfalcon
 ##.adsbygoogle
 ##.adsbytrafficjunky
 ##.adsens
@@ -2695,6 +2696,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /code/native.js?h=$script
 /config/json/cctv.json?v=1$~third-party
 /css/ad.
+/css/js/tools.js$script,~third-party,~stylesheet
 /display/ads/*
 /dygg_
 /dyn_banner.
@@ -3917,6 +3919,7 @@ ktmukmx.com##.container > div[style] > div.row > .col-sm-3 > a[target="_blank"]
 kwoo50.icu,kwuu83.icu##div.float-app
 kwoo50.icu,kwuu83.icu##div.mod:has(.biaoti)
 kwoo50.icu,kwuu83.icu##div[class^="grid-box-"]
+kwytlife2019.net##div.header-fixed-area
 kxyes.com##span[style*="393px"][style*="0px 0px"][style*="border-image-source:url"],img[src*="//image.suning.cn/uimg/ZR/share_order"],.cpcad.nopc
 laimanhua8.com###jusha1
 last.fm##.chartlist-row--interlist-ad
@@ -4297,6 +4300,8 @@ so.com##div[id^="guang-"]
 so.com##div[id^="mohe-biu_360"] > .g-card
 so.com##li[data-cpc_query]
 so.com##li[data-id^="cm_display_init_text_"]
+sogi.com.tw###ad
+sogi.com.tw###cookie-bar
 sogou.com###PZL
 sogou.com###PZR
 sogou.com###adWindow
@@ -4763,6 +4768,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||bitizm.pojuko.buzz^
 ||bj-gov-cn.website^
 ||bjzankai.com^$script,third-party
+||bkxpph.xyz^
 ||bl230126pb.com^
 ||bnhtml.com^
 ||bnsdk.top^
@@ -5062,6 +5068,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||labadena.com^$third-party
 ||lanmeifeel.xyz^
 ||lby2kd27c.com^$third-party
+||ldipsuml.top^
 ||leads.api.autohome.com.cn^
 ||leads.autohome.com.cn^
 ||lekfez.icu^
@@ -5153,6 +5160,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||pic.usphflorence.com^
 ||picfourlai.com^
 ||pjy55d.com^
+||plecnyz.icu^
 ||pnpy.mmtnat.com^$third-party,script
 ||poh.uoydhco.cn^
 ||pojuko.buzz^
@@ -5171,6 +5179,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||pwc.qktmwiq.cn^
 ||pyntr.xyz^
 ||qbdjfce.com^
+||qhscsu.xyz^
 ||qimiaomanhua.com/poster/*dp.js
 ||qimiaomanhua.com/poster/*hf.js
 ||qisaoba.com^
