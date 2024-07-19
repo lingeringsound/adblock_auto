@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: wsevHGCgM/JCPxDMcNN0QQ
+! Checksum: QZF/1vx9h6NcUQZaAGds7A
 ! Title: 自用去广告Adblock规则
-! Version: 20240719172034
-! Last modified: 2024-07-19 17:20:35
-! Total Count: 5497
+! Version: 20240720021135
+! Last modified: 2024-07-20 02:11:36
+! Total Count: 5503
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -199,6 +199,7 @@
 ###top-ads
 ###top_ad
 ###video-ad
+###wwads
 ###yp-home[role="tabpanel"]
 ##.ReadAd
 ##.ReadAd2
@@ -3147,6 +3148,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 2cycomic.com,yemancomic.com##[onclick*="javascript:location.href="]
 2cycomic.com,yemancomic.com##div[style^="width: 100%;background-color: black;color: white;padding: 0px 0;"]
 2cycomic.com,yemancomic.com##div[style^="width: 100%;background-color: black;color: white;padding: 15px 0;"]
+360kan.com##[data-so-mod="ad"]
 3dmgame.com##.downl_list:has(style)
 3g.163.com,m.163.com##.floatMenu-logo
 3g.163.com,m.163.com##.js-area-aboveTieList.area-above
@@ -4302,6 +4304,8 @@ so.com##.mh-sad
 so.com##.news-list
 so.com##.newsfeed-popup
 so.com##.placeholder-default
+so.com##.r-results > div:has(a[href^="https://e.so.com/adx/"])
+so.com##.r-results > div:has(a[href^="https://e.so.com/search/mclick?asin"])
 so.com##.res-mediav
 so.com##.spread
 so.com##.windisplayCell
@@ -4658,6 +4662,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||2biqu.com/static/*/*.js
 ||2cnjuh34jbpoint.com^
 ||33.autohome.com.cn^
+||360tres.com/*rank2.js
 ||3pmcoohke.scriptmh.com^
 ||3v7c7y.online^$third-party
 ||3zmm.net/*/*.js
@@ -5289,6 +5294,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||sjkbdvjksbdd.com^
 ||skluff.com^$third-party
 ||smachnakittchen.com^
+||so.com/adx/
 ||sofire.bdstatic.com^
 ||solengmen.com/assets/publish/$script
 ||sp5vip.com/h.js
