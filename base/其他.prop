@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QZF/1vx9h6NcUQZaAGds7A
+! Checksum: xi5QODt7CN4drXJNvRQ/8w
 ! Title: 自用去广告Adblock规则
-! Version: 20240720021135
-! Last modified: 2024-07-20 02:11:36
-! Total Count: 5503
+! Version: 20240720094157
+! Last modified: 2024-07-20 09:41:57
+! Total Count: 5511
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -3831,6 +3831,7 @@ ifeng.com##[class^="index_videoList"]
 ifeng.com##[id*="top_ad"]
 ifeng.com##section > [class^="index_toolbar"]
 ilengmen.com,newpopo.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,mobidushu.com,fuwen123.com,lengmen.org,newhaitang.com,tinghaodebook.com,haitangdushu.com,myshenye.com,myfeiyanqing.com,tinghaodebook.com,zongcai666.com,iyungong.com,lookmht.com,peakread.com,lengmenread.com,shenyedushu.com##[style*="0vw"][style*="0vh"][style*="0px"],[style*="z-index"][style*="background:"],[id][style*="width"][style*="100%"],div[class][style^="line-height:"][style$="no-repeat; position: relative;"]
+image.so.com##.waterfall > li[data-imgid] > a[href^="https://e.so.com/search/mclick?"]
 inbox.io,hanime.tv,pbs.org#@#.banner-ad
 iookd.cc##[class="ads"] > img,img[src*="jiongnet.cn"]
 ipv6.baidu.com,m.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com###results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar):not(.s-group-result)
@@ -4308,6 +4309,8 @@ so.com##.r-results > div:has(a[href^="https://e.so.com/adx/"])
 so.com##.r-results > div:has(a[href^="https://e.so.com/search/mclick?asin"])
 so.com##.res-mediav
 so.com##.spread
+so.com##.tg-wrap
+so.com##.tg-wrap-async
 so.com##.windisplayCell
 so.com##a[data-log*="cpc"]
 so.com##div[id^="guang-"]
@@ -4435,9 +4438,11 @@ txxxporn.tube,vxxx.com##.pwa-ad
 txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi])
 up.taoseye.com##a[target="_blank"],[ontouchstart]
 video.sina.cn##section.Card_Mb16
+view.inews.qq.com##[class*="bottom-bar"]
 view.inews.qq.com##[class*="downloader-"]
 view.inews.qq.com##[class^="style_floatingRight__"]
-view.inews.qq.com##[data-action-id="2"],[dt-eid="em_pull_news"]
+view.inews.qq.com##[data-action-id="2"]
+view.inews.qq.com#@#[dt-eid="em_pull_news"]
 voflix.com##[class*="module-adslist"]
 voflix.com##img[importance="low"][onclick*="window.open"][src][lazyload]
 vxxx.com###player-1 > div[style="display:flex !important"] > div
@@ -4454,10 +4459,13 @@ weibo.com##.vue-recycle-scroller__item-view:has(div[class^="head-info_authtag_"]
 weibo.com##.vue-recycle-scroller__item-view:has(img[class^="head-info_authicon_"][src^="data"])
 weibo.com##tr:has(> .td-03 > .icon-txt-recommend)
 wen.baidu.com##.feed-recommend
+wenda.so.com##a[href^="http://e.so.com/search/eclk?"]
 wendangwang.com##[onclick="CloseAD();"]
 wenwen.sogou.com##.recommend-list
 wenwen.sogou.com##.sgui-hint.sgui-item
 wuzhuiso.com###appMiddleBanner
+wuzhuiso.com###mohe-hotnews_right
+wuzhuiso.com###side > div.download-browser:last-child
 www.baidu.com,3g.baidu.com,m.baidu.com,m5.baidu.com##.na-ec-waterfall
 www.baidu.com,3g.baidu.com,m.baidu.com,m5.baidu.com##.news-list-wrapper
 www.zhihu.com,zhihu.com##.AppMagicBanner
