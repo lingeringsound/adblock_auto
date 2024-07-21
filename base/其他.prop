@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: xi5QODt7CN4drXJNvRQ/8w
+! Checksum: zdLWaHfP0TSc1ih0vNMkYg
 ! Title: 自用去广告Adblock规则
-! Version: 20240720094157
-! Last modified: 2024-07-20 09:41:57
-! Total Count: 5511
+! Version: 20240721092237
+! Last modified: 2024-07-21 09:22:37
+! Total Count: 5525
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -49,6 +49,7 @@
 ###adContent
 ###adContentHolder
 ###adContext
+###adSpot
 ###adbox
 ###adbox--hot_news_ad
 ###adbox--page_bottom_ad
@@ -65,12 +66,20 @@
 ###ads-container-anchor
 ###ads-container-single
 ###ads-container-top
+###adsense-area-label
 ###adsense_center
 ###adsense_footer
 ###adsense_header
 ###adsense_insert
+###adsenseright
+###adspace-one
+###adspace-top
+###adspace300x250
+###adspaceBox
 ###advertisings
 ###allpng
+###billboard_desk
+###billboard_mob
 ###bl_mobile_float
 ###bottom-ad-area
 ###bottom-ad-banner
@@ -133,6 +142,8 @@
 ###imu_ad_module
 ###inPlayerGGzone
 ###inPlayerGGzone + [data-content-type="result"]
+###leaderboard_bottom_ad
+###leaderboard_top_ad
 ###leftAD
 ###leftCouple
 ###leftCouple + #rightFloat
@@ -1028,6 +1039,7 @@
 ##.zdhf
 ##[ad_display_dot]
 ##[ad_dot_url]
+##[alt="Ads"]
 ##[class$="-ad-box"]
 ##[class$="-ad-container"]
 ##[class$="_ad-container"]
@@ -1745,7 +1757,6 @@
 ##img[alt*="bet365"][src$=".gif"]
 ##img[alt*="呦女"]
 ##img[alt*="四季体育"][src$=".gif"]
-##img[alt*="广告"][src]
 ##img[alt*="成人"][alt*="抖阴"]
 ##img[alt*="成人"][alt*="抖音"]
 ##img[alt*="新葡京"][src$=".gif"]
@@ -1769,6 +1780,7 @@
 ##img[alt="太陽城集團"]
 ##img[alt="官方APP"]
 ##img[alt="小孩小呦女"]
+##img[alt="广告"]
 ##img[alt="开云体育"]
 ##img[alt="成人二次元"]
 ##img[alt="成人抖音破解"]
@@ -2689,6 +2701,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /asset/*.min.js?*=*&$domain=vcdn.io|suzihaza.com|ns21.online|diasfem.com|izleorg3.org|nezuko-ah.nl|dfmagazine.co.uk|javcl.me|bazavox.com|avhost.xyz|asianclub.tv|javlove.club|javip.pro|videogreen.xyz|ujav.me|mavplayer.xyz|vcdn2.space|xxxjaa.xyz|mavlecteur.com|vidcloud.*|javmvp.com|mm9842.com|fplayer.info|ondembed.xyz|fakyutube.com|streamabc.xyz|hentai4.me|animepl.xyz|gdstream.net|rubicstreaming.com|layarkacaxxi.icu|mycloudzz.com|playerjavhd.com|cutl.xyz|myvideoplayer.monster|cinemaemcasa.xyz|luxubu.review|cinegrabber.com|obaplayer.xyz|yuamikami.xyz|cloudrls.com|javpornhd.online|watch-jav-english.live|zojav.com|javenglish.me|vidplay.ch|vanfem.com|vcdn-stream.xyz|av4asia.com|javsubbed.xyz|xsub.cc|mavavid.com|baldrfilms.xyz|streamm4u.club|m4uhd.club
 /assets/ad-$domain=~flowus.cn
 /assets/publi*/$script,domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com|nosadfun.com|shenyelook.com|hetang123.com|tinghaolook.com|sadnofun.com|bookhaitang.com|lengmen.cc|baimakanshu.com|dayu778.com|solengmen.com
+/assets/public/chart.1.js$script,~third-party
 /assets/public/d3.2.js$script,~third-party
 /assets/public/react.3.js$script,~third-party
 /assets/publish/chart.1.js$script,~third-party
@@ -3190,6 +3203,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 58.com##TR[logr]:has(> .t > .mt-p-tit > .jingpin)
 58.com##tr[sortid]:has(> .t > .ico.accurate)
 5xsq.com##[class^="ad-index"]
+61ku.com,acfun.cn,bilibili.com,h6room.com,ludown.com,lxapk.com,nr19.cn,pornpics.com,pornpics.de,v.qq.com,xhzyku.com,youku.com,yxzhi.com#@#img[alt*="广告"][src]
 6446.tv,lgyy.tv,lgyy.cc##[id^="bfad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="mhbottom_ad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="syad"]
@@ -3432,7 +3446,6 @@ aabook.cyou,aabook.xyz,aaread.club,aastory.space,fqbook.cc,fqbook.cyou##.footer 
 abjav.com##.header__item
 abjav.com##section
 aca.best#@#body > noscript + #app
-acfun.cn,bilibili.com,h6room.com,lxapk.com,nr19.cn,pornpics.com,pornpics.de,v.qq.com,youku.com,yxzhi.com#@#img[alt*="广告"][src]
 acgrw.com##img[src^="data:"],[style*="131px"]
 adultfilmdatabase.com,animeidhentai.com,babeforums.org,bos.so,camvideos.tv,camwhores.tv,cutscenes.net,devporn.net,f95zone.to,fritchy.com,gifsauce.com,hentai2read.com,hotpornfile.org,hpjav.com,imagebam.com,imgbox.com,imgtaxi.com,motherless.com,myporn.club,pandamovies.pw,planetsuzy.org,pussyspace.com,redgifs.com,sendvid.com,sexgalaxy.net,sextvx.com,sexuria.com,thefappeningblog.com,vintage-erotica-forum.com,vipergirls.to,waxtube.com,xfantazy.com,yeapornpls.com##a[href*="theporndude.com"]
 advancedrenamer.com,alotof.software,android-doc.com,androidrepublic.org,anonymousemail.me,apk.tw,apkmirror.com,blog.reh.tw,chaojizhibo.net,chtoen.com,demos.krajee.com,dizhishengcheng.com,doitwell.tw,epicbundle.com,epinv.com,ff14angler.com,fxpan.com,gamaniak.com,haoweichi.com,hs-exp.jp,kadinlarkulubu.com,korail.pe.kr,logi.im,lspdfrcn.com,moa.tw,moe123.net,numberempire.com,phcorner.net,pixiz.com,playok.com,reh.tw,rockmods.net,shenfendaquan.com,slashview.com,sockscap64.com,spoilertv.com,vaptcha.com,willyoupressthebutton.com,yabook.org#@#ins.adsbygoogle
@@ -4004,6 +4017,7 @@ madou.club##a[href*="//www.pssy.xyz"]
 madou.club##a[href*="www.pssy.xyz"]
 madou.club##a[href][target="_blank"][rel="nofollow noopener"]
 maigoo.com##[class*="ads"]
+mail.google.com,mediafire.com#@#.ads
 mat6tube.com##.main > .c_video > .container > [style]:not(.video_player)
 mbd.baidu.com###headDeflectorContainer
 mbd.baidu.com##.drag-wrap
@@ -4533,10 +4547,10 @@ xnxx-sexfilme.com,hd-easyporn.com,pornblade.com,pornfelix.com##.vjs-overlayed
 xnxx.com###content-ad-side
 xnxx.com##.ad-footer
 xnxx.com##.mobile-only-hide
-xnxx.com#@#.exo-ad-ins-container
 xnxx.com#@#[class*="ad-"]
 xnxx.com,xvideos.com###ad-footer
 xnxx.com,xvideos.com##[id^="ad-"]
+xnxx.com,xvideos.com#@#.exo-ad-ins-container
 xnxx.fit###fluid-onpause_spot
 xnxx54.info##.entry-content > div.ktz_content-more > p[style] + div[class][id]:not([style])
 xnxxporn.video###spotholder
