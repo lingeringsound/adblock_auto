@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: gpeg2XjoNwKhMbX9iLq/Xw
+! Checksum: KqqwTDc8Tv1dBEnOtuP4fA
 ! Title: 自用去广告Adblock规则
-! Version: 20240727163003
-! Last modified: 2024-07-27 16:30:04
-! Total Count: 5534
+! Version: 20240728023837
+! Last modified: 2024-07-28 02:38:37
+! Total Count: 5543
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -4120,6 +4120,7 @@ pixlr.com##body > .pro-app-wrap
 pixnet.net###main > div.header-fixed-area:has(> div#header-ad-fixed)
 pixwox.com##[id^="browsi_wrapper"][id*="_ai_"]
 pixwox.com##div[id]:has([id^="browsi_ad"])
+player.twitch.tv##.video-player__container div[class^="Layout-"]:has(> span[data-a-target="video-ad-label"])
 po18wen.net##[style*="pointer-events: none;"]
 po18wen.net##img[style="border: 1px inset #00FF00"]
 porn-w.org##.align-items-center.list-row:has(.col:empty)
@@ -4434,6 +4435,13 @@ tube8.com,youporn.com##.watchTopAd
 tubepornclassic.com##.left > .videoplayer + .underplayer
 tubepornclassic.com##.video__wrapper > section:has(> div > div:empty)
 tucao.buzz,tucao.cfd##div.header_rmb
+twitch.tv##a[href*="store.asus.com/rog-promo/"]
+twitch.tv##a[href="https://vk.com/bust3rshop"]
+twitch.tv##a[href^="http://ggrus.bet/"]
+twitch.tv##a[href^="https://ggbetpromo.com/"]
+twitch.tv##a[href^="https://ya.cc/"]
+twitch.tv##div[data-test-selector="channel_panel_test_selector"] > a[href^="http://bit.ly/"]
+twitch.tv##div[data-test-selector="channel_panel_test_selector"] > a[href^="https://bit.ly/"]
 twitter.com##.tweet:has(.promo)
 twitter.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com##div[data-testid="UserCell"]:has(path[d$="10H8.996V8h7v7z"])
@@ -4463,6 +4471,7 @@ view.inews.qq.com##[class*="downloader-"]
 view.inews.qq.com##[class^="style_floatingRight__"]
 view.inews.qq.com##[data-action-id="2"]
 view.inews.qq.com#@#[dt-eid="em_pull_news"]
+vk.com,vk.ru###system_msg
 voflix.com##[class*="module-adslist"]
 voflix.com##img[importance="low"][onclick*="window.open"][src][lazyload]
 vxxx.com###player-1 > div[style="display:flex !important"] > div
