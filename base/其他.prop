@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: KqqwTDc8Tv1dBEnOtuP4fA
+! Checksum: ZFAjxWoqMlCzC2fz2ADL9w
 ! Title: 自用去广告Adblock规则
-! Version: 20240728023837
-! Last modified: 2024-07-28 02:38:37
-! Total Count: 5543
+! Version: 20240730233534
+! Last modified: 2024-07-30 23:35:34
+! Total Count: 5547
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1218,6 +1218,7 @@
 ##a[data-track-content][data-content-name][target="_blank"]
 ##a[href$=".html?c=adha8"][target="_blank"]
 ##a[href$=".vip"][target="_blank"][class] > span
+##a[href$="/?blue"][target="_blank"] > img[src$=".gif"]
 ##a[href*="&Ad_ID="]
 ##a[href*="&campaignType=smartpop&creativeId"]
 ##a[href*=".biquge"][href*="app"]
@@ -1230,6 +1231,7 @@
 ##a[href*=".html?channelCode="]
 ##a[href*=".icu/?token="][target="_blank"]
 ##a[href*=".lvdou.life/"][target="_blank"]
+##a[href*=".magsrv.com/"]
 ##a[href*=".top"] > img[src]
 ##a[href*=".top:"][target="_blank"][class] > span
 ##a[href*=".vip:"] > img[src]
@@ -1350,6 +1352,7 @@
 ##a[href="賢者同盟"][target="_blank"]
 ##a[href] > img[alt][src^="/static/resources/lp.php"]
 ##a[href][rel="nofollow"] > img.nature
+##a[href][rel="noreferrer"] > img[src$=".gif.js"]
 ##a[href][style*="overflow:hidden;display:block;"] > img[src$=".gif"][style*="width:100%"]
 ##a[href][target="_blank"] > img[alt][src^="/static/resources/old/images/AD/"]
 ##a[href][target="_blank"] > img[id*="GGADIMG"]
@@ -4868,6 +4871,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||buondua.us/temp*_/temp*_.js$script
 ||buqajvxicma.com^
 ||bw5388.vip^
+||bw72227.cc^
 ||byjdg.xyz^$third-party
 ||byjykj.xyz^$third-party,image
 ||bytegoofy.com/goofy/*/push.js?
