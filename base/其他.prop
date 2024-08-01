@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: GVwFyJyBxvegzckBbeFE9A
+! Checksum: IAV5Lvko8xpbWL7tfcPZOQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240802000717
-! Last modified: 2024-08-02 00:07:18
-! Total Count: 5559
+! Version: 20240802003520
+! Last modified: 2024-08-02 00:35:20
+! Total Count: 5571
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -4438,6 +4438,10 @@ tube8.com,youporn.com##.watchTopAd
 tubepornclassic.com##.left > .videoplayer + .underplayer
 tubepornclassic.com##.video__wrapper > section:has(> div > div:empty)
 tucao.buzz,tucao.cfd##div.header_rmb
+twiiter.com,twitter.com,x.com##div[data-testid="UserCell"]:has(path[d$="10H8.996V8h7v7z"])
+twiiter.com,twitter.com,x.com##div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
+twiiter.com,twitter.com,x.com##div[data-testid="placementTracking"]:has(div[data-testid$="-impression-pixel"])
+twiiter.com,twitter.com,x.com##div[data-testid="trend"]:has(path[d$="10H8.996V8h7v7z"])
 twitch.tv##a[href*="store.asus.com/rog-promo/"]
 twitch.tv##a[href="https://vk.com/bust3rshop"]
 twitch.tv##a[href^="http://ggrus.bet/"]
@@ -4445,13 +4449,21 @@ twitch.tv##a[href^="https://ggbetpromo.com/"]
 twitch.tv##a[href^="https://ya.cc/"]
 twitch.tv##div[data-test-selector="channel_panel_test_selector"] > a[href^="http://bit.ly/"]
 twitch.tv##div[data-test-selector="channel_panel_test_selector"] > a[href^="https://bit.ly/"]
-twitter.com##.tweet:has(.promo)
-twitter.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
-twitter.com##div[data-testid="UserCell"]:has(path[d$="10H8.996V8h7v7z"])
-twitter.com##div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
-twitter.com##div[data-testid="placementTracking"]:has(div[data-testid$="-impression-pixel"])
-twitter.com##div[data-testid="trend"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com#@#[style="position: absolute; inset: 0px;"]
+twitter.com,x.com##.has-profile-promoted-tweet
+twitter.com,x.com##.is-promoted
+twitter.com,x.com##.presented
+twitter.com,x.com##.promoted-account
+twitter.com,x.com##.promoted-trend
+twitter.com,x.com##.promoted-tweet[data-disclosure-type="issue"]
+twitter.com,x.com##.promoted-tweet[data-disclosure-type="political"]
+twitter.com,x.com##.promoted-tweet[data-disclosure-type="promoted"]
+twitter.com,x.com##.stream-item-group-start[label="promoted"]
+twitter.com,x.com##.tweet:has(.promo)
+twitter.com,x.com##a[href*="src=promoted_trend_click"]
+twitter.com,x.com##a[href*="src=promoted_trend_click"] + div
+twitter.com,x.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
+twitter.com,x.com##div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]
 txxx.com##.gfpl-wrapper
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
