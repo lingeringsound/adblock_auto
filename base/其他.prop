@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JTsyPDlL4d92OcLR98H8eg
+! Checksum: +fkniPwYMa5BBqSyxQcbvg
 ! Title: 自用去广告Adblock规则
-! Version: 20240803005521
-! Last modified: 2024-08-03 00:55:21
-! Total Count: 5580
+! Version: 20240806222517
+! Last modified: 2024-08-06 22:25:17
+! Total Count: 5588
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -66,6 +66,7 @@
 ###ads-container-anchor
 ###ads-container-single
 ###ads-container-top
+###adsModal
 ###adsense-area-label
 ###adsense_center
 ###adsense_footer
@@ -239,6 +240,7 @@
 ##.adFrames
 ##.adIframe
 ##.adIframeCount
+##.adWrap
 ##.ad_belowfirstpost_frame
 ##.ad_frame
 ##.ad_frame_around
@@ -3827,6 +3829,8 @@ https://*.*/dl/*/*.gif$third-party,image
 https://*.*/dl/*/1.jpg$third-party,image
 https://*.*/hx/*/*.gif$third-party,image
 https://*.*/zh/*/*.gif$third-party,image
+ibbs.pro##.show
+ibbs.pro##div[class][style]:has(ins[data-zoneid])
 ifanr.com##.popup-download
 ifeng.com##[class*="temp-ad"]
 ifeng.com##[class="openapp"]
@@ -4066,6 +4070,9 @@ netflav.com##.ads_head_banner_container
 netflav.com##.ads_video_overlay_mobile
 news.heytapdownload.com##[class^="oppo-cec-new"]
 news.heytapdownload.com##div.news-wrapper
+news.yahoo.co.jp##.adWrap
+news.yahoo.co.jp##.newsFeed_list > li > div[id^="ad"]
+news.yahoo.co.jp##a[data-cl-params*="cl_link:bnr_"]
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
 noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
 noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
@@ -5291,6 +5298,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||pjy55d.com^
 ||plecnyz.icu^
 ||pnpy.mmtnat.com^$third-party,script
+||po18ys.com/astyle/wap.js
 ||poh.uoydhco.cn^
 ||pojuko.buzz^
 ||porn5f.com/nb/*.php?
