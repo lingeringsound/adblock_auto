@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: N2WidT0mmHUclHdD8AEagg
+! Checksum: 0iQJXyQ70aeb+zvOWB4UOQ
 ! Title: 自用去广告Adblock规则
-! Version: 20240808232040
-! Last modified: 2024-08-08 23:20:40
+! Version: 20240809002914
+! Last modified: 2024-08-09 00:29:14
 ! Total Count: 5592
 ###ADbox
 ###AdBox2
@@ -3608,7 +3608,6 @@ bing.com##.slide:has(.rtb_ad_caritem_mvtr)
 bing.com##.slide:has(> .tobitem > a > .rtb_ad_caritem_mvtr)
 bing.com##.tile_grp
 bing.com##.tob_calcontainer > div.slide:has(> div.tobitem > a[href*="/tracking?adUnit="])
-bing.com##[id$="adsMvCarousel"]
 bing.com##a[h$=",Ads"]
 bing.com##a[href*="/aclick?ld="]
 bing.com##li[class="b_algo"]:has(.b_attribution[data-partnertag]+p[class])
@@ -3616,6 +3615,7 @@ bing.com##li[class="sa_hd"][role="option"]
 bing.com##li[class^="sa_sg"][stype="PN"]
 bing.com##li[data-idx]:has(#mm-ebad)
 bing.com##main[aria-label="Search Results"] > #b_pole:has(#cu_polebanner #cu_poleMSPromoText)
+bing.com#@#[id$="adsMvCarousel"]
 bing.com#@#div#sacs_win
 blog.sina.cn###pl-ad-after-comments
 blog.sina.cn###pl-adtop-bar
