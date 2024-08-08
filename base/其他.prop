@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: EXE1zXKUnmC8BsyRB6gAFA
+! Checksum: N2WidT0mmHUclHdD8AEagg
 ! Title: 自用去广告Adblock规则
-! Version: 20240808110831
-! Last modified: 2024-08-08 11:08:31
-! Total Count: 5590
+! Version: 20240808232040
+! Last modified: 2024-08-08 23:20:40
+! Total Count: 5592
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1167,6 +1167,8 @@
 ##[id^="player-advertising"]
 ##[id^="post-card"] > .blog-background[style*="data:image/gif"]
 ##[id^="post-card"] > .blog-background[style*="data:image/png"]
+##[id^="post-card"] > .blog-background[style^="background-image:"][style*=".gif"]
+##[id^="post-card"] > .blog-background[style^="background-image:"][style*=".png"]
 ##[id^="section-ad-banner"]
 ##[id^="syad"]
 ##[id^="tonglanad_"]
