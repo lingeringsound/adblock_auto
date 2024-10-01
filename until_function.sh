@@ -419,18 +419,20 @@ busybox sed -i -E 's/\$popup$//g;s/\$popup,third-party$/\$third-party/g;s/\$thir
 function fixed_Rules_error(){
 	local file="${1}"
 	test ! -f "${file}" && return
-	sed -i -E -e "/\$app=/d" \
-	-e "s/=“/=\"/g" \
-	-e "s/^[\s[:cntrl:]]//g" \
-	-e "s/\*=“/\*=\"/g" \
-	-e "s/\^=“/\^=\"/g" \
-	-e "s/\$=“/\$=\"/g" \
-	-e "s/”\]/\"\]/g" \
-	-e "s/\]\]/\]/g" \
-	-e "s/\[\[/\[/g" \
-	-e "s/([^#])[\s[:cntrl:][:space:]\.\/\$]##/\1##/g" \
-	-e "s/([^#])##[\s[:cntrl:][:space:]\$\/]/\1##/g" \
-	-e "s/###[\s[:cntrl:][:space:]\.\$\#\/]/###/g" \
+	sed -i -E -e '/\$app=/d' \
+	-e 's/=“/=\"/g' \
+	-e 's/^[[:space:][:cntrl:]]//g' \
+	-e 's/\*=“/\*=\"/g' \
+	-e 's/\^=“/\^=\"/g' \
+	-e 's/\$=“/\$=\"/g' \
+	-e 's/”\]/\"\]/g' \
+	-e 's/\]\]/\]/g' \
+	-e 's/\[\[/\[/g' \
+	-e 's/([^#])[[:cntrl:][:space:]./$]##/\1##/g' \
+	-e 's/([^#])##[[:cntrl:][:space:]/$]/\1##/g' \
+	-e 's/###[[:cntrl:][:space:].#/$]/###/g' \
+	-e 's/##([^\#][[:digit:]])/##\\\1/g' \
+	-e 's/##\.\[/##\[/g' \
 	-e 's/[[:space:]]\|/\|/g' \
 	-e 's/\|[[:space:]]/\|/g' \
 	-e 's/([^:])\:(after|before)/\1\:\:\2/g' "${file}"
