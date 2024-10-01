@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: UZVxrLeQN+3s/6ltA8Ax+g
+! Checksum: +jmSWoISc7HZxz2gZrXwrQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241001193728
-! Last modified: 2024-10-01 19:37:28
-! Total Count: 6698
+! Version: 20241001204005
+! Last modified: 2024-10-01 20:40:05
+! Total Count: 6699
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2512,7 +2512,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .adwolf.
 .ae/ads/
 .ai/ads.
-.app/5y*/310.$other
+.app/5y*/31*.$other,~third-party
 .app/bokan/bokan.js$script
 .app/js/gg.js$script
 .at/ads/
@@ -2627,7 +2627,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*interstitial*.js$third-party,script
 .com/17mb/script/f*.js$~third-party,script
 .com/20*/*/*.txt$third-party
-.com/5y*/310.$other
+.com/5y*/31*.$other,~third-party
+.com/5y*/317.$~third-party
 .com/?channelCode=$~third-party
 .com/VVAvcnms/$third-party
 .com/ad-provider.js$third-party
@@ -2657,6 +2658,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/sh/*.js$third-party
 .com/sh/back/*$third-party
 .com/sh/to/*$third-party
+.com/tj?p=*zh-CN$~third-party
 .com/track/pv?id=
 .com/vh1/$third-party
 .com/vh2/$third-party
@@ -2772,8 +2774,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .live:8891/vh3/
 .live:8891/vj3/
 .net/20*/*/*.txt$third-party
-.net/5y*/310.$other
-.org/5y*/310.$other
+.net/5y*/31*.$other,~third-party
+.org/5y*/31*.$other,~third-party
 .org/bokan/bokan.js$script
 .org/js/gg.js$script
 .ph/ads/
@@ -6357,7 +6359,6 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||oronwg.xyz^$third-party
 ||oss-cn-beijing.aliyuncs.com/llv3/*.js$third-party
 ||ossmightyenar.net^
-||oumobook.com/*/*.*$other
 ||oumobook.com/click
 ||outlook.live.com/ows/*/OutlookOptions/AdsAggregate
 ||p.pdatago.com^
