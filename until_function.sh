@@ -66,11 +66,11 @@ function modtify_adblock_original_file() {
 local file="${1}"
 if test "${2}" = "" ;then
 	busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
-	local new=`cat "${file}" | iconv -t 'utf8' | grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' | busybox sed 's|^[[:space:]]@@|@@|g;s|“|"|g;s|”|"|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
+	local new=`cat "${file}" | iconv -t 'utf8' | grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' | busybox sed 's|^[[:space:]]@@|@@|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
 	echo "$new" > "${file}"
 else
 	busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
-	local new=`cat "${file}" | iconv -t 'utf8' | grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' | grep -Ev "${2}" | busybox sed 's|^[[:space:]]@@|@@|g;s|“|"|g;s|”|"|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
+	local new=`cat "${file}" | iconv -t 'utf8' | grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' | grep -Ev "${2}" | busybox sed 's|^[[:space:]]@@|@@|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
 	echo "$new" > "${file}"
 fi
 
@@ -82,7 +82,7 @@ local IFS=$'\n'
 local white_list_file="${2}"
 for o in `cat "${white_list_file}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' `
 do
-busybox sed -i "/${o}/d" "${file}"
+busybox sed -i -E "/${o}/d" "${file}"
 done
 }
 
@@ -347,7 +347,7 @@ for i in ${white_list}
 do
 	echo "剔除冲突规则 ${i}"
 	rule=`escape_special_chars ${i}`
-	busybox sed -Ei "/^${rule}$/d" "${file}"
+	busybox sed -i -E "/^${rule}$/d" "${file}"
 done
 }
 
@@ -411,10 +411,33 @@ echo "${lite_content}" > "${file}"
 function wipe_fiter_popup_domain(){
 local file="${1}"
 test ! -f "${file}" && return 
-busybox sed -Ei 's/\$popup$//g;s/\$popup,third-party$/\$third-party/g;s/\$third-party,popup$/\$third-party/g;s/\$popup,~third-party$/\$~third-party/g;s/\$~third-party,popup$/\$~third-party/g;s/\$document$//g;s/\$popup,document$//g;s/\$document,popup$//g;s/\$all$//g;s/\$popup,all$//g;s/\$all,popup$//g' "${file}"
-#busybox sed -Ei '/^\|\|[0-9]+\.[0-9]+\./d' "${file}"
+busybox sed -i -E 's/\$popup$//g;s/\$popup,third-party$/\$third-party/g;s/\$third-party,popup$/\$third-party/g;s/\$popup,~third-party$/\$~third-party/g;s/\$~third-party,popup$/\$~third-party/g;s/\$document$//g;s/\$popup,document$//g;s/\$document,popup$//g;s/\$all$//g;s/\$popup,all$//g;s/\$all,popup$//g' "${file}"
+#busybox sed -i -E '/^\|\|[0-9]+\.[0-9]+\./d' "${file}"
 }
 
+#修复低级错误
+function fixed_Rules_error(){
+	local file="${1}"
+	test ! -f "${file}" && return
+	sed -i -E -e "/\$app=/d" \
+	-e "s/=“/=\"/g" \
+	-e "s/^[\s[:cntrl:]]//g" \
+	-e "s/\*=“/\*=\"/g" \
+	-e "s/\^=“/\^=\"/g" \
+	-e "s/\$=“/\$=\"/g" \
+	-e "s/”\]/\"\]/g" \
+	-e "s/\]\]/\]/g" \
+	-e "s/\[\[/\[/g" \
+	-e "s/[\.\/\$]##/##/g" \
+	-e "s/##[\s[:cntrl:]]/##/g" \
+	-e "s/\####/##/g" \
+	-e 's/[[:space:]]\|/\|/g' \
+	-e 's/\|[[:space:]]/\|/g' \
+	-e 's/([^:])\:(after|before)/\1\:\:\2/g' "${file}"
+#sed -i -E -e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\])/\1="\2"\3/g' \
+#	-e 's/(\[[:alpha:]|[\*\^\$]=\")([^"]*)\]/\1\2\"\]/g' \
+#	-e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\"\])/\1="\2\3/g' "${file}"
+}
 
 #更新README信息
 function update_README_info(){
