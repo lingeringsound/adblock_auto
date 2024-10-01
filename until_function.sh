@@ -428,9 +428,9 @@ function fixed_Rules_error(){
 	-e "s/”\]/\"\]/g" \
 	-e "s/\]\]/\]/g" \
 	-e "s/\[\[/\[/g" \
-	-e "s/[\.\/\$]##/##/g" \
-	-e "s/##[\s[:cntrl:]]/##/g" \
-	-e "s/\####/##/g" \
+	-e "s/([^#])[\s[:cntrl:][:space:]\.\/\$]##/\1##/g" \
+	-e "s/([^#])##[\s[:cntrl:][:space:]\$\/]/\1##/g" \
+	-e "s/###[\s[:cntrl:][:space:]\.\$\#\/]/###/g" \
 	-e 's/[[:space:]]\|/\|/g' \
 	-e 's/\|[[:space:]]/\|/g' \
 	-e 's/([^:])\:(after|before)/\1\:\:\2/g' "${file}"
