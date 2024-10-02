@@ -431,14 +431,16 @@ function fixed_Rules_error(){
 	-e 's/([^#])[[:cntrl:][:space:]./$]##/\1##/g' \
 	-e 's/([^#])##[[:cntrl:][:space:]/$]/\1##/g' \
 	-e 's/###[[:cntrl:][:space:].#/$]/###/g' \
-	-e 's/##([^\#][[:digit:]])/##\\\1/g' \
+	-e 's/##([[:digit:]]+)/##\\\1/g' \
 	-e 's/##\.\[/##\[/g' \
+	-e 's/^##[[:cntrl:][:space:]/$]/##/g' \
 	-e 's/[[:space:]]\|/\|/g' \
 	-e 's/\|[[:space:]]/\|/g' \
 	-e 's/([^:])\:(after|before)/\1\:\:\2/g' "${file}"
 #sed -i -E -e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\])/\1="\2"\3/g' \
 #	-e 's/(\[[:alpha:]|[\*\^\$]=\")([^"]*)\]/\1\2\"\]/g' \
 #	-e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\"\])/\1="\2\3/g' "${file}"
+	gawk -i inplace '{ while (match($0, /^##[A-Z]+\[/)) { $0 = substr($0, 1, RSTART-1) tolower(substr($0, RSTART, RLENGTH)) substr($0, RSTART+RLENGTH) } print }' "${file}"
 }
 
 #更新README信息
