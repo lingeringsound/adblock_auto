@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: EEHJjYWLCBO8Wmod8Q4/mw
+! Checksum: 79ZIJqgoRvTpXaEOfXvACw
 ! Title: 自用去广告Adblock规则
-! Version: 20241002152848
-! Last modified: 2024-10-02 15:28:48
-! Total Count: 6720
+! Version: 20241004212119
+! Last modified: 2024-10-04 21:21:19
+! Total Count: 6732
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -101,6 +101,7 @@
 ###advertisings
 ###allpng
 ###app > script + div[class][data-version]
+###app.links-top
 ###billboard_desk
 ###billboard_mob
 ###bl_mobile_float
@@ -585,6 +586,7 @@
 ##.ads-title + .article-bottom-apps
 ##.ads.flex
 ##.ads_
+##.ads_slot
 ##.adsbyfalcon
 ##.adsbygoogle
 ##.adsbytrafficjunky
@@ -710,6 +712,7 @@
 ##.articleads
 ##.artplayer-plugin-ads
 ##.av-apps
+##.b3001 > .h100
 ##.bads
 ##.banner-cctv-style-top
 ##.bdads
@@ -767,6 +770,7 @@
 ##.common_banner[style="width: 100%;"] > a[target="_blank"][style="width: 375px; height: 75px; max-width: 100%; max-height: 75px; display: block; margin: 0px auto; overflow: hidden;"]
 ##.conch-ads-box
 ##.container > .slide-baidu
+##.container > a > img[border="0"][style="border: 1px inset #00FF00"]
 ##.container > iframe[src*="123.html"][width][height]
 ##.containerAdsense
 ##.containerad
@@ -1589,6 +1593,7 @@
 ##[id*="theAd_slider"]
 ##[id="bannerCtrl"].source_container.swiper-wrapper
 ##[id] > .wrap > .clearfix.mod
+##[id]:not([class):not([style]) > .b300
 ##[id^="ad-float"]
 ##[id^="ad-index"]
 ##[id^="ad-wrap-"]
@@ -1630,6 +1635,7 @@
 ##[src*="//sejieboxapi.yingyangdj.com"]
 ##[src*="/adBanner"]
 ##[src*="advertising"][src*="banner"]
+##[src*="uu11001.com/"]
 ##[src^="https://xchina.click/"]
 ##[style*="0vw"][style*="0vh"][style*="0px"]
 ##[style*="cos.ap-guangzhou.myqcloud.com/img/"][style*=".js"]
@@ -1684,7 +1690,6 @@
 ##a[href*=".icu/?token="][target="_blank"]
 ##a[href*=".lvdou.life/"][target="_blank"]
 ##a[href*=".magsrv.com/"]
-##a[href*=".top"] > img[src]
 ##a[href*=".top:"][target="_blank"][class] > span
 ##a[href*=".vip:"] > img[src]
 ##a[href*=".xyz"][target="_blank"][class] > span
@@ -2369,6 +2374,7 @@
 ##img[src*="https://p.qlogo.cn/qqmail_head"]
 ##img[src*="jiongnet.cn"]
 ##img[src*="kfpicimage.xyz"]
+##img[src*="mrtoss03.com"]
 ##img[src*="mt7y9.com/"]
 ##img[src*="sm2he.net/"]
 ##img[src*="sm2kz.net"]
@@ -2384,6 +2390,7 @@
 ##img[src="/apijs/image/960x100.gif"]
 ##img[src][style*="width:100%;height:auto;"][id^="hengfu"]
 ##img[src^="//"][src*="/safu/safu.php?"]
+##img[src^="/6666/"][alt]
 ##img[src^="/images/friend/"][loading="lazy"]
 ##img[src^="/uploads/aidou/adlist/"]
 ##img[src^="https://888bb111ww.com/"]
@@ -2955,6 +2962,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /Javascripts/SBA-
 /TongJi.js
 /TongJi.js?
+/Tpl/HtmlS/*.gif$image,~third-party
 /VVAvcnms/*.gif$image
 /\.(com|porn|xxx|tube)\/[a-z]{8,12}\/[a-z]{8,12}\.js$/$important,script,~third-party,domain=555.porn|desiporn.tube|hclips.com|hdzog.com|hotmovs.com|imzog.com|javdaddy.com|porn555.com|pornforrelax.com|porngo.tube|pornj.com|pornl.com|pornq.com|porntop.com|privatehomeclips.com|puporn.com|see.xxx|shemalez.com|sss.xxx|thegay.*|tubepornclassic.com|tuberel.com|txxx.com|upornia.*|voyeurhit.com|vxxx.com|txxxporn.tube|vjav.com|vjav.tube
 /\.[a-z]{3,5}\/[a-z]{8,12}\/[a-z]{8,12}\.js$/$script,domain=555.porn|hclips.com|hdzog.com|hotmovs.com|imzog.com|inporn.com|javdaddy.com|porn555.com|pornforrelax.com|porngo.tube|pornj.com|pornl.com|pornq.com|porntop.com|pornzog.com|privatehomeclips.com|puporn.com|see.xxx|senzuri.tube|shemalez.com|sss.xxx|thegay.*|tubepornclassic.com|tuberel.com|txxx.*|txxxporn.tube|upornia.*|vjav.*|voyeurhit.com|vxxx.com|bdsmx.tube|blackporn.tube|mrgay.tube|bigdick.tube|xmilf.com|voyeurhit.tube|hdzog.tube|teenorgy.video|hotmovs.tube|asiantv.fun|pornclassic.tube|pornhits.com
@@ -4544,7 +4552,7 @@ hentaiworld.tv##.swiper-slide:has(> a[target="_blank"])
 hkcards.com#@##ad-slot
 hoho.tv##[class^="hoho-ad"],[data-ad-client]
 hotntubes.com##li.adcls_small
-hsex.men##iframe[data-src^="//go."]
+hsex.buzz,hsex.com,hsex.icu,hsex.live,hsex.men,hsex.party,hsex.tv##iframe[data-src^="//go."]
 hsg001.com,hsg003.com,hsg004.com##div[style*="center"]:has(.lazy-load)
 hsg003.com##img[src^="data:"][data-original$=".gif"]
 ibbs.pro##div[class][style]:has(ins[data-zoneid])
@@ -5353,6 +5361,7 @@ wenda.so.com##a[href^="http://e.so.com/search/eclk?"]
 wendangwang.com##[onclick="CloseAD();"]
 wenwen.sogou.com##.recommend-list
 wenwen.sogou.com##.sgui-hint.sgui-item
+wnjlkqe.info##a[href] > img[style="width: 100%;"]
 wuzhuiso.com###appMiddleBanner
 wuzhuiso.com###mohe-hotnews_right
 wuzhuiso.com###side > div.download-browser:last-child
@@ -5384,6 +5393,7 @@ xbookcn.org##.outer-banner
 xbookcn.org##[class*="banner"]
 xbookcn.org##[class^="push-"]
 xbookcn.org,xchina.co,xchina.fun,xchina.tv##.push-top
+xchina.co,xchina.com,xchina.tv##div.recommendation_widget
 xchina.co,xchina.fun,xchina.tv##.exoclick_300x250
 xchina.co,xchina.fun,xchina.tv##[adid]
 xchina.co,xchina.fun,xchina.tv##[class*="fa-ban"]
@@ -6352,6 +6362,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||mouton.foramscoypou.com^
 ||mqsq.vip^
 ||mrkthei.cn^$third-party
+||mrtoss03.com^
 ||ms-ads-monitoring-events.presage.io
 ||mtu.hlkcowp.cn^
 ||mylengmen.com/assets/public/$script
@@ -6582,6 +6593,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||upliadlis.jxuti.com^
 ||us-west1.cdngcloud.com^
 ||usjbwvtqwv.com^$third-party
+||uu11001.com^
 ||uuoozz.com/L7QQ.js
 ||uztyvfk.cn^$third-party,image
 ||v*.qudou100.com^$script
