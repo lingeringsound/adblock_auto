@@ -110,6 +110,9 @@ baidu\.com.*#results[[:space:]]>[[:space:]]div\[class\]:not\(\.result\):not\(\.r
 ^https:\/\/\*\.\*\/(YC|TC|YL|YX|ZB|dh|dl|hx|zh)\/\*\/\*\.gif\$third-party,image$
 ! 修复via在googirl.jp规则失效
 ^googirl\.jp##\.newentry_in[[:space:]]>[[:space:]]li\.“cf”$
+! czzy.top误杀
+^##a\[href\*\=\"\.top\"\][[:space:]]>[[:space:]]img\[src\]$
+
 
 
 
