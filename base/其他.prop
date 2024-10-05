@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ZyREQJqEvDvmQCqCdGNWDQ
+! Checksum: 7oegsuYA3ewSUDprS6flMA
 ! Title: 自用去广告Adblock规则
-! Version: 20241004232123
-! Last modified: 2024-10-04 23:21:23
-! Total Count: 6732
+! Version: 20241005145300
+! Last modified: 2024-10-05 14:53:00
+! Total Count: 6742
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2572,6 +2572,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn/tj/tongji.js
 .cn/vj5/$third-party
 .cn/x/*-*-*.as$third-party
+.cn/xlc.php?data=$third-party
 .cn/zh/*/*.gif$third-party,image
 .cn:*/c.php?s=
 .cn:*/d/*?t=
@@ -2944,6 +2945,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:8010/d/*?*=$third-party
 .xyz:8891/vh3/
 .xyz:8891/vj3/
+.xyz:90*/d/*?t=$third-party
+.xyz:90*/js/*?x=$third-party
 /*.php?pid=*&n=$third-party
 /*/*/*.gif?bdSecret=*&DdTime=*$third-party
 /*/*/chart*.js$domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com
@@ -3929,6 +3932,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.read52.*/astyle/wap.js
 ://*.xn--*.*/1*/*_0*.js$third-party
 ://*.xn--*.cc/jav/*?x=$third-party
+://*.xn--*.cn/*_*.xml$third-party
 ://*.xn--*.net/y*.js$third-party,script
 ://*.yinghua*.*/bar$script,~third-party
 ://*38kanshu.net/public/*.js
@@ -4555,6 +4559,8 @@ hotntubes.com##li.adcls_small
 hsex.buzz,hsex.com,hsex.icu,hsex.live,hsex.men,hsex.party,hsex.tv##iframe[data-src^="//go."]
 hsg001.com,hsg003.com,hsg004.com##div[style*="center"]:has(.lazy-load)
 hsg003.com##img[src^="data:"][data-original$=".gif"]
+huangsexiaoshuo.net##div[id]:not([class]):has(div[id]:not([class]):not([styles]))
+huangsexiaoshuo.net##div[id]:not([class]):not([style]):has(img[src*=".xyz"])
 ibbs.pro##div[class][style]:has(ins[data-zoneid])
 ibbs.pro,iceporn.tv##.show
 iceporn.tv##div[class*="Hide"]:has(.adsbyexoclick)
@@ -5395,7 +5401,9 @@ xbookcn.org##[class^="push-"]
 xbookcn.org,xchina.co,xchina.fun,xchina.tv##.push-top
 xchina.co,xchina.com,xchina.tv##div.recommendation_widget
 xchina.co,xchina.fun,xchina.tv##.exoclick_300x250
+xchina.co,xchina.fun,xchina.tv##.exoclick_300x500
 xchina.co,xchina.fun,xchina.tv##[adid]
+xchina.co,xchina.fun,xchina.tv##[class*="exoclick_"]
 xchina.co,xchina.fun,xchina.tv##[class*="fa-ban"]
 xchina.co,xchina.fun,xchina.tv##[class^="photoMask"]
 xchina.co,xchina.fun,xchina.tv##[class^="playerMask"]
@@ -5971,6 +5979,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||clouds.kunlunus.com^
 ||cmx.autohome.com.cn^
 ||cn4.animehdl.net^
+||cnnywz.cn^$third-party
 ||cnt.xhamster.com^
 ||code.yykalopyy.com^$third-party
 ||comm.app.autohome.com.cn^
@@ -6702,6 +6711,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||yetianlian.com/*/*.js
 ||yetianlian.la/*/*.js
 ||yetianlian.net/*/*.js
+||yfoega.xyz^
 ||yhdm*.*/js/wap2-jm-ms.js$script
 ||yhdm*.com/js/wap2-jm-ms.js$script
 ||yijfdsu.cn^
