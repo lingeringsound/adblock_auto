@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 7oegsuYA3ewSUDprS6flMA
+! Checksum: sMxsTt0wkuYKFFBxcCo4bg
 ! Title: 自用去广告Adblock规则
-! Version: 20241005145300
-! Last modified: 2024-10-05 14:53:00
-! Total Count: 6742
+! Version: 20241007091113
+! Last modified: 2024-10-07 09:11:13
+! Total Count: 6758
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1391,6 +1391,16 @@
 ##.post-content > .txt-apps
 ##.post-content > [class^="ads"]
 ##.pre-play-adv
+##.promo-ad
+##.promo-mpu
+##.promoAd
+##.promoAds
+##.promoAdvertising
+##.promo_ad
+##.promo_ads
+##.promo_border
+##.promoad
+##.promoboxAd
 ##.push-bottom-container[key] > .push-bottom
 ##.push-slider[key^="clicked_cpt"]
 ##.push-top-container > .push-top[key]
@@ -1527,6 +1537,7 @@
 ##[class^="player-advertising"]
 ##[class^="player-rm"][class*="rm-two"][class*="rm-list"] > a
 ##[class^="remove-ads"]
+##[class^="sextb_"]
 ##[class^="stsxxgtv_"]
 ##[class^="th-ad"]
 ##[class^="van-tab"] > .main-content > .group-content > [class^="area-"]
@@ -1618,6 +1629,7 @@
 ##[id^="section-ad-banner"]
 ##[id^="syad"]
 ##[id^="tonglanad_"]
+##[id^="ts_ad_"]
 ##[id^="wp_ads_gpt_widget"]
 ##[id^="xqad"]
 ##[name^="google_ads_iframe"]
@@ -4186,6 +4198,7 @@ apkmirror.com#$#html > body { padding-top: 0 !important; }
 apkpure.com,apkpure.net,apkpure.*##.js-ad-slot
 applnn.cc##.html-box
 applnn.cc##div[class*="html"]:has([alt="广告位"])
+apps.opera.com,babynamegenie.com,comparitech.com,ecaytrade.com,joporn.online,meltoday.com,nbcbayarea.com,nwherald.com,overclock3d.net,perfectgirls.net,planetsourcecode.com,sciagaj.org,sydneytoday.com,themuslimvibe.com,totalxbox.com,varsity.com,w3techs.com,wgxa.tv,xnostars.com,yzzk.com##.promo
 ar15.com,armageddonexpo.com,audiforums.com,danceclassonline.in,f1gamesetup.com,ferrarichat.com,hanime.tv,hotrodhotline.com,jaguarforums.com,linuxmint.com,pypi.org,smashingmagazine.com,thebugle.co.za,waamradio.com,wbal.com,webtorrent.io##.sponsors
 asiangirl.porn##[style*="z-index: 2147"]
 asianpornq.com##.upp
@@ -4424,6 +4437,7 @@ douban.com##iframe[src*="//at4.doubanio.com"]
 dyjihe8.com##div[style*="text-indent: -10000px !important; line-height: 0px !important;"]
 e-kei.com,britaku.com##div[class="row"][style="margin:3px 0px;display:flex;flex-wrap: wrap;justify-content:space-evenly;width:100%;"],img[src^="data:image/png;base64"],table > tr[style="border-bottom:1px orange solid;"]
 ebates.ca,rakuten.ca,rakuten.com#@#.google-ads
+ebaumsworld.com#@#.promoAd
 efukt.com##[data-ad-type]
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
@@ -4690,6 +4704,8 @@ jinxiyue.com##a[onclick^="qinlintest"]
 jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,pornachi.com,porndude.wtf,orgazmax.com,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 jjdy8.cc##[id^="adWrapper"]
 jjdy8.cc##div[style]:not([class]):not([id]):has(a[href$=".php"])
+joporn.online##[data-zone-id][data-teaser-id]
+joporn.online##[id][class]:not([style]):has([data-zone-id][data-teaser-id])
 justdial.com###gptAds2
 justdial.com###gptAdsDiv
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
