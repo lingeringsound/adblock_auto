@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Obm0vlWrLrwI6C+1TRJAlA
+! Checksum: a1oiz8svuRYUlcelu9muZA
 ! Title: 自用去广告Adblock规则
-! Version: 20241008131628
-! Last modified: 2024-10-08 13:16:29
-! Total Count: 6767
+! Version: 20241008193805
+! Last modified: 2024-10-08 19:38:06
+! Total Count: 6771
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1040,6 +1040,7 @@
 ##.headThreeImg > .block > a > img
 ##.header-ad-desktop
 ##.header-ad-mobile
+##.header-background + style + .index-banner:not([id]):not([style]) > div[class^="swiper"]
 ##.hidden-lg > [class$="sticky2"]
 ##.horiAd
 ##.horiz_adspace
@@ -2009,6 +2010,8 @@
 ##div.sponsor-outer
 ##div.suiji.bottom,div.suiji.topad
 ##div.v_ad
+##div:not([id]):not([class]):not([style]) > .ad-area-close
+##div:not([id]):not([class]):not([style]) > .ad-area-close + div[style*="background-color:"]:not([class]):not([id])
 ##div:not([id]):not([class]):not([style]) > li[style="list-style: none;"]
 ##div[class$="_b"][style^="bottom:"][style$="display: block;"]
 ##div[class$="d"] > span[class^="closebox"]
@@ -2216,6 +2219,7 @@
 ##iframe[src*="/resource?zones="]
 ##iframe[src*="/s/s/su.php?t="][width="300"][height="100"]
 ##iframe[src*="/smartpop/"]
+##iframe[src*="adxserve.com"]
 ##iframe[src*="d000d.com/"]
 ##iframe[src*="deliver.ptgncdn.com"]
 ##iframe[src*="listeamed.net/"]
