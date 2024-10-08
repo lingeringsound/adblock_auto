@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: sMxsTt0wkuYKFFBxcCo4bg
+! Checksum: Obm0vlWrLrwI6C+1TRJAlA
 ! Title: 自用去广告Adblock规则
-! Version: 20241007091113
-! Last modified: 2024-10-07 09:11:13
-! Total Count: 6758
+! Version: 20241008131628
+! Last modified: 2024-10-08 13:16:29
+! Total Count: 6767
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1504,6 +1504,7 @@
 ##[class*="juicyads"]
 ##[class*="skip-ad"]
 ##[class*="slick-"][style="display: flex;flex-wrap: wrap;margin-right: 5px;margin-left: 5px;"]
+##[class*="tdads"]
 ##[class*="view-ads"]
 ##[class="adv-img"]
 ##[class="bottommob"][id="bottommob"]
@@ -1630,6 +1631,7 @@
 ##[id^="syad"]
 ##[id^="tonglanad_"]
 ##[id^="ts_ad_"]
+##[id^="vplayer-tdads"]
 ##[id^="wp_ads_gpt_widget"]
 ##[id^="xqad"]
 ##[name^="google_ads_iframe"]
@@ -4467,6 +4469,9 @@ gamcore.com##[class*="adn-"]
 game2.baifumeiba.com###gotoPlay
 games.yahoo.co.jp###floating_banner
 games.yahoo.co.jp###jack
+gogopg.net###vplayer-tdads-nonlinear
+gogopg.net##.vip-limited-overlay
+gogopg.net##[class$="sticky2"]
 gogumatv.com##[class^="mod-head"],[class^="popup_"][style],li[class^="mb"],iframe[src^="/ad"][src$=".html"]
 google.ac,google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.by,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.jo,google.com.kh,google.com.kw,google.com.lb,google.com,google.*###bottom-pane .section-carousel-item-container > div[jstcache]:has(> div[class*="__body-content"] > div[class*="__text-content"] > span > span[class*="__ad-badge"])
 google.ac,google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.by,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.jo,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.ru,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tn,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.ve,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hk,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.it.ao,google.je,google.jo,google.jp,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.ne.jp,google.ng,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tl,google.tm,google.tn,google.to,google.tt,google.us,google.vg,google.vu,google.ws##div.sh-sr__shop-result-group[data-hveid]:has(g-scrolling-carousel)
@@ -4548,6 +4553,9 @@ hao.360.com##.cube-container div.cube-mod:has(span.adMark)
 hao.360.com##.cube-mod:has(.dh-cpcad-container)
 hao.360.com##.cube-mod:has(> .cube-bd > .cube-card > .project-root > ._CUBE_A_D_CLK_)
 hdmoli.com##a[href][target="_blank"] > img[id*="_banner"]
+hdonlyfans.com###teaser3
+hdonlyfans.com##.widget-visible
+hdonlyfans.com##iframe[src="about:blank"]
 hentai.desi##.recommended > div:has(> iframe[src^="//a.realsrv.com/"])
 hentai.io##.script_manager_video_master
 hentai2read.com##div[data-type="leaderboard-top"]
@@ -5993,6 +6001,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||cloudfront.net^$domain=addic7ed.com|adshort.club|allmoviesforyou.net|anime-odcinki.pl|animeflv.net|animepahe.ru|avxhome.in|avxhome.se|baiscopelk.com|bluemediadownload.*|bluemediafile.*|bluemediafiles.*|bluemedialink.online|bluemediaurls.lol|ckk.ai|clickndownload.*|clicknupload.*|clicknupload.link|cloudyfiles.co|cpygames.com|dancingastronaut.com|drhtv.com.pl|feliratozz.hu|filescdn.com|gamesofpc.com|gounlimited.to|igg-games.co|igg-games.com|iir.ai|itdmusic.com|javgo.me|kanqite.com|katcr.co|katfile.com|keeplinks.eu|leporno.org|linkrex.net|lipstickalley.com|manganelo.tv|mastibaaz.com|megaup.net|milfnut.com|mixing.dj|mrpcgamer.co|multiup.org|newepisodes.co|newpct.com|newpct1.com|nhentai.net|nitroflare.com|oke.io|oxtorrent.sk|porn00.org|prefiles.com|psarips.com|rexdlbox.com|sadeemapk.com|sakurafile.com|sankakucomplex.com|send.cm|shink.in|soap2day.*|soap2day.ac|srt.am|streamtajm.com|tei.ai|thehouseofportable.com|tii.ai|tinyical.com|titantv.com|tmearn.com|torrentgalaxy.mx|torrentmac.net|unblocked.lol|uploadas.com|uplod.it|uplod.ws|uptostream.com|urlbluemedia.*|userscloud.com|vizer.tv|xmovies8.pl|xrivonet.info|y2mate.com|yesmovies.to|youtubemultidownloader.com|ziperto.com
 ||cloudfront.net^/?clzed=$third-party
 ||clouds.kunlunus.com^
+||clunkyentirelinked.com^
 ||cmx.autohome.com.cn^
 ||cn4.animehdl.net^
 ||cnnywz.cn^$third-party
