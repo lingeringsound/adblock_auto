@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: EgOD3zrIaPBLKITxPC2HCg
+! Checksum: 55C4ZPibGg3KhIUyg401Hw
 ! Title: 自用去广告Adblock规则
-! Version: 20241011191600
-! Last modified: 2024-10-11 19:16:00
-! Total Count: 6787
+! Version: 20241012025656
+! Last modified: 2024-10-12 02:56:57
+! Total Count: 6792
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -825,6 +825,8 @@
 ##.fixed_advert_banner
 ##.float-ad
 ##.float-app > a[href="#"][onclick]
+##.float_ad
+##.float_sf
 ##.floating_ads
 ##.foot-dp-fix
 ##.footads
@@ -4031,6 +4033,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://rou*/_next/static/chunks/pages/home-$~third-party
 ://s.*srv.com/*.php?idzone=$third-party
 ://shiold*.zhaosw.com$script
+://tj.*.icu/*.js?17$script,third-party
 ://tpic.*.cn/*.js$third-party
 ://tpic.*.cn/*.txt$third-party
 ://us-west1.*/*.js#spot=$third-party,script
@@ -4483,6 +4486,8 @@ gamcore.com##[class*="adn-"]
 game2.baifumeiba.com###gotoPlay
 games.yahoo.co.jp###floating_banner
 games.yahoo.co.jp###jack
+gimy.tv##div:not([class]):not([id]):has(img[alt][style*="100%"])
+github.com#@#.js-notice
 gogopg.net###vplayer-tdads-nonlinear
 gogopg.net##.vip-limited-overlay
 gogopg.net##[class$="sticky2"]
