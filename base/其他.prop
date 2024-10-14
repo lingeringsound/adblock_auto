@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 55C4ZPibGg3KhIUyg401Hw
+! Checksum: Lh0aeBSB0Svz7CBbzQOChQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241012025656
-! Last modified: 2024-10-12 02:56:57
-! Total Count: 6792
+! Version: 20241014155306
+! Last modified: 2024-10-14 15:53:07
+! Total Count: 6796
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -711,6 +711,7 @@
 ##.article > .static-container-4 > .media + .recommendation_widget
 ##.articleads
 ##.artplayer-plugin-ads
+##.assignment.do
 ##.av-apps
 ##.b3001 > .h100
 ##.bads
@@ -1663,6 +1664,7 @@
 ##[style="text-align: center; margin: 40px 0; color: blue; font-size: larger;"]
 ##[style^="display: inline-block;"][style*="margin:"] > a[target="_blank"][href][title]
 ##[style^="display:block;left:0;right:0;position:fixed;border-left:1px"]
+##a#ad-link
 ##a.downurl[target="_blank"][referrerpolicy="no-referrer"]
 ##a[alt="545新葡京"][target="_blank"]
 ##a[alt="91Pro"][target="_blank"]
@@ -2685,6 +2687,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/assets/public/chart.1.js$script,~third-party
 .com/bokan/bokan.js$script
 .com/candy*.js$third-party
+.com/css/click_*.js$script,~third-party
 .com/dh/*/*.gif$third-party,image
 .com/dl/*/*.gif$third-party,image
 .com/dl/*/1.jpg$third-party,image
@@ -5530,6 +5533,7 @@ xxam.org,18pussy.porn,tabooporn.tv,amateurporn.me,severeporn.com##.block-video >
 xxdm.in,yhdmw.com##.bottom_fixed
 xxxhentai.net##.gallery-list > div[itemprop="associatedMedia"] ~ div:not([class]):not([id]):not([itemprop]):has(> .tac > .admin-frame-wrap > div > iframe[width="300"][height="250"])
 xxxhentai.net##.gallery-list > div[itemprop='associatedMedia'] ~ div:not([class]):not([id]):not([itemprop]):has(> .tac > .admin-frame-wrap > div > iframe[width="300"][height="250"])
+xxxuxxx.com##div[class]:not([id]):has(>script[src*="/ad-provider.js"])
 xxxvideos.ink###hidme
 xxxvideos.ink##.curiosity
 ya.ru,yandex.kz,yandex.ru,yandex.com,yandex.fr,yandex.com.tr,yandex.ru,yandex.by,yandex.eu,yandex.net,yandex.uz,yandex.ua,yandex.*##.SearchBlock:has(> div.DirectStripe)
