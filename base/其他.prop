@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Lh0aeBSB0Svz7CBbzQOChQ
+! Checksum: d7eqAkJrCZs7Xpsd2hWWEQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241014155306
-! Last modified: 2024-10-14 15:53:07
-! Total Count: 6796
+! Version: 20241017231911
+! Last modified: 2024-10-17 23:19:11
+! Total Count: 6799
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1993,6 +1993,7 @@
 ##div > a[href^="https://b"][href$=".vip"][target="_blank"] > img[src]
 ##div > a[target="_blank"] > img[src$=".gif"][style*="width:100%"]
 ##div > a[target="_blank"] > img[style="width:100%;height:100%"][src$=".gif"]
+##div > div:not([style]):not([id]) > div[style="position: relative;"]:not([id])
 ##div > div[class="swiper-c swiper-initialized swiper-horizontal swiper-autoheight swiper-ios swiper-backface-hidden"]
 ##div > iframe[src*="&width=300&height=100&"]
 ##div > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
@@ -4027,6 +4028,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://mobixc.*.top$third-party
 ://mpic.*.cn/*.js$third-party
 ://mpic.*.cn/*.txt$third-party
+://nr.*.icu/*.js?17$script,third-party
 ://onvideo.ssrcdn.com/bs2/onVideo/skyfall/media/*.mp3$third-party
 ://p.qlogo.cn/qqmail_head/*
 ://pic.*.*/*0*.txt$third-party
@@ -4381,6 +4383,7 @@ bqg33.com##a[href][target="_blank"],font[color="red"]
 btnull.com,btnull.org,btnull.to,btnull.si,btnull.in,btnull.nu,btnull.fun##[href$=".apk"]
 btnull.com,btnull.org,btnull.to,btnull.si,btnull.in,btnull.nu,btnull.fun##[style*="position: fixed; bottom:"][style*="z-index: 99999;"]
 btsj6.com##em > strong
+bunkr.si##center:has(>script[src*="/lv/esnk/"][src$="/code.js"])
 buondua.com,buondua.us##img[loading="lazy"][src^="//buondua.com/"]
 buondua.com,buondua.us##video[autoplay="true"][loop="true"][preload="auto"]
 buondua.com,buondua.us,kiutaku.com##.search-form + br + div[class]
