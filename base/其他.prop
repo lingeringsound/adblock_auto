@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: d7eqAkJrCZs7Xpsd2hWWEQ
+! Checksum: 7HUKZSyXF1KHxNYdOCPfxw
 ! Title: 自用去广告Adblock规则
-! Version: 20241017231911
-! Last modified: 2024-10-17 23:19:11
-! Total Count: 6799
+! Version: 20241020213842
+! Last modified: 2024-10-20 21:38:42
+! Total Count: 6802
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -2956,6 +2956,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:*/api/v4/g?kyurl=$third-party
 .xyz:*/cc/*?is_not=$third-party
 .xyz:*/d/*?t=
+.xyz:*/js/*?x=$third-party
 .xyz:*/mnrt/*.json
 .xyz:30009/d/*?t=
 .xyz:4022//SSDA/*-*-*/ttZ/$third-party
@@ -4901,6 +4902,7 @@ nonfungerbils.com,pulsembed.eu,station-drivers.com#@#iframe[width="600"][height=
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
 noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
 noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
+nuvid.com#@#script:not([src]) + style + div[id]:not([class]):not([style])
 nxnba.com##.bootom-fixed
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.ads_w + div[id][style]
@@ -6409,6 +6411,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||mcpuwpsh.com^
 ||mcpuwpush.com^
 ||mdipsumx.top^
+||mdqikg.xyz^
 ||merwds.qwuidbn.com^$third-party
 ||miaozhen.com^$third-party
 ||missav.com/pop?url=
