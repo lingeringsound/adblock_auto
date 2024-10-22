@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: eDVsDyUBQ4F3YIPLto62XQ
+! Checksum: 7qXthTlDReOyGcEkJES6Tw
 ! Title: 自用去广告Adblock规则
-! Version: 20241022175340
-! Last modified: 2024-10-22 17:53:40
-! Total Count: 6806
+! Version: 20241022222400
+! Last modified: 2024-10-22 22:24:00
+! Total Count: 6810
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -680,6 +680,8 @@
 ##.adsenseframe
 ##.adsenseleaderboard
 ##.adsensemobile
+##.adshowbig
+##.adshowcase
 ##.adslot_popup
 ##.adspop
 ##.adss-mob
@@ -4309,7 +4311,8 @@ baike.baidu.com##[onclick^="page.Mixedor.mixedOpen(this,"]
 baike.so.com##[id^="business-flow"]
 baobao.baidu.com##section.qb-commend-wrap
 baomidou.com##[opts*="CheckAdBlocked"]
-baozimh.one##[class^="banner"]:has(.adCode)
+baozimh.one,baozimh.org##.adshow
+baozimh.one,baozimh.org##[class^="banner"]:has(.adCode)
 baseball.yahoo.co.jp##.sn-banner > a[href*="adj.st/open/"]
 bdimg.com##div[data-track*="fengchao"]
 bdsmlr.com#@#.ads-container
@@ -6371,6 +6374,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||kunyun*.com/xiwang/fumeiti.js
 ||kxcdn.com^$xmlhttprequest
 ||labadena.com^$third-party
+||lalabaos1022.top^
 ||lanmeifeel.xyz^
 ||lby2kd27c.com^$third-party
 ||ldipsuml.top^
