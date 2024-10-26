@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: UzZtD329wp3Wx01hGB4GOQ
+! Checksum: VGxcchjRzf767Kh7dcSFig
 ! Title: 自用去广告Adblock规则
-! Version: 20241024213825
-! Last modified: 2024-10-24 21:38:25
-! Total Count: 6811
+! Version: 20241026190000
+! Last modified: 2024-10-26 19:00:00
+! Total Count: 6816
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1418,6 +1418,7 @@
 ##.row > [class$="_b"][data-group][data-show="ok"]
 ##.row > [class^="col"] > [class$="_b"][data-group][data-show="ok"]
 ##.section > div > div[class][data-version]
+##.sgui-ad[id][data-position]
 ##.show-app2 + .apple
 ##.sideadvert
 ##.sideadverts
@@ -2020,6 +2021,7 @@
 ##div.sponsor-outer
 ##div.suiji.bottom,div.suiji.topad
 ##div.v_ad
+##div:not([class]):not([id]) > iframe[width="407"][scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][height][frameborder="0"]
 ##div:not([id]):not([class]):not([style]) > .ad-area-close
 ##div:not([id]):not([class]):not([style]) > .ad-area-close + div[style*="background-color:"]:not([class]):not([id])
 ##div:not([id]):not([class]):not([style]) > li[style="list-style: none;"]
@@ -5078,6 +5080,7 @@ renren.pro##[class^="adj"],a[target="_blank"] > img[src$=".gif"]
 rouwenge.vip,jpq.me#@#[class$="ad-container"]
 rshzm.com##[style*="width"][style*=":"][style*="100%"]
 rule34video.com##[class*="spot"]:has(script[src*="/lv/esnk"])
+ruyigu.com##[id^="sgh-ad"]
 sbdm.net##div#vodshare
 seajav.com##.under_player,img[border="0"][width="300"][height="80"],[class*="lg:hidden"],[class][style*="131px"]
 search.bilibili.com##.video-list > div.col_3:has(> div.bili-video-card > div.bili-video-card__wrap > a[href*="&csource="])
@@ -5518,6 +5521,7 @@ xiakexsw.com##script + div[style]
 xiashuyun.com##[id^="downapp"]
 xiashuyun.com##div#navdown
 xiuren5.com,xgmn02.com##a[href] > img[src$=".gif"]
+xiyuwx.com##div:not([id]):not([class]):not([style]):has(a[href="javascript:void(0)"])
 xn--*.*/ins/js/*16$third-party,script
 xnxx-sexfilme.com,hd-easyporn.com,pornblade.com,pornfelix.com##.vjs-overlayed
 xnxx.com###content-ad-side
@@ -6591,6 +6595,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||smartredirect.de^$third-party
 ||smkezc.com^
 ||so.com/adx/
+||sodata.k12kc.com^
 ||sofire.bdstatic.com^
 ||solengmen.com/assets/publish/$script
 ||sp5vip.com/h.js
