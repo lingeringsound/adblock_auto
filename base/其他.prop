@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 3SEwbVg5GqMc9fPGARjyyQ
+! Checksum: CQN6tl8GWekSFLXAMcUMTg
 ! Title: 自用去广告Adblock规则
-! Version: 20241029010459
-! Last modified: 2024-10-29 01:04:59
-! Total Count: 6833
+! Version: 20241030192749
+! Last modified: 2024-10-30 19:27:49
+! Total Count: 6836
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1997,7 +1997,6 @@
 ##div > a[href^="https://b"][href$=".vip"][target="_blank"] > img[src]
 ##div > a[target="_blank"] > img[src$=".gif"][style*="width:100%"]
 ##div > a[target="_blank"] > img[style="width:100%;height:100%"][src$=".gif"]
-##div > div:not([style]):not([id]) > div[style="position: relative;"]:not([id])
 ##div > div[class="swiper-c swiper-initialized swiper-horizontal swiper-autoheight swiper-ios swiper-backface-hidden"]
 ##div > iframe[src*="&width=300&height=100&"]
 ##div > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
@@ -4789,6 +4788,7 @@ m.bilibili.com##.m-video2-awaken-btn
 m.bilibili.com##.mplayer-fullscreen-call-app
 m.bilibili.com##.mplayer-widescreen-callapp
 m.bilibili.com##[class*="-openapp"]
+m.bilibili.com#@#div > div:not([style]):not([id]) > div[style="position: relative;"]:not([id])
 m.douban.com##.app-link
 m.douban.com##.download-app
 m.douban.com##.green.btn
@@ -5342,6 +5342,7 @@ ting13.cc###roll_app
 ting13.cc##a[href="/app/index.html"]
 ting2.com##p:has([href*="/xiazai/"])
 tinghaobook.com,haitangkan.com,tinghaobook.com,nosadfun.com,ebook8.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,mobidushu.com,fuwen123.com,lengmen.org,newhaitang.com,tinghaodebook.com,haitangdushu.com,myshenye.com,myfeiyanqing.com,tinghaodebook.com,zongcai666.com,iyungong.com,lookmht.com,peakread.com,lengmenread.com##[style*="0vw"][style*="0vh"][style*="0px"],[style*="z-index"][style*="background:"]
+tmioe.com##.zpgimg
 tnaflix.com##.bannerBlock
 tnaflix.com##.rbsd
 topfapgirlspics.com##.custom:has(iframe[src^="/css/assets.html?r=0"])
@@ -5749,6 +5750,7 @@ zjsw.org##[onclick]
 zjsw.org##[style*="!important"]
 zjsw.org##div[id]:has(span > img[src*=".xyz"])
 zjtu.tv##a[target="_blank"] > img[class="br"][src][width="100%"]
+zn508.cc##.GzList
 zol.com.cn###bottom-fixed-wrapper
 zol.com.cn###top-fixed-wrapper
 zol.com.cn##.banner-ad
@@ -6000,6 +6002,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||bobobo6688.top^
 ||bookhaitang.com/assets/publish/$script
 ||boost-next.co.jp^
+||boot.bytecache.cn/static/*.js?t=$script,third-party
 ||bsplh.cn^
 ||btds.zog.link^$third-party
 ||bto.tooopen.com^$third-party
