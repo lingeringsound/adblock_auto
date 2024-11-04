@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: E/rS0Hs/6zV0vaggCH1fmQ
+! Checksum: Liqi2BowUNkUs28mUjVHcg
 ! Title: 自用去广告Adblock规则
-! Version: 20241031115154
-! Last modified: 2024-10-31 11:51:54
-! Total Count: 6839
+! Version: 20241104191753
+! Last modified: 2024-11-04 19:17:53
+! Total Count: 6845
 ###ADbox
 ###AdBox2
 ###ChapterView > .slide-baidu
@@ -1766,6 +1766,7 @@
 ##a[href*="//js.kkytwmxc.com/download"]
 ##a[href*="//live.jzmsg.cn"][href$=".apk"]
 ##a[href*="//sm5xse.net"]
+##a[href*="//t.zvurs.com/utd.html"]
 ##a[href*="//t16-fghgdf.com"][target="_blank"]
 ##a[href*="//tongji.trafficmanager.net"]
 ##a[href*="//tsyndicate.com"][href*="/click"]
@@ -2442,6 +2443,7 @@
 ##img[src^="https://static.missav"][data-src^="https://static.missav"][alt][class="lozad"][data-loaded="true"]
 ##img[src^="https://u10"][src*=".com"][src$=".gif"]
 ##img[src^="https://vip2.loli.io"]
+##img[src^="https://www.03169.com/files/ad/"]
 ##img[src^="https://www.static04.top/data/images/"][src$=".gif"]
 ##img[style][alt][src*="/data/ds3/"][src$=".php"]
 ##img[style][alt][src*="/data/game/"][src$=".gif"]
@@ -2576,6 +2578,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cc/api/getPos?jspath=/$~third-party
 .cc/bokan/bokan.js$script
 .cc/o.js$third-party,script
+.click:*/ads*.html$~third-party
 .club/r/*$xmlhttprequest
 .cn/*-*-*.xc$script,third-party
 .cn/*.txt$third-party,domain=1anime.me
@@ -3482,6 +3485,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/easyAD2.js
 /js/gadks.js?$~third-party,script
 /js/gano.js?$~third-party,script
+/js/gcs.js?$~third-party,script
+/js/gcss.js?$~third-party,script
 /js/gg0.js
 /js/gg123/*
 /js/ggtop.js
@@ -3974,6 +3979,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.xn--*.net/y*.js$third-party,script
 ://*.yinghua*.*/bar$script,~third-party
 ://*38kanshu.net/public/*.js
+://*69hsw.*/static/69shuba/69.js$script
 ://*biquge100.*/m.js
 ://*dianjiangxin.*/js/mc.js?
 ://*dilidili*.*/js/*.js?ver=
