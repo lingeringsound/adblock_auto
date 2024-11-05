@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 1nDIeBpaRKubkyxTrXNzfQ
+! Checksum: hy12Q4Jk3xIpAsKmxRcK+g
 ! Title: 自用去广告Adblock规则
-! Version: 20241105191856
-! Last modified: 2024-11-05 19:18:56
-! Total Count: 6872
+! Version: 20241105212117
+! Last modified: 2024-11-05 21:21:17
+! Total Count: 6876
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4095,7 +4095,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 =AdCode_sjdb$third-party
 =AdCode_sjtb&$third-party
 @@.cn/j/*$script,third-party,domain=weather.com.cn
-@@.com/*M*M*M*M*M*M*==$third-party,domain=youtube.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
 @@.html?ad_$domain=jd.com|zol.com.cn
@@ -4873,8 +4872,14 @@ m.toutiao.com##.m-bottom
 m.toutiao.com##[aria-label="打开APP"]
 m.toutiao.com,profile.zjurl.cn##.m-index-tag
 m.wandoujia.com##.wdj-download
+m.wandoujia.com##[class*="relative"]
+m.wandoujia.com##[class="infos download-rank"]
+m.wandoujia.com##[class="infos similar-app"]
+m.wandoujia.com##[class^="brand-"]
+m.wandoujia.com##[class^="midbanner"]
 m.wandoujia.com##a[data-bd-track="detail-save_download_main"]
 m.wandoujia.com##a[href*="/binding?"]
+m.wandoujia.com##li[class="new-app"]
 m.wannianli8.com,wannianli8.com##.cesuankuang
 m.wannianli8.com,wannianli8.com##.csbox
 m.ximalaya.com##a[class*="schema-link"][to^="iting://open"]
@@ -5454,7 +5459,6 @@ vxxx.com##.video-page-content + div[class]
 vxxx.com##.video-page-content-left + div[class]:last-child
 vxxx.com##.videoplayer + div > div[class]
 vxxx.com##.wrapper-margin + div[class]:last-child
-wandoujia.com##[class="infos download-rank"],[class^="brand-"],[class^="midbanner"],li[class="new-app"],[class*="relative"],[class="infos similar-app"]
 wap.gamersky.com###gsTgWapConBdshareTop
 wap.gamersky.com##.ymw-footer
 wap.gamersky.com##.ymw-rel-list
