@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dWttO42fRjMGyDnzlO2TWg
+! Checksum: uUbzHuqi3QWLdGu6TlOVOQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241107154030
-! Last modified: 2024-11-07 15:40:30
-! Total Count: 6878
+! Version: 20241108160002
+! Last modified: 2024-11-08 16:00:02
+! Total Count: 6883
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1457,6 +1457,7 @@
 ##.thumb-ad
 ##.thumb-nat-ad
 ##.tonglanad
+##.toolbar-gg
 ##.top-a2db[data-group]
 ##.top-ads-container
 ##.top-ads-content
@@ -2827,11 +2828,14 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/*/20*/*/16*.gif$image,third-party
 .icu/*/20*/*/17*.gif$image,third-party
 .icu/*?ssid=$third-party
+.icu/*cgp*?*17$third-party
 .icu/*zpp5*?$third-party
 .icu/*zpp50*?$third-party
 .icu/*zpp51*?$third-party
 .icu/?token=$third-party
+.icu/TA*.js?17$third-party,script
 .icu/biyys*.js$third-party,script
+.icu/by*.js?17$third-party,script
 .icu/js/gg.js$script
 .icu/pssbk?$third-party
 .icu/reacre*?$third-party
@@ -2890,6 +2894,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .shop:*/o.js$third-party,script
 .site:*/*/*.js
 .site:28883/*/*$third-party
+.top/*.*.1721.json?17$third-party
 .top/*_*_vw*sbjs?$third-party
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
