@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: uUbzHuqi3QWLdGu6TlOVOQ
+! Checksum: dZfN/gG2OwICt2OT3axQ0g
 ! Title: 自用去广告Adblock规则
-! Version: 20241108160002
-! Last modified: 2024-11-08 16:00:02
-! Total Count: 6883
+! Version: 20241109093426
+! Last modified: 2024-11-09 09:34:26
+! Total Count: 6921
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4363,13 +4363,35 @@ beauty.yahoo.co.jp##.Banner
 bi-girl.net##[class^="adWrapper"]
 bi-girl.net##[class^="ad_sp_top"]
 bi-girl.net##div[id]:has(img[alt*="Ads"])
+bilibili.com###b_app_link
+bilibili.com###fixed_app_download
+bilibili.com###slide_ad + .ad-report
+bilibili.com##.activity-slider[style="width: 1220px;"]
+bilibili.com##.ad-report
+bilibili.com##.adblock-tips
+bilibili.com##.banner-card
+bilibili.com##.bili-dyn-ads
 bilibili.com##.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__wrap
 bilibili.com##.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__wrap
+bilibili.com##.desktop-download-tip
+bilibili.com##.download-entry
+bilibili.com##.eva-banner
 bilibili.com##.eva-extension-body > .bili-video-card:has(.bili-video-card__info--ad)
+bilibili.com##.extension-tips
 bilibili.com##.float-btn
+bilibili.com##.floor-single-card:has(.floor-skeleton):not(:has(> div.bili-video-card__skeleton))
+bilibili.com##.is-rcmd > div:only-child
+bilibili.com##.login-tip
 bilibili.com##.read-recommend-info
 bilibili.com##.video-card-common:has(>.card-pic>a[href*="cm.bilibili.com"][data-target-url])
+bilibili.com##.video-page-game-card
+bilibili.com##.video-page-game-card-small
 bilibili.com##.video-page-special-card-small:has(>.card-box>.info>a[href^="http"]:not([href*=".bilibili.com/"]))
+bilibili.com##a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bili"])
+bilibili.com##a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bili"]) + .bili-video-card__info
+bilibili.com##div.ad-floor-cover
+bilibili.com##div.adcar-inner
+bilibili.com##div.vip-login-tip
 bing.com###BottomAppPro
 bing.com###b_results > li[style*="padding-bottom: 8px;"][style*="235, 235, 235"]
 bing.com###banner
@@ -4814,6 +4836,22 @@ leakedzone.com##.item:has(img[alt="Premium Porn"])
 leakedzone.com##div:has(script[src$="ad-provider.js"])
 letsplayindex.com##.ad_side_box
 letsplayindex.com##.ad_wide_vertical
+live.bilibili.com##.bilibili-live-player-video-gift
+live.bilibili.com##.chat-item.gift-item
+live.bilibili.com##.chat-item.welcome-guard
+live.bilibili.com##.chat-item.welcome-msg
+live.bilibili.com##.container-wrapper[style="height:180px;min-width:1280px"]
+live.bilibili.com##.container-wrapper[style="height:446px;min-width:1280px"]
+live.bilibili.com##.fans-medal-item-ctnr
+live.bilibili.com##.guard-icon
+live.bilibili.com##.live-haruna-ctnr
+live.bilibili.com##.m-guard-ent
+live.bilibili.com##.outlink
+live.bilibili.com##.penury-gift-msg
+live.bilibili.com##.system-msg.news
+live.bilibili.com##.title-label
+live.bilibili.com##.user-level-icon
+live.bilibili.com##.vip-icon
 lovedan.net##[style^="display: block; z-index: 2147483646;"],[style$="!important;"],[style*="0vw;"],[class^="tsgg"],[id*="ggsj"]
 luoqiuzw.com##.show-app2
 m.123dua.com###upload-container
