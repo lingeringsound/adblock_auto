@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ORo9wMnzVh8XR9cXdHyqdQ
+! Checksum: jYvFP4+121saISVNproG3A
 ! Title: 自用去广告Adblock规则
-! Version: 20241109230917
-! Last modified: 2024-11-09 23:09:17
-! Total Count: 6923
+! Version: 20241111010010
+! Last modified: 2024-11-11 01:00:10
+! Total Count: 6927
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3253,6 +3253,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /ads?zone_id=
 /ads_iframe
 /ads_iframe.
+/adsadclient
 /adserver.$popup
 /adstream_sx.ads/*$popup
 /advanced-ads-$domain=~wordpress.org
@@ -3364,6 +3365,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /api/ad/*
 /api/adplogger/*
 /api/blockdata$domain=sohu.com
+/api/models/vast?
 /api/spots/*$domain=yomovies.*|speedostream.com|watchomovies.com|gofilms4u.pro|pornleech.io|hentaihand.com|filmlinks4u.pro|uniqueten.net|ultraten.net|topcryptoz.net|allcryptoz.net|analdin.com|supjav.com|crazyporn.xxx|hog.tv|porntry.com|love4porn.com|freeadultcomix.com|hog.mobi|sextb.net|pornpapa.com
 /api/spots/*?*=$third-party
 /apijs/lunbo/lunboding.js?v=
@@ -3525,6 +3527,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/new-kk-27k.js?$~third-party,script
 /js/pfadll*.js
 /js/profit.js$~third-party
+/js/re-ads-
 /js/sp_ad.js$script
 /js/tongji.js?v=
 /js/wap2-jm-ms.js?ver=$~third-party,script
@@ -3665,6 +3668,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /responsive_dfp_
 /rs/js/temp_1.js$script,third-party
 /rs/shto/*?n=*&p=false&t=*$third-party
+/s/s/sum.php
 /sad3.js?$third-party
 /sbar.json?key=
 /scripts/AdService_
@@ -5472,7 +5476,7 @@ twitter.com,x.com##a[href*="src=promoted_trend_click"] + div
 twitter.com,x.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com,x.com##div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]
 twitter.com,x.com##div[data-testid="trend"]:has(> div[class]:only-child svg + span)
-txtduo.org,txtduo.com,txtduo.app,txtduo.cn,txtduo.live##div[style^="margin:"]:has(textarea)
+txtduo.org,txtduo.com,txtduo.app,txtduo.cn,txtduo.live##div[style*="margin:"]
 txxx.com##.gfpl-wrapper
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
