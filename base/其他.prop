@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: +Hv5rcZJ5TAK7oRhEItOnw
+! Checksum: fSNK5QxG0Y9p1ix6zc1P3w
 ! Title: 自用去广告Adblock规则
-! Version: 20241113071429
-! Last modified: 2024-11-13 07:14:30
-! Total Count: 6933
+! Version: 20241113100414
+! Last modified: 2024-11-13 10:04:14
+! Total Count: 6939
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2784,6 +2784,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:28816/*js?v=17$third-party
 .com:80*/cc/*?is_not=$third-party
 .com:80*/d/*?c=*&$third-party,script
+.com:80*/sc/*?*=$third-party
 .com:8001/cc/*?*=$third-party
 .com:8001/d/*?*=$third-party
 .com:8001/sc/*?*=$third-party
@@ -2996,6 +2997,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:*/mnrt/*.json
 .xyz:30009/d/*?t=
 .xyz:4022//SSDA/*-*-*/ttZ/$third-party
+.xyz:80*/sc/*?*=$third-party
 .xyz:80*/sc/*?is_not=$third-party
 .xyz:8001/d/*?*=$third-party
 .xyz:8002/d/*?*=$third-party
@@ -3693,6 +3695,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /smartpop/*$popup
 /splash.php?cat=&idzone=*
 /static/*ds/ttss.js$script,~third-party
+/static/js/fad.js$domain=ciligui.org|ciligui.cc|ciligui.com|ciligui.live|ciligui.buzz|ciligui.cn|ciligui.xyz
+/static/js/fad.js$script
+/static/js/top.js$domain=ciligui.org|ciligui.cc|ciligui.com|ciligui.live|ciligui.buzz|ciligui.cn|ciligui.xyz
 /static/resources/*/*.gif$domain=18-comic.work|18-comicblade.art|18-comicblade.club|18-comicblade.org|18-comicblade.xyz|18-comicfreedom.org|18-comicfreedom.xyz|18-comicstellar.art|18-comicstellar.xyz|18comic-erdtree.xyz|18comic.org|18comic.vip|jm-comic1.cc|jm-comic2.cc|jmcomic.me|jmcomic1.city|jmcomic1.group|jmcomic1.me|jmcomic1.win|jmcomic2.me
 /static/resources/lp.php$domain=18-comic.work|18-comicblade.art|18-comicblade.club|18-comicblade.org|18-comicblade.xyz|18-comicfreedom.org|18-comicfreedom.xyz|18-comicstellar.art|18-comicstellar.xyz|18comic-erdtree.xyz|18comic.org|18comic.vip|jm-comic1.cc|jm-comic2.cc|jmcomic.me|jmcomic1.city|jmcomic1.group|jmcomic1.me|jmcomic1.win|jmcomic2.me
 /t_j/tongji.js
@@ -4086,6 +4091,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://p.qlogo.cn/qqmail_head/*
 ://pic.*.*/*0*.txt$third-party
 ://pic.*.cn/*/*.js$third-party,script
+://pic.*.com/*.txt$third-party
 ://ra*.xyz/z/*/code.js$third-party,script
 ://rou*.*/js/exo.js$script,~third-party
 ://rou*/_next/static/chunks/pages/home-$~third-party
