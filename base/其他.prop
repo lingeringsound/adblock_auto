@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: HIsX6Q427Th/zBWheD0W2g
+! Checksum: WT6eKaAwMe8ZB44cX6koOw
 ! Title: 自用去广告Adblock规则
-! Version: 20241125075643
-! Last modified: 2024-11-25 07:56:44
-! Total Count: 7053
+! Version: 20241126005937
+! Last modified: 2024-11-26 00:59:37
+! Total Count: 7058
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2837,6 +2837,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/*/20*/*/16*.gif$image,third-party
 .icu/*/20*/*/17*.gif$image,third-party
 .icu/*?ssid=$third-party
+.icu/*bno*?*17$third-party
 .icu/*cgp*?*17$third-party
 .icu/*zpp5*?$third-party
 .icu/*zpp50*?$third-party
@@ -2910,6 +2911,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
 .top/j/*$script,third-party
+.top/js.php?*=*=*$third-party
 .top/k/*$script,third-party
 .top/sign?v=*.$third-party
 .top/ts_as.html?$third-party
@@ -6457,6 +6459,9 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||highperformancedisplayformat.com^
 ||highwaycpmrevenue.com^$third-party
 ||histats.com^$third-party
+||hltfs.com/111*.js
+||hltfs.com/222*.js
+||hltfs.com^$script,third-party
 ||hnert.okmwfq.xyz^
 ||hnr.dodhvug.cn^
 ||hnrte.ghkmoert.xyz^
