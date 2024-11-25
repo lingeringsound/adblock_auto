@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dj7HseDYQxl8jSRRF+kqTg
+! Checksum: HIsX6Q427Th/zBWheD0W2g
 ! Title: 自用去广告Adblock规则
-! Version: 20241122190119
-! Last modified: 2024-11-22 19:01:19
-! Total Count: 7050
+! Version: 20241125075643
+! Last modified: 2024-11-25 07:56:44
+! Total Count: 7053
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1487,6 +1487,7 @@
 ##.wrapper_ad
 ##.wrapper_advertisement
 ##.wrapperad
+##.x-link[href^="/jump"]
 ##.y-ads
 ##.y-ads-wide
 ##.yaAds
@@ -4133,7 +4134,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*xhofficial.desi/*/vast?
 ://*xsbiquge.*/js/detail.js
 ://*yhdm*.*/js/*.js?ver=
+://*yinghua*/bar/$script
 ://*yydstxt*/js/cdn.js$script,~third-party
+://6*.xyz/to/18*.jpg
 ://888bb*ww.com/$image,third-party
 ://888xx*kk.com/$image,third-party
 ://a.*srv.com^$script,third-party
