@@ -87,6 +87,9 @@ fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-contains(' ':has-text('
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
+#去除badfilter冲突规则
+wipe_badfilter "${Rules_Folder}/adblock_auto.txt"
+#去除Ublock不支持的规则
 lite_Uadblock_Rules "${Rules_Folder}/adblock_auto.txt"
 #读取白名单 剔除规则
 make_white_rules "${Rules_Folder}/adblock_auto.txt" "`pwd`/white_list/white_list.prop"
@@ -136,6 +139,9 @@ fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" ',_____,domain=' ',domain='
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"
+#去除badfilter冲突规则
+wipe_badfilter "${Rules_Folder}/adblock_auto_lite.txt"
+#去除Via不支持的规则
 lite_Adblock_Rules "${Rules_Folder}/adblock_auto_lite.txt"
 #读取白名单 剔除规则
 make_white_rules "${Rules_Folder}/adblock_auto_lite.txt" "`pwd`/white_list/white_list.prop"
