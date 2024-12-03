@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: kwuk+K+vbcjoBsebDG8YvQ
+! Checksum: hiomTVjVUaJiQl6ALwFn9A
 ! Title: 自用去广告Adblock规则
-! Version: 20241203113905
-! Last modified: 2024-12-03 11:39:06
-! Total Count: 7086
+! Version: 20241203123701
+! Last modified: 2024-12-03 12:37:02
+! Total Count: 7105
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4458,10 +4458,13 @@ baidu.com##[class*="ad"][class*="recommend" i]
 baidu.com##[class*="ad"][class*="recommend"]
 baidu.com##[class*="brand" i][class*="Entry" i]
 baidu.com##[class*="brand"][class*="Entry"]
+baidu.com##[class="sfc-video-page-vertical-player-layer"]
+baidu.com##[class^="c-loading"]
 baidu.com##[class^="cu-video-player"]
-baidu.com##[class^="sfc-video-page"] > [class="mask"],[class="sfc-video-page-vertical-player-layer"],div[class^="sfc-video-page-list"],[class^="c-loading"]
+baidu.com##[class^="sfc-video-page"] > [class="mask"]
 baidu.com##[srcid*="_ad"]
 baidu.com##div.blank-frame
+baidu.com##div[class^="sfc-video-page-list"]
 baidu.com#@#.ad-wrapper
 baidu.com#@#[class$="-ad"]
 baidu.com,bdimg.com###aside-ad
@@ -5035,7 +5038,14 @@ m.ithome.com##[class*="open"][class*="-app"]
 m.ithome.com##div[class*="hongbao"]
 m.jingyanlib.com##.question-other
 m.jingyanlib.com##[class="article-swiper"]
-m.mtrend.cn##a[class][onclick^="window.open("],span[class][onclick^="window.open("],[class^="kong"],iframe[src],#interstitial,#ad_pic_float,[class^="mingpai"],[class*="random_ad"]
+m.mtrend.cn###ad_pic_float
+m.mtrend.cn###interstitial
+m.mtrend.cn##[class*="random_ad"]
+m.mtrend.cn##[class^="kong"]
+m.mtrend.cn##[class^="mingpai"]
+m.mtrend.cn##a[class][onclick^="window.open("]
+m.mtrend.cn##iframe[src]
+m.mtrend.cn##span[class][onclick^="window.open("]
 m.qidian.com##.bottom-nav
 m.qidian.com##.btn-primary-circle
 m.qidian.com##.dl-hongbao
@@ -5110,7 +5120,15 @@ mobile.baidu.com##div[class*="card-recommend"]
 mobile.baidu.com##div[class^="detail-banner-"]
 momxs.com##body > script + span
 momxs.com##div#inglestore
-mparticle.uc.cn##[class^="index"][class*="block"],[class^="index_"][class*="card"],[class^="index"][class*="loading"],[class^="index"][class*="news"],[class^="index"][class*="push"],[class^="index"][class*="shortCard"],[id*="_open_uc_id"],[class^="index"][class*="newsController"],[app-type="uc"],[class^="index"][class*="moreContainerParent"]
+mparticle.uc.cn##[class^="index"][class*="block"]
+mparticle.uc.cn##[class^="index"][class*="loading"]
+mparticle.uc.cn##[class^="index"][class*="moreContainerParent"]
+mparticle.uc.cn##[class^="index"][class*="news"]
+mparticle.uc.cn##[class^="index"][class*="newsController"]
+mparticle.uc.cn##[class^="index"][class*="push"]
+mparticle.uc.cn##[class^="index"][class*="shortCard"]
+mparticle.uc.cn##[class^="index_"][class*="card"]
+mparticle.uc.cn##[id*="_open_uc_id"]
 mpo18.com##[style*="width:"][style*="100vw"]
 mpo18.com##a[href^="https://api.openpanel.analytics.international"]
 mpo18.com#@#.bottomad
@@ -5983,7 +6001,8 @@ zn508.cc##.GzList
 zol.com.cn###bottom-fixed-wrapper
 zol.com.cn###top-fixed-wrapper
 zol.com.cn##.banner-ad
-zol.com.cn##[class*="app"][class*="bottom"],[class*="app"][class*="open"]
+zol.com.cn##[class*="app"][class*="bottom"]
+zol.com.cn##[class*="app"][class*="open"]
 zol.com.cn##[data-bottom-fixed] > img[style]
 |https://m.frgls.com/js/*.js?v=
 ||*ggua.xyz^$third-party

@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
-! Checksum: QeZGQ8laL/LuSxSN8WWarA
+! Checksum: 5imRl+U/W0pqsGeXoPH4xA
 ! Title: 混合规则
-! Version: 20241203114221
+! Version: 20241203124159
 ! Expires: 7 days (update frequency)
-! Last modified: 2024-12-03 11:59:47
-! Total Count: 127531
+! Last modified: 2024-12-03 13:11:34
+! Total Count: 127548
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
-! Blocked Filters: 127531
+! Blocked Filters: 127548
 ! Homepage: https://lingeringsound.github.io/adblock
 ! Gitea Homepage: https://gitea.com/lonely_dog/adblock/src/branch/master/README.md
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock
@@ -74917,7 +74917,7 @@
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>22175
+!<<<<<网站单独规则>>>>>22192
 $domain=ads.adxadserv.com|adserver.juicyads.com|cs.adxpansion.com|googleads.g.doubleclick.net|olmsoneenh.info|static.javhd.com|syndication.exosrv.com
 $image,third-party,denyallow=cdn77.org|fpbns.net|others-cdn.com|rncdn7.com|sb-cd.com|stream.highwebmedia.com|upsiloncdn.net|xvideos-cdn.com|youjizz.com|ypncdn.com,domain=pussyspace.com|pussyspace.net
 $image,third-party,domain=258zw.com|lady1.top
@@ -78074,12 +78074,15 @@ baidu.com##[class*="ad"][class*="recommend" i]
 baidu.com##[class*="ad"][class*="recommend"]
 baidu.com##[class*="brand" i][class*="Entry" i]
 baidu.com##[class*="brand"][class*="Entry"]
+baidu.com##[class="sfc-video-page-vertical-player-layer"]
+baidu.com##[class^="c-loading"]
 baidu.com##[class^="cu-video-player"]
-baidu.com##[class^="sfc-video-page"] > [class="mask"],[class="sfc-video-page-vertical-player-layer"],div[class^="sfc-video-page-list"],[class^="c-loading"]
+baidu.com##[class^="sfc-video-page"] > [class="mask"]
 baidu.com##[srcid*="_ad"]
 baidu.com##div.blank-frame
 baidu.com##div[class$="-ecom-ads"]
 baidu.com##div[class*="fc-"][tplid]
+baidu.com##div[class^="sfc-video-page-list"]
 baidu.com##div[data-ad]
 baidu.com##div[id^="toast"]
 baidu.com##div[style="padding: 20px 9px 20px 10px;widget:250px;height:250px;"]
@@ -78828,7 +78831,7 @@ booking.com##.js_sr_persuation_msg
 booking.com##.sr-motivate-messages
 booking.com##div[data-testid="property-card"]:has(div[data-testid="new-ad-design-badge"])
 booking.com#?#div[data-testid="property-card"]:has(span:has-text(Promoted))
-booklife.com,yabeat.org###interstitial
+booklife.com,m.mtrend.cn,yabeat.org###interstitial
 bookrb.com,bookrbx.com##a[href="/rmtj.html"]
 bookriot.com###top-alt-content
 bookriot.com###top_takeover
@@ -80045,7 +80048,7 @@ coincodex.com##.ldb-top3
 coincodex.com##.middle6
 coincodex.com##.position-chartNative
 coincodex.com##.sidebar-2skyscraper
-coincodex.com,xcafe.com,yourbittorrent.com##iframe[src]
+coincodex.com,m.mtrend.cn,xcafe.com,yourbittorrent.com##iframe[src]
 coindesk.com##.article-com-wrapper
 coindesk.com##.high-impact-ad
 coinedition.com##.tdi_59
@@ -87409,7 +87412,12 @@ m.mgtv.com##.mg-dcross
 m.mobile01.com##.u-gapNextV--lg.u-height280
 m.mouthshut.com##.SecondAds
 m.mouthshut.com##.adsBoxRpt2
-m.mtrend.cn##a[class][onclick^="window.open("],span[class][onclick^="window.open("],[class^="kong"],iframe[src],#interstitial,#ad_pic_float,[class^="mingpai"],[class*="random_ad"]
+m.mtrend.cn###ad_pic_float
+m.mtrend.cn##[class*="random_ad"]
+m.mtrend.cn##[class^="kong"]
+m.mtrend.cn##[class^="mingpai"]
+m.mtrend.cn##a[class][onclick^="window.open("]
+m.mtrend.cn##span[class][onclick^="window.open("]
 m.mydrivers.com###content > .ab
 m.mydrivers.com###content > .bb
 m.mydrivers.com##.share
@@ -88206,7 +88214,15 @@ mp4-porn.space##.href_
 mp4ba.la##.hd + table
 mp4ba.la##td[width="300"][height="300"]
 mp4upload.com###overlayads
-mparticle.uc.cn##[class^="index"][class*="block"],[class^="index_"][class*="card"],[class^="index"][class*="loading"],[class^="index"][class*="news"],[class^="index"][class*="push"],[class^="index"][class*="shortCard"],[id*="_open_uc_id"],[class^="index"][class*="newsController"],[app-type="uc"],[class^="index"][class*="moreContainerParent"]
+mparticle.uc.cn##[class^="index"][class*="block"]
+mparticle.uc.cn##[class^="index"][class*="loading"]
+mparticle.uc.cn##[class^="index"][class*="moreContainerParent"]
+mparticle.uc.cn##[class^="index"][class*="news"]
+mparticle.uc.cn##[class^="index"][class*="newsController"]
+mparticle.uc.cn##[class^="index"][class*="push"]
+mparticle.uc.cn##[class^="index"][class*="shortCard"]
+mparticle.uc.cn##[class^="index_"][class*="card"]
+mparticle.uc.cn##[id*="_open_uc_id"]
 mpo18.com##[style*="width:"][style*="100vw"]
 mpo18.com##a[href^="https://api.openpanel.analytics.international"]
 mpo18.com,po18co.com,po18wen.com##img[src*="/images/free"]
@@ -97014,7 +97030,8 @@ zol.com.cn##.xiazaic-topa-box
 zol.com.cn##.xiazaic-topb-box
 zol.com.cn##.zol-eshop
 zol.com.cn##.zolapp
-zol.com.cn##[class*="app"][class*="bottom"],[class*="app"][class*="open"]
+zol.com.cn##[class*="app"][class*="bottom"]
+zol.com.cn##[class*="app"][class*="open"]
 zol.com.cn##[data-bottom-fixed] > img[style]
 zol.com.cn##a#downloader_main
 zol.com.cn##a[class*="member-button"]
