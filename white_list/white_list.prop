@@ -114,6 +114,9 @@ baidu\.com.*#results[[:space:]]>[[:space:]]div\[class\]:not\(\.result\):not\(\.r
 ^##a\[href\*\=\"\.top\"\][[:space:]]>[[:space:]]img\[src\]$
 ! bilibili脚本误杀
 ^##div[[:space:]]>[[:space:]]div:not\(\[style\]\):not\(\[id\]\)[[:space:]]>[[:space:]]div\[style\=\"position:[[:space:]]relative\;\"\]:not\(\[id\]\)$
+! 91porn.com误杀
+^91porn\.com##\.vjs-preroll$
+^\|\|cdn77\.org\^\*\.mp4\|$
 
 
 
