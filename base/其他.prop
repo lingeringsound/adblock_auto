@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: hiomTVjVUaJiQl6ALwFn9A
+! Checksum: AmBIVLENYOO7wDFSnr9sgQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241203123701
-! Last modified: 2024-12-03 12:37:02
-! Total Count: 7105
+! Version: 20241203185354
+! Last modified: 2024-12-03 18:53:54
+! Total Count: 7111
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4420,6 +4420,7 @@ autohome.com.cn##ol
 avgle.com##a[href*="/redirect"]
 avgle.com##img[src*=".php"]
 avtik.com###player > .player-wrapper + section
+b.quark.cn##.video-info
 bad.news##.download-app-fixed
 bad.news##div[class]:has(> [href*="/app/download"])
 baidu.com###content_right > div > div[id^="m"]
@@ -5330,6 +5331,8 @@ profile.zjurl.cn##.m-bottom-bar
 pussyspace.com##div[id]:has(> div[class][style] > [style="cursor: pointer; position: relative;"] > img)
 pussyspace.net##span + div[id]:has(img[src*="/upload/no_img"])
 qinav.com##div[id^="qinav_b"]
+quark.cn##.reflow-button
+quark.cn##.relfow-button
 quotes.sina.cn##.app-footer-sina
 quotes.sina.cn##.js-app-header
 quotes.sina.cn##[class*="callup"]
@@ -5491,6 +5494,7 @@ sogou.com##.game-op
 sogou.com##.gamesRec20220801
 sogou.com##.hd-slider > .slider-container
 sogou.com##.js-ad-item
+sogou.com##.js_appBanner
 sogou.com##.layer__saLayer
 sogou.com##.mobad
 sogou.com##.part-left-not-qb
@@ -5517,6 +5521,7 @@ sogou.com##div[class*="QBLogo"]
 sogou.com##div[class^="news-top-banner"]
 sogou.com##div[class^="rt-gameright"]
 sogou.com##div[class^="sa-"] > [data-testid="sa-footer"]
+sogou.com##img[src="https://search.imtt.qq.com/res/1732261943341_cca1b5a241ae69016b233aed4.gif"]
 sogou.com##ul[class^="atAd"]
 sogou.com#?#div[class^="right-feedback"]:-abp-has(>.list-step-title:-abp-contains(网游))
 sogou.com#@#.vrResult[data-v="102"][exposed="1"]
@@ -6748,6 +6753,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||oronwg.xyz^$third-party
 ||oss-cn-beijing.aliyuncs.com/llv3/*.js$third-party
 ||ossmightyenar.net^
+||otheve.beacon.qq.com^
 ||oumobook.com/click
 ||outlook.live.com/ows/*/OutlookOptions/AdsAggregate
 ||p.pdatago.com^
