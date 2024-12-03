@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: fUcaISckND61rOfgsmWhxg
+! Checksum: kwuk+K+vbcjoBsebDG8YvQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241203004842
-! Last modified: 2024-12-03 00:48:42
+! Version: 20241203113905
+! Last modified: 2024-12-03 11:39:06
 ! Total Count: 7086
 ###ADbox
 ###Ad-Container
@@ -4076,7 +4076,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 91porn.best##div[style*="center"]:has(script[src$="/ad-provider.js"])
 91porn.best,pornbest.com,pornbest.net,pornbest.org,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##div.row.links
 91porn.com###videodetails > div:has(> a[href][target="_blank"])
-91porn.com##.vjs-preroll
+91porn.com#@#.vjs-preroll
 91porny.org,haijiao35.com,jiuse.io##.card:has(>.card-image>a[href^="http"])
 99re.com##a[href][target="_blank"] > img[src]
 :*/*/sv?gp=*=*=$third-party
@@ -4683,6 +4683,7 @@ facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##._6
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[data-testid="marketplace_pdp_component"] div[style^="max-height:"] div[style^="max-height:"] > div[class] > div > div:not([class]):has(> div[class] > div[class] > a[href^="/ads/"])
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="complementary"] > div[class] > div[class] > div[class] span > div > div:not([aria-label]):not([data-visualcompletion]):has(> div[class] > div[class] div[class] > a[href^="https://l."][href*="facebook.com/l.php?u="][target="_blank"])
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[style="max-width: 390px; min-width: 190px;"]:has(a[href^="/ads/"])
+facebook.com,nuvid.com#@#script:not([src]) + style + div[id]:not([class]):not([style])
 fanyi.baidu.com##.app-bar
 fanyi.baidu.com##.bottom-intro
 fanyi.baidu.com##[class^="jifeng-"]
@@ -5147,7 +5148,6 @@ nonfungerbils.com,pulsembed.eu,station-drivers.com#@#iframe[width="600"][height=
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
 noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
 noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
-nuvid.com#@#script:not([src]) + style + div[id]:not([class]):not([style])
 nxnba.com##.bootom-fixed
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.ads_w + div[id][style]
