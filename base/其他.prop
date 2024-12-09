@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: cQzIdHCDn1JfAc3F15pqGw
+! Checksum: aIu/0bxh6kdJhsThesPtCg
 ! Title: 自用去广告Adblock规则
-! Version: 20241204094424
-! Last modified: 2024-12-04 09:44:24
-! Total Count: 7113
+! Version: 20241209123546
+! Last modified: 2024-12-09 12:35:46
+! Total Count: 7116
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1689,6 +1689,7 @@
 ##[style*="https://fjkb.tyvzyn.com/"]
 ##[style="text-align: center; margin: 20px 0; color: blue; font-size: larger;"]
 ##[style="text-align: center; margin: 40px 0; color: blue; font-size: larger;"]
+##[style] > a[href*="/c.php?s="]
 ##[style^="display: inline-block;"][style*="margin:"] > a[target="_blank"][href][title]
 ##[style^="display:block;left:0;right:0;position:fixed;border-left:1px"]
 ##a > img.lazy[class*="imgad"]
@@ -5121,6 +5122,7 @@ missav.com,missav888.com,missav123.com,missav789.com,thisav.com##iframe[src*=":/
 missav.com,missav888.com,missav123.com,missav789.com,thisav.com##img[src^="https://static.missav"][data-src^="https://static.missav"][alt][class="lozad"][data-loaded="true"]
 mobile.baidu.com##div[class*="card-recommend"]
 mobile.baidu.com##div[class^="detail-banner-"]
+moegirl.org.cn##.n-button
 momxs.com##body > script + span
 momxs.com##div#inglestore
 mparticle.uc.cn##[class^="index"][class*="block"]
@@ -5666,6 +5668,7 @@ view.inews.qq.com#@#[data-action-id="2"]
 view.inews.qq.com#@#[dt-eid="em_pull_news"]
 view.inews.qq.com#@#[style*="0vw"][style*="0vh"][style*="0px"]
 vk.com,vk.ru###system_msg
+vod2046.fun##[style]:not([class]):has(a[href*="/c.php?s"])
 voflix.com##[class*="module-adslist"]
 voflix.com##img[importance="low"][onclick*="window.open"][src][lazyload]
 vxxx.com###player-1 > div[style="display:flex !important"] > div
