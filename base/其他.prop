@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: aIu/0bxh6kdJhsThesPtCg
+! Checksum: 8OEu0hbPJ8AHcM7OzmFOLA
 ! Title: 自用去广告Adblock规则
-! Version: 20241209123546
-! Last modified: 2024-12-09 12:35:46
-! Total Count: 7116
+! Version: 20241209235811
+! Last modified: 2024-12-09 23:58:11
+! Total Count: 7120
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2375,6 +2375,7 @@
 ##img[id][no-zoom][src^="data:"]
 ##img[id^="GGADIMG"][src]
 ##img[id^="daohang_hengfu"][width="100%"]
+##img[onclick][onload^="if(this.src.substring(0,4)!="]
 ##img[onclick^="golh"][onclick$=")"][width="100%"],img[onclick^="golh"][onclick$=")"][src$=".gif"]
 ##img[spm*="广告"]
 ##img[src$="-960x100.gif"]
@@ -4091,11 +4092,11 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 :*/ty/*-*-*-*.alpha$third-party
 :*/ty/*-*-*-*.blpha$third-party
 :*/xcdn*/js/_init.js?$third-party
-://*.*.*:*/cc/$domain=omofuns.link|omofuns.top|omofuns.top|omofuns.live|omofuns.buzz|omofun.link|omofun.top|omofun.live|omofun.buzz
-://*.*.*:*/d/$domain=omofuns.link|omofuns.top|omofuns.top|omofuns.live|omofuns.buzz|omofun.link|omofun.top|omofun.live|omofun.buzz
-://*.*.*:*/sc/$domain=omofuns.link|omofuns.top|omofuns.top|omofuns.live|omofuns.buzz|omofun.link|omofun.top|omofun.live|omofun.buzz
-://*.*.*:*/vh*/$domain=omofuns.link|omofuns.top|omofuns.top|omofuns.live|omofuns.buzz|omofun.link|omofun.top|omofun.live|omofun.buzz
-://*.*.*:*/vj*/$domain=omofuns.link|omofuns.top|omofuns.top|omofuns.live|omofuns.buzz|omofun.link|omofun.top|omofun.live|omofun.buzz
+://*.*.*:*/cc/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
+://*.*.*:*/d/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
+://*.*.*:*/sc/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
+://*.*.*:*/vh*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
+://*.*.*:*/vj*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
 ://*.*.xyz/*/*-*-*-*/$third-party
 ://*.*.xyz:*/*/*-*-*-*/$third-party
 ://*.*/js/js4.js?v=$~third-party
@@ -4563,6 +4564,7 @@ bing.com##li[class="sa_hd"][role="option"]
 bing.com##li[class^="sa_sg"][stype="PN"]
 bing.com##li[data-idx]:has(#mm-ebad)
 bing.com##main[aria-label="Search Results"] > #b_pole:has(#cu_polebanner #cu_poleMSPromoText)
+biquge365.net,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,yhdm9.cc##script:has-text(navigator.platform)
 biquge99.vip##div.content:has(script[src="/facaishen1.js"])
 blog.sina.cn###pl-ad-after-comments
 blog.sina.cn###pl-adtop-bar
@@ -5658,6 +5660,7 @@ txxxporn.tube##.video-content > div[class]:has(> div[class] > div[id] > noscript
 txxxporn.tube,vxxx.com##.pwa-ad
 txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi])
 typhoon.yahoo.co.jp##.promoBanner
+tysswh.com##img[onclick]
 up.taoseye.com##a[target="_blank"],[ontouchstart]
 video.sina.cn##section.Card_Mb16
 view.inews.qq.com##[class*="bottom-bar"]
@@ -6673,6 +6676,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||lekfez.icu^
 ||lezhutv.com/static/jquerys.js
 ||lhotajl.icu^$third-party
+||lichizhuangshi.com^
 ||ligatus.com^
 ||lightad.com^
 ||lighttalon.com^
