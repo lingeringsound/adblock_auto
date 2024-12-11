@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 8OEu0hbPJ8AHcM7OzmFOLA
+! Checksum: cSa4PZWUJB4qyFvdwCv//w
 ! Title: 自用去广告Adblock规则
-! Version: 20241209235811
-! Last modified: 2024-12-09 23:58:11
-! Total Count: 7120
+! Version: 20241212031257
+! Last modified: 2024-12-12 03:12:57
+! Total Count: 7122
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -59,6 +59,7 @@
 ###adContentHolder
 ###adContext
 ###adSpot
+###ad_cs
 ###ad_popup_background
 ###ad_popup_wrapper
 ###adbox
@@ -3634,6 +3635,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/profit.js$~third-party
 /js/re-ads-
 /js/rotator.js
+/js/rourouwu.js$script
 /js/sp_ad.js$script
 /js/tongji.js?v=
 /js/wap2-jm-ms.js?ver=$~third-party,script
@@ -4264,7 +4266,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@cdn.allflow.cn/assets/ad-utils.*.js$domain=flowus.cn
 @@encrypt.key
 @@game.baifumeiba.com/login/ad/adex.js
-@@mwfimsvfast.co/static/upload/ads/files/300x250*.gif
+@@mwfimsvfast*/static/upload/ads$image
 @@p2p.$domain=tecms.net
 @@tangsanshu.net/js/comm.js
 @@ysjdm.net/template/conch/asset/js/hlhtml.
@@ -4564,7 +4566,7 @@ bing.com##li[class="sa_hd"][role="option"]
 bing.com##li[class^="sa_sg"][stype="PN"]
 bing.com##li[data-idx]:has(#mm-ebad)
 bing.com##main[aria-label="Search Results"] > #b_pole:has(#cu_polebanner #cu_poleMSPromoText)
-biquge365.net,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,yhdm9.cc##script:has-text(navigator.platform)
+biquge365.net,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,yhdm9.cc##^script:has-text(navigator.platform)
 biquge99.vip##div.content:has(script[src="/facaishen1.js"])
 blog.sina.cn###pl-ad-after-comments
 blog.sina.cn###pl-adtop-bar
