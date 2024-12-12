@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: cSa4PZWUJB4qyFvdwCv//w
+! Checksum: LeLMrnOgwVpX4CdiheSOqA
 ! Title: 自用去广告Adblock规则
-! Version: 20241212031257
-! Last modified: 2024-12-12 03:12:57
-! Total Count: 7122
+! Version: 20241212185130
+! Last modified: 2024-12-12 18:51:30
+! Total Count: 7135
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1695,6 +1695,7 @@
 ##[style^="display:block;left:0;right:0;position:fixed;border-left:1px"]
 ##a > img.lazy[class*="imgad"]
 ##a#ad-link
+##a.copy[onclick] > picture
 ##a.downurl[target="_blank"][referrerpolicy="no-referrer"]
 ##a[alt="545新葡京"][target="_blank"]
 ##a[alt="91Pro"][target="_blank"]
@@ -1933,6 +1934,7 @@
 ##a[href^="javascript:linkto"][href*="_blank"] > img
 ##a[id$="ads-link"]
 ##a[id][href*="/c.php?s="][href$="="]
+##a[onclick*="91黄播"]
 ##a[onclick*="博彩"]
 ##a[onclick*="同城"]
 ##a[onclick*="外接'"]
@@ -1985,7 +1987,11 @@
 ##body > [style$="width:9.6vw;height:8.5vw;background:#000;opacity:0.01;"]
 ##body > [style*="background"][style*="#000"][style$="opacity:0.01;"]
 ##body > [style*="position:fixed; bottom:0vw; left:0vw; z-index:"]
+##body > [style="display: block; z-index: 2147483646; width: 14px; position: fixed; height: 14px; left: 1px; bottom: 129px; box-sizing: content-box;"]
+##body > [style="display: block; z-index: 2147483646; width: 14px; position: fixed; height: 14px; left: 1px; top: 129px; box-sizing: content-box;"]
 ##body > [style^="display: block; z-index: 2147483647; width: 10%;"][style$="!important;"]
+##body > [style^="display: block;"][style*="129px;"]
+##body > [style^="position: fixed; z-index: 100; display: block; left: 0px; width: 36px;"]
 ##body > div[class$="c"][style="bottom: 135px;"]
 ##body > div[class$="h"][style="bottom: 135px;"]
 ##body > div[class$="m"][style="display: block; width: 100%; height: 135px;"]
@@ -2532,6 +2538,8 @@
 ##span[style^="cursor: pointer;"][style*="z-index: 2147483647;display: block;"]
 ##span[title="neteasefooter"]
 ##table[border="1"] > tbody > tr > td > a[href][onclick*="Novel"][title]
+##textarea[style*="-1325890192.cos.ap"]
+##textarea[style*=".myqcloud.com/img/mfgk"]
 ##topadblock
 ##ul > li > a[href*=".pojuko.buzz/"]
 ##ul > li > a[href][data-id][data-type][data-position][target="_self"]
@@ -3008,6 +3016,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:*/api/v4/g?kyurl=$third-party
 .xyz:*/bug?*=$third-party
 .xyz:*/cc/*?is_not=$third-party
+.xyz:*/d/*?*=$third-party
+.xyz:*/d/*?c=*$third-party
 .xyz:*/d/*?t=
 .xyz:*/js/*?x=$third-party
 .xyz:*/mnrt/*.json
@@ -6339,6 +6349,8 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||cowcuo.xyz^
 ||cpmrevenuegate.com^
 ||cpro.baidustatic.com^
+||cqshuda.com/template/conch/asset/js/conch.vip.js
+||cqshuda.com/template/conch/asset/js/ping.js
 ||creative.ohmycams.com^
 ||creative.xlirdr.com^
 ||creative.xlivrdr.com^
@@ -6445,6 +6457,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||ftiodfqk.com^$third-party
 ||fvcwqkkqmuv.com^
 ||g.aidinghz.com^
+||g.biqu.se^
 ||g.shommaipl.com^$third-party
 ||ga-ads.com^
 ||gadscc.xyz^
