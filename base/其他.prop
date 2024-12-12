@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: LeLMrnOgwVpX4CdiheSOqA
+! Checksum: mEOD6dy1bhWfZGRkPi6eiA
 ! Title: 自用去广告Adblock规则
-! Version: 20241212185130
-! Last modified: 2024-12-12 18:51:30
-! Total Count: 7135
+! Version: 20241212233526
+! Last modified: 2024-12-12 23:35:26
+! Total Count: 7139
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3711,6 +3711,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /os230718.oss-
 /other/ads/*
 /owa.NativeAdList.js$domain=outlook.live.com
+/pagead.js$domain=d3ward.github.io
 /pagead2.
 /picture/ad/*
 /pictureads/*
@@ -5076,18 +5077,20 @@ m.qidian.com##.txt-act
 m.qidian.com##.txt-read
 m.qidian.com##[id*="readTopTip"]
 m.qidian.com##div.jsAuthorSay.read-author-say
+m.sohu.com##.add-desk-guide
 m.sohu.com##.art-rec-news
 m.sohu.com##.common-ad
-m.sohu.com##a[href="javascript:void(0);"]
+m.sohu.com##a[href="javascript:void(0);"][data-spm-content]
 m.sohu.com##div#CallAppContainer
 m.sohu.com##section > div.f:has(div > script[assporiginsrc])
+m.sohu.com#@#a[href="javascript:void(0);"]
 m.thepaper.cn##.index_footer_banner__Mcr_R
 m.thepaper.cn##[class*="index_details_ad"]
 m.toutiao.com##.comment-bottom-banner
 m.toutiao.com##.listen-bar
 m.toutiao.com##.m-bottom
 m.toutiao.com##[aria-label="打开APP"]
-m.toutiao.com,profile.zjurl.cn##.m-index-tag
+m.toutiao.com,profile.zjurl.cn,so.toutiao.com##.m-index-tag
 m.wandoujia.com##.wdj-download
 m.wandoujia.com##[class*="relative"]
 m.wandoujia.com##[class="infos download-rank"]
@@ -5204,6 +5207,7 @@ outlook.live.com##div[data-app-section="MessageList"] div[role="listbox"] .custo
 outlook.live.com##main[aria-hidden] > div[class] > div[style] > div[class][style="position: absolute; left: 0px; top: 0px; height: 80px; width: 100%;"]:has(> div[class] > div[role="group"] > #OwaContainer)
 pan.baidu.com##.share-error-ad
 papalah.com##.banner_m_fixed
+partner.ads.js$domain=d3ward.github.io
 pconline.com.cn###JBestRecomm
 pconline.com.cn###JmallLazy
 pconline.com.cn###art-bottom-nq
@@ -5345,7 +5349,7 @@ pornwhite.com##.container-side:has(> b:first-child + div[data-banner]:last-child
 pornwhite.com##.items-container > div.items-holder:has(> div[data-banner])
 pornwhite.com,sleazyneasy.com##div[data-banner]
 ppys66.com##a[title="成人深夜福利"]
-profile.zjurl.cn##.m-bottom-bar
+profile.zjurl.cn,so.toutiao.com##.m-bottom-bar
 pussyspace.com##div[id]:has(> div[class][style] > [style="cursor: pointer; position: relative;"] > img)
 pussyspace.net##span + div[id]:has(img[src*="/upload/no_img"])
 qinav.com##div[id^="qinav_b"]
@@ -6110,8 +6114,8 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adnewnc.app.autohome.com.cn^
 ||adprosrv.com^
 ||adproxy.autohome.com.cn^
-||ads-api.tiktok.com^
-||ads-api.twitter.com^
+||ads$domain=d3ward.github.io
+||ads-api.tiktok.com^$domain=d3ward.github.io
 ||ads-api.twitter.com^$domain=d3ward.github.io
 ||ads-dev.pinterest.com^
 ||ads-servebom-com.cdn.ampproject.org^
@@ -6174,19 +6178,15 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adtimaserver.vn^
 ||adtrue.com^
 ||adultfriendfinder.com^$third-party
-||advertising-api-eu.amazon.com^
 ||advertising-api-eu.amazon.com^$domain=d3ward.github.io
-||advertising.apple.com^
 ||advertising.apple.com^$domain=d3ward.github.io
 ||advertising.twitter.com^
-||advertising.yahoo.com^
 ||advertising.yahoo.com^$domain=d3ward.github.io
-||advertising.yandex.ru^
 ||advertising.yandex.ru^$domain=d3ward.github.io
-||advice-ads.s3.amazonaws.com^
 ||advice-ads.s3.amazonaws.com^$domain=d3ward.github.io
 ||adxadserv.com^$third-party
 ||afenjkopoqwm.com^$third-party
+||afs.googlesyndication.com^$domain=d3ward.github.io
 ||agdcdf.live^
 ||agdcdf.shop^
 ||agilesrv.com^
@@ -6256,6 +6256,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||baomidou.com/entry.Cx1FBVJX.mjs
 ||bathingdelicatedemise.com^
 ||bbangads.*.net^$third-party
+||bdhtfxzke.icu^
 ||bds82.top^
 ||beap-bc.yahoo.com^
 ||beap.gemini.yahoo.com^
@@ -6435,6 +6436,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||exoclick.com^$third-party
 ||exosrv.com^
 ||exrtbsrv.com^
+||extmaps-api.yandex.net^$domain=d3ward.github.io
 ||eypev.com^$third-party
 ||eyu2017.xzy^
 ||fanza.cc^$third-party
@@ -6463,6 +6465,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||gadscc.xyz^
 ||gdqrcloud.com/adBanner
 ||ge.zacuin.com^
+||gemini.yahoo.com^$domain=d3ward.github.io
 ||geo.yahoo.com^
 ||getcdnpix.name^
 ||gibzz.xyz^
@@ -6784,6 +6787,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||padmp4.cc/js/foot.js
 ||padmp4.com/js/foot.js
 ||pagead2.googlesyndication.com^
+||partnerads.ysm.yahoo.com^$domain=d3ward.github.io
 ||pavfazbwiap.com^
 ||pcd.autohome.com.cn^
 ||pcmx.autohome.com.cn^
