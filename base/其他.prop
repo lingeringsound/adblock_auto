@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: mEOD6dy1bhWfZGRkPi6eiA
+! Checksum: JBdTI0htkbYLGVm6VJhGiw
 ! Title: 自用去广告Adblock规则
-! Version: 20241212233526
-! Last modified: 2024-12-12 23:35:26
-! Total Count: 7139
+! Version: 20241213215835
+! Last modified: 2024-12-13 21:58:35
+! Total Count: 7145
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4150,6 +4150,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*iyxdm.*/js/bottom_dk.js
 ://*jiezhong.*/js/f*.js$~third-party
 ://*lakanshu.*/layjs/$script,~third-party
+://*mp4*/js/foot.js$script,~third-party
+://*mp4*/js/wcount.js$script,~third-party
 ://*po18.*/astyle/wap.js$script
 ://*ting13.*/public/tingshu/foor.js$script
 ://*xhamster*.com/*/vast?
@@ -4647,6 +4649,8 @@ cupfox.app##[class^="jsx-"] > img[src$=".gif"]
 cupfoxappp.com##table:has(.cvbcvxvb)
 czzytv77.com##.stui-pannel + table
 d1bzw.com##[id="appurl"],[id="bbsurl"]
+d3ward.github.io##.textads
+d3ward.github.io,mtianqi.eastday.com##.adbox
 daftsex.com,pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,spankbang.party,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com##a[href*="?ats="]
 danmutv.com##.adlists
 danmutv.com##body > div[class][style*="bottom:"]
@@ -4687,12 +4691,15 @@ eastmoney.com##.appxz
 eastmoney.com##.dc-layer-tc
 eastmoney.com##.dc-result-tc
 eastmoney.com##.download_guide
+eastmoney.com##.moreReply
 eastmoney.com##.my-ad-margin
 eastmoney.com##[class*="open"][class*="app"]
 eastmoney.com##[class^="my-ad"]
 eastmoney.com##[id*="open"][id*="app"]
 eastmoney.com##div[onclick]:has(a[href] > img[src^="https://mobappconfig.securities.eastmoney.com/appimg"])
 eastmoney.com##div[onclick]:has(a[href^="https://mlink.eastmoney.com/h52n/nlink.html?"])
+eastmoney.com##p:has([class*="adv"])
+eastmoney.com##p[style="text-align: center; margin-bottom: 0.9375rem;"]
 ebates.ca,rakuten.ca,rakuten.com#@#.google-ads
 ebaumsworld.com#@#.promoAd
 efukt.com##[data-ad-type]
@@ -5161,7 +5168,6 @@ msn.cn,msn.com##[data-t*="NativeAd"]
 msn.cn,msn.com##[data-t*="openInStartApp"]
 msn.cn,msn.com##div.actiontray-container
 msn.cn,msn.com##div.consumption-river
-mtianqi.eastday.com##.adbox
 mtianqi.eastday.com##.lfyinliu
 mtianqi.eastday.com##.nzxtit
 mtianqi.eastday.com##.tbad
