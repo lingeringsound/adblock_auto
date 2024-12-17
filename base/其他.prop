@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: MV83ibQooIRrkpMD48sSOA
+! Checksum: aMf7Zewae3L2vYdeL2UlUg
 ! Title: 自用去广告Adblock规则
-! Version: 20241217132114
-! Last modified: 2024-12-17 13:21:14
-! Total Count: 7156
+! Version: 20241217185149
+! Last modified: 2024-12-17 18:51:49
+! Total Count: 7161
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2653,6 +2653,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn:*/sc/*?n=$third-party
 .cn:*/sc/*?t=$third-party
 .cn:*/sc/*?x=$third-party
+.cn:*/stats/*/*?$third-party
 .cn:*/vh1/$third-party
 .cn:*/vh2/$third-party
 .cn:*/vh3/$third-party
@@ -2858,6 +2859,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/TA*.js?17$third-party,script
 .icu/biyys*.js$third-party,script
 .icu/by*.js?17$third-party,script
+.icu/do?17$third-party
 .icu/js/gg.js$script
 .icu/pssbk?$third-party
 .icu/reacre*?$third-party
@@ -3835,6 +3837,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /template/paody/aaaa/all-top.js
 /template/piankuwap/js/afixed.js
 /template/shoujigg/*
+/template/stui_tpl/html/block/*.js
 /template/znfls/asd/*
 /template/zsy_badian/dddytt-gg/*
 /templateadvimages/*
@@ -5453,6 +5456,7 @@ sm.cn##div[id^="dl-banner-"]
 sm.cn,yz.m.sm.cn##a[href*="sm.cn/adclick?"]
 sm.cn,yz.m.sm.cn##div[id*="_Shopping_Etao_"]
 sm.cn,yz.m.sm.cn##div[id^="ad_ele_"]
+smyy361.com##ul.stui-content__playlist.clearfix > li[style="display: block;"]
 so.com###bnbtm-banner
 so.com###bqPromote
 so.com###e_idea_left
@@ -6384,6 +6388,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||cupoabie.net^
 ||cvk.supklik.com^
 ||cvmjf.xyz^$third-party
+||czulie.icu^
 ||d000d.com/e/
 ||d1cg2aopojxanm.cloudfront.net^
 ||d1ezlc9vy4yc7g.cloudfront.net^$third-party
