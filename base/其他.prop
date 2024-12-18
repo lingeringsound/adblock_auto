@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: oIjiUHiz93kNWdW/HDDKGQ
+! Checksum: 1a0MUoIl713IpgfwJNNBvQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241218233950
-! Last modified: 2024-12-18 23:39:51
-! Total Count: 7248
+! Version: 20241218235101
+! Last modified: 2024-12-18 23:51:02
+! Total Count: 7247
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2517,7 +2517,6 @@
 ##script + div[class] > div[class][data-version]
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script > .p-screen-dialog
-##script:not([src]) + style + div[id]:not([class]):not([style])
 ##script[src$="/ad-provider.js"] + ins
 ##script[src$="/js/jads.js"] + ins[id]
 ##script[src*=".cn/slot?"] + center
@@ -4790,7 +4789,7 @@ facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##._6
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[data-testid="marketplace_pdp_component"] div[style^="max-height:"] div[style^="max-height:"] > div[class] > div > div:not([class]):has(> div[class] > div[class] > a[href^="/ads/"])
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="complementary"] > div[class] > div[class] > div[class] span > div > div:not([aria-label]):not([data-visualcompletion]):has(> div[class] > div[class] div[class] > a[href^="https://l."][href*="facebook.com/l.php?u="][target="_blank"])
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[style="max-width: 390px; min-width: 190px;"]:has(a[href^="/ads/"])
-facebook.com,nuvid.com#@#script:not([src]) + style + div[id]:not([class]):not([style])
+facebook.com,nuvid.com,up.woozooo.com#@#script:not([src]) + style + div[id]:not([class]):not([style])
 fanyi.baidu.com##.app-bar
 fanyi.baidu.com##.bottom-intro
 fanyi.baidu.com##[class^="jifeng-"]
