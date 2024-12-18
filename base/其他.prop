@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: MjKQwAJvneLNV4RWah8+Aw
+! Checksum: +kkQOn9S6VGyN8rHmOD5NQ
 ! Title: 自用去广告Adblock规则
-! Version: 20241218003120
-! Last modified: 2024-12-18 00:31:20
-! Total Count: 7226
+! Version: 20241218105525
+! Last modified: 2024-12-18 10:55:25
+! Total Count: 7231
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2859,6 +2859,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/TA*.js?17$third-party,script
 .icu/biyys*.js$third-party,script
 .icu/by*.js?17$third-party,script
+.icu/common?$third-party
 .icu/do?17$third-party
 .icu/js/gg.js$script
 .icu/pssbk?$third-party
@@ -2866,6 +2867,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/release*ts?*16$third-party
 .icu/release*ts?*17$third-party
 .icu/sytlyn?$third-party
+.icu/vue?$third-party
 .icu:28883/*/*$third-party
 .info/bokan/bokan.js$script
 .js?type=adult&v=$domain=netflav.com
@@ -5131,6 +5133,9 @@ m.iask.sina.com.cn##[class^="wb2_look"]
 m.iask.sina.com.cn##[id$="-loading"]
 m.iask.sina.com.cn##[id$="_ad_new"]
 m.iask.sina.com.cn##[src*="//jcylrv.iask.com.cn"]
+m.iqiyi.com##.cover
+m.iqiyi.com##.m-iqyGuide-layer
+m.iqiyi.com##[class^="ChannelHome"]
 m.ithome.com##.hot-app
 m.ithome.com##[class*="open"][class*="-app"]
 m.ithome.com##div[class*="hongbao"]
