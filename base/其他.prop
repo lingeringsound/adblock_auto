@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: +kkQOn9S6VGyN8rHmOD5NQ
+! Checksum: Rx315eNwQTJmDu8pF4Jnrg
 ! Title: 自用去广告Adblock规则
-! Version: 20241218105525
-! Last modified: 2024-12-18 10:55:25
-! Total Count: 7231
+! Version: 20241218132215
+! Last modified: 2024-12-18 13:22:15
+! Total Count: 7246
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2892,6 +2892,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .org/5y*/31*.$other,~third-party
 .org/bokan/bokan.js$script
 .org/js/gg.js$script
+.org/slot?$third-party
 .ph/ads/
 .php/ad/
 .php/ads/
@@ -3679,6 +3680,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/gcss.js?$~third-party,script
 /js/gg0.js
 /js/gg123/*
+/js/ggjs.js
 /js/ggtop.js
 /js/guanggao_gg.js
 /js/hfee*.js?v=$~third-party
@@ -4199,6 +4201,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*lakanshu.*/layjs/$script,~third-party
 ://*mp4*/js/foot.js$script,~third-party
 ://*mp4*/js/wcount.js$script,~third-party
+://*myyyw.cc/play/*php
+://*myyyw.cc/static/node.js
 ://*po18.*/astyle/wap.js$script
 ://*ting13.*/public/tingshu/foor.js$script
 ://*xhamster*.com/*/vast?
@@ -4743,6 +4747,7 @@ diantaiwang.com##a[href^="https://s.click.taobao.com/"][target="_blank"]
 diantaiwang.com##img[src^="/js/imgs"]
 dippens.net,mei222.com,myfriendjeff.net,tjk3.com##.app,#htmlContenthtml,.dbfh,.zdhf
 dippens.net,mei222.com,myfriendjeff.net,tjk3.com##script + [class$="hf"]
+dm513.cc,cooing.cc##[style*="129px"]
 dm590.com,hentaipaw.com##.external
 dm88.me,dmh8.me,dm99.me##.padding-0 > ul[style]
 dm88.me,dmh8.me,dm99.me##[style^="display: block;"]
@@ -5255,6 +5260,8 @@ mtianqi.eastday.com##.zxscorll
 mtianqi.eastday.com##div[class]:not(style):not([id]):has(> div[class]:not([id]) >.zxscorll)
 my.yahoo.com##li[id^="ad-"]
 mydrivers.com#@#a[href*="/bp.ashx"]
+myyyw.cc##[href="/play/player.php"]
+myyyw.cc##div[style="margin:0 auto;"]
 n6h7m.com##a[href="/pwa/lottery"],img[src*="://ad.xmmnsl.com"],a[referrerpolicy="unsafe-url"][target="_blank"],.float-ad
 netflav.com##.ads_head_banner_container
 netflav.com##.ads_video_overlay_mobile
@@ -6157,6 +6164,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||4sexmail.com^
 ||51.la^$third-party
 ||510cg.com/1688/m_*.php$~third-party
+||520xxb.com^
 ||5hte21mz.com^
 ||5mgrgsc.cn^
 ||5uxmusq.cn^
@@ -6284,6 +6292,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||aidu123.com/css/js/tools.js
 ||aiqu288.com/*/*.js$~third-party
 ||aiqu789.com/*/*.js$~third-party
+||aissxs.cc^
 ||aj2555.bid^$third-party
 ||ajcode.co^$third-party
 ||ajkjbcjbaaaed.com^$third-party
@@ -6550,6 +6559,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||ftd.agency^$third-party
 ||ftiodfqk.com^$third-party
 ||fvcwqkkqmuv.com^
+||fw.privateadx.com^
 ||g.aidinghz.com^
 ||g.biqu.se^
 ||g.shommaipl.com^$third-party
@@ -6640,6 +6650,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||hruk.prikupok.com^
 ||hruk.prikupok.icu^
 ||hstjjg.com/show/$script
+||htjs.demshen.com^
 ||huayiyuan.hk^
 ||hubiazhi.com^
 ||humble-gap.com^$third-party
@@ -6848,6 +6859,8 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||mtu.hlkcowp.cn^
 ||mvanee.xyz^
 ||mylengmen.com/assets/public/$script
+||myyyw.cc/play/jpg.php
+||myyyw.cc/play/tu.php
 ||nereserv.com^
 ||net.huaduys.net/guding*.js
 ||netapd.gdxinya.com^
@@ -6973,6 +6986,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||sc-gov-cn.website^
 ||scjpqut.cn^
 ||sda.seksohub.com^
+||sdfeiyuejx.com/show/$script
 ||sdk.51.la^
 ||search.sogoucdn.com/vrfly/wap/v1/browserAbout.js?
 ||search.sogoucdn.com/vrfly/wap/v1/callApp.js?
@@ -6985,6 +6999,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||sfvsjv.com/sh$third-party,script
 ||sgoijw.com^$third-party
 ||shabby-constant.com^
+||shenluyu.com^$third-party
 ||shenyelook.com/assets/publish/$script
 ||shfsdvc.com^
 ||siduohua.top^

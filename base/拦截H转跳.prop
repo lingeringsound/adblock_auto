@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: wfCiBm0U+j+PBHIQTJ4S4Q
+! Checksum: BHpIti7g5JQdRSds3elIMA
 ! Title: 拦截黄色网站转跳
-! Version: 20241212183121
-! Last modified: 2024-12-12 18:31:21
-! Total Count: 512
+! Version: 20241218132227
+! Last modified: 2024-12-18 13:22:27
+! Total Count: 516
 .*tad.cn/?c=ggmou$document
 .*tad.cn/?c=ggmou$~third-party
 .alb.aliyuncs.com:*/*/gougou.html?k=$document
@@ -284,6 +284,8 @@
 :2022/vip/index.php?refresh&rand=$~third-party
 :2023/vip/index.php?refresh&rand=$document
 :2023/vip/index.php?refresh&rand=$~third-party
+:8002/dw/*#$document
+:8002/dw/*#$~third-party
 ?channelCode=chigua$document
 ?channelCode=chigua$~third-party
 caigepseyoulianjie-*.*.com$document
@@ -388,6 +390,8 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||heitaomm.cc^$~third-party
 ||hh*.huojiabeijing.org^$document
 ||hh*.huojiabeijing.org^$~third-party
+||htjs.demshen.com^$document
+||htjs.demshen.com^$~third-party
 ||iqbecde.cn^$document
 ||iqbecde.cn^$~third-party
 ||jbc568.com^$document
