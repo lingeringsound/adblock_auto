@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 1a0MUoIl713IpgfwJNNBvQ
+! Checksum: kBGfeUvNA5AnGCryYJ/46A
 ! Title: 自用去广告Adblock规则
-! Version: 20241218235101
-! Last modified: 2024-12-18 23:51:02
-! Total Count: 7247
+! Version: 20241219112700
+! Last modified: 2024-12-19 11:27:00
+! Total Count: 7257
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1701,6 +1701,7 @@
 ##a[alt="91Pro"][target="_blank"]
 ##a[alt="91视频"][target="_blank"]
 ##a[alt="JQK棋牌"][target="_blank"]
+##a[alt="Sokimo Store"]
 ##a[alt="p站破解"][target="_blank"]
 ##a[alt="加拿大彩票"][target="_blank"]
 ##a[alt="同城上门"][target="_blank"]
@@ -5380,10 +5381,13 @@ pornhub.com###relatedVideosCenter > .wrapVideoBlock:has(> .videoSpiceVidsBlock s
 pornhub.com###relatedVideosCenter > li[class^="related"]
 pornhub.com###singleFeedSection > .emptyBlockSpace
 pornhub.com##.becomePartnerWrapper
+pornhub.com##.js-liveCam
+pornhub.com##.menuLinkDiv:has(a[href^="https://www.spicevids.com/"])
 pornhub.com##.sectionWrapper:has(> #bottomVideos > .wrapVideoBlock)
 pornhub.com##.sniperModeEngaged
 pornhub.com##.video-wrapper > #player ~ .hd.clear
 pornhub.com##.videoPremiumBlock
+pornhub.com##[data-event="header_paid_tabs"]
 pornhub.com##[srcset*="bloB:"]
 pornhub.com##a[href^="https://www.uviu.com"]
 pornhub.com##div.container:style(margin-top: 0px !important)
@@ -5772,6 +5776,8 @@ txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi]
 typhoon.yahoo.co.jp##.promoBanner
 tysswh.com##img[onclick]
 up.taoseye.com##a[target="_blank"],[ontouchstart]
+video.laxd.com##.ad_area_bottom
+video.laxd.com##.ad_area_top
 video.sina.cn##section.Card_Mb16
 view.inews.qq.com##[class*="bottom-bar"]
 view.inews.qq.com##[class*="downloader-"]
@@ -5862,6 +5868,9 @@ xchina.co,xchina.fun,xchina.tv##div.media:has(a > img[src*="xchina"])
 xchina.co,xchina.fun,xchina.tv##div[class*="jquery-modal"]
 xchina.co,xchina.fun,xchina.tv##div[class*="modalAd"]
 xchina.co,xchina.fun,xchina.tv##div[style*="width: 300px;"][style*="height: 455px;"]
+xclub101.pro###im-spot
+xclub101.pro##.sp-holder
+xclub101.pro##[onmouseup="setRealHref(event)"][rel="nofollow"]
 xdf.cn##[class^="bottom_ad"]
 xgroovy.com##.adsbyexoclick
 xgroovy.com##.fluid-b
@@ -6718,6 +6727,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||jmcomic*/media/albums/*?$media
 ||jmcomic*/templates/frontend/airav/js/*1_2df4.js
 ||jnmami.cn^
+||js-agent.newrelic.com^$third-party
 ||js.123ylk3q.cc^
 ||js.allporncomic.com^
 ||js.bninocerossrhino.com^
