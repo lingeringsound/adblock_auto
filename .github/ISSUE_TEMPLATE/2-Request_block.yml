@@ -1,0 +1,51 @@
+name: 拦截请求
+description: 反馈你想要拦截的网站或者内容。
+labels: ["拦截请求"]
+assignees: 
+  -  lingeringsound
+body:  
+  - type: input
+    id: targetbolckwebsite
+    attributes:
+      label: 网址
+      description: 输入要拦截的网址
+      placeholder: ……
+    validations:
+      required: true
+
+  - type: textarea
+    id: blockotheradd
+    attributes:
+      label: 补充说明
+      placeholder: 补充描述你的要求
+    validations:
+      required: false
+
+  - type: dropdown
+    id: blocklists
+    attributes:
+      label: 你使用的是那个规则?
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: false
+
+  - type: dropdown
+    id: adblocker
+    attributes:
+      label: 使用的拦截器
+      description: |
+        就是你在什么应用或者拓展里使用规则
+      options:
+        - Via
+        - Xbrowser(X浏览器)
+        - 嗅觉浏览器
+        - B仔浏览器
+        - Rians浏览器
+        - AdGuard(拓展)
+        - uBlock(拓展)
+    validations:
+      required: false
+

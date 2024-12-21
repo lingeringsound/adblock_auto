@@ -1,0 +1,51 @@
+name: 规则误杀
+description: 请在下面反馈使用规则出现误杀的问题。
+labels: ["规则误杀"]
+assignees: 
+  -  lingeringsound
+body:
+  - type: dropdown
+    id: adblocker
+    attributes:
+      label: 使用的拦截器
+      description: |
+        就是你在什么应用或者拓展里使用规则
+      multiple: true
+      options:
+        - Via
+        - Xbrowser(X浏览器)
+        - 嗅觉浏览器
+        - B仔浏览器
+        - Rians浏览器
+        - AdGuard(拓展)
+        - uBlock(拓展)
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: blocklists
+    attributes:
+      label: 你使用的是那个规则?
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: blocklistothers
+    attributes:
+      label: 其他规则
+      placeholder: 如果上面没有选择其他规则可以忽略……
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 问题描述
+      description: | 
+        输入你在使用过程中出现的问题      
+    validations:
+      required: true

@@ -1,0 +1,43 @@
+name: 未来期望
+description: 请在下面说出你对规则未来有什么期望。
+labels: ["未来期望"]
+assignees: 
+  -  lingeringsound
+body:
+  - type: dropdown
+    id: adblocker
+    attributes:
+      label: 使用的拦截器
+      description: |
+        就是你在什么应用或者拓展里使用规则
+      multiple: true
+      options:
+        - Via
+        - Xbrowser(X浏览器)
+        - 嗅觉浏览器
+        - B仔浏览器
+        - Rians浏览器
+        - AdGuard(拓展)
+        - uBlock(拓展)
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: blocklists
+    attributes:
+      label: 你使用的是那个规则?
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 预期描述
+      description: | 
+        输入你对规则未来的期望      
+    validations:
+      required: true
