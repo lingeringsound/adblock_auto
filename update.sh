@@ -36,7 +36,7 @@ sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_Chinese.txt
 sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_mobile.txt" '^\|\||^#'
 sort_web_rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_mobile.txt"
 sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/easylist_adservers_popup.txt" '^\|\|'
-sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/AdGuard_Base_filter_dns.txt" '^\|\||^\/|^\.'
+sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/AdGuard_Base_filter_dns.txt" '^\|\||^\/[A-Za-z]|^:\/\/|^_|^\?|^-|^=|^:|^,|^&|^\.'
 #去除转换popup选定器，直接改用||域名^的形式。
 wipe_fiter_popup_domain "${Sort_Folder}/lite/easylist_adservers_popup.txt"
 wipe_fiter_popup_domain "${Sort_Folder}/lite/AdGuard_Base_filter_dns.txt"
@@ -139,6 +139,8 @@ fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" ',_____,domain=' ',domain='
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"
+#移除正则表达式，修复Via卡顿
+Remove_regex_Rules_for_via "${Rules_Folder}/adblock_auto_lite.txt"
 #去除badfilter冲突规则
 wipe_badfilter "${Rules_Folder}/adblock_auto_lite.txt"
 #去除Via不支持的规则

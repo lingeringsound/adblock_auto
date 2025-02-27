@@ -411,6 +411,13 @@ local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#
 echo "${lite_content}" > "${file}"
 }
 
+#在Via支持正则表达式前先移除正则表达式，减少报错和资源占用。
+function Remove_regex_Rules_for_via(){
+local file="${1}"
+test ! -f "${file}" && return
+busybox sed -i -E '/\\\//d;/\\\./d;/\\\?/d' "${file}"
+}
+
 
 #精简规则 去除Ublock不支持的规则
 function lite_Uadblock_Rules(){
