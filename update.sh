@@ -36,7 +36,7 @@ sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_Chinese.txt
 sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_mobile.txt" '^\|\||^#'
 sort_web_rules "${Sort_Folder}/lite" "${Download_Folder}/Adguard_mobile.txt"
 sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/easylist_adservers_popup.txt" '^\|\|'
-sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/AdGuard_Base_filter_dns.txt" '^\|\||^\/[A-Za-z]|^:\/\/|^_|^\?|^-|^=|^:|^,|^&|^\.'
+sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/AdGuard_Base_filter_dns.txt" '^\|\||^\/[A-Za-z0-9?]|^:\/\/|^_|^\?|^-|^=|^:|^,|^&|^\.'
 #去除转换popup选定器，直接改用||域名^的形式。
 wipe_fiter_popup_domain "${Sort_Folder}/lite/easylist_adservers_popup.txt"
 wipe_fiter_popup_domain "${Sort_Folder}/lite/AdGuard_Base_filter_dns.txt"
