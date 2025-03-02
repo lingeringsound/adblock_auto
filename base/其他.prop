@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 4h0fdbMEFOH40t3a0IZjjg
+! Checksum: 1VOYUKkSPMHLHCc4HjqJlA
 ! Title: 自用去广告Adblock规则
-! Version: 20250301170501
-! Last modified: 2025-03-01 17:05:02
-! Total Count: 8056
+! Version: 20250302143055
+! Last modified: 2025-03-02 14:30:55
+! Total Count: 8062
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4851,6 +4851,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://rou*/_next/static/chunks/pages/home-$~third-party
 ://s*.nccontrol.com.cn$third-party
 ://s.*srv.com/*.php?idzone=$third-party
+://sexporn*/what.py?
 ://shiold*.zhaosw.com$script
 ://static.*xx.com/static/js/a*.js?v=$third-party
 ://tj.*.icu/*.js?17$script,third-party
@@ -6069,6 +6070,8 @@ pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfi
 pornbest.com,pornbest.net,pornbest.org,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##img[src*="/images/friend"]
 pornboss.org###menu-menue-1 > li:has(> a[href^="http://toplist.raidrush.ws/"])
 pornclipsguru.com##.under_video
+porncloud.cc###spot-player
+porncloud.cc,xclub101.pro##.sp-holder
 porndoe.com##[class^="-banner"],[href*="//ads"],[href^="/redirect"]
 porndoe.com##div.-ad-top-wrap
 porndrake.com##.sicce-300x250
@@ -6196,6 +6199,10 @@ search.yahoo.com,yahoo.com##.searchCenterTopAds
 send-anywhere.com###gpt-container
 sewen.buzz,sewen.com,sewen.life,sewen.net,sewen.top,sewen.xyz,sewen4.top,sewen7.com,sewen7.life,sewen7.top,sewen8.life,sewen8.net,sewen8.top##img[src*=".xyz/"][src*="16"],[style*="bottom: 0px; left: 0px; z-index:"][style*="100vw;"],.hotcmd-box,.links-top,table[border="1"]
 sexmod.pw,md91av.top,twavbook999.cc,siaoredbook.cc,mitaonuhai.cc,gipinreba.cc,r18lumod.cc##[class*="topads"],[class*="tads"],[class*="bottomads"],[class*="bads"],[class*="leftd"],[class*="rightd"],a[target="_blank"][href][onclick]
+sexporn.hair##.constitute
+sexporn.hair##.growth.mineral
+sexporn.hair##.treatment
+sexporn.hair##iframe[src^="//cliv"]
 sexygirl.cc##.overflow-auto:has(script[src$="/invoke.js"])
 sexygirl.cc##.overflow-auto:has(script[src*="/ad-provider.js"])
 sexygirl.cc##.overflow-auto:has(script[src*="jads"])
@@ -6618,7 +6625,6 @@ xchina.co,xchina.fun,xchina.tv##div[class*="jquery-modal"]
 xchina.co,xchina.fun,xchina.tv##div[class*="modalAd"]
 xchina.co,xchina.fun,xchina.tv##div[style*="width: 300px;"][style*="height: 455px;"]
 xclub101.pro###im-spot
-xclub101.pro##.sp-holder
 xclub101.pro##[onmouseup="setRealHref(event)"][rel="nofollow"]
 xdf.cn##[class^="bottom_ad"]
 xgroovy.com##.adsbyexoclick
