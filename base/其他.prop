@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: /RILuf3LBu5AoAQ1xBgEcg
+! Checksum: lely61hqLIyMZxR/JGcIkA
 ! Title: 自用去广告Adblock规则
-! Version: 20250304171001
-! Last modified: 2025-03-04 17:10:01
+! Version: 20250305164516
+! Last modified: 2025-03-05 16:45:16
 ! Total Count: 8081
 ###ADbox
 ###Ad-Container
@@ -6338,8 +6338,8 @@ so.com##li[data-id^="cm_display_init_text_"]
 so.douyin.com##.card-list > .card-item:has(.ad-label)
 so.douyin.com##.card-list > .card-item:has(.ad-tag)
 so.douyin.com##.card-list > .card-item:has(div[data-ad-label="true"])
-so.douyin.com##.card-list > .card-item:has(div[data-test-extra*="_ad"])
-so.douyin.com##.card-list > .card-item:has(div[data-test-extra*="ad_"])
+so.douyin.com##.card-list > .card-item:has(div.SEARCH_CARD_CONTAINER[data-test-extra*="ad_"])
+so.douyin.com##.card-list > .card-item:has(div.SEARCH_CARD_CONTAINER[data-test-extra*="ecom_columns_goods"])
 socolive.eseht.com##^script:has-text(Math.floor)
 socolive.eseht.com##div.wrap > *:has(.col-sm-3.col-xs-3)
 socolive.eseht.com##script:has-text(Math.floor)
