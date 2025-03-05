@@ -141,6 +141,9 @@ bilibili\.com##\.is-rcmd[[:space:]]>[[:space:]]div:only-child$
 ^\|\|cos\.ap-\*\.myqcloud\.com\^\$third-party$
 ! 用不到的广告
 ^\|\|.*\.(deegi|gofe|guesswhat|huro|jemo|looki|loopa|looty|luro|lychee|remi|rooki|selor|sepo|sife|tegro|wemakebest)news\.com\^$
+! 抖音搜索
+^so\.douyin\.com##\.card-list[[:space:]]>[[:space:]]\.card-item:has\(div\[data-test-extra\*\=\"_ad\"\]\)$
+^so\.douyin\.com##\.card-list[[:space:]]>[[:space:]]\.card-item:has\(div\[data-test-extra\*\=\"ad_\"\]\)$
 
 
 
