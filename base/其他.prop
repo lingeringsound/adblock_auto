@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: asObja4hRAcVMf9P/Pcntw
+! Checksum: ojaePIuf1DK690r0QywHQw
 ! Title: 自用去广告Adblock规则
-! Version: 20250308202101
-! Last modified: 2025-03-08 20:21:01
-! Total Count: 8088
+! Version: 20250310171128
+! Last modified: 2025-03-10 17:11:28
+! Total Count: 8104
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -603,6 +603,10 @@
 ##.ad-warning
 ##.ad-wireframe
 ##.ad-wireframe-wrapper
+##.ad-wrap:not(#google_ads_iframe_checktag)
+##.ad-wrap_wallpaper
+##.ad-wrapp
+##.ad-wrapper
 ##.ad-zone:not(.textads)
 ##.ad.noadmo
 ##.ad.none
@@ -716,6 +720,10 @@
 ##.adh5
 ##.adheader403
 ##.adiframe
+##.adlist
+##.adlist1
+##.adlist2
+##.adlistcss
 ##.adnz-ad-placeholder
 ##.adpc
 ##.adpopup
@@ -3176,6 +3184,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/o.js$third-party
 .com/piao/*.js?$~third-party
 .com/redirect-zone/
+.com/rr/*?rr=$third-party
 .com/rs/to/*?n=cbh&p=false&t=*$third-party
 .com/s/*.xc$third-party
 .com/sad*.js?17$third-party
@@ -3894,6 +3903,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /aj*.php?pid=*&n=$third-party
 /ane-popup-1/ane-popup.js$script
 /ane-popup-banner.js$script
+/api.php/timming/index?t=
 /api/*/g?kyurl=http*&refer=&pid=*=*&callback=$third-party
 /api/LM/*placeUUID=$third-party
 /api/LM/Report*placeUUID=$third-party
@@ -3972,6 +3982,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /dynamiccsad?
 /dynamicvideoad?
 /dynanews/ad-
+/e/public/ViewClick/
+/e/public/onclick/
 /earn.php?z=$popup,subdocument
 /emailads/*
 /embed-ad-
@@ -4705,6 +4717,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
 7mmtv.sx,91porn.best,adultdeepfakes.com,kemono.su,missav.ai,missav.city,missav.com,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex,simplyhentai.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,camhub.cc,camhub.world,fuckit.cc,thothd.com,watchporn.to#@#.ads-iframe
+91jav1.com##.ad-wrap
 91porn.best##div[style*="center"]:has(script[src$="/ad-provider.js"])
 91porn.best,pornbest.com,pornbest.net,pornbest.org,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##div.row.links
 91porn.com###videodetails > div:has(> a[href][target="_blank"])
@@ -4911,6 +4924,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/api/blockdata$domain=sohu.com
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
+@@/image/20*-*-*/*/$domain=coolapk.com|kuaikanmanhua.com
 @@/index.m3u8
 @@/js/popup.js?advertiser=popup$domain=netflav.com
 @@/matomo.js$domain=github.com|trcet77.com
@@ -5331,6 +5345,7 @@ cin.ac##a[href^="https://s.zlinkc.com"]
 cin.cx##body > iframe[style*="z-index: 2147483647"]
 ciyuanshe6.com##body > div[id] > div[class="fixed"],body > div[id] > div[class*="_"],[style=" top: 0; left: 0; width: 100%; height: 120px; z-index: 9999;"]
 cj.sina.cn,finance.sina.cn##.carousel
+cnki.com.cn,jms18.com##.adList
 cnxiangyan.com##.sptpAD
 colamanhua.com,colamanga.com##[class$="i"][style*="bottom"],[class$="h"][style*="bottom"],[class$="_b"],[class$="c"][style*="bottom"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"]
 colamanhua.com,colamanga.com#@#.ADFooter
@@ -7394,6 +7409,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||guchihyfa.pro^
 ||guesswhatnews.com^
 ||guifudi.com^
+||guomanwang.com/poster/zj-di.js
 ||gxxtky.com/js/p.js
 ||gyqifa.com^$third-party
 ||gz-yunxi.com^
