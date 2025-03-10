@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ojaePIuf1DK690r0QywHQw
+! Checksum: ySHIoLdc2ujhU11IIUz2MA
 ! Title: 自用去广告Adblock规则
-! Version: 20250310171128
-! Last modified: 2025-03-10 17:11:28
-! Total Count: 8104
+! Version: 20250311000737
+! Last modified: 2025-03-11 00:07:37
+! Total Count: 8112
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3167,6 +3167,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/dh/*/*.gif$third-party,image
 .com/dl/*/*.gif$third-party,image
 .com/dl/*/1.jpg$third-party,image
+.com/ds*_t2.js?$third-party
+.com/ds*_t3.js?$third-party
+.com/ds*_t9.js?$third-party
 .com/ev/*?type=events&event=
 .com/ev/*?type=impressions
 .com/facaishen.js
@@ -4756,6 +4759,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.aiqu*com/da/$script,~third-party
 ://*.aj25*.bid/*.js$third-party
 ://*.biquge*/mm.js
+://*.com/*.*.*?17$third-party,domain=xiuluodm.com
 ://*.fcdm233.*/piao/$script
 ://*.hh-tv.*/js/footer.js
 ://*.ijjxs.*/m.js
@@ -6681,6 +6685,8 @@ xiakexsw.com##a[href^="/"][rel="nofollow"]
 xiakexsw.com##script + div[style]
 xiashuyun.com##[id^="downapp"]
 xiashuyun.com##div#navdown
+xiuluodm.com##[id^="swipercontainer"]
+xiuluodm.com##h5[id][style]:not([class])
 xiuren5.com,xgmn02.com##a[href] > img[src$=".gif"]
 xiyuwx.com##div:not([id]):not([class]):not([style]):has(a[href="javascript:void(0)"])
 xn--*.*/ins/js/*16$third-party,script
@@ -6880,6 +6886,7 @@ yydstv.net##body > div[class][style]
 yydy.cc##a[onclick^="window"] > img[id][width="1"],a[style*="width:99%"][style*="z-index:100000"][style*="block"]
 yyjnhg.com##.container.text-center
 yz.m.sm.cn##[id^="dl-banner-"]
+zdic.net##.topslot_container
 zgpingshu.com##a[href^="http://cy.aiboxs.cn/"][target="__blank"]
 zhaosw.com##div.recommend
 zhazhijiav.com##a[class^="propa_bottom"],img[style="width:100%;height:auto;margin-bottom:2px;max-height:100px"],img[style="width:100%;height:auto;margin-bottom:2px;"]
@@ -7656,6 +7663,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||merwds.qwuidbn.com^$third-party
 ||miaozhen.com^$third-party
 ||mingrentea.com/mb/meng/$script
+||mip.mgppos.com/honeybadger/*.gif
 ||missav.ai/pop?url=
 ||missav.com/pop?url=
 ||missav.ws/pop?url=
