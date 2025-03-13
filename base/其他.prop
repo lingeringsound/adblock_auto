@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: xOSbuqcOb44dJeKPCcqn+w
+! Checksum: IE2jfCuHQSwHHZ40oV7A9Q
 ! Title: 自用去广告Adblock规则
-! Version: 20250311134017
-! Last modified: 2025-03-11 13:40:18
-! Total Count: 8114
+! Version: 20250313140548
+! Last modified: 2025-03-13 14:05:48
+! Total Count: 8125
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2024,6 +2024,7 @@
 ##a > img.lazy[class*="imgad"]
 ##a > img[src^="/apijs/image/"]
 ##a#ad-link
+##a.checkNum[target="_blank"] > img[data-src]
 ##a.copy[onclick] > picture
 ##a.downurl[target="_blank"][referrerpolicy="no-referrer"]
 ##a[alt="545新葡京"][target="_blank"]
@@ -2955,6 +2956,7 @@
 ##topadblock
 ##ul > li > a[href*=".pojuko.buzz/"]
 ##ul > li > a[href][data-id][data-type][data-position][target="_self"]
+##ul.grid.text-sm
 ##ul.md\:grid-cols-1 > li > a.checkNum
 ##ul[style="margin:0px; padding:0px;overflow:hidden;width:100%;"]
 ##video[poster^="https://code.yykalopyy.com/"]
@@ -5457,6 +5459,13 @@ facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="complementary"] > div[class] > div[class] > div[class] span > div > div:not([aria-label]):not([data-visualcompletion]):has(> div[class] > div[class] div[class] > a[href^="https://l."][href*="facebook.com/l.php?u="][target="_blank"])
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[style="max-width: 390px; min-width: 190px;"]:has(a[href^="/ads/"])
 facebook.com,nuvid.com,up.woozooo.com#@#script:not([src]) + style + div[id]:not([class]):not([style])
+familydoctor.com.cn###advance_swt_bottom_image
+familydoctor.com.cn###advance_swt_middle_image
+familydoctor.com.cn###advance_swt_top_image
+familydoctor.com.cn##.advs
+familydoctor.com.cn##.js-adv-close
+familydoctor.com.cn##div[class="__zxcv"]
+familydoctor.com.cn##div[style="z-index: 10; position: relative; bottom: 0px; left: 0px; width: 100%; text-align: center; overflow: hidden;width:100%;"]
 fanyi.baidu.com##.app-bar
 fanyi.baidu.com##.bottom-intro
 fanyi.baidu.com##[class^="jifeng-"]
@@ -5467,6 +5476,7 @@ fapcat.com##.spot-underplayer
 fappeningbook.com##.wp_xsize_class
 fappeningbook.com##a[href="https://w1.fappeningbook.com/"]
 fappeningbook.com##div.wide-place
+fcdm23.com##ul.ttnavbar
 fcwei.com##div:has(> [style*=".myqcloud.com/img/"])
 fcwei.com##script + [id$="_rfymty"]
 finance.sina.cn##[data-position*="openapp"]
@@ -7435,6 +7445,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||hdmp4.cc/js/foot.js
 ||hdpornfree.xxx/sup/*.js
 ||hdwiey.com^
+||hdyoushi.com/*/*.js?v=1.0
 ||hetang123.com/assets/public/$script
 ||hffxc.com^$third-party,script
 ||hhdus.com^$third-party
