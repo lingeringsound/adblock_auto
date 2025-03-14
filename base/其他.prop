@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 8qbXmAZb74icQBS45b1zcw
+! Checksum: pF4hfKfewitAm62JZAvpzw
 ! Title: 自用去广告Adblock规则
-! Version: 20250313231556
-! Last modified: 2025-03-13 23:15:56
-! Total Count: 8127
+! Version: 20250314174502
+! Last modified: 2025-03-14 17:45:02
+! Total Count: 8136
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -535,6 +535,7 @@
 ###top_ad
 ###topstuff > #tads
 ###total_banner
+###txt + br + a[href^="javascript:window.open(atob"]
 ###typead1
 ###typead2
 ###typead3
@@ -975,6 +976,7 @@
 ##.center-ad
 ##.center-div.sponsor
 ##.chapter-appads
+##.chapter-page-btn > a[href^="javascript:window.open(atob"]
 ##.colBoxAdframe
 ##.commentads
 ##.commercial-unit-mobile-bottom
@@ -3182,9 +3184,11 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/float_down.js?17$third-party
 .com/gu1ding.js$script,~third-party
 .com/happyxia.js
+.com/hm/*?*=*$third-party
 .com/hx/*/*.gif$third-party,image
 .com/in/multy$third-party
 .com/j/*$script,third-party
+.com/jquery.min.js?*=*=$third-party,domain=junhun520.app|junhun520.com|junhun520.net
 .com/js/gg.js$script
 .com/js/xuanfu.js$script
 .com/k/*$script,third-party
@@ -5648,6 +5652,7 @@ hotntubes.com##li.adcls_small
 hsex.buzz,hsex.com,hsex.icu,hsex.live,hsex.men,hsex.party,hsex.tv##iframe[data-src^="//go."]
 hsg001.com,hsg003.com,hsg004.com##div[style*="center"]:has(.lazy-load)
 hsg003.com##img[src^="data:"][data-original$=".gif"]
+http*://*/resolve?$domain=junhun520.net|junhun520.com|junhun520.app
 huangsexiaoshuo.net##div[id]:not([class]):has(div[id]:not([class]):not([styles]))
 huangsexiaoshuo.net##div[id]:not([class]):not([style]):has(img[src*=".xyz"])
 huaren.us##.ad-page-setting
@@ -5791,6 +5796,9 @@ jmshuwu.net##^script:has-text(navigator)
 jmshuwu.net##script:has-text(navigator)
 joporn.online##[data-zone-id][data-teaser-id]
 joporn.online##[id][class]:not([style]):has([data-zone-id][data-teaser-id])
+junhun520.app,junhun520.com,junhun520.net##div.hd_bottom
+junhun520.app,junhun520.com,junhun520.net##div.hd_top
+junhun520.net,junhun520.com,junhun520.app##a[href^="javascript:window.open(atob"]
 justdial.com###gptAds2
 justdial.com###gptAdsDiv
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
@@ -7812,6 +7820,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||redirectlinker.com^$popup
 ||redirectvoluum.com^$popup
 ||reminews.com^
+||resevaex.weitietl.com^
 ||rexsrv.com^
 ||rfeablduda.com^
 ||riamiavid.com^
