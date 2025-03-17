@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Vm7Cm3n3ikgqKn6Czq1lVw
+! Checksum: rt90BoBNum3qtTYRh+VxyA
 ! Title: 自用去广告Adblock规则
-! Version: 20250316181302
-! Last modified: 2025-03-16 18:13:02
-! Total Count: 8156
+! Version: 20250317103115
+! Last modified: 2025-03-17 10:31:15
+! Total Count: 8140
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4299,7 +4299,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /os230718.oss-
 /other/ads/*
 /owa.NativeAdList.js$domain=outlook.live.com
-/pagead.js$domain=d3ward.github.io
 /pagead2.
 /picture/ad/*
 /pictureads/*
@@ -4769,8 +4768,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.*.*:*/sc/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
 ://*.*.*:*/vh*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
 ://*.*.*:*/vj*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
-://*.*.xyz/*/*-*-*-*/$third-party
-://*.*.xyz:*/*/*-*-*-*/$third-party
+://*.*.xyz/*/*-*-*-*/$third-party,~media,~stylesheet,~image
+://*.*.xyz:*/*/*-*-*-*/$third-party,~media,~stylesheet,~image
 ://*.*/*.js$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqvvxg8.cc|rz2024b.com|wolaidu1.com|bqq999.cc
 ://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|rz2024b.com|wolaidu1.com
 ://*.*/*mk?ssid=$third-party
@@ -4964,6 +4963,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/videos/*$domain=pornhub.com|pornhub.org|pornhub.net|pornhubthbh7ap3u.onion
 @@/wp-content/plugins/blockalyzer-adblock-counter/*$image,script,~third-party,domain=~gaytube.com|~pornhub.com|~pornhubthbh7ap3u.onion|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~xtube.com|~youjizz.com|~youporn.com|~youporngay.com
 @@1anime.me/template/conch/asset/js/hlhtml.
+@@://*.*.xyz/*/*-*-*-*.ts
 @@://*.*.xyz/*/*-*-*-*/$third-party,domain=njav.xyz
 @@://*.*.xyz/videos/*-*-*-*/
 @@://*/static/ad/main.js
@@ -5404,8 +5404,6 @@ cupfox.app##[class^="jsx-"] > img[src$=".gif"]
 cupfoxappp.com##table:has(.cvbcvxvb)
 czzytv77.com##.stui-pannel + table
 d1bzw.com##[id="appurl"],[id="bbsurl"]
-d3ward.github.io##.textads
-d3ward.github.io,mtianqi.eastday.com##.adbox
 daftsex.com,pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,spankbang.party,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com##a[href*="?ats="]
 danmutv.com##.adlists
 danmutv.com##body > div[class][style*="bottom:"]
@@ -6035,6 +6033,7 @@ msn.cn,msn.com##[data-t*="NativeAd"]
 msn.cn,msn.com##[data-t*="openInStartApp"]
 msn.cn,msn.com##div.actiontray-container
 msn.cn,msn.com##div.consumption-river
+mtianqi.eastday.com##.adbox
 mtianqi.eastday.com##.lfyinliu
 mtianqi.eastday.com##.nzxtit
 mtianqi.eastday.com##.tbad
@@ -6085,7 +6084,6 @@ outlook.live.com##div[data-app-section="MessageList"] div[role="listbox"] .custo
 outlook.live.com##main[aria-hidden] > div[class] > div[style] > div[class][style="position: absolute; left: 0px; top: 0px; height: 80px; width: 100%;"]:has(> div[class] > div[role="group"] > #OwaContainer)
 pan.baidu.com##.share-error-ad
 papalah.com##.banner_m_fixed
-partner.ads.js$domain=d3ward.github.io
 pconline.com.cn###JBestRecomm
 pconline.com.cn###JmallLazy
 pconline.com.cn###art-bottom-nq
@@ -7034,7 +7032,6 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adblck.com^$third-party
 ||adda.ljhhhhrt.top^
 ||addthis.com^
-||adfox.yandex.ru^$domain=d3ward.github.io
 ||adfsda005.xyz^$third-party
 ||adfstat.yandex.ru^
 ||adjsimg.fun^
@@ -7043,9 +7040,6 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adnewnc.app.autohome.com.cn^
 ||adprosrv.com^
 ||adproxy.autohome.com.cn^
-||ads$domain=d3ward.github.io
-||ads-api.tiktok.com^$domain=d3ward.github.io
-||ads-api.twitter.com^$domain=d3ward.github.io
 ||ads-dev.pinterest.com^
 ||ads-servebom-com.cdn.ampproject.org^
 ||ads-sg.tiktok.com^
@@ -7103,19 +7097,12 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||adsxtits.com^
 ||adsxtits.pro^
 ||adsxyz.com^
-||adtech.yahooinc.com^$domain=d3ward.github.io
 ||adtimaserver.vn^
 ||adtrue.com^
 ||adultfriendfinder.com^$third-party
-||advertising-api-eu.amazon.com^$domain=d3ward.github.io
-||advertising.apple.com^$domain=d3ward.github.io
 ||advertising.twitter.com^
-||advertising.yahoo.com^$domain=d3ward.github.io
-||advertising.yandex.ru^$domain=d3ward.github.io
-||advice-ads.s3.amazonaws.com^$domain=d3ward.github.io
 ||adxadserv.com^$third-party
 ||afenjkopoqwm.com^$third-party
-||afs.googlesyndication.com^$domain=d3ward.github.io
 ||agdcdf.live^
 ||agdcdf.shop^
 ||agilesrv.com^
@@ -7381,7 +7368,6 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||exoclick.com^$third-party
 ||exosrv.com^
 ||exrtbsrv.com^
-||extmaps-api.yandex.net^$domain=d3ward.github.io
 ||eypev.com^$third-party
 ||eyu2017.xzy^
 ||fanza.cc^$third-party
@@ -7413,7 +7399,6 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||gadscc.xyz^
 ||gdqrcloud.com/adBanner
 ||ge.zacuin.com^
-||gemini.yahoo.com^$domain=d3ward.github.io
 ||geo.yahoo.com^
 ||getcdnpix.name^
 ||gibzz.xyz^
@@ -7771,7 +7756,6 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||padmp4.cc/js/foot.js
 ||padmp4.com/js/foot.js
 ||pagead2.googlesyndication.com^
-||partnerads.ysm.yahoo.com^$domain=d3ward.github.io
 ||pavfazbwiap.com^
 ||pcd.autohome.com.cn^
 ||pcmx.autohome.com.cn^
