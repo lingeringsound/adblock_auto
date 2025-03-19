@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: pkPt2Xcq3p1wzq+qu9C4/A
+! Checksum: ihUAejvUFalinlPVOfT5og
 ! Title: 自用去广告Adblock规则
-! Version: 20250319213611
-! Last modified: 2025-03-19 21:36:11
-! Total Count: 8184
+! Version: 20250319233715
+! Last modified: 2025-03-19 23:37:15
+! Total Count: 8185
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1714,6 +1714,7 @@
 ##.push-slider[key^="clicked_cpt"]
 ##.push-top-container > .push-top[key]
 ##.qgg_popup_close2
+##.reader-main > center > [style^="color: red;"]
 ##.readtj
 ##.reclamTable
 ##.rectangle_ad
@@ -2394,7 +2395,6 @@
 ##body > embed[id][src*="://"][src$="="]
 ##body > embed[id][src^="https:///"]
 ##body > script + *[id][class][classname]
-##body > script + .app
 ##body > script + .app + #htmlContenthtml
 ##body > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##body#app.pc.mobile
@@ -4821,6 +4821,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*69hsw.*/static/69shuba/69.js$script
 ://*banzhu*/js/cdn.js$script,~third-party
 ://*banzhu*/js/js4.js?$script,~third-party
+://*biqu*/m.js
 ://*biquge*/m.js
 ://*biquge*/mm.js$script
 ://*dianjiangxin.*/js/mc.js?
