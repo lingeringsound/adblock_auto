@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Zt8C6wv9y2vJlh0sftygVA
+! Checksum: yowAIpg6nlzc90eQHRPa5w
 ! Title: 自用去广告Adblock规则
-! Version: 20250319114216
-! Last modified: 2025-03-19 11:42:16
-! Total Count: 8167
+! Version: 20250319121320
+! Last modified: 2025-03-19 12:13:20
+! Total Count: 8173
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -886,6 +886,7 @@
 ##.app_tj
 ##.appel > div[id][class][style="position: fixed; bottom: 26%; z-index: 19999 !important; right: 2px;"]
 ##.appguide-wrap
+##.apps-v4 > .link_url
 ##.article > .static-container-4 > .media
 ##.article > .static-container-4 > .media + .recommendation_widget
 ##.article-advert-container
@@ -904,6 +905,7 @@
 ##.banner_header
 ##.banners-middle
 ##.banners_block
+##.bc-banner > #adDiv
 ##.bdads
 ##.belowMastheadWrapper
 ##.big-ads
@@ -1669,6 +1671,7 @@
 ##.parade-ad-container
 ##.pb-slot-container
 ##.phone-ads
+##.phone-only:not([id])
 ##.placeholder-ad
 ##.play_list_adbox
 ##.player + .sponsor
@@ -2429,6 +2432,7 @@
 ##div.flex.justify-center > ins[id]
 ##div.g-list > ul > li
 ##div.g-slide > div[class^="swiper-"]
+##div.layout-box.clearfix > .app
 ##div.links-top > ul.icon-list
 ##div.nv_blist_cell[onclick^="window.open("]
 ##div.p > a > img[style*="width:100%;"]
@@ -4945,6 +4949,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://vlets.*.shop$third-party
 ://vlets.*.xyz$third-party
 ://www.nunuyy*/xx/*.js
+://xchina.*/plugins/sweetAlert
+://xchina.*/scripts/push*.js
 ://xxsmad*.com
 ://yin*.zgpingshu.com
 ://yunyunyun$domain=hhh806.com
