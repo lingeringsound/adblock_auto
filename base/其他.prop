@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: b1hfmpTkLqCeEy6sL/gEhA
+! Checksum: 2Fri6lDg+1kIUQFX7Ys5tQ
 ! Title: 自用去广告Adblock规则
-! Version: 20250319181812
-! Last modified: 2025-03-19 18:18:12
-! Total Count: 8175
+! Version: 20250319190933
+! Last modified: 2025-03-19 19:09:33
+! Total Count: 8185
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1013,6 +1013,7 @@
 ##.div_pop
 ##.dlad
 ##.dx-ad
+##.dx-recommend-icons
 ##.etn-ad-text
 ##.eu-advertisment1
 ##.event_fullscreen_gg_modal
@@ -2969,6 +2970,7 @@
 ##ul > li > a[href*=".pojuko.buzz/"]
 ##ul > li > a[href][data-id][data-type][data-position][target="_self"]
 ##ul.grid.text-sm
+##ul.mb-3.dx-recommend-icons--small
 ##ul.md\:grid-cols-1 > li > a.checkNum
 ##ul[style="margin:0px; padding:0px;overflow:hidden;width:100%;"]
 ##video[poster^="https://code.yykalopyy.com/"]
@@ -5941,6 +5943,7 @@ m.mtrend.cn##[class^="mingpai"]
 m.mtrend.cn##a[class][onclick^="window.open("]
 m.mtrend.cn##iframe[src]
 m.mtrend.cn##span[class][onclick^="window.open("]
+m.nfnews.com##body > .footer
 m.qidian.com##.bottom-nav
 m.qidian.com##.btn-primary-circle
 m.qidian.com##.dl-hongbao
@@ -6083,6 +6086,10 @@ news.yahoo.co.jp##a[data-cl-params*="cl_link:bnr_"]
 news.yahoo.co.jp##li > a[class^="sc-"][href^="https://rd.listing."]
 news.yahoo.com##.caas-iframe.fireplace
 news.yahoo.com,yahoo.com##.caas-da
+nfnews.com###audio-jump-tag
+nfnews.com##.toApp
+nfnews.com##div.bot_banner_area
+nfnews.com##div.commentwrap_to_app
 nianyin.com##img[onclick^="window.open"]
 nonfungerbils.com,pulsembed.eu,station-drivers.com#@#iframe[width="600"][height="90"]
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
@@ -6518,6 +6525,9 @@ sports.yahoo.com##div[id^="mrt-node-"][id$="-Ad"]
 sports.yahoo.com##div[id^="sda-"]
 sqruitu.com##embed[id][src*="://"][src*=".z"][src$="="]
 sspai.com###btn-call-app
+static.nfnews.com###z_box
+static.nfnews.com##.readmore_mask
+static.nfnews.com##a[onclick*="openApp"]
 sthuojia.net##div[id]:not([class]):not([style])
 stopgame.ru#@#iframe[width="240"][height="400"]
 sunshinewaay.cn##img[class$="BnImg"]
