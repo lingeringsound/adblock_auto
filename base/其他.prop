@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ihUAejvUFalinlPVOfT5og
+! Checksum: 5RE6Do21DkMt2YRqM5vxGw
 ! Title: 自用去广告Adblock规则
-! Version: 20250319233715
-! Last modified: 2025-03-19 23:37:15
-! Total Count: 8185
+! Version: 20250320105111
+! Last modified: 2025-03-20 10:51:12
+! Total Count: 8194
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1460,6 +1460,9 @@
 ##.list_box > li[id$="1"][class="iframe"]
 ##.list_box > li[id$="2"][class="iframe"]
 ##.loop_google_ad
+##.love_dom1
+##.love_dom2
+##.love_dom_t
 ##.m-ContentAd
 ##.m-ad
 ##.m-ad-brick
@@ -1800,6 +1803,8 @@
 ##.wc-adblock-wrap
 ##.wgAdBlockMessage
 ##.wide-ads-container
+##.widget > .tagcloud
+##.widget > .tagcloud_img
 ##.widget-ad
 ##.widget-ads
 ##.widget-sidebar-right-banner
@@ -3145,7 +3150,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn:8891/vj3/
 .co/ajd.php?pid=$third-party
 .co/ajtop.php?pid=*$third-party
-.com./$popup,domain=pornhub.com
 .com/*.txt$third-party,domain=1anime.me
 .com/*/ddd1.js
 .com/*/ddd2.js
@@ -4665,6 +4669,13 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 1dm9.cc,adm11.com,biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,jpbqg6.com,koweer.com,mjtt1.cc,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,xcmv.cc,yhdm28.com,yhdm9.cc,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.ccokdm.top##script:has-text(new Function)
 1dm9.cc,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,fcmv.cc,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,koweer.com,mjtt1.cc,xcmv.cc,yhdm28.com,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.cc,dm789.com,adm11.com##^script:has-text(new Date)
 1dm9.cc,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,fcmv.cc,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,koweer.com,mjtt1.cc,xcmv.cc,yhdm28.com,yinghuadm.cn,yinghuadongman.one,zhenbuka.cc,dm789.com,adm11.com##script:has-text(new Date)
+1kans.net##.content > div[id]:has(img[style^="width:100%"])
+1kans.net##.content > div[id]:has(textarea)
+1kans.net##^script:has-text(s.parentNode.insertBefore)
+1kans.net##body > div[id]:has(img[style^="width:100%"])
+1kans.net##script:has-text(s.parentNode.insertBefore)
+1kans.net,jmshuwu.net,jpbqg6.com##^script:has-text(navigator)
+1kans.net,jmshuwu.net,jpbqg6.com##script:has-text(navigator)
 1shorten.com,antiscan.me,app.stream2watch.sx,aylink.co,bets.pl,blogmado.com,cryptofuns.ru,dooseries.org,downturk.net,filma24.*,filmeserialehd.biz,flacdl.com,flashx.net,gdrivez.xyz,gitlink.pro,illink.net,kvador.com,manga168.com,modsfire.com,plawarn-manga.net,pornstash.in,privatemoviez.*,spaste.com,speed4up.com,tlin.me,tweetycoin.com,uploadflix.org,uploadraja.com,vezionlinefilme.com,xxx888porn.com##center > a[target="_blank"] > img
 1v1.lol,accuweather.com,aim400kg.com,airport-charles-de-gaulle.com,alison.com,ancient.eu,apornotube.net,appleinsider.com,appsious.com,barchart.com,bgr.in,bitsofco.de,bombhopper.io,businessinsider.com,citra-emu.org,clevelandclinic.org,crn.com,dcode.fr,defensesystems.com,delfi.lt,dvdsreleasedates.com,dynamicwallpaper.club,earlygame.com,ehow.com,elophant.com,epson-event-manager-utility.en.lo4d.com,ertyu.org,filehippo.com,flightglobal.com,forvo.com,getdaytrends.com,gifcandy.net,gingersoftware.com,gmanetwork.com,gradesaver.com,gtplanet.net,hiperdex.com,history.com,howchoo.com,ibc.org,icefilms.info,indiatvnews.com,infobyip.com,instadp.com,investopedia.com,ipaddress.com,javascripttutorial.net,jungle.lol,justfall.lol,lilymanga.com,macleans.ca,mangafox.la,martech.org,mobafire.com,movieweb.com,mtlblog.com,myhoustonmajic.com,mysqltutorial.org,mywebtimes.com,narcity.com,ndtv.com,nejm.org,newatlas.com,newsd.in,nytimes.com,nytimes3xbfgragh.onion,online-audio-converter.com,online-video-cutter.com,outsider.com,owfire.com,pairom.com,pdf.io,phoneky.com,picmix.com,pinkvilla.com,politico.eu,pornhd.com,prosettings.net,psdetch.com,pythontutorial.net,r3sub.com,ranker.com,readingrockets.org,saavn.com,samistream.com,satelite.io,servers.fivem.net,sexhoundlinks.com,soundclouddownloader.org,sqlservertutorial.net,supersextube.pro,techlusive.in,tempostorm.com,thehentaiworld.com,thelayoff.com,theurbanlist.com,thurrott.com,trafficland.com,tricksplit.io,tripadvisor.*,tvweb.com,updatestar.com,uptodown.com,whatsmydns.net,winporn.net,worldstarhiphop.com,worms.lol,www-technologyreview-com.cdn.ampproject.org,yokibu.com,zipi.com##body .ad
 2345.com##.pic:has(a[href^="http://g.wan."])
@@ -5832,8 +5843,6 @@ jinxiyue.com##a[onclick^="qinlintest"]
 jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,pornachi.com,porndude.wtf,orgazmax.com,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 jjdy8.cc##[id^="adWrapper"]
 jjdy8.cc##div[style]:not([class]):not([id]):has(a[href$=".php"])
-jmshuwu.net,jpbqg6.com##^script:has-text(navigator)
-jmshuwu.net,jpbqg6.com##script:has-text(navigator)
 joporn.online##[data-zone-id][data-teaser-id]
 joporn.online##[id][class]:not([style]):has([data-zone-id][data-teaser-id])
 junhun520.app,junhun520.com,junhun520.net##a[href^="javascript:window.open(atob"]
@@ -6037,10 +6046,10 @@ missav2.cfd##div.common_banner
 missav2.cfd##div.thumbnail.group:has([onerror="javascript:this.src="])
 mobile.baidu.com##div[class*="card-recommend"]
 mobile.baidu.com##div[class^="detail-banner-"]
+mobile.baidu.com,moonshot.cn,xzhao.vip#@#body > script + .app
 moegirl.org.cn##.n-button
 momxs.com##body > script + span
 momxs.com##div#inglestore
-moonshot.cn,xzhao.vip#@#body > script + .app
 mparticle.uc.cn##[class^="index"][class*="block"]
 mparticle.uc.cn##[class^="index"][class*="loading"]
 mparticle.uc.cn##[class^="index"][class*="moreContainerParent"]
