@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: V7R5b6I6iQNWWpaoxUkGZQ
+! Checksum: 3Ja8fkJBFcCDhjkpwmiExg
 ! Title: 自用去广告Adblock规则
-! Version: 20250320152119
-! Last modified: 2025-03-20 15:21:19
-! Total Count: 8199
+! Version: 20250321141123
+! Last modified: 2025-03-21 14:11:23
+! Total Count: 8208
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3241,6 +3241,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/zh/*/*.gif$third-party,image
 .com:*/*.js?v=17$third-party
 .com:*/*v=17$third-party,domain=dy131.org|6vdy.tv
+.com:*/1*.js?t=$third-party
+.com:*/11.js?t=$third-party
+.com:*/12.js?t=$third-party
 .com:*/adduv_*_*_*$third-party
 .com:*/angular.js?v=$third-party
 .com:*/api/v4/*?*=$third-party
@@ -3405,6 +3408,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/*.1375.json?$third-party
 .top/*.1485.json?$third-party
 .top/*_*_vw*sbjs?$third-party
+.top/*cx?17$third-party
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
 .top/iis.*.1*.json?$third-party
@@ -5018,6 +5022,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@p2p.$domain=tecms.net
 @@tangsanshu.net/js/comm.js
 @@ysjdm.net/template/conch/asset/js/hlhtml.
+@@|http*://*?$third-party,domain=www.pornhub.com
 @@||150075.com^$domain=tecms.net
 @@||adnxs.com/ast/static/$domain=outlook.live.com
 @@||ads.dainikbhaskar.com/AdTech/ads/ads.js
@@ -6935,6 +6940,10 @@ yandex.by,yandex.com,yandex.com.by,yandex.com.com,yandex.com.eu,yandex.com.fr,ya
 yandex.by,yandex.com,yandex.com.by,yandex.com.com,yandex.com.eu,yandex.com.fr,yandex.com.kz,yandex.com.net,yandex.com.ru,yandex.com.tr,yandex.com.ua,yandex.com.uz,yandex.eu,yandex.fr,yandex.kz,yandex.net,yandex.ru,yandex.tr,yandex.ua,yandex.uz,yandex.*##li[class*="_card"]:has(a[href^="https://yandex.com/search/_crpd/"])
 ydm.life##[onclick*="surnum"][style],img[style*="z-index:2147483647"][onclick*="javascript:"]
 yeduxiaoshuoo.com##div[class$="anye"][onclick$="anye()"]
+yeeach.com##.footer + div[id][class]:not([style])
+yeeach.com##^script:has-text(new RegExp)
+yeeach.com##noscript
+yeeach.com##script:has-text(new RegExp)
 yhdm6go.top##div[style$="background: #000;opacity:0.01;"]
 yhdmw.com##div.container > iframe[src][rel="nofollow"]
 yhpdm.com,yhdmp.net,d53px.com##[style*="bottom:"]
