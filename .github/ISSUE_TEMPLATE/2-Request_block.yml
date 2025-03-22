@@ -32,6 +32,18 @@ body:
     validations:
       required: false
 
+  - type: textarea
+    id: userangnt
+    attributes:
+      label: User-Agent 信息
+      description: |
+        可访问 [User-Agent检测网站](https://useragent.wcode.net) 查看。
+        示例格式：Mozilla/5.0 (Linux; Android 10; SM-G965F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Mobile Safari/537.36
+      placeholder: 输入你的 User-Agent 信息，例如通过网站获取……
+    validations:
+      required: false
+      pattern: ^Mozilla\/.*$
+
   - type: dropdown
     id: adblocker
     attributes:
