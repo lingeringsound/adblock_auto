@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ISjIRwg0je2HF4n/7u2Rxg
+! Checksum: eAnG1T2Rk3kz110SofKAgA
 ! Title: 自用去广告Adblock规则
-! Version: 20250321212944
-! Last modified: 2025-03-21 21:29:45
-! Total Count: 8212
+! Version: 20250322192011
+! Last modified: 2025-03-22 19:20:11
+! Total Count: 8217
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3521,10 +3521,12 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:*/d/*?t=
 .xyz:*/hm/$third-party
 .xyz:*/hm/*?*=*&*=$third-party
+.xyz:*/hm/*?x=$third-party
 .xyz:*/js.php?z=*=$third-party
 .xyz:*/js/*?x=$third-party
 .xyz:*/mnrt/*.json
 .xyz:30009/d/*?t=
+.xyz:30009/hm/$third-party
 .xyz:4022//SSDA/*-*-*/ttZ/$third-party
 .xyz:80*/sc/*?*=$third-party
 .xyz:80*/sc/*?is_not=$third-party
@@ -4855,6 +4857,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*huameihangkong.*/js/bottom.js
 ://*iyxdm.*/js/bottom_dk.js
 ://*jiezhong.*/js/f*.js$~third-party
+://*laiksw*/staticjs/min.js
 ://*lakanshu.*/layjs/$script,~third-party
 ://*missav*/pop?url=
 ://*mp4*/js/foot.js$script,~third-party
@@ -4956,6 +4959,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://s.*srv.com/*.php?idzone=$third-party
 ://sexporn*/what.py?
 ://shiold*.zhaosw.com$script
+://sobt*/Public/static/js/common.js
 ://static.*xx.com/static/js/a*.js?v=$third-party
 ://tj.*.icu/*.js?17$script,third-party
 ://tp.hchus*dmew.top$third-party
@@ -7537,6 +7541,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||hltfs.com/111*.js
 ||hltfs.com/222*.js
 ||hltfs.com^$script,third-party
+||hm.baidu.com/hm.gif
 ||hnert.okmwfq.xyz^
 ||hnr.dodhvug.cn^
 ||hnrte.ghkmoert.xyz^
