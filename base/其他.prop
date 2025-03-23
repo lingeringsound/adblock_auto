@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: jXdJKTvOyLiE98lcwsNmCA
+! Checksum: kEByN6LcqmGEX9kzsk3NeQ
 ! Title: 自用去广告Adblock规则
-! Version: 20250322201459
-! Last modified: 2025-03-22 20:14:59
-! Total Count: 8224
+! Version: 20250323182348
+! Last modified: 2025-03-23 18:23:49
+! Total Count: 8243
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -536,7 +536,6 @@
 ###top_ad
 ###topstuff > #tads
 ###total_banner
-###txt + br + a[href^="javascript:window.open(atob"]
 ###typead1
 ###typead2
 ###typead3
@@ -979,7 +978,6 @@
 ##.center-ad
 ##.center-div.sponsor
 ##.chapter-appads
-##.chapter-page-btn > a[href^="javascript:window.open(atob"]
 ##.colBoxAdframe
 ##.commentads
 ##.commercial-unit-mobile-bottom
@@ -1668,6 +1666,8 @@
 ##.nr_page + div[style="margin:0;padding:0;outline:0"]
 ##.nr_page > [style="width:100%;height:auto;min-height:150px;position:relative;display:block;"][id]
 ##.oko-adhesion
+##.page-content > p[style="color:blue"]
+##.page-content > p[style="color:red"]
 ##.page-content__advert
 ##.page[style^="padding-bottom:"] > [classname$="_g"][class$="_g"]
 ##.page[style^="padding-bottom:"] > [id*="_"][classname$="_f"][class$="_f"]
@@ -2287,8 +2287,10 @@
 ##a[href^="https://ycmw647.com"][target="_blank"]
 ##a[href^="intent://"]
 ##a[href^="javascript:linkto"][href*="_blank"] > img
+##a[href^="javascript:window.open(atob"][style*="red"]
 ##a[id$="ads-link"]
 ##a[id][href*="/c.php?s="][href$="="]
+##a[id^="hudie_"][target="_blank"][width="100%"]
 ##a[onclick*="91黄播"]
 ##a[onclick*="openAuc();"]
 ##a[onclick*="博彩"]
@@ -3095,6 +3097,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn/x/*-*-*.as$third-party
 .cn/xlc.php?data=$third-party
 .cn/zh/*/*.gif$third-party,image
+.cn:*/apps/sdk$third-party
 .cn:*/c.php?s=
 .cn:*/d/*?t=
 .cn:*/effect.php?type=$third-party
@@ -3276,6 +3279,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:*/vj5/$third-party
 .com:*0*/wap_*_*_*$other,third-party
 .com:*0*/wap_*_*_*$~image,~stylesheet,third-party
+.com:13320/js/*.js?v=9$third-party
 .com:18*/*.js?v=17$third-party
 .com:26579/*/*.json
 .com:28816/*js?v=17$third-party
@@ -3976,6 +3980,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /assets/publish/d3.2.js$script,~third-party
 /assets/publish/react.3.js$script,~third-party
 /astyle/wap.js$~third-party,script
+/b_ad/?p=
 /banner/*bottom.js
 /banner/*top.js
 /banner/float*.js
@@ -4229,6 +4234,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/gcs.js?$~third-party,script
 /js/gcss.js?$~third-party,script
 /js/gd.js
+/js/gd2.js
 /js/gg*.js
 /js/gg0.js
 /js/gg123/*
@@ -4261,6 +4267,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/wap2-jm-ms.js?ver=$~third-party,script
 /js/xf.js
 /js/xp.js
+/js/zx.js
+/js/zx2.js
 /json/ads/*
 /juicyads_
 /laojiuhengfu*.gif$image,third-party
@@ -5292,6 +5300,12 @@ baomidou.com##[opts*="CheckAdBlocked"]
 baozimh.one,baozimh.org##.adshow
 baozimh.one,baozimh.org##[class^="banner"]:has(.adCode)
 baseball.yahoo.co.jp##.sn-banner > a[href*="adj.st/open/"]
+bbiqudu.com##^script:has-text(document.write)
+bbiqudu.com##^script:has-text(parentNode.insertBefore)
+bbiqudu.com##^script:has-text(var c=")
+bbiqudu.com##script:has-text(document.write)
+bbiqudu.com##script:has-text(parentNode.insertBefore)
+bbiqudu.com##script:has-text(var c=")
 bdimg.com##div[data-track*="fengchao"]
 bdsmlr.com#@#.ads-container
 beauty.yahoo.co.jp##.Banner
@@ -5918,6 +5932,10 @@ live.bilibili.com##.title-label
 live.bilibili.com##.user-level-icon
 live.bilibili.com##.vip-icon
 lovedan.net##[style^="display: block; z-index: 2147483646;"],[style$="!important;"],[style*="0vw;"],[class^="tsgg"],[id*="ggsj"]
+ltxswu.me##^script:has-text(_17mb)
+ltxswu.me##^script:has-text(_style_middle)
+ltxswu.me##script:has-text(_17mb)
+ltxswu.me##script:has-text(_style_middle)
 luoqiuzw.com##.show-app2
 m.123dua.com###upload-container
 m.99.com.cn##.jump_a
@@ -7296,6 +7314,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||camillecsa.com^
 ||capaciousdrewreligion.com^
 ||cdn-aousoce.org/*/musoapp.js$third-party
+||cdn.adur.top^$third-party
 ||ceiqox.com^
 ||celcxjb.cn^
 ||cer.niaideren.icu^
