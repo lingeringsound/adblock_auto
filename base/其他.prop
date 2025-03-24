@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: J+6IntDFC6/iUBywrLGQuw
+! Checksum: TXsn+pmcup7wGCNYgjrAAg
 ! Title: 自用去广告Adblock规则
-! Version: 20250324233006
-! Last modified: 2025-03-24 23:30:07
-! Total Count: 8251
+! Version: 20250325011858
+! Last modified: 2025-03-25 01:18:58
+! Total Count: 8258
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5029,8 +5029,14 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@://*.*.xyz/videos/*-*-*-*/
 @@://*/static/ad/main.js
 @@://*cdn.com$domain=forums.socialmediagirls.com|pornhub.com|redtube.com|tube8.com|youporn.com|youporngay.com
+@@://*galleryxh*/*/ad/
+@@://*galleryxh*/adBlockDetector
+@@://*openxh*/*/ad/
+@@://*openxh*/adBlockDetector
 @@://*xhamster*/*/ad/
 @@://*xhamster*/adBlockDetector
+@@://*xhchannel*/*/ad/
+@@://*xhchannel*/adBlockDetector
 @@://*xhofficial*/*/ad/
 @@://*xhofficial*/adBlockDetector
 @@://css.yhdmtu.xyz$image,third-party
@@ -6488,6 +6494,7 @@ so.com##div[id^="guang-"]
 so.com##div[id^="mohe-biu_360"] > .g-card
 so.com##li[data-cpc_query]
 so.com##li[data-id^="cm_display_init_text_"]
+so.douyin.com###inner-container > .card-item > .SEARCH_CARD_CONTAINER[data-is-ad="true"]
 so.douyin.com##.card-list > .card-item:has(.ad-label)
 so.douyin.com##.card-list > .card-item:has(.ad-tag)
 so.douyin.com##.card-list > .card-item:has(div.SEARCH_CARD_CONTAINER[data-test-extra*="ad_"])
