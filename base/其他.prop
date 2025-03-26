@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: IJrg0jyI6kjL1Xm1t0+CYA
+! Checksum: PRRxDCPmHxFPan1R7BaSVg
 ! Title: 自用去广告Adblock规则
-! Version: 20250326143343
-! Last modified: 2025-03-26 14:33:43
-! Total Count: 8265
+! Version: 20250326215811
+! Last modified: 2025-03-26 21:58:11
+! Total Count: 8271
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -99,6 +99,8 @@
 ###adbox_content
 ###adbox_right
 ###adh5
+###adlist
+###adlist + script + iframe
 ###ads-container
 ###ads-container-2
 ###ads-container-anchor
@@ -5913,6 +5915,9 @@ keke1.app,keke2.app,keke3.app,kkys01.com,kkys02.com,kkys03.com##div.mobile-downl
 kikibobo.com##.boxzilla-overlay
 kissjav.li##img[id="player-fluid_logo_image"],[id^="player-advertising"]
 kiutaku.com##div[class^="i"][class*="9"]
+knit.bid##.clickadu-container
+knit.bid##^script:has-text(killads)
+knit.bid##script:has-text(killads)
 koreaporn.net##div.bb_mobile
 ktmukmx.com##.container > div[style] > div.row > .col-sm-3 > a[target="_blank"]
 kwoo50.icu,kwuu83.icu##div.float-app
@@ -6075,6 +6080,7 @@ mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###mobile-list-banner.justify-conte
 mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###top-mobile-banner
 meijumi.net##div.pcbuxianshi
 meijumi.net##div.xiaapp
+meitulu.cc##div.tujia
 mfsft.com,xgmeitu.com##.apptur
 mhnew.xyz,mhhanman.xyz##[id^="hfad"]
 mi.com#@#[style*="mi-img.com"]
