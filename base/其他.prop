@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: +3FmxWYndgVFQkR+H+CGmA
+! Checksum: fyo51ehWJJMtGuE2cSIIBw
 ! Title: 自用去广告Adblock规则
-! Version: 20250328143732
-! Last modified: 2025-03-28 14:37:32
-! Total Count: 8272
+! Version: 20250329023812
+! Last modified: 2025-03-29 02:38:12
+! Total Count: 8273
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3450,10 +3450,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .vip/happyxia.js$script
 .vip:*/ab/rtcv.js$~third-party
 .xin/blxn_*.js?
-.xyz/*.gif?*16$third-party
-.xyz/*.gif?*17$third-party
-.xyz/*?16$third-party
-.xyz/*?17$third-party
+.xyz/*?16$third-party,~media,~stylesheet,~image
+.xyz/*?17$third-party,~media,~stylesheet,~image
 .xyz/*_*_1_*.js?$third-party
 .xyz/*_*_2_*.js?$third-party
 .xyz//qby_*.js?$third-party
@@ -6346,6 +6344,7 @@ pornwhite.com,sleazyneasy.com##div[data-banner]
 pornxp.com##body > [style*="opacity: 0.01;"]
 ppys66.com##a[title="成人深夜福利"]
 profile.zjurl.cn,so.toutiao.com##.m-bottom-bar
+psimlzqa.org##.video-item:has(a[onclick="return false"])
 pussyspace.com##div[id]:has(> div[class][style] > [style="cursor: pointer; position: relative;"] > img)
 pussyspace.net##span + div[id]:has(img[src*="/upload/no_img"])
 qinav.com##.b300
