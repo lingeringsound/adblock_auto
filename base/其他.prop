@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: obCz+BRWQpYocu6ZBitklQ
+! Checksum: z1W3ZkTNPzBb4l7ZCl/YtA
 ! Title: 自用去广告Adblock规则
-! Version: 20250407005618
-! Last modified: 2025-04-07 00:56:18
-! Total Count: 8478
+! Version: 20250407131018
+! Last modified: 2025-04-07 13:10:18
+! Total Count: 8486
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -594,6 +594,8 @@
 ##.ad-horizontal-top
 ##.ad-iframe
 ##.ad-iframe-container
+##.ad-in-article
+##.ad-in-listings
 ##.ad-item-wrap[style*="abcd"]
 ##.ad-placement
 ##.ad-popup
@@ -892,6 +894,7 @@
 ##.article > .static-container-4 > .media
 ##.article > .static-container-4 > .media + .recommendation_widget
 ##.article-advert-container
+##.article_inline_images_ad
 ##.articleads
 ##.artplayer-plugin-ads
 ##.assignment.do
@@ -1500,6 +1503,7 @@
 ##.maomi-content > .section-menu > .row > a[target="_blank"]
 ##.maomi-content > .top-af-container
 ##.maomi-content > a[target="_blank"]
+##.md\:mt-3 > .md\:gap-3
 ##.menu-ads
 ##.mh-advert
 ##.mid-ads
@@ -2967,6 +2971,7 @@
 ##script[src$="/js/jads.js"] + ins[id]
 ##script[src*=".cn/slot?"] + center
 ##script[src*=".icu/"] + script + script + div[id]
+##script[src*="/lv/esnk/"] + iframe[scrolling="no"]
 ##script[src^="https://tongji.trafficmanager.net/"] + div[id^="a17"]
 ##section > .friendlylink > .w
 ##section > span[style="display:block;clear:both;overflow:hidden;z-index:2147483647"]
@@ -3575,6 +3580,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*/*/chart*.js$domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com
 /*/*/d3.2.js$domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com
 /*/*/react*.js$domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com
+/*/*/resource/*/source/*.js$script,third-party
+/*/*/source/*/resource/*.js$script,third-party
 /*/div_art_s.js
 /*/div_art_x.js
 /*_*_*_min.css?$third-party,domain=lfwx2.com
@@ -6600,6 +6607,7 @@ sina.cn##[href*="://sax"]
 sina.cn##[href^="https://finance.sina.cn/app/"]
 sina.cn##div[class^="fl_suspension"]
 sina.cn##div[sax-type="proxy"]
+singtao.ca###bottom_sticky_anchor
 sinpornx.com##.zyz,div[id="jue"]
 sisurl.net##div#ad_mobileHeader
 sm.cn###download-uc
