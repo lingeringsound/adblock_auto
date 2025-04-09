@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: YBUswXcoqbarEqefsOR4DA
+! Checksum: uzmbgJy65qXRRjZB3L0zxQ
 ! Title: 自用去广告Adblock规则
-! Version: 20250408022119
-! Last modified: 2025-04-08 02:21:20
-! Total Count: 8489
+! Version: 20250409113714
+! Last modified: 2025-04-09 11:37:14
+! Total Count: 8497
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2374,6 +2374,7 @@
 ##body > #overover[style="position:fixed;width:100%;height:100%;background:silver;z-index: 2;opacity: 0.1;"] ~ #obrazek
 ##body > #showcloneshengxiaon
 ##body > .ec-ad
+##body > .mobile-download-popup
 ##body > .top-advert
 ##body > [style$="background-size: 407px 101px !important;"]
 ##body > [style$="background-size: 407px 104px !important;"]
@@ -2683,6 +2684,7 @@
 ##iframe[src*="//go.zybrdr.com"]
 ##iframe[src*="//its.fusrv.com/"]
 ##iframe[src*="//mmmdn.net/"]
+##iframe[src*="//p.freeob.com/code/"]
 ##iframe[src*="//rtbrenab.com/get"]
 ##iframe[src*="//syndication.exoclick.com"]
 ##iframe[src*="//tfosrv.com"]
@@ -4212,6 +4214,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /jquery.modal.$domain=1909.me|8se.me|litu100.xyz|xchina.co|xchina.fun|xchina.pro|xchina.store
 /js*piao.js
 /js*piaofu.js
+/js/*tongji.js
 /js/0x1a2b3c4d.js
 /js/AD_tv.js
 /js/GDHF.js
@@ -4244,6 +4247,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/adz.
 /js/axdd.js
 /js/baiducdn.js$~third-party
+/js/baidutongji.js
 /js/bdgg/*
 /js/bocaiadv.
 /js/bottom.js$~third-party
@@ -4849,8 +4853,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 1amateurporn.com##[class^="native-"]:has([real-href*="/safu/safu.php?"])
 1amateurporn.com##img[src*="/safu/safu.php?"]
 1anime.me##[class*="ads"],[style*="z-index:"][style*="2000000000"],[style*="z-index:"][style*="5000000"],img[src*="//hgilaryph.com/"],body[style^="padding"] > [style*="130px"],img[width="30"][height="60"]
-1dm9.cc,adm11.com,biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,jpbqg6.com,kanshuzhan.com,klast.org,koweer.com,mjtt1.cc,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,speechhearing.net,txtduo.org,xcmv.cc,yhdm28.com,yhdm9.cc,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.ccokdm.top##script:has-text(new Function)
-1dm9.cc,adm11.com,biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,jpbqg6.com,kanshuzhan.com,klast.org,koweer.com,mjtt1.cc,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,xcmv.cc,yhdm28.com,yhdm9.cc,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.ccokdm.top##^script:has-text(new Function)
+1dm9.cc,adm11.com,biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dandanzandy.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,jpbqg6.com,kanshuzhan.com,klast.org,koweer.com,mjtt1.cc,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,speechhearing.net,txtduo.org,xcmv.cc,yhdm28.com,yhdm9.cc,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.ccokdm.top##script:has-text(new Function)
+1dm9.cc,adm11.com,biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dandanzandy.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,jpbqg6.com,kanshuzhan.com,klast.org,koweer.com,mjtt1.cc,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,xcmv.cc,yhdm28.com,yhdm9.cc,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.ccokdm.top##^script:has-text(new Function)
 1dm9.cc,adm11.com,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,dm789.com,fcmv.cc,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,koweer.com,mjtt1.cc,speechhearing.net,xcmv.cc,yhdm28.com,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.cc##^script:has-text(new Date)
 1dm9.cc,adm11.com,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,dm789.com,fcmv.cc,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,koweer.com,mjtt1.cc,speechhearing.net,xcmv.cc,yhdm28.com,yinghuadm.cn,yinghuadongman.one,zhenbuka.cc##script:has-text(new Date)
 1kans.net##.content > div[id]:has(img[style^="width:100%"])
@@ -5044,6 +5048,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*po18.*/astyle/wap.js$script
 ://*puzanny*/static/node.js
 ://*qiqidm*.*/js/*.js?ver=
+://*taopian*/*.js?V=
 ://*tianxibook*/*/0*1.js$script,~third-party
 ://*tianxibook*/public/*.js
 ://*ting13.*/public/tingshu/foor.js$script
@@ -5336,6 +5341,7 @@ aiqicha.baidu.com#@#[class*="ad"][class*="recommend"]
 airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,mature.community,mature.mom,mauitime.com,milf.community,milf.mom,milf.plus,milf.sexy,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,onislandtimes.com,ouo.press,pornhub.com,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,seguintoday.com,sports.sexy,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
 akaihentai.com##[data-script-id]:has(script[src*="/ad-provider.js"])
 ali213.net##iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
+allpher.com###bdi
 alphaporno.com,zedporn.com##.top-banners
 alphaporno.com,zedporn.com##span[id^="TAm-"]
 amateur8.com##.rmp-container
@@ -6324,6 +6330,7 @@ mtianqi.eastday.com##.nzxtit
 mtianqi.eastday.com##.tbad
 mtianqi.eastday.com##.zxscorll
 mtianqi.eastday.com##div[class]:not(style):not([id]):has(> div[class]:not([id]) >.zxscorll)
+mxvod.com###lm_layer
 my.yahoo.com##li[id^="ad-"]
 mydrivers.com#@#a[href*="/bp.ashx"]
 myyyw.cc##[href="/play/player.php"]
@@ -8087,6 +8094,7 @@ zol.com.cn##[data-bottom-fixed] > img[style]
 ||outlook.live.com/ows/*/OutlookOptions/AdsAggregate
 ||p*-ad-sign.byteimg.com^$domain=douyin.com
 ||p*-ad.byteimg.com^$domain=douyin.com
+||p.freeob.com/code$third-party
 ||p.pdatago.com^
 ||padmp4.cc/js/foot.js
 ||padmp4.com/js/foot.js
