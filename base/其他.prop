@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: bIc/kPcI1UdfokBXtZhjLQ
+! Checksum: JSHVbSvLG5eLZbOHX/Arog
 ! Title: 自用去广告Adblock规则
-! Version: 20250411222443
-! Last modified: 2025-04-11 22:24:43
-! Total Count: 8513
+! Version: 20250414004257
+! Last modified: 2025-04-14 00:42:57
+! Total Count: 8517
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2466,6 +2466,9 @@
 ##div.layout-box.clearfix > .app
 ##div.links-top > ul.icon-list
 ##div.nv_blist_cell[onclick^="window.open("]
+##div.only-app > #background-container
+##div.only-app > #second-background-container
+##div.only-app.loc_banner
 ##div.p > a > img[style*="width:100%;"]
 ##div.second-activity-list > .i-img3
 ##div.sponsor-outer
@@ -2964,6 +2967,7 @@
 ##script + .show-app2
 ##script + .show-app3
 ##script + .show-app4
+##script + .web_phone > .web_nav_menu > a > #banner-image
 ##script + [class^="float-app"]
 ##script + [style="padding:0;margin:0;border:0"] + article[id]
 ##script + [style="padding:15px;"]
