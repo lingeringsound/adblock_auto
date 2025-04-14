@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JSHVbSvLG5eLZbOHX/Arog
+! Checksum: Rbrj+TFe8EDGEaeoPW5jYg
 ! Title: 自用去广告Adblock规则
-! Version: 20250414004257
-! Last modified: 2025-04-14 00:42:57
-! Total Count: 8517
+! Version: 20250414190224
+! Last modified: 2025-04-14 19:02:24
+! Total Count: 8522
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2974,6 +2974,8 @@
 ##script + div > .p-screen-dialog
 ##script + div[class] > div[class][data-version]
 ##script + iframe[src^="https://s.uuidksinc.net"]
+##script + script + style + div[id]
+##script + script + style + div[id] + a[onclick][target="_self"]
 ##script > .p-screen-dialog
 ##script[src$="/ad-provider.js"] + ins
 ##script[src$="/ad-provider.js"] +div + ins
@@ -3602,6 +3604,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*_*_/bigREDdog.$third-party
 /*script/pf.js
 /17mb/js/style.js$~third-party,script
+/17mb/script/f*.js
 /17mb/script/f*.js$~third-party,script,domain=longtengxiaoshuo.org|longtengxiaoshuo.net|longtengxiaoshuo.app|longtengxiaoshuo.com
 /17mb/scripts/gu.js$~third-party
 /17mb/scripts/shang.js$~third-party
@@ -4316,6 +4319,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/tongji.js?v=
 /js/wap2-jm-ms-ld.js?ver=
 /js/wap2-jm-ms.js?ver=$~third-party,script
+/js/wcount.js$~third-party
 /js/xf.js
 /js/xp.js
 /js/zx.js
@@ -5090,6 +5094,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://cf*cdn.net^$domain=wuqiantz.top|wuqianvz.top
 ://chaturbate.com$third-party
 ://cmp-20*.top/*.php$third-party
+://cnzz*/code/$third-party
 ://creative.*.com/widgets/v4/Universal
 ://creative.*/widget*.js$third-party
 ://dl.hdslb.com/mobile/latest/android64/*apk
