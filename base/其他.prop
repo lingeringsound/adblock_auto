@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: wCpG9Y6foUgfVYvJ+AXNiw
+! Checksum: wt1Mk9hClUvFKM+6Ao8fPA
 ! Title: 自用去广告Adblock规则
-! Version: 20250415201010
-! Last modified: 2025-04-15 20:10:10
-! Total Count: 8530
+! Version: 20250415225950
+! Last modified: 2025-04-15 22:59:50
+! Total Count: 8539
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2235,6 +2235,7 @@
 ##a[href] > img[alt="TYC"]
 ##a[href] > img[alt][src^="/static/resources/lp.php"]
 ##a[href][data-ad]
+##a[href][rel="external nofollow"][title*="威尼斯人"]
 ##a[href][rel="nofollow"] > img.nature
 ##a[href][rel="noreferrer"] > img[src$=".gif.js"]
 ##a[href][style*="overflow:hidden;display:block;"] > img[src$=".gif"][style*="width:100%"]
@@ -2259,6 +2260,7 @@
 ##a[href][target="_blank"][rel="noopener noreferrer"] > img[src][alt][class="pc"],a[href][target="_blank"][rel="noopener noreferrer"] > img[src][alt][class="h5"]
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".gif"]
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".png"]
+##a[href][title*="威尼斯人"] > img[alt]
 ##a[href^="advslog.php?advid="][target="_blank"]
 ##a[href^="http://2kkfof.vip"]
 ##a[href^="http://googleads.g.doubleclick.net/pcs/click"]
@@ -2341,6 +2343,7 @@
 ##a[target="_blank"][href^="https://365fun.sng.link"]
 ##a[title="51直播"]
 ##a[title="77直播"]
+##a[title="908棋牌"]
 ##a[title="PG电子"]
 ##a[title="Sjzb"][style]
 ##a[title="五彩堂"]
@@ -2764,6 +2767,7 @@
 ##img[alt*="棋牌游戏hf"][src$=".gif"]
 ##img[alt*="美女"][alt*="直播"][alt*="秀"]
 ##img[alt="51萝莉"]
+##img[alt="908棋牌"]
 ##img[alt="91抖阴"]
 ##img[alt="91茄子视频"]
 ##img[alt="AI色色"]
@@ -3079,6 +3083,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .ca/ads/
 .cam/ads/
 .cc/*5*/*ll*.js$~third-party
+.cc/5y*/31*.$other,~third-party
+.cc/5y*/317.$~third-party
 .cc/?channelCode=$~third-party
 .cc/ad/
 .cc/api/getPos?jspath=/$~third-party
@@ -3668,6 +3674,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /_xa/ads?
 /_xa/ads_
 /aas/r45d/vki/*$third-party
+/acdelco/alliance.js$~third-party
+/acdelco/deploy.js$~third-party
 /ad-audit.
 /ad-blocking-advisor/*
 /ad-blocking-alert/*
@@ -8166,6 +8174,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||pstatp.com^*/push.js
 ||puabvo.com^
 ||public.app.autohome.com.cn^
+||punn.top/acdelco/$script
 ||push.app.autohome.com.cn^
 ||pussyspace.net/*/upload/no_img
 ||pvx.autohome.com.cn^
