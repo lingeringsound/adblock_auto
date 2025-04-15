@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: mI5C4w1HVoJfSfY/6KXbJg
+! Checksum: wCpG9Y6foUgfVYvJ+AXNiw
 ! Title: 自用去广告Adblock规则
-! Version: 20250415012620
-! Last modified: 2025-04-15 01:26:20
-! Total Count: 8523
+! Version: 20250415201010
+! Last modified: 2025-04-15 20:10:10
+! Total Count: 8530
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3108,6 +3108,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn/ZB/*/*.gif$third-party,image
 .cn/api/LM/GetBaiDuCode?placeUUID=$third-party
 .cn/api/getPos?jspath=/$~third-party
+.cn/apps/sdk$third-party
 .cn/bokan/bokan.js$script
 .cn/by*.js?17$third-party,script
 .cn/cg/*-*.cg$third-party
@@ -3119,6 +3120,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cn/js/gg.js$script
 .cn/k/*$script,third-party
 .cn/nd*.js?17$third-party
+.cn/o.js$third-party,script
 .cn/s/*.xc$third-party
 .cn/sc/*?n=$third-party
 .cn/sc/*?x=$third-party
@@ -4999,8 +5001,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.*.*:*/vj*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
 ://*.*.xyz/*/*-*-*-*/$third-party,~media,~stylesheet,~image
 ://*.*.xyz:*/*/*-*-*-*/$third-party,~media,~stylesheet,~image
-://*.*/*.js$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqvvxg8.cc|rz2024b.com|wolaidu1.com|bqq999.cc
-://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|rz2024b.com|wolaidu1.com
+://*.*/*.js$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
+://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*mk?ssid=$third-party
 ://*.*/js/js4.js?v=$~third-party
 ://*.*27txt.com/*/*.js$~third-party
@@ -6001,6 +6003,10 @@ ifeng.com##[class^="index_release"]
 ifeng.com##[class^="index_videoList"]
 ifeng.com##[id*="top_ad"]
 ifeng.com##section > [class^="index_toolbar"]
+ihuaben.com###openDeepLinkBtn
+ihuaben.com##.appdownload
+ihuaben.com##.btn-danger
+ihuaben.com##li#dlButtonNav
 ilengmen.com,newpopo.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,mobidushu.com,fuwen123.com,lengmen.org,newhaitang.com,tinghaodebook.com,haitangdushu.com,myshenye.com,myfeiyanqing.com,tinghaodebook.com,zongcai666.com,iyungong.com,lookmht.com,peakread.com,lengmenread.com,shenyedushu.com##[style*="0vw"][style*="0vh"][style*="0px"],[style*="z-index"][style*="background:"],[id][style*="width"][style*="100%"],div[class][style^="line-height:"][style$="no-repeat; position: relative;"]
 image.so.com##.waterfall > li[data-imgid] > a[href^="https://e.so.com/search/mclick?"]
 imginn.com##div.block-timeline-sulvo
@@ -7583,6 +7589,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||capaciousdrewreligion.com^
 ||cdn-aousoce.org/*/musoapp.js$third-party
 ||cdn.adur.top^$third-party
+||cdn.staitcfile.org^$domain=522ak.com|laiksw.cc
 ||cdxyspa.com/js/4988.js
 ||ceiqox.com^
 ||celcxjb.cn^
