@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: DC/8fI7YT/Tem7gTU6eWQw
+! Checksum: yzsxwuk4B3RVnEWm87Ktvg
 ! Title: 自用去广告Adblock规则
-! Version: 20250416090917
-! Last modified: 2025-04-16 09:09:17
-! Total Count: 8541
+! Version: 20250416142340
+! Last modified: 2025-04-16 14:23:40
+! Total Count: 8548
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5197,6 +5197,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 =AdCode_sjdb$third-party
 =AdCode_sjtb&$third-party
 @@.cn/j/*$script,third-party,domain=weather.com.cn
+@@.cn/k/*$script,third-party,domain=autohome.com.cn
 @@.com/*interstitial*.js$domain=reddit.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
@@ -5432,7 +5433,11 @@ autohome.com.cn##.showall-backflow-button
 autohome.com.cn##.slideIn.summary-dealer-yiliu
 autohome.com.cn##.union-ad-placeholder
 autohome.com.cn##[class$="-loading"][data-action="loading"][id="loadMore"]
+autohome.com.cn##[id^="oppen_"]
+autohome.com.cn##div.h5-pendant
+autohome.com.cn##div.tw-fixed
 autohome.com.cn##ol
+autohome.com.cn##section.bbs-post-replay.operate-position
 avgle.com##a[href*="/redirect"]
 avgle.com##img[src*=".php"]
 avlulu.cc,69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,jable.one,maomiav.one,weav.xyz,x99av.com##div[class] > span[class]:has(div[class*="q-responsive"])
@@ -6618,6 +6623,8 @@ search.yahoo.com##.searchRightBottomAds
 search.yahoo.com##.searchRightMiddleAds
 search.yahoo.com##.searchRightTopAds
 search.yahoo.com##div.mb-28:has(span:contains(Ads))
+search.yahoo.com##section.dd.algo:has(a[title*="【 信"])
+search.yahoo.com##section.dd.algo:has(a[title*="嶶信"])
 search.yahoo.com,yahoo.com##.searchCenterTopAds
 send-anywhere.com###gpt-container
 sewen.buzz,sewen.com,sewen.life,sewen.net,sewen.top,sewen.xyz,sewen4.top,sewen7.com,sewen7.life,sewen7.top,sewen8.life,sewen8.net,sewen8.top##img[src*=".xyz/"][src*="16"],[style*="bottom: 0px; left: 0px; z-index:"][style*="100vw;"],.hotcmd-box,.links-top,table[border="1"]
