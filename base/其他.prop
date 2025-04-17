@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: yzsxwuk4B3RVnEWm87Ktvg
+! Checksum: 77nkrsWeNGfxmA98BAKeog
 ! Title: 自用去广告Adblock规则
-! Version: 20250416142340
-! Last modified: 2025-04-16 14:23:40
-! Total Count: 8548
+! Version: 20250417155144
+! Last modified: 2025-04-17 15:51:44
+! Total Count: 8563
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -68,6 +68,7 @@
 ###adContent
 ###adContentHolder
 ###adContext
+###adDiv
 ###adSpot
 ###ad_1
 ###ad_2
@@ -2334,6 +2335,7 @@
 ##a[rel="nofollow"][target="_blank"] > img[style="width:100%;height:60px;margin-bottom:0.5px;"]
 ##a[style*="width:99%"][style*="z-index:100000"][style*="block"]
 ##a[style="position:fixed;bottom:5px;width:100%;height:130px;;z-index:10000;display:block;"]
+##a[style^="animation:ad_txt"]
 ##a[target=" _blank"] > img[src$=".gif"][style*="width:100%"]
 ##a[target="_blank"] > img[alt="AD"]
 ##a[target="_blank"] > img[src$="-150-300.gif"]
@@ -2468,8 +2470,10 @@
 ##div.four-activity-list > .grid
 ##div.g-list > ul > li
 ##div.g-slide > div[class^="swiper-"]
+##div.index_ddg
 ##div.layout-box.clearfix > .app
 ##div.links-top > ul.icon-list
+##div.new_ddg
 ##div.nv_blist_cell[onclick^="window.open("]
 ##div.only-app > #background-container
 ##div.only-app > #second-background-container
@@ -2930,6 +2934,7 @@
 ##img[src^="https://imgsa.baidu.com/forum/pic/item"][style*="cursor:pointer"]
 ##img[src^="https://imgsrc.baidu.com/forum/pic/item/"][class]
 ##img[src^="https://imgsrc.baidu.com/forum/pic/item/"][onclick]
+##img[src^="https://js."][referrerpolicy="no-referrer"]
 ##img[src^="https://pic.lsddkd.com:"]
 ##img[src^="https://rpninf.xyz"]
 ##img[src^="https://sbb.bbb.byjykj.xyz"]
@@ -2941,6 +2946,7 @@
 ##img[src^="https://vip2.loli.io"]
 ##img[src^="https://www.03169.com/files/ad/"]
 ##img[src^="https://www.static04.top/data/images/"][src$=".gif"]
+##img[src^="https://xcdn.vip"]
 ##img[style][alt][src*="/data/ds3/"][src$=".php"]
 ##img[style][alt][src*="/data/game/"][src$=".gif"]
 ##img[title^="advertisement"]
@@ -3490,7 +3496,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .vip/facaishang.js$script
 .vip/facaishen*.js$script,~third-party
 .vip/happyxia.js$script
+.vip:*/ab/htlc.js
 .vip:*/ab/rtcv.js$~third-party
+.vip:*/ab/toptext.js
+.vip:*/static/assets/js/*.js?
 .xin/blxn_*.js?
 .xyz/$third-party,domain=laiksw.cc
 .xyz/*.gif?*16$third-party
@@ -5904,6 +5913,7 @@ google.com##.GISRH3UDHB
 google.com##.nH.MC
 google.com##header[id="hdr"] ~ div#main > div[class="ZINbbc xpd O9g5cc uUPGi"]:has(> div > a[href*="/aclk?"][data-al])
 greasyfork.org#@#body .ad
+grongdai.com##p[style="display: flex; justify-content: center; align-items: center;"]
 hanime.tv##.banner_iframe
 hanime.tv##.desktop.htvad
 hanime.tv##.full-page-height > .int[style^="width:"]
@@ -5922,6 +5932,7 @@ hanime1.me##div[style*="width: 310px; height: 282px;"]
 hanime1.me#@#iframe[src*=".magsrv.com/"]
 hanime1.me#@#iframe[src^="https://creative."][src*="/widgets/"]
 hanyu.baidu.com###download-wrapper
+hanyu.baidu.com##.business-el-card
 hanyu.baidu.com##[id^="fengchao_els"]
 hao.360.com##.cube-container div.cube-mod:has(span.adMark)
 hao.360.com##.cube-mod:has(.dh-cpcad-container)
@@ -6856,6 +6867,7 @@ taotu.org##img[src*="/adimages/"]
 tasexy.com##[id^="sexy_b"]
 tbssp66.top##.app,a[rel="external nofollow noopener"][target="_blank"][data-original]
 tecms.net##[class$="i"][style],[class$="h"][style],[class$="_b"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"],[class$="m"][style*="display"][style*="block"][style*="100%"],span > video[poster*="-1316632262.cos.ap-"],[class$="c"][style$="131px;"]
+teenpornfirst.cc##aside
 teenxy.com##.block-video > .table
 teenxy.com##.out_lnk
 the-boys.fandom.com##.cnx-main-container
@@ -7361,6 +7373,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||2023welcome.com^$third-party
 ||2biqu.com/static/*/*.js
 ||2cnjuh34jbpoint.com^
+||328o8vo.comu^$third-party
 ||33.autohome.com.cn^
 ||360tres.com/*rank2.js
 ||3pmcoohke.scriptmh.com^
@@ -8079,6 +8092,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||mdipsumx.top^
 ||mdqikg.xyz^
 ||merwds.qwuidbn.com^$third-party
+||mg1hd.top/ok
 ||miaozhen.com^$third-party
 ||mingrentea.com/mb/meng/$script
 ||mip.mgppos.com/honeybadger/*.gif
@@ -8445,6 +8459,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||wyqaafplm.live^
 ||xadsmart.com^
 ||xbookcn.org/scripts/my_*.js
+||xbqg06.com/*/*.php
 ||xcdn.vip^$third-party
 ||xchina.*/scripts/push*.js
 ||xchina.click/upload/$third-party
