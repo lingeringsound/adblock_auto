@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Ntq7q4s7equMzG+vMvEV0Q
+! Checksum: Vaonp6lpzPKYsHmiBvtN4A
 ! Title: 自用去广告Adblock规则
-! Version: 20250418153315
-! Last modified: 2025-04-18 15:33:15
-! Total Count: 8569
+! Version: 20250418175749
+! Last modified: 2025-04-18 17:57:49
+! Total Count: 8577
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3878,6 +3878,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /addons/adplan/assets/js/adshow.js
 /adfox/*
 /adgpt.js
+/adlm_bottom.js
+/adlm_head*.js
+/adlm_random.js
+/adlm_top.js
 /adpopup.js$script
 /adpreview?$popup
 /ads.dp.js?
@@ -4327,6 +4331,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/jads.js?
 /js/jsgg.js
 /js/kaixin.js$script
+/js/ls.js
 /js/m.js?
 /js/new-kk-27k.js?$~third-party,script
 /js/pf.js
@@ -4550,6 +4555,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /staticjs/float*.js
 /staticjs/gd.js
 /staticjs/hm.js
+/staticjs/ls.js
 /staticjs/pf.js
 /statics/js/dddd.js$~third-party
 /statics/js/ding.js$~third-party,script
@@ -5224,7 +5230,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/api/blockdata$domain=sohu.com
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
-@@/image/20*-*-*/*/$domain=coolapk.com|kuaikanmanhua.com
+@@/image/20*-*-*/*/$domain=coolapk.com|galleryepic.com|galleryepic.one|galleryepic.xyz|kuaikanmanhua.com
 @@/index.m3u8
 @@/js/popup.js?advertiser=popup$domain=netflav.com
 @@/matomo.js$domain=github.com|trcet77.com
@@ -5572,6 +5578,7 @@ bilibili.com##div.adcar-inner
 bilibili.com##div.vip-login-tip
 bilibili.com#@#.is-rcmd > div:only-child
 bing.com###BottomAppPro
+bing.com###b_refresh
 bing.com###b_results > li:has([data-ans*="BrandZoneAds"])
 bing.com###b_results > li:has(a[h$=",Ads"])
 bing.com###b_results > li:has(span[data-partnertag="LocationSuperTop"])
@@ -7724,6 +7731,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||dilidili*.com/js/wap2-jm-ms.js$script
 ||dizhi.men/js/*ad*.js$third-party,script
 ||dizhi.men/js/sp.js
+||dizhiyou.xyz/js/ls.js
 ||dl.btii.cn^
 ||documentaryselfless.com^
 ||doubleverify.com^$third-party
