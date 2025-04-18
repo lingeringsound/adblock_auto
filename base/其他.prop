@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 77nkrsWeNGfxmA98BAKeog
+! Checksum: 9qNO8MoeIVVIcDBx3MJlyg
 ! Title: 自用去广告Adblock规则
-! Version: 20250417155144
-! Last modified: 2025-04-17 15:51:44
-! Total Count: 8563
+! Version: 20250418145930
+! Last modified: 2025-04-18 14:59:30
+! Total Count: 8569
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3270,6 +3270,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/m-*-*$third-party,domain=manhuagou.com
 .com/o.js$third-party
 .com/piao/*.js?$~third-party
+.com/pingbi.js$~third-party
 .com/redirect-zone/
 .com/rr/*?rr=$third-party
 .com/rs/to/*?n=cbh&p=false&t=*$third-party
@@ -4368,6 +4369,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /lv/esnk/*$script,third-party
 /lv/esnk/*/code.js$script,third-party
 /matomo.js$third-party,script
+/matomo.php?action_name=
 /mb/meng/ee*.js?$~third-party
 /mdzzxttss.php?s=
 /modalad.
@@ -6141,6 +6143,9 @@ jinxiyue.com##a[onclick^="qinlintest"]
 jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,pornachi.com,porndude.wtf,orgazmax.com,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 jjdy8.cc##[id^="adWrapper"]
 jjdy8.cc##div[style]:not([class]):not([id]):has(a[href$=".php"])
+jktv.app###fd_tips
+jktv.app##.play_share
+jktv.app##a[title*="APP下载"]
 jktv.app##div.o_share
 jktv.app##li.app-links
 jktv.app##span.h5-detail-guide
@@ -8279,6 +8284,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||sfvsjv.com/sh$third-party,script
 ||sgoijw.com^$third-party
 ||shabby-constant.com^
+||shenluyu.com/box/maine.js
 ||shenluyu.com^$third-party
 ||shenyelook.com/assets/publish/$script
 ||shfsdvc.com^
