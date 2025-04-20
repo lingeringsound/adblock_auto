@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Vaonp6lpzPKYsHmiBvtN4A
+! Checksum: AYfLOyseVzCgtxQbfkjW6Q
 ! Title: 自用去广告Adblock规则
-! Version: 20250418175749
-! Last modified: 2025-04-18 17:57:49
-! Total Count: 8577
+! Version: 20250420212638
+! Last modified: 2025-04-20 21:26:38
+! Total Count: 8596
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1024,6 +1024,9 @@
 ##.div-gpt-ad:not([style^="width: 1px; height: 1px;"])
 ##.div_pop
 ##.dlad
+##.ds-text-red
+##.ds-top-info-main-content
+##.ds-top-info-right-main
 ##.dx-ad
 ##.dx-recommend-icons
 ##.etn-ad-text
@@ -1507,6 +1510,7 @@
 ##.maomi-content > .section-menu > .row > a[target="_blank"]
 ##.maomi-content > .top-af-container
 ##.maomi-content > a[target="_blank"]
+##.mask + .footer-fixed-nav.clearfix
 ##.md\:mt-3 > .md\:gap-3
 ##.menu-ads
 ##.mh-advert
@@ -2263,6 +2267,8 @@
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".gif"]
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".png"]
 ##a[href][title*="威尼斯人"] > img[alt]
+##a[href^="//app.qingning"]
+##a[href^="/voddetail/"] + a[href^="https"]
 ##a[href^="advslog.php?advid="][target="_blank"]
 ##a[href^="http://2kkfof.vip"]
 ##a[href^="http://googleads.g.doubleclick.net/pcs/click"]
@@ -2473,6 +2479,7 @@
 ##div.index_ddg
 ##div.layout-box.clearfix > .app
 ##div.links-top > ul.icon-list
+##div.module-items > a[href^="https"]
 ##div.new_ddg
 ##div.nv_blist_cell[onclick^="window.open("]
 ##div.only-app > #background-container
@@ -2998,6 +3005,7 @@
 ##script[src^="https://tongji.trafficmanager.net/"] + div[id^="a17"]
 ##section > .friendlylink > .w
 ##section > span[style="display:block;clear:both;overflow:hidden;z-index:2147483647"]
+##section#focus.focusBanner
 ##section[class^="container"][class*="section section-relate-"] > [class^="content"][class*="relate"]
 ##section[data-e2e="advertisement"]
 ##span > video[poster*="-1316632262.cos.ap-"]
@@ -3012,6 +3020,7 @@
 ##span[style*="393px"][style*="0px 0px"][style*="border-image-source:url"]
 ##span[style^="cursor: pointer;"][style*="z-index: 2147483647;display: block;"]
 ##span[title="neteasefooter"]
+##style + .footer-fixed-nav.clearfix
 ##style + div[id][class][style^="position: fixed; bottom:"][style$="z-index: 19999 !important; right: 2px;"]
 ##table[border="1"] > tbody > tr > td > a[href][onclick*="Novel"][title]
 ##textarea[style*="-1325890192.cos.ap"]
@@ -4226,6 +4235,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /gtm.js?$popup
 /gu*ding.js$script,~third-party
 /haijiao*/js/popup.
+/hengfu.js
 /html/ads/*
 /html/ads_
 /html/sponsors/*
@@ -4254,6 +4264,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js*piaofu.js
 /js/*tongji.js
 /js/0x1a2b3c4d.js
+/js/5988.js$~third-party
 /js/AD_tv.js
 /js/GDHF.js
 /js/aa.htm$script
@@ -4551,6 +4562,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static/resources/*/*.gif$domain=18-comic.work|18-comicblade.art|18-comicblade.club|18-comicblade.org|18-comicblade.xyz|18-comicfreedom.org|18-comicfreedom.xyz|18-comicstellar.art|18-comicstellar.xyz|18comic-daima.club|18comic-dwo.cc|18comic-erdtree.xyz|18comic-gquu.vip|18comic.org|18comic.vip|jm-comic1.cc|jm-comic2.cc|jmcomic-zzz.one|jmcomic-zzz.org|jmcomic.me|jmcomic1.city|jmcomic1.group|jmcomic1.me|jmcomic1.win|jmcomic2.me
 /static/resources/lp.php$domain=18-comic.work|18-comicblade.art|18-comicblade.club|18-comicblade.org|18-comicblade.xyz|18-comicfreedom.org|18-comicfreedom.xyz|18-comicstellar.art|18-comicstellar.xyz|18comic-daima.club|18comic-dwo.cc|18comic-erdtree.xyz|18comic-gquu.vip|18comic.org|18comic.vip|jm-comic1.cc|jm-comic2.cc|jmcomic-zzz.one|jmcomic-zzz.org|jmcomic.me|jmcomic1.city|jmcomic1.group|jmcomic1.me|jmcomic1.win|jmcomic2.me
 /static/xbiquge/commondj*.js
+/static/xg/tbad.js
 /static/zz*.js?t=$third-party
 /staticjs/float*.js
 /staticjs/gd.js
@@ -4690,6 +4702,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /wsuyaut.js$third-party
 /www/delivery/*
 /xpopup.js$script
+/xuanfu.js
 /xuvzbvu.js$third-party
 /xx/d.js
 /xx/f12.js
@@ -5316,6 +5329,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||html-load.com^
 @@||imasdk.googleapis.com/*/ima3.js$domain=player.glomex.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=10play.com.au|247sports.com|24h.com.vn|3bmeteo.com|4gtv.tv|7plus.com.au|881903.com|9am.ro|a1.ro|aksam.com.tr|amc.com|ani.gamer.com.tw|animeflv.ru|antena3.ro|antenaplay.ro|api.screen9.com|appledaily.com|arkadium.com|asa3ah.com|atozmath.com|autocentrum.pl|autokult.pl|autorambler.ru|babygames.com|baltimoresun.com|bbc.com|bbcamerica.com|bestgames.com|bighero.io|biters.io|blastingnews.com|bloomberg.co.jp|bloomberg.com|boas.io|bsfuji.tv|bullet.town|cbc.ca|cbsnews.com|cbssports.com|cdn.htmlgames.com|cdn.witchhut.com|cdnvideo.me|chicagotribune.com|chili.com|chromecastappstips.com|ciudad.com.ar|classicreload.com|clickorlando.com|clipbucket.com|clipmyhorse.tv|cnet.com|coolgames.com|corrieredellosport.it|cosmopolitan.com|crosswordsolver.org|crunchyroll.com|cubuffs.com|cwseed.com|czxxx.org|dailystar.co.uk|delish.com|digitalspy.com|dingit.tv|distro.tv|ditchthecarbs.com|diziler.com|docbao.vn|doodlygames.me|doubtnut.com|dressupmix.com|drphil.com|einthusan.ca|einthusan.com|einthusan.tv|elahmad.com|elle.pl|embed-zattoo.com|embed.comicbook.com|esgentside.com|etonline.com|express.co.uk|facepunch.io|farfeshplus.com|filmweb.pl|fisp.io|flipboard.com|fotoblogia.pl|fptplay.vn|funimation.com|gadzetomania.pl|game.pointmall.rakuten.net|gamebox.gesoten.com|gamecocksonline.com|gamejolt.net|gamepix.com|games.gamesplaza.com|games.latimes.com|games.metro.us|games.metv.com|games.miamiherald.com|games.usatoday.com|games.word.tips|gameswf.com|gamezhero.com|gauchazh.clicrbs.com.br|gbnews.com|gentside.co.uk|gentside.com|gentside.com.br|gentside.de|geo.dailymotion.com|get.x-link.pl|givemesport.com|globoplay.globo.com|gmg-wjxt-prod.cdn.arcpublishing.com|gocolumbialions.com|goducks.com|goodmorningamerica.com|goodstream.uno|gospodari.com|gostanford.com|gousfbulls.com|greatdaygames.com|gsgazete.com|h5.4j.com|haber7.com|haberler.com|hackedarcadegames.com|hamaratabla.com|hamivideo.hinet.net|hanime.tv|hiddenobjectgames.com|howstuffworks.com|hqq.tv|html5.gamedistribution.com|humix.com|hungama.com|ignboards.com|iheart.com|ilmeteo.it|in.gr|independent.co.uk|insideedition.com|irctc.co.in|ittf.com|iz.ru|kanald.ro|kissanime.ac|kisscartoon.ac|kizi.com|klix.ba|knoxnews.com|kraloyun.com|ksl.com|laleggepertutti.it|lemino.docomo.ne.jp|lenta.ru|line.me|liner.hu|linetv.tw|litv.tv|livexlive.com|locipo.jp|loot.tv|m.timesofindia.com|maharashtratimes.com|manoramamax.com|mariogames.be|matchtv.ru|maxisciences.com|medyaradar.com|meilleurpronostic.fr|metacritic.com|minigame.aeriagames.jp|mirror.co.uk|missoulian.com|mlb.com|mobinozer.com|motorsport.tv|myspace.com|mytvsuper.com|nba.com|netd.com|nettavisen.no|newgames.com|news4jax.com|nextmedia.com|nova.cz|now.com|nowtv.com.tr|nrl.com|ntvspor.net|nuke.zone|nydailynews.com|oe24.at|ohmirevista.com|ohmymag.com|ohmymag.com.br|ohmymag.de|olympics.com|onlinemahjong.games|ottwow.com|paralympic.org|paramountplus.com|paroles2chansons.lemonde.fr|phonostar.de|pikes.io|play.joj.sk|play.nova.bg|player.abacast.net|player.earthtv.com|player.glomex.com|player.performgroup.com|player.pl|player.theplatform.com|playstore.pw|plex.tv|pluscdn.pl|pogo.com|pointmall.rakuten.co.jp|poki-gdn.com|popcorntv.it|popculture.com|primarygames.com|proper.io|pudelek.pl|radio.at|radio.de|radio.net|realmadrid.com|repubblica.it|repuls.io|romaniatv.net|rte.ie|rtl.arkadiumhosted.com|rtl.it|rumble.com|s.yimg.jp|sbs.com.au|scenelife.org|scrippsdigital.com|shahid.mbc.net|shares.enetres.net|smashers.io|sondakika.com|sonyliv.com|southpark.lat|southparkstudios.com|sportbox.ru|sportsbull.jp|sportsport.ba|spox.com|stack.com|startrek.com|stickgames.com|storyfire.com|success-games.net|supergames.com|swipeto.pl|synk-casualgames.com|tbs.co.jp|tdn.com|tenceretv.com|texastech.com|theticket.com|timesnownews.com|truvid.com|tubitv.com|tv-asahi.co.jp|tv.rakuten.co.jp|tvb.com|tver.jp|tvid.in|tvn.pl|tvn24.pl|tvp.info|tvp.pl|udn.com|ulifestyle.com.hk|ultimedia.com|umterps.com|univtec.com|uptostream.com|veedi.com|video.capital.it|video.deejay.it|video.foxbusiness.com|video.foxnews.com|video.gazzetta.it|video.lastampa.it|video.onnetwork.tv|video.tv-tokyo.co.jp|video.ufreegames.com|videonuz.ensonhaber.com|videotarget.pl|vidyome.com|vivo.sx|vizita.si|vlive.tv|vod.pl|voicetv.co.th|vtvgiaitri.vn|vvvvid.it|waaw.tv|watch.nba.com|wbal.com|weather.com|webdunia.com|wellgames.com|wetv.vip|wibc.com|wink.ru|wordgames.com|workandmoney.com|worldsurfleague.com|wowbiz.ro|wsj.com|wsls.com|wtk.pl|wuxiaworld.com|xda-developers.com|xxxdan.com|yad.com|yallo.tv|yandexcdn.com|yepi.com|ynet.co.il|zdnet.com|zee5.com|zeebiz.com|zoomtventertainment.com
+@@||js-dy.top/static/player/js/addons.js
 @@||js.adscale.de/getads.js:adscale_slot_id/$domain=dasolo.org
 @@||js.hyra.io/*.js$~third-party
 @@||js.iplsc.com/inpl.abd/latest/ads.js?$domain=pomponik.pl|interia.pl|js.iplsc.com
@@ -5372,7 +5386,10 @@ _728x90_
 _ads_banner
 _clickunder&pb=$popup
 _popupunder.
-aabook.cyou,aabook.xyz,aaread.club,aastory.space,fqbook.cc,fqbook.cyou##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[id^="GGADIMG"][src],div[class][id]:has(img[src][alt="xxx"]),a[href^="https://fkxl.xyz"]
+aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[id^="GGADIMG"][src],div[class][id]:has(img[src][alt="xxx"]),a[href^="https://fkxl.xyz"]
+aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##body > div[style^="position: -webkit-sticky; position: sticky; top: 0;"]
+aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##center > iframe[scrolling="NO"][frameborder="NO"]
+aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##p[align="center"]
 aaddtt.com,wwbbmm.com##.hbg-link
 abjav.com##.header__item
 abjav.com##section
@@ -7973,6 +7990,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||jmcomic*/templates/frontend/airav/js/*1_2df4.js
 ||jnmami.cn^
 ||js-agent.newrelic.com^$third-party
+||js-dy.top^$third-party
 ||js.123ylk3q.cc^
 ||js.allporncomic.com^
 ||js.bninocerossrhino.com^
@@ -8231,6 +8249,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||qvpublish.com^
 ||qwfbiujsknjk.com^
 ||qwiudbnaiio.com^$third-party
+||qxd6.com/js/*.js
 ||qzpbwq.com^
 ||randomadsrv.com^
 ||rbkmzhc.icu^
