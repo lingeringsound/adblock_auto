@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: nAtClckGAUGAWD5fUHjV1A
+! Checksum: 0BJHeaLOFjbh7DyTq4iy1g
 ! Title: 自用去广告Adblock规则
-! Version: 20250422133652
-! Last modified: 2025-04-22 13:36:53
-! Total Count: 8609
+! Version: 20250422182523
+! Last modified: 2025-04-22 18:25:23
+! Total Count: 8619
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3327,6 +3327,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:*/d/*?t=
 .com:*/effect.php?type=*=*&zoneid=*
 .com:*/jquery.js?v=$third-party
+.com:*/js/330*/*.js?v=$third-party
 .com:*/mnrt/*.json
 .com:*/o.js$third-party
 .com:*/react.js?v=$third-party
@@ -4496,6 +4497,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /production/*/openjs/*.js$script,third-party
 /production/*/production/*.js$script,third-party
 /production/*source/*.js$script,third-party
+/public/042*.js$~third-party,script
 /public/adf*.js?v=
 /redbaiduct.com?s=$third-party
 /redirect-ads.php
@@ -4551,6 +4553,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static*/gd.js
 /static*/pf.js?v=
 /static/*ds/ttss.js$script,~third-party
+/static/042*.js$~third-party,script
 /static/float*.js
 /static/gd.js
 /static/jietiandixs/jtd.js$~third-party
@@ -5011,6 +5014,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 6446.tv,lgyy.tv,lgyy.cc##[id^="bfad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="mhbottom_ad"]
 6446.tv,lgyy.tv,lgyy.cc##[id^="syad"]
+666biquge.com##^script:has-text(catch\(err\))
+666biquge.com##^script:has-text(foot\(\))
+666biquge.com##script:has-text(catch\(err\))
+666biquge.com##script:has-text(foot\(\))
 69gfs.com,6japaneseporn.com,allureamateurs.net,analteen.pro,goodindianporn.com,mangacanblog.com,mataporno.com,orientalasianporn.com,sexmummy.com,teenwantme.com,worldgatas.com,xpg.com.br###topbar
 69tang.org##.kangxia
 69tang.org##div.video-holder > [style^="border:2px"]
@@ -5090,6 +5097,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*dilidili*.*/js/*.js?ver=
 ://*dm*/static/js/toper.js$~third-party
 ://*dm5*/js/*.js?ver=
+://*dxs.com/js/*.js$third-party,script
 ://*ee-tv.*/js/footer.js
 ://*ffdm*/*_cpc.js$~third-party
 ://*ffdm*/gdw.js
@@ -7423,6 +7431,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||4sexmail.com^
 ||51.la^$third-party
 ||510cg.com/1688/m_*.php$~third-party
+||51dxs.com/js/d.js
+||51dxs.com/js/xs.js
 ||520xxb.com^
 ||5hte21mz.com^
 ||5mgrgsc.cn^
