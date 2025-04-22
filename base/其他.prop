@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: XQRNpMpl2AenewPh1CQIpA
+! Checksum: nAtClckGAUGAWD5fUHjV1A
 ! Title: 自用去广告Adblock规则
-! Version: 20250421192220
-! Last modified: 2025-04-21 19:22:20
-! Total Count: 8599
+! Version: 20250422133652
+! Last modified: 2025-04-22 13:36:53
+! Total Count: 8609
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1887,6 +1887,7 @@
 ##[class$="ads-banners"]
 ##[class$="ads-box"]
 ##[class$="ads-container"]
+##[class$="b"][data-group][style="max-width: 300px;max-height: 250px;overflow: hidden;"]
 ##[class$="card-ad-video"]
 ##[class$="play-adv"]
 ##[class$="video-ads"]
@@ -2993,9 +2994,10 @@
 ##script + div > .p-screen-dialog
 ##script + div[class] > div[class][data-version]
 ##script + iframe[src^="https://s.uuidksinc.net"]
-##script + script + style + div[id]
 ##script + script + style + div[id] + a[onclick][target="_self"]
 ##script > .p-screen-dialog
+##script[id] + script[src^="/"] + style ~ div[id]:not([class])
+##script[id] + script[src^="/"] ~ div[id]:not([class])
 ##script[src$="/ad-provider.js"] + ins
 ##script[src$="/ad-provider.js"] +div + ins
 ##script[src$="/js/jads.js"] + ins[id]
@@ -3629,6 +3631,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*/*/source/*/resource/*.js$script,third-party
 /*/div_art_s.js
 /*/div_art_x.js
+/*0/*all*.js$~third-party,script
+/*0/*bll*.js$~third-party,script
+/*0/*cll*.js$~third-party,script
+/*0/*dll*.js$~third-party,script
 /*_*_*_min.css?$third-party,domain=lfwx2.com
 /*_*_/bigREDcat.$third-party
 /*_*_/bigREDdog.$third-party
@@ -5121,6 +5127,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*yhdm*/piao/$script
 ://*yinghua*/bar/$script
 ://*yydstxt*/js/cdn.js$script,~third-party
+://18comic*/templates/frontend/airav/js/*_*4*.js
 ://6*.xyz/to/18*.jpg
 ://888bb*ww.com/$image,third-party
 ://888xx*kk.com/$image,third-party
@@ -6186,6 +6193,7 @@ justdial.com###gptAds2
 justdial.com###gptAdsDiv
 jvidcm.xyz##div.stui_md
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
+jyshare.com#@#script + script + style + div[id]
 kanxig.com##^script:has-text(|Android)
 kanxig.com##script:has-text(|Android)
 kdslife.com##[class*="DownloadGuide"]
@@ -7126,6 +7134,7 @@ xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##script:has-text(isBlo
 xclub101.pro###im-spot
 xclub101.pro##[onmouseup="setRealHref(event)"][rel="nofollow"]
 xdf.cn##[class^="bottom_ad"]
+xfani.com##.ec-tutu
 xgroovy.com##.adsbyexoclick
 xgroovy.com##.fluid-b
 xgroovy.com##.fluid_ad_cta
@@ -8063,6 +8072,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||kmyyuw.xyz^$third-party
 ||kpic.pbaiyho.cn^$third-party
 ||kpm.jhzpgw.com^
+||kraapmanmb.com^
 ||ks.ferlytc.com^$third-party
 ||kscmt.cn^
 ||kszc.j1evtmx.xyz^
