@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: KC1EhWaekLApVcUdxU6YdQ
+! Checksum: lwG49Ikz5G2Hiq8qWK14ug
 ! Title: 自用去广告Adblock规则
-! Version: 20250425145305
-! Last modified: 2025-04-25 14:53:05
-! Total Count: 8642
+! Version: 20250426154314
+! Last modified: 2025-04-26 15:43:14
+! Total Count: 8650
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -460,6 +460,7 @@
 ###modalAblockWrapper
 ###modalAdblock
 ###myads
+###nr + script:not([src]) ~ div[id]:not([class])
 ###playerJsvLayer.jsv-layer
 ###playertopads
 ###popup-overlay0.popup-overlay
@@ -1848,6 +1849,9 @@
 ##.wrapper_advertisement
 ##.wrapperad
 ##.x-link[href^="/jump"]
+##.xqbj-component-advertises-1
+##.xqbj-component-advertises-2
+##.xqbj-component-advertises-3
 ##.xqbj-list-rows-placard
 ##.y-ads
 ##.y-ads-wide
@@ -3485,6 +3489,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/*.*.1721.json?17$third-party
 .top/*.1375.json?$third-party
 .top/*.1485.json?$third-party
+.top/*StatAd?*deviceID=*&$third-party
 .top/*_*.apk$domain=bamxs.com
 .top/*_*_vw*sbjs?$third-party
 .top/*cx?17$third-party
@@ -5168,6 +5173,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://cnzz*/code/$third-party
 ://creative.*.com/widgets/v4/Universal
 ://creative.*/widget*.js$third-party
+://dciclc.*.top/*_*.apk?$third-party
 ://dl.hdslb.com/mobile/latest/android64/*apk
 ://dm*/static/js/footer.js$~third-party
 ://douban.zuixindy*/app.js
@@ -6680,7 +6686,9 @@ rockmods.net,rockmods.com##^script:has-text(AdBlock)
 rockmods.net,rockmods.com##script:has-text(AdBlock)
 rouwenge.vip,jpq.me#@#[class$="ad-container"]
 rshzm.com##[style*="width"][style*=":"][style*="100%"]
+rule34gen.com##div.item.thumb:has(> iframe[id^="embed_"])
 rule34video.com##[class*="spot"]:has(script[src*="/lv/esnk"])
+rule34video.com##div.item.thumb:has(a[title="Advertisement"])
 ruyigu.com##[id^="sgh-ad"]
 sbdm.net##div#vodshare
 scamalytics.com#@#.bsa-ads-container
