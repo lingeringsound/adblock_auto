@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: UjjzDrDZHUlGATM5LE7AnQ
+! Checksum: MI0MNdhftHvcr9hbNcVnLQ
 ! Title: 自用去广告Adblock规则
-! Version: 20250430144634
-! Last modified: 2025-04-30 14:46:34
-! Total Count: 8661
+! Version: 20250430191225
+! Last modified: 2025-04-30 19:12:25
+! Total Count: 8684
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -309,6 +309,7 @@
 ###coupletRight
 ###dfp-banner-popup
 ###div-leader-ad
+###divExoLayerWrapper
 ###extensible-banner
 ###fb_300x250
 ###first-ads
@@ -539,6 +540,7 @@
 ###top-scroll-sixgrid-ad
 ###top-sixgrid-ad-1
 ###top-sixgrid-ad-2
+###topBannerText1
 ###topBanners
 ###top_ad
 ###topstuff > #tads
@@ -1011,6 +1013,7 @@
 ##.content-ads-bottom
 ##.content-advert
 ##.content-advertisment
+##.content-list > script[src^="/template/"] + *
 ##.cpcad.nopc
 ##.custom_link-wrapper.banner-grid-container
 ##.d-flex.justify-content-center.my-1
@@ -1310,6 +1313,7 @@
 ##.header-background + style + .index-banner:not([id]):not([style]) > div[class^="swiper"]
 ##.headerads
 ##.hidden-lg > [class$="sticky2"]
+##.hl-hidden-md.hl-hidden-lg[style$="5px"]
 ##.home-ad-region-1
 ##.horiAd
 ##.horiz_adspace
@@ -1512,6 +1516,7 @@
 ##.maomi-content > .section-menu > .row > a[target="_blank"]
 ##.maomi-content > .top-af-container
 ##.maomi-content > a[target="_blank"]
+##.maomi-content > script:not([src]) + div:not([class])
 ##.mask + .footer-fixed-nav.clearfix
 ##.md\:mt-3 > .md\:gap-3
 ##.menu-ads
@@ -1793,6 +1798,7 @@
 ##.tonglanad
 ##.toolbar-gg
 ##.top-a2db[data-group]
+##.top-ad-container ~ div[id^="remove"][style]
 ##.top-ads-amp
 ##.top-ads-container
 ##.top-ads-content
@@ -2177,6 +2183,7 @@
 ##a[href*="/?channel="] > img[src]
 ##a[href*="/adclick.php?"][target="_blank"]
 ##a[href*="/adslog/"][target="_blank"]
+##a[href*="/baidu/index-kj.html"]
 ##a[href*="/direct/stripchat"]
 ##a[href*="/jump/next.php?r="]
 ##a[href*="/youyicl/youku.html"][style*="position: absolute;"]
@@ -2361,6 +2368,7 @@
 ##a[title="51直播"]
 ##a[title="77直播"]
 ##a[title="908棋牌"]
+##a[title="PG游戏"]
 ##a[title="PG电子"]
 ##a[title="Sjzb"][style]
 ##a[title="五彩堂"]
@@ -2368,14 +2376,24 @@
 ##a[title="大发赌场"]
 ##a[title="威尼斯人"]
 ##a[title="官方新葡京"]
+##a[title="官方棋牌"]
 ##a[title="官方皇冠"]
 ##a[title="开元官方"]
 ##a[title="开元棋牌"]
+##a[title="新葡京"]
 ##a[title="杏吧直播"]
 ##a[title="正版开元"]
 ##a[title="澳门太阳城"]
+##a[title="澳门威尼斯"]
+##a[title="澳门新葡"]
+##a[title="澳门新葡京"]
 ##a[title="澳门银河"]
+##a[title="熊猫体育"]
 ##a[title="皇冠"]
+##a[title="赚钱棋牌"]
+##a[title="金沙国际"]
+##a[title="金沙直播"]
+##a[title="香妃直播"]
 ##a[title^="PG娱乐"]
 ##a[title^="澳门新葡京"]
 ##ad-shield-ads
@@ -2495,6 +2513,7 @@
 ##div.p > a > img[style*="width:100%;"]
 ##div.second-activity-list > .i-img3
 ##div.sponsor-outer
+##div.stui_md > .list-box
 ##div.suiji.bottom,div.suiji.topad
 ##div.v_ad
 ##div:not([class]):not([id]) > iframe[width="407"][scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][height][frameborder="0"]
@@ -4092,6 +4111,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /bar/yfgg.js
 /bar/yfggb.js
 /bid?url=http
+/bl.js?v=$~third-party
 /bl.php$domain=nopeporn.com|veu.xxx|sexytrunk.com|xxxbanjo.com|beeg.com|croea.com|hipornvideo.com|imagetwist.com|imgskull.com|kporno.com|picfox.org|picshick.com|picturelol.com|pornorip.biz|porntube.com|pron.tv|chaostube.net
 /blsx_*_*_*.$third-party
 /blsx_*_*js?
@@ -4107,6 +4127,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /cpa/dl.js
 /cpa/gg.js
 /cpa/qq*.js
+/cpc.js?v=
 /css/ad.
 /css/assets.html?r=0$domain=topfapgirlspics.com
 /css/click_*.js$script
@@ -4117,6 +4138,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /ddbd/*f.js$~third-party,script
 /ddbd/f1*.js$~third-party
 /display/ads/*
+/dxj.js?v=$~third-party
 /dygg_
 /dyn_banner.
 /dyn_banners_
@@ -4680,6 +4702,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /torget_ads.
 /tr?id=*&tk=$popup
 /ts_as.html?as=$third-party
+/ty/*-*-*-*-*.*$third-party,~image,~stylesheet
 /upload/ads/*$domain=~ads.ae
 /video-slider-ad/build.js
 /vlcdn.tsyndicate.com/videos
