@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: u/nBXqkH3uvScCYCpKyQBQ
+! Checksum: UjjzDrDZHUlGATM5LE7AnQ
 ! Title: 自用去广告Adblock规则
-! Version: 20250429173125
-! Last modified: 2025-04-29 17:31:25
-! Total Count: 8659
+! Version: 20250430144634
+! Last modified: 2025-04-30 14:46:34
+! Total Count: 8661
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1850,8 +1850,6 @@
 ##.wrapperad
 ##.x-link[href^="/jump"]
 ##.xqbj-component-advertises-1
-##.xqbj-component-advertises-2
-##.xqbj-component-advertises-3
 ##.xqbj-list-rows-placard
 ##.y-ads
 ##.y-ads-wide
@@ -1899,6 +1897,8 @@
 ##[class*="__ads"]
 ##[class*="ads_"]:not([class*="reads_"])
 ##[class*="ads_border"]
+##[class*="advertises"] > .popup-form > *
+##[class*="advertises"] > .van-overlay
 ##[class*="banner"][class*="cctv"]
 ##[class*="card-ads"]
 ##[class*="floating_ads"]
@@ -3002,8 +3002,8 @@
 ##script + iframe[src^="https://s.uuidksinc.net"]
 ##script + script + style + div[id] + a[onclick][target="_self"]
 ##script > .p-screen-dialog
-##script[id] + script[src^="/"] + style ~ div[id]:not([class])
-##script[id] + script[src^="/"] ~ div[id]:not([class])
+##script[id] + script[src^="/"] + style ~ div[id]:not([class]):not(#content)
+##script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content)
 ##script[src$="/ad-provider.js"] + ins
 ##script[src$="/ad-provider.js"] +div + ins
 ##script[src$="/js/jads.js"] + ins[id]
@@ -3233,6 +3233,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*/uagu.php$third-party
 .com/*interstitial*.js$third-party,script
 .com/17*.*.*.*?17$third-party,~media,~stylesheet,~image
+.com/17*.*.*?17$third-party,~media,~stylesheet,~image
 .com/17mb/script/f*.js$~third-party,script
 .com/20*/*/*.txt$third-party
 .com/5y*/31*.$other,~third-party
@@ -4294,6 +4295,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/adb.js$third-party
 /js/adbs.js
 /js/adh5.js$~third-party
+/js/adlm*.js
 /js/adlmb*.js$third-party,script
 /js/adlmb.js$third-party,script
 /js/ads.js?v=
