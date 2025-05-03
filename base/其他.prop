@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Ja6Gq8w6R0dfDDI6DjhF/A
+! Checksum: GIEw79AJzYGhCYfTn8OD/Q
 ! Title: 自用去广告Adblock规则
-! Version: 20250503172328
-! Last modified: 2025-05-03 17:23:28
-! Total Count: 8689
+! Version: 20250503193926
+! Last modified: 2025-05-03 19:39:26
+! Total Count: 8691
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2511,6 +2511,7 @@
 ##div.only-app > #second-background-container
 ##div.only-app.loc_banner
 ##div.p > a > img[style*="width:100%;"]
+##div.rm-one.rm-list > a
 ##div.second-activity-list > .i-img3
 ##div.sponsor-outer
 ##div.stui_md > .list-box
@@ -2585,6 +2586,7 @@
 ##div[class^="popup-t"][class*="open"][class*="-icon"]
 ##div[class^="popup-t"][style^="display:"]
 ##div[class^="shortcuts-"][class$="-overlay"]
+##div[class^="shortcuts-"][class$="-overlay"] ~ div[style]:not([class])
 ##div[class^="swiper-"] > a[href][alt$="博彩"][target="_blank"]
 ##div[class^="swiper-"] > a[href][alt$="新葡京"][target="_blank"]
 ##div[class^="swiper-"] > a[href][alt$="棋牌"][target="_blank"]
