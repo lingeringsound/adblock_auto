@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: GIEw79AJzYGhCYfTn8OD/Q
+! Checksum: iFJeo93ut6gFcFOX1pb1JQ
 ! Title: 自用去广告Adblock规则
-! Version: 20250503193926
-! Last modified: 2025-05-03 19:39:26
-! Total Count: 8691
+! Version: 20250504143032
+! Last modified: 2025-05-04 14:30:32
+! Total Count: 8694
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5104,6 +5104,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.*.*:*/vj*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
 ://*.*.xyz/*/*-*-*-*/$third-party,~media,~stylesheet,~image
 ://*.*.xyz:*/*/*-*-*-*/$third-party,~media,~stylesheet,~image
+://*.*/*$script,third-party,domain=porncide.com
 ://*.*/*.js$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*cx?ssid=$third-party
@@ -5136,6 +5137,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.xn--*.cn/*_*.xml$third-party
 ://*.xn--*.net/y*.js$third-party,script
 ://*.yinghua*.*/bar$script,~third-party
+://*/*?*&*,*=*%$domain=porncide.com
 ://*38kanshu.net/public/*.js
 ://*6080*/js/ad.js
 ://*69hsw.*/static/69shuba/69.js$script
@@ -6615,6 +6617,7 @@ pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfi
 pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##div[style]:has(> script[src$="/ad-provider.js"])
 pornbest.com,pornbest.net,pornbest.org,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##img[src*="/images/friend"]
 pornboss.org###menu-menue-1 > li:has(> a[href^="http://toplist.raidrush.ws/"])
+porncide.com##script[src^="/themes/"] ~ div[style]:not([class]):not([id])
 pornclipsguru.com##.under_video
 porncloud.cc###spot-player
 porncloud.cc,xclub101.pro##.sp-holder
