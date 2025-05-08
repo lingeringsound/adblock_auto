@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: NKppM8siUpY2iYxPvLWtng
+! Checksum: ghb+HSWJ3V62zvTwoJl70g
 ! Title: 自用去广告Adblock规则
-! Version: 20250506191831
-! Last modified: 2025-05-06 19:18:31
-! Total Count: 8700
+! Version: 20250508155721
+! Last modified: 2025-05-08 15:57:21
+! Total Count: 8703
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -299,6 +299,7 @@
 ###centered-ads-group
 ###centeredads
 ###chaptercontent > #content_tip
+###chaptername.chaptername ~ center:not([class]):not([id]):not([style]) > a
 ###chp_ads_blocker-modal
 ###chp_ads_blocker-overlay
 ###chp_branding
@@ -2493,6 +2494,7 @@
 ##div.advertisement-box
 ##div.book-main > #notice
 ##div.cell-lr[onclick^="window.open("]
+##div.chapter-page-btn > style + div[id]:not([class]):not([style])
 ##div.content > div[style] > div[class="photo-two"]
 ##div.da > a > img.lazyload
 ##div.down-list > ul > [href]
@@ -5012,6 +5014,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 3g.163.com,m.163.com##section.recommend.js-recommend
 3g.163.com,m.163.com##span.s-openApp
 3g.baidu.com,m.baidu.com,m5.baidu.com##.blank-frame
+3g.baidu.com,m.baidu.com,m5.baidu.com##[class*="swan-ad-fc"]
 3g.baidu.com,m.baidu.com,m5.baidu.com##div[style="overflow: hidden;background: #fff;position: relative;"]
 3g.baidu.com,m.baidu.com,m5.baidu.com,www.baidu.com##div:has(>.openBox-container)
 3g.baidu.com,m.baidu.com,m5.baidu.com,www.baidu.com##div:has(>div[id$="_1"]+div[id$="_5"])
