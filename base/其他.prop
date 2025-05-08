@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ghb+HSWJ3V62zvTwoJl70g
+! Checksum: SUN4Zm/f6kbxSenmvn0MiA
 ! Title: 自用去广告Adblock规则
-! Version: 20250508155721
-! Last modified: 2025-05-08 15:57:21
-! Total Count: 8703
+! Version: 20250508160308
+! Last modified: 2025-05-08 16:03:08
+! Total Count: 8705
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4595,6 +4595,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /show?bver=$popup
 /sign?v=$domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 /site/*_*/static/*/p*.js$script,third-party
+/skin/js/mc.js?v=$~third-party
 /smartpop/*$popup
 /source/*/openjs/*.js$script,third-party
 /source/*/production/*.js$script,third-party
@@ -5150,6 +5151,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*biqu*/m.js
 ://*biquge*/m.js
 ://*biquge*/mm.js$script
+://*bqg.com/*/*.php
 ://*dianjiangxin.*/js/mc.js?
 ://*diany*/top.js
 ://*dilidili*.*/js/*.js?ver=
