@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: lqm+auX7evFZAlmofA6O9w
+! Checksum: 5Vh+1P3QSTv3a8KMUO5T3g
 ! Title: 自用去广告Adblock规则
-! Version: 20250509144424
-! Last modified: 2025-05-09 14:44:24
-! Total Count: 8707
+! Version: 20250510195712
+! Last modified: 2025-05-10 19:57:12
+! Total Count: 8706
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2589,7 +2589,6 @@
 ##div[class^="popup-t"][class*="open"][class*="-icon"]
 ##div[class^="popup-t"][style^="display:"]
 ##div[class^="shortcuts-"][class$="-overlay"]
-##div[class^="shortcuts-"][class$="-overlay"] ~ div[style]:not([class])
 ##div[class^="swiper-"] > a[href][alt$="博彩"][target="_blank"]
 ##div[class^="swiper-"] > a[href][alt$="新葡京"][target="_blank"]
 ##div[class^="swiper-"] > a[href][alt$="棋牌"][target="_blank"]
@@ -4597,7 +4596,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /show?bver=$popup
 /sign?v=$domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 /site/*_*/static/*/p*.js$script,third-party
-/skin/js/mc.js?v=$~third-party
 /smartpop/*$popup
 /source/*/openjs/*.js$script,third-party
 /source/*/production/*.js$script,third-party
@@ -5183,6 +5181,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*po18.*/astyle/wap.js$script
 ://*puzanny*/static/node.js
 ://*qiqidm*.*/js/*.js?ver=
+://*shuku*/skin/*/*.js?v=$~third-party
 ://*taopian*/*.js?V=
 ://*tianxibook*/*/0*1.js$script,~third-party
 ://*tianxibook*/public/*.js
@@ -7009,7 +7008,7 @@ theporn.cc##div[id*="theporn"][style*="margin"] > div > span
 theyarehuge.com##div[data-nosnippet]
 thicca.com##div.happy-inside-player
 thicca.com##div:not([class]):not([id]):has(.adsbyexoclick)
-tianxibook.com##[onclick^="window.open"]
+tianxibook.com,vidhub.me,vidhub.tv,vidhub1.cc##[onclick^="window.open"]
 tianyancha.com##[class^="download-"]
 tianyancha.com##[id^="banner_mobile_"]
 tieba.baidu.com###j_light_see_index
