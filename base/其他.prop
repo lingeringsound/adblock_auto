@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 5Vh+1P3QSTv3a8KMUO5T3g
+! Checksum: zTS3W6SQea5/GhGyA7oCgw
 ! Title: 自用去广告Adblock规则
-! Version: 20250510195712
-! Last modified: 2025-05-10 19:57:12
+! Version: 20250510232945
+! Last modified: 2025-05-10 23:29:45
 ! Total Count: 8706
 ###ADbox
 ###Ad-Container
@@ -3522,6 +3522,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/*cx?17$third-party
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
+.top/ad*/mobile.js$~third-party
+.top/ad*/show.js$~third-party
 .top/iis.*.1*.json?$third-party
 .top/j/*$script,third-party
 .top/js.php?*=*=*$third-party
@@ -3926,8 +3928,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /adblocker_message_
 /adblockkiller.
 /adblockpopup.
-/adce/mobile.js$~third-party,script
-/adce/show.js$~third-party,script
 /adclick.$popup
 /adclick?
 /adclickcv.php
