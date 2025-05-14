@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 0PpNl1LsN819KhTcxcdplw
+! Checksum: V2/dhYYpF9ragS6ofZEGtw
 ! Title: 自用去广告Adblock规则
-! Version: 20250511232403
-! Last modified: 2025-05-11 23:24:03
-! Total Count: 8710
+! Version: 20250514233650
+! Last modified: 2025-05-14 23:36:50
+! Total Count: 8722
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2514,6 +2514,7 @@
 ##div.only-app > #second-background-container
 ##div.only-app.loc_banner
 ##div.p > a > img[style*="width:100%;"]
+##div.pb-0:not(.section) > div.container:not([id]) > div:not([id])
 ##div.rm-one.rm-list > a
 ##div.second-activity-list > .i-img3
 ##div.sponsor-outer
@@ -4310,7 +4311,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /javascript/ads/*
 /javascript/gpt-
 /javascripts/ads/*
-/jquery.modal.$domain=1909.me|8se.me|litu100.xyz|xchina.co|xchina.fun|xchina.pro|xchina.store
+/jquery.modal.$domain=1909.me|8se.me|litu100.xyz|8se.me|xchina.co|xchina.fun|xchina.pro|xchina.store
 /jquery/3.1.1.6/jquery.min.js$domain=fcwei.com
 /js*piao.js
 /js*piaofu.js
@@ -5085,6 +5086,25 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
 7mmtv.sx,91porn.best,adultdeepfakes.com,kemono.su,missav.ai,missav.city,missav.com,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex,simplyhentai.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,camhub.cc,camhub.world,fuckit.cc,thothd.com,watchporn.to#@#.ads-iframe
+8se.me,crxs.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[class$="article"]:has(.media > a > img[src^="https://upload.xchina.biz/ad/"])
+8se.me,xbbs.me,xbookcn.org,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##.push-bottom
+8se.me,xbookcn.org,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##.push-top
+8se.me,xchina-cn.com,xchina.co,xchina.com,xchina.store,xchina.tv##div.recommendation_widget
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##.exoclick_300x250
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##.exoclick_300x500
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[adid]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[class*="exoclick_"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[class*="fa-ban"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[class^="photoMask"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[class^="playerMask"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##[href*="#"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##^script:has-text(isBlocked)
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##a[href*="/redirect/ad-"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##div.media:has(a > img[src*="xchina"])
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##div[class*="jquery-modal"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##div[class*="modalAd"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##div[style*="width: 300px;"][style*="height: 455px;"]
+8se.me,xchina-cn.com,xchina.co,xchina.fun,xchina.store,xchina.tv##script:has-text(isBlocked)
 91jav1.com##.ad-wrap
 91porn.best##div[style*="center"]:has(script[src$="/ad-provider.js"])
 91porn.best,pornbest.com,pornbest.net,pornbest.org,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##div.row.links
@@ -5201,9 +5221,17 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*yydstxt*/js/cdn.js$script,~third-party
 ://*yydstxt*/js/html$script,~third-party
 ://18comic*/templates/frontend/airav/js/*_*4*.js
+://1909.*/plugins/jquery.modal/
+://1909.*/plugins/sweetAlert
+://1909.*/redirect/ad-
+://1909.*/scripts/push*.js
 ://6*.xyz/to/18*.jpg
 ://888bb*ww.com/$image,third-party
 ://888xx*kk.com/$image,third-party
+://8se*/plugins/jquery.modal/
+://8se*/plugins/sweetAlert
+://8se*/redirect/ad-
+://8se*/scripts/push*.js
 ://a.*srv.com^$script,third-party
 ://aj25*.bid/$third-party
 ://api.*.com/s/c?_=$third-party
@@ -5806,7 +5834,6 @@ cosxplay.com##[id*="-boxes-mobile"]
 cosxplay.com##[id^="inside-video-boxes"]
 crazyporn.xxx##.adswarning
 crxs.me##div:has(> [href^="https://xchina.click/"])
-crxs.me,xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[class$="article"]:has(.media > a > img[src^="https://upload.xchina.biz/ad/"])
 ctejp.com##div.addbox
 ctejp.com##div.van-overlay
 cupfox.app###outer-container > .model:has(> .model-content > a[href*=".jd.com"])
@@ -7198,31 +7225,13 @@ x6g.com##.addd
 x6g.com##a[href^="/ad.php"]
 x6g.com##li:has(.myad)
 x6g.com##ul > li.addd + li:is([class=""]):not(.new)
-xbbs.me,xbookcn.org,xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##.push-bottom
 xbookcn.org##.banner_ad
 xbookcn.org##.outer-banner
 xbookcn.org##[class*="banner"]
 xbookcn.org##[class^="push-"]
-xbookcn.org,xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##.push-top
 xbqg06.com##^script:has-text(kbbaidu)
 xbqg06.com##body > div[id^="a17"]:not([class]):not([style])
 xbqg06.com##script:has-text(kbbaidu)
-xchina.co,xchina.store,xchina-cn.com,xchina.com,xchina.tv##div.recommendation_widget
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##.exoclick_300x250
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##.exoclick_300x500
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[adid]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[class*="exoclick_"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[class*="fa-ban"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[class^="photoMask"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[class^="playerMask"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##[href*="#"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##^script:has-text(isBlocked)
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##a[href*="/redirect/ad-"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##div.media:has(a > img[src*="xchina"])
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##div[class*="jquery-modal"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##div[class*="modalAd"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##div[style*="width: 300px;"][style*="height: 455px;"]
-xchina.co,xchina.store,xchina-cn.com,xchina.fun,xchina.tv##script:has-text(isBlocked)
 xclub101.pro###im-spot
 xclub101.pro##[onmouseup="setRealHref(event)"][rel="nofollow"]
 xdf.cn##[class^="bottom_ad"]
@@ -7239,6 +7248,7 @@ xgroovy.com##div[id^="head"]:has(.adsbyexoclick)
 xhzysh.com,rujiapawn.com,sysjbz.com,zq3q.com,j1069.com,tvyb03.com,tvyb01.com,tvyb02.com,tvyb06.com,hktv02.com,hktv06.com,meijumi.xyz,meijumi.buzz,meijumi.com,sbdm.net,fantuanhd.com,kankanju.cc,renren.pro,sstv.fun##*[style*="bottom"],[class$="_b"]
 xiakexsw.com##a[href^="/"][rel="nofollow"]
 xiakexsw.com##script + div[style]
+xianguke.net##h5[id][style]
 xiashuyun.com##[id^="downapp"]
 xiashuyun.com##div#navdown
 xiuluodm.com##[id^="swipercontainer"]
@@ -7530,6 +7540,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||888xx222kk.com^
 ||888xx555kk.com^
 ||88dus.win/sys.js
+||8se.*/scripts/push*.js
+||8se.me/redirect/ad-
 ||9lulukp.live/js/lb.js
 ||a-ads.com^
 ||a.adtng.com^
