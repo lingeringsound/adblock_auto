@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: gEm8rU0IzfNPSExMHc1tXg
+! Checksum: EDPb7JIVHvDhWt26FUMPKw
 ! Title: 自用去广告Adblock规则
-! Version: 20250515155900
-! Last modified: 2025-05-15 15:59:01
-! Total Count: 8741
+! Version: 20250516185956
+! Last modified: 2025-05-16 18:59:56
+! Total Count: 8744
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5123,6 +5123,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 91porn.com###videodetails > div:has(> a[href][target="_blank"])
 91porn.com#@#.vjs-preroll
 91porny.org,haijiao35.com,jiuse.io##.card:has(>.card-image>a[href^="http"])
+96kl.com##^script:has-text(bottom\(\);)
+96kl.com##script:has-text(bottom\(\);)
 99re.com##a[href][target="_blank"] > img[src]
 :*/*/sv?gp=*=*=$third-party
 :*/api/v1/api2/tongji/start?pid=$third-party
@@ -5362,6 +5364,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.xyz/theporn/js/
 @@/?utm_source=*&utm_campaign=$domain=dlsite.com|yandex.kz|yandex.ru|yandex.com|yandex.fr|yandex.tr|yandex.ru|yandex.by|yandex.eu|yandex.net|yandex.uz|yandex.ua|yandex.*
 @@/_next/static/chunks/$script,domain=hentaipaw.com
+@@/_next/static/chunks/*dd.js$~third-party
 @@/ad.php?$domain=jav777.cc|jav777.xyz|520cc.cc|520cc.com
 @@/ad/ads.php?$domain=jav777.cc|jav777.xyz|520cc.cc|520cc.com
 @@/adbar/*$domain=outlook.live.com
