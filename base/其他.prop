@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 4Vn1aa3H57jQrZlSJ3lyfg
+! Checksum: JgWFglLtkhoHEyUW8s7/8w
 ! Title: 自用去广告Adblock规则
-! Version: 20250517154757
-! Last modified: 2025-05-17 15:47:57
-! Total Count: 8746
+! Version: 20250518080414
+! Last modified: 2025-05-18 08:04:14
+! Total Count: 8750
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3258,6 +3258,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*/js/8*/8*/8*/8*?r=https$third-party
 .com/*/ua.php$third-party
 .com/*/uagu.php$third-party
+.com/*bd*.js$script,domain=ifeng.com
 .com/*interstitial*.js$third-party,script
 .com/17*.*.*.*?17$third-party,~media,~stylesheet,~image
 .com/17*.*.*?17$third-party,~media,~stylesheet,~image
@@ -6195,6 +6196,7 @@ ifeng.com##[class^="index_relateVideo"]
 ifeng.com##[class^="index_release"]
 ifeng.com##[class^="index_videoList"]
 ifeng.com##[id*="top_ad"]
+ifeng.com##div:not([class]):not([id]):not([style]) > div[class^="index_list"] + div[style]:not([class]):not([id])
 ifeng.com##section > [class^="index_toolbar"]
 ihuaben.com###openDeepLinkBtn
 ihuaben.com##.appdownload
@@ -7918,6 +7920,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||eaaaej.icu^$third-party
 ||eazhm.com^
 ||eb480dde95.com^
+||eclick.baidu.com^$third-party
 ||effectivedisplayformats.com^
 ||effirst.com^$third-party
 ||ehaie.top^
@@ -8490,6 +8493,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ssestherssa.com^$third-party
 ||ssl.libaishuo.com^$third-party
 ||ssl.qhres2.com/ssl/
+||stadig.ifeng.com^
 ||static.ufile.cc^$script,third-party
 ||stats.autohome.com.cn^
 ||stats.wp.com^
