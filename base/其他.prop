@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JgWFglLtkhoHEyUW8s7/8w
+! Checksum: QUgxv4GAH9V8L/QE4O62jw
 ! Title: 自用去广告Adblock规则
-! Version: 20250518080414
-! Last modified: 2025-05-18 08:04:14
-! Total Count: 8750
+! Version: 20250518115614
+! Last modified: 2025-05-18 11:56:15
+! Total Count: 8753
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3523,6 +3523,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/*_*.apk$domain=bamxs.com
 .top/*_*_vw*sbjs?$third-party
 .top/*cx?17$third-party
+.top/17*.*.*?17$third-party,~media,~stylesheet,~image
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
 .top/ad*/mobile.js$~third-party
@@ -5175,6 +5176,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.po18wen.*/js/yushuhai.js
 ://*.read52.*/astyle/wap.js
 ://*.shengyenxs.*/e*/*.js$script
+://*.xiao*ks.com/1.js
 ://*.xn--*.*/1*/*_0*.js$third-party
 ://*.xn--*.cc/jav/*?x=$third-party
 ://*.xn--*.cn/*_*.xml$third-party
@@ -6196,6 +6198,7 @@ ifeng.com##[class^="index_relateVideo"]
 ifeng.com##[class^="index_release"]
 ifeng.com##[class^="index_videoList"]
 ifeng.com##[id*="top_ad"]
+ifeng.com##a[href^="https://ishare.ifeng.com/loc/webdaoliu/index"]
 ifeng.com##div:not([class]):not([id]):not([style]) > div[class^="index_list"] + div[style]:not([class]):not([id])
 ifeng.com##section > [class^="index_toolbar"]
 ihuaben.com###openDeepLinkBtn
