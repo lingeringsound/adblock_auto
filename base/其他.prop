@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: vohAyXZgH70T96JttlUb4w
+! Checksum: FhgnWytOt9yF9Qbj2i4gYw
 ! Title: 自用去广告Adblock规则
-! Version: 20250521212607
-! Last modified: 2025-05-21 21:26:07
-! Total Count: 8759
+! Version: 20250521213623
+! Last modified: 2025-05-21 21:36:23
+! Total Count: 8764
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3538,6 +3538,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/loading.js?id=17$~third-party
 .top/sign?v=*.$third-party
 .top/ts_as.html?$third-party
+.top/uni-ggs.js
 .top/wiseindex*?$third-party
 .top/xling_*_*.js?
 .top:*/api/v4/g?kyurl=$third-party
@@ -5266,6 +5267,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://auete.*/js/mcenter/$script
 ://ayq*nsx.icu/*.js$third-party,script
 ://cdn.*.xyz/xsxs.js$third-party
+://cdn.biquge*/*ggs.js
 ://cf*cdn*/static/js/f*.js$third-party
 ://cf*cdn.net^$domain=wuqiantz.top|wuqianvz.top
 ://chaturbate.com$third-party
@@ -5342,6 +5344,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://shise*/scripts/push*.js
 ://sobt*/Public/static/js/common.js
 ://static.*xx.com/static/js/a*.js?v=$third-party
+://tj.*.com/$third-party
 ://tj.*.icu/*.js?17$script,third-party
 ://tp.hchus*dmew.top$third-party
 ://tpic.*.cn/*.js$third-party
@@ -5533,6 +5536,8 @@ aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##center > iframe[scrolling="NO"][frameborder="NO"]
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##p[align="center"]
 aaddtt.com,wwbbmm.com##.hbg-link
+abcbiquge.com##^script:has-text(try)
+abcbiquge.com##script:has-text(try)
 abjav.com##.header__item
 abjav.com##section
 aca.best#@#body > noscript + #app
