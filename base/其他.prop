@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: /QFE7nV2ykpOXOqRONlymg
+! Checksum: xrHwK/kHmi4FPOZF+baUqw
 ! Title: 自用去广告Adblock规则
-! Version: 20250522145958
-! Last modified: 2025-05-22 14:59:59
-! Total Count: 8777
+! Version: 20250523173002
+! Last modified: 2025-05-23 17:30:02
+! Total Count: 8786
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2469,6 +2469,8 @@
 ##body > script + .app + #htmlContenthtml
 ##body > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##body#app.pc.mobile
+##body#read > h5[id][style]:not([class])
+##body#read > h5[id][style]:not([class]) ~ h5[id][style]
 ##body.page > .popup
 ##body.touch > .q-dialog
 ##body[ontouchstart] > #topBox
@@ -2498,6 +2500,7 @@
 ##div.book-main > #notice
 ##div.cell-lr[onclick^="window.open("]
 ##div.chapter-page-btn > style + div[id]:not([class]):not([style])
+##div.container > .spot-wrap
 ##div.content > div[style] > div[class="photo-two"]
 ##div.da > a > img.lazyload
 ##div.down-list > ul > [href]
@@ -2505,6 +2508,7 @@
 ##div.fl-banner
 ##div.flex.justify-center > ins[id]
 ##div.four-activity-list > .grid
+##div.fp-controls > .fp-brand
 ##div.g-list > ul > li
 ##div.g-slide > div[class^="swiper-"]
 ##div.index_ddg
@@ -3265,6 +3269,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*interstitial*.js$third-party,script
 .com/17*.*.*.*?17$third-party,~media,~stylesheet,~image
 .com/17*.*.*?17$third-party,~media,~stylesheet,~image
+.com/17*?rid=17$third-party
 .com/17mb/script/f*.js$~third-party,script
 .com/20*/*/*.txt$third-party
 .com/5y*/31*.$other,~third-party
@@ -5166,6 +5171,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.27txt.La/*/*.js$~third-party
 ://*.27txt.La/xi.js$~third-party
 ://*.48wx.*/manhua$~third-party
+://*.adf*/*.js$third-party
 ://*.adfsda*.xyz/*/*$third-party
 ://*.aiqu*8*.com/*/*.js$~third-party
 ://*.aiqu*com/da/$script,~third-party
@@ -5275,6 +5281,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://cnzz*/code/$third-party
 ://creative.*.com/widgets/v4/Universal
 ://creative.*/widget*.js$third-party
+://dasdasss.adf$third-party
 ://dciclc.*.top/*_*.apk?$third-party
 ://dl.hdslb.com/mobile/latest/android64/*apk
 ://dm*/static/js/footer.js$~third-party
@@ -6674,6 +6681,7 @@ porn.co##.adde_modal_detector
 porn.co##.adde_modal_detector-show
 porn300.com##.primary-nav > ul.main-menu > li.main-menu__item:has(> a[href^="http://traffic.bannerator.com/"]#tabcams-desk)
 porn4days.red##div > b:has(> div.alert > a[href^="https://www.brazzersnetwork.com/"])
+porn4fans.com##div.premium-banner_holder
 porn5f.com###dprecommend
 porn5f.com###main_video_block > .m-t-5.pull-right
 porn5f.com##.aa-dd-body
@@ -7901,6 +7909,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||d4d99bfbcf.e59f087ae4.com^
 ||da-ads.com^
 ||daraz.com^
+||dasdasss.adfjxsrw.cc^
 ||dashenya.com/js/jquery.js
 ||data.bilibili.com/log
 ||dayu778.com/assets/publish/$script
