@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: y6cLgVqrg4S21ft1O71Qvw
+! Checksum: Jt3VL6A1V00hJyeNCIzBgg
 ! Title: 自用去广告Adblock规则
-! Version: 20250524001320
-! Last modified: 2025-05-24 00:13:20
-! Total Count: 8788
+! Version: 20250524151507
+! Last modified: 2025-05-24 15:15:07
+! Total Count: 8795
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2440,6 +2440,7 @@
 ##body > [style^="position: fixed; z-index: 100; display: block; left: 0px; width: 36px;"]
 ##body > div#dontfoid
 ##body > div#fixedban
+##body > div.addbox > div:not([id]):not([class]):not([style])
 ##body > div.demo-wrapper[style="display:none;"] + div[id][class]
 ##body > div[class$="c"][style="bottom: 135px;"]
 ##body > div[class$="h"][style="bottom: 135px;"]
@@ -4335,6 +4336,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /jquery/3.1.1.6/jquery.min.js$domain=fcwei.com
 /js*piao.js
 /js*piaofu.js
+/js/*tj.js
 /js/*tongji.js
 /js/0x1a2b3c4d.js
 /js/5988.js$~third-party
@@ -4438,6 +4440,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/sp_ad.js$script
 /js/tj.js
 /js/tongji.js?v=
+/js/vtj.js
 /js/wap2-jm-ms-ld.js?ver=
 /js/wap2-jm-ms.js?ver=$~third-party,script
 /js/wcount.js$~third-party
@@ -5395,7 +5398,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/api/blockdata$domain=sohu.com
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
-@@/image/20*-*-*/*/$domain=1688.com|coolapk.com|galleryepic.com|galleryepic.one|galleryepic.xyz|kuaikanmanhua.com|taobao.com|tmall.com|tudou.com|youku.com
+@@/image/20*-*-*/*/$domain=1688.com|coolapk.com|galleryepic.com|galleryepic.one|galleryepic.xyz|kuaikanmanhua.com|qnxz.top|taobao.com|tmall.com|tudou.com|youku.com
 @@/index.m3u8
 @@/js/popup.js?advertiser=popup$domain=netflav.com
 @@/matomo.js$domain=github.com|trcet77.com
@@ -6349,6 +6352,7 @@ justdial.com###gptAdsDiv
 jvidcm.xyz##div.stui_md
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
 jyshare.com#@#script + script + style + div[id]
+kanliao.com,kanliao.cyou,kanliao.org,kanliao12.cyou,kanliao13.org,kanliao18.com###index[role="main"] > article:has(meta[content="今日看料"])
 kanxig.com##^script:has-text(|Android)
 kanxig.com##script:has-text(|Android)
 kdslife.com##[class*="DownloadGuide"]
@@ -6810,6 +6814,7 @@ pussyspace.com##div[id]:has(> div[class][style] > [style="cursor: pointer; posit
 pussyspace.net##span + div[id]:has(img[src*="/upload/no_img"])
 qinav.com##.b300
 qinav.com##div[id^="qinav_b"]
+qnxz.top##div.lg\:grid-cols-2
 quark.cn##.reflow-button
 quark.cn##.relfow-button
 quotes.sina.cn##.app-footer-sina
@@ -7197,6 +7202,7 @@ txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi]
 typhoon.yahoo.co.jp##.promoBanner
 tysswh.com##img[onclick]
 ukdevilz.com##div[style]:not([id]):not([class]):has(script[src*="ad-provider"])
+unfetish.com##body > .modal-mask
 up.taoseye.com##a[target="_blank"],[ontouchstart]
 video.laxd.com##.ad_area_bottom
 video.laxd.com##.ad_area_top
@@ -8609,6 +8615,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||umphek.com^
 ||umtpopxcsedc.cdnvideo*.com$third-party
 ||un.salangane.asia^
+||unfetish.com/assets/app.js?
 ||union.macoms.la^
 ||unionadjs.com^
 ||unm.zzxmcp.com^$third-party
