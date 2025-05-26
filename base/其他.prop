@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2jo/2S0JJZpqU74mUc9f2g
+! Checksum: 2N9b+1yBIcxlfGTmJ7YnTg
 ! Title: 自用去广告Adblock规则
-! Version: 20250524232934
-! Last modified: 2025-05-24 23:29:35
-! Total Count: 8802
+! Version: 20250526221224
+! Last modified: 2025-05-26 22:12:24
+! Total Count: 8809
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4444,6 +4444,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/wap2-jm-ms-ld.js?ver=
 /js/wap2-jm-ms.js?ver=$~third-party,script
 /js/wcount.js$~third-party
+/js/wenjian.js
 /js/xf.js
 /js/xia.js?
 /js/xiaxuanfu.js
@@ -5962,6 +5963,8 @@ efukt.com##[data-ad-type]
 enet.com.cn,fjsen.com,hupu.com,kdslife.com,mysteel.com,news.cnyes.com,olehd.com,olevod.com,olevod.eu,pchome.net,rznews.cn,~car.kdslife.com,~my.hupu.com##div[class^="ad"]
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
+erciyan.com##^script:has-text(function xxS)
+erciyan.com##script:has-text(function xxS)
 eromanga-show.com,hentai-one.com,hentaipaw.com##+js(no-setTimeout-if, /[a-z]\(!0\)/, 800)
 eromanga-show.com,hentai-one.com,hentaipaw.com##div[id^="ts_ad_"]
 erome.com##.message-bar
@@ -7485,6 +7488,8 @@ yandex.by,yandex.com,yandex.com.by,yandex.com.com,yandex.com.eu,yandex.com.fr,ya
 yandex.by,yandex.com,yandex.com.by,yandex.com.com,yandex.com.eu,yandex.com.fr,yandex.com.kz,yandex.com.net,yandex.com.ru,yandex.com.tr,yandex.com.ua,yandex.com.uz,yandex.eu,yandex.fr,yandex.kz,yandex.net,yandex.ru,yandex.tr,yandex.ua,yandex.uz,yandex.*##li[class*="_card"]:has(a[href^="https://yabs.yandex.ru/count/"])
 yandex.by,yandex.com,yandex.com.by,yandex.com.com,yandex.com.eu,yandex.com.fr,yandex.com.kz,yandex.com.net,yandex.com.ru,yandex.com.tr,yandex.com.ua,yandex.com.uz,yandex.eu,yandex.fr,yandex.kz,yandex.net,yandex.ru,yandex.tr,yandex.ua,yandex.uz,yandex.*##li[class*="_card"]:has(a[href^="https://yandex.com/search/_crpd/"])
 ydm.life##[onclick*="surnum"][style],img[style*="z-index:2147483647"][onclick*="javascript:"]
+yebiquge.com##^script:has-text(hm.baidu.com)
+yebiquge.com##script:has-text(hm.baidu.com)
 yeduxiaoshuoo.com##div[class$="anye"][onclick$="anye()"]
 yeeach.com##.footer + div[id][class]:not([style])
 yeeach.com##^script:has-text(new RegExp)
@@ -7980,6 +7985,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||energizeio.com^
 ||eporner.com/adblock
 ||eqwyym.com/js/dom.js$third-party
+||erciyan.com/public/0*0.js
 ||ercnrxa.cn^
 ||etahub.com^$third-party
 ||euosicjxjv.com^
@@ -8483,6 +8489,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||rtbrennab.com^
 ||rtmark.net^
 ||rw.pleatpipe.com^
+||s.360.cn^$third-party
 ||s.69vj.com/assets/DIY.$image,media
 ||s.htkk*.top:20443^$script
 ||s.uuidksinc.net^
