@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 59Qr/K1cKZbE6gdd3/UVfA
+! Checksum: ofrZGN31pOOpZt2ZPfeTjA
 ! Title: 自用去广告Adblock规则
-! Version: 20250528152849
-! Last modified: 2025-05-28 15:28:49
-! Total Count: 8814
+! Version: 20250528221517
+! Last modified: 2025-05-28 22:15:17
+! Total Count: 8817
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1519,6 +1519,7 @@
 ##.main_promo_image_container
 ##.mainholder + div[id][class*=" "] > div[id][class*=" "]
 ##.maomi-content > #main-container > .row.mob40 + .row
+##.maomi-content > .app
 ##.maomi-content > .section-banner
 ##.maomi-content > .section-menu > .row > a[target="_blank"]
 ##.maomi-content > .top-af-container
@@ -5404,7 +5405,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/api/blockdata$domain=sohu.com
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
-@@/image/20*-*-*/*/$domain=1688.com|coolapk.com|galleryepic.com|galleryepic.one|galleryepic.xyz|kuaikanmanhua.com|mvxzsp.com|qnxz.top|taobao.com|tmall.com|tudou.com|youku.com
+@@/image/20*-*-*/*/$domain=1688.com|coolapk.com|galleryepic.com|galleryepic.one|galleryepic.xyz|kuaikanmanhua.com|mvxzsp.com|qnxz.top|taobao.com|tmall.com|tudou.com|youku.com|znds.com
 @@/index.m3u8
 @@/js/popup.js?advertiser=popup$domain=netflav.com
 @@/matomo.js$domain=github.com|trcet77.com
@@ -7565,6 +7566,8 @@ zjsw.org##[style*="!important"]
 zjsw.org##div[id]:has(span > img[src*=".xyz"])
 zjtu.tv##a[target="_blank"] > img[class="br"][src][width="100%"]
 zn508.cc##.GzList
+znds.com##a[href^="https://ai.dangbei.com"]
+znds.com##a[href^="https://jd.dangbei.com"]
 zol.com.cn###bottom-fixed-wrapper
 zol.com.cn###top-fixed-wrapper
 zol.com.cn##.banner-ad
