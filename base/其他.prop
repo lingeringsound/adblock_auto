@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 4dT67dAIWl2UHxX88gxxjA
+! Checksum: DYXcGZQ0cIjBhVQAlPFQOg
 ! Title: 自用去广告Adblock规则
-! Version: 20250529154500
-! Last modified: 2025-05-29 15:45:00
-! Total Count: 8842
+! Version: 20250530214605
+! Last modified: 2025-05-30 21:46:05
+! Total Count: 8848
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4820,6 +4820,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /wp-srv/ad/*
 /wsuyaut.js$third-party
 /www/delivery/*
+/xiaapps.js$~third-party,script
 /xpopup.js$script
 /xuanfu.js
 /xuvzbvu.js$third-party
@@ -6965,7 +6966,9 @@ sm.cn##div[id^="dl-banner-"]
 sm.cn,yz.m.sm.cn##a[href*="sm.cn/adclick?"]
 sm.cn,yz.m.sm.cn##div[id*="_Shopping_Etao_"]
 sm.cn,yz.m.sm.cn##div[id^="ad_ele_"]
-smartapps.baidu.com##[id="swan-ad-render-"]
+smartapps.baidu.com##.swan-ad-render-container
+smartapps.baidu.com##[id^="swan-ad-render-"]
+smartapps.baidu.com##swan-swan-ad-render
 smyy361.com##ul.stui-content__playlist.clearfix > li[style="display: block;"]
 so.com###bnbtm-banner
 so.com###bqPromote
@@ -7222,9 +7225,9 @@ twitter.com,x.com##a[href*="src=promoted_trend_click"] + div
 twitter.com,x.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com,x.com##div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]
 twitter.com,x.com##div[data-testid="trend"]:has(> div[class]:only-child svg + span)
-txtduo.org,txtduo.com,txtduo.app,txtduo.cn,txtduo.live##^script:has-text(Math.random)
+txtduo.app,txtduo.cn,txtduo.com,txtduo.live,txtduo.org,xfreehd.com##^script:has-text(Math.random)
+txtduo.app,txtduo.cn,txtduo.com,txtduo.live,txtduo.org,xfreehd.com##script:has-text(Math.random)
 txtduo.org,txtduo.com,txtduo.app,txtduo.cn,txtduo.live##div[style*="margin:"]
-txtduo.org,txtduo.com,txtduo.app,txtduo.cn,txtduo.live##script:has-text(Math.random)
 txxx.com##.gfpl-wrapper
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
@@ -7343,6 +7346,8 @@ xclub101.pro###im-spot
 xclub101.pro##[onmouseup="setRealHref(event)"][rel="nofollow"]
 xdf.cn##[class^="bottom_ad"]
 xfani.com##.ec-tutu
+xfreehd.com##^script:has-text(ad-body)
+xfreehd.com##script:has-text(ad-body)
 xgroovy.com##.adsbyexoclick
 xgroovy.com##.fluid-b
 xgroovy.com##.fluid_ad_cta
@@ -8018,6 +8023,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||energizeio.com^
 ||eporner.com/adblock
 ||eqwyym.com/js/dom.js$third-party
+||erciyan.com/*/*0*0*.js
 ||erciyan.com/public/0*0.js
 ||ercnrxa.cn^
 ||etahub.com^$third-party
