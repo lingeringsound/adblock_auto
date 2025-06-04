@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Gp3+4nUU2PMSFmLPhHzFqw
+! Checksum: wGgALrPQlxaA82iPFNrjLg
 ! Title: 自用去广告Adblock规则
-! Version: 20250603110750
-! Last modified: 2025-06-03 11:07:50
-! Total Count: 8855
+! Version: 20250604143528
+! Last modified: 2025-06-04 14:35:28
+! Total Count: 8858
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -478,6 +478,7 @@
 ###modalAblockWrapper
 ###modalAdblock
 ###myads
+###nr + div[style="margin:0;padding:0;outline:0"]
 ###nr + script:not([src]) ~ div[id]:not([class])
 ###playerJsvLayer.jsv-layer
 ###playertopads
@@ -4663,6 +4664,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static*/pf.js?v=
 /static/*dd.js$~third-party
 /static/*ds/ttss.js$script,~third-party
+/static/*nb/static.js
 /static/042*.js$~third-party,script
 /static/blue/js/17mb.js
 /static/float*.js
@@ -5387,6 +5389,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://static.*xx.com/static/js/a*.js?v=$third-party
 ://tj.*.com/$third-party
 ://tj.*.icu/*.js?17$script,third-party
+://tongji.*/*.js
 ://tp.hchus*dmew.top$third-party
 ://tpic.*.cn/*.js$third-party
 ://tpic.*.cn/*.txt$third-party
