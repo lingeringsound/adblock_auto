@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: yJjqQkelusJfEUNv9xe7CA
+! Checksum: uf/eYpTNfYFXjrM9+UmWVA
 ! Title: 拦截黄色网站转跳
-! Version: 20250430155148
-! Last modified: 2025-04-30 15:51:48
-! Total Count: 538
+! Version: 20250604185248
+! Last modified: 2025-06-04 18:52:48
+! Total Count: 546
 .*tad.cn/?c=ggmou$document
 .*tad.cn/?c=ggmou$~third-party
 .alb.aliyuncs.com:*/*/gougou.html?k=$document
@@ -42,6 +42,8 @@
 .com/aff-w2aK$~third-party
 .com/afu.php?zoneid=$document
 .com/afu.php?zoneid=$~third-party
+.com/en/*?*=*&*=*=0$document
+.com/en/*?*=*&*=*=0$~third-party
 .com/h.html?id=$document
 .com/h.html?id=$~third-party
 .com/hanxiucao-$document
@@ -196,8 +198,12 @@
 /\/\?shareName=[a-z]{1,6}[0-9]+/$~third-party
 /^https?:\/\/[0-9]{4,8}\.[0-9]+\.(com|vip|cn|xyz)/[0-9]{2}\.html\?shareName=[0-9]{4,8}\.[0-9]+\.(com|vip|cn|xyz)/$document
 /^https?:\/\/[0-9]{4,8}\.[0-9]+\.(com|vip|cn|xyz)/[0-9]{2}\.html\?shareName=[0-9]{4,8}\.[0-9]+\.(com|vip|cn|xyz)/$~third-party
+/aKp.php?j=$document
+/aKp.php?j=$~third-party
 /adamo/XT*-YS.html?k=$document
 /adamo/XT*-YS.html?k=$~third-party
+/afu.php?zoneid=*=$document
+/afu.php?zoneid=*=$~third-party
 /antv/*/antv-v*_asqt*.apk$document
 /antv/*/antv-v*_asqt*.apk$~third-party
 /antv/antv_v*.*.apk$document
@@ -254,6 +260,8 @@
 /ymqdjw2.apk$~third-party
 139.196.80.247$document
 139.196.80.247$~third-party
+:*/home?channel=Onerun$document
+:*/home?channel=Onerun$~third-party
 ://*.*.com/asdzx.html$document
 ://*.*.com/asdzx.html$~third-party
 ://*.xn--*.net/16*.html#/$document
