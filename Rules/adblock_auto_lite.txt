@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 2wGp1cYN22dwsTg/MCJoQg
-! Title: 混合规则精简版(更新日期2025-06-04 00:17:35)
-! Version: 20250604001735
+! Checksum: V8Se+xP66qB8deUcEzfgKQ
+! Title: 混合规则精简版(更新日期2025-06-04 08:54:17)
+! Version: 20250604085418
 ! Expires: 12 hours (update frequency)
-! Last modified: 2025-06-04 00:17:35
-! Total Count: 55231
-! Blocked Filters: 55231
+! Last modified: 2025-06-04 08:54:18
+! Total Count: 55234
+! Blocked Filters: 55234
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
@@ -2046,7 +2046,7 @@ $websocket,domain=4archive.org|allthetests.com|boards2go.com|colourlovers.com|fa
 /assets/jquery/api.js?type=adult$~third-party
 /assets/jquery/api100.js?type=$~third-party
 /assets/jquery/app100.js?type=$~third-party
-/assets/jquery/main*.js?v=$domain=streamhide.to|guccihide.com|filelions.to|mwish.pro|javplaya.com|awish.pro|wishfast.top|cabecabean.lol|sfastwish.com|fviplions.com|fsdcmo.sbs|obeywish.com
+/assets/jquery/main*.js?v=$domain=awish.pro|cabecabean.lol|filelions.to|fsdcmo.sbs|fviplions.com|guccihide.com|javplaya.com|mwish.pro|obeywish.com|sfastwish.com|streamhide.to|wishfast.top
 /assets/jquery/style*.js$domain=fsdcmo.sbs|flaswish.com
 /assets/js/bootstrap.main.js$domain=totalsportek.pro|footybite.to
 /assets/js/se.js$script,~third-party
@@ -4369,7 +4369,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 |javascript:*window.location
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<域名规则>>>>>35470
+!<<<<<域名规则>>>>>35472
 |http*://*?$third-party,domain=forums.socialmediagirls.com|pornhub.com|redtube.com|tube8.com|youporn.com|youporngay.com
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 |https://m.frgls.com/js/*.js?v=
@@ -29146,6 +29146,8 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||pornx.to/wp-content/uploads/ad*x*.png
 ||pornx.to/wp-content/uploads/billboard.png
 ||pornxbox.com/cs/
+||pornxp.*/spnbb/
+||pornxp.*/spnbf.js
 ||pornxp.com/2.js
 ||pornxp.com/sp/
 ||pornxp.eu/spnbb/
@@ -49680,7 +49682,7 @@ zzz.gamers-luck.com##.gamer-sp_postbottom
 zzztube.com,videoporn.tube##.b-random-column
 !<<<<<网站单独规则 结束>>>>>
 
-!<<<<<通用Css规则>>>>>4566
+!<<<<<通用Css规则>>>>>4567
 ###ADbox
 ###ADtip
 ###Ad-Container
@@ -51884,6 +51886,7 @@ zzztube.com,videoporn.tube##.b-random-column
 ##.heg > .div-list
 ##.heg > .partner-list
 ##.hidden-lg > [class$="sticky2"]
+##.hidden-text + .ad-container
 ##.his-sign-cont[data-dysign-adid]
 ##.hl-hidden-md.hl-hidden-lg[style$="5px"]
 ##.hlol_ad
