@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: KwOLjyqfSOoaxe1U7IJ1oA
+! Checksum: uf3jRay+RJOuI3bs71b65w
 ! Title: 自用去广告Adblock规则
-! Version: 20250604185811
-! Last modified: 2025-06-04 18:58:11
-! Total Count: 8860
+! Version: 20250606154256
+! Last modified: 2025-06-06 15:42:56
+! Total Count: 8867
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2427,6 +2427,8 @@
 ##amp-connatix-player
 ##amp-embed[type="taboola"]
 ##amp-fx-flying-carpet
+##article > div > div ~ div.auto-link.hover-action[data-link]
+##article > div.auto-link.hover-action[data-link]
 ##article[itemscope][itemtype] > a[href^="/archives"][target="_blank"]
 ##bkveng
 ##body > #app > .adv-frame
@@ -2457,6 +2459,7 @@
 ##body > [style^="display: block; z-index: 2147483647; width: 10%;"][style$="!important;"]
 ##body > [style^="display: block;"][style*="129px;"]
 ##body > [style^="position: fixed; z-index: 100; display: block; left: 0px; width: 36px;"]
+##body > div > div > div:not(article) > div.auto-link.hover-action[data-link]
 ##body > div#dontfoid
 ##body > div#fixedban
 ##body > div.addbox > div:not([id]):not([class]):not([style])
@@ -2487,6 +2490,8 @@
 ##body > embed[id][src^="https:///"]
 ##body > script + *[id][class][classname]
 ##body > script + .app + #htmlContenthtml
+##body > script:not([src]) ~ #layui-layer-shade1
+##body > script:not([src]) ~ #layui-layer1
 ##body > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##body#app.pc.mobile
 ##body#read > h5[id][style]:not([class])
@@ -5237,6 +5242,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*banzhu*/js/cdn.js$script,~third-party
 ://*banzhu*/js/js4.js?$script,~third-party
 ://*biqu*/m.js
+://*biquge*/h5/wap.js?v
+://*biquge*/h5/zm.js?v
 ://*biquge*/m.js
 ://*biquge*/mm.js$script
 ://*bqg.com/*/*.php
