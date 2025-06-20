@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: jrFKqjJpB+kEq4qH7T1t1w
+! Checksum: gjLtOxH4UcLNwksjhDtBrA
 ! Title: 自用去广告Adblock规则
-! Version: 20250618194622
-! Last modified: 2025-06-18 19:46:23
-! Total Count: 8886
+! Version: 20250620235327
+! Last modified: 2025-06-20 23:53:27
+! Total Count: 8893
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2525,6 +2525,7 @@
 ##div.book-main > #notice
 ##div.cell-lr[onclick^="window.open("]
 ##div.chapter-page-btn > style + div[id]:not([class]):not([style])
+##div.container > .card ~ .tujia
 ##div.container > .spot-wrap
 ##div.container:not([id]):not([style]) > header ~ div.module
 ##div.content > div[style] > div[class="photo-two"]
@@ -4651,7 +4652,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /script/tj.js
 /scriptjs/float*.js
 /scripts/AdService_
+/scripts/ad/ad*.js
 /scripts/ad/hyou.js
+/scripts/ad/icon.js
 /scripts/ads/*
 /sdk/p/?zid=$third-party
 /sdk/push_web/?zid=
@@ -5282,6 +5285,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*llevven*/*0/*ll*.js
 ://*luolabook*/public/*.js
 ://*missav*/pop?url=
+://*mm.com/gif1.php
 ://*mp4*/js/foot.js$script,~third-party
 ://*mp4*/js/wcount.js$script,~third-party
 ://*myyyw.cc/play/*php
@@ -5377,6 +5381,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://m.*.cn/js/css.js$~third-party
 ://m.91zww.com/0x*/0x*.js?v=$~third-party
 ://m.gufengmh*.com/*xuanfu.js
+://meitu*.cc/gif.php
 ://mobi*.*.*/*_*?$third-party
 ://mobivx.*.cam$third-party
 ://mobivx.*.club$third-party
@@ -6883,6 +6888,8 @@ psimlzqa.org##.video-item:has(a[onclick="return false"])
 punishworld.com##.mobile-pad-head + div[id][style*="rgb"]
 pussyspace.com##div[id]:has(> div[class][style] > [style="cursor: pointer; position: relative;"] > img)
 pussyspace.net##span + div[id]:has(img[src*="/upload/no_img"])
+qbxs.com##a[href^="https://mobile.yangkeduo.com/"]
+qbxs.com##div.image-container
 qidiantu.com###ad-slot
 qinav.com##.b300
 qinav.com##div[id^="qinav_b"]
