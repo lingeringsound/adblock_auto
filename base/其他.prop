@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: gjLtOxH4UcLNwksjhDtBrA
+! Checksum: 1WlCxnGvt8MkLEOUKJsr9Q
 ! Title: 自用去广告Adblock规则
-! Version: 20250620235327
-! Last modified: 2025-06-20 23:53:27
-! Total Count: 8893
+! Version: 20250624182239
+! Last modified: 2025-06-24 18:22:39
+! Total Count: 8901
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1639,6 +1639,8 @@
 ##.mod_r_ad1
 ##.modal-ad
 ##.modal__body-adblock
+##.module + #custom_wrapper
+##.module + #custom_zone
 ##.module--ad
 ##.module-ad
 ##.module-ad-small
@@ -1649,6 +1651,7 @@
 ##.module-advertisement
 ##.module-box-ads
 ##.module-image-ad
+##.module-player-handle-items + #custom_wrapper
 ##.module-rectangleads
 ##.module-sponsored-ads
 ##.module-tglist > .tg-normal-box
@@ -4865,6 +4868,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /xxgg/xsggs.js
 /xxgg/zhhads*.js
 /yep.gif$domain=abellalist.com|doseofporn.com|freyalist.com|lizardporn.com|moozporn.com|zehnporn.com
+/yf-qd-gd.js
+/yf-xhllm-dp.js
 /yhys/bfwz*.js
 /yhys/dht.js
 /yhys/qq*.js
@@ -5857,6 +5862,7 @@ bing.com##[id$="adsMvCarousel"]
 bing.com##a.sb_meta[href^="http://advertise.bingads.microsoft.com"]
 bing.com##a[h$=",Ads"]
 bing.com##a[href*="/aclick?ld="]
+bing.com##div.cn_related_search_upsell_container
 bing.com##div[aria-label$="ProductAds"]
 bing.com##div[data-ans*="BrandZoneAds"]
 bing.com##li[class="b_algo"]:has(.b_attribution[data-partnertag]+p[class])
@@ -6687,6 +6693,8 @@ nfnews.com##.toApp
 nfnews.com##div.bot_banner_area
 nfnews.com##div.commentwrap_to_app
 nianyin.com##img[onclick^="window.open"]
+nivod.vip##^script:has-text(.gif)
+nivod.vip##script:has-text(.gif)
 nonfungerbils.com,pulsembed.eu,station-drivers.com#@#iframe[width="600"][height="90"]
 noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
 noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
