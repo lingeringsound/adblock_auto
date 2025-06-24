@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 1WlCxnGvt8MkLEOUKJsr9Q
+! Checksum: Js94o2Ie9xFytXIt12/Sqg
 ! Title: 自用去广告Adblock规则
-! Version: 20250624182239
-! Last modified: 2025-06-24 18:22:39
-! Total Count: 8901
+! Version: 20250624232424
+! Last modified: 2025-06-24 23:24:25
+! Total Count: 8904
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2101,6 +2101,7 @@
 ##a.checkNum[target="_blank"] > img[data-src]
 ##a.copy[onclick] > picture
 ##a.downurl[target="_blank"][referrerpolicy="no-referrer"]
+##a.poster[onclick="return false"][target="_blank"]
 ##a[alt="545新葡京"][target="_blank"]
 ##a[alt="91Pro"][target="_blank"]
 ##a[alt="91视频"][target="_blank"]
@@ -2308,6 +2309,7 @@
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".png"]
 ##a[href][title*="威尼斯人"] > img[alt]
 ##a[href^="//app.qingning"]
+##a[href^="/rss/button?from="]
 ##a[href^="/voddetail/"] + a[href^="https"]
 ##a[href^="advslog.php?advid="][target="_blank"]
 ##a[href^="http://2kkfof.vip"]
@@ -6896,6 +6898,7 @@ psimlzqa.org##.video-item:has(a[onclick="return false"])
 punishworld.com##.mobile-pad-head + div[id][style*="rgb"]
 pussyspace.com##div[id]:has(> div[class][style] > [style="cursor: pointer; position: relative;"] > img)
 pussyspace.net##span + div[id]:has(img[src*="/upload/no_img"])
+pvublivn.top,hstvx.com,atzectj.net##li:has(a.poster[onclick="return false"][target="_blank"])
 qbxs.com##a[href^="https://mobile.yangkeduo.com/"]
 qbxs.com##div.image-container
 qidiantu.com###ad-slot
