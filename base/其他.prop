@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: pNN7zS+3ISWtUI1tuopIfA
+! Checksum: YeECvnFAxnwb5cC1Cau6uA
 ! Title: 自用去广告Adblock规则
-! Version: 20250628220252
-! Last modified: 2025-06-28 22:02:52
-! Total Count: 8911
+! Version: 20250629131809
+! Last modified: 2025-06-29 13:18:09
+! Total Count: 8925
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2529,6 +2529,7 @@
 ##div.ad_txt_li,div.ad_txt
 ##div.advertisement-box
 ##div.book-main > #notice
+##div.cardtb-head + div.app
 ##div.cell-lr[onclick^="window.open("]
 ##div.chapter-page-btn > style + div[id]:not([class]):not([style])
 ##div.container > .card ~ .tujia
@@ -2565,6 +2566,7 @@
 ##div:not([id]):not([class]):not([style]) > .ad-area-close
 ##div:not([id]):not([class]):not([style]) > .ad-area-close + div[style*="background-color:"]:not([class]):not([id])
 ##div:not([id]):not([class]):not([style]) > li[style="list-style: none;"]
+##div[\:class][class] > #myblock2
 ##div[class$="_b"][style^="bottom:"][style$="display: block;"]
 ##div[class$="d"] > span[class^="closebox"]
 ##div[class$="pic"] > span[class^="closebox"]
@@ -3334,6 +3336,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/co/*?t=0.$third-party
 .com/css/click_*.js$script,~third-party
 .com/dh/*/*.gif$third-party,image
+.com/dhapp.js
+.com/dipiao.js
 .com/dl/*/*.gif$third-party,image
 .com/dl/*/1.jpg$third-party,image
 .com/ds*_t2.js?$third-party
@@ -3505,6 +3509,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .info/bokan/bokan.js$script
 .js?type=adult&v=$domain=netflav.com
 .la/8WaadBLH/*.js
+.live/fh.js
 .live/iis.*.1*.json?$third-party
 .live/j/*/*?$third-party
 .live/js/gg.js$script
@@ -5198,6 +5203,11 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 8se.me,xchina-cn.com,xchina.blog,xchina.co,xchina.fun,xchina.store,xchina.tv##div[style*="width: 300px;"][style*="height: 455px;"]
 8se.me,xchina-cn.com,xchina.blog,xchina.co,xchina.fun,xchina.store,xchina.tv##script:has-text(isBlocked)
 91jav1.com##.ad-wrap
+91jav1.com,crxtlg.com,zagzzpfs.xyz###popup-window
+91jav1.com,crxtlg.com,zagzzpfs.xyz##div.adaptation > div:has(.app)
+91jav1.com,crxtlg.com,zagzzpfs.xyz##div.fine-wrap
+91jav1.com,crxtlg.com,zagzzpfs.xyz##div.video-img-box:has(a[href^="https://"])
+91jav1.com,crxtlg.com,zagzzpfs.xyz##div[class*="col-"]:has(a[href^="https://"])
 91porn.best##div[style*="center"]:has(script[src$="/ad-provider.js"])
 91porn.best,pornbest.com,pornbest.net,pornbest.org,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex##div.row.links
 91porn.com###videodetails > div:has(> a[href][target="_blank"])
@@ -5280,6 +5290,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*dxs.com/js/*.js$third-party,script
 ://*ee-tv.*/js/footer.js
 ://*ffdm*/*_cpc.js$~third-party
+://*ffdm*/dd.js$~third-party
 ://*ffdm*/gdw.js
 ://*freeok.*/asdasdad.js$script
 ://*halihali*.*/js/*.js?ver=
@@ -7731,6 +7742,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ad.a-ads.com^
 ||ad.desibp.com^
 ||ad.hailangouwu.com^
+||ad.kavxx.com^
 ||ad.twinrdengine.com^
 ||ad999.biz^$third-party
 ||adactioner.com^$third-party
@@ -7865,6 +7877,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ato.tooopen.com^$third-party
 ||awunktf85.shop^
 ||axkq.xyz^$third-party,script
+||axxab.live/sj.php
 ||ayq3nsx.icu^$third-party
 ||azenka.one^
 ||b*.yahoo.co.jp/b?
@@ -8176,6 +8189,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||halihali*.com/js/wap2-jm-ms.js?$script
 ||haloshuwu.com/css/js/apps.js
 ||hanguomanhua.me/style*/js20*.js?v=
+||haobax.com/ad*.php
 ||hb.vhsrv.com^
 ||hbcfdp.com^
 ||hdbkell.com^
