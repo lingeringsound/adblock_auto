@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: aW9eU07hGPisbkjr29orbg
+! Checksum: FFSQPM0iePM23AG8TW2mEw
 ! Title: 自用去广告Adblock规则
-! Version: 20250926185001
-! Last modified: 2025-09-26 18:50:01
-! Total Count: 9167
+! Version: 20250927140604
+! Last modified: 2025-09-27 14:06:04
+! Total Count: 9171
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3466,6 +3466,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/ds*_t3.js?$third-party
 .com/ds*_t9.js?$third-party
 .com/en/*?*&*id=20*&*=*=$third-party,~media,~image,~stylesheet
+.com/en/*?*&*id=2032069$third-party
 .com/en/*?*id=20*&*=*=0$third-party,~image,~media,~stylesheet
 .com/en/*?*id=20*&*=*=1$third-party,~image,~media,~stylesheet
 .com/ev/*?type=events&event=
@@ -3475,6 +3476,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/float_down.js?17$third-party
 .com/footmenu.js$~third-party
 .com/get/*?*&*id=20*&*=*=$third-party,~media,~image,~stylesheet
+.com/get/*?*&*id=2032069$third-party
 .com/get/*?*id=20*&*=*=0$third-party,~image,~media,~stylesheet
 .com/get/*?*id=20*&*=*=1$third-party,~image,~media,~stylesheet
 .com/getMongoAd.php?$third-party
@@ -3509,6 +3511,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/sh/*.js$third-party
 .com/sh/back/*$third-party
 .com/sh/to/*$third-party
+.com/sn/*?*&*id=2032069$third-party
 .com/t1j.js$~third-party,script
 .com/tj?p=*zh-CN$~third-party
 .com/tong*ji.js$script
@@ -6848,12 +6851,12 @@ missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,thisav.
 missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com,missav.ai,missav.city,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav888.com,missav.ai,missav.city,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav888.com##.lg\:hidden
 missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com,missav.ai,missav.city,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav888.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com##[x-show$="video_details'"] > div > .list-disc
 missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com,missav.ai,missav.city,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav888.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,missav.ai,missav.ws##div[style="width: 300px; height: 250px;"]
+missav.ds,missav.llc,missav.ooo,missav2.icu,missav2.one##^script:has-text(广告)
+missav.ds,missav.llc,missav.ooo,missav2.icu,missav2.one##script:has-text(广告)
 missav.men,missav.ooo##div[class] + div[style*="center"]:not([class]):not([id])
 missav.men,missav.ooo##div[style^="position: fixed; bottom: 0px; left: 0px;"]
 missav2.cfd##div.common_banner
 missav2.cfd##div.thumbnail.group:has([onerror="javascript:this.src="])
-missav2.icu,missav2.one##^script:has-text(广告)
-missav2.icu,missav2.one##script:has-text(广告)
 mobile.baidu.com##div[class*="card-recommend"]
 mobile.baidu.com##div[class^="detail-banner-"]
 mobile.baidu.com,moonshot.cn,xzhao.vip#@#body > script + .app
@@ -8276,6 +8279,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||demand.supply^$script
 ||demoscope.net/statics/js/n*.js?v=
 ||detentsclonks.com^
+||devotedwhile.com^
 ||dfes68.com^
 ||dflkndkzf.com^$third-party
 ||dianyingtu.com/common/api_getAcode.php
