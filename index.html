@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+	<meta charset="utf-8">
+	<title>混合规则自动更新</title>
+	<meta name="description" content="Adblock规则订阅链接">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<style type="text/css" >
+/* 设置网页主体颜色 */
+ body {
+	background-color: #EEEEEE;
+	color: black;
+	transition: all 1s;
+}
+
+/* 段落居中，排版用 */
+ p {
+	text-align: center;
+}
+
+/* 说明按钮 */
+ button {
+	background-color: #EEEEEE;
+}
+
+/* 夜间切换模式按钮 */
+ .kaiguan{
+	position: absolute;
+	top: 795px;
+	right: 45px;
+	width: 30px;
+	height: 15px;
+	border: 2px solid black;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 3s;
+}
+ .bai{
+	position: absolute;
+	top: 1.5px;
+	left: 2px;
+	height: 13px;
+	width: 13px;
+	background: #000000;
+	border-radius: 50%;
+	transition: all 1s;
+}
+ .hei{
+	position: absolute;
+	top: 1.5px;
+	right: 2px;
+	height: 13px;
+	width: 13px;
+	background: #0BF351;
+	border-radius: 50%;
+	transition: all 1s;
+}
+
+/* 设置表格 */
+ table {
+	border-collapse: collapse;
+	width: 100%;
+	font-family: Arial, sans-serif;
+	color: #444444;
+	border: 1px solid #f2f2f2;
+}
+ th, td {
+	text-align: left;
+	padding: 8px;
+}
+ th {
+	background-color: #4CAF50;
+	color: white;
+}
+ .center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+	</style>
+</head>
+
+<body id="body" >
+<div id="Rules_list" >
+	<h1 style="text-align:center; font-size:55px;" >规则列表</h1>
+<!-- 停用
+        <p> 规则访问数</p>
+        <img class="center" src="http://006.freecounters.co.uk/count-133.pl?count=qe1milbo7p68gg219fmj&type=links&prog=unique" alt="访问数统计" />
+	</br>
+-->
+</div>
+
+<div class="copy_content" id="copy_content" >
+	<p id="github1" style="display: none;" >https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto.txt</p>
+	<p id="github2" style="display: none;" >https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt</p>
+	<p id="githubfast1" style="display: none;" >https://raw.gitmirror.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt</p>
+	<p id="githubfast2" style="display: none;" >https://raw.gitmirror.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt</p>
+	<p id="gitcode1" style="display: none;" >https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt</p>
+	<p id="gitcode2" style="display: none;" >https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt</p>
+	<p id="gitlink1" style="display: none;" >https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335</p>
+	<p id="gitlink2" style="display: none;" >https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335</p>
+</div>
+
+<div id="Rules_table" class="Rules_table" >
+		<h3 style="text-align:center;">点击可复制订阅链接</h3>
+		<p style="text-align:center; font-size:13px;">国内订阅推荐优先排名 Github加速订阅链接(能用就用，不能再换Gitcode) &gt; Gitlink(需手动同步) = Gitcode(需手动同步) &gt; Github(国内有的无法访问，需要梯子) </p>
+<table id="table" >
+	<thead>
+<tr>
+	<th>名称</th>
+	<th>Github订阅链接</th>
+	<th>Github加速订阅链接</th>
+	<th>Gitcode订阅链接</th>
+	<th>Gitlink订阅链接</th>
+</tr>
+	</thead>
+<tbody>
+	<tr>
+	<td>混合规则</td>
+	<td><button onclick="copyTextgithub1()" style="text-align:left; font-size:10px;" > 点击复制 </button></td>
+	<td><button onclick="copyTextgithubfast1()" style="text-align:left; font-size:10px;" > 点击复制 </button></td>
+	<td><button onclick="copyTextgitcode1()" style="text-align:center; font-size:10px;" > 点击复制 </button></td>
+	<td><button onclick="copyTextgitlink1()" style="text-align:center; font-size:10px;" > 点击复制 </button> </td>
+</tr>
+	<tr>
+	<td>混合规则(精简版)</td>
+	<td><button onclick="copyTextgithub2()" style="text-align:left; font-size:10px;" > 点击复制 </button></td>
+	<td><button onclick="copyTextgithubfast2()" style="text-align:left; font-size:10px;" > 点击复制 </button></td>
+	<td><button onclick="copyTextgitcode2()" style="text-align:center; font-size:10px;" > 点击复制 </button></td>
+	<td><button onclick="copyTextgitlink2()" style="text-align:center; font-size:10px;" > 点击复制 </button> </td>
+</tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="拦截器说明" >
+	<h3 style="text-align:center; font-size:18px;" >拦截器说明</h3>
+	<blockquote style="font-size:14px;" class="center" >
+		<p><strong><a href="https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto.txt">混合规则(自动更新)</a></strong> 适用于 <code>Adguard</code> / <code>Ublock Origin</code> / <code>Adblock Plus</code>(用Adblock Plus源码编译的软件也支持，例如<a href="https://www.coolapk.com/apk/com.hiker.youtoo">嗅觉浏览器</a> ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 <a href="https://www.coolapk.com/apk/com.mmbox.xbrowser">X浏览器</a></p>
+		<p><strong><a href="https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt">混合规则精简版(自动更新)</a></strong> 适用于轻量的浏览器，例如  <a href="https://www.coolapk.com/apk/mark.via">VIA</a>  / <a href="https://www.coolapk.com/apk/com.rainsee.create">Rian</a> / <a href="https://www.coolapk.com/apk/com.huicunjun.bbrowser">B仔浏览器</a></p>
+	</blockquote>
+</div>
+
+<div id="Rules_home_page" >
+<p style="text-align:center; font-size:25px;" > 主页链接 </p>
+	<h4 style="text-align:center;">点击访问</h4>
+	<p>
+		<a href="https://github.com/lingeringsound/adblock_auto" target="_blank" > GIthub/ </a>
+		<a href="https://gitcode.net/weixin_45617236/adblock_auto" target="_blank" > Gitcode/ </a>
+		<a href="https://www.gitlink.org.cn/keytoolazy/adblock_auto" target="_blank" > Gitlink </a>
+	</p>
+</div>
+
+<div id="I_do_not_konw" >
+	</br><h3 style="text-align:center;">@coolapk</h4><p>2023</p></br></br>
+</div>
+
+<div class="kaiguan" >
+	<div class="bai" id="anniu" />
+</div>
+
+
+<!-- 夜间切换脚本 -->
+<script>
+	var anniu = document.getElementById("anniu");
+	var kaiguan = document.querySelector(".kaiguan");
+	var body = document.getElementById("body");
+	var bottom = document.getElementById("bottom");
+	var Rules_table = document.getElementById("table");
+	var temp = 1;
+	anniu.addEventListener("click",function(){
+		if( temp == 1 ){
+		this.className = "hei";
+		temp = 0;
+		kaiguan.style.border = "2px solid #0BF351";
+		body.style.backgroundColor = "#07071D";
+		body.style.color = "#EEEEEE";
+		bottom.style.backgroundColor = "#07071D";
+		bottom.style.color = "white";
+		Rules_table.style.backgroundColor = "#07071D";
+		Rules_table.style.color = "white";
+		} else {
+		this.className = "bai";
+		temp = 1;
+		kaiguan.style.border = "2px solid black";
+		body.style.backgroundColor = "#EEEEEE";
+		body.style.color = "black";
+		bottom.style.backgroundColor = "transparent";
+		bottom.style.color = "black";
+		Rules_table.style.backgroundColor = "transparent";
+		Rules_table.style.color = "black";
+		}
+	});
+</script>
+
+<!-- 复制粘贴脚本 -->
+<script>
+function copyTextgithub1() {
+	var copyText = document.getElementById("github1");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+	alert("复制内容: "+copyText.textContent+" ");
+}
+function copyTextgithub2() {
+	var copyText = document.getElementById("github2");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+	alert("复制内容: "+copyText.textContent+" ");
+}
+function copyTextgithubfast1() {
+	var copyText = document.getElementById("githubfast1");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+	alert("复制内容: "+copyText.textContent+" ");
+}
+function copyTextgithubfast2() {
+	var copyText = document.getElementById("githubfast2");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+	alert("复制内容: "+copyText.textContent+" ");
+}
+function copyTextgitcode1() {
+	var copyText = document.getElementById("gitcode1");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+	alert("复制内容: "+copyText.textContent+" ");
+}
+function copyTextgitcode2() {
+	var copyText = document.getElementById("gitcode2");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+	alert("复制内容: "+copyText.textContent+" ");
+}
+function copyTextgitlink1() {
+	var copyText = document.getElementById("gitlink1");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+}
+function copyTextgitlink2() {
+	var copyText = document.getElementById("gitlink2");
+	var inputElement = document.createElement("input");
+	inputElement.setAttribute("value", copyText.textContent);
+		document.body.appendChild(inputElement);
+	inputElement.select();
+		document.execCommand("copy");
+	document.body.removeChild(inputElement);
+}
+</script>
+
+	</body>
+</html>

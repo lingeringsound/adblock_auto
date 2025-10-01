@@ -1,0 +1,36 @@
+name: update_adblock_rules
+on:
+  workflow_dispatch:
+  watch:
+    types: [started]
+  schedule:
+    - cron: '0 */8 * * *'
+
+jobs:
+   master:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Create local changes
+      run: |
+        sudo rm -rf /etc/localtime
+        sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+        sudo apt-get install -y dos2unix
+        sudo apt-get install -y perl
+        sudo apt-get install -y gawk
+        bash update.sh
+    - name: Commit files
+      run: |
+        git pull
+        git config --local user.email ${{ secrets.MYEMAIL }}
+        git config --local user.name ${{ secrets.MYUSERNAME }}
+        git add .
+        git commit -a -m "Rules update"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+        force : true
