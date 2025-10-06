@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: TLrxsUtaucw+GSxW9QBsKA
+! Checksum: MieGqlBOd/xIs1nG5oGFXQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251005051832
-! Last modified: 2025-10-05 05:18:32
-! Total Count: 9205
+! Version: 20251006081218
+! Last modified: 2025-10-06 08:12:18
+! Total Count: 9211
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -328,6 +328,7 @@
 ###div-leader-ad
 ###divExoLayerWrapper
 ###extensible-banner
+###fakeplayer
 ###fb_300x250
 ###first-ads
 ###first_ad
@@ -1819,6 +1820,7 @@
 ##.page-content > p[style="color:blue"]
 ##.page-content > p[style="color:red"]
 ##.page-content__advert
+##.page-nav ~ .addbox[style]
 ##.page[style^="padding-bottom:"] > [classname$="_g"][class$="_g"]
 ##.page[style^="padding-bottom:"] > [id*="_"][classname$="_f"][class$="_f"]
 ##.page[style^="padding-bottom:"] > [id*="_"][classname$="_g"][class$="_g"]
@@ -4896,6 +4898,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /staticjs/ls.js
 /staticjs/pf.js
 /statics/govv.js$~third-party
+/statics/js/*dihppplay*.js
+/statics/js/*guhppplay*.js
 /statics/js/dddd.js$~third-party
 /statics/js/ding.js$~third-party,script
 /statics/js/guding.js$~third-party,script
@@ -8908,6 +8912,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||show.apiimg.com/*/*.php$third-party
 ||siduohua.top^
 ||sifenews.com^
+||siguawang.com/foot.js
 ||similarpresence.com^
 ||simplewebanalysis.com^
 ||sinodan.link/js/js4.js?v=
