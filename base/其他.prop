@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: vzXZPcsxhWQYEdN/jJMu5g
+! Checksum: qVbSxRjM7PDOqB9RrXEbng
 ! Title: 自用去广告Adblock规则
-! Version: 20251008152649
-! Last modified: 2025-10-08 15:26:50
-! Total Count: 9222
+! Version: 20251009155155
+! Last modified: 2025-10-09 15:51:56
+! Total Count: 9230
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3053,6 +3053,7 @@
 ##img[src$="/ads.gif"]
 ##img[src$="/ads.jpg"]
 ##img[src$="/ads.png"]
+##img[src$="_b"][style$="z-index:1"]
 ##img[src*=".secureserver.net/"][src*=".gif"],img[src*=".secureserver.net/"][src*="960x"],img[src*=".secureserver.net/"][src*="960_"]
 ##img[src*=".tptp002.cfd/"][src$=".gif"]
 ##img[src*=".twqtf.boats/"]
@@ -3417,6 +3418,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .co/ajtop.php?pid=*$third-party
 .com/$domain=huang1111.cn
 .com/*.*/*/*/$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav2.icu|missav2.lat|missav2.one|missav2.wtf
+.com/*.gif$domain=72vod.com
 .com/*.js$third-party,domain=uaa001.com|uaa002.com|uaa003.com|uaa004.com|uaa005.com
 .com/*.txt$third-party,domain=1anime.me
 .com/*/*o*/$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav2.icu|missav2.lat|missav2.one|missav2.wtf
@@ -3757,6 +3759,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top:*/vh5/$third-party
 .top:8891/vh3/
 .top:8891/vj3/
+.top:9956/js/*.js
 .tw/bokan/bokan.js$script
 .us/bokan/bokan.js$script
 .vip/astyle/wap.js$script,~third-party
@@ -5371,6 +5374,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 69vj.com###vban
 69vj.com##[href^="https://b2pk.com/b/a/d/ck.php"]
 69xx.one,69xx487.xyz,88av.one,8mav.cc,av411.xyz,cable2055.cc,theav.xyz,thep178.com,theporn.cc,tuoku8.one,weav.xyz,x69av.cc,x88av.cc,x99av.cc##[class]:has(>a>.q-responsive)
+72vod.com##img[src*=".gif"]
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
 7mmtv.sx,91porn.best,adultdeepfakes.com,kemono.su,missav.ai,missav.city,missav.com,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.com,ptt.net,ptt.sex,simplyhentai.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,camhub.cc,camhub.world,fuckit.cc,thothd.com,watchporn.to#@#.ads-iframe
@@ -5475,6 +5479,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*58books*/static/js/wap.js
 ://*6080*/js/ad.js
 ://*69hsw.*/static/69shuba/69.js$script
+://*97dyy*/*top.js
 ://*banzhu*/js/cdn.js$script,~third-party
 ://*banzhu*/js/js4.js?$script,~third-party
 ://*biqu*/m.js
@@ -6490,6 +6495,8 @@ hentaipaw.com##[id^="ts_ad_native"]
 hentaistream.com##div[id^="adx_ad-"]
 hentaiworld.tv##.swiper-slide:has(> a[target="_blank"])
 hhkan.com,hhkan1.com,hhkan2.com,hhkan3.com##.mobile-download-popup
+hitv.app##a[href^="https://www.gkan.net"]
+hitv.app##div.tips-box
 hkcards.com#@##ad-slot
 hoho.tv##[class^="hoho-ad"],[data-ad-client]
 homejav.com###hj-container
@@ -8464,6 +8471,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||guifudi.com^
 ||guomanwang.com/poster/zj-di.js
 ||gxxtky.com/js/p.js
+||gxxyydl.com/click
 ||gyqifa.com^$third-party
 ||gz-yunxi.com^
 ||h.trace.qq.com^
