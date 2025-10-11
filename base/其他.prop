@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: qVbSxRjM7PDOqB9RrXEbng
+! Checksum: wraONyRBOlSoaKVO2kGrtQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251009155155
-! Last modified: 2025-10-09 15:51:56
-! Total Count: 9230
+! Version: 20251011093223
+! Last modified: 2025-10-11 09:32:24
+! Total Count: 9237
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2455,6 +2455,7 @@
 ##a[href^="https://www.hnhflqgc.com"]
 ##a[href^="https://www.loufengsq.com/"]
 ##a[href^="https://www.pfsk.cc/apk/aishangxiaoshuo"]
+##a[href^="https://www.qiaotoubao.xyz/"]
 ##a[href^="https://www.zhao-zupu.com"]
 ##a[href^="https://xchina.app"]
 ##a[href^="https://xchina.click/"]
@@ -6697,6 +6698,12 @@ jyshare.com#@#script + script + style + div[id]
 kanliao.com,kanliao.cyou,kanliao.org,kanliao12.cyou,kanliao13.org,kanliao18.com###index[role="main"] > article:has(meta[content="今日看料"])
 kanxig.com##^script:has-text(|Android)
 kanxig.com##script:has-text(|Android)
+kanxiwa##^script:has-text(navigator)
+kanxiwa##^script:has-text(new Date)
+kanxiwa##^script:has-text(new Function)
+kanxiwa##script:has-text(navigator)
+kanxiwa##script:has-text(new Date)
+kanxiwa##script:has-text(new Function)
 kbook8.com##div.layui-row
 kdslife.com##[class*="DownloadGuide"]
 keke1.app,keke2.app,keke3.app,kkys01.com,kkys02.com,kkys03.com##div.mobile-download-popup
