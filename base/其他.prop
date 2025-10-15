@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: LdcApLz2zJch52tWIIxX0g
+! Checksum: 67aWbRNegLSIgXjFNBfpyw
 ! Title: 自用去广告Adblock规则
-! Version: 20251014235541
-! Last modified: 2025-10-14 23:55:42
-! Total Count: 9255
+! Version: 20251015231755
+! Last modified: 2025-10-15 23:17:56
+! Total Count: 9260
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5874,6 +5874,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||tv.bili96.co^
 @@||tyue.me^$image
 @@||wan.douyu.com^$domain=wan.douyu.com
+@@||weathercn.com/*/static/js/
+@@||weathercn.com/*current.js
+@@||weathercn.com/*day*.js
 @@||woocall.sina.com.cn^$domain=sina.cn
 @@||wstream.video/img2/rivcash_banner
 @@||wwads.cn/js/makemoney.js$domain=baomidou.com|nodejs.cn
@@ -7660,8 +7663,8 @@ whentai.com##.bg-inject
 whentai.com##video[autoplay="autoplay"]
 wnjlkqe.info##a[href] > img[style="width: 100%;"]
 wr.de,wp.de,nrz.de#@#.ad
-wuqianpv.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top###detail-ad-recommend-panel.border-radius
-wuqianpv.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top##.panel-default.border-radius:has(a[href^="https://"])
+wuqiangu.top,wuqianpv.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top###detail-ad-recommend-panel.border-radius
+wuqiangu.top,wuqianpv.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top##.panel-default.border-radius:has(a[href^="https://"])
 wuzhuiso.com###appMiddleBanner
 wuzhuiso.com###mohe-hotnews_right
 wuzhuiso.com###side > div.download-browser:last-child
@@ -8985,6 +8988,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ssestherssa.com^$third-party
 ||ssl.libaishuo.com^$third-party
 ||ssl.qhres2.com/ssl/
+||st-ads-jssdk.vivo.com.cn^
+||st-sentinel.vivo.com.cn/h5/monitor
 ||stadig.ifeng.com^
 ||static.ufile.cc^$script,third-party
 ||statics.123*.com/static/ks/$script
