@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: KriuGVTjJOQLXc2XU/De1w
+! Checksum: NVFn2faUTPis6s3d2z0/Uw
 ! Title: 自用去广告Adblock规则
-! Version: 20251017143247
-! Last modified: 2025-10-17 14:32:47
-! Total Count: 9262
+! Version: 20251019111121
+! Last modified: 2025-10-19 11:11:21
+! Total Count: 9271
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -122,6 +122,7 @@
 ###ads-container-anchor
 ###ads-container-single
 ###ads-container-top
+###ads-tubiao
 ###adsModal
 ###ads_popup
 ###ads_warning
@@ -1012,6 +1013,7 @@
 ##.banner-cctv-style-top
 ##.banner-container-h5 > .banner_all_wrap
 ##.banner-player
+##.bannerAds
 ##.banner_header
 ##.banners > #banner-show
 ##.banners-middle
@@ -1456,6 +1458,7 @@
 ##.horizsponsoredlinks
 ##.hortad
 ##.htvad
+##.icon-ads
 ##.idmuvi-topbanner
 ##.idmuvi-topbanner-aftermenu
 ##.ima-ad-container
@@ -1909,6 +1912,7 @@
 ##.story-ad
 ##.storyAd
 ##.story__top__ad
+##.streamer-container2 > .streamer-box2
 ##.stripper > a[href*="istripper"] > img
 ##.suspend[style="width:auto;height:80px"]
 ##.swiper#bottomFixed
@@ -2673,6 +2677,8 @@
 ##div.pb-0:not(.section) > div.container:not([id]) > div:not([id])
 ##div.rm-one.rm-list > a
 ##div.second-activity-list > .i-img3
+##div.sm\:container > #banner-list
+##div.sm\:container > #banner-standalone
 ##div.sm\:container[\:class] > div[style]:not([id]):not([class])
 ##div.sponsor-outer
 ##div.stui_md > .list-box
@@ -2822,6 +2828,7 @@
 ##div[style^="position: fixed; inset: 0px; z-index: 2147483647; pointer-events: auto;"]
 ##div[style^="position:fixed;inset:0px;z-index:2147483647;background:black;opacity:0.01"]
 ##div[url^="https://xchina.click/"]
+##div[x-data^="{"]:not([class]):not([id]) ~ script:not([src]) ~ div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
 ##em > strong > img[style="pointer-events: none;"][width="100%"]
 ##embed[id][src*="://"][src*=".z"][src$="="]
 ##embed[src*=".peizi00.com/"]
@@ -2988,6 +2995,7 @@
 ##img[alt="uu视频"]
 ##img[alt="万倍爆奖"]
 ##img[alt="亚星体育"]
+##img[alt="免费91"]
 ##img[alt="免费AV动漫"]
 ##img[alt="免费VPN"]
 ##img[alt="免费插入的快感"]
@@ -6933,6 +6941,7 @@ missav.men,missav.ooo##div[class] + div[style*="center"]:not([class]):not([id])
 missav.men,missav.ooo##div[style^="position: fixed; bottom: 0px; left: 0px;"]
 missav2.cfd##div.common_banner
 missav2.cfd##div.thumbnail.group:has([onerror="javascript:this.src="])
+missvod4.com##[href="#"]
 mobile.baidu.com##div[class*="card-recommend"]
 mobile.baidu.com##div[class^="detail-banner-"]
 mobile.baidu.com,moonshot.cn,xzhao.vip#@#body > script + .app
