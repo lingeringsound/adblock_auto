@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 09qe3dxcFWW0xy2x2bsyfA
+! Checksum: kQrJmDMuI1FYEjvWV7LH0Q
 ! Title: 自用去广告Adblock规则
-! Version: 20251020131736
-! Last modified: 2025-10-20 13:17:37
-! Total Count: 9270
+! Version: 20251021172452
+! Last modified: 2025-10-21 17:24:52
+! Total Count: 9278
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2404,6 +2404,7 @@
 ##a[href][target="_blank"] > img[src*="cn-chengdu.aliyuncs.com/"][alt]
 ##a[href][target="_blank"] > img[src*="img.souche.com"][src$=".gif"]
 ##a[href][target="_blank"] > img[src*="imgsa.baidu.com/forum/pic/item/"]
+##a[href][target="_blank"] > img[src*="t4"][src*=".ru/data/t/"]
 ##a[href][target="_blank"] > img[src="https://vip2.loli.io"]
 ##a[href][target="_blank"] > img[src][alt="xxx"]
 ##a[href][target="_blank"] > img[src][class="topline"]
@@ -2828,6 +2829,7 @@
 ##div[style^="position: fixed; inset: 0px; z-index: 2147483647; pointer-events: auto;"]
 ##div[style^="position:fixed;inset:0px;z-index:2147483647;background:black;opacity:0.01"]
 ##div[url^="https://xchina.click/"]
+##div[x-data^="{"]:not([class]):not([id]) + div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
 ##div[x-data^="{"]:not([class]):not([id]) ~ script:not([src]) ~ div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
 ##em > strong > img[style="pointer-events: none;"][width="100%"]
 ##embed[id][src*="://"][src*=".z"][src$="="]
@@ -3029,6 +3031,7 @@
 ##img[alt="淫荡猫"]
 ##img[alt="澳门新葡京"]
 ##img[alt="美女直播大秀"]
+##img[alt="航海王3D成人版"]
 ##img[alt="草榴短视频"]
 ##img[alt="萌萝社"]
 ##img[alt="蜜桃"]
@@ -5446,6 +5449,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 95dushu.net,aljazeera.com#@#script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content)
 96kl.com##^script:has-text(bottom\(\);)
 96kl.com##script:has-text(bottom\(\);)
+99mh.men,99xmh.top,hanime2.top,rou2.icu,rou2.men,rou2.top##div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
 99re.com##a[href][target="_blank"] > img[src]
 :*/*/sv?gp=*=*=$third-party
 :*/api/v1/api2/tongji/start?pid=$third-party
@@ -5473,6 +5477,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*cx?ssid=$third-party
 ://*.*/*mk?ssid=$third-party
+://*.*/herebyad
 ://*.*/js/js4.js?v=$~third-party
 ://*.*27txt.com/*/*.js$~third-party
 ://*.*27txt.com/xi.js$~third-party
@@ -5535,7 +5540,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*ffdm*/gdw.js
 ://*freeok.*/asdasdad.js$script
 ://*halihali*.*/js/*.js?ver=
-://*hanime1.*/herebyad
+://*hanime*/herebyad
 ://*huameihangkong.*/js/baiducdn.js
 ://*huameihangkong.*/js/bottom.js
 ://*iyxdm.*/js/bottom_dk.js
@@ -5550,6 +5555,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*luolabook*/public/*.js
 ://*missav*/herebyad
 ://*missav*/pop?url=
+://*missav*/view_booster.js?v=
 ://*mm.com/gif1.php
 ://*mp4*/js/foot.js$script,~third-party
 ://*mp4*/js/wcount.js$script,~third-party
@@ -7496,6 +7502,7 @@ sxyprn.com##.tbd
 sxyprn.com##div[class$="bd"]
 sxyprn.net##.tbd,.cbd
 taotu.org##img[src*="/adimages/"]
+tasexy.com##[id^="sexy_a"]
 tasexy.com##[id^="sexy_b"]
 tbssp66.top##.app,a[rel="external nofollow noopener"][target="_blank"][data-original]
 tecms.net##[class$="i"][style],[class$="h"][style],[class$="_b"],embed[src],canvas,*[style*="fixed"][style*="bottom"][style*="display"][style*="block"][style*="vw"],[class$="m"][style*="display"][style*="block"][style*="100%"],span > video[poster*="-1316632262.cos.ap-"],[class$="c"][style$="131px;"]
@@ -8776,6 +8783,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||miaozhen.com^$third-party
 ||mingrentea.com/mb/meng/$script
 ||mip.mgppos.com/honeybadger/*.gif
+||misqimohlpk.com^
 ||missav.ai/pop?url=
 ||missav.com/pop?url=
 ||missav.ws/pop?url=
