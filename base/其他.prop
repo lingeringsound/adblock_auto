@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: kQrJmDMuI1FYEjvWV7LH0Q
+! Checksum: DxzaTkVQmcpvihpNIhcPLQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251021172452
-! Last modified: 2025-10-21 17:24:52
-! Total Count: 9278
+! Version: 20251024151053
+! Last modified: 2025-10-24 15:10:54
+! Total Count: 9282
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1147,6 +1147,7 @@
 ##.dfp_ATF_wrapper
 ##.dfp_frame
 ##.div-gpt-ad:not([style^="width: 1px; height: 1px;"])
+##.div-link > iframe[src="/js/ia.html#undefined"]
 ##.div_pop
 ##.dl[style] > #close_dl[style]
 ##.dlad
@@ -6812,11 +6813,13 @@ m.douban.com##.app-link
 m.douban.com##.download-app
 m.douban.com##.green.btn
 m.douban.com##.subject-banner
+m.douban.com##.talion-nav-footer
 m.douban.com##.write-comment
 m.douban.com##[href^="https://www.douban.com/doubanapp/card/get_app"]:not(:has([class*="cover"]))
 m.douban.com##[src^="//at4.doubanio.com/"]
 m.douban.com##[src^="https://at4.doubanio.com"]
 m.douban.com##div.center > div > div
+m.douban.com##div[style^="position: fixed; top: 0px; overflow: hidden; z-index: 2147483647; background-color: rgba(0, 0, 0,"]
 m.hupu.com##.hupu-footer-btn
 m.hupu.com##.open-hupu
 m.iask.sina.com.cn###hot_answer_search
@@ -8274,6 +8277,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||c.autohome.com.cn^
 ||c.gotoxxxtube.com^
 ||c.j0rd.vip^
+||calcatecormus.shop^
 ||camillecsa.com^
 ||candyai.love^
 ||capaciousdrewreligion.com^
