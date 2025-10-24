@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: DxzaTkVQmcpvihpNIhcPLQ
+! Checksum: vK45YiHUd56Tu8htWN8gCA
 ! Title: 自用去广告Adblock规则
-! Version: 20251024151053
-! Last modified: 2025-10-24 15:10:54
-! Total Count: 9282
+! Version: 20251025075107
+! Last modified: 2025-10-25 07:51:07
+! Total Count: 9288
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -841,6 +841,7 @@
 ##.adpopup
 ##.ads > img
 ##.ads-all
+##.ads-bg
 ##.ads-block-warning
 ##.ads-cont
 ##.ads-img
@@ -3488,6 +3489,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/bokan/bokan.js$script
 .com/bug/log/$third-party
 .com/candy*.js$third-party
+.com/click/object.js$~third-party
+.com/click/play.js$~third-party
 .com/co/*?t=0.$third-party
 .com/css/click_*.js$script,~third-party
 .com/dh/*/*.gif$third-party,image
@@ -4935,6 +4938,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /template/*/Public/js/*g*.js$~third-party
 /template/*/adm/*
 /template/*/ads/*
+/template/*/bannerjs/*.js$~third-party
 /template/*/fgg/*.js$script
 /template/*/lele36.html
 /template/*js/jp*.js$script
@@ -8441,6 +8445,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||exrtbsrv.com^
 ||eypev.com^$third-party
 ||eyu2017.xzy^
+||falawlaw.com/click/*.js
 ||fanza.cc^$third-party
 ||fardb.lbljsxlyjhq.com^
 ||faulterdeplume.com^
@@ -9033,6 +9038,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||td.easysavemore.com^
 ||td.sxwqhotel.com^
 ||tegronews.com^
+||temayy.com/click/play.js
 ||tfosrv.com^
 ||tg.s4te24u.com^
 ||tg.wmqfey.com^$third-party
