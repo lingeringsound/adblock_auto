@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: zSWWdi4VYrTza34O/wT1GQ
+! Checksum: +WbuzJNL9Giw1bSuJ2OtlA
 ! Title: 自用去广告Adblock规则
-! Version: 20251026113829
-! Last modified: 2025-10-26 11:38:30
-! Total Count: 9298
+! Version: 20251027123349
+! Last modified: 2025-10-27 12:33:49
+! Total Count: 9312
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5351,6 +5351,16 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 4gamers.com.tw##.aroma-news-detail-side > div[media-width]:has(div.aols-wrapper > a[target="_blank"][rel="noopener"])
 4gamers.com.tw##.container-fluid  > .vue-portal-target:has(> div[style] > .aroma-news-detail-iframe-ads)
 4khd.com,cartoon18.com,uuss.uk,xxtt.ink##.exo_wrapper
+4khd.com,uuss.uk,xxtt.ink##+js(createElement-defuser, a, click)
+4khd.com,uuss.uk,xxtt.ink##+js(createElement-defuser, iframe, src)
+4khd.com,uuss.uk,xxtt.ink##+js(nano-setInterval-defuser)
+4khd.com,uuss.uk,xxtt.ink##+js(nano-setTimeout-defuser)
+4khd.com,uuss.uk,xxtt.ink##+js(remove-localStorage, storedResult,inData,extranks,Better)
+4khd.com,uuss.uk,xxtt.ink##+js(set, window.AdProvider, [])
+4khd.com,uuss.uk,xxtt.ink##+js(set, window.RocketBrowser, undefined)
+4khd.com,uuss.uk,xxtt.ink##+js(set, window.adConfig, [])
+4khd.com,uuss.uk,xxtt.ink##+js(set, window.exoclick, undefined)
+4khd.com,uuss.uk,xxtt.ink##+js(set, window.popMagic, undefined)
 4khd.com,uuss.uk,xxtt.ink##.centbtd
 4khd.com,uuss.uk,xxtt.ink##.popup
 4khd.com,uuss.uk,xxtt.ink##^script:has-text(magsrv.com)
@@ -5438,6 +5448,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.comxchina.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##div[style*="width: 300px;"][style*="height: 455px;"]
 8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.comxchina.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##script:has-text(isBlocked)
 8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.comxchina.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##script:has-text(window.googleAdsInstance)
+8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.comxchina.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site#@#img[alt$="抖阴"]
 91jav1.com##.ad-wrap
 91jav1.com,crxtlg.com,zagzzpfs.xyz###popup-window
 91jav1.com,crxtlg.com,zagzzpfs.xyz##div.adaptation > div:has(.app)
@@ -7516,6 +7527,8 @@ sv.baidu.com##.open-button-wrap
 sxyprn.com##.tbd
 sxyprn.com##div[class$="bd"]
 sxyprn.net##.tbd,.cbd
+sydneytoday.com##.weui-dialog
+sydneytoday.com##.weui-mask
 taotu.org##img[src*="/adimages/"]
 tasexy.com##[id^="sexy_a"]
 tasexy.com##[id^="sexy_b"]
@@ -8713,6 +8726,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||kanjuw.net/js/js*.js
 ||kanshuzhan.com/*/analytics.js
 ||kanying.co/statics/js/$script
+||kanyingv.com/statics/js/
 ||kanyingv.com/statics/js/ky*.js
 ||kcieo.xyz^$third-party
 ||keiow.xyz^$third-party
