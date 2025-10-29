@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: U5Ff6GXXMMnI6msa22m4ug
+! Checksum: A3LAmZctPsI4jw/ct1Uo2w
 ! Title: 自用去广告Adblock规则
-! Version: 20251028145518
-! Last modified: 2025-10-28 14:55:19
-! Total Count: 9317
+! Version: 20251029111310
+! Last modified: 2025-10-29 11:13:11
+! Total Count: 9323
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2861,6 +2861,7 @@
 ##html[data-lt-installed="true"] > body[style=""] img[style="width: 100%;max-width: 728px;"]
 ##iframe.ad-frame
 ##iframe[data-src*="//a.magsrv.com/"]
+##iframe[height="1"][width="1"][style] ~ div[style^="position: fixed; bottom"][style*="z-index: 9999;"]:not([class]):not([id])
 ##iframe[src$="/app/index.html"][width="100%"][scrolling][frameborder="0"]
 ##iframe[src*=".jads."]
 ##iframe[src*=".magsrv.com/"]
@@ -3193,6 +3194,7 @@
 ##li[class="dataic"] > div > a[href][name="点击播放"]
 ##li[id^="dataic"] > div > a[href][name="点击播放"]
 ##p > a[class="content-file"][target="_blank"][href^="/"],div[style="text-align:center;"] > a[class="content-file"][target="_blank"],div[style="text-align:center;"] > a[class="btn btn-primary"][target="_blank"]
+##p > a[href][title="CA情色小說"]
 ##p[style^="width: 100% !important; margin: 0px !important; padding: 0px !important; display: flex !important; flex-flow: row wrap !important; background:"]
 ##photo_center_div > div[class$="_b"][data-group][data-show="ok"]
 ##script + #coupletBox
@@ -3342,6 +3344,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cc/sys.js$third-party
 .cc/t1j.js$~third-party,script
 .cc/tong*ji.js$script
+.cc/view_booster.js?v=
 .click:*/ads*.html$~third-party
 .club/r/*$xmlhttprequest
 .cn/*-*-*.xc$script,third-party
@@ -3683,6 +3686,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/release*ts?*16$third-party
 .icu/release*ts?*17$third-party
 .icu/sytlyn?$third-party
+.icu/view_booster.js?v=
 .icu/vue?$third-party
 .icu:28883/*/*$third-party
 .info/bokan/bokan.js$script
@@ -3716,8 +3720,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .live:80*/sc/*?is_not=$third-party
 .live:8891/vh3/
 .live:8891/vj3/
+.men/view_booster.js?v=
 .net/20*/*/*.txt$third-party
 .net/5y*/31*.$other,~third-party
+.one/view_booster.js?v=
 .org/5y*/31*.$other,~third-party
 .org/bokan/bokan.js$script
 .org/gg.js$script
@@ -5475,7 +5481,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 95dushu.net,aljazeera.com#@#script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content)
 96kl.com##^script:has-text(bottom\(\);)
 96kl.com##script:has-text(bottom\(\);)
-99mh.men,99xmh.top,hanime2.top,laoli88.icu,laoli88.men,rou2.icu,rou2.men,rou2.top##div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
+99mh.men,99mh.one,99xmh.icu,99xmh.top,99xs.icu,99xs.one,hanime2.top,laoli88.icu,laoli88.men,laoli88.one,rou2.icu,rou2.men,rou2.one,rou2.top##div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
 99re.com##a[href][target="_blank"] > img[src]
 :*/*/sv?gp=*=*=$third-party
 :*/api/v1/api2/tongji/start?pid=$third-party
