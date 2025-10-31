@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: lUBcWDR3ySvIl1MUNg8cAA
+! Checksum: Z74W9Y/nyl5ymHBRp8Ovwg
 ! Title: 自用去广告Adblock规则
-! Version: 20251031193545
-! Last modified: 2025-10-31 19:35:45
-! Total Count: 9331
+! Version: 20251031232035
+! Last modified: 2025-10-31 23:20:35
+! Total Count: 9227
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1024,6 +1024,7 @@
 ##.bc-banner > #adDiv
 ##.bdads
 ##.belowMastheadWrapper
+##.bf_qy.common[id^="common"]
 ##.big-ads
 ##.big-advertisement
 ##.big-box-ad
@@ -1473,11 +1474,6 @@
 ##.inarticlead
 ##.index-adv
 ##.index-center-tc-index2.index-center-tc > a
-##.index-module_adBeforeContent__AMXn
-##.index-module_adBeforeContent__UYZT
-##.index-module_rightrailBottom__IJEl
-##.index-module_rightrailTop__mag4
-##.index-module_sd_background__Um4w
 ##.index-top-aassd
 ##.index-top-ad
 ##.index-top-gg
@@ -1831,9 +1827,6 @@
 ##.page-content > p[style="color:red"]
 ##.page-content__advert
 ##.page-nav ~ .addbox[style]
-##.page[style^="padding-bottom:"] > [classname$="_g"][class$="_g"]
-##.page[style^="padding-bottom:"] > [id*="_"][classname$="_f"][class$="_f"]
-##.page[style^="padding-bottom:"] > [id*="_"][classname$="_g"][class$="_g"]
 ##.panel > .nav-list > a > dl
 ##.panel-body > .list-unstyled > li > a[target="_blank"]
 ##.parade-ad-container
@@ -1908,6 +1901,7 @@
 ##.slide-hd > ul > li > a
 ##.slider-ad[adid]
 ##.small-icon-container.is_mb
+##.source_container.swiper-wrapper[id="bannerCtrl"]
 ##.special-ads
 ##.sponsor-div
 ##.sponsor-popup
@@ -2154,7 +2148,6 @@
 ##[id$="-ads-box"]
 ##[id$="_ad_box"]
 ##[id*="theAd_slider"]
-##[id="bannerCtrl"].source_container.swiper-wrapper
 ##[id] > .wrap > .clearfix.mod
 ##[id]:not([class]):not([style]) > .b300
 ##[id^="ad-float"]
@@ -2169,7 +2162,6 @@
 ##[id^="appss"][style]
 ##[id^="article-ads"]
 ##[id^="bfad"]
-##[id^="common"].bf_qy.common
 ##[id^="div-gpt-ad"]
 ##[id^="exo-native-widget"]
 ##[id^="google_ads_iframe"]
@@ -2191,12 +2183,10 @@
 ##[onclick*="content.ad/"]
 ##[onclick*="https://xxl."][onclick*=".com/bd-"]
 ##[onclick="window.open(this.url)"][src]
-##[onclick][style="position:absolute;top:0;right:0;z-index:2147483647;"],[ontouchstart][style="position:absolute;top:0;right:0;z-index:2147483647;"]
 ##[onclick^="goDownWebFun('/config"]
 ##[onclick^="playAd"]
 ##[onclick^="toinfo('"][onclick$=")"]
 ##[onclick^="window.location.href"][onclick*=".biqu"]
-##[ontouchstart*="location.href"][ontouchstart*="baidujkdjklvvsbvk.com"]
 ##[src*="//ad.a-ads.com/"]
 ##[src*="//sejieboxapi.yingyangdj.com"]
 ##[src*="/adBanner"]
@@ -2211,7 +2201,6 @@
 ##[style="text-align: center; margin: 40px 0; color: blue; font-size: larger;"]
 ##[style] > a[href*="/c.php?s="]
 ##[style^="display: inline-block;"][style*="margin:"] > a[target="_blank"][href][title]
-##[style^="display:block;left:0;right:0;position:fixed;border-left:1px"]
 ##a > img.lazy[class*="imgad"]
 ##a > img[src^="/apijs/image/"]
 ##a#ad-link
@@ -2566,9 +2555,7 @@
 ##bkveng
 ##body > #app > .adv-frame
 ##body > #loading[style="display: none;"] + noscript + #app
-##body > #overover[style="position: fixed; width: 100%; height: 100%; background: silver; z-index: 2; opacity: 0.1; display: block;"] ~ #obrazek
 ##body > #overover[style="position:fixed;width:100%;height:100%;background:silver;z-index: 2;opacity: 0.1;"]
-##body > #overover[style="position:fixed;width:100%;height:100%;background:silver;z-index: 2;opacity: 0.1;"] ~ #obrazek
 ##body > #showcloneshengxiaon
 ##body > .ec-ad
 ##body > .mobile-download-popup
@@ -2587,8 +2574,6 @@
 ##body > [style$="width:9.6vw;height:8.5vw;background:#000;opacity:0.01;"]
 ##body > [style*="background"][style*="#000"][style$="opacity:0.01;"]
 ##body > [style*="position:fixed; bottom:0vw; left:0vw; z-index:"]
-##body > [style="display: block; z-index: 2147483646; width: 14px; position: fixed; height: 14px; left: 1px; bottom: 129px; box-sizing: content-box;"]
-##body > [style="display: block; z-index: 2147483646; width: 14px; position: fixed; height: 14px; left: 1px; top: 129px; box-sizing: content-box;"]
 ##body > [style^="display: block; z-index: 2147483647; width: 10%;"][style$="!important;"]
 ##body > [style^="display: block;"][style*="129px;"]
 ##body > [style^="position: fixed; z-index: 100; display: block; left: 0px; width: 36px;"]
@@ -2610,15 +2595,11 @@
 ##body > div[class][style="top: 104px;"]
 ##body > div[class][style="top: 129px;"]
 ##body > div[class][style="top: 135px;"]
-##body > div[class][style^="display: block; width: 100%; left: 0px; position: fixed; z-index: 2147"][style$="top: 135px;"]
-##body > div[class][style^="display: block; width: 100%; left: 0px; position: fixed; z-index: 21474"]
+##body > div[class][style^="display: block; width: 100%; left: 0px; position: fixed; z-index: 2147"]
 ##body > div[id][onclick^="this.style.display='none';window.open(q17"][onclick$="());"]
-##body > div[id][style="display: block; width: 100%; position: relative; height: 127.188px; margin: 0px; padding: 0px; border: 0px none; background: none;"]
 ##body > div[id^="a17"] > div[id^="u17"]
 ##body > div[style$="background: #000;opacity:0.01;"]
-##body > div[style="position: fixed; display: block; width: 100%; height: 100%; inset: 0px; background-color: rgba(0, 0, 0, 0); z-index: 300000;"]
 ##body > div[style^="position: fixed; inset: 0px; z-index: 2147483647; background: black; opacity: 0.01;"]
-##body > div[style^="position:fixed;inset:0px;z-index:2147483647;background:black;opacity:0.01"][style*=";cursor:pointer"]:empty
 ##body > embed[id][src*="://"][src$="="]
 ##body > embed[id][src^="https:///"]
 ##body > script + *[id][class][classname]
@@ -2800,7 +2781,7 @@
 ##div[id*="playerAdvLayer"][class="adv-layer"]
 ##div[id*="po-s0"] > div > div[class^="jsv"] > div[class^="container-"] > .row > [class*="col-sm"] > a[rel="noopener nofollow"]
 ##div[id="alert_windows"][class*="q-dialog fullscreen"]
-##div[id="showImages"][style="width: 100%; position: fixed; bottom: 0px; left: 0px; z-index: 2147483647; display: block;"]
+##div[id="showImages"][style*="z-index: 2147483647;"]
 ##div[id="videoMask"]
 ##div[id] > .top-flags
 ##div[id][style] > span:not([class]):not([id]) > img[style^="width:100%;height:13"]
@@ -2830,6 +2811,8 @@
 ##div[onclick^="window.location.href"][onclick*="apps.apple.com/cn/"]
 ##div[style*="line-height"][style*="100vw"][style*="0px"][style*="/"][style*="background: url"][style$="no-repeat; position: relative;"]
 ##div[style="display: flex;flex-wrap: wrap;margin:5px;"] > div[class="photo-two"]
+##div[style="text-align:center;"] > a[class="btn btn-primary"][target="_blank"]
+##div[style="text-align:center;"] > a[class="content-file"][target="_blank"]
 ##div[style="width:100%"][id*="hengfu"]
 ##div[style] > a[href][target="_blank"] > img[width="100%"][src$=".gif"]
 ##div[style]:not([id]):not([id]) > img[src*=".gif"][alt$="悬浮图标"]
@@ -3198,9 +3181,8 @@
 ##li[class="dataic"] > a[href*="/?channelCode="][target]
 ##li[class="dataic"] > div > a[href][name="点击播放"]
 ##li[id^="dataic"] > div > a[href][name="点击播放"]
-##p > a[class="content-file"][target="_blank"][href^="/"],div[style="text-align:center;"] > a[class="content-file"][target="_blank"],div[style="text-align:center;"] > a[class="btn btn-primary"][target="_blank"]
+##p > a[class="content-file"][target="_blank"][href^="/"]
 ##p > a[href][title="CA情色小說"]
-##p[style^="width: 100% !important; margin: 0px !important; padding: 0px !important; display: flex !important; flex-flow: row wrap !important; background:"]
 ##photo_center_div > div[class$="_b"][data-group][data-show="ok"]
 ##script + #coupletBox
 ##script + #rbbox
@@ -5567,6 +5549,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*biquge*/mm.js$script
 ://*bqg.com/*/*.php
 ://*cdn*jm18*/static/resources/images/*x*.gif
+://*da*sd*s^.adfj*.cc$third-party,~image,~stylesheet
 ://*dianjiangxin.*/js/mc.js?
 ://*diany*/top.js
 ://*dilidili*.*/js/*.js?ver=
@@ -8044,7 +8027,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||118pan.com/common/i/openjs/
 ||123vxw.cc/5*/*.js
 ||15re.com^$third-party
-||173577702.xyz^
 ||18-comic*/exads
 ||18-comic*/media/albums/*?$media
 ||18-comic*/templates/frontend/airav/js/*1_2df4.js
@@ -8086,10 +8068,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||5vkyqkc.cn^
 ||5wxw.com^$third-party
 ||705dm.com/color.js
-||777bbb666www.com^
-||888bb111ww.com^
-||888xx222kk.com^
-||888xx555kk.com^
 ||88dus.win/sys.js
 ||8se.*/scripts/push*.js
 ||8se.me/redirect/ad-
@@ -8203,7 +8181,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||aidu123.com/css/js/tools.js
 ||aiqu288.com/*/*.js$~third-party
 ||aiqu789.com/*/*.js$~third-party
-||aissxs.cc^
 ||aj2555.bid^$third-party
 ||ajcode.co^$third-party
 ||ajkjbcjbaaaed.com^$third-party
@@ -8311,11 +8288,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||buondua.com/temp*_/temp*_.js$script
 ||buondua.us/temp*_/?
 ||buondua.us/temp*_/temp*_.js$script
-||buqajvxicma.com^
-||bw5388.vip^
-||bw72227.cc^
-||byjdg.xyz^$third-party
-||byjykj.xyz^$third-party,image
 ||bytegoofy.com/goofy/*/push.js?
 ||c-ctrip.com/images/*.gif
 ||c-ctrip.com/train/*/*.jpg
@@ -8330,11 +8302,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||cdn.6109.org/static/js/$third-party
 ||cdn.adur.top^$third-party
 ||cdn.staitcfile.org^$domain=522ak.com|laiksw.cc
-||cdxyspa.com/js/4988.js
-||ceiqox.com^
-||celcxjb.cn^
-||cer.niaideren.icu^
-||ceseasons.com^
 ||ceshi*.ink/s/*?_=$third-party
 ||cf.jaacdn.net/static/js/f7b73.dcc98.js
 ||cgovyjnmdtauwdhek.com^
@@ -8347,10 +8314,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||chinatimes.com/analytics/
 ||chpadblock.com^
 ||chushoushijian.cn^$third-party
-||cje7egcisdr.xyz^
-||ck.zzipps.com^
-||ckufcni.click^
-||cl.sexstories-all.com^
 ||clarity.ms^
 ||clb*.top/Public/static/js/common-v2.js
 ||clck.adskeeper.com^
@@ -8395,15 +8358,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||creative.xxxiijmp.com^
 ||creative.xxxijmp.com^
 ||creative.xxxjmp.com^
-||crjpgate.com^$document
-||crulxoits.com^$third-party
-||cuaeblh.icu^
-||cupoabie.net^
-||cvk.supklik.com^
-||cvmjf.xyz^$third-party
-||czulie.icu^
-||d.dgfnhyn.site^
-||d000d.com/e/
 ||d1cg2aopojxanm.cloudfront.net^
 ||d1ezlc9vy4yc7g.cloudfront.net^$third-party
 ||d2un76zvb5mgzx.cloudfront.net^
@@ -8412,7 +8366,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||d4d99bfbcf.e59f087ae4.com^
 ||da-ads.com^
 ||daraz.com^
-||dasdasss.adfjxsrw.cc^
 ||dashenya.com/js/jquery.js
 ||data.bilibili.com/log
 ||dayu778.com/assets/publish/$script
@@ -8425,10 +8378,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||demoscope.net/statics/js/n*.js?v=
 ||detentsclonks.com^
 ||devotedwhile.com^
-||dfes68.com^
-||dflkndkzf.com^$third-party
 ||dianyingtu.com/common/api_getAcode.php
-||dicouksa.com^
 ||dif1qbzytaymu.cloudfront.net^
 ||difficult-help.com^$third-party
 ||dilidili*.com/js/wap2-jm-ms.js$script
@@ -8460,7 +8410,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||e.1bctkn.xyz^$third-party
 ||eaaaej.icu^$third-party
 ||eazhm.com^
-||eb480dde95.com^
 ||eclick.baidu.com^$third-party
 ||effectivedisplayformats.com^
 ||effirst.com^$third-party
@@ -8485,30 +8434,9 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||exosrv.com^
 ||exrtbsrv.com^
 ||eypev.com^$third-party
-||eyu2017.xzy^
 ||falawlaw.com/click/*.js
-||fanza.cc^$third-party
-||fardb.lbljsxlyjhq.com^
-||faulterdeplume.com^
-||fbasd.qwoudjbk.com^$third-party
-||fcw1.site^
-||februarylovestory.com^$third-party
-||ffmehcg.cn^$third-party
-||fg.knlk2md.cn^$third-party
-||fhn.hnw6.icu^
-||fileinvite.top^
 ||fjyftech.com/js/bottom.js
-||fkxl.xyz^
-||fluentfixing.com^
 ||fourier.alibaba.com^
-||fractionfridgejudiciary.com^
-||friendshipmale.com^
-||fruitdiscovery.com^
-||ftd.agency^$third-party
-||ftiodfqk.com^$third-party
-||fumblingvacation.pro^
-||fvcwqkkqmuv.com^
-||fw.privateadx.com^
 ||g.aidinghz.com^
 ||g.biqu.se^
 ||g.gtimg.cn^
@@ -8559,10 +8487,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||google.com/pagead/
 ||googletagmanager.com^
 ||gov-cn.website^
-||guchihyfa.pro^
-||guesswhatnews.com^
-||guhokrapzru.com^
-||guifudi.com^
 ||guomanwang.com/poster/zj-di.js
 ||gxxtky.com/js/p.js
 ||gxxyydl.com/click
@@ -8576,22 +8500,13 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||haloshuwu.com/css/js/apps.js
 ||hanguomanhua.me/style*/js20*.js?v=
 ||haobax.com/ad*.php
-||hb.vhsrv.com^
-||hbcfdp.com^
-||hdbkell.com^
 ||hdmp4.cc/js/foot.js
 ||hdpornfree.xxx/sup/*.js
-||hdwiey.com^
 ||hdyoushi.com/*/*.js?v=1.0
 ||hearanimatewillingness.com^
 ||hetang123.com/assets/public/$script
-||hffxc.com^$third-party,script
-||hhdus.com^$third-party
 ||hhplayer.com/cdn/fb.js
-||hhwxr.cn^
 ||hhxsp.xyz/hf.js$script
-||highperformancedisplayformat.com^
-||highwaycpmrevenue.com^$third-party
 ||histats.com^$third-party
 ||hitchprivilege.com^
 ||hltfs.com/111*.js
@@ -8605,22 +8520,11 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||hostmaster.brandnewapp.pro^
 ||hostmaster.rtnews.pro^
 ||hotjar.com^$third-party
-||hruk.afguk.top^
-||hruk.gumasi.top^
-||hruk.jjikk.top^
-||hruk.prikupok.com^
-||hruk.prikupok.icu^
 ||hstjjg.com/show/$script
-||htjs.demshen.com^
 ||huakai2025.com/color.js
-||huayiyuan.hk^
-||hubiazhi.com^
 ||humble-gap.com^$third-party
 ||hupu.com/_dace.gif?
 ||hupu.com^*/stream.js
-||huronews.com^
-||hwjyingshi.xyz^
-||hxdqsvw.cn^
 ||hzk6.fun^
 ||i.5432kk.com^
 ||i.6v6.work^$third-party
@@ -8629,11 +8533,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||i.hao61.net^
 ||i8tq.com/*/*news_ad*.js
 ||i8tq.com/e_index/main_news_noAd.js
-||icqsbcp.icu^
-||icudqq.xyz^
-||iewtwo.xyz^
 ||ifengimg.com^*/sta_collection
-||ijeujkdhnvb.top^
 ||image.hxgmcml.cn^
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=hoy.tv|line.me
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=linetv.tw
@@ -8651,18 +8551,14 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||immmg.owowqrf.cn^
 ||impactserving.com^
 ||imprintmake.com^
-||infatuated-difference.pro^
-||instructscornfulshoes.com^
 ||inter1ads.com^
 ||ipssn.haffo*.com^$third-party
 ||iqhx7.com^$third-party,script
-||itrww.xyz^
 ||itshang.com/*/*/tools.js$script
 ||ixsw.org/*/*.js
 ||iyxdm.one/js/bottom_dk.js
 ||izhongwen.cc/staticjs/hm.js
 ||jads.co^$third-party
-||jalosoul.com^
 ||javascript.trafficmanager.net^$script,third-party
 ||javhd.com/banners-mainpage/
 ||javhd.com/sb/
