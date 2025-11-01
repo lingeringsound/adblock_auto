@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Z74W9Y/nyl5ymHBRp8Ovwg
+! Checksum: a693X65mpgn9b1UkfMy0Jw
 ! Title: 自用去广告Adblock规则
-! Version: 20251031232035
-! Last modified: 2025-10-31 23:20:35
-! Total Count: 9227
+! Version: 20251101224403
+! Last modified: 2025-11-01 22:44:03
+! Total Count: 9233
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3244,6 +3244,7 @@
 ##ul.md\:grid-cols-1 > li > a.checkNum
 ##ul[style="margin:0px; padding:0px;overflow:hidden;width:100%;"]
 ##video[poster^="https://code.yykalopyy.com/"]
+##video[poster^="https://gimg0.baidu.com/gimg/"]
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 &adZones$xmlhttprequest
 &ad_block=
@@ -3549,6 +3550,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/t1j.js$~third-party,script
 .com/tj?p=*zh-CN$~third-party
 .com/tong*ji.js$script
+.com/tongji/*.js
 .com/track/pv?id=
 .com/typeadd.js?17$third-party
 .com/vh1/$third-party
@@ -4832,6 +4834,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /production/*/production/*.js$script,third-party
 /production/*source/*.js$script,third-party
 /public/042*.js$~third-party,script
+/public/110110.js$~third-party
 /public/adf*.js?v=
 /qzhf.js
 /qzxtb.js
@@ -4986,6 +4989,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /tong*ji.js
 /tongji.js
 /tongji.js?
+/tongji/*.js
 /top-ad-
 /top-ad.
 /top-ad/*
@@ -6435,6 +6439,7 @@ game2.baifumeiba.com###gotoPlay
 games.yahoo.co.jp###floating_banner
 games.yahoo.co.jp###jack
 geiqia.com##.pc_dou
+gimy.com.tw##.g2_pc_list_top
 gimy.tv##div:not([class]):not([id]):has(img[alt][style*="100%"])
 github.com#@#.js-notice
 gogopg.net###vplayer-tdads-nonlinear
@@ -8449,6 +8454,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||geo.yahoo.com^
 ||getcdnpix.name^
 ||gibzz.xyz^
+||gimg*.baidu.com/gimg/app=
 ||gl.zle.com^
 ||glersakr.com^
 ||gloaphoo.net^
