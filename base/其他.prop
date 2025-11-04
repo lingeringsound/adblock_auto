@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: a693X65mpgn9b1UkfMy0Jw
+! Checksum: t3q62QjqoBTKMPie6qos2A
 ! Title: 自用去广告Adblock规则
-! Version: 20251101224403
-! Last modified: 2025-11-01 22:44:03
-! Total Count: 9233
+! Version: 20251104144330
+! Last modified: 2025-11-04 14:43:30
+! Total Count: 9241
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2114,6 +2114,8 @@
 ##[data-template-type="nativead"]
 ##[data-title="广告"]
 ##[data-width="300"][data-height="100"][data-show="ok"]
+##[data-zone="ftr1_mob"]
+##[data-zone="ftr2_mob"]
 ##[href*="//a.adtng.com/"]
 ##[href*="//ad.addizhi."][href$=".html"]
 ##[href*="//sejieboxapi.yingyangdj.com"]
@@ -3927,6 +3929,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*_*_/bigREDcat.$third-party
 /*_*_/bigREDdog.$third-party
 /*script/pf.js
+/000/flink/click.php?
 /17mb/js/style.js$~third-party,script
 /17mb/script/f*.js
 /17mb/script/f*.js$~third-party,script,domain=longtengxiaoshuo.org|longtengxiaoshuo.net|longtengxiaoshuo.app|longtengxiaoshuo.com
@@ -4754,7 +4757,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /moneymaker/js/videoplayer.js
 /moonplay-ads/
 /nativeads-
-/nb/*$script,domain=bigtitslust.com|pornhex.com|159i.com|babesjoy.com|pornyfap.com|imgtorrnt.in|imgtornado.com|shameless.com|imgdone.com|webcamshows.org|ipicture.su|youav.com|porndr.com|noodlemagazine.com|picmoza.com|cumlouder.com|maturetubehere.com|amateur8.com|freeporn8.com
+/nb/*$script,domain=159i.com|amateur8.com|babesjoy.com|bigtitslust.com|cumlouder.com|freeporn8.com|imgdone.com|imgtornado.com|imgtorrnt.in|ipicture.su|mat6tube.com|maturetubehere.com|noodlemagazine.com|picmoza.com|porndr.com|pornhex.com|pornyfap.com|shameless.com|webcamshows.org|youav.com
 /nb/ads/*
 /new/yinghua*/top.js$third-party,script
 /new/yinghuacd*/bottom.js$third-party,script
@@ -6359,6 +6362,9 @@ ebates.ca,rakuten.ca,rakuten.com#@#.google-ads
 ebaumsworld.com#@#.promoAd
 efukt.com##[data-ad-type]
 enet.com.cn,fjsen.com,hupu.com,kdslife.com,mysteel.com,news.cnyes.com,olehd.com,olevod.com,olevod.eu,pchome.net,rznews.cn,~car.kdslife.com,~my.hupu.com##div[class^="ad"]
+eporner.com###admobilefoot
+eporner.com###admobileoutstream
+eporner.com###admobiletop
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
 eporner.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,thisav.com##+js(nowoif)
@@ -6938,6 +6944,10 @@ manga168.com,manga168.net###ads_fox_bottom
 maoyan.com##.tip-open-app
 maoyan.com##[data-event*="donwload"]
 mat6tube.com##.main > .c_video > .container > [style]:not(.video_player)
+mat6tube.com,noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
+mat6tube.com,noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
+mat6tube.com,noodlemagazine.com##div.container > div:has(iframe[data-src*="//go."])
+mat6tube.com,noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
 mbd.baidu.com###headDeflectorContainer
 mbd.baidu.com##.drag-wrap
 mbd.baidu.com##.mergeVideoTop
@@ -7045,10 +7055,6 @@ nianyin.com##img[onclick^="window.open"]
 nivod.vip##^script:has-text(.gif)
 nivod.vip##script:has-text(.gif)
 nonfungerbils.com,pulsembed.eu,station-drivers.com#@#iframe[width="600"][height="90"]
-noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
-noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
-noodlemagazine.com##div.container > div:has(iframe[data-src*="//go."])
-noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
 nxnba.com##.bootom-fixed
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.ads_w + div[id][style]
@@ -7801,6 +7807,7 @@ xnxxvideos.rest##.prefixat-player-promo-col
 xnxxvideos.rest##.refr
 xs77.cc,xs77.com,xs77.buzz,xs77.cn,xs77.xyz##body > div[style*="margin:"] > div
 xtube.com##.wrapper > .container:has(> [class] > .adContainer)
+xtube.com,tktube.com,mat6tube.com##div.container > div[style*="100%"]:not([class]):not([id])
 xvideos.com##.thumb-inside:has(.adsbyexoclick)
 xvideos.com,xvideos.es##.player-video.xv-cams-block
 xvideos.name###publicidad-video
@@ -8493,6 +8500,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||google.com/pagead/
 ||googletagmanager.com^
 ||gov-cn.website^
+||gtogzeomxorh.com^
 ||guomanwang.com/poster/zj-di.js
 ||gxxtky.com/js/p.js
 ||gxxyydl.com/click
