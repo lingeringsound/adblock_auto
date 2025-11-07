@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: jzZGZuJNyI8Iz2eNjf64Pg
+! Checksum: dDrtLITCGE+QbLWhrfA4BA
 ! Title: 自用去广告Adblock规则
-! Version: 20251107124148
-! Last modified: 2025-11-07 12:41:48
-! Total Count: 9250
+! Version: 20251108030507
+! Last modified: 2025-11-08 03:05:07
+! Total Count: 9252
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -327,6 +327,7 @@
 ###coupletLeft
 ###coupletRight
 ###detail-ad-recommend-panel.border-radius
+###detail-ad-recommend-panel.detail-panel
 ###detail-ad-recommend-panel.no-border-radius
 ###dfp-banner-popup
 ###div-leader-ad
@@ -2827,6 +2828,7 @@
 ##div[style^="display:flex;flex-direction:column"] > [style*="display:flex;"]
 ##div[style^="padding:16px 16px 20px;border-radius:50%;background-color:red;margin:10px;"]
 ##div[style^="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483646;"]
+##div[style^="position: fixed; bottom:"][style*="z-index: 9999;"][style*="rgba"][style*="justify-content: center;"]:not([id]):not([class]) > span[style^="cursor: pointer;"]
 ##div[style^="position: fixed; inset: 0px; z-index: 2147483647; background: black; opacity: 0.01"]
 ##div[style^="position: fixed; inset: 0px; z-index: 2147483647; pointer-events: auto;"]
 ##div[style^="position:fixed;inset:0px;z-index:2147483647;background:black;opacity:0.01"]
@@ -6806,6 +6808,8 @@ laimanhua8.com###jusha1
 lanzn.com,lanzoua.com,lanzoub.com,lanzouc.com,lanzoud.com,lanzoue.com,lanzouf.com,lanzoug.com,lanzouh.com,lanzoui.com,lanzouj.com,lanzouk.com,lanzoul.com,lanzoum.com,lanzoun.com,lanzouo.com,lanzoup.com,lanzouq.com,lanzour.com,lanzous.com,lanzout.com,lanzouu.com,lanzouv.com,lanzouw.com,lanzoux.com,lanzouy.com,lanzouz.com##^script:has-text(ClipboardJS)
 lanzn.com,lanzoua.com,lanzoub.com,lanzouc.com,lanzoud.com,lanzoue.com,lanzouf.com,lanzoug.com,lanzouh.com,lanzoui.com,lanzouj.com,lanzouk.com,lanzoul.com,lanzoum.com,lanzoun.com,lanzouo.com,lanzoup.com,lanzouq.com,lanzour.com,lanzous.com,lanzout.com,lanzouu.com,lanzouv.com,lanzouw.com,lanzoux.com,lanzouy.com,lanzouz.com##div[style^="margin"] > script + a
 lanzn.com,lanzoua.com,lanzoub.com,lanzouc.com,lanzoud.com,lanzoue.com,lanzouf.com,lanzoug.com,lanzouh.com,lanzoui.com,lanzouj.com,lanzouk.com,lanzoul.com,lanzoum.com,lanzoun.com,lanzouo.com,lanzoup.com,lanzouq.com,lanzour.com,lanzous.com,lanzout.com,lanzouu.com,lanzouv.com,lanzouw.com,lanzoux.com,lanzouy.com,lanzouz.com##script:has-text(ClipboardJS)
+laowanggu.top,laowangpv.top,laowangpz.top,laowangru.top,laowangux.top,laowangvc.top,laowangvz.top,wuqiangu.top,wuqianpv.top,wuqianpz.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top###detail-ad-recommend-panel
+laowanggu.top,laowangpv.top,laowangpz.top,laowangru.top,laowangux.top,laowangvc.top,laowangvz.top,wuqiangu.top,wuqianpv.top,wuqianpz.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top##.panel-default:has(a[href^="https://"])
 last.fm##.chartlist-row--interlist-ad
 last.fm##.full-bleed-ad-container
 last.fm##.mpu-subscription-upsell
@@ -7730,8 +7734,6 @@ whentai.com##.bg-inject
 whentai.com##video[autoplay="autoplay"]
 wnjlkqe.info##a[href] > img[style="width: 100%;"]
 wr.de,wp.de,nrz.de#@#.ad
-wuqiangu.top,wuqianpv.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top###detail-ad-recommend-panel.border-radius
-wuqiangu.top,wuqianpv.top,wuqianru.top,wuqianux.top,wuqianvc.top,wuqianvz.top##.panel-default.border-radius:has(a[href^="https://"])
 wuzhuiso.com###appMiddleBanner
 wuzhuiso.com###mohe-hotnews_right
 wuzhuiso.com###side > div.download-browser:last-child
