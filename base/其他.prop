@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: xuTMoayP2wRsp0kKXOAjbw
+! Checksum: jzZGZuJNyI8Iz2eNjf64Pg
 ! Title: 自用去广告Adblock规则
-! Version: 20251106000336
-! Last modified: 2025-11-06 00:03:36
-! Total Count: 9245
+! Version: 20251107124148
+! Last modified: 2025-11-07 12:41:48
+! Total Count: 9250
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2362,6 +2362,7 @@
 ##a[href="/lht.html"]
 ##a[href="/play/pf.php"]
 ##a[href="/runtime/baidu.html"]
+##a[href="/static/ad/main.js"] > img
 ##a[href="/static/xzgg/index.html"]
 ##a[href="http://52199.vip"]
 ##a[href="http://555x.com"]
@@ -2679,6 +2680,7 @@
 ##div.sponsor-outer
 ##div.stui_md > .list-box
 ##div.suiji.bottom,div.suiji.topad
+##div.suspend > #coughSet
 ##div.tips-list.fodong_tips
 ##div.v_ad
 ##div.xqbj-download
@@ -3183,6 +3185,7 @@
 ##ins[id][style][status="done"]
 ##li > a[data-uuid]
 ##li > a[href^="/"][href$=".php"][target="_blank"][rel="nofollow"]
+##li#dataic
 ##li.adcls
 ##li[class="dataic"] > a[href*="/?channelCode="][target]
 ##li[class="dataic"] > div > a[href][name="点击播放"]
@@ -4389,6 +4392,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /blxn_*.js?
 /bultykh/ipp24/7/*$third-party
 /ccqqgg/*.js$script
+/cimp.php?data$third-party
 /click?adv=$popup
 /clientapi/app/getinfo?appid=*&android=true$third-party
 /cnzz/tongji.php
@@ -5985,6 +5989,7 @@ amazon.ae,amazon.ca,amazon.cn,amazon.co.jp,amazon.co.uk,amazon.com,amazon.com.au
 anime1.me##div[id^="ad-"] > a
 animehentaihub.com,bestjavporn.com,hentaiasmr.moe,koreanstreamer.xyz,youporntube.net##.happy-header
 aowu365.com,chusixs.com,oucibook.com,sisizw.com##p:has([style^="color:"])
+apkmirror.com###bottom-slider
 apkmirror.com##.ai_widget
 apkmirror.com##.ains-apkm_outbrain_ad
 apkmirror.com##.ains-has-label
