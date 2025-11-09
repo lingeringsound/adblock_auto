@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dDrtLITCGE+QbLWhrfA4BA
+! Checksum: qXn7Kca2AeNW/H+tbr83nQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251108030507
-! Last modified: 2025-11-08 03:05:07
-! Total Count: 9252
+! Version: 20251109214743
+! Last modified: 2025-11-09 21:47:44
+! Total Count: 9255
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3057,6 +3057,7 @@
 ##img[class="half-img"][src$=".gif"]
 ##img[class][src$=".mp3"]
 ##img[class][src$=".txt"]
+##img[data-banner*="sponsor"][src]
 ##img[data-original*="/vads/"]
 ##img[id*="bottom-ads"]
 ##img[id][height$="0001"][width="100%"][border="0"]
@@ -6624,6 +6625,8 @@ hupu.com##div[class*="ad240-200"]
 hupu.com##div[class*="ad728-90"]
 hupu.com##div[class*="ad980-60"]
 hupu.com##div[class^="game-center-"]
+hy.httpcn.com##[class^="hcvert"]
+hy.httpcn.com##img[src^="//jscdn.httpcn.com/m/jsondata1"]
 ibbs.pro##div[class][style]:has(ins[data-zoneid])
 ibbs.pro,iceporn.tv##.show
 iceporn.tv##div[class*="Hide"]:has(.adsbyexoclick)
