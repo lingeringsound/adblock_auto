@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: qXn7Kca2AeNW/H+tbr83nQ
+! Checksum: y/kEonqDxyxIlDLAKN534A
 ! Title: 自用去广告Adblock规则
-! Version: 20251109214743
-! Last modified: 2025-11-09 21:47:44
-! Total Count: 9255
+! Version: 20251111223317
+! Last modified: 2025-11-11 22:33:17
+! Total Count: 9260
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -465,6 +465,7 @@
 ###left_up_float_ad
 ###leftad2
 ###leftd.leftd
+###main > #top1.card.top1
 ###midBox > .wrap > .clearfix.mod
 ###middle_ad
 ###mini-ad
@@ -2210,6 +2211,7 @@
 ##a > img.lazy[class*="imgad"]
 ##a > img[src^="/apijs/image/"]
 ##a#ad-link
+##a#randomLink[href="#"]
 ##a.checkNum[target="_blank"] > img[data-src]
 ##a.copy[onclick] > picture
 ##a.downurl[target="_blank"][referrerpolicy="no-referrer"]
@@ -2483,6 +2485,7 @@
 ##a[id$="ads-link"]
 ##a[id][href*="/c.php?s="][href$="="]
 ##a[id^="hudie_"][target="_blank"][width="100%"]
+##a[name="miao"] ~ style[type="text/css"] + div[class]:not([id]):not([style])
 ##a[onclick*="91黄播"]
 ##a[onclick*="openAuc();"]
 ##a[onclick*="博彩"]
@@ -5529,6 +5532,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.aj25*.bid/*.js$third-party
 ://*.biquge*/mm.js
 ://*.com/*.*.*?17$third-party,domain=xiuluodm.com
+://*.d*dm.*/indexdd.js$~third-party
 ://*.doubanio.com/*comm*/openjs*.js
 ://*.erciyan.*/*/0*11.js
 ://*.fcdm233.*/piao/$script
@@ -8596,6 +8600,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||jewruta.top^
 ||jianpian.vip^
 ||jievf.cn^
+||jiexi.zuixindy.top^$third-party
 ||jijozdrg.xyz^$third-party
 ||jinnanyq.com/js/zmjw.js
 ||jinxiyue.com/seo.js$script
