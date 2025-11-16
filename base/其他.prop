@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: tg5lTSSlKMlHhNiBGHq5Qw
+! Checksum: +DkA7BS8q3uKJsSBUektaQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251115204256
-! Last modified: 2025-11-15 20:42:56
-! Total Count: 9294
+! Version: 20251117020423
+! Last modified: 2025-11-17 02:04:24
+! Total Count: 9296
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1607,6 +1607,7 @@
 ##.leftd3 + .rightd3
 ##.legion_primiswrapper
 ##.links-topxxx > ul > li
+##.list-view > div.summary ~ article.item:not([data-key]):not([id])
 ##.list_box > .b3001
 ##.list_box > li[id$="1"][class="iframe"]
 ##.list_box > li[id$="2"][class="iframe"]
@@ -3470,7 +3471,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*.gif$domain=72vod.com
 .com/*.js$third-party,domain=uaa001.com|uaa002.com|uaa003.com|uaa004.com|uaa005.com
 .com/*.txt$third-party,domain=1anime.me
-.com/*/*?*=*&*w*=*&*j*=*&*=*&*w*=*&*j*=*&*=*&*w*=*&*j*=*&*=*$third-party,~media,~image,~stylesheet
 .com/*/*o*/$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/*/amdbacs/jkarme$third-party,~image,~media
 .com/*/asf/qur$third-party,~image,~media
@@ -3485,10 +3485,12 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*/ua.php$third-party
 .com/*/uagu.php$third-party
 .com/*/wfohki/di$third-party,~image,~media
+.com/*?*=*&*=*&*=*&*=*%*%*&*=*&*=*&*=*&*=*&*=*&*=*$third-party,~media,~image,~stylesheet
 .com/*bd*.js$script,domain=ifeng.com
 .com/*interstitial*.js$third-party,script
 .com/1.js$script,~third-party
 .com/17*.*.*.*?17$third-party,~media,~stylesheet,~image
+.com/17*.*.*.*?rid=$~image,third-party
 .com/17*.*.*?17$third-party,~media,~stylesheet,~image
 .com/17*?rid=17$third-party
 .com/17mb/script/f*.js$~third-party,script
@@ -6282,8 +6284,8 @@ boyloves.fun,boylov.xyz,boylove.today,boylove.cc,boylove1.cc,boylove3.cc,boylove
 bqg33.com##a[href][target="_blank"],font[color="red"]
 bqg369.com##a[href="https://aibozhu.com"]
 btbtla.com##.myads
-btmulu.live##article.item > div > a[href^="https://"]
-btmulu.live##article.item:has(a[href^="https://"])
+btmulu.buzz,btmulu.cyou,btmulu.live,btmulu.men,btmulu.top##article.item > div > a[href^="https://"]
+btmulu.buzz,btmulu.cyou,btmulu.live,btmulu.men,btmulu.top##article.item:has(a[href^="https://"])
 btnull.com,btnull.org,btnull.to,btnull.si,btnull.in,btnull.nu,btnull.fun##[href$=".apk"]
 btnull.com,btnull.org,btnull.to,btnull.si,btnull.in,btnull.nu,btnull.fun##[style*="position: fixed; bottom:"][style*="z-index: 99999;"]
 btsj6.com##em > strong
