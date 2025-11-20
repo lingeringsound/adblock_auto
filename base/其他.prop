@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: hmdN1vUatZCa+2yndQ3kpw
+! Checksum: HSj7ISp5D97vXq6XoVAN0A
 ! Title: 自用去广告Adblock规则
-! Version: 20251120122943
-! Last modified: 2025-11-20 12:29:43
-! Total Count: 9318
+! Version: 20251120124601
+! Last modified: 2025-11-20 12:46:01
+! Total Count: 9325
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -8094,7 +8094,14 @@ zhidao.baidu.com##.single-up-ads-wrapper
 zhidao.baidu.com##.vricxrhmzs-ecom-ads
 zhidao.baidu.com##.wap-youx-change-asp
 zhihu.com##.MBannerAd-image
-zjdog.cc##+js(set, navigator.platform, MacIntel)
+zjdog.*##+js(aopr, document.execCommand)
+zjdog.*##+js(aopr, navigator.clipboard.write)
+zjdog.*##+js(aopr, navigator.clipboard.writeText)
+zjdog.*##+js(aopw, navigator.clipboard)
+zjdog.cc##+js(aopr, document.execCommand)
+zjdog.cc##+js(aopr, navigator.clipboard.write)
+zjdog.cc##+js(aopr, navigator.clipboard.writeText)
+zjdog.cc##+js(aopw, navigator.clipboard)
 zjsw.org##[onclick]
 zjsw.org##[style*="!important"]
 zjsw.org##div[id]:has(span > img[src*=".xyz"])
