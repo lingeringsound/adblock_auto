@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: nNLxtJQjTNSTcrgYMIyKyA
+! Checksum: hmdN1vUatZCa+2yndQ3kpw
 ! Title: 自用去广告Adblock规则
-! Version: 20251119072207
-! Last modified: 2025-11-19 07:22:07
-! Total Count: 9303
+! Version: 20251120122943
+! Last modified: 2025-11-20 12:29:43
+! Total Count: 9318
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -103,6 +103,7 @@
 ###ad_popup_wrapper
 ###ad_wp_base
 ###adb-warning
+###adbd
 ###adblock-warning
 ###adbox
 ###adbox--hot_news_ad
@@ -3176,6 +3177,7 @@
 ##img[src^="https://bejjci.twqtf.boats"]
 ##img[src^="https://cdn.lilongfei.cn"]
 ##img[src^="https://img"][src*="//upload/"][src$=".js"]
+##img[src^="https://img.alicdn.com/imgextra/"][src$=".gif"]
 ##img[src^="https://imgsa.baidu.com/forum/pic/item"][style*="cursor:pointer"]
 ##img[src^="https://imgsrc.baidu.com/forum/pic/item/"][class]
 ##img[src^="https://imgsrc.baidu.com/forum/pic/item/"][onclick]
@@ -4771,6 +4773,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /mb/meng/ee*.js?$~third-party
 /mdzzxttss.php?s=
 /modalad.
+/models/*iqety*.js$~third-party
 /models/faziqety_*.js
 /module-ads-html-$script
 /module-ads/*
@@ -5395,22 +5398,22 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 4gamers.com.tw##.aroma-news-detail-side > div[media-width]:has(div.aols-wrapper > a[target="_blank"][rel="noopener"])
 4gamers.com.tw##.container-fluid  > .vue-portal-target:has(> div[style] > .aroma-news-detail-iframe-ads)
 4khd.com,cartoon18.com,uuss.uk,xxtt.ink##.exo_wrapper
-4khd.com,uuss.uk,xxtt.ink##+js(createElement-defuser, a, click)
-4khd.com,uuss.uk,xxtt.ink##+js(createElement-defuser, iframe, src)
-4khd.com,uuss.uk,xxtt.ink##+js(nano-setInterval-defuser)
-4khd.com,uuss.uk,xxtt.ink##+js(nano-setTimeout-defuser)
-4khd.com,uuss.uk,xxtt.ink##+js(remove-localStorage, storedResult,inData,extranks,Better)
-4khd.com,uuss.uk,xxtt.ink##+js(set, window.AdProvider, [])
-4khd.com,uuss.uk,xxtt.ink##+js(set, window.RocketBrowser, undefined)
-4khd.com,uuss.uk,xxtt.ink##+js(set, window.adConfig, [])
-4khd.com,uuss.uk,xxtt.ink##+js(set, window.exoclick, undefined)
-4khd.com,uuss.uk,xxtt.ink##+js(set, window.popMagic, undefined)
-4khd.com,uuss.uk,xxtt.ink##.centbtd
-4khd.com,uuss.uk,xxtt.ink##.popup
-4khd.com,uuss.uk,xxtt.ink##^script:has-text(magsrv.com)
-4khd.com,uuss.uk,xxtt.ink##ins[data-processed="true"]
-4khd.com,uuss.uk,xxtt.ink##script:has-text(magsrv.com)
-4khd.com,uuss.uk,xxtt.ink##script[src^="//a.pemsrv.com"] + div
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(acs, document.querySelectorAll, popMagic)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(createElement-defuser, a, click)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(createElement-defuser, iframe, src)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(nano-setInterval-defuser)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(nano-setTimeout-defuser)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(remove-localStorage, storedResult,inData,extranks,Better)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(set, window.AdProvider, [])
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(set, window.adConfig, [])
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(set, window.exoclick, undefined)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##+js(set, window.popMagic, undefined)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##.centbtd
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##.popup
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##^script:has-text(magsrv.com)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##ins[data-processed="true"]
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##script:has-text(magsrv.com)
+4khd.com,ssuu.uk,uuss.uk,xxtt.ink##script[src^="//a.pemsrv.com"] + div
 4kporn.xxx##div[id^="list_videos_"] > div.item:has(> .ads)
 4kporn.xxx,crazyporn.xxx##.myadswarning
 4kporn.xxx,crazyporn.xxx,hoes.tube,love4porn.com##.item:has(> [class*="ads"])
@@ -6450,6 +6453,8 @@ fapcat.com##.spot-underplayer
 fappeningbook.com##.wp_xsize_class
 fappeningbook.com##a[href="https://w1.fappeningbook.com/"]
 fappeningbook.com##div.wide-place
+fc2stream.tv##+js(abort-current-script, document.createElement, window.open)
+fc2stream.tv##+js(abort-on-property-read, myScriptManager)
 fcdm23.com##ul.ttnavbar
 fcwei.com##div:has(> [style*=".myqcloud.com/img/"])
 fcwei.com##script + [id$="_rfymty"]
@@ -6807,6 +6812,11 @@ jingyanlib.com##.article-adcon
 jingyanlib.com##[adtemplate]
 jingyanlib.com##div[id^="adIndex"]
 jingyanlib.com,xvideos.com##[class$="-ad"]
+jinse.cn##.download
+jinse.cn##.jinse_app
+jinse.cn##.js-read-full__open
+jinse.cn##a[href="https://app.jinse.com.cn"]
+jinse.cn##a[href^="https://app.jinse.com.cn"]
 jinxiyue.com##a[onclick^="qinlintest"]
 jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,pornachi.com,porndude.wtf,orgazmax.com,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 jjdy8.cc##[id^="adWrapper"]
@@ -7027,6 +7037,7 @@ mingrentea.com,rz2024b.com,xsb-xs.com##^script:has-text(_ffc)
 mingrentea.com,rz2024b.com,xsb-xs.com##script:has-text(_ffc)
 miobt.com##.gg_canvas
 miobt.com##.gg_canvas-hidden
+missav.*,missav.ai,missav.city,missav.com,missav.loan,missav.pw,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com##+js(acs, document.createElement, htmlAds)
 missav.ai,missav.city,missav.com,missav.loan,missav.pw,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com##[href*="//bit.ly/"]
 missav.ai,missav.city,missav.com,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com##.list-disc > li:has(> a[href^="https://bit.ly/"])
 missav.ai,missav.city,missav.com,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,thisav.com##.text-nord14
@@ -7780,6 +7791,8 @@ whentai.com##.bg-inject
 whentai.com##video[autoplay="autoplay"]
 wnjlkqe.info##a[href] > img[style="width: 100%;"]
 wr.de,wp.de,nrz.de#@#.ad
+wss://*.xyz:*?n=$third-party
+wss://*.xyz:*?x=$third-party
 wuzhuiso.com###appMiddleBanner
 wuzhuiso.com###mohe-hotnews_right
 wuzhuiso.com###side > div.download-browser:last-child
@@ -8081,6 +8094,7 @@ zhidao.baidu.com##.single-up-ads-wrapper
 zhidao.baidu.com##.vricxrhmzs-ecom-ads
 zhidao.baidu.com##.wap-youx-change-asp
 zhihu.com##.MBannerAd-image
+zjdog.cc##+js(set, navigator.platform, MacIntel)
 zjsw.org##[onclick]
 zjsw.org##[style*="!important"]
 zjsw.org##div[id]:has(span > img[src*=".xyz"])
@@ -9293,6 +9307,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||yyefao.com^
 ||yzwtbdtq.xyz^
 ||zhenhaomai.com/static/m.js
+||zjdog.*/model*qety*.js
 ||zkappsart.com^$third-party,xmlhttprequest
 ||zle.com/tongjijs/$script
 ||zol-img.com.cn/*open.apple.js
