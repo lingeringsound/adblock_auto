@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: HSj7ISp5D97vXq6XoVAN0A
+! Checksum: /GwZ8dzs85k3wvQnlzpRVg
 ! Title: 自用去广告Adblock规则
-! Version: 20251120124601
-! Last modified: 2025-11-20 12:46:01
-! Total Count: 9325
+! Version: 20251121001433
+! Last modified: 2025-11-21 00:14:33
+! Total Count: 9327
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -6139,6 +6139,7 @@ baidu.com##div.blank-frame
 baidu.com##div[class^="sfc-video-page-list"]
 baidu.com#@#.ad-wrapper
 baidu.com#@#[class$="-ad"]
+baidu.com#@#script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content):not(#nr1):not(#wrapper)
 baidu.com,bdimg.com###aside-ad
 baidu.com,bdimg.com,tieba.com##.l_post:has(div[class*=" fc-"])
 baidu.com,bdimg.com,tieba.com##.thread_item_box:has(div[class*=" fc-"])
@@ -6795,6 +6796,7 @@ javtiful.com##.row > div.col:has(> div.card > a[href^="http://bit.ly/"])
 javtiful.com##.theeffect > div.d-flex:has(> section ins.adsbyexoclick)
 jaw.pl##aside.widget_block:has(> pre a[href^="https://bit.ly/"])
 jb59.net##.test3
+jianshu.com##.app-float-btn
 jianshu.com##div[id]:has(> .ad-badge)
 jieav.com###jieav_a1,#jieav_a2,#jieav_a3,#jieav_a4,#jieav_a5,#jieav_a6,#jieav_b1,#jieav_b2,#jieav_b3,#jieav_b4,#jieav_b4,#jieav_b5,#jieav_b6
 jieav.com,qinav.com##.iframe:is([id*="_"])
