@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QKm02LeUw0XSbAQVv2u1rA
+! Checksum: OgqLzIJoNhSs+GX1Hy61hg
 ! Title: 自用去广告Adblock规则
-! Version: 20251121234638
-! Last modified: 2025-11-21 23:46:38
-! Total Count: 9328
+! Version: 20251122124554
+! Last modified: 2025-11-22 12:45:54
+! Total Count: 9332
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5075,6 +5075,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /um/gg.js
 /upload/ads/*$domain=~ads.ae
 /uydsgfsudf*/*f*.js?$~third-party
+/vast.js$domain=mat6tube.com|noodlemagazine.com|ukdevilz.com
 /video-slider-ad/build.js
 /vlcdn.tsyndicate.com/videos
 /vs.php?id=$third-party,xmlhttprequest
@@ -5459,6 +5460,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 666biquge.com##^script:has-text(foot\(\))
 666biquge.com##script:has-text(catch\(err\))
 666biquge.com##script:has-text(foot\(\))
+69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com####+js(set-local-storage-item, alert_window:time, $now$)
+69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com####+js(set-local-storage-item, last:request:init:time, $now$)
 69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com##div[class] > span[class]:has(div[class*="q-responsive"])
 69gfs.com,6japaneseporn.com,allureamateurs.net,analteen.pro,goodindianporn.com,mangacanblog.com,mataporno.com,orientalasianporn.com,sexmummy.com,teenwantme.com,worldgatas.com,xpg.com.br###topbar
 69tang.org##.kangxia
@@ -7016,10 +7019,11 @@ manga168.com,manga168.net###ads_fox_bottom
 maoyan.com##.tip-open-app
 maoyan.com##[data-event*="donwload"]
 mat6tube.com##.main > .c_video > .container > [style]:not(.video_player)
-mat6tube.com,noodlemagazine.com##.container > noindex:has(> div[style] div.banner-container)
-mat6tube.com,noodlemagazine.com##div.container + div:has(iframe[src*="/smartpop/"])
-mat6tube.com,noodlemagazine.com##div.container > div:has(iframe[data-src*="//go."])
-mat6tube.com,noodlemagazine.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
+mat6tube.com,noodlemagazine.com,ukdevilz.com##.container > noindex:has(> div[style] div.banner-container)
+mat6tube.com,noodlemagazine.com,ukdevilz.com##div.container + div:has(iframe[src*="/smartpop/"])
+mat6tube.com,noodlemagazine.com,ukdevilz.com##div.container > div:has(iframe[data-src*="//go."])
+mat6tube.com,noodlemagazine.com,ukdevilz.com##div.container > div:has(script[src*="ad-provider"])
+mat6tube.com,noodlemagazine.com,ukdevilz.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
 mbd.baidu.com###headDeflectorContainer
 mbd.baidu.com##.drag-wrap
 mbd.baidu.com##.mergeVideoTop
