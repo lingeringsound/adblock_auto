@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: OgqLzIJoNhSs+GX1Hy61hg
+! Checksum: bz+M1F2bCs3pMIwBgpBWtQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251122124554
-! Last modified: 2025-11-22 12:45:54
-! Total Count: 9332
+! Version: 20251123185741
+! Last modified: 2025-11-23 18:57:42
+! Total Count: 9340
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -82,6 +82,7 @@
 ###adContentHolder
 ###adContext
 ###adDiv
+###adFloat
 ###adSpot
 ###ad_1
 ###ad_2
@@ -1999,6 +2000,7 @@
 ##.wrapper_advertisement
 ##.wrapperad
 ##.x-link[href^="/jump"]
+##.xqbj-component-adfloat
 ##.xqbj-component-advertises-1
 ##.xqbj-list-rows-placard
 ##.y-ads
@@ -2455,6 +2457,7 @@
 ##a[href^="https://as.sexad.net"]
 ##a[href^="https://b9556.vip"]
 ##a[href^="https://bds82.top"]
+##a[href^="https://cdn.yinghuazy.xyz/apk"]
 ##a[href^="https://dk2.me"]
 ##a[href^="https://i.vip.po18ad.com/"][target="_blank"]
 ##a[href^="https://igt17.net"]
@@ -3277,6 +3280,7 @@
 ##ul.grid.text-sm
 ##ul.mb-3.dx-recommend-icons--small
 ##ul.md\:grid-cols-1 > li > a.checkNum
+##ul.ttnavbar
 ##ul[style="margin:0px; padding:0px;overflow:hidden;width:100%;"]
 ##video[poster^="https://code.yykalopyy.com/"]
 ##video[poster^="https://gimg0.baidu.com/gimg/"]
@@ -5307,6 +5311,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 123pan.com##.baidu-banner-container
 123pan.com##.banner-container-pc
 123pan.com##[class*="adv-container"]
+12ju.com##.users-app
+12ju.com##[href^="https://zjs.imgdianying"]
 131400.best,vikacg.com,vikacg.xyz##.download-btn
 131400.best,vikacg.com,vikacg.xyz##.openapp-footer
 131400.best,vikacg.com,vikacg.xyz##a[href^="http"] > img[src*="/assets/main/"]
@@ -5798,6 +5804,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://url.nb*.xyz^$third-party,script
 ://us-west1.*/*.js#spot=$third-party,script
 ://us-west1.*/api/spots/$third-party
+://v.12ju*/js/e*.js
 ://vc.*.*/*.js?17$third-party,script
 ://vlets.*.club$third-party
 ://vlets.*.cyou$third-party
@@ -7830,6 +7837,7 @@ www.zhihu.com,zhihu.com##.TopstoryItem--advertCard
 www.zhihu.com,zhihu.com##.WeiboAd-wrap
 www.zhihu.com,zhihu.com##[class*="Advert"]
 www.zhihu.com,zhihu.com##div[data-type="ad"]
+wzzy.app,wzzy.cc,wzzy.top##.items-center:has(#appname)
 x6g.com##.addd
 x6g.com##a[href^="/ad.php"]
 x6g.com##li:has(.myad)
