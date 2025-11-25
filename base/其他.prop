@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JgZu80O9dYwsEK8j+pvj9A
+! Checksum: sZbqaqvFujbDPOLoB5DHrQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251123225047
-! Last modified: 2025-11-23 22:50:47
-! Total Count: 9342
+! Version: 20251125104324
+! Last modified: 2025-11-25 10:43:24
+! Total Count: 9340
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5466,8 +5466,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 666biquge.com##^script:has-text(foot\(\))
 666biquge.com##script:has-text(catch\(err\))
 666biquge.com##script:has-text(foot\(\))
-69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com####+js(set-local-storage-item, alert_window:time, $now$)
-69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com####+js(set-local-storage-item, last:request:init:time, $now$)
+69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com##+js(set-local-storage-item, alert_window:time, $now$)
+69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com##+js(set-local-storage-item, last:request:init:time, $now$)
 69av.one,8mav.cc,91av.one,91porn.work,99xing.cc,avlulu.cc,jable.one,maomiav.one,tuoku8.one,weav.xyz,x99av.com##div[class] > span[class]:has(div[class*="q-responsive"])
 69gfs.com,6japaneseporn.com,allureamateurs.net,analteen.pro,goodindianporn.com,mangacanblog.com,mataporno.com,orientalasianporn.com,sexmummy.com,teenwantme.com,worldgatas.com,xpg.com.br###topbar
 69tang.org##.kangxia
@@ -5824,6 +5824,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 =AdCode_sjtb&$third-party
 @@.cn/j/*$script,third-party,domain=weather.com.cn
 @@.cn/k/*$script,third-party,domain=autohome.com.cn|qq.com
+@@.com/*?*=*&*=*&*=*&*=*%*%*&*=*&*=*&*=*&*=*&*=*&*=*$domain=bilibili.com
 @@.com/*interstitial*.js$domain=reddit.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
@@ -8045,6 +8046,11 @@ yeeach.com##.footer + div[id][class]:not([style])
 yeeach.com##^script:has-text(new RegExp)
 yeeach.com##noscript
 yeeach.com##script:has-text(new RegExp)
+yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, document.execCommand)
+yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, navigator.clipboard.write)
+yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, navigator.clipboard.writeText)
+yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopw, navigator.clipboard)
+yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(set, Object.autoCopy, noopFunc)
 yh-dm.com##^script:has-text(function a)
 yh-dm.com##^script:has-text(pc.stgowan.com)
 yh-dm.com##script:has-text(function a)
@@ -8111,14 +8117,6 @@ zhidao.baidu.com##.single-up-ads-wrapper
 zhidao.baidu.com##.vricxrhmzs-ecom-ads
 zhidao.baidu.com##.wap-youx-change-asp
 zhihu.com##.MBannerAd-image
-zjdog.*##+js(aopr, document.execCommand)
-zjdog.*##+js(aopr, navigator.clipboard.write)
-zjdog.*##+js(aopr, navigator.clipboard.writeText)
-zjdog.*##+js(aopw, navigator.clipboard)
-zjdog.cc##+js(aopr, document.execCommand)
-zjdog.cc##+js(aopr, navigator.clipboard.write)
-zjdog.cc##+js(aopr, navigator.clipboard.writeText)
-zjdog.cc##+js(aopw, navigator.clipboard)
 zjsw.org##[onclick]
 zjsw.org##[style*="!important"]
 zjsw.org##div[id]:has(span > img[src*=".xyz"])
