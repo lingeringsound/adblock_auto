@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 7s+YNMMjs9WOEfmZUptR1A
+! Checksum: fOvKchtFESW35ayq44oa5A
 ! Title: 自用去广告Adblock规则
-! Version: 20251126194948
-! Last modified: 2025-11-26 19:49:49
-! Total Count: 9347
+! Version: 20251126213906
+! Last modified: 2025-11-26 21:39:06
+! Total Count: 9348
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3240,8 +3240,8 @@
 ##script + script + style + div[id] + a[onclick][target="_self"]
 ##script > .p-screen-dialog
 ##script[id] + script:not([src]) + div[style^="position: fixed; bottom"][style*="z-index: 9999;"]:not([class]):not([id])
-##script[id] + script[src^="/"] + style ~ div[id]:not([class]):not(#content):not(#nr1)
-##script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content):not(#nr1):not(#wrapper)
+##script[id] + script[src^="/"] + style ~ div[id]:not([class]):not(#content):not(#nr1):not(#wrapper):not(#page):not(#index-view)
+##script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content):not(#nr1):not(#wrapper):not(#page):not(#index-view)
 ##script[src$="/ad-provider.js"] + ins
 ##script[src$="/ad-provider.js"] +div + ins
 ##script[src$="/js/jads.js"] + ins[id]
@@ -6152,6 +6152,7 @@ baidu.com##[class^="cu-video-player"]
 baidu.com##[class^="sfc-video-page"] > [class="mask"]
 baidu.com##[srcid*="_ad"]
 baidu.com##div.blank-frame
+baidu.com##div.result-molecule > div[class^="index_ai-banner"]
 baidu.com##div[class^="sfc-video-page-list"]
 baidu.com#@#.ad-wrapper
 baidu.com#@#[class$="-ad"]
