@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: pJ7qhHdporpvPwZSeXVnQg
+! Checksum: 7s+YNMMjs9WOEfmZUptR1A
 ! Title: 自用去广告Adblock规则
-! Version: 20251126001045
-! Last modified: 2025-11-26 00:10:45
-! Total Count: 9344
+! Version: 20251126194948
+! Last modified: 2025-11-26 19:49:49
+! Total Count: 9347
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5828,7 +5828,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 =AdCode_sjtb&$third-party
 @@.cn/j/*$script,third-party,domain=weather.com.cn
 @@.cn/k/*$script,third-party,domain=autohome.com.cn|qq.com
-@@.com/*?*=*&*=*&*=*&*=*%*%*&*=*&*=*&*=*&*=*&*=*&*=*$domain=bilibili.com
+@@.com/*?*=*&*=*&*=*&*=*%*%*&*=*&*=*&*=*&*=*&*=*&*=*$domain=baidu.com|bilibili.com
 @@.com/*interstitial*.js$domain=reddit.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
@@ -7410,6 +7410,8 @@ sexporn.hair##iframe[src^="//cliv"]
 sexygirl.cc##.overflow-auto:has(script[src$="/invoke.js"])
 sexygirl.cc##.overflow-auto:has(script[src*="/ad-provider.js"])
 sexygirl.cc##.overflow-auto:has(script[src*="jads"])
+share.acgnx.se##div.banner
+share.acgnx.se##div.intro_inner
 shenmavod.net##div.fetch-image:not(.cover)
 shenmavod.net##div.my-2.grid
 shushudu.com##[style*="width:"][style*="100%"],[style*="width:"][style*="99%"],[width*="99%"],[width*="100%"],div[class][style*="display: block;"][style*="131px;"],div[class][style*="width: 100%;"][style*="131px;"],div[class][style*="z-index: 2147483646;"][style*="131px"],div[class][style*="position: fixed;"][style*="131px"]
@@ -8054,6 +8056,7 @@ yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, document.execCommand)
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, navigator.clipboard.write)
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, navigator.clipboard.writeText)
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopw, navigator.clipboard)
+yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(nano-sib, setItem, copy-kouling)
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(set, Object.autoCopy, noopFunc)
 yh-dm.com##^script:has-text(function a)
 yh-dm.com##^script:has-text(pc.stgowan.com)
