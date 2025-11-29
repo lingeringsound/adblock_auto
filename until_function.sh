@@ -52,7 +52,6 @@ cat << key > "${file}"
 ! Gitlink Homepage: https://www.gitlink.org.cn/keytoolazy/adblock_auto
 ! Github Raw Link: https://lingeringsound.github.io/adblock_auto/Rules/${file##*/}
 ! Github Raw gh Link: https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/${file##*/}
-! Gitlink Raw Link: https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/${file##*/}?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335
 
 key
 echo "${original_file}" >> "${file}"
