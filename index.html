@@ -10,7 +10,7 @@
   --bg:#fafcff;
   --card:rgba(255,255,255,0.94);
   --text:#111;
-  --green:#0bf351;
+  --green:#22c55e;
   --blur:blur(28px);
 }
 @media(prefers-color-scheme:dark){
@@ -117,14 +117,26 @@ h1{
   font-size:clamp(14px, 3vw, 15px);
   font-weight:600;
   cursor:pointer;
-  transition:all .3s ease;
-  box-shadow:0 6px 16px rgba(11,243,81,.4);
+  transition:all .35s ease;
+  box-shadow:0 6px 16px rgba(34,197,94,.4);
   min-height:44px;
 }
-.copy-btn:hover{transform:translateY(-3px);}
+.copy-btn:hover{
+  transform:translateY(-3px);
+  background:#16a34a;
+}
+.copy-btn:active{
+  transform:translateY(-1px);
+}
+.copy-btn.copied{
+  background:#94a3b8;
+  box-shadow:0 6px 16px rgba(148,163,184,.4);
+  cursor:default;
+}
 @media(hover:none){
-  .copy-btn:hover{transform:none;}
-  .copy-btn:active{transform:translateY(-1px);}
+  .copy-btn:hover{transform:none;background:var(--green);}
+  .copy-btn.copied:hover{transform:none;background:#94a3b8;}
+  .copy-btn:active:not(.copied){transform:translateY(-1px);}
 }
 
 /* 提示 */
@@ -440,30 +452,33 @@ wrapper.parentElement.addEventListener('mouseleave',()=>{
 document.addEventListener('click',function(e){
   if(e.target.classList.contains('copy-btn')){
     const url=e.target.getAttribute('data-url');
-    copy(url);
+    copy(url, e.target);
   }
 });
 
-function copy(text){
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(text).then(showToast).catch(()=>fallbackCopy(text));
-  }else{
-    fallbackCopy(text);
+function copy(text, btn) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast();
+      btn.classList.add('copied');
+    }).catch(() => fallbackCopy(text, btn));
+  } else {
+    fallbackCopy(text, btn);
   }
 }
 
-function fallbackCopy(text){
-  const textArea=document.createElement('textarea');
-  textArea.value=text;
-  textArea.style.position='fixed';
-  textArea.style.opacity='0';
-  textArea.style.pointerEvents='none';
+function fallbackCopy(text, btn) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.opacity = '0';
   document.body.appendChild(textArea);
   textArea.select();
-  try{
+  try {
     document.execCommand('copy');
     showToast();
-  }catch(err){}
+    btn.classList.add('copied');
+  } catch (err) {}
   document.body.removeChild(textArea);
 }
 
