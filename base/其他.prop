@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Zcex10TDgDlgVn5yPMrwKw
+! Checksum: 0HJnbC7wZFb1tKtEHglTCw
 ! Title: 自用去广告Adblock规则
-! Version: 20251201113355
-! Last modified: 2025-12-01 11:33:55
-! Total Count: 9352
+! Version: 20251201183443
+! Last modified: 2025-12-01 18:34:44
+! Total Count: 9366
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -675,6 +675,7 @@
 ##.ad-container
 ##.ad-container--leaderboard
 ##.ad-dialog
+##.ad-dialog ~ .float-dialog
 ##.ad-disclaimer-container
 ##.ad-dog__cnx-container
 ##.ad-engage
@@ -3004,13 +3005,25 @@
 ##img[alt$="约炮"]
 ##img[alt*="88棋牌"][src$=".gif"]
 ##img[alt*="bet365"][src$=".gif"]
+##img[alt*="三唑仑"]
+##img[alt*="三唑仓"]
+##img[alt*="三挫仑"]
+##img[alt*="乖乖水"]
+##img[alt*="催情迷药"]
+##img[alt*="听话水"]
+##img[alt*="听话药"]
 ##img[alt*="呦女"]
 ##img[alt*="四季体育"][src$=".gif"]
+##img[alt*="帝王享受"][alt*="炮"]
+##img[alt*="成人"][alt*="免费直播"]
 ##img[alt*="成人"][alt*="抖阴"]
 ##img[alt*="成人"][alt*="抖音"]
 ##img[alt*="新葡京"][src$=".gif"]
 ##img[alt*="棋牌游戏hf"][src$=".gif"]
 ##img[alt*="美女"][alt*="直播"][alt*="秀"]
+##img[alt*="色情"][alt*="免费直播"]
+##img[alt*="迷情水"]
+##img[alt*="迷魂药"]
 ##img[alt*="黑料网"][alt*="广告"]
 ##img[alt="51直播"]
 ##img[alt="51萝莉"]
@@ -3277,6 +3290,7 @@
 ##ul > li > a[href*=".pojuko.buzz/"]
 ##ul > li > a[href][data-id][data-type][data-position][target="_self"]
 ##ul.cate_ul > li[data-expiration]
+##ul.grid > .post-list-item > a[rel*="nofollow"]
 ##ul.grid.text-sm
 ##ul.mb-3.dx-recommend-icons--small
 ##ul.md\:grid-cols-1 > li > a.checkNum
