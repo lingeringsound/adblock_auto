@@ -22,7 +22,11 @@
 }
 
 /* 基础样式 */
-body.dark{--bg:#0b0e16;--card:rgba(18,22,38,0.96);--text:#eee;}
+body.dark{
+  --bg:#0b0e16;
+  --card:rgba(18,22,38,0.96);
+  --text:#eee;
+}
 body{
   background:var(--bg);
   color:var(--text);
@@ -58,9 +62,13 @@ h1{
   box-shadow:0 20px 60px rgba(0,0,0,.2);
   margin-bottom:30px;
 }
-.swiper-wrapper{
-  display:flex;
-  transition:transform .55s cubic-bezier(.32,.72,.3,1);
+.swiper-wrapper {
+  display: flex;
+  transition: transform .55s cubic-bezier(.32,.72,.3,1);
+  will-change: transform;
+}
+.swiper-wrapper.not-moving {
+  will-change: auto;
 }
 .slide{
   min-width:100%;
@@ -120,6 +128,10 @@ h1{
   transition:all .35s ease;
   box-shadow:0 6px 16px rgba(34,197,94,.4);
   min-height:44px;
+}
+.copy-btn:focus{
+  outline:2px solid var(--green);
+  outline-offset:2px;
 }
 .copy-btn:hover{
   transform:translateY(-3px);
@@ -227,6 +239,10 @@ a:hover{text-decoration:underline;}
   min-width:50px;
   min-height:30px;
 }
+.switch:focus{
+  outline:2px solid var(--green);
+  outline-offset:2px;
+}
 .knob{
   position:absolute;
   top:4px;
@@ -238,7 +254,7 @@ a:hover{text-decoration:underline;}
   transition:.45s cubic-bezier(.68,-.55,.27,1.55);
   box-shadow:0 3px 12px rgba(0,0,0,.25);
 }
-.dark .knob{left:calc(100% - 26px - 4px);}
+body.dark .knob{left:calc(100% - 26px - 4px);}
 #toast{
   position:fixed;
   top:30px;
@@ -322,7 +338,7 @@ a:hover{text-decoration:underline;}
   </div>
 </div>
 
-<div class="switch"><div class="knob" id="knob"></div></div>
+<div class="switch" role="switch" aria-label="切换暗色模式"><div class="knob" id="knob"></div></div>
 
 <script>
 const linkConfig={
@@ -384,138 +400,160 @@ function initLinks(){
 
 initLinks();
 
-const wrapper=document.getElementById('wrapper');
-const dots=document.querySelectorAll('.dot');
-let index=0;
-let startX=0;
-let isDragging=false;
+const wrapper = document.getElementById('wrapper');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let startX = 0;
+let isDragging = false;
+let willChangeTimer = null;
 
-function go(n){
-  index=n;
-  wrapper.style.transform=`translateX(-${index*100}%)`;
-  dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+wrapper.classList.add('not-moving');
+
+function go(n) {
+  currentIndex = n;
+  wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
 }
 
-dots.forEach((d,i)=>d.onclick=()=>go(i));
+dots.forEach((d, i) => d.onclick = () => go(i));
 
-wrapper.parentElement.addEventListener('touchstart',e=>{
-  startX=e.touches[0].clientX;
-  isDragging=true;
-},{passive:true});
+function startDrag() {
+  isDragging = true;
+  wrapper.classList.remove('not-moving');
+}
 
-wrapper.parentElement.addEventListener('touchmove',e=>{
-  if(!isDragging)return;
-  const currentX=e.touches[0].clientX;
-  const diff=startX-currentX;
-  wrapper.style.transform=`translateX(calc(-${index*100}% - ${diff}px))`;
-},{passive:true});
+function endDrag() {
+  if (!isDragging) return;
+  isDragging = false;
+  clearTimeout(willChangeTimer);
+  willChangeTimer = setTimeout(() => {
+    wrapper.classList.add('not-moving');
+  }, 500);
+}
 
-wrapper.parentElement.addEventListener('touchend',e=>{
-  if(!isDragging)return;
-  isDragging=false;
-  const endX=e.changedTouches[0].clientX;
-  const diff=startX-endX;
-  if(diff>80&&index<1)go(1);
-  else if(diff<-80&&index>0)go(0);
-  else wrapper.style.transform=`translateX(-${index*100}%)`;
+wrapper.parentElement.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+  startDrag();
+}, { passive: true });
+
+wrapper.parentElement.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  const diff = startX - e.touches[0].clientX;
+  wrapper.style.transform = `translateX(calc(-${currentIndex * 100}% - ${diff}px))`;
+}, { passive: true });
+
+wrapper.parentElement.addEventListener('touchend', e => {
+  if (!isDragging) return;
+  const diff = startX - e.changedTouches[0].clientX;
+  if (diff > 80 && currentIndex < 1) go(1);
+  else if (diff < -80 && currentIndex > 0) go(0);
+  else wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  endDrag();
 });
 
-wrapper.parentElement.addEventListener('mousedown',e=>{
-  startX=e.clientX;
-  isDragging=true;
+wrapper.parentElement.addEventListener('mousedown', e => {
+  startX = e.clientX;
+  startDrag();
 });
 
-wrapper.parentElement.addEventListener('mousemove',e=>{
-  if(!isDragging)return;
-  const currentX=e.clientX;
-  const diff=startX-currentX;
-  wrapper.style.transform=`translateX(calc(-${index*100}% - ${diff}px))`;
+wrapper.parentElement.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  const diff = startX - e.clientX;
+  wrapper.style.transform = `translateX(calc(-${currentIndex * 100}% - ${diff}px))`;
 });
 
-wrapper.parentElement.addEventListener('mouseup',e=>{
-  if(!isDragging)return;
-  isDragging=false;
-  const endX=e.clientX;
-  const diff=startX-endX;
-  if(diff>100&&index<1)go(1);
-  else if(diff<-100&&index>0)go(0);
-  else wrapper.style.transform=`translateX(-${index*100}%)`;
+wrapper.parentElement.addEventListener('mouseup', e => {
+  if (!isDragging) return;
+  const diff = startX - e.clientX;
+  if (diff > 100 && currentIndex < 1) go(1);
+  else if (diff < -100 && currentIndex > 0) go(0);
+  else wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  endDrag();
 });
 
-wrapper.parentElement.addEventListener('mouseleave',()=>{
-  if(isDragging){
-    isDragging=false;
-    wrapper.style.transform=`translateX(-${index*100}%)`;
+wrapper.parentElement.addEventListener('mouseleave', () => {
+  if (isDragging) {
+    isDragging = false;
+    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    endDrag();
   }
 });
 
-document.addEventListener('click',function(e){
-  if(e.target.classList.contains('copy-btn')){
-    const url=e.target.getAttribute('data-url');
+document.addEventListener('click', e => {
+  if (e.target.classList.contains('copy-btn')) {
+    const url = e.target.getAttribute('data-url');
     copy(url, e.target);
   }
 });
 
 function copy(text, btn) {
-  if (navigator.clipboard && navigator.clipboard.writeText) {
+  if (navigator.clipboard?.writeText) {
     navigator.clipboard.writeText(text).then(() => {
-      showToast();
-      btn.classList.add('copied');
+      done();
     }).catch(() => fallbackCopy(text, btn));
   } else {
     fallbackCopy(text, btn);
   }
+  function done() {
+    showToast();
+    btn.classList.add('copied');
+    setTimeout(() => btn.classList.remove('copied'), 2000);
+  }
 }
 
 function fallbackCopy(text, btn) {
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';
-  textArea.style.opacity = '0';
-  document.body.appendChild(textArea);
-  textArea.select();
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed'; ta.style.opacity = 0;
+  document.body.appendChild(ta);
+  ta.select();
   try {
     document.execCommand('copy');
     showToast();
     btn.classList.add('copied');
-  } catch (err) {}
-  document.body.removeChild(textArea);
+    setTimeout(() => btn.classList.remove('copied'), 2000);
+  } catch(e) {}
+  document.body.removeChild(ta);
 }
 
-function showToast(){
-  const toast=document.getElementById('toast');
+function showToast() {
+  const toast = document.getElementById('toast');
   toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'),2800);
+  setTimeout(() => toast.classList.remove('show'), 2800);
 }
 
-const body=document.body;
-const knob=document.getElementById('knob');
-let isDark=window.matchMedia('(prefers-color-scheme:dark)').matches;
+const body = document.body;
+const knob = document.getElementById('knob');
+const switchElement = document.querySelector('.switch');
+let isDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
 
-function updateDarkMode(){
-  const dark=body.classList.contains('dark');
-  knob.style.left=dark?'calc(100% - 26px - 4px)':'4px';
-  knob.style.background=dark?'#0bf351':'#fff';
+function updateDarkMode() {
+  const dark = body.classList.contains('dark');
+  knob.style.left = dark ? 'calc(100% - 26px - 4px)' : '4px';
+  knob.style.background = dark ? '#0bf351' : '#fff';
+  switchElement.setAttribute('aria-checked', dark.toString());
 }
 
-if(isDark){
-  body.classList.add('dark');
-}
+if (isDark) body.classList.add('dark');
 updateDarkMode();
 
-document.querySelector('.switch').onclick=()=>{
+switchElement.onclick = () => {
   body.classList.toggle('dark');
   updateDarkMode();
 };
 
-window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',e=>{
-  if(e.matches!==body.classList.contains('dark')){
-    document.querySelector('.switch').click();
+window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', e => {
+  if (e.matches !== body.classList.contains('dark')) {
+    switchElement.click();
   }
 });
 
-window.addEventListener('resize',()=>{
-  go(index);
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, 150);
 });
 </script>
 </body>
