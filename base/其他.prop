@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 0HJnbC7wZFb1tKtEHglTCw
+! Checksum: BuBODfIwlgaBWjQ8bIQ7Qg
 ! Title: 自用去广告Adblock规则
-! Version: 20251201183443
-! Last modified: 2025-12-01 18:34:44
-! Total Count: 9366
+! Version: 20251201190650
+! Last modified: 2025-12-01 19:06:50
+! Total Count: 9363
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3506,7 +3506,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*/ua.php$third-party
 .com/*/uagu.php$third-party
 .com/*/wfohki/di$third-party,~image,~media
-.com/*?*=*&*=*&*=*&*=*%*%*&*=*&*=*&*=*&*=*&*=*&*=*$third-party,~media,~image,~stylesheet
 .com/*bd*.js$script,domain=ifeng.com
 .com/*interstitial*.js$third-party,script
 .com/1.js$script,~third-party
@@ -5842,7 +5841,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 =AdCode_sjtb&$third-party
 @@.cn/j/*$script,third-party,domain=weather.com.cn
 @@.cn/k/*$script,third-party,domain=autohome.com.cn|qq.com
-@@.com/*?*=*&*=*&*=*&*=*%*%*&*=*&*=*&*=*&*=*&*=*&*=*$domain=baidu.com|bilibili.com|youtube.com
 @@.com/*interstitial*.js$domain=reddit.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
@@ -6177,7 +6175,6 @@ baidu.com##div.result-molecule > div[class^="index_ai-banner"]
 baidu.com##div[class^="sfc-video-page-list"]
 baidu.com#@#.ad-wrapper
 baidu.com#@#[class$="-ad"]
-baidu.com#@#script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content):not(#nr1):not(#wrapper)
 baidu.com,bdimg.com###aside-ad
 baidu.com,bdimg.com,tieba.com##.l_post:has(div[class*=" fc-"])
 baidu.com,bdimg.com,tieba.com##.thread_item_box:has(div[class*=" fc-"])
@@ -6463,7 +6460,7 @@ eporner.com###admobileoutstream
 eporner.com###admobiletop
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
-eporner.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,thisav.com##+js(nowoif)
+eporner.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,sendvid.com,thisav.com,vidguard.site,waaw.to##+js(nowoif)
 erciyan.com##^script:has-text(function xxS)
 erciyan.com##script:has-text(function xxS)
 eromanga-show.com,hentai-one.com,hentaipaw.com##+js(no-setTimeout-if, /[a-z]\(!0\)/, 800)
