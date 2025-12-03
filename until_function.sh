@@ -48,10 +48,13 @@ cat << key > "${file}"
 ! Blocked Filters: ${count}
 ! Description: ${Description}
 ! Homepage: https://lingeringsound.github.io/adblock_auto
+! Gitcode Homepage: https://gitcode.net/weixin_45617236/adblock_auto
 ! GitHub Homepage: https://github.com/lingeringsound/adblock_auto
 ! Gitlink Homepage: https://www.gitlink.org.cn/keytoolazy/adblock_auto
+! Gitcode Raw Link: https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/${file##*/}
 ! Github Raw Link: https://lingeringsound.github.io/adblock_auto/Rules/${file##*/}
-! Github Raw gh Link: https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/${file##*/}
+! Github Raw gh Link: https://raw.gitmirror.com/lingeringsound/adblock_auto/main/Rules/${file##*/}
+! Gitlink Raw Link: https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/${file##*/}?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335
 
 key
 echo "${original_file}" >> "${file}"
@@ -404,7 +407,61 @@ done
 function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed 's/\$important$//g;s/\$important,/\$/g;s/\,important\,//g;s/\,important$//g;s/\$~important$//g;s/\$~important,/\$/g;s/\,~important\,//g;s/\,~important$//g;s/\$popup$//g;s/\$popup,/\$/g;s/\,popup\,//g;s/\,popup$//g;s/\$~popup$//g;s/\$~popup,/\$/g;s/\,~popup\,//g;s/\,~popup$//g;s/\$document$//g;s/\$document,/\$/g;s/\,document\,//g;s/\,document$//g;s/\$~document$//g;s/\$~document,/\$/g;s/\,~document\,//g;s/\,~document$//g' | sort | uniq)"
+local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed -e '/^\!/d;/^[[:space:]]*$/d' \
+ -e 's/\$3p/\$third-party/g' \
+ -e 's/\$1p/\$~third-party/g' \
+ -e 's/\,1p$/\,~third-party/g' \
+ -e 's/\,1p\,/\,~third-party\,/g' \
+ -e 's/\,3p$/\,third-party/g' \
+ -e 's/\,3p\,/\,third-party\,/g' \
+ -e 's/\,strict3p/\,third-party/g' \
+ -e 's/\$strict3p/\$third-party/g' \
+ -e 's/\$xhr/\$xmlhttprequest/g' \
+ -e 's/\$~xhr/\$~xmlhttprequest/g' \
+ -e 's/\,xhr\,/\,xmlhttprequest\,/g' \
+ -e 's/\,xhr$/\,xmlhttprequest/g' \
+ -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
+ -e 's/\,~xhr$/\,~xmlhttprequest/g' \
+ -e 's/\$important$//g' \
+ -e 's/\$important,/\$/g' \
+ -e 's/\,important\,/\,/g' \
+ -e 's/\,important$//g' \
+ -e 's/\$~important$//g' \
+ -e 's/\$~important,/\$/g' \
+ -e 's/\,~important\,/\,/g' \
+ -e 's/\,~important$//g' \
+ -e 's/\$popup$//g' \
+ -e 's/\$popup,/\$/g' \
+ -e 's/\,popup\,//g' \
+ -e 's/\,popup$//g' \
+ -e 's/\$~popup$//g' \
+ -e 's/\$~popup,/\$/g' \
+ -e 's/\,~popup\,//g' \
+ -e 's/\,~popup$//g' \
+ -e 's/\$document$//g' \
+ -e 's/\$document,/\$/g' \
+ -e 's/\,document\,//g' \
+ -e 's/\,document$//g' \
+ -e 's/\$~document$//g' \
+ -e 's/\$~document,/\$/g' \
+ -e 's/\,~document\,//g' \
+ -e 's/\,~document$//g' \
+ -e 's/\$all$//g' \
+ -e 's/\$all,/\$/g' \
+ -e 's/\,all\,//g' \
+ -e 's/\,all$//g' \
+ -e 's/\$~all$//g' \
+ -e 's/\$~all,/\$/g' \
+ -e 's/\,~all\,//g' \
+ -e 's/\,~all$//g' \
+ -e 's/\$doc$//g' \
+ -e 's/\$doc,/\$/g' \
+ -e 's/\,doc\,//g' \
+ -e 's/\,doc$//g' \
+ -e 's/\$~doc$//g' \
+ -e 's/\$~doc,/\$/g' \
+ -e 's/\,~doc\,//g' \
+ -e 's/\,~doc$//g' | sort | uniq)"
 echo "${lite_content}" > "${file}"
 }
 
@@ -469,10 +526,10 @@ cat << key > "${file}"
 ### 自动更新(`date +'%F %T'`)
 
 
-| 名称 | GIthub订阅链接 | Github加速订阅链接 | ~~GitCode订阅链接(死了)~~ | ~~Gitlink订阅链接(死了)~~ |
+| 名称 | GIthub订阅链接 | Github加速订阅链接 | GitCode订阅链接 | Gitlink订阅链接 |
 | :-- | :-- | :-- | :-- | :-- |
-| 混合规则(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
-| 混合规则精简版(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
+| 混合规则(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://raw.gitmirror.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt) | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
+| 混合规则精简版(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://raw.gitmirror.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt) | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
 
 
 ### 拦截器说明
@@ -503,3 +560,4 @@ cat << key > "${file}"
 
 key
 }
+
