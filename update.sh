@@ -91,6 +91,8 @@ modtify_adblock_original_file "${Rules_Folder}/adblock_auto.txt"
 wipe_badfilter "${Rules_Folder}/adblock_auto.txt"
 #去除Ublock不支持的规则
 lite_Uadblock_Rules "${Rules_Folder}/adblock_auto.txt"
+#adblock限定器缩写改成全名，兼容部分读取不到缩写的浏览器
+convert_abbreviations "${Rules_Folder}/adblock_auto.txt"
 #读取白名单 剔除规则
 make_white_rules "${Rules_Folder}/adblock_auto.txt" "`pwd`/white_list/white_list.prop"
 #剔除冲突的CSS规则

@@ -425,6 +425,12 @@ local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#
  -e 's/\,xhr$/\,xmlhttprequest/g' \
  -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
  -e 's/\,~xhr$/\,~xmlhttprequest/g' \
+ -e 's/\$css/\$stylesheet/g' \
+ -e 's/\$~css/\$~stylesheet/g' \
+ -e 's/\,css$/\,stylesheet/g' \
+ -e 's/\,css\,/\,stylesheet\,/g' \
+ -e 's/\,~css$/\,~stylesheet/g' \
+ -e 's/\,~css\,/\,~stylesheet\,/g' \
  -e 's/\$important$//g' \
  -e 's/\$important,/\$/g' \
  -e 's/\,important\,/\,/g' \
@@ -466,6 +472,44 @@ local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#
  -e 's/\,~doc\,//g' \
  -e 's/\,~doc$//g' | sort | uniq)"
 echo "${lite_content}" > "${file}"
+}
+
+#adblock限定器缩写转换，将特定缩写转换为完整形式
+function convert_abbreviations() {
+local file="${1}"
+test ! -f "${file}" && return 0
+local converted_content="$(cat "${file}" | busybox sed \
+ -e 's/\$3p/\$third-party/g' \
+ -e 's/\$1p/\$~third-party/g' \
+ -e 's/\$~3p/\$~third-party/g' \
+ -e 's/\$~1p/\$third-party/g' \
+ -e 's/\,1p$/\,~third-party/g' \
+ -e 's/\,1p\,/\,~third-party\,/g' \
+ -e 's/\,3p$/\,third-party/g' \
+ -e 's/\,3p\,/\,third-party\,/g' \
+ -e 's/\,~1p$/\,third-party/g' \
+ -e 's/\,~1p\,/\,third-party\,/g' \
+ -e 's/\,~3p$/\,~third-party/g' \
+ -e 's/\,~3p\,/\,~third-party\,/g' \
+ -e 's/\$xhr/\$xmlhttprequest/g' \
+ -e 's/\$~xhr/\$~xmlhttprequest/g' \
+ -e 's/\,xhr\,/\,xmlhttprequest\,/g' \
+ -e 's/\,xhr$/\,xmlhttprequest/g' \
+ -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
+ -e 's/\,~xhr$/\,~xmlhttprequest/g' \
+ -e 's/\$css/\$stylesheet/g' \
+ -e 's/\$~css/\$~stylesheet/g' \
+ -e 's/\,css$/\,stylesheet/g' \
+ -e 's/\,css\,/\,stylesheet\,/g' \
+ -e 's/\,~css$/\,~stylesheet/g' \
+ -e 's/\,~css\,/\,~stylesheet\,/g' \
+ -e 's/\$doc/\$document/g' \
+ -e 's/\$~doc/\$~document/g' \
+ -e 's/\,doc\,/\,document\,/g' \
+ -e 's/\,doc$/\,document/g' \
+ -e 's/\,~doc\,/\,~document\,/g' \
+ -e 's/\,~doc$/\,~document/g' )"
+echo "${converted_content}" > "${file}"
 }
 
 #在Via支持正则表达式前先移除正则表达式，减少报错和资源占用。
