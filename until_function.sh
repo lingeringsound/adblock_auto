@@ -407,10 +407,16 @@ test ! -f "${file}" && return
 local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed -e '/^\!/d;/^[[:space:]]*$/d' \
  -e 's/\$3p/\$third-party/g' \
  -e 's/\$1p/\$~third-party/g' \
+ -e 's/\$~3p/\$~third-party/g' \
+ -e 's/\$~1p/\$third-party/g' \
  -e 's/\,1p$/\,~third-party/g' \
  -e 's/\,1p\,/\,~third-party\,/g' \
  -e 's/\,3p$/\,third-party/g' \
  -e 's/\,3p\,/\,third-party\,/g' \
+ -e 's/\,~1p$/\,third-party/g' \
+ -e 's/\,~1p\,/\,third-party\,/g' \
+ -e 's/\,~3p$/\,~third-party/g' \
+ -e 's/\,~3p\,/\,~third-party\,/g' \
  -e 's/\,strict3p/\,third-party/g' \
  -e 's/\$strict3p/\$third-party/g' \
  -e 's/\$xhr/\$xmlhttprequest/g' \
