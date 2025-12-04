@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: onDqpWaxhtELI5+nGoRkdw
+! Checksum: +1dAV/w5AXcCBowoqDxOJQ
 ! Title: 自用去广告Adblock规则
-! Version: 20251204133606
-! Last modified: 2025-12-04 13:36:06
-! Total Count: 9365
+! Version: 20251204212742
+! Last modified: 2025-12-04 21:27:42
+! Total Count: 9374
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5652,6 +5652,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*hsck*.com/nnn*/1*.js
 ://*huameihangkong.*/js/baiducdn.js
 ://*huameihangkong.*/js/bottom.js
+://*ihanmi.*/static/miao/yy.js
 ://*iyxdm.*/js/bottom_dk.js
 ://*jiezhong.*/js/f*.js$~third-party
 ://*jm18*/media/albums/f_*.jpg?*=
@@ -6359,6 +6360,7 @@ cin.ac##a[href^="https://s.zlinkc.com"]
 cin.cx##body > iframe[style*="z-index: 2147483647"]
 ciyuanshe6.com##body > div[id] > div[class="fixed"],body > div[id] > div[class*="_"],[style=" top: 0; left: 0; width: 100%; height: 120px; z-index: 9999;"]
 cj.sina.cn,finance.sina.cn##.carousel
+cj.sina.cn,finance.sina.cn##span[class*="u-article-video-title"]
 cnki.com.cn,jms18.com##.adList
 cnxiangyan.com##.sptpAD
 cnyifeng.net##img[src^="//"]
@@ -7444,20 +7446,26 @@ sina.cn##.j_relevent_video
 sina.cn##.j_wbrecommend_wrap
 sina.cn##.js-client-jump2.u-article-jump2
 sina.cn##.js-guss-caijing.m-guss-caijing
+sina.cn##.m-bigv-point
 sina.cn##.m-client-call3
+sina.cn##.m-sentiment-blk
 sina.cn##.module-finance-client3
 sina.cn##.module-hot.module-extend
 sina.cn##.module-lecai.module-extend
 sina.cn##.shou.js-voice.broadcast
 sina.cn##.show.js-voice.broadcast
 sina.cn##.unfold-words
+sina.cn##.wap-msg-bar
 sina.cn##[class*="callup-app"]
 sina.cn##[class^="callApp"]
 sina.cn##[data-href*="://sax"] + aside + blockquote
 sina.cn##[data-videojc*="://sax"]
 sina.cn##[href*="://sax"]
 sina.cn##[href^="https://finance.sina.cn/app/"]
+sina.cn##[id*="callup"][id*="btn"]
+sina.cn##div.float-button.pluse
 sina.cn##div[class^="fl_suspension"]
+sina.cn##div[id*="-"][class*="-"][style="bottom: 0px;"]
 sina.cn##div[sax-type="proxy"]
 singtao.ca###bottom_sticky_anchor
 sinpornx.com##.zyz,div[id="jue"]
@@ -8670,6 +8678,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||i8tq.com/*/*news_ad*.js
 ||i8tq.com/e_index/main_news_noAd.js
 ||ifengimg.com^*/sta_collection
+||ihanmi.com/static/miao/yy.js
 ||image.hxgmcml.cn^
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=hoy.tv|line.me
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=linetv.tw
