@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: aDPfEftzk2bYUkcZrfyxCA
+! Checksum: spAt4Os2HXHAwC9/ObDg0g
 ! Title: 自用去广告Adblock规则
-! Version: 20251207181902
-! Last modified: 2025-12-07 18:19:03
-! Total Count: 9384
+! Version: 20251207184017
+! Last modified: 2025-12-07 18:40:17
+! Total Count: 9387
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4002,6 +4002,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /AdServer/*$popup,third-party
 /AdServlet?
 /AdSpace160x60.
+/JS/lianmeng*js?t=$~third-party
 /JavaScript/Ads-
 /Javascripts/SBA-
 /Jump/baidu/dp_baidu.js
@@ -4737,6 +4738,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/jquery.smartbanner.js
 /js/jsgg.js
 /js/kaixin.js$script
+/js/lianmeng*js?t=$~third-party
 /js/lm_wap.js
 /js/ls.js
 /js/m.js?
@@ -5816,6 +5818,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://shise*/plugins/sweetAlert
 ://shise*/redirect/ad-
 ://shise*/scripts/push*.js
+://smavx*/js/main.js?t=
 ://sobt*/Public/static/js/common.js
 ://static.*xx.com/static/js/a*.js?v=$third-party
 ://tj.*.com/$third-party
