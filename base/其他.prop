@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: bGZOW3EOfYSs0UohJOofmw
+! Checksum: KCLhwr8UcxF4oYIoirRZLA
 ! Title: 自用去广告Adblock规则
-! Version: 20251207233703
-! Last modified: 2025-12-07 23:37:03
-! Total Count: 9388
+! Version: 20251207234526
+! Last modified: 2025-12-07 23:45:26
+! Total Count: 9390
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2048,7 +2048,7 @@
 ##[class$="play-adv"]
 ##[class$="video-ads"]
 ##[class*="__ads"]
-##[class*="ads_"]:not([class*="reads_"])
+##[class*="ads_"]:not([class*="reads_"]):not(.main_and_ads_block)
 ##[class*="ads_border"]
 ##[class*="advertises"] > .popup-form > *
 ##[class*="advertises"] > .van-overlay
@@ -6132,6 +6132,8 @@ avjoy.me##[class^="ad-content"]:has(script[src*="ad"])
 avple.tv##.MuiSkeleton-root
 avple.tv##.jss13
 avple.tv##.jss20
+avsubtitles.com#@#.main_and_ads_block
+avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
 avtik.com###player > .player-wrapper + section
 ayjxcs.com,cqzuoer.com,fybys.com,hellorlgzf7sn.com,hskjjglo.com,jiabaide.cn,jmyts.com,jpyy2.com,qiqione.com,tjrongze.com,vv3nwjk.com,xdxtz4j3a.com##img.line_banner[src*="data:"]:upward(4)
 b.quark.cn##.video-info
