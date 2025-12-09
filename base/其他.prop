@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: FeZy4J9iqXz2B08CIf7Hpw
+! Checksum: 8fV9ZqDn4NNFG+dkpl2neg
 ! Title: 自用去广告Adblock规则
-! Version: 20251209110945
-! Last modified: 2025-12-09 11:09:45
-! Total Count: 9402
+! Version: 20251209223818
+! Last modified: 2025-12-09 22:38:19
+! Total Count: 9407
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4475,6 +4475,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /ddbd/f1*.js$~third-party
 /display/ads/*
 /diyidm.js$third-party
+/download/kwai$popup,domain=chenzhongtech.com
 /dxj.js?v=$~third-party
 /dxj.js?v=D1
 /dygg_
@@ -5562,7 +5563,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 95dushu.net,aljazeera.com#@#script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content)
 96kl.com##^script:has-text(bottom\(\);)
 96kl.com##script:has-text(bottom\(\);)
-99mh.men,99mh.one,99xmh.icu,99xmh.top,99xs.icu,99xs.one,hanime2.top,laoli88.icu,laoli88.men,laoli88.one,rou2.icu,rou2.men,rou2.one,rou2.top##div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
+99mh.men,99mh.one,99xmh.icu,99xmh.top,99xs.icu,99xs.one,hanime2.top,laoli88.icu,laoli88.men,laoli88.one,missav2.icu,missav2.one,rou2.icu,rou2.men,rou2.one,rou2.top##div[style*="z-index: 9999"][style*="justify-content: center;"]:not([class]):not([id])
 99re.com##a[href][target="_blank"] > img[src]
 :*/*/sv?gp=*=*=$third-party
 :*/api/v1/api2/tongji/start?pid=$third-party
@@ -5691,6 +5692,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*puzanny*/static/node.js
 ://*qiqidm*.*/js/*.js?ver=
 ://*shuku*/skin/*/*.js?v=$~third-party
+://*smav*/js/main.js?$~third-party
 ://*taopian*/*.js?V=
 ://*tianxibook*/*/0*1.js$script,~third-party
 ://*tianxibook*/public/*.js
@@ -6374,6 +6376,8 @@ cenyou.net##.modown-ad
 cenyou.net##div[class*="push"]
 che168.com##.talkprice.liaoliao.float-zixun
 chejiahao.m.autohome.com.cn##.pgc-details-recommend-list
+chenzhongtech.com##div.open-app-container
+chenzhongtech.com##div[data-log-action*="OPEN_APP"]
 chinasex.com.es##[class^="footer-ad"]
 chrybloom.live,chrybloom.cc,jisaobad.vip,jisaobad.cc,jieyunuhai.info,aprk2.top,yydsav.top,mbjav.top,mbjav69.buzz,mbjav27.buzz,mbjav97.buzz,mbjav53.buzz,jztj39.top,jztj.xyz##[class$="i"][style],[class$="c"][style$="131px;"],[class$="_b"],[class$="h"][style],[class^="app"],a[target="_blank"] > [style*="width:100%"]
 cin.ac###recomendation > div > a:not([href^="/v/"])
@@ -9237,6 +9241,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||vindexmesode.com^
 ||vipwm.cc^
 ||vivaclix.com^$third-party
+||viviv.com/download/kwai
 ||vl1xu8erx9.xyz^
 ||vlets.kyzx.xyz^
 ||vlets.qkobbgs.cyou^
