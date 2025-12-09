@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: PfIUTetxUAMONOxWuaAQ5Q
+! Checksum: FeZy4J9iqXz2B08CIf7Hpw
 ! Title: 自用去广告Adblock规则
-! Version: 20251208200339
-! Last modified: 2025-12-08 20:03:39
-! Total Count: 9395
+! Version: 20251209110945
+! Last modified: 2025-12-09 11:09:45
+! Total Count: 9402
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4423,6 +4423,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /assets/publish/react.3.js$script,~third-party
 /astyle/wap.js$~third-party,script
 /b_ad/?p=
+/baiduad/*.js$script
+/baiduad/cpm.js
+/baiduad/os.js
 /banner/*bottom.js
 /banner/*top.js
 /banner/float*.js
@@ -4744,6 +4747,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/lm_wap.js
 /js/ls.js
 /js/m.js?
+/js/main.js?t=1$~third-party
 /js/new-kk-27k.js?$~third-party,script
 /js/pf.js
 /js/pfadll*.js
@@ -5832,6 +5836,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://tp.hchus*dmew.top$third-party
 ://tpic.*.cn/*.js$third-party
 ://tpic.*.cn/*.txt$third-party
+://transwww.*/js/main.js?t=$~third-party
 ://url.nb*.xyz^$third-party,script
 ://us-west1.*/*.js#spot=$third-party,script
 ://us-west1.*/api/spots/$third-party
@@ -8247,6 +8252,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ablsrv.com^
 ||abtfliping.top^
 ||acc.3gbizhi.com^$script
+||accaii.com^
 ||acscdn.com^
 ||ad-*.cos.accelerate.myqcloud.com^$third-party
 ||ad.18so.vip^
@@ -9271,6 +9277,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||wtcm1008.com/statics/js/66.js
 ||wuruigroup.com^
 ||wushangzeichuan.xin^
+||wuyefangying.*/skin/js/wytother.js
 ||www.tjjd*.live^$third-party
 ||www.tjjd*.xyz^$third-party
 ||www.xihufe.com^
