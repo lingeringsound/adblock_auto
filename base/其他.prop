@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 8fV9ZqDn4NNFG+dkpl2neg
+! Checksum: BHz3bW1YLvlz2QVtqEEZow
 ! Title: 自用去广告Adblock规则
-! Version: 20251209223818
-! Last modified: 2025-12-09 22:38:19
-! Total Count: 9407
+! Version: 20251210080452
+! Last modified: 2025-12-10 08:04:52
+! Total Count: 9413
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -525,6 +525,7 @@
 ###section-ad-bottom
 ###section_ad
 ###section_advertisements
+###seven.bba-grid
 ###side_promo_m.bc_dp
 ###soldakayan
 ###splashy-ad-container-top
@@ -2332,6 +2333,7 @@
 ##a[href*="/?agent="][target="_blank"]
 ##a[href*="/?agentId="][target="_blank"]
 ##a[href*="/?channel="] > img[src]
+##a[href*="/?cid="][target="_blank"]
 ##a[href*="/adclick.php?"][target="_blank"]
 ##a[href*="/adslog/"][target="_blank"]
 ##a[href*="/baidu/index-kj.html"]
@@ -2344,6 +2346,7 @@
 ##a[href*="?ch=ssmh"]
 ##a[href*="?channelCode="] > img[src]
 ##a[href*="?channelCode="][target="_blank"]
+##a[href*="?modelCode"][target="_blank"]
 ##a[href*="?shareName="][target="_blank"]
 ##a[href*="AdCode_"][target="_blank"]
 ##a[href*="AdsCode_"][target="_blank"]
@@ -2447,6 +2450,7 @@
 ##a[href^="http://www.hxc888.vip"]
 ##a[href^="http://www.lovetoytw.com/"][onclick]
 ##a[href^="https://a.candyai.love/"]
+##a[href^="https://adnoone"]
 ##a[href^="https://ads."][target="_blank"]
 ##a[href^="https://adthree.top"]
 ##a[href^="https://adultfriendfinder.com"]
@@ -2682,6 +2686,7 @@
 ##div.links-top > ul.icon-list
 ##div.module-items > a[href^="https"]
 ##div.new_ddg
+##div.nimad
 ##div.nv_blist_cell[onclick^="window.open("]
 ##div.only-app > #background-container
 ##div.only-app > #second-background-container
@@ -5647,6 +5652,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*biquge*/m.js
 ://*biquge*/mm.js$script
 ://*bqg.com/*/*.php
+://*btoc*/js/main.js?$~third-party
 ://*cdn*jm18*/static/resources/images/*x*.gif
 ://*da*sd*s^.adfj*.cc$third-party,~image,~stylesheet
 ://*dianjiangxin.*/js/mc.js?
