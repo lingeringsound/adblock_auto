@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: mW6v+mu7Op0aNAqMQt3sDw
+! Checksum: 87xzieYiE7KgLU/cuDRl5Q
 ! Title: 自用去广告Adblock规则
-! Version: 20251211113202
-! Last modified: 2025-12-11 11:32:02
-! Total Count: 9422
+! Version: 20251211135850
+! Last modified: 2025-12-11 13:58:50
+! Total Count: 9429
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -492,6 +492,10 @@
 ###nr + div[style="margin:0;padding:0;outline:0"]
 ###nr + script:not([src]) ~ div[id]:not([class])
 ###playerJsvLayer.jsv-layer
+###playerad0
+###playerad1
+###playerad2
+###playerad3
 ###playertopads
 ###popup-overlay0.popup-overlay
 ###popup-overlay1.popup-overlay
@@ -1657,6 +1661,7 @@
 ##.maomi-content > a[target="_blank"]
 ##.maomi-content > script:not([src]) + div:not([class])
 ##.mask + .footer-fixed-nav.clearfix
+##.mask > .ad
 ##.md\:mt-3 > .md\:gap-3
 ##.menu-ads
 ##.mh-advert
@@ -3077,7 +3082,9 @@
 ##img[alt="海角社区"]
 ##img[alt="涩里番"]
 ##img[alt="淫荡猫"]
+##img[alt="澳门太阳城"]
 ##img[alt="澳门新葡京"]
+##img[alt="澳门美高梅"]
 ##img[alt="美女直播大秀"]
 ##img[alt="航海王3D成人版"]
 ##img[alt="草榴短视频"]
