@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 87xzieYiE7KgLU/cuDRl5Q
+! Checksum: g2IMjCcX3PdhyPelznut7g
 ! Title: 自用去广告Adblock规则
-! Version: 20251211135850
-! Last modified: 2025-12-11 13:58:50
-! Total Count: 9429
+! Version: 20251211142120
+! Last modified: 2025-12-11 14:21:21
+! Total Count: 9433
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1976,6 +1976,7 @@
 ##.vertbars
 ##.video-ads-container
 ##.video-brs
+##.video-img-box[class*="mb-"] > .img-box > a[href^="http"][target="_blank"]
 ##.video-inline-ads
 ##.video.ad-w
 ##.videojs-hero-overlay
@@ -3264,6 +3265,7 @@
 ##script + div > .p-screen-dialog
 ##script + div[class] > div[class][data-version]
 ##script + iframe[src^="https://s.uuidksinc.net"]
+##script + script + #popup-window
 ##script + script + style + div[id] + a[onclick][target="_self"]
 ##script > .p-screen-dialog
 ##script[id] + script:not([src]) + div[style^="position: fixed; bottom"][style*="z-index: 9999;"]:not([class]):not([id])
@@ -6084,6 +6086,8 @@ actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine
 actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine.com,sibtok.com,tyler-brown.com,ukdevilz.com,whatisareverseauction.com##div.container > div:has(script[src*="ad-provider"])
 actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine.com,sibtok.com,tyler-brown.com,ukdevilz.com,whatisareverseauction.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
 adultfilmdatabase.com,animeidhentai.com,babeforums.org,bos.so,camvideos.tv,camwhores.tv,cutscenes.net,devporn.net,f95zone.to,fritchy.com,gifsauce.com,hentai2read.com,hotpornfile.org,hpjav.com,imagebam.com,imgbox.com,imgtaxi.com,motherless.com,myporn.club,pandamovies.pw,planetsuzy.org,pussyspace.com,redgifs.com,sendvid.com,sexgalaxy.net,sextvx.com,sexuria.com,thefappeningblog.com,vintage-erotica-forum.com,vipergirls.to,waxtube.com,xfantazy.com,yeapornpls.com##a[href*="theporndude.com"]
+advance.sqsiosm.cc,artist.oisgthi.cc,big.sqsiosm.cc##div.video-img-box > .img-box > a[href^="http"]
+advance.sqsiosm.cc,artist.oisgthi.cc,big.sqsiosm.cc##div[class*="col-"]:has(.video-img-box > .img-box > a[href^="http"])
 advancedrenamer.com,alliptvlinks.com,android-doc.com,androidrepublic.org,anonymousemail.me,anydebrid.com,apk.tw,apkmirror.com,bedfix.wurstclient.net,cdromance.com,chaojizhibo.net,chtoen.com,copyseeker.net,cutty.app,demos.krajee.com,dizhishengcheng.com,doitwell.tw,domhouse.it,epicbundle.com,epinv.com,estudyme.com,ff14angler.com,fxpan.com,gergerhaber.net,haoweichi.com,karvitt.com,korail.pe.kr,logi.im,lspdfrcn.com,mcoc-guide.com,moa.tw,moe48.com,mohammedkhc.com,nextbigtrade.com,numberempire.com,okdebrid.com,phcorner.net,pixiz.com,playok.com,receive-a-sms.com,reh.tw,rjno1.com,safe.elektroupdate.com,shenfendaquan.com,sivadictionaries.com,skmedix.pl,sonixgvn.net,spoilertv.com,tamrieltradecentre.com,technoarabi.com,teemo.gg,vaptcha.com,willyoupressthebutton.com,yoykp.com,ytlarge.com,zefoy.com,znaki.edu.pl#@#ins.adsbygoogle[data-ad-slot]
 advancedrenamer.com,alliptvlinks.com,androidrepublic.org,anonymousemail.me,anydebrid.com,apkmirror.com,bedfix.wurstclient.net,cdromance.com,copyseeker.net,cutty.app,demos.krajee.com,download.mokeedev.com,epicbundle.com,estudyme.com,gergerhaber.net,karvitt.com,korail.pe.kr,mcoc-guide.com,mohammedkhc.com,nextbigtrade.com,okdebrid.com,phcorner.net,pixiz.com,receive-a-sms.com,rjno1.com,safe.elektroupdate.com,sivadictionaries.com,skmedix.pl,sonixgvn.net,spoilertv.com,tamrieltradecentre.com,teemo.gg,willyoupressthebutton.com,yoykp.com,ytlarge.com#@#ins.adsbygoogle[data-ad-client]
 advancedrenamer.com,alotof.software,android-doc.com,androidrepublic.org,anonymousemail.me,apk.tw,apkmirror.com,blog.reh.tw,chaojizhibo.net,chtoen.com,demos.krajee.com,dizhishengcheng.com,doitwell.tw,epicbundle.com,epinv.com,ff14angler.com,fxpan.com,gamaniak.com,haoweichi.com,hs-exp.jp,kadinlarkulubu.com,korail.pe.kr,logi.im,lspdfrcn.com,moa.tw,moe123.net,moe48.com,numberempire.com,phcorner.net,pixiz.com,playok.com,reh.tw,rockmods.net,shenfendaquan.com,slashview.com,sockscap64.com,spoilertv.com,vaptcha.com,willyoupressthebutton.com,yabook.org#@#ins.adsbygoogle
