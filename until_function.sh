@@ -1,6 +1,13 @@
 #!/bin/sh
 export PATH="`pwd`:${PATH}"
 
+#移除Adguard_Chinese的秋风规则
+function remove_AWAvenue_Ads_Rule_Filter(){
+local file="${1}"
+test ! -f "${file}" && return
+busybox sed -i "/AWAvenue Ads Rule/,/^$/d" "${file}"
+}
+
 #下载Adblock规则
 function download_link(){
 local IFS=$'\n'
@@ -27,6 +34,7 @@ test "$(echo "${i}" | grep -E '^#' )" && continue
 		URL=`echo "${i}" | cut -d '|' -f1`
 	test ! -f "${target_dir}/${name}" && curl -k -L -o "${target_dir}/${name}" "${URL}" >/dev/null 2>&1 && echo "※ `date +'%F %T'` ${name} 下载成功！"
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_dir}/${name}"
+test "${name}" = "Adguard_Chinese.txt" && remove_AWAvenue_Ads_Rule_Filter "${target_dir}/${name}"
 dos2unix "${target_dir}/${name}" >/dev/null 2>&1
 done
 }
