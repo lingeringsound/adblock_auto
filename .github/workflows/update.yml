@@ -5,6 +5,8 @@ on:
     types: [started]
   schedule:
     - cron: '0 */8 * * *'
+  issues:
+    types: [closed]
 
 jobs:
    master:
