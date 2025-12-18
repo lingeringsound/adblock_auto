@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QmDcOsU+K3keYV79aOEQaw
+! Checksum: 5J1YfWNeF+JNAJqigdM5Yg
 ! Title: 自用去广告Adblock规则
-! Version: 20251218231628
-! Last modified: 2025-12-18 23:16:29
-! Total Count: 9485
+! Version: 20251218232524
+! Last modified: 2025-12-18 23:25:25
+! Total Count: 9489
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2731,6 +2731,7 @@
 ##div[class*="_"][data-width="300"][data-show="ok"]:not([id])
 ##div[class*="ad_banner_group"]
 ##div[class*="app"] > [class="photo-two"]
+##div[class*="b"][data-slots] > a[href][target="_self"]
 ##div[class*="clearfix-ads"]
 ##div[class*="col"] > a[rel="nofollow noopener noreferrer"][href][target="_blank"]
 ##div[class*="col"][clearfix] > a[target="_blank"][onclick][href]
@@ -3161,6 +3162,7 @@
 ##img[src*="/ssmh/"]
 ##img[src*="/upload/ad/"]
 ##img[src*="/upload/images/ads"][src$=".gif"]
+##img[src*="120"][src*="960"][src$=".gif"]
 ##img[src*="8feichai.com/"]
 ##img[src*="://dpic."][src*=".cn"][src$=".js"]
 ##img[src*="://dpic."][src*=".cn"][src$=".txt"]
@@ -3177,6 +3179,8 @@
 ##img[src*="acgfuny.com/"]
 ##img[src*="ads.bullionyield.com"]
 ##img[src*="cn-chengdu.aliyuncs.com/"][alt][style*="width"][style*="100%"]
+##img[src*="guanggao"][src*="120"]
+##img[src*="guanggao"][src*="960"]
 ##img[src*="https://p.qlogo.cn/qqmail_head"]
 ##img[src*="jiongnet.cn"]
 ##img[src*="kfpicimage.xyz"]
