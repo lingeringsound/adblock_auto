@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: geta1A5X/2kar18O0ZNs/A
+! Checksum: q2TJSyMLjXZOJRYjeBX8+g
 ! Title: 自用去广告Adblock规则
-! Version: 20251222154324
-! Last modified: 2025-12-22 15:43:24
-! Total Count: 9501
+! Version: 20251223155631
+! Last modified: 2025-12-23 15:56:31
+! Total Count: 9516
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1869,6 +1869,7 @@
 ##.popup-box-ads
 ##.popup.popup-abk
 ##.popup.popup-abk + div[style]
+##.popup[onclick^="closeAdvPopup"]
 ##.post-ad-space
 ##.post-card > img[src$=".gif"][data-action="zoom"][class="blog-background"]
 ##.post-card[data-url$=".gif"]
@@ -2164,6 +2165,7 @@
 ##[href^="https://dl.ncat1.app"]
 ##[href^="https://jbc568.com/"]
 ##[href^="https://jump.12qqcc.com"]
+##[href^="https://plus.zarfpazwdp"]
 ##[href^="https://txs6w.ucttn.com/"]
 ##[href^="https://www.4kvm.org/movies/wgbfdax"]
 ##[href^="https://www.7227bw.com"]
@@ -2405,6 +2407,7 @@
 ##a[href="https://ttzzz22.com"]
 ##a[href="https://www.jmtybc.com"]
 ##a[href="https://www.qp9dc9.com/"]
+##a[href="javascript:;"][onclick="guangtui();"]
 ##a[href="javascript:void(0)"][onclick*="clickHandler"][onclick*="undefined"]
 ##a[href="javascript:void(0)"][rel="nofollow"][target="_new"] > img[src]
 ##a[href="墮落姬甲"][target="_blank"]
@@ -3252,6 +3255,7 @@
 ##li[class="dataic"] > a[href*="/?channelCode="][target]
 ##li[class="dataic"] > div > a[href][name="点击播放"]
 ##li[id^="dataic"] > div > a[href][name="点击播放"]
+##main.main ~ #overlay.overlay.active
 ##p > a[class="content-file"][target="_blank"][href^="/"]
 ##p > a[href][title="CA情色小說"]
 ##photo_center_div > div[class$="_b"][data-group][data-show="ok"]
@@ -3683,6 +3687,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:*/vj3/$third-party
 .com:*/vj4/$third-party
 .com:*/vj5/$third-party
+.com:*/wz/vod_shang.js?v=
 .com:*0*/wap_*_*_*$other,third-party
 .com:*0*/wap_*_*_*$~image,~stylesheet,third-party
 .com:13320/js/*.js?v=9$third-party
@@ -4001,12 +4006,14 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*/*/react*.js$domain=btmovi.kim|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|iyungong.com|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|xhzysh.com|ziyungong.org|zongcai666.com|tangsanshu.la|lewenlook.com
 /*/*/resource/*/source/*.js$script,third-party
 /*/*/source/*/resource/*.js$script,third-party
+/*/*960u120.gif
 /*/div_art_s.js
 /*/div_art_x.js
 /*0/*all*.js$~third-party,script
 /*0/*bll*.js$~third-party,script
 /*0/*cll*.js$~third-party,script
 /*0/*dll*.js$~third-party,script
+/*960X120*.gif
 /*_*_*_min.css?$third-party,domain=lfwx2.com
 /*_*_/bigREDcat.$third-party
 /*_*_/bigREDdog.$third-party
@@ -4021,6 +4028,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /17mb/scripts/xx.js$~third-party
 /2021content/wap/foot_*.js?
 /2021content/wap/top_*.js?
+/888*/*960*.gif
+/960-120.gif
+/960x120.gif
 /9js/js.php?z=*=*
 /?channelCode=bfy$document
 /@apix/v1/series/nxs/1/?age=1$third-party
@@ -4636,6 +4646,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /ggads
 /ggads/*.php$third-party
 /ggadsense.
+/gggg/*960*.gif
 /ggsp1.js
 /ggsp3.js
 /ggxp1.js
@@ -5603,6 +5614,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 91porn.com#@#.vjs-preroll
 91porny.org,haijiao35.com,jiuse.io##.card:has(>.card-image>a[href^="http"])
 95dushu.net,aljazeera.com#@#script[id] + script[src^="/"] ~ div[id]:not([class]):not(#content)
+960x60.gif
+960x60c.gif
+960x80c.gif
 96kl.com##^script:has-text(bottom\(\);)
 96kl.com##script:has-text(bottom\(\);)
 99re.com##a[href][target="_blank"] > img[src]
@@ -9382,6 +9396,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||www.xihufe.com^
 ||www.ztolm.com^
 ||wyhifdpatl.com^
+||wyol.*/m.js
 ||wyqaafplm.live^
 ||xadsmart.com^
 ||xbookcn.org/scripts/my_*.js
