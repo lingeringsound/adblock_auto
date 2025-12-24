@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: YC5tPTgTy66LLdNuWvbuqw
+! Checksum: GTW7336u4svvvezeblu84g
 ! Title: 自用去广告Adblock规则
-! Version: 20251224185352
-! Last modified: 2025-12-24 18:53:53
-! Total Count: 9519
+! Version: 20251224233159
+! Last modified: 2025-12-24 23:31:59
+! Total Count: 9524
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -6881,6 +6881,10 @@ imginn.com##div[class]:has(>[data-ad])
 inbox.io,hanime.tv,pbs.org#@#.banner-ad
 inky.dk,inky.fi,inky.no,inky.se#@#iframe[width="200"][height="240"]
 iookd.cc##[class="ads"] > img,img[src*="jiongnet.cn"]
+iplark.com##+js(addEventListener-defuser, DOMContentLoaded, localStorage)
+iplark.com##body > #capture-area ~ div[class]:empty
+iplark.com##body > div:not([class]):not([style])
+iplark.com##div[class^="banner"]
 iporn88.net###videopl > #plright
 ipv6.baidu.com,m.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com###results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar):not(.s-group-result)
 ipv6.baidu.com,m.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com###results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar):not(.s-group-result):not(.hint-unsafe)
@@ -9509,6 +9513,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||yzwtbdtq.xyz^
 ||zhenhaomai.com/static/m.js
 ||zjdog.*/model*qety*.js
+||zjdog.*/models/*_*.js
 ||zkappsart.com^$third-party,xmlhttprequest
 ||zle.com/tongjijs/$script
 ||zol-img.com.cn/*open.apple.js
