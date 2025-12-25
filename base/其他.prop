@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: GTW7336u4svvvezeblu84g
+! Checksum: Xv3n20lXaIDWgNKBmYi+Rw
 ! Title: 自用去广告Adblock规则
-! Version: 20251224233159
-! Last modified: 2025-12-24 23:31:59
-! Total Count: 9524
+! Version: 20251225113441
+! Last modified: 2025-12-25 11:34:42
+! Total Count: 9537
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5675,6 +5675,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.po18wen.*/js/yushuhai.js
 ://*.read52.*/astyle/wap.js
 ://*.shengyenxs.*/e*/*.js$script
+://*.sohu.com/*common/*.js
+://*.sohu.com/*openjs/*.js
+://*.sohu.com/*production/*.js
+://*.sohu.com/*source/*.js
 ://*.xcbook*.*/static/js/read.js
 ://*.xiao*ks.com/1.js
 ://*.xn--*.*/1*/*_0*.js$third-party
@@ -7157,6 +7161,12 @@ m.toutiao.com##.listen-bar
 m.toutiao.com##.m-bottom
 m.toutiao.com##[aria-label="打开APP"]
 m.toutiao.com,profile.zjurl.cn,so.toutiao.com##.m-index-tag
+m.tv.sohu.com##.actv-banner
+m.tv.sohu.com##.banner_yunying
+m.tv.sohu.com##.btn-720p
+m.tv.sohu.com##.js-app-redbtn-act
+m.tv.sohu.com##.js-oper-pos
+m.tv.sohu.com##.picApp
 m.v.qq.com###ad_m-site
 m.v.qq.com##.old-open-banner
 m.v.qq.com##.pull-app-btns
@@ -8449,6 +8459,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||adtrue.com^
 ||adultfriendfinder.com^$third-party
 ||advertising.twitter.com^
+||adx.yhcplatform.com^
 ||adxadserv.com^$third-party
 ||afenjkopoqwm.com^$third-party
 ||agdcdf.live^
@@ -9192,6 +9203,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||sdfeiyuejx.com/show/$script
 ||sdhear.com/js/common.js
 ||sdk.51.la^
+||sdklog.yhcplatform.com^
 ||search.sogoucdn.com/vrfly/wap/v1/browserAbout.js?
 ||search.sogoucdn.com/vrfly/wap/v1/callApp.js?
 ||sediacademy.ca/js/dp.js
@@ -9481,6 +9493,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||yetianlian.la/*/*.js
 ||yetianlian.net/*/*.js
 ||yfoega.xyz^
+||yhcplatform.com^domain=sohu.com
 ||yhdm*.*/js/wap2-jm-ms.js$script
 ||yhdm*.com/js/wap2-jm-ms.js$script
 ||yibo-system.com/117/*.js
