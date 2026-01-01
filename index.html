@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>混合规则自动更新</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#fafcff;
+  --card:rgba(255,255,255,0.94);
+  --text:#111;
+  --green:#22c55e;
+  --blur:blur(28px);
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0e16;
+    --card:rgba(18,22,38,0.96);
+    --text:#eee;
+  }
+}
+
+/* 基础样式 */
+body.dark{
+  --bg:#0b0e16;
+  --card:rgba(18,22,38,0.96);
+  --text:#eee;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  min-height:100dvh;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  padding:20px 16px;
+  line-height:1.8;
+  font-size:15.5px;
+  transition:all .6s ease;
+  overflow-x:hidden;
+}
+.container{
+  max-width:960px;
+  margin:0 auto;
+  padding:0 12px;
+}
+h1{
+  text-align:center;
+  font-size:clamp(32px, 8vw, 42px);
+  font-weight:900;
+  margin:10px 0 50px;
+  background:linear-gradient(120deg,var(--green),#00ff80);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  word-wrap:break-word;
+}
+
+/* 滑动卡片 */
+.swiper{
+  width:100%;
+  overflow:hidden;
+  border-radius:clamp(20px, 4vw, 28px);
+  box-shadow:0 20px 60px rgba(0,0,0,.2);
+  margin-bottom:30px;
+}
+.swiper-wrapper {
+  display: flex;
+  transition: transform .55s cubic-bezier(.32,.72,.3,1);
+  will-change: transform;
+}
+.swiper-wrapper.not-moving {
+  will-change: auto;
+}
+.slide{
+  min-width:100%;
+  padding:clamp(24px, 6vw, 40px) clamp(20px, 4vw, 32px);
+  background:var(--card);
+  backdrop-filter:var(--blur);
+  -webkit-backdrop-filter:var(--blur);
+  border:1px solid rgba(255,255,255,.3);
+  max-height:400px;
+  overflow-y:auto;
+}
+.rule-title{
+  font-size:clamp(20px, 5vw, 26px);
+  font-weight:800;
+  text-align:center;
+  margin-bottom:20px;
+  color:var(--green);
+}
+
+/* 链接复制 */
+.link-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:16px;
+  margin:24px 0;
+}
+@media(max-width:640px){
+  .link-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+}
+.link-item{
+  background:rgba(255,255,255,.6);
+  backdrop-filter:var(--blur);
+  -webkit-backdrop-filter:var(--blur);
+  border-radius:clamp(14px, 3vw, 18px);
+  padding:clamp(14px, 3vw, 18px);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
+.link-name{
+  font-weight:600;
+  font-size:clamp(13px, 3vw, 14.5px);
+}
+.copy-btn{
+  padding:clamp(10px, 2.5vw, 12px) clamp(16px, 3vw, 20px);
+  background:var(--green);
+  color:#fff;
+  border:none;
+  border-radius:clamp(12px, 3vw, 14px);
+  font-size:clamp(14px, 3vw, 15px);
+  font-weight:600;
+  cursor:pointer;
+  transition:all .35s ease;
+  box-shadow:0 6px 16px rgba(34,197,94,.4);
+  min-height:44px;
+}
+.copy-btn:focus{
+  outline:2px solid var(--green);
+  outline-offset:2px;
+}
+.copy-btn:hover{
+  transform:translateY(-3px);
+  background:#16a34a;
+}
+.copy-btn:active{
+  transform:translateY(-1px);
+}
+.copy-btn.copied{
+  background:#94a3b8;
+  box-shadow:0 6px 16px rgba(148,163,184,.4);
+  cursor:default;
+}
+@media(hover:none){
+  .copy-btn:hover{transform:none;background:var(--green);}
+  .copy-btn.copied:hover{transform:none;background:#94a3b8;}
+  .copy-btn:active:not(.copied){transform:translateY(-1px);}
+}
+
+/* 提示 */
+.dots{
+  text-align:center;
+  margin:20px 0 40px;
+}
+.dot{
+  display:inline-block;
+  width:clamp(8px, 2vw, 10px);
+  height:clamp(8px, 2vw, 10px);
+  border-radius:50%;
+  background:rgba(0,0,0,.25);
+  margin:0 clamp(4px, 1vw, 6px);
+  transition:all .4s;
+  cursor:pointer;
+}
+.dot.active{
+  background:var(--green);
+  transform:scale(1.4);
+}
+.scroll-hint{
+  text-align:center;
+  color:var(--green);
+  font-size:14px;
+  margin-top:10px;
+  opacity:0.7;
+  animation:bounce 2s infinite;
+  display:none;
+}
+@keyframes bounce{
+  0%,20%,50%,80%,100%{transform:translateY(0);}
+  40%{transform:translateY(-5px);}
+  60%{transform:translateY(-3px);}
+}
+
+/* 信息卡片 */
+.info-card{
+  background:var(--card);
+  backdrop-filter:var(--blur);
+  -webkit-backdrop-filter:var(--blur);
+  border-radius:clamp(20px, 5vw, 28px);
+  padding:clamp(24px, 5vw, 32px) clamp(20px, 4vw, 28px);
+  box-shadow:0 20px 60px rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.3);
+}
+.info-card h3{
+  text-align:center;
+  font-size:clamp(18px, 4vw, 20px);
+  margin-bottom:20px;
+  color:var(--green);
+}
+blockquote{
+  background:rgba(11,243,81,.08);
+  border-left:5px solid var(--green);
+  padding:clamp(16px, 4vw, 22px);
+  border-radius:0 clamp(12px, 3vw, 16px) clamp(12px, 3vw, 16px) 0;
+  margin:24px 0;
+  font-size:clamp(14px, 3vw, 15px);
+  line-height:1.9;
+}
+blockquote code{
+  background:rgba(0,0,0,.1);
+  padding:3px 8px;
+  border-radius:6px;
+  font-size:clamp(13px, 3vw, 14px);
+}
+a{
+  color:var(--green);
+  text-decoration:none;
+  font-weight:600;
+}
+a:hover{text-decoration:underline;}
+
+/* 开关和弹窗 */
+.switch{
+  position:fixed;
+  top:20px;
+  right:20px;
+  width:clamp(50px, 8vw, 58px);
+  height:clamp(30px, 6vw, 34px);
+  background:rgba(0,0,0,.15);
+  border-radius:34px;
+  cursor:pointer;
+  z-index:100;
+  backdrop-filter:var(--blur);
+  -webkit-backdrop-filter:var(--blur);
+  min-width:50px;
+  min-height:30px;
+}
+.switch:focus{
+  outline:2px solid var(--green);
+  outline-offset:2px;
+}
+.knob{
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:clamp(22px, 5vw, 26px);
+  height:clamp(22px, 5vw, 26px);
+  background:#fff;
+  border-radius:50%;
+  transition:.45s cubic-bezier(.68,-.55,.27,1.55);
+  box-shadow:0 3px 12px rgba(0,0,0,.25);
+}
+body.dark .knob{left:calc(100% - 26px - 4px);}
+#toast{
+  position:fixed;
+  top:30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  color:#111;
+  padding:clamp(12px, 3vw, 16px) clamp(24px, 5vw, 36px);
+  border-radius:44px;
+  font-size:clamp(14px, 3vw, 16px);
+  font-weight:600;
+  box-shadow:0 15px 40px rgba(0,0,0,.22);
+  z-index:9999;
+  opacity:0;
+  pointer-events:none;
+  transition:all .6s cubic-bezier(.16,1,.3,1);
+  max-width:90vw;
+  text-align:center;
+  white-space:nowrap;
+}
+#toast.show{opacity:1;top:clamp(60px, 10vw, 70px);}
+
+@media(max-width:480px){
+  body{padding:16px 12px;font-size:15px;}
+  .container{padding:0 8px;}
+  .switch{top:16px;right:16px;}
+}
+@media(min-width:1200px){
+  .container{max-width:1100px;}
+}
+@media(pointer:fine){
+  .copy-btn:hover{transform:translateY(-3px);}
+}
+</style>
+</head>
+<body id="body">
+
+<div id="toast">已复制到剪贴板</div>
+
+<div class="container">
+  <h1>规则列表</h1>
+
+  <div class="swiper">
+    <div class="swiper-wrapper" id="wrapper">
+      <div class="slide">
+        <div class="rule-title">混合规则（完整版）</div>
+        <div class="scroll-hint" id="full-hint">↓ 继续向下滑动查看更多链接 ↓</div>
+        <div class="link-grid" id="full-links"></div>
+      </div>
+
+      <div class="slide">
+        <div class="rule-title">混合规则（精简版）</div>
+        <div class="scroll-hint" id="lite-hint">↓ 继续向下滑动查看更多链接 ↓</div>
+        <div class="link-grid" id="lite-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" data-i="0"></span>
+    <span class="dot" data-i="1"></span>
+  </div>
+
+  <div class="info-card">
+    <h3>拦截器说明</h3>
+    <blockquote>
+      <p><strong><a href="https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto.txt">混合规则(自动更新)</a></strong> 适用于 <code>Adguard</code> / <code>Ublock Origin</code> / <code>Adblock Plus</code>(用Adblock Plus源码编译的软件也支持，例如<a href="https://haikuoshijie.cn/archives/fang-yuan-ying-shi-chang-jian-wen-ti">嗅觉浏览器</a> ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 <a href="https://www.xbext.com/">X浏览器</a></p>
+      <p><strong><a href="https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt">混合规则精简版(自动更新)</a></strong> 适用于轻量的浏览器，例如  <a href="https://viayoo.com/zh-cn/">VIA</a>  / <a href="https://rainsee.top/">Rian</a> / <a href="https://bzbrowser.com/">B仔浏览器</a></p>
+    </blockquote>
+    <div style="text-align:center;margin-top:20px;">
+      <a href="https://github.com/lingeringsound/adblock_auto" target="_blank" style="display:inline-block;padding:14px 36px;background:rgba(11,243,81,.15);border-radius:20px;backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);font-size:18px;font-weight:600;">
+        Github 主仓库
+      </a>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:50px 0 20px;color:#888;font-size:14px">
+    @coolapk 2023-2025
+  </div>
+</div>
+
+<div class="switch" role="switch" aria-label="切换暗色模式"><div class="knob" id="knob"></div></div>
+
+<script>
+const linkConfig={
+  full:{
+    githubPage:"https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto.txt",
+    githubRaw:"https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt",
+    accelerated:[
+      {name:"GitMirror",url:"https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt"},
+      {name:"GH-Proxy",url:"https://gh-proxy.org/https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt"},
+      {name:"jsDelivr",url:"https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt"},
+      {name:"CDN GH-Proxy",url:"https://cdn.gh-proxy.org/https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt"}
+    ]
+  },
+  lite:{
+    githubPage:"https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt",
+    githubRaw:"https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt",
+    accelerated:[
+      {name:"GitMirror",url:"https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt"},
+      {name:"GH-Proxy",url:"https://gh-proxy.org/https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt"},
+      {name:"jsDelivr",url:"https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt"},
+      {name:"CDN GH-Proxy",url:"https://cdn.gh-proxy.org/https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt"}
+    ]
+  }
+};
+
+function generateLinks(version){
+  const config=linkConfig[version];
+  const links=[
+    {name:"Github Page 链接",url:config.githubPage},
+    {name:"Github Raw 链接",url:config.githubRaw},
+    ...config.accelerated.map(acc=>({name:`${acc.name} 加速`,url:acc.url}))
+  ];
+  
+  const totalLinks=links.length;
+  const html=links.map((link,index)=>`
+    <div class="link-item">
+      <div class="link-name">${link.name}</div>
+      <button class="copy-btn" data-url="${link.url}">复制链接</button>
+    </div>
+  `).join('');
+  
+  return {html,totalLinks};
+}
+
+function initLinks(){
+  const full=generateLinks('full');
+  const lite=generateLinks('lite');
+  
+  document.getElementById('full-links').innerHTML=full.html;
+  document.getElementById('lite-links').innerHTML=lite.html;
+  
+  if(full.totalLinks>3){
+    document.getElementById('full-hint').style.display='block';
+  }
+  if(lite.totalLinks>3){
+    document.getElementById('lite-hint').style.display='block';
+  }
+}
+
+initLinks();
+
+const wrapper = document.getElementById('wrapper');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let startX = 0;
+let isDragging = false;
+let willChangeTimer = null;
+
+wrapper.classList.add('not-moving');
+
+function go(n) {
+  currentIndex = n;
+  wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+}
+
+dots.forEach((d, i) => d.onclick = () => go(i));
+
+function startDrag() {
+  isDragging = true;
+  wrapper.classList.remove('not-moving');
+}
+
+function endDrag() {
+  if (!isDragging) return;
+  isDragging = false;
+  clearTimeout(willChangeTimer);
+  willChangeTimer = setTimeout(() => {
+    wrapper.classList.add('not-moving');
+  }, 500);
+}
+
+wrapper.parentElement.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+  startDrag();
+}, { passive: true });
+
+wrapper.parentElement.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  const diff = startX - e.touches[0].clientX;
+  wrapper.style.transform = `translateX(calc(-${currentIndex * 100}% - ${diff}px))`;
+}, { passive: true });
+
+wrapper.parentElement.addEventListener('touchend', e => {
+  if (!isDragging) return;
+  const diff = startX - e.changedTouches[0].clientX;
+  if (diff > 80 && currentIndex < 1) go(1);
+  else if (diff < -80 && currentIndex > 0) go(0);
+  else wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  endDrag();
+});
+
+wrapper.parentElement.addEventListener('mousedown', e => {
+  startX = e.clientX;
+  startDrag();
+});
+
+wrapper.parentElement.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  const diff = startX - e.clientX;
+  wrapper.style.transform = `translateX(calc(-${currentIndex * 100}% - ${diff}px))`;
+});
+
+wrapper.parentElement.addEventListener('mouseup', e => {
+  if (!isDragging) return;
+  const diff = startX - e.clientX;
+  if (diff > 100 && currentIndex < 1) go(1);
+  else if (diff < -100 && currentIndex > 0) go(0);
+  else wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  endDrag();
+});
+
+wrapper.parentElement.addEventListener('mouseleave', () => {
+  if (isDragging) {
+    isDragging = false;
+    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    endDrag();
+  }
+});
+
+document.addEventListener('click', e => {
+  if (e.target.classList.contains('copy-btn')) {
+    const url = e.target.getAttribute('data-url');
+    copy(url, e.target);
+  }
+});
+
+function copy(text, btn) {
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      done();
+    }).catch(() => fallbackCopy(text, btn));
+  } else {
+    fallbackCopy(text, btn);
+  }
+  function done() {
+    showToast();
+    btn.classList.add('copied');
+    setTimeout(() => btn.classList.remove('copied'), 2000);
+  }
+}
+
+function fallbackCopy(text, btn) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed'; ta.style.opacity = 0;
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    showToast();
+    btn.classList.add('copied');
+    setTimeout(() => btn.classList.remove('copied'), 2000);
+  } catch(e) {}
+  document.body.removeChild(ta);
+}
+
+function showToast() {
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+const body = document.body;
+const knob = document.getElementById('knob');
+const switchElement = document.querySelector('.switch');
+let isDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
+
+function updateDarkMode() {
+  const dark = body.classList.contains('dark');
+  knob.style.left = dark ? 'calc(100% - 26px - 4px)' : '4px';
+  knob.style.background = dark ? '#0bf351' : '#fff';
+  switchElement.setAttribute('aria-checked', dark.toString());
+}
+
+if (isDark) body.classList.add('dark');
+updateDarkMode();
+
+switchElement.onclick = () => {
+  body.classList.toggle('dark');
+  updateDarkMode();
+};
+
+window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', e => {
+  if (e.matches !== body.classList.contains('dark')) {
+    switchElement.click();
+  }
+});
+
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, 150);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+name: 规则贡献
+description: 如果觉得pr麻烦可以在这里提交你的规则。
+labels: ["规则贡献"]
+assignees: 
+  -  lingeringsound
+body:
+  - type: dropdown
+    id: targetwebsite
+    attributes:
+      label: 规则类型
+      description: |
+        规则对应的类型，放行还是拦截
+      options:
+        - 拦截
+        - 放行
+    validations:
+      required: false
+
+  - type: dropdown
+    id: targetaddRules
+    attributes:
+      label: 提交到
+      description: |
+       选择提交到那个规则
+      multiple: true
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: false
+
+  - type: textarea
+    id: targetRules
+    attributes:
+      label: 规则
+      description: 输入您的规则
+      placeholder: 请输入Adblock语法的规则……
+      render: yaml
+    validations:
+      required: true
+
+  - type: textarea
+    id: addreason
+    attributes:
+      label: 提交此规则的原因
+      description: 可留空
+      placeholder: 描述提交规则的原因
+    validations:
+      required: false

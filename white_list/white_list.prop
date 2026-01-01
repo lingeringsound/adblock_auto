@@ -1,0 +1,229 @@
+! 22.11.10
+\|\|c-ctrip\.com\^$
+\|\|cdn\.bspapp\.com\^$
+\|\|shouji\.com\.cn\/static\/v1\/js\/appinfo\.js$
+\/\*\/\*\.add\.\*\.add
+^version=1\.0\.0\.108$
+^version=4$
+\|\|activity\.app\.autohome\.com.cn\^$
+\|\|bdxiguaimg\.com\^$
+^author=adblockplus\.org$
+#\%#
+#\%#\/\/scriptlet
+^#[[:space:]]Adblock[[:space:]]Plus[[:space:]]preferences$
+^manwa2\.me##\.ad-area[[:space:]]\>[[:space:]]a$
+^manwa2\.me#\@#\.ad-area$
+^manwa\.me#\@#\.ad-area$
+^##\.ad-area$
+^\|\|missav\.com\^$
+^\|\|manwa.*\/static\/custom\/files\/300X250\.
+^\|\|manwa.*\/static\/upload\/ads\/
+manwa\.me#\$#\.ad-area.*}$
+^\/300x250\.$
+^\/300x250\.\$image$
+^\/template\/conch\/asset\/js\/hlhtml.$
+^\|\|exoclick\.com\^$
+^\|\|exoclick\.com\^\$third-party,important$
+^boylov\.xyz,boylove\.cc##\.swiper-wrapper$
+^boylov\.xyz,boylove\.cc##div\[style=\"display:[[:space:]]block\"\]$
+^boylov\.xyz,boylove\.cc###fake_avivid_waterfall_webpush$
+^boylov\.xyz,boylove\.cc#\?#:.*\.adsbyexoclick)$
+^boylove\.cc##\.reader-home-swiper$
+^xchina\.fun##a\[href\*=\"\/redirect\/ad-\"\]$
+^xchina\.fun##div\[adid\]$
+^xchina\.co##div\[style\*=\"width: 300px;\"\]\[style\*=\"height: 455px;\"]$
+^xchina\.co##\.exoclick_300x250$
+^xchina\.co##\.push-bottom$
+^xchina\.co##\.push-top$
+^xchina\.co##\[class\*=\"ad\"]$
+^xchina\.co##\[href\*=\"#\"\]$
+^xchina\.co##div\[class\*=\"jquery-modal\"]$
+^xchina\.co##div\[class\*=\"modalAd\"]$
+! 百度笔记
+baidu\.com.*#results[[:space:]]>[[:space:]]div\[class\]:not\(\.result\):not\(\.result-op\):not\(\.sp-rslt-bar\):not\(\.s-group-result\):not\(\.hint-unsafe\)$
+baidu\.com.*#results[[:space:]]>[[:space:]]div\[class\]:not\(\.result\):not\(\.result-op\):not\(\.sp-rslt-bar\):not\(\.s-group-result\)$
+! 果壳网
+^\|\|guokr\.com\/apis\/flowingboard\/item\/guokrapp_$
+^\|\|guokr\.com\/apis\/flowingboard\/item\/m_$
+! 快科技
+^mydrivers\.com##a\[href\*=\"\/bp.ashx\"\]$
+! 错误的Adblock规则
+^939394\.xyz##img\[src\^=\"\\\"\]$
+^\|\|cibntv\.net\/youku\/\$media,mp4$
+^\/upload\/ads\/\*$
+! 修复Via 规则读取错误的问题
+^##div\[class\*=\"ad\"[[:space:]]i\].*\!important\;)$
+^\/assets\/ad-$
+! ^\|\|d.*\.cloudfront\.net\^$
+^:\/\/d\*\.cloudfront\.net\$third-party$
+! 小米商城误杀
+^##\[style\*=\"mi-img\.com\"\]$
+! 酷安页面误杀
+^##\[id\$=\"ad-box\"\]$
+^##div\[class\^=\"swiper-wrapper\"\][[:space:]]>[[:space:]]div\[class\^=\"swiper-slide\"\]\[aria-label\*=\"\/\"\]\[role=\"group\"\]$
+! 123云盘抬高修复
+^\|\|bdad\.123pan\.cn\^$
+! 隐私规则误杀修复
+^\|\|browser\.sentry-cdn\.com\^$
+! Twitter误杀
+^##\[style=\"position:[[:space:]]absolute;[[:space:]]inset:[[:space:]]0px;\"\]$
+! Miaozhen(秒针系统官网)
+^\|\|miaozhen\.com\^$
+! 斗鱼游戏
+^wan\.douyu\.com$
+^\|\|wan\.douyu\.com\^$
+! xnxx.com白屏
+^xnxx\.com##\[class\*=\"ad-\"\]$
+! 禁漫误杀
+^##\.col-lg-3\.col-xs-6[[:space:]]>[[:space:]]\.well$
+! bing 应用提示
+^bing\.com##div#sacs_win$
+^bing\.com#\@#div#sacs_win$
+! 误杀
+^sobot\.com$
+^\@\@\|\|sobot.com\^\$~third-party$
+! Nga 社区误杀
+^\.com\/\*_\*\.js\?\*16\$third-party$
+! 腾讯新闻误杀
+^view\.inews\.qq\.com##\[data-action-id=\"2\"\]\,\[dt-eid=\"em_pull_news\"\]$
+! 弃用大量误杀包含去广告的软件资源网站
+^##img\[alt\*=\"广告\"\]\[src\]$
+! xhamster
+^##\[class\*=\"ads-block\"\]$
+^xhofficial\.com,xhamster\.com,xhamster2\.com,xhamster\.desi,xhamster18\.desi,xhamster2\.desi,xhamster19\.com,xhofficial\.desi,xhamster1\.desi##a\[href\*=\"adblocked\"\]\[target=\"_blank\"\]$
+! soul浏览器解析错误
+^##\[id\]\.f_top1$
+! 2024.09.01
+^###loading[[:space:]]\+[[:space:]]#app$
+! 2024.9.12
+! youtube黑屏误杀
+^##\[id\^=\"player\"\][[:space:]]>[[:space:]]div\[class\]\[data-version\]$
+! 豆瓣人物封面被杀
+^m\.douban\.com##\[href\^=\"https:\/\/www\.douban\.com\/doubanapp\/card\/get_app\"\]$
+! 多余规则
+^\/pixel\/sbe?$
+^\/pixel\/purst\?$
+^\/pixel\/purs\?$
+^\/pixel\/pure$
+^\/pixel\/puclc\?$
+^\.(app|com|org|net)\/5y\*\/310\.\$other$
+^https:\/\/\*\.\*\/(YC|TC|YL|YX|ZB|dh|dl|hx|zh)\/\*\/\*\.gif\$third-party,image$
+! 修复via在googirl.jp规则失效
+^googirl\.jp##\.newentry_in[[:space:]]>[[:space:]]li\.“cf”$
+! czzy.top误杀
+^##a\[href\*\=\"\.top\"\][[:space:]]>[[:space:]]img\[src\]$
+! bilibili脚本误杀
+^##div[[:space:]]>[[:space:]]div:not\(\[style\]\):not\(\[id\]\)[[:space:]]>[[:space:]]div\[style\=\"position:[[:space:]]relative\;\"\]:not\(\[id\]\)$
+! 91porn.com误杀
+^91porn\.com##\.vjs-preroll$
+^\|\|cdn77\.org\^\*\.mp4\|$
+! 搜狐无障碍误杀
+^m\.sohu\.com##a\[href\=\"javascript:void\(0\)\;\"\]$
+! 蓝奏云误杀
+^##script:not\(\[src\]\)[[:space:]]\+[[:space:]]style[[:space:]]\+[[:space:]]div\[id\]:not\(\[class\]\):not\(\[style\]\)$
+! bilibili首页误杀
+! bilibili\.com#\?#\.is-rcmd:has\(>div:not\(div:has\(div\)\)\)$
+bilibili\.com##\.is-rcmd[[:space:]]>[[:space:]]div:only-child$
+! https://618722.xyz误杀
+^##div\[class\][[:space:]]>[[:space:]]span[[:space:]]\+[[:space:]]img\[src\*\=\"\.xyz\"\]$
+^\.xyz\/ty\/\*-\*-\*\.\$third-party,~image,~script$
+^\/image\/20\*-\*-\*\/\*\/\$other,~image$
+! apkmirror误杀
+^\|\|html-load\.com\^
+! 搜狐误杀
+^\/api\/blockdata\$domain\=sohu\.com$
+! cqshuda.com
+^\|\|cqshuda\.com\/template\/conch\/asset\/js\/conch\.vip\.js$
+! 通用规则误杀
+^##a\[href\*\=\"\/\?utm_source\=\"\]\[target\=\"_blank\"\]$
+^:\/\/\*\.\*\.xyz\/\*\/\*-\*-\*-\*\/\$third-party$
+^:\/\/\*\.\*\.xyz:\*\/\*\/\*-\*-\*-\*\/\$third-party$
+^##\[class\*\=\"ads_\"\]$
+^##\[style\*\=\"0vw\"\]\[style\*\=\"0vh\"\]\[style\*\=\"0px\"\]$
+^##body[[:space:]]>[[:space:]]script[[:space:]]\+[[:space:]]\.app$
+! mycloud
+^##a\[href\]\[target\=\"_blank\"\][[:space:]]>[[:space:]]img\[src\*\=\"\.cos\.ap-\"\]\[src\*\=\"\.myqcloud\.com\/\"\]\[src\$\=\"\.gif\"\]\[alt\]$
+^\|\|cos\.ap-\*\.myqcloud\.com\^\$third-party$
+! 用不到的广告
+^\|\|.*\.(deegi|gofe|guesswhat|huro|jemo|looki|loopa|looty|luro|lychee|remi|rooki|selor|sepo|sife|tegro|wemakebest)news\.com\^$
+! 抖音搜索
+^so\.douyin\.com##\.card-list[[:space:]]>[[:space:]]\.card-item:has\(div\[data-test-extra\*\=\"_ad\"\]\)$
+^so\.douyin\.com##\.card-list[[:space:]]>[[:space:]]\.card-item:has\(div\[data-test-extra\*\=\"ad_\"\]\)$
+! pornhub误杀
+!^\.com\.\/\$popup,domain\=pornhub\.com$
+^\.com\.\/\$domain\=pornhub\.com$
+! xhamaster 放行在 Via上起反效果。
+^\@\@\|\|megaxh\.com\^\$script,~third-party$
+^\@\@\|\|xhaccess\.com\^\$script,~third-party$
+^\@\@\|\|xhamster\.com\^\$script,~third-party$
+^\@\@\|\|xhamster\.desi\^\$script,~third-party$
+^\@\@\|\|xhamster1\.desi\^\$script,~third-party$
+^\@\@\|\|xhamster3\.com\^\$script,~third-party$
+^\@\@\|\|xhbig\.com\^\$script,~third-party$
+^\@\@\|\|xhbranch5\.com\^\$script,~third-party$
+^\@\@\|\|xhchannel\.com\^\$script,~third-party$
+^\@\@\|\|xhmoon5\.com\^\$script,~third-party$
+^\@\@\|\|xhofficial\.com\^\$script,~third-party$
+^\@\@\|\|xhspot\.com\^\$script,~third-party$
+^\@\@\|\|xhtotal\.com\^\$script,~third-party$
+^\@\@\|\|xhvid\.com\^\$script,~third-party$
+^\@\@\|\|xhwide2\.com\^\$script,~third-party$
+^\@\@\|\|xhwide5\.com\^\$script,~third-party$
+^\@\@:\/\/xhamster\.\$script,~third-party$
+! Easylist乱写
+^\|\|ngpolitei\.top\$\^
+! store.epicgames
+^##a\[referrerpolicy\=\"unsafe-url\"\]\[target\=\"_blank\"\]$
+! manwa
+^##\.ad-area:not\(\.text-ad\)$
+! 汽车之家搜索框
+^autohome\.com\.cn##div\.tw-fixed$
+! www.jyshare.com
+^##script[[:space:]]\+[[:space:]]script[[:space:]]\+[[:space:]]style[[:space:]]\+[[:space:]]div\[id\]$
+! Adguardhome 标题
+^#[[:space:]]+
+! Adguard Chinese 误杀
+^\|\|qhres2\.com\^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
