@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 5gXTDLokyuEdeSHR8kFPzA
+! Checksum: 7OYRpKUXxSx+5TH7W1PCaA
 ! Title: 自用去广告Adblock规则
-! Version: 20260102231916
-! Last modified: 2026-01-02 23:19:16
-! Total Count: 9576
+! Version: 20260103192134
+! Last modified: 2026-01-03 19:21:34
+! Total Count: 9581
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3517,7 +3517,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .co/ajd.php?pid=$third-party
 .co/ajtop.php?pid=*$third-party
 .com/$domain=huang1111.cn
-.com/*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si|gimy.com.tv|gimy.com.tw|gimy.tv
+.com/*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si|gimy.com.tv|gimy.com.tw|gimy.tv|porn-xp.com|porn-xp.eu|porn-xp.ru
 .com/*.*/*/*/$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/*.gif$domain=72vod.com
 .com/*.js$third-party,domain=uaa001.com|uaa002.com|uaa003.com|uaa004.com|uaa005.com
@@ -3537,6 +3537,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*/ua.php$third-party
 .com/*/uagu.php$third-party
 .com/*/wfohki/di$third-party,~image,~media
+.com/*?*$third-party,script,domain=danryoku.com
 .com/*?*=*&*=*&*=*&*=*%*%*%*%*%*20*20*20*=$third-party,~media,~image,domain=99mh.men|99mh.one|99xmh.icu|99xmh.top|99xs.icu|99xs.one|actionviewphotography.com|exporntoons.net|hanime2.top|jable1.sbs|jable1.vip|javbest.icu|javbest.top|laoli88.icu|laoli88.men|laoli88.one|mat6tube.*|mat6tube.com|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf|noodlemagazine.com|rou2.icu|rou2.men|rou2.one|rou2.top|sibtok.com|tyler-brown.com|ukdevilz.com|whatisareverseauction.com|wnacg.men|wnacg.one|wnacg.vip
 .com/*bd*.js$script,domain=ifeng.com
 .com/*interstitial*.js$third-party,script
@@ -5997,6 +5998,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@/api/blockdata$domain=sohu.com
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
+@@/common/*/common/*.js$domain=mp.weixin.qq.com
 @@/image/20*-*-*/*/$domain=1688.com|coolapk.com|galleryepic.com|galleryepic.one|galleryepic.xyz|kuaikanmanhua.com|mvxzsp.com|qnxz.top|taobao.com|tmall.com|tudou.com|weme-quan.com|youku.com|znds.com
 @@/index.m3u8
 @@/js/popup.js?advertiser=popup$domain=netflav.com
@@ -7042,6 +7044,7 @@ justdial.com###gptAdsDiv
 jvidcm.xyz##div.stui_md
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
 jyshare.com#@#script + script + style + div[id]
+kaizty.com##div.mobiletop
 kanliao.com,kanliao.cyou,kanliao.org,kanliao12.cyou,kanliao13.org,kanliao18.com###index[role="main"] > article:has(meta[content="今日看料"])
 kanxig.com##^script:has-text(|Android)
 kanxig.com##script:has-text(|Android)
@@ -7368,6 +7371,7 @@ perfectgirls.xxx,hentaihaven.xxx,hentai.tv,animeidhentai.com,hanime.tv##iframe[s
 perfectgirls24.com##[class^="bb_"]
 php?ad=
 picnob.com,pixwox.com##.ah-box
+ping0.cc##.toprow
 pixiv.net##._illust-upload + div[style*="968px;"][style*="170px;"]
 pixiv.net##._premium-lead-function-banner
 pixiv.net##.ad-frame
@@ -7397,6 +7401,7 @@ po18wen.net##[style*="pointer-events: none;"]
 po18wen.net##img[style="border: 1px inset #00FF00"]
 popjav.in##div[style]:not([class]):not([id]):has(iframe[src*="//creative"])
 porn-w.org##.align-items-center.list-row:has(.col:empty)
+porn-xp.com,porn-xp.eu,porn-xp.ru##.sp_top_m
 porn.co##.adde_modal-overlay
 porn.co##.adde_modal_detector
 porn.co##.adde_modal_detector-show
