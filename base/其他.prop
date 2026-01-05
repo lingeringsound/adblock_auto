@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 7OYRpKUXxSx+5TH7W1PCaA
+! Checksum: ODX51m4pxNZ9bH6aYrFvZA
 ! Title: 自用去广告Adblock规则
-! Version: 20260103192134
-! Last modified: 2026-01-03 19:21:34
-! Total Count: 9581
+! Version: 20260105222224
+! Last modified: 2026-01-05 22:22:24
+! Total Count: 9586
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2982,6 +2982,7 @@
 ##iframe[src^="//ads."]
 ##iframe[src^="//tempest.services.disqus.com/ads-iframe/"]
 ##iframe[src^="//us-west1."][src*="/api/spots/"]
+##iframe[src^="/HereByAD"]
 ##iframe[src^="/ad"][src$=".html"]
 ##iframe[src^="/adv-agent.php?spot="]
 ##iframe[src^="/ai/s/s/su.php"]
@@ -3517,7 +3518,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .co/ajd.php?pid=$third-party
 .co/ajtop.php?pid=*$third-party
 .com/$domain=huang1111.cn
-.com/*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si|gimy.com.tv|gimy.com.tw|gimy.tv|porn-xp.com|porn-xp.eu|porn-xp.ru
+.com/*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si|cosblay.com|gimy.com.tv|gimy.com.tw|gimy.tv|porn-xp.com|porn-xp.eu|porn-xp.ru
 .com/*.*/*/*/$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/*.gif$domain=72vod.com
 .com/*.js$third-party,domain=uaa001.com|uaa002.com|uaa003.com|uaa004.com|uaa005.com
@@ -5667,6 +5668,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*cx?ssid=$third-party
 ://*.*/*mk?ssid=$third-party
+://*.*/HereByAD
 ://*.*/herebyad
 ://*.*/js/js4.js?v=$~third-party
 ://*.*2025*/js/lb.js$~third-party
@@ -5752,7 +5754,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*freeok.*/asdasdad.js$script
 ://*halihali*.*/js/*.js?ver=
 ://*hanime*/herebyad
-://*hanime2*/view_booster.js?v=
+://*hanime*/view_booster.js?v=
 ://*honmadesign*/js/main.js?
 ://*hsck*.com/nnn*/1*.js
 ://*huameihangkong.*/js/baiducdn.js
@@ -6946,6 +6948,8 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##.result-op[tpl="ga
 ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##div:not([id]) > style[id^="s-"] + style + div + div[id]
 ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##div[id$="_canvas"],div[id^="ecl-pc-game-"]
 ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com##.c-container:has(.t > a[data-landurl])
+itchygame.com##.spotHolder
+itchygame.com##a[href^="/out.php?"]
 itdog.cn##+js(no-setTimeout-if, adblock_tip)
 itdog.cn##.gg_link
 itdog.cn##.lantern_left
@@ -7563,6 +7567,7 @@ rule34-videos.com##[class*="-ad-"]
 rule34-videos.com##[class^="ad-"]
 rule34-videos.com##div.ad-banner
 rule34-videos.com##div.post-ad-wrapper
+rule34.tube##.fp-logo
 rule34gen.com##div.item.thumb:has(> iframe[id^="embed_"])
 rule34video.com##[class*="spot"]:has(script[src*="/lv/esnk"])
 rule34video.com##div.item.thumb:has(a[title="Advertisement"])
