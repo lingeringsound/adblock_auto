@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: KNe7eIa7l9RG7OiVggOtVQ
+! Checksum: LXOlWHyTpIa37Pfd1jBCsw
 ! Title: 自用去广告Adblock规则
-! Version: 20260107143718
-! Last modified: 2026-01-07 14:37:18
-! Total Count: 9599
+! Version: 20260107172543
+! Last modified: 2026-01-07 17:25:43
+! Total Count: 9604
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -559,7 +559,10 @@
 ###stickyrightad
 ###taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top
 ###tbad
+###test1.mobileIframe
 ###test1.mobileIframe > div[carousel-item=""]:not([class]):not([id])
+###test2.mobileIframe
+###test3.mobileIframe
 ###text-ad
 ###text-ads
 ###text-intext-ads
@@ -2436,6 +2439,7 @@
 ##a[href][target="_blank"] > img[src="https://vip2.loli.io"]
 ##a[href][target="_blank"] > img[src][alt="xxx"]
 ##a[href][target="_blank"] > img[src][class="topline"]
+##a[href][target="_blank"] > img[src^="/ad/"]
 ##a[href][target="_blank"] > img[src^="https://imgsrc.baidu.com/forum/pic/item"]
 ##a[href][target="_blank"] > img[src^="images/gg/"][alt]
 ##a[href][target="_blank"] > img[width="100%"][src$=".gif"]
@@ -5754,6 +5758,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*ffdm*/dd.js$~third-party
 ://*ffdm*/gdw.js
 ://*freeok.*/asdasdad.js$script
+://*gqck*/p.js$~third-party
 ://*halihali*.*/js/*.js?ver=
 ://*hanime*/herebyad
 ://*hanime*/view_booster.js?v=
