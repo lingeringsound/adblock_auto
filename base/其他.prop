@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ODX51m4pxNZ9bH6aYrFvZA
+! Checksum: KNe7eIa7l9RG7OiVggOtVQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260105222224
-! Last modified: 2026-01-05 22:22:24
-! Total Count: 9586
+! Version: 20260107143718
+! Last modified: 2026-01-07 14:37:18
+! Total Count: 9599
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2830,6 +2830,7 @@
 ##div[data-native_ad]
 ##div[id*="ScriptRootN"]
 ##div[id*="_"][classname$="_f"][class$="_f"]
+##div[id*="clb-spot"] > iframe[id*="spot"]
 ##div[id*="playerAdvLayer"][class="adv-layer"]
 ##div[id*="po-s0"] > div > div[class^="jsv"] > div[class^="container-"] > .row > [class*="col-sm"] > a[rel="noopener nofollow"]
 ##div[id="alert_windows"][class*="q-dialog fullscreen"]
@@ -3518,7 +3519,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .co/ajd.php?pid=$third-party
 .co/ajtop.php?pid=*$third-party
 .com/$domain=huang1111.cn
-.com/*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si|cosblay.com|gimy.com.tv|gimy.com.tw|gimy.tv|porn-xp.com|porn-xp.eu|porn-xp.ru
+.com/*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si|cosblay.com|gimy.com.tv|gimy.com.tw|gimy.tv|porn-xp.com|porn-xp.eu|porn-xp.ru
 .com/*.*/*/*/$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/*.gif$domain=72vod.com
 .com/*.js$third-party,domain=uaa001.com|uaa002.com|uaa003.com|uaa004.com|uaa005.com
@@ -3574,7 +3575,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/b*X*.*/*O*/*O*/$third-party,~image,~media,~stylesheet
 .com/b*X-*.*/*/*/*/*/$third-party,~image,~media,~stylesheet
 .com/b*X.*/*/*/*/*/$third-party,~image,~media,~stylesheet
-.com/bn.js$domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si
+.com/bn.js$domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si
 .com/bn.js$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/bokan/bokan.js$script
 .com/bug/log/$third-party
@@ -3612,7 +3613,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/headmenu.js$~third-party
 .com/hm/*?*=*$third-party
 .com/hx/*/*.gif$third-party,image
-.com/in.js$domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si
+.com/in.js$domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si
 .com/in/multy$third-party
 .com/j/*$script,third-party
 .com/jquery.min.js?*=*=$third-party,domain=junhun520.app|junhun520.com|junhun520.net
@@ -4794,6 +4795,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/kaixin.js$script
 /js/kpwz.js
 /js/lianmeng*js?t=$~third-party
+/js/lianmeng.js?
 /js/lm_wap.js
 /js/ls.js
 /js/m.js?
@@ -5684,7 +5686,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.aj25*.bid/*.js$third-party
 ://*.biquge*/mm.js
 ://*.com/*.*.*?17$third-party,domain=xiuluodm.com
-://*.com/*/*o*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.si
+://*.com/*/*o*$third-party,~media,~image,~stylesheet,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si
 ://*.com/*o*/*1*$domain=gimy.com.tv|gimy.com.tw|gimy.tv
 ://*.d*dm.*/indexdd.js$~third-party
 ://*.doubanio.com/*comm*/openjs*.js
@@ -5894,6 +5896,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://hongosi.xn--*.com/mvp*.js$third-party
 ://hp.hchus*dmew.top$third-party
 ://hsck*/nnn*/1$script
+://hsck*/nnn*/accd.js
 ://huangsexiaoshuo*/template/wap*/js/common.js
 ://im.ifengsong888.com/*.gif
 ://im.ifengsong888.com/*.jpg
@@ -5907,6 +5910,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://js.*ddx.sbs$third-party
 ://kpic.*.cn/*.js$third-party
 ://kpic.*.cn/*.txt$third-party
+://langyou*/js/main.js?
 ://ln.*.cyou$third-party
 ://ln.*.fun$third-party
 ://ln.*.mobi$third-party
@@ -5988,6 +5992,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.m3u8$domain=gimy.com.tv|gimy.com.tw|gimy.tv
 @@.ts$domain=gimy.com.tv|gimy.com.tw|gimy.tv
 @@.xyz/theporn/js/
+@@/91xj/js/t.91xj.js
 @@/?utm_source=*&utm_campaign=$domain=dlsite.com|yandex.kz|yandex.ru|yandex.com|yandex.fr|yandex.tr|yandex.ru|yandex.by|yandex.eu|yandex.net|yandex.uz|yandex.ua
 @@/_next/static/chunks/$script,domain=hentaipaw.com
 @@/_next/static/chunks/*dd.js$~third-party
@@ -6493,7 +6498,7 @@ btmulu.buzz,btmulu.cyou,btmulu.live,btmulu.men,btmulu.top##article.item:has(a[hr
 btnull.com,btnull.org,btnull.to,btnull.si,btnull.in,btnull.nu,btnull.fun##[href$=".apk"]
 btnull.com,btnull.org,btnull.to,btnull.si,btnull.in,btnull.nu,btnull.fun##[style*="position: fixed; bottom:"][style*="z-index: 99999;"]
 btsj6.com##em > strong
-bunkr-albums.io,bunkr.cr,bunkr.fi,bunkr.si##center:has(>script[src*="/lv/esnk/"][src$="/code.js"])
+bunkr-albums.io,bunkr.cr,bunkr.fi,bunkr.ph,bunkr.si##center:has(>script[src*="/lv/esnk/"][src$="/code.js"])
 buondua.com,buondua.us##img[loading="lazy"][src^="//buondua.com/"]
 buondua.com,buondua.us##video[autoplay="true"][loop="true"][preload="auto"]
 buondua.com,buondua.us,kiutaku.com##.search-form + br + div[class]
@@ -6834,8 +6839,8 @@ hentaipaw.com##[id^="ts_ad_native"]
 hentaistream.com##div[id^="adx_ad-"]
 hentaiworld.tv##.swiper-slide:has(> a[target="_blank"])
 hhkan.com,hhkan1.com,hhkan2.com,hhkan3.com##.mobile-download-popup
-hitv.app##a[href^="https://www.gkan.net"]
-hitv.app##div.tips-box
+hitv.app,jkan.app##a[href^="https://www.gkan.net"]
+hitv.app,jkan.app##div.tips-box
 hkcards.com#@##ad-slot
 hoho.tv##[class^="hoho-ad"],[data-ad-client]
 homejav.com###hj-container
@@ -8612,6 +8617,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||bookhaitang.com/assets/publish/$script
 ||boost-next.co.jp^
 ||boot.bytecache.cn/static/*.js?t=$script,third-party
+||bpacihfabm.com^
 ||bsplh.cn^
 ||btds.zog.link^$third-party
 ||bto.tooopen.com^$third-party
@@ -8723,6 +8729,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||dizhiyou.xyz/js/ls.js
 ||dl.btii.cn^
 ||documentaryselfless.com^
+||dongkadi.com/*3*3*.js
 ||doubleverify.com^$third-party
 ||doyougothere.com^$third-party
 ||dpic.wxddid.cn^$third-party
@@ -9203,6 +9210,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||qxd6.com/js/*.js
 ||qzpbwq.com^
 ||randomadsrv.com^
+||rapidtai.com/acs/desktop
+||rapidtai.com/acs/phone
 ||rbkmzhc.icu^
 ||rd.autohome.com.cn^
 ||rdx.autohome.com.cn^
@@ -9323,6 +9332,10 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||surface361.com^$third-party
 ||svdpgmt.cn^
 ||sznj91.com^
+||taiav.com/acs/desktop
+||taiav.com/acs/phone
+||taisinba.com/acs/desktop
+||taisinba.com/acs/phone
 ||tangsanshu.net/*/*.js
 ||tapioni.com^
 ||tc.dqpumx.com^
