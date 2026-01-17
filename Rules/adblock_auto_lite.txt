@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 6axWh0f6d+JxhWI2xPvykg
-! Title: 混合规则精简版(更新日期2026-01-17 16:19:44)
-! Version: 20260117161944
+! Checksum: PFmaFUwHwa85T6Q+tkBhvQ
+! Title: 混合规则精简版(更新日期2026-01-17 20:13:49)
+! Version: 20260117201349
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-01-17 16:19:44
-! Total Count: 65436
-! Blocked Filters: 65436
+! Last modified: 2026-01-17 20:13:49
+! Total Count: 65437
+! Blocked Filters: 65437
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! GitHub Homepage: https://github.com/lingeringsound/adblock_auto
@@ -14,39 +14,7 @@
 ! Github Raw gh Link: https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt
 
 
-!<<<<<通配符规则>>>>>4722
-                       <div class="WhatToDo">
-                       <h1 class="Header-title">Bad Gateway</h1>
-                       <p>If that is not the case, take a look at the article on <a href="https://client.cdn77.com/support/knowledgebase/cdn-resource/troubleshooting-error-messages" class="common-link">troubleshooting error messages</a> in our knowledgebase.</p>
-                       <p>Please make sure the firewall on your origin server is disabled. It might be blocking the requests from the CDN77 servers.</p>
-                       <p>Please try again in a few minutes. If the problem persists for more than 30 minutes, try contacting website owner via a different channel.</p>
-                   </div>
-                   <div class="WhatToDo-description">
-                   <h3 class="WhatToDo-title">As the <strong>Website administrator...</strong></h3>
-                   <h3 class="WhatToDo-title">If you're a <strong>Visitor...</strong></h3>
-               </div>
-               <div class="WhatToDo-column">
-           </div>
-           <div class="Header-description">CDN77 server is unable to reach website's origin server.</div>
-           <img src="img/error-scheme.png" alt="Bad Gateway" class="Header-scheme">
-           <span class="Header-errorNumber">Error 502</span>
-       </div>
-       <div class="Header-wrap">
-       <div class="Section-wrap">
-   </header>
-   </section>
-   <base href="//error.c.cdn77.org/" target="_blank">
-   <header class="Header">
-   <link rel="shortcut icon" href="img/favicon.ico" />
-   <link rel="stylesheet" href="css/main.css">
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <meta name="author" content="(c) 2023 CDN77">
-   <meta name="description" content="">
-   <meta name="keywords" content="">
-   <meta name="robots" content="nofollow" />
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <section class="Section Section--errorBottom">
-   <title>Website is offline – Bad Gateway</title>
+!<<<<<通配符规则>>>>>4692
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
@@ -3746,6 +3714,8 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 /the_top$domain=28188.net
 /theme/damn_b.js$script,~third-party
 /themes/default/wap/images/douyin.gif
+/themes/jieqi/wap/js/*fix*.js
+/themes/jieqi/wap/js/*test
 /tianya_recommend?
 /tigtag_custom/*_banner
 /tigtag_custom/include/couplet.
@@ -4259,6 +4229,7 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 ://*xiaoshuo*/mm.js
 ://*xs5300.*/*/*.js$domain=xs5300.com|xs5300.co|xs5300.cc|xs5300.cn|xs5300.org|xs5300.la|xs5300.so|xs5300.us|xs5300.info|xs5300.tw|xs5300.net|xs5300.me|xs5300.app
 ://*xsbiquge.*/js/detail.js
+://*xsww.*/*/*ll*.js$~third-party
 ://*xszww2.*/*/*.js$domain=xszww2.com|xszww2.co|xszww2.cc|xszww2.cn|xszww2.org|xszww2.la|xszww2.so|xszww2.us|xszww2.info|xszww2.tw|xszww2.net|xszww2.me|xszww2.app
 ://*xvideos*/view_booster.js?v=
 ://*xwbxsw1.*/*/*.js$domain=xwbxsw1.com|xwbxsw1.co|xwbxsw1.cc|xwbxsw1.cn|xwbxsw1.org|xwbxsw1.la|xwbxsw1.so|xwbxsw1.us|xwbxsw1.info|xwbxsw1.tw|xwbxsw1.net|xwbxsw1.me|xwbxsw1.app
@@ -4367,6 +4338,9 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 ://go.*.com/*=WidgetV4Universal
 ://go.*.com/smartpop/*?*=$third-party
 ://gp.logicmind.*/*.dx$third-party
+://haokan.*/mb.js$~third-party
+://haokan.*/ml.js$~third-party
+://haokan.*/mm.js$~third-party
 ://hf.*.com/*m-2697$third-party,other
 ://hongosi.xn--*.cc$third-party
 ://hongosi.xn--*.com/*/mvp*.js$third-party
@@ -4535,11 +4509,6 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 :9875/vh2/
 :9875/vj2/
 :99/js/ads/
-<!DOCTYPE html>
-</body>
-</head>
-<body>
-<head>
 =300x250/
 =336x280,
 =468x60/
@@ -4720,6 +4689,7 @@ _tm11_pmt_
 _vwisbjs?
 _vwnrsbjs?
 _yad_jsonp_
+bqg.com/js/h$script
 caigepseyoulianjie-*.*.com$~third-party
 http*://*/resolve?$domain=junhun520.app|junhun520.com|junhun520.net|kanshuzhan.com|kanshuzhan.live|kanshuzhan.net
 http*://*/resolve?type=*&short=*&name=$third-party
@@ -4739,7 +4709,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 |javascript:*window.location
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<域名规则>>>>>44156
+!<<<<<域名规则>>>>>44217
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com
 |https://m.frgls.com/js/*.js?v=
 ||*.com/|$third-party,domain=youtubepro.app
@@ -5266,6 +5236,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||1dm6ccvy8.com^
 ||1dor1d6vc.com^
 ||1f0l.top^
+||1f7845oic111hxqbrl4x.cfd^
 ||1f7wwaex9rbh.com^
 ||1fa25f6cc1.com^
 ||1fd92n6t8.de^
@@ -5274,6 +5245,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||1fxs.com^$third-party
 ||1fxt.com^
 ||1g46ls536.de^
+||1gj8lhfa1.com^
 ||1gjb5ry12zrbfw7u1m9wh4.cfd^
 ||1gmzo.icu^
 ||1gp3p6fkio.com^
@@ -5731,6 +5703,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||3520.cc/js/3520/
 ||352396e005.com^
 ||35336.net/35336.jpg
+||354xxcdt1.com^
 ||356.freeonlinegayporn.com^
 ||35c82e35f3.com^
 ||35uujhqe236wtwglfjm6prkcy416xv.rest^
@@ -6920,6 +6893,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||9867.org^
 ||98765.pw^
 ||988aiai.com/static/js/common.js
+||98dxs.*/themes/jieqi/wap/js/$script
 ||98k0ocqaf6.com^
 ||990215.xyz^
 ||9906g.com/js/jquery.js
@@ -9432,6 +9406,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||agufoi.xyz^
 ||aguo.com^$third-party
 ||agurgeed.net^
+||agyqnpoo.com^
 ||agyriacletch.cyou^
 ||agysdhlufhdij.com^
 ||ah.pricegrabber.com^
@@ -9749,6 +9724,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||algjbzwaljmnv.top^
 ||algocashmaster.com^
 ||algomantonneaucortina.cfd^
+||algorstaxinept.cfd^
 ||algosiselders.help^
 ||ali-ad.a.yximgs.com^
 ||ali-ec.static.yximgs.com/bs2/upload$image
@@ -9844,6 +9820,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||alicdn.com^*_!!3361094544.
 ||alicdn.com^*yksdk/*sdk.js$script,domain=youku.com
 ||alicloud.b-cdn.net/1.js
+||aliculainjoinnonny.cyou^
 ||alienateditem.com^
 ||alienateparadise.com^
 ||alienlyvepsishknuckly.cyou^
@@ -10481,7 +10458,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||applinzi.com^$domain=soyunpan.com
 ||applixir.com^$third-party
 ||applogapi.autohome.com.cn^
-||applovin.com^$third-party
+||applovin.com^
 ||applstr.com^
 ||applyless.com^$third-party
 ||appnext-a.akamaihd.net^
@@ -10925,6 +10902,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||atsidhelookin.org^
 ||att.ydss.cn/attachments/portal/
 ||attacheatableoverlabor.com^
+||attached-clock.pro^
 ||attachedglorysticks.com^
 ||attachedkneel.com^
 ||attackastonishment.com^
@@ -11228,6 +11206,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||axlikeoedipus.shop^
 ||axmoznqudx.com^
 ||axnejzdaiyjsq.space^
+||axon.ai^
 ||axonix.com^
 ||axqkakfkynw.com^
 ||axshhgmltiycy.site^
@@ -11866,6 +11845,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||bdm.ye-su.cn^
 ||bdmjs.xywy.com^
 ||bdoshbv.top^
+||bdqdzolwdfcke.space^
 ||bds82.top^
 ||bdsayest.cfd^
 ||bdstatic.com/??/tb/_/diamond_mall_frs_aside_*.js
@@ -12388,6 +12368,8 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||biqgg.com/n.js
 ||biqgg.com/w.
 ||biqgg.com/w.js?v=
+||biqiuge*/mm.js
+||biqiuge5.org/mm.js
 ||biqiuge5.org/mo.
 ||biqiuge8.cc/js/d
 ||biqiuge8.cc/js/p
@@ -13232,6 +13214,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||bugs01160ko.com^
 ||bugs01161ko.com^
 ||bugs01170ko.com^
+||bugs01171ko.com^
 ||bugscrawled.com^
 ||bugshasrub.cyou^
 ||bugwykhuyh.com^
@@ -13909,6 +13892,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||cbgrqi.xyz^
 ||cbisffostkjzc.site^
 ||cbjs.baidu.com^
+||cblqmoests.com^
 ||cbo9vo98i.com^
 ||cbqkiuokpxtti.space^
 ||cbrijvkodqjdrjp.com^
@@ -16277,6 +16261,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||cxfwyxjvvwpws.site^
 ||cxgfq.pinlue.com^
 ||cxlvlbx.xyz^
+||cxornemkskfmtay.com^
 ||cxsh.cn.com^
 ||cxuapz.xyz^
 ||cxvyk.com^
@@ -17161,6 +17146,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||decenerevivedangary.cyou^
 ||decianspicstuller.cfd^
 ||decide.dev^
+||decideddiarrhoeafrustration.com^
 ||decidedlytackunwelcome.com^
 ||decidedrum.com^$third-party
 ||deciderkiva.cyou^
@@ -17740,6 +17726,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||disploot.com^
 ||disprovefacilityjolt.com^
 ||disqusads.com^
+||disreputableagrarianyourself.com^
 ||disruptive49.com^
 ||dissipatecombinedcolon.com^
 ||dissolution06.com^
@@ -18925,6 +18912,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||edoshbw.top^
 ||edovjokbyaooq.com^
 ||edpl9v.pro^
+||edtkenvhljthk.space^
 ||edttmar.com^
 ||edttwm.com^
 ||edu-30130.sz.gfp.tencent-cloud.com^*.gif
@@ -19498,6 +19486,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||eqads.com^
 ||eqbbdarprjtiu.space^
 ||eqbzbwgshyrdf.online^
+||eqcmerpema.com^
 ||eqgztqakyjron.online^
 ||eqhvwwxtztvqi.website^
 ||eqidtjiskmjoo.site^
@@ -19909,6 +19898,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||eyny.com/data/cache/js_show_ads.js
 ||eyovtnjvganvj.space^
 ||eypev.com^$third-party
+||eytotptf.com^
 ||eyusky.net/weixin-img/zhifubao.jpg
 ||eyuwkbw.top^
 ||eyuyao.com/yyad/
@@ -20429,6 +20419,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||fierisynaxisgestae.cfd^
 ||fieryinjure.com^
 ||fiezaits.com^
+||fiflnrjmqzlsb.space^
 ||fifthlyteabowl.qpon^
 ||fightmallowfiasco.com^
 ||figuredworrying.com^
@@ -20516,6 +20507,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||finednothue.com^
 ||finessebaitsupply.com^
 ||finestpiece.com^$third-party
+||fingerhi.net^
 ||fingerly63.top^
 ||fingerrealistic.com^
 ||fingkndk.com^
@@ -23360,6 +23352,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||hbwighyhsubhz.online^
 ||hbwrapper.com^$third-party
 ||hbxmdf.icu^
+||hbz8v.com^
 ||hbzjht.com^$third-party
 ||hc1kycrud.com^
 ||hc360.com/images/14826/289x90.jpg
@@ -23940,6 +23933,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||hnfmqvmrtreqhrs.com^
 ||hnhmxj.icu^
 ||hnifdlau.top^
+||hnmvlmfwusoyt.site^
 ||hnr.dodhvug.cn^
 ||hnrgmc.com^
 ||hnrokizd.com^
@@ -25254,6 +25248,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||inbyeabnetretried.cfd^
 ||incarnatepicturesque.com^
 ||inchestannule.qpon^
+||inclinationsupervisor.com^
 ||inclinedallusionnearby.com^
 ||incloak.com^
 ||incloseinterest.com^
@@ -26147,6 +26142,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||jbbyyryolmokb.top^
 ||jbc568.com^$~third-party
 ||jbdch1.appmobile.cn^
+||jbgsqunzghntq.site^
 ||jbkdjuxuymejr.site^
 ||jbkqemk.icu^
 ||jblyanynoi.xyz^
@@ -26264,6 +26260,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||jfcwtkjxg.xyz^
 ||jfellnuo.com^
 ||jffdicjopshin.space^
+||jfhkvhobpfzoc.website^
 ||jfiacyg.cn^$~third-party
 ||jfjle4g5l.com^
 ||jfjslia.top^
@@ -26487,6 +26484,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||jmhgstmycd.com^
 ||jmif.cn^
 ||jmipzsn.icu^
+||jmjcqiiwrucsx.space^
 ||jmjdifcw.com^
 ||jmjslz.icu^
 ||jmoofprjgqtwr.space^
@@ -28689,6 +28687,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||lnalzll.top^
 ||lnejt9ziuhx67mcb.cfd^
 ||lnevgpyqncwpj.life^
+||lnevhxqvlwwdd.website^
 ||lnfmhl.icu^
 ||lnhsjob.com^$third-party
 ||lnifdlal.top^
@@ -28915,6 +28914,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||lpuqhego.com^
 ||lpwtbsfgamivm.space^
 ||lq1cou8jylvb97x8j.cfd^
+||lqbe7i5gf.com^
 ||lqbvjmkoozljk.top^
 ||lqbzvmvwjkkk.top^
 ||lqdcvj.top^
@@ -29167,6 +29167,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||lxsthrvtk.com^
 ||lxsz0w0aw.com^
 ||lxting.com^
+||lxubgzvxrcejl.site^
 ||lxvsjdmjygqcc.space^
 ||lxwp426ao.com^
 ||ly55442.com^
@@ -29831,6 +29832,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||mediapalmtree.com^
 ||mediasama.com^
 ||mediate-ios-*.hyprmx.com^
+||mediation.goog^
 ||mediation.unity3d.com^
 ||mediative.ca^
 ||mediative.com^
@@ -30846,6 +30848,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||musicalsupposed.com^
 ||musiciansinceredumpling.com^
 ||musthroom9.top^
+||mustyaloins.cyou^
 ||mustymix.com^
 ||mustytransition.pro^
 ||mutcheng.net^
@@ -33081,6 +33084,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||othiqvdzegwnr.online^
 ||othozkodgnum.com^
 ||otices.com^
+||oticlavash.cyou^
 ||otieu.com^
 ||otimiyk.top^
 ||otitishanded.com^
@@ -33858,6 +33862,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||perimeterravenousdelusional.com^
 ||perineprendrejog.cyou^
 ||periscope73.com^
+||perishauthorsharrow.com^
 ||perispro.com^
 ||perky-method.com^
 ||perkyexcitedlyscenario.com^
@@ -34247,6 +34252,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||pjdhgewwsjipca.xyz^
 ||pjdhguh14.com^
 ||pjdthz.xyz^
+||pjgnhwcmdc.xyz^
 ||pjpp1x5gvy88l429z9ne4b.cfd^
 ||pjqchcfwtw.com^
 ||pjtime.com/js/show_ad
@@ -34311,6 +34317,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||plasticfreakmervail.cyou^
 ||platform-api.tver.jp/v2/api/platform_users/questionnaire?
 ||platodebruinshowish.cfd^
+||plausible.io^$third-party,script
 ||play-asia.com^$image,subdocument,third-party
 ||play-lg.com^
 ||play.google.com/intl/en_us/badges/$domain=richluck.ru
@@ -37819,6 +37826,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||rueoozjioyhzn.site^
 ||rufadses.net^
 ||rufffeotfnic.com^
+||rufhdndiebfal.website^
 ||ruftodru.net^
 ||rugalnylon.com^
 ||rugao35.com/Public/config/Couplet/Index
@@ -37953,6 +37961,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||ryapalta.com^
 ||ryaqlyayozjw.top^
 ||rybjwenfwjovuqf.xyz^
+||ryddiuaiixndo.site^
 ||ryhkfuhxqbq8n27ix5wlwpm53n2jmt7.cfd^
 ||ryhuzj.xyz^
 ||ryivtpjcwrssq.com^
@@ -38446,6 +38455,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||scoldak.com^
 ||scoldeclipseillusion.com^
 ||scoldselfemployedlong.com^
+||scoleyexergue.cyou^
 ||sconat.com^
 ||sconline.com.tw/top/coolpc_
 ||sconvtrk.com^
@@ -39105,6 +39115,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||sheeme.com^$third-party
 ||sheenlybruscha.cyou^
 ||sheeplm.top^
+||sheeptaurgeersi.net^
 ||sheets.googleapis.com^$domain=telugucinema.com
 ||sheilaqeb.com^
 ||shelderjuxta.qpon^
@@ -39425,6 +39436,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||sjezce.xyz^
 ||sjgsgy.xyz^
 ||sjgtsqnmrqswz.space^
+||sjgynxxcbmpbf.online^
 ||sjhgfrvbxrbbr.com^
 ||sjimtyb.top^
 ||sjkbdvjksbdd.com^
@@ -39877,6 +39889,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||sonyzetuxx.com^
 ||soocaips.com^
 ||soodledchase.qpon^
+||sooncoinsprecaution.com^
 ||soonpubplatform.online^
 ||sooopu.com/asphtml/plnew.
 ||sooopu.com/js/*950.js
@@ -39923,6 +39936,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||soulsdeliriousnoise.com^
 ||soulsfliest.cfd^
 ||soulu365.com/images/zhuce.jpg
+||soulunbornrib.com^
 ||soulxatte.cyou^
 ||soumehoo.net^
 ||soumoamower.com^
@@ -41027,6 +41041,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||svrj.cn^
 ||svwo.cn^
 ||svxsadbrobogk.website^
+||svxteskqvobfd.website^
 ||svzkhal2zh.com^
 ||svzshmeczqudx.site^
 ||sw.singlsw.com^
@@ -41121,6 +41136,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||syimwfacvwtqp.online^
 ||syislob.top^
 ||sykzow.xyz^
+||syllogesyun.shop^
 ||sylphlatris.cyou^
 ||sylxisys.com^
 ||symbaloo.com/static/banners/*/pwHomepage.js
@@ -41600,6 +41616,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||tensojobe.qpon^
 ||tensuao.club^
 ||teoeqzeceibxd.space^
+||teparygarnett.shop^
 ||terabox.app/api/ad/
 ||terabox.com/api/ad/
 ||teracent.net^
@@ -41872,6 +41889,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||thronosgeneura.com^
 ||throuchstoops.com^
 ||throughthesumeme.com^
+||throwcommercial.com^
 ||throxul.com^
 ||thrtle.com^
 ||thruksyq.com^
@@ -41997,6 +42015,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||tinningbilk.cfd^
 ||tinsus.com^
 ||tinted-run.com^
+||tinted-specialist.pro^
 ||tintedvideo.com^
 ||tiny-atmosphere.com^
 ||tinyadz.com^$third-party
@@ -42047,6 +42066,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||tizdfz.icu^
 ||tizerclik.com^
 ||tj.com.day/js/*.js|$script,third-party
+||tj.shinpa.me^$third-party,script
 ||tjaard11.xyz^
 ||tjetwqtpcvwnl.com^
 ||tjfavx.icu^
@@ -42927,6 +42947,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||turnhub.net^
 ||turnipplumpositively.com^
 ||turnstileunavailablesite.com^
+||turnwayinglobe.cfd^
 ||turshachokes.cyou^
 ||turtlestarterdirected.com^
 ||tusayansamishtorsoes.cfd^
@@ -43367,6 +43388,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||uhoughaitsuloo.com^
 ||uhpdsplo.com^
 ||uhuf56.fun^
+||uhuruslavsmatzas.cyou^
 ||uhvsqmhvi.com^
 ||uhyf.cn^
 ||uhyuspdyothna.online^
@@ -43584,6 +43606,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||unibotscdn.com^$third-party
 ||unicornpride123.com^
 ||unicume.com^
+||unifacedaffing.cfd^
 ||unifacetorydom.shop^
 ||unifdlat.top^
 ||unifieddataconnect.click^
@@ -43620,6 +43643,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||unknowntray.com^$third-party
 ||unlaidsixing.help^
 ||unlamechins.cfd^
+||unlawful-camera.pro^
 ||unlawful-judgment.com^
 ||unlawfulbasket.pro^
 ||unlawfuldamage.com^
@@ -44320,6 +44344,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||vengeful-affect.pro^
 ||vengeful-egg.com^
 ||vengefulgrass.com^$third-party
+||venisonneddies.cfd^
 ||venkrana.com^
 ||venomousvessel.com^$third-party
 ||venturead.com^
@@ -45112,6 +45137,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||w59g.icu^
 ||w5ba5b.cc^
 ||w5bi16f3co.com^
+||w5c6d9.cc^
 ||w5ftl8bhu3.com^
 ||w5rilm36l3xjbhvjocn9rm.cfd^
 ||w6f5f8r9.fun^
@@ -46408,6 +46434,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||wyvlllooallok.top^
 ||wyvpkmbj.icu^
 ||wyvw.cn^
+||wywkwqzwqvrlj.top^
 ||wyxdsmlxwmply.com^
 ||wyzq.rehuwang.com^
 ||wz3rvc.cn/*.html$~third-party
@@ -46585,6 +46612,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||xehyjx.icu^
 ||xeicappcjzraw.website^
 ||xeiqculqoqvw.com^
+||xejrwgzfwzxwx.website^
 ||xekrbwex7d.com^
 ||xemmgygfgjytb.website^
 ||xengqsqm.com^
@@ -47309,6 +47337,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||xxmcqrhazltss.space^
 ||xxmfopafuhkpe.space^
 ||xxooos.com/mm/
+||xxpkpjptfwnrfkn.com^
 ||xxqmtod.icu^
 ||xxsmad1.com^
 ||xxsmad2.com^
@@ -47419,6 +47448,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||y1ma8c054n.com^
 ||y1n1n3e0v.com^
 ||y1z29vqt4pgxg9ri.cfd^
+||y2ehvxgs.xyz^
 ||y2mate.com/themes/js/common.js
 ||y4g8fgj6ra.com^
 ||y4l.icu^
@@ -47554,6 +47584,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||yditdwjmuksnj.website^
 ||ydmnlxtu.xyz^
 ||ydolhlwq.xyz^
+||ydopvxjwmlkoo.space^
 ||ydrvkdni.xyz^
 ||ydss.cn/test.www.jdpay.com
 ||ydstatic.com/dsp_website/
@@ -48898,39 +48929,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>10673
-                       <div class="WhatToDo">
-                       <h1 class="Header-title">Bad Gateway</h1>
-                       <p>If that is not the case, take a look at the article on <a href="https://client.cdn77.com/support/knowledgebase/cdn-resource/troubleshooting-error-messages" class="common-link">troubleshooting error messages</a> in our knowledgebase.</p>
-                       <p>Please make sure the firewall on your origin server is disabled. It might be blocking the requests from the CDN77 servers.</p>
-                       <p>Please try again in a few minutes. If the problem persists for more than 30 minutes, try contacting website owner via a different channel.</p>
-                   </div>
-                   <div class="WhatToDo-description">
-                   <h3 class="WhatToDo-title">As the <strong>Website administrator...</strong></h3>
-                   <h3 class="WhatToDo-title">If you're a <strong>Visitor...</strong></h3>
-               </div>
-               <div class="WhatToDo-column">
-           </div>
-           <div class="Header-description">CDN77 server is unable to reach website's origin server.</div>
-           <img src="img/error-scheme.png" alt="Bad Gateway" class="Header-scheme">
-           <span class="Header-errorNumber">Error 502</span>
-       </div>
-       <div class="Header-wrap">
-       <div class="Section-wrap">
-   </header>
-   </section>
-   <base href="//error.c.cdn77.org/" target="_blank">
-   <header class="Header">
-   <link rel="shortcut icon" href="img/favicon.ico" />
-   <link rel="stylesheet" href="css/main.css">
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <meta name="author" content="(c) 2023 CDN77">
-   <meta name="description" content="">
-   <meta name="keywords" content="">
-   <meta name="robots" content="nofollow" />
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <section class="Section Section--errorBottom">
-   <title>Website is offline – Bad Gateway</title>
+!<<<<<网站单独规则>>>>>10643
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
@@ -49524,11 +49523,6 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 9ketsuki.info###left_rss
 9monate.de##.ad_mobile
 9upk.com,ouyaoxiazai.com##.ad_show
-<!DOCTYPE html>
-</body>
-</head>
-<body>
-<head>
 Banner-Ad
 Banner-Adv
 DianYing.im,DianYingim.com,dyxs.com,dyxs.xyz,dyxs1.com,dyxs1.xyz,dyxs10.com,dyxs10.xyz,dyxs11.com,dyxs11.xyz,dyxs12.com,dyxs12.xyz,dyxs13.com,dyxs13.xyz,dyxs14.com,dyxs14.xyz,dyxs15.com,dyxs15.xyz,dyxs16.com,dyxs16.xyz,dyxs17.com,dyxs17.xyz,dyxs18.com,dyxs18.xyz,dyxs19.com,dyxs19.xyz,dyxs2.com,dyxs2.xyz,dyxs20.com,dyxs20.xyz,dyxs21.com,dyxs22.com,dyxs23.com,dyxs24.com,dyxs25.com,dyxs26.com,dyxs27.com,dyxs28.com,dyxs29.com,dyxs3.com,dyxs3.xyz,dyxs30.com,dyxs4.com,dyxs4.xyz,dyxs5.com,dyxs5.xyz,dyxs6.com,dyxs6.xyz,dyxs7.com,dyxs7.xyz,dyxs8.com,dyxs8.xyz,dyxs9.com,dyxs9.xyz,waipian.com,waipian1.com,waipian10.com,waipian11.com,waipian12.com,waipian13.com,waipian14.com,waipian15.com,waipian16.com,waipian17.com,waipian18.com,waipian19.com,waipian2.com,waipian20.com,waipian21.com,waipian22.com,waipian23.com,waipian24.com,waipian25.com,waipian3.com,waipian4.com,waipian5.com,waipian6.com,waipian7.com,waipian8.com,waipian9.com##.open.popup-icon.popup-tips.popup
@@ -50641,6 +50635,7 @@ boyloves.fun,boylov.xyz,boylove.today,boylove.cc,boylove1.cc,boylove3.cc,boylove
 boyloves.fun,boylov.xyz,boylove.today,boylove.cc,boylove1.cc,boylove3.cc,boylove5.cc,boylove.mobi##div[style="display: block"]
 boyloves.fun,boylov.xyz,boylove.today,boylove.cc,boylove1.cc,boylove3.cc,boylove5.cc,boylove.mobi##img[src^="//boyloves"][src*="/static_pc/nb/"][src*=".php?"]
 boyloves.fun,boylov.xyz,boylove.today,boylove.cc,boylove1.cc,boylove3.cc,boylove5.cc,boylove.mobi##video
+bqg.com/js/h$script
 bqg33.com##a[href][target="_blank"],font[color="red"]
 bqg369.com##a[href="https://aibozhu.com"]
 bqprime.com##div[class^="ad-with-placeholder"]
@@ -52870,6 +52865,7 @@ hobbyconsolas.com,20minutos.es,autobild.es##div[class^="ad-catfish"]
 hochi.news##.ad[style^="min-width: 336px"]
 hochi.news##.ad[style^="min-width: 360px; min-height: 100px"]
 hochi.news##.ad_response
+hochi.news##div[style^="min-width: 320px; min-height: 1"]
 hochi.news##div[style^="min-width: 320px; min-height: 100px"]
 hochu.ua##.exp_300x250
 hockeybuzz.com##body .adFooterDFPMobile
@@ -55288,6 +55284,7 @@ news.denfaminicogamer.jp##.ad-smp
 news.denfaminicogamer.jp##.articleContent + #header-overlay
 news.denfaminicogamer.jp##.inst_overlap_cover
 news.denfaminicogamer.jp##.show[id*="_"]:has(> i.fa-times[id$="-close"][aria-hidden] + a[id$="-link"][data-wpel-link="external"] > img)
+news.denfaminicogamer.jp##aside[id^="heartopia_"]
 news.dwango.jp##.overlay-footer_ad
 news.gamebase.com.tw##.MobileNewsArticleMiddleDownAds
 news.gamebase.com.tw##.mobileAD
@@ -56216,6 +56213,7 @@ pornhub.com,pornhub.org,pornhub.net##header .reportUrl:has(> a#headerUpgradePrem
 pornhub.com,pornhub.org,pornhub.net##iframe[style*="height: 60px;"]
 pornhub.com,pornhub.org,pornhub.net##iframe[width="315"]
 pornhub.com,pornhub.org,pornhub.net##iframe[width="950"]
+pornhub.com,pornhub.org,tube8.com##div[class]:has(> ins.adsbytrafficjunky)
 pornhub.com,pornhubthbh7ap3u.onion##[srcdoc]
 pornhub.com,pornhubthbh7ap3u.onion##figure > [id][style="display: block;"]
 pornhub.com,pornhubthbh7ap3u.onion,redtube.com,spankbang.com,spankbang.party,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com,youporngay.com##[href*="base64"]
@@ -58096,6 +58094,7 @@ transtxxx.com##div[class^="video-conten"] > div[class]:first-child > div[class]:
 transtxxx.com,abtranny.com,shemalez.*,upornia.*,privatehomeclips.com,gettranny.com,desi-porn.tube,thegay.com,xmilf.com,hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##.nopop
 transtxxx.com,shemalez.*,gaytxxx.com,thegay.com,thegay.tube,hdzog.com,vjav.*,hotmovs.*,privatehomeclips.com,txxxporn.tube,txxx.*##div[style="display:flex !important"] > div
 transtxxx.com,txxxporn.tube,upornia.*##.video-videos-slider
+transvids.tv##.spot-holder
 transvids.tv##.tabs-menu + div.card
 trashbox.ru##.div_aj_top4_2020
 trashbox.ru##.div_aj_top4_as
@@ -58147,7 +58146,6 @@ tubator.com##.food_container
 tube8.com###flvplayer > div[id]:has(> div[id] > div[id] > ins.adsbytrafficjunky)
 tube8.com###js-mobile-top-banner
 tube8.com##body top-adblock
-tube8.com##div[class]:has(> ins.adsbytrafficjunky)
 tube8.com,youporn.com##.paid-tabs-information
 tube8.com,youporn.com##.watchTopAd
 tubedupe.com##iframe[src^="//tubedupe.com/banners/"]
@@ -58393,6 +58391,8 @@ upslut.com,gonzales-upslut-com.cdn.ampproject.org##center > p[class^="e_"]
 uptodown.com##.ssm_adunit_container
 upworthy.com##.mobile_ads
 uraaka-joshi.com##.grid-cell-non-hover
+uranai.d-square.co.jp##.AdvHeader
+uranai.d-square.co.jp##.AdvMain
 urapic.com##header + center
 urasma.com##.fbox
 urasma.com##.mbar
@@ -59475,6 +59475,7 @@ zakon.kz##.adblock_alert
 zakon.kz##.desktop_hide:has(> div[style^="min-height:"] > div[id^="adfox"])
 zakon.kz##.top-brendingMob
 zakzak.co.jp##.youtube-announcement
+zarina.ru##.fixed.bottom-16
 zaufanatrzeciastrona.pl##.post-page-head-area > .post-author ~ a[target="_blank"]:not([href*="zaufanatrzeciastrona.pl"]) > img
 zaxid.net##.mobile-branding-wrapper
 zaycev.fm##.not_for_premium
