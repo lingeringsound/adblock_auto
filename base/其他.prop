@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 6byQnteVeW+IzZY/ZqxC8g
+! Checksum: 2G6Dpode3zbnUoiBpTojuQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260119154504
-! Last modified: 2026-01-19 15:45:04
-! Total Count: 9629
+! Version: 20260120154904
+! Last modified: 2026-01-20 15:49:05
+! Total Count: 9636
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2536,6 +2536,7 @@
 ##a[onclick^="gtag"][onclick*="广告"]
 ##a[onclick^="visitReport("][target="_blank"]
 ##a[onclick^="window"] > img[id][width="1"]
+##a[ref*="sponsored"][onclick]
 ##a[referrerpolicy="unsafe-url"][target="_blank"]
 ##a[rel*="sponsored"][onclick]
 ##a[rel="nofollow"][href][target="_blank"] > div[class^="q-responsive"]
@@ -3059,6 +3060,7 @@
 ##img[alt*="迷情水"]
 ##img[alt*="迷魂药"]
 ##img[alt*="黑料网"][alt*="广告"]
+##img[alt="33直播"]
 ##img[alt="51直播"]
 ##img[alt="51萝莉"]
 ##img[alt="908棋牌"]
@@ -3077,6 +3079,7 @@
 ##img[alt="免费插入的快感"]
 ##img[alt="全国同城约炮"]
 ##img[alt="全球狼友募集令"]
+##img[alt="博业体育"]
 ##img[alt="同城约炮"]
 ##img[alt="啪哩啪哩"]
 ##img[alt="墮落姬甲"]
@@ -3088,6 +3091,7 @@
 ##img[alt="广告"]
 ##img[alt="开云体育"]
 ##img[alt="开元"]
+##img[alt="开元电子"]
 ##img[alt="成人二次元"]
 ##img[alt="成人抖音"]
 ##img[alt="成人抖音破解"]
@@ -3115,6 +3119,8 @@
 ##img[alt="賢者同盟"]
 ##img[alt="足博"]
 ##img[alt="足博体育"]
+##img[alt="迷情春药"]
+##img[alt="逗奶"]
 ##img[alt="重口味视频"]
 ##img[alt="重口社"]
 ##img[alt][src$=".mp3"]
@@ -8565,6 +8571,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||an.yandex.ru^
 ||analysis.120ask.com^
 ||analyti*.woozooo.com^$third-party
+||anlytic.net^$third-party
 ||anti.69vclub.com^
 ||antiadblocksystems.com^
 ||anyshare.icu^*.js
