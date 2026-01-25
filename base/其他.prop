@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 98kPASYmdKuW6L5l0K/aoA
+! Checksum: akAQiisUTnI9naUaTY2FXQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260124090846
-! Last modified: 2026-01-24 09:08:46
-! Total Count: 9647
+! Version: 20260125204057
+! Last modified: 2026-01-25 20:40:57
+! Total Count: 9652
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1034,6 +1034,8 @@
 ##.b3001 > .h100
 ##.bads
 ##.baners_block
+##.banner-ad
+##.banner-ads
 ##.banner-cctv-style-top
 ##.banner-container-h5 > .banner_all_wrap
 ##.banner-player
@@ -2694,6 +2696,8 @@
 ##div.container > .card ~ .tujia
 ##div.container > .spot-wrap
 ##div.container:not([id]):not([style]) > header ~ div.module
+##div.content > .top > div[class^="ad-"]
+##div.content > .top ~ .spot
 ##div.content > div[style] > div[class="photo-two"]
 ##div.da > a > img.lazyload
 ##div.down-list > ul > [href]
@@ -7940,6 +7944,7 @@ tool.xuecan.net###promo-spot
 topfapgirlspics.com##.custom:has(iframe[src^="/css/assets.html?r=0"])
 topfapgirlspics.com##[class*="adn-posty"]
 topfaps.com##div.koukoku_1
+triptoporn.com##.banner-ads
 trjvod.com#@#iframe[src^="/ad"][src$=".html"]
 tsearch.toutiaoapi.com##.l-card
 ttdm.me##.module-ddslist:has(.gg-icon)
