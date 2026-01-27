@@ -1,11 +1,11 @@
 # 混合规则
-### 自动更新(2026-01-27 16:24:35)
+### 自动更新(2026-01-28 00:23:53)
 
 
-| 名称 | GIthub订阅链接 | Github加速订阅链接 | ~~GitCode订阅链接(死了)~~ | ~~Gitlink订阅链接(死了)~~ |
+| 名称 | GIthub订阅链接 | Jsdelivrcdn缓存链接 | ~~GitCode订阅链接(死了)~~ | ~~Gitlink订阅链接(死了)~~ |
 | :-- | :-- | :-- | :-- | :-- |
-| 混合规则(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
-| 混合规则精简版(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
+| 混合规则(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
+| 混合规则精简版(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
 
 
 ### 拦截器说明
