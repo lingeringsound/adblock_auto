@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 0CL+uT6RDNFbjo1IgwVK1A
+! Checksum: Vb8Vr6ot1ka9r33vQXOgMg
 ! Title: 自用去广告Adblock规则
-! Version: 20260128150909
-! Last modified: 2026-01-28 15:09:09
-! Total Count: 9655
+! Version: 20260130193329
+! Last modified: 2026-01-30 19:33:29
+! Total Count: 9661
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -27,6 +27,7 @@
 ###LeftAd
 ###LeftAd1
 ###POPUP-WINDOW-AD
+###SearchForm_search_input_wapper + #cps-wrap
 ###__ads_dp
 ###__long_gg_container
 ###ad-B1-ATF
@@ -2484,6 +2485,7 @@
 ##a[href^="https://apk2.led-rymx.com"]
 ##a[href^="https://app.kmtgsopq.com?agentId="][target="_blank"]
 ##a[href^="https://as.sexad.net"]
+##a[href^="https://asset.3400.org/"]
 ##a[href^="https://b9556.vip"]
 ##a[href^="https://bds82.top"]
 ##a[href^="https://cdn.yinghuazy.xyz/apk"]
@@ -3901,6 +3903,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/sign?v=*.$third-party
 .top/ts_as.html?$third-party
 .top/uni-ggs.js
+.top/view_booster.js?v=$~third-party
 .top/wiseindex*?$third-party
 .top/xling_*_*.js?
 .top:*/api/v4/g?kyurl=$third-party
@@ -5811,6 +5814,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*laoli88*/view_booster.js?v=
 ://*llevven*/*0/*ll*.js
 ://*luolabook*/public/*.js
+://*madou*/view_booster.js?v=
 ://*mat6tube*/view_booster.js?v=
 ://*mh99*/view_booster.js?v=
 ://*missav*/herebyad
@@ -7286,6 +7290,7 @@ mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###mobile-list-banner.justify-conte
 mdtt.cc,mdtt.com,mdtt.live,mdtt.cn,mdtt.party###top-mobile-banner
 meijumi.net##div.pcbuxianshi
 meijumi.net##div.xiaapp
+meitu131.com##.appbox
 meitulu.cc##div.tujia
 mfsft.com,xgmeitu.com##.apptur
 mhnew.xyz,mhhanman.xyz##[id^="hfad"]
@@ -7882,6 +7887,7 @@ stopgame.ru#@#iframe[width="240"][height="400"]
 sunshinewaay.cn##img[class$="BnImg"]
 supjav.com##.movv-ad
 sv.baidu.com##.open-button-wrap
+swmzt.com###listp
 sxyprn.com##.tbd
 sxyprn.com##div[class$="bd"]
 sxyprn.net##.tbd,.cbd
