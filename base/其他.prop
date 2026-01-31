@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Vb8Vr6ot1ka9r33vQXOgMg
+! Checksum: rX0DHBNF3YZRcSBF/jXHTg
 ! Title: 自用去广告Adblock规则
-! Version: 20260130193329
-! Last modified: 2026-01-30 19:33:29
-! Total Count: 9661
+! Version: 20260131141451
+! Last modified: 2026-01-31 14:14:51
+! Total Count: 9672
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5160,6 +5160,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /templates/adv_
 /templates/bootadult4/js/bottom.js
 /templates/bootadult4/js/text.js
+/templates/duachua/js/$domain=buondua.com|buondua.us|kiutaku.com|kostaku.art|kostaku.com|kostaku.live|kostaku.us
 /templete/*/wap/js/sjgg.js$script
 /templets/*/js/couplet-ad.
 /templets/yycms3/img/*
@@ -6544,8 +6545,13 @@ btsj6.com##em > strong
 bunkr-albums.io,bunkr.cr,bunkr.fi,bunkr.ph,bunkr.si##center:has(>script[src*="/lv/esnk/"][src$="/code.js"])
 buondua.com,buondua.us##img[loading="lazy"][src^="//buondua.com/"]
 buondua.com,buondua.us##video[autoplay="true"][loop="true"][preload="auto"]
-buondua.com,buondua.us,kiutaku.com##.search-form + br + div[class]
-buondua.com,buondua.us,kostaku.art,kostaku.com,kostaku.live,kostaku.us##div[class] > div[class^="b"][class*="9"],div[class] > div[class^="i"][class*="9"],div[class] > div > div[class^="i"][class*="9"],div[class] > div > div[class^="b"][class*="9"]
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.columns ~ div:not([class]):not([id]):not([style])
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.container > br ~ div[class^="b"][class*="f"]:not([style]):not([id])
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.container > br ~ div[class^="i"][class*="f"]:not([style]):not([id])
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.search-box ~ div:not([class]):not([id]):not([style])
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.search-form + br + div[class]
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.search-form ~ div:not([class]):not([id]):not([style])
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##div:not([class]):not([id]):not([style]):has(iframe[src*="://creative."])
 bz80.com##button.btn-download
 cambro.*,cambro.company,cambro.wtf##div.rltdsldr.box
 cambro.*,cambro.company,cambro.wtf##div.sponsor
@@ -8321,6 +8327,11 @@ yeeach.com##script:has-text(new RegExp)
 yemancomic.com,yydscomic.com##.down-app
 yemancomic.com,yydscomic.com##^script:has-text(ads_codes)
 yemancomic.com,yydscomic.com##script:has-text(ads_codes)
+yeshex.com##.btm_list_box
+yeshex.com##.module-poster-item:has(div.type.asmr)
+yeshex.com##.module-poster-item:has(div.type.live)
+yeshex.com##.storeBox
+yeshex.com##.vaj_list_box
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, document.execCommand)
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, navigator.clipboard.write)
 yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(aopr, navigator.clipboard.writeText)
