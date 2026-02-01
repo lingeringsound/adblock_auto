@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: vPyqlHTnP5lpxcrVrwbVog
+! Checksum: wcivwz2VzX9NnYlB1T762w
 ! Title: 自用去广告Adblock规则
-! Version: 20260201131644
-! Last modified: 2026-02-01 13:16:45
-! Total Count: 9674
+! Version: 20260201160915
+! Last modified: 2026-02-01 16:09:15
+! Total Count: 9679
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2697,6 +2697,8 @@
 ##div.cardtb-head + div.app
 ##div.cell-lr[onclick^="window.open("]
 ##div.chapter-page-btn > style + div[id]:not([class]):not([style])
+##div.container > #allcontentBanner
+##div.container > #allcontentIconbar
 ##div.container > .card ~ .tujia
 ##div.container > .spot-wrap
 ##div.container:not([id]):not([style]) > header ~ div.module
@@ -2714,6 +2716,7 @@
 ##div.g-list > ul > li
 ##div.g-slide > div[class^="swiper-"]
 ##div.index_ddg
+##div.justify-center + div.grid.text-center
 ##div.layout-box.clearfix > .app
 ##div.links-top > ul.icon-list
 ##div.module-items > a[href^="https"]
@@ -3049,6 +3052,7 @@
 ##img[alt$="横幅"][src$=".gif"]
 ##img[alt$="约炮"]
 ##img[alt*="88棋牌"][src$=".gif"]
+##img[alt*="PG"][alt="娱乐"]
 ##img[alt*="bet365"][src$=".gif"]
 ##img[alt*="三唑仑"]
 ##img[alt*="三唑仓"]
@@ -3065,6 +3069,7 @@
 ##img[alt*="成人"][alt*="抖音"]
 ##img[alt*="新葡京"][src$=".gif"]
 ##img[alt*="棋牌游戏hf"][src$=".gif"]
+##img[alt*="直播"][alt*="横幅"]
 ##img[alt*="美女"][alt*="直播"][alt*="秀"]
 ##img[alt*="色情"][alt*="免费直播"]
 ##img[alt*="迷情水"]
