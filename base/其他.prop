@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: zCGu+EvgQDbA55BefdfZgA
+! Checksum: v5qAUc59VlRyiBGYRCMuUA
 ! Title: 自用去广告Adblock规则
-! Version: 20260201222929
-! Last modified: 2026-02-01 22:29:29
-! Total Count: 9681
+! Version: 20260204102714
+! Last modified: 2026-02-04 10:27:14
+! Total Count: 9687
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -492,6 +492,7 @@
 ###modalAblockWrapper
 ###modalAdblock
 ###myads
+###novel_mark_template + #popup_box
 ###nr + div[style="margin:0;padding:0;outline:0"]
 ###nr + script:not([src]) ~ div[id]:not([class])
 ###playerJsvLayer.jsv-layer
@@ -1049,6 +1050,7 @@
 ##.bdads
 ##.belowMastheadWrapper
 ##.bf_qy.common[id^="common"]
+##.bgfff
 ##.big-ads
 ##.big-advertisement
 ##.big-box-ad
@@ -1974,6 +1976,7 @@
 ##.top-header-ads-mobile
 ##.top-r-ads
 ##.top-site-ad
+##.top-wrap > script + a[href][target="_blank"]
 ##.top250Ad
 ##.topAd
 ##.topads
@@ -4727,9 +4730,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /iframe/ad/*
 /iframe/ad_
 /iframe/ads/*
-/image/20*-*-*/*/$domain=6180074.xyz|6180100.xyz|6180101.xyz|6180102.xyz|6180103.xyz|6180104.xyz|6180105.xyz|6180106.xyz|6180107.xyz|6180108.xyz|6180109.xyz|6180110.xyz|6180111.xyz|6180112.xyz|6180113.xyz|6180114.xyz|6180115.xyz|6180116.xyz|6180117.xyz|6180118.xyz|6180119.xyz|6180120.xyz|6180121.xyz|6180122.xyz|6180123.xyz|6180124.xyz|6180125.xyz|6180126.xyz|6180127.xyz|6180128.xyz|6180129.xyz|6180130.xyz|6180131.xyz|6180132.xyz|6180133.xyz|6180134.xyz|6181029.xyz|618712.xyz|618713.xyz|618714.xyz|618715.xyz|618721.xyz|618722.xyz|618723.xyz|618724.xyz|618726.xyz|618727.xyz|618731.xyz|618733.xyz|618734.xyz|618735.xyz|618736.xyz|618737.xyz|618738.xyz|618739.xyz|618740.xyz|618741.xyz|618742.xyz|618743.xyz|618744.xyz|618745.xyz|618747.xyz|618748.xyz|618749.xyz|618750.xyz|618751.xyz|618753.xyz|618846.xyz|618969.xyz
-/image/20*-*-*/*/$other
 /image/20*-*-*/*/$third-party,~media,~stylesheet,~image
+/image/20*-*-*/*/*.jpg$domain=6180074.xyz|6180100.xyz|6180101.xyz|6180102.xyz|6180103.xyz|6180104.xyz|6180105.xyz|6180106.xyz|6180107.xyz|6180108.xyz|6180109.xyz|6180110.xyz|6180111.xyz|6180112.xyz|6180113.xyz|6180114.xyz|6180115.xyz|6180116.xyz|6180117.xyz|6180118.xyz|6180119.xyz|6180120.xyz|6180121.xyz|6180122.xyz|6180123.xyz|6180124.xyz|6180125.xyz|6180126.xyz|6180127.xyz|6180128.xyz|6180129.xyz|6180130.xyz|6180131.xyz|6180132.xyz|6180133.xyz|6180134.xyz|6181029.xyz|618712.xyz|618713.xyz|618714.xyz|618715.xyz|618721.xyz|618722.xyz|618723.xyz|618724.xyz|618726.xyz|618727.xyz|618731.xyz|618733.xyz|618734.xyz|618735.xyz|618736.xyz|618737.xyz|618738.xyz|618739.xyz|618740.xyz|618741.xyz|618742.xyz|618743.xyz|618744.xyz|618745.xyz|618747.xyz|618748.xyz|618749.xyz|618750.xyz|618751.xyz|618753.xyz|618846.xyz|618969.xyz
+/image/20*-*-*/*/*.jpg$other
 /in-stream-ad-admanager/build.js
 /in/track?data=
 /invoke.js$domain=141jav.com|123putlocker.io|94funtv.com|koomanga.com|yifyhdtorrent.org|9anime.city|noveleandofree.com|mcmcryptos.xyz|terabox.fun|cin.cx|cin.ac
@@ -7280,6 +7283,7 @@ m.ximalaya.com##a[class*="schema-link"][to^="iting://open"]
 m.youdao.com##.banner-item
 m.youdao.com##.top-download
 m4411.com##[style*="131px"],.adlists
+m5mm.com##.appt1
 madou.club##a[href*="//www.pssy.xyz"]
 madou.club##a[href*="www.pssy.xyz"]
 madou.club##a[href][target="_blank"][rel="nofollow noopener"]
@@ -8028,10 +8032,11 @@ txxxporn.tube,vxxx.com##.pwa-ad
 txxxporn.tube,vxxx.com##div:has(> div[id][class] > div[class] > iframe[data-cbi])
 typhoon.yahoo.co.jp##.promoBanner
 tysswh.com##img[onclick]
-uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com###popup_box
-uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com##.search_comfirm_dialog_box
-uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com##div.dialog_mask
-uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com##div.login_box
+uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com###popup_box
+uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##.search_comfirm_dialog_box
+uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##.shortcut_box
+uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##div.dialog_mask
+uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##div.login_box
 ukdevilz.com##div[style]:not([id]):not([class]):has(script[src*="ad-provider"])
 unfetish.com##body > .modal-mask
 up.taoseye.com##a[target="_blank"],[ontouchstart]
@@ -9579,6 +9584,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||xhdel.com/xx/*.js
 ||xhzysh.com/runtime/ad$~third-party
 ||xiakeaa.com/css/js/tools.js
+||xiangcunxs*.com/static/js/read.js
 ||xiangzishop.com^$third-party
 ||xiaohuks.com/1.js
 ||xiaoshuotxt668.org^$image
