@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: w9ME1MeGCwVpWsKZHsJJzA
+! Checksum: x3RK/pd+ATsb2CLAE1x9qA
 ! Title: 拦截黄色网站转跳
-! Version: 20260205000657
-! Last modified: 2026-02-05 00:06:57
-! Total Count: 562
+! Version: 20260205201404
+! Last modified: 2026-02-05 20:14:04
+! Total Count: 564
 .*tad.cn/?c=ggmou$document
 .*tad.cn/?c=ggmou$~third-party
 .alb.aliyuncs.com:*/*/gougou.html?k=$document
@@ -66,6 +66,8 @@
 .com:*/m/#/home?register=1&agent=$~third-party
 .com:*/waga*.html$document
 .com:*/waga*.html$~third-party
+.com:80*/cc/*?is_not=*&target=*$document
+.com:80*/cc/*?is_not=*&target=*$~third-party
 .com:80*/cc/*?is_not=0&$document
 .com:80*/cc/*?is_not=0&$~third-party
 .com:8010/cc/*?is_not=1&target=1$document

@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 6Cvba43irLwVqmWaOAE2BA
+! Checksum: zljrETLSARCLBdrgvL1LzA
 ! Title: 自用去广告Adblock规则
-! Version: 20260205193302
-! Last modified: 2026-02-05 19:33:02
-! Total Count: 9699
+! Version: 20260205231004
+! Last modified: 2026-02-05 23:10:05
+! Total Count: 9706
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3654,6 +3654,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/in/multy$third-party
 .com/j/*$script,third-party
 .com/jquery.min.js?*=*=$third-party,domain=junhun520.app|junhun520.com|junhun520.net
+.com/js/axd.js
 .com/js/gg.js$script
 .com/js/xuanfu.js$script
 .com/k/*$script,third-party
@@ -3733,6 +3734,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:*/vj4/$third-party
 .com:*/vj5/$third-party
 .com:*/wz/vod_shang.js?v=
+.com:*0*/d/*?c=*&$third-party
 .com:*0*/d/*?t=*&$third-party
 .com:*0*/wap_*_*_*$other,third-party
 .com:*0*/wap_*_*_*$~image,~stylesheet,third-party
@@ -3743,8 +3745,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:26579/*/*.json
 .com:28816/*js?v=17$third-party
 .com:30009/*t*/$third-party
+.com:8*/d/*?c=*&$third-party
 .com:8*/mj*/$third-party
 .com:80*/cc/*?is_not=$third-party
+.com:80*/d/*?*=$third-party
 .com:80*/d/*?c=*&$third-party,script
 .com:80*/sc/*?*=$third-party
 .com:8001/cc/*?*=$third-party
@@ -3781,6 +3785,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:8010/sc/*?*=$third-party
 .com:8891/vh3/
 .com:8891/vj3/
+.com:9*/d/*?t=*&$third-party
 .com:9*/yc/c/*/GEBEF$third-party
 .com:9179/*t*/$third-party
 .com:9302/d/*?t=*&$third-party
@@ -4784,6 +4789,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/adverts-
 /js/adwordstracking.
 /js/adz.
+/js/axd.js
 /js/axdd.js
 /js/baiducdn.js$~third-party
 /js/baidutongji.js
@@ -9292,6 +9298,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||qhscsu.xyz^
 ||qimiaomanhua.com/poster/*dp.js
 ||qimiaomanhua.com/poster/*hf.js
+||qingtijy.*/js/axd.js
 ||qisaoba.com^
 ||qlogo1.store.qq.com^
 ||qlspx.com:$third-party
