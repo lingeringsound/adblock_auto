@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: T7V50W+grf5k/4wU4W7rUA
+! Checksum: ZcGhql8V7qjEv+PAWXTq2w
 ! Title: 自用去广告Adblock规则
-! Version: 20260206113644
-! Last modified: 2026-02-06 11:36:44
-! Total Count: 9710
+! Version: 20260209011532
+! Last modified: 2026-02-09 01:15:32
+! Total Count: 9715
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -4549,6 +4549,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /cnzz/tongji.php
 /code/native.js?h=$script
 /common/*/common/*.js$script,third-party
+/common/*/l/resource/*.js$script,~third-party
+/common/*/l/source/*.js$script,~third-party
+/common/f/production/*.js$script,~third-party
 /config/json/cctv.json?v=1$~third-party
 /config/tj.js
 /config/v7.js
@@ -8806,6 +8809,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||d33m25o4wo6f3g.cloudfront.net^
 ||d4d99bfbcf.e59f087ae4.com^
 ||da-ads.com^
+||daima.xuecan*/*/common/l/resource*.js
 ||daraz.com^
 ||dashenya.com/js/jquery.js
 ||data.bilibili.com/log
@@ -9634,6 +9638,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||xn--xhq326apqhcx0d.cn^
 ||xozilla.xxx/static/js/ppndr*.js
 ||xplme.xyz^
+||xtdiguo.com/wp-content/plugins/wp-ymotn-aisvjwlo/wp-qoauvew-zxkn.js
 ||xtdsxjlk.club^
 ||xuexiwa.com^$script,third-party
 ||xunsu.cc/js/indexbottom.js
