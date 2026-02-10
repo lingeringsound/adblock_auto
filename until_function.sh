@@ -199,15 +199,15 @@ for target_content in `cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!
 do
 a=$(($a + 1))
 target_content="#${target_content}"
-export T_STR="${target_content}"
-busybox awk '{str=ENVIRON["T_STR"]; if(index($0, str) && substr($0, length($0)-length(str)+1) == str) print $0}' "${target_file}" > "${target_file_tmp}" && echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${target_content}"
+transfer_content=$(escape_special_chars ${target_content})
+grep -E "${transfer_content}$" "${target_file}" > "${target_file_tmp}" && echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${transfer_content}$"
 if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|#.*||g' | grep -E ',')" != "" ;then
 	busybox sed -i 's|#.*||g' "${target_file_tmp}"
 	local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | busybox sed '/^[[:space:]]*$/d' | sort  | uniq )
 	echo "${before_tmp}" > "${target_file_tmp}"
 	busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then
-		busybox awk '{str=ENVIRON["T_STR"]; if(!(index($0, str) && substr($0, length($0)-length(str)+1) == str)) print $0}' "${target_file}" > "${target_output_file}"
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
 cat << key >> "${target_output_file}" 
 `cat "${target_file_tmp}"`${target_content}
 key
@@ -220,8 +220,8 @@ else
 	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
 		busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
 	fi
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then
-		busybox awk '{str=ENVIRON["T_STR"]; if(!(index($0, str) && substr($0, length($0)-length(str)+1) == str)) print $0}' "${target_file}" > "${target_output_file}"
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
 cat << key >> "${target_output_file}" 
 `cat "${target_file_tmp}"`${target_content}
 key
@@ -229,7 +229,6 @@ key
 	fi
 fi
 done
-unset T_STR
 rm -rf "${target_file_tmp}" 2>/dev/null
 }
 
