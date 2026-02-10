@@ -190,47 +190,46 @@ local IFS=$'\n'
 local target_file="${1}"
 local target_file_tmp="`pwd`/${target_file##*/}.tmp"
 local target_output_file="`pwd`/${target_file##*/}.temple"
-local count_Rules_all=`cat "${target_file}" | grep '#' | busybox sed '/^#/d;/^!/d;/^||/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l`
+local count_Rules_all=`cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l`
 local a=0
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
 local new_file=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
 echo "${new_file}" > "${target_file}"
-for target_content in `cat "${target_file}" | grep '#' | busybox sed '/^#/d;/^!/d;/^||/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
+for target_content in `cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
 do
-	a=$(($a + 1))
-	target_content="#${target_content}"
-	grep -F "${target_content}" "${target_file}" | grep "${target_content}$" > "${target_file_tmp}"
-	echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${target_content}$"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|#.*||g' | grep -E ',')" != "" ;then
-		busybox sed -i 's|#.*||g' "${target_file_tmp}"
-		local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | busybox sed '/^[[:space:]]*$/d' | sort | uniq )
-		echo "${before_tmp}" > "${target_file_tmp}"
-		busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
-		if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-			local content_to_keep=$(grep -Fv "${target_content}" "${target_file}")
-			echo "${content_to_keep}" > "${target_output_file}"
+a=$(($a + 1))
+target_content="#${target_content}"
+export T_STR="${target_content}"
+busybox awk '{str=ENVIRON["T_STR"]; if(index($0, str) && substr($0, length($0)-length(str)+1) == str) print $0}' "${target_file}" > "${target_file_tmp}" && echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${target_content}"
+if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|#.*||g' | grep -E ',')" != "" ;then
+	busybox sed -i 's|#.*||g' "${target_file_tmp}"
+	local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | busybox sed '/^[[:space:]]*$/d' | sort  | uniq )
+	echo "${before_tmp}" > "${target_file_tmp}"
+	busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then
+		busybox awk '{str=ENVIRON["T_STR"]; if(!(index($0, str) && substr($0, length($0)-length(str)+1) == str)) print $0}' "${target_file}" > "${target_output_file}"
 cat << key >> "${target_output_file}" 
 `cat "${target_file_tmp}"`${target_content}
 key
-			mv -f "${target_output_file}" "${target_file}"
-		fi
-	else
-		busybox sed -i 's|#.*||g' "${target_file_tmp}"
-		local before_tmp=$(cat "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
-		echo "${before_tmp}" > "${target_file_tmp}"
-		if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
-			busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
-		fi
-		if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-			local content_to_keep=$(grep -Fv "${target_content}" "${target_file}")
-			echo "${content_to_keep}" > "${target_output_file}"
-cat << key >> "${target_output_file}" 
-`cat "${target_file_tmp}"`${target_content}
-key
-			mv -f "${target_output_file}" "${target_file}"
-		fi
+		mv -f "${target_output_file}" "${target_file}"
 	fi
+else
+	busybox sed -i 's|#.*||g' "${target_file_tmp}"
+	local before_tmp=$(cat "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
+	echo "${before_tmp}" > "${target_file_tmp}"
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
+		busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
+	fi
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then
+		busybox awk '{str=ENVIRON["T_STR"]; if(!(index($0, str) && substr($0, length($0)-length(str)+1) == str)) print $0}' "${target_file}" > "${target_output_file}"
+cat << key >> "${target_output_file}" 
+`cat "${target_file_tmp}"`${target_content}
+key
+		mv -f "${target_output_file}" "${target_file}"
+	fi
+fi
 done
+unset T_STR
 rm -rf "${target_file_tmp}" 2>/dev/null
 }
 
@@ -247,48 +246,45 @@ local new_file=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | uniq | busy
 echo "${new_file}" > "${target_file}"
 for target_content in `cat "${target_file}" | grep 'domain=' | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d' `
 do
-	a=$(($a + 1))
-	target_content="${target_content}domain="
-	grep -F "${target_content}" "${target_file}" | grep "^${target_content}" > "${target_file_tmp}"
-	echo "※处理重复作用域名规则( $count_Rules_all → $(($count_Rules_all - ${a} )) ): ^${target_content}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|.*domain=||g' | grep -E ',' )" != "" ;then
-		echo "※规则 ${target_content} 包含其他限定器！"
-		local fixed_tmp=$(cat "${target_file_tmp}" | busybox sed 's/[[:space:]]$//g' | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
-		echo "${fixed_tmp}" > "${target_file_tmp}"
-		echo "※尝试修复中……"
-		local Rules_juggle=`cat "${target_file_tmp}" | sort | uniq | busybox sed '/^[[:space:]]*$/d' | wc -l`
-		test "${Rules_juggle}" -le "1" && echo "※无法合并，已跳过！" && continue
+a=$(($a + 1))
+target_content="${target_content}domain="
+transfer_content=$(escape_special_chars ${target_content} )
+grep -E "^${transfer_content}" "${target_file}" > "${target_file_tmp}" && echo "※处理重复作用域名规则( $count_Rules_all → $(($count_Rules_all - ${a} )) ): ^${transfer_content}"
+if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|.*domain=||g' | grep -E ',' )" != "" ;then
+	echo "※规则 ${target_content} 包含其他限定器！"
+	local fixed_tmp=$(cat "${target_file_tmp}" | busybox sed 's/[[:space:]]$//g' | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
+	echo "${fixed_tmp}" > "${target_file_tmp}"
+	echo "※尝试修复中……"
+	local Rules_juggle=`cat "${target_file_tmp}" | sort | uniq | busybox sed '/^[[:space:]]*$/d' | wc -l`
+	test "${Rules_juggle}" -le "1" && echo "※无法合并，已跳过！" && continue
+fi
+if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|.*domain=||g' | grep -E '\|')" != "" ;then
+	busybox sed -i 's|.*domain=||g' "${target_file_tmp}"
+	local before_tmp=$(cat "${target_file_tmp}" | tr '|' '\n' | busybox sed '/^[[:space:]]*$/d' | sort  | uniq)
+	echo "${before_tmp}" > "${target_file_tmp}"
+	busybox sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}" 
+cat << key >> "${target_output_file}" 
+${target_content}`cat "${target_file_tmp}"`
+key
+		mv -f "${target_output_file}" "${target_file}"
 	fi
-
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|.*domain=||g' | grep -E '\|')" != "" ;then
-		busybox sed -i 's|.*domain=||g' "${target_file_tmp}"
-		local before_tmp=$(cat "${target_file_tmp}" | tr '|' '\n' | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
-		echo "${before_tmp}" > "${target_file_tmp}"
+else
+	busybox sed -i 's|.*domain=||g' "${target_file_tmp}"
+	local before_tmp=$(cat "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort  | uniq)
+	echo "${before_tmp}" > "${target_file_tmp}"
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
 		busybox sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
-		if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-			local content_to_keep=$(grep -Fv "${target_content}" "${target_file}")
-			echo "${content_to_keep}" > "${target_output_file}"
-cat << key >> "${target_output_file}" 
-${target_content}`cat "${target_file_tmp}"`
-key
-			mv -f "${target_output_file}" "${target_file}"
-		fi
-	else
-		busybox sed -i 's|.*domain=||g' "${target_file_tmp}"
-		local before_tmp=$(cat "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
-		echo "${before_tmp}" > "${target_file_tmp}"
-		if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
-			busybox sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
-		fi
-		if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-			local content_to_keep=$(grep -Fv "${target_content}" "${target_file}")
-			echo "${content_to_keep}" > "${target_output_file}"
-cat << key >> "${target_output_file}" 
-${target_content}`cat "${target_file_tmp}"`
-key
-			mv -f "${target_output_file}" "${target_file}"
-		fi
 	fi
+	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}"
+cat << key >> "${target_output_file}" 
+${target_content}`cat "${target_file_tmp}"`
+key
+		mv -f "${target_output_file}" "${target_file}"
+	fi
+fi
 done
 rm -rf "${target_file_tmp}" 2>/dev/null
 busybox sed -i 's/换行符正则表达式n/\\/g' "${target_file}"
