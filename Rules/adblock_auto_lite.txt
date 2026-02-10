@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: nuaBUMXVE9dZBUOSXvhwfQ
-! Title: 混合规则精简版(更新日期2026-02-10 07:54:48)
-! Version: 20260210075448
+! Checksum: lJLTwl+r/WWNMv0UHK8kbg
+! Title: 混合规则精简版(更新日期2026-02-10 09:23:12)
+! Version: 20260210092313
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-02-10 07:54:48
-! Total Count: 65010
-! Blocked Filters: 65010
+! Last modified: 2026-02-10 09:23:13
+! Total Count: 65021
+! Blocked Filters: 65021
 ! Description: 合并于各种知名的Adblock规则，适用于移动端轻量的浏览器，例如 VIA / Rian / B仔浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! GitHub Homepage: https://github.com/lingeringsound/adblock_auto
@@ -14,7 +14,7 @@
 ! Github Raw CDN Link: https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt
 
 
-!<<<<<通配符规则>>>>>4693
+!<<<<<通配符规则>>>>>4696
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
@@ -1129,6 +1129,8 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 .vip/facaishang.js$script
 .vip/facaishen*.js$script,~third-party
 .vip/gg/
+.vip/ggdi.js
+.vip/ggding.js
 .vip/happyxia.js$script
 .vip/html/ddx.js
 .vip/html/hfv.js
@@ -2651,6 +2653,7 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 /ggao/*
 /ggclass/*
 /ggdata1.
+/ggdi*.js$third-party
 /ggg530.oss-
 /gggg/*960*.gif
 /ggjs/*
@@ -4710,7 +4713,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 |javascript:*window.location
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<域名规则>>>>>43659
+!<<<<<域名规则>>>>>43667
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com
 |https://m.frgls.com/js/*.js?v=
 ||*.com/|$third-party,domain=youtubepro.app
@@ -12778,6 +12781,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||blockerclave.shop^
 ||blocksfeathers.com^
 ||blocksly.org^
+||blocsbottles.qpon^
 ||blog-sokuhou.com^$domain=bakufu.jp
 ||blog.xuite.net/_public/js/ysmad.js
 ||blogads.com^
@@ -19111,6 +19115,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||eh6xjr8p0.com^
 ||ehaie.top^
 ||ehczaa.icu^
+||ehdgkwjcjzopt.site^
 ||ehfjup.xyz^$third-party
 ||ehhjfgs.xyz^
 ||ehlrxixabvzbo.tech^
@@ -27103,6 +27108,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||kan98.com/images/*.gif
 ||kan98.com/statics/js/k2017/kan98.js
 ||kanald.com.tr/netmera_worker.html
+||kanapporomas.shop^
 ||kanav.ad/template/*/images/qf/
 ||kanbook.net/static/js_union/
 ||kancloud.cn/ad/
@@ -36567,6 +36573,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||redirectlinker.com^
 ||redirectvoluum.com^
 ||redmx.cn^$third-party
+||rednessinjointdevota.cfd^
 ||redoutsologist.com^
 ||redpineapplemedia.com^$third-party
 ||redressparity.com^
@@ -38177,6 +38184,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||scrugokl.com^
 ||scrupulousencodebrother.com^
 ||scrwlzxaxksed.space^
+||scubomyvrhifv.website^
 ||scuddedbanglednannies.cyou^
 ||scukeknekbomd.website^
 ||sculpedarrent.cfd^
@@ -39920,6 +39928,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||sseudorassb.com^
 ||ssgg.chazidian.com^
 ||ssh.*.com^*!$script,third-party
+||sshnthcuddmcuhb.com^
 ||ssihovwmbfikv.online^
 ||ssindserving.com^
 ||ssjskbenyzmha.online^
@@ -40776,6 +40785,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||sycheeyustaga.qpon^
 ||syconidharoset.qpon^
 ||sycosesunbase.com^
+||sydyqqtyyrjds.online^
 ||syeniteexodoi.com^
 ||syfgtby.cn^
 ||syigfmoeoaono.space^
@@ -43037,6 +43047,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||ujfdbyebg.pro^
 ||ujhu.cn^
 ||ujimtyt.top^
+||ujlqnxrgbmtgg.online^
 ||ujlxkxgfl3.creativelandings.xyz^
 ||ujmz.cn^
 ||ujocjvznllpam.site^
@@ -58520,7 +58531,7 @@ xjav.tube##.video__wrapper > div.wrapper:has(> article div[style="width: 300px; 
 xjav.tube,manysex.tube,manysex.com##.suggestion-wrapper
 xjav.tube,manysex.tube,manysex.com##.video-page__related + div.headline
 xjav.tube,manysex.tube,manysex.com##.videoplayer + section
-xlys.ltd.buzz,xlys.ltd.live,xlys.ltd.ua,xlys.me,xlys02.com,xlys03.com,xlys05.com##a[href*="/aiad"]
+xl01.com.de,xl02.com.de,xl03.com.de,xl05.com.de,xlys.ltd.buzz,xlys.ltd.live,xlys.ltd.ua,xlys.me,xlys02.com,xlys03.com,xlys05.com##a[href*="/aiad"]
 xmfish.com##.advert-entry-list
 xn--*.*/ins/js/*16$third-party,script
 xn----7sbbeeptbfadjdvm5ab9bqj.xn--p1ai##.amp_widget_below_the_header
