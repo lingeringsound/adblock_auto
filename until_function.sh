@@ -188,105 +188,69 @@ function escape_special_chars(){
 function sort_Css_Combine(){
 local IFS=$'\n'
 local target_file="${1}"
+test ! -f "${target_file}" && return
 local target_file_tmp="`pwd`/${target_file##*/}.tmp"
-local target_output_file="`pwd`/${target_file##*/}.temple"
-local count_Rules_all=`cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l`
+local count_Rules_all=$(cat "${target_file}" | grep '#' | busybox sed '/^#/d;/^!/d;/^||/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l)
 local a=0
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
-local new_file=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
-echo "${new_file}" > "${target_file}"
-for target_content in `cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
+local current_content=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d')
+echo "${current_content}" > "${target_file}"
+for target_content in $(echo "${current_content}" | grep '#' | busybox sed '/^#/d;/^!/d;/^||/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d)
 do
-a=$(($a + 1))
-target_content="#${target_content}"
-transfer_content=$(escape_special_chars ${target_content})
-grep -E "${transfer_content}$" "${target_file}" > "${target_file_tmp}" && echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${transfer_content}$"
-if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|#.*||g' | grep -E ',')" != "" ;then
-	busybox sed -i 's|#.*||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | busybox sed '/^[[:space:]]*$/d' | sort  | uniq )
-	echo "${before_tmp}" > "${target_file_tmp}"
-	busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
-cat << key >> "${target_output_file}" 
-`cat "${target_file_tmp}"`${target_content}
-key
-		mv -f "${target_output_file}" "${target_file}"
+	a=$(($a + 1))
+	local css_suffix="#${target_content}"
+	echo "${current_content}" | grep -F "${css_suffix}" > "${target_file_tmp}"
+	echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${css_suffix}"
+	local domains=""
+	if grep -q ',' "${target_file_tmp}" 2>/dev/null; then
+        domains=$(busybox sed 's|#.*||g' "${target_file_tmp}" | tr ',' '\n' | busybox sed '/^[[:space:]]*$/d' | sort -u | tr '\n' ',' | busybox sed 's/,$//')
+    else
+        domains=$(busybox sed 's|#.*||g' "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort -u | tr '\n' ',' | busybox sed 's/,$//')
+    fi
+	if [[ -n "$domains" ]]; then
+		current_content=$(echo "${current_content}" | grep -Fv "${css_suffix}")
+		current_content="${current_content}${IFS}${domains}${css_suffix}"
 	fi
-else
-	busybox sed -i 's|#.*||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
-	echo "${before_tmp}" > "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
-		busybox sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
-	fi
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
-cat << key >> "${target_output_file}" 
-`cat "${target_file_tmp}"`${target_content}
-key
-		mv -f "${target_output_file}" "${target_file}"
-	fi
-fi
 done
-rm -rf "${target_file_tmp}" 2>/dev/null
+echo "${current_content}" > "${target_file}"
+rm -f "${target_file_tmp}" 2>/dev/null
 }
 
 #去除重复作用的域名
 function sort_domain_Combine(){
 local IFS=$'\n'
 local target_file="${1}"
+test ! -f "${target_file}" && return
 local target_file_tmp="`pwd`/${target_file##*/}.tmp"
-local target_output_file="`pwd`/${target_file##*/}.temple"
-local count_Rules_all=`cat "${target_file}" | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d' | wc -l `
+local count_Rules_all=$(cat "${target_file}" | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d' | wc -l)
 local a=0
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
-local new_file=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
-echo "${new_file}" > "${target_file}"
-for target_content in `cat "${target_file}" | grep 'domain=' | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d' `
+local current_content=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d')
+echo "${current_content}" > "${target_file}"
+for target_content in $(echo "${current_content}" | grep 'domain=' | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d')
 do
-a=$(($a + 1))
-target_content="${target_content}domain="
-transfer_content=$(escape_special_chars ${target_content} )
-grep -E "^${transfer_content}" "${target_file}" > "${target_file_tmp}" && echo "※处理重复作用域名规则( $count_Rules_all → $(($count_Rules_all - ${a} )) ): ^${transfer_content}"
-if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|.*domain=||g' | grep -E ',' )" != "" ;then
-	echo "※规则 ${target_content} 包含其他限定器！"
-	local fixed_tmp=$(cat "${target_file_tmp}" | busybox sed 's/[[:space:]]$//g' | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' | busybox sed '/^[[:space:]]*$/d' | sort | uniq)
-	echo "${fixed_tmp}" > "${target_file_tmp}"
-	echo "※尝试修复中……"
-	local Rules_juggle=`cat "${target_file_tmp}" | sort | uniq | busybox sed '/^[[:space:]]*$/d' | wc -l`
-	test "${Rules_juggle}" -le "1" && echo "※无法合并，已跳过！" && continue
-fi
-if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed 's|.*domain=||g' | grep -E '\|')" != "" ;then
-	busybox sed -i 's|.*domain=||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | tr '|' '\n' | busybox sed '/^[[:space:]]*$/d' | sort  | uniq)
-	echo "${before_tmp}" > "${target_file_tmp}"
-	busybox sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}" 
-cat << key >> "${target_output_file}" 
-${target_content}`cat "${target_file_tmp}"`
-key
-		mv -f "${target_output_file}" "${target_file}"
+	a=$(($a + 1))
+	local dom_prefix="${target_content}domain="
+	echo "${current_content}" | grep -F "${dom_prefix}" > "${target_file_tmp}"
+	echo "※处理重复作用域名规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${dom_prefix}"
+	if grep -E ',' "${target_file_tmp}" | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' >/dev/null 2>&1; then
+		echo "※规则 ${dom_prefix} 包含其他限定器，跳过修复以保安全！"
+		continue
 	fi
-else
-	busybox sed -i 's|.*domain=||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d' | sort  | uniq)
-	echo "${before_tmp}" > "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
-		busybox sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
+	local combined_doms=""
+	if grep -q '\|' "${target_file_tmp}" 2>/dev/null; then
+		combined_doms=$(busybox sed 's|.*domain=||g' "${target_file_tmp}" | tr '|' '\n' | busybox sed '/^[[:space:]]*$/d;s/[[:space:]]//g' | sort -u | tr '\n' '|' | busybox sed 's/|$//')
+    else
+		combined_doms=$(busybox sed 's|.*domain=||g' "${target_file_tmp}" | busybox sed '/^[[:space:]]*$/d;s/[[:space:]]//g' | sort -u | tr '\n' '|' | busybox sed 's/|$//')
 	fi
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
-		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}"
-cat << key >> "${target_output_file}" 
-${target_content}`cat "${target_file_tmp}"`
-key
-		mv -f "${target_output_file}" "${target_file}"
+	if [[ -n "$combined_doms" ]]; then
+		current_content=$(echo "${current_content}" | grep -Fv "${dom_prefix}")
+		current_content="${current_content}${IFS}${dom_prefix}${combined_doms}"
 	fi
-fi
 done
-rm -rf "${target_file_tmp}" 2>/dev/null
+echo "${current_content}" > "${target_file}"
 busybox sed -i 's/换行符正则表达式n/\\/g' "${target_file}"
+rm -f "${target_file_tmp}" 2>/dev/null
 }
 
 #去除badfilter对应规则
