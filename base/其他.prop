@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: J4oe2U0/wIUB9evkG0w3Tw
+! Checksum: DZ7gXQCL/BLVp1I1gH+PyQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260212141147
-! Last modified: 2026-02-12 14:11:48
-! Total Count: 9716
+! Version: 20260213131622
+! Last modified: 2026-02-13 13:16:22
+! Total Count: 9745
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2004,6 +2004,7 @@
 ##.videos-ad
 ##.view-ads
 ##.view-video-advertisements
+##.w-full > a[href*="://ad"][target="_blank"]
 ##.wc-adblock-wrap
 ##.wgAdBlockMessage
 ##.wide-ads-container
@@ -2306,6 +2307,7 @@
 ##a[href*=".xyz:"] > img[src]
 ##a[href*=".xyz?ch=ssmh"]
 ##a[href*="/#/register?pid="] > img
+##a[href*="//ad-ymld.kmh.wiki"]
 ##a[href*="//ad.doubleclick.net"]
 ##a[href*="//adclick.g.doubleclick.net"]
 ##a[href*="//adultfriendfinder.com"]
@@ -2446,6 +2448,7 @@
 ##a[href][rel="nofollow"] > img.nature
 ##a[href][rel="noreferrer"] > img[src$=".gif.js"]
 ##a[href][style*="overflow:hidden;display:block;"] > img[src$=".gif"][style*="width:100%"]
+##a[href][target="_blank"] > img[alt="Game Tip"]
 ##a[href][target="_blank"] > img[alt][src^="/static/resources/old/images/AD/"]
 ##a[href][target="_blank"] > img[id*="GGADIMG"]
 ##a[href][target="_blank"] > img[referrerpolicy="no-referrer"][src*=".yximgs.com/"]
@@ -3337,6 +3340,8 @@
 ##section#focus.focusBanner
 ##section[class^="container"][class*="section section-relate-"] > [class^="content"][class*="relate"]
 ##section[data-e2e="advertisement"]
+##source[srcset*="/images/ad/"] ~ img
+##source[srcset*="/images/ads/"] ~ img
 ##span > video[poster*="-1316632262.cos.ap-"]
 ##span > video[poster*="cos.ap-"][poster*="myqcloud.com"][poster*="13"]
 ##span[data-ez-ph-id]
@@ -3643,6 +3648,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/facaishen.js
 .com/facaishen1.js
 .com/float_down.js?17$third-party
+.com/foot.php?ver=17$~third-party
 .com/footmenu.js$~third-party
 .com/get/*?*&*id=20*&*=*=$third-party,~media,~image,~stylesheet
 .com/get/*?*&*id=2032069$third-party
@@ -3917,6 +3923,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/?channelCode=$~third-party
 .top/ad*/mobile.js$~third-party
 .top/ad*/show.js$~third-party
+.top/foot.php?ver=17$~third-party
 .top/iis.*.1*.json?$third-party
 .top/j/*$script,third-party
 .top/js.php?*=*=*$third-party
@@ -3989,6 +3996,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz/effect.php?
 .xyz/ejrtpppyjfgejy_*_*.js?$third-party
 .xyz/ember?$third-party
+.xyz/foot.php?ver=17$~third-party
 .xyz/foundation?$third-party
 .xyz/gg.js$script
 .xyz/ggdi*.js$third-party
@@ -4635,6 +4643,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /file/ads/*
 /fileadmin/ads/*
 /files/ads/*
+/foot.php?ver=17$~third-party
 /gdpr-ad-script.
 /gdpr-ad-script.js$script
 /geminivideoads/*
@@ -4773,6 +4782,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/GDHF.js
 /js/aa.htm$script
 /js/aahome.htm
+/js/ad-units.js
 /js/ad.js?slot=
 /js/ad_jyshe.js$third-party,script
 /js/adb.js
@@ -4782,6 +4792,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/adlm*.js
 /js/adlmb*.js$third-party,script
 /js/adlmb.js$third-party,script
+/js/adm.js
 /js/ads.js?v=
 /js/ads/*0.js
 /js/ads/*2.js
@@ -4830,6 +4841,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/dyguosj/*
 /js/easyAD.js
 /js/easyAD2.js
+/js/exopop.js
 /js/float*.js
 /js/gadks.js?$~third-party,script
 /js/gano.js?$~third-party,script
@@ -5115,6 +5127,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static/ad01.js
 /static/ad02.js
 /static/ad03.js
+/static/ads/js/adm.js
 /static/blue/js/17mb.js
 /static/float*.js
 /static/gd.js
@@ -5543,6 +5556,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 1shorten.com,antiscan.me,app.stream2watch.sx,aylink.co,bets.pl,blogmado.com,cryptofuns.ru,dooseries.org,downturk.net,filma24.*,filmeserialehd.biz,flacdl.com,flashx.net,gdrivez.xyz,gitlink.pro,illink.net,kvador.com,manga168.com,modsfire.com,plawarn-manga.net,pornstash.in,privatemoviez.*,spaste.com,speed4up.com,tlin.me,tweetycoin.com,uploadflix.org,uploadraja.com,vezionlinefilme.com,xxx888porn.com##center > a[target="_blank"] > img
 1v1.lol,accuweather.com,aim400kg.com,airport-charles-de-gaulle.com,alison.com,ancient.eu,apornotube.net,appleinsider.com,appsious.com,barchart.com,bgr.in,bitsofco.de,bombhopper.io,businessinsider.com,citra-emu.org,clevelandclinic.org,crn.com,dcode.fr,defensesystems.com,delfi.lt,dvdsreleasedates.com,dynamicwallpaper.club,earlygame.com,ehow.com,elophant.com,epson-event-manager-utility.en.lo4d.com,ertyu.org,filehippo.com,flightglobal.com,forvo.com,getdaytrends.com,gifcandy.net,gingersoftware.com,gmanetwork.com,gradesaver.com,gtplanet.net,hiperdex.com,history.com,howchoo.com,ibc.org,icefilms.info,indiatvnews.com,infobyip.com,instadp.com,investopedia.com,ipaddress.com,javascripttutorial.net,jungle.lol,justfall.lol,lilymanga.com,macleans.ca,mangafox.la,martech.org,mobafire.com,movieweb.com,mtlblog.com,myhoustonmajic.com,mysqltutorial.org,mywebtimes.com,narcity.com,ndtv.com,nejm.org,newatlas.com,newsd.in,nytimes.com,nytimes3xbfgragh.onion,online-audio-converter.com,online-video-cutter.com,outsider.com,owfire.com,pairom.com,pdf.io,phoneky.com,picmix.com,pinkvilla.com,politico.eu,pornhd.com,prosettings.net,psdetch.com,pythontutorial.net,r3sub.com,ranker.com,readingrockets.org,saavn.com,samistream.com,satelite.io,servers.fivem.net,sexhoundlinks.com,soundclouddownloader.org,sqlservertutorial.net,supersextube.pro,techlusive.in,tempostorm.com,thehentaiworld.com,thelayoff.com,theurbanlist.com,thurrott.com,trafficland.com,tricksplit.io,tripadvisor.*,tvweb.com,updatestar.com,uptodown.com,whatsmydns.net,winporn.net,worldstarhiphop.com,worms.lol,www-technologyreview-com.cdn.ampproject.org,yokibu.com,zipi.com##body .ad
 2345.com##.pic:has(a[href^="http://g.wan."])
+2awomh7.cc,4abamh1.top,4abamh3.top,4abamh5.top,4p5mh6.top,abamh.me##.detail-main-info-author
 2cycomic.com,yemancomic.com##div[style^="width: 100%;background-color: black;color: white;padding: 0px 0;"]
 2cycomic.com,yemancomic.com##div[style^="width: 100%;background-color: black;color: white;padding: 15px 0;"]
 2cycomic.com,yemancomic.com,yydscomic.com##+js(rmnt, script, ads_codes)
@@ -5793,6 +5807,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*24meiju*/v*.js$~third-party
 ://*321av*/view_booster.js?v=
 ://*38kanshu.net/public/*.js
+://*4*mh*/addnew.js
 ://*58books*/static/js/read.js
 ://*58books*/static/js/wap.js
 ://*6080*/js/ad.js
@@ -5801,8 +5816,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*99mh*/view_booster.js?v=
 ://*99xmh*/view_booster.js?v=
 ://*99xs*/view_booster.js?v=
+://*abamh*/addnew.js
 ://*actionviewphotography*/view_booster.js?v=
 ://*avx.*/js/main.js?t=$~third-party
+://*awomh*/addnew.js
 ://*banzhu*/js/cdn.js$script,~third-party
 ://*banzhu*/js/js4.js?$script,~third-party
 ://*biqiu*/mo.js
@@ -7145,6 +7162,11 @@ keke1.app,keke2.app,keke3.app,kkys01.com,kkys02.com,kkys03.com##div.mobile-downl
 kikibobo.com##.boxzilla-overlay
 kissjav.li##img[id="player-fluid_logo_image"],[id^="player-advertising"]
 kiutaku.com##div[class^="i"][class*="9"]
+kmh007.com##a[href*="//ad"]
+kmh007.com##a[href*="/ad/"]
+kmh007.com##a[href*="/ads/"]
+kmh007.com##div.sticky:has(a[href*="//ad"])
+kmh007.com##picture:has(img[src*="/ad/"])
 knit.bid##.clickadu-container
 knit.bid##^script:has-text(killads)
 koreaporn.net##div.bb_mobile
@@ -7312,6 +7334,7 @@ madouvideo.org##div.d-flex:has(> iframe[frameborder="no"][scrolling="no"])
 maigoo.com##[class*="ads"]
 manga168.com,manga168.net###ads_fox_bottom
 manhuazhan.org##div.download_banner
+manwa.men###app-float-btn
 maoyan.com##.tip-open-app
 maoyan.com##[data-event*="donwload"]
 mat6tube.com##.main > .c_video > .container > [style]:not(.video_player)
@@ -7422,6 +7445,7 @@ nfnews.com##div.commentwrap_to_app
 nianyin.com##img[onclick^="window.open"]
 nivod.vip##^script:has-text(.gif)
 nonfungerbils.com,pulsembed.eu,station-drivers.com#@#iframe[width="600"][height="90"]
+nsmm.cc##a[href*=".apk"]
 nxnba.com##.bootom-fixed
 nypost.com##.ad-slot
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
@@ -8484,6 +8508,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||5wxw.com^$third-party
 ||705dm.com/color.js
 ||88dus.win/sys.js
+||8cmh.*/foot.php
 ||8se.*/scripts/push*.js
 ||8se.me/redirect/ad-
 ||8xsk.*/foot.php
@@ -8519,6 +8544,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||adb.*.online/o.js$third-party
 ||adb.*.online/slot?$third-party
 ||adblck.com^$third-party
+||adbridge*/static/js/jquery*.js
 ||adda.ljhhhhrt.top^
 ||addthis.com^
 ||adfsda005.xyz^$third-party
@@ -8742,6 +8768,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||chinatimes.com/Scripts/bennerad.
 ||chinatimes.com/ads/
 ||chinatimes.com/analytics/
+||chnsrv.com^$third-party
 ||chpadblock.com^
 ||chushoushijian.cn^$third-party
 ||clarity.ms^
@@ -9231,6 +9258,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||nosadfun.com/assets/public/$script
 ||nsclick.baidu.com^
 ||nscxbr.com^$third-party
+||nsmm.cc/m.js
+||nsmm.cc/w.js
 ||nstj.*.xyz^$script,third-party
 ||nuow.arts-cloud.net^
 ||nv3tosjqd.com^
