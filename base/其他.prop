@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: +vA/OVOo+SDw3AKHpsqDDQ
+! Checksum: UPaA9DmZLTX/A0jvXtcwiA
 ! Title: 自用去广告Adblock规则
-! Version: 20260214122517
-! Last modified: 2026-02-14 12:25:17
-! Total Count: 9758
+! Version: 20260215150952
+! Last modified: 2026-02-15 15:09:52
+! Total Count: 9768
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -471,6 +471,8 @@
 ###left_up_float_ad
 ###leftad2
 ###leftd.leftd
+###list > ul > li#listmt
+###list > ul > li#listmt2
 ###main > #top1.card.top1
 ###midBox > .wrap > .clearfix.mod
 ###middle_ad
@@ -2501,6 +2503,7 @@
 ##a[href^="https://bds82.top"]
 ##a[href^="https://cdn.yinghuazy.xyz/apk"]
 ##a[href^="https://dk2.me"]
+##a[href^="https://gg."]
 ##a[href^="https://i.vip.po18ad.com/"][target="_blank"]
 ##a[href^="https://igt17.net"]
 ##a[href^="https://l.hyenadata.com"]
@@ -3957,6 +3960,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xin/blxn_*.js?
 .xyz/$domain=huang1111.cn
 .xyz/$third-party,domain=laiksw.cc
+.xyz/*$domain=youwu.com|youwu.im
 .xyz/*.gif?*16$third-party
 .xyz/*.gif?*17$third-party
 .xyz/*.js$third-party,domain=youwu.im|youwu.com
@@ -6309,6 +6313,8 @@ advancedrenamer.com,alliptvlinks.com,androidrepublic.org,anonymousemail.me,anyde
 advancedrenamer.com,alotof.software,android-doc.com,androidrepublic.org,anonymousemail.me,apk.tw,apkmirror.com,blog.reh.tw,chaojizhibo.net,chtoen.com,demos.krajee.com,dizhishengcheng.com,doitwell.tw,epicbundle.com,epinv.com,ff14angler.com,fxpan.com,gamaniak.com,haoweichi.com,hs-exp.jp,kadinlarkulubu.com,korail.pe.kr,logi.im,lspdfrcn.com,moa.tw,moe123.net,moe48.com,numberempire.com,phcorner.net,pixiz.com,playok.com,reh.tw,rockmods.net,shenfendaquan.com,slashview.com,sockscap64.com,spoilertv.com,vaptcha.com,willyoupressthebutton.com,yabook.org#@#ins.adsbygoogle
 advancedrenamer.com,android-doc.com,androidrepublic.org,anonymousemail.me,apk.tw,apkmirror.com,chaojizhibo.net,chtoen.com,demos.krajee.com,dizhishengcheng.com,doitwell.tw,epicbundle.com,epinv.com,ff14angler.com,fxpan.com,gamaniak.com,haoweichi.com,hs-exp.jp,kadinlarkulubu.com,korail.pe.kr,logi.im,moa.tw,numberempire.com,phcorner.net,pixiz.com,playok.com,reh.tw,rockmods.net,shenfendaquan.com,spoilertv.com,vaptcha.com,willyoupressthebutton.com,yabook.org#@#.adsbygoogle
 afterellen.com,boston.com,calgarysun.com,cattime.com,cbssports.com,celebuzz.com,cnet.com,comingsoon.net,computershopper.com,ctnow.com,cycleworld.com,edmunds.com,everydayhealth.com,foxsports.com.au,gamespot.com,jetztspielen.ws,metacritic.com,msn.com,popphoto.com,popsci.com,ranker.com,saveur.com,sfgate.com,sportingnews.com,thoughtcatalog.com,tv.com,tvguide.com,uploadbank.com,washingtonpost.com,webmd.com,windowscentral.com#@#iframe[width="728"][height="90"]
+aimzt.com,plmeitu.com,swmzt.com###listp
+aimzt.com,plmeitu.com,swmzt.com##ul > li:has(a[href*="http"])
 aiqicha.baidu.com#@#[class*="ad"][class*="recommend" i]
 aiqicha.baidu.com#@#[class*="ad"][class*="recommend"]
 airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,mature.community,mature.mom,mauitime.com,milf.community,milf.mom,milf.plus,milf.sexy,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,onislandtimes.com,ouo.press,pornhub.com,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,seguintoday.com,sports.sexy,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
@@ -6821,6 +6827,8 @@ games.yahoo.co.jp###jack
 geiqia.com##.pc_dou
 gimy.com.tv,gimy.com.tw,gimy.tv##.g2_pc_list_top
 gimy.tv##div:not([class]):not([id]):has(img[alt][style*="100%"])
+girlygirlpic.com##.item-isotope:has(iframe[src*="magsrv.com"])
+girlygirlpic.com##.item-isotope:has(script[src*="magsrv.com"])
 github.com#@#.js-notice
 gogopg.net###vplayer-tdads-nonlinear
 gogopg.net##.vip-limited-overlay
@@ -7948,7 +7956,6 @@ stopgame.ru#@#iframe[width="240"][height="400"]
 sunshinewaay.cn##img[class$="BnImg"]
 supjav.com##.movv-ad
 sv.baidu.com##.open-button-wrap
-swmzt.com###listp
 sxyprn.com##.tbd
 sxyprn.com##div[class$="bd"]
 sxyprn.net##.tbd,.cbd
@@ -9077,6 +9084,9 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||js*.iislm.com^$third-party
 ||js-agent.newrelic.com^$third-party
 ||js-dy.top^$third-party
+||js.*mei*.com/sa/*.js
+||js.*mz*.com/sa/*.js
+||js.*tu*.com/sa/*.js
 ||js.123ylk3q.cc^
 ||js.2509js.sbs^
 ||js.allporncomic.com^
