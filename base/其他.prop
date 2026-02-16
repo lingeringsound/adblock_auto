@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: HzudmrROpIVNp5wADwP6AA
+! Checksum: 1fYomP5WdKm7MEHRNs0r2Q
 ! Title: 自用去广告Adblock规则
-! Version: 20260215182421
-! Last modified: 2026-02-15 18:24:21
-! Total Count: 9767
+! Version: 20260216075811
+! Last modified: 2026-02-16 07:58:11
+! Total Count: 9773
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3168,6 +3168,7 @@
 ##img[class][src$=".txt"]
 ##img[data-banner*="sponsor"][src]
 ##img[data-original*="/vads/"]
+##img[data-src^="https://adsimage"]
 ##img[id*="bottom-ads"]
 ##img[id][height$="0001"][width="100%"][border="0"]
 ##img[id][no-zoom][src^="data:"]
@@ -3264,6 +3265,7 @@
 ##img[src^="https://888xx222kk.com/"]
 ##img[src^="https://888xx555kk.com"]
 ##img[src^="https://ad.xmmnsd.com"]
+##img[src^="https://adsimage"]
 ##img[src^="https://adsxyz.com"]
 ##img[src^="https://bejjci.twqtf.boats"]
 ##img[src^="https://cdn.lilongfei.cn"]
@@ -6304,6 +6306,7 @@ actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine
 actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine.com,sibtok.com,tyler-brown.com,ukdevilz.com,whatisareverseauction.com##div.container > div:has(iframe[data-src*="//go."])
 actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine.com,sibtok.com,tyler-brown.com,ukdevilz.com,whatisareverseauction.com##div.container > div:has(script[src*="ad-provider"])
 actionviewphotography.com,exporntoons.net,mat6tube.*,mat6tube.com,noodlemagazine.com,sibtok.com,tyler-brown.com,ukdevilz.com,whatisareverseauction.com##div[style^="background-color:"]:has(> iframe[data-src^="//go."])
+admonclick_union_
 adultfilmdatabase.com,animeidhentai.com,babeforums.org,bos.so,camvideos.tv,camwhores.tv,cutscenes.net,devporn.net,f95zone.to,fritchy.com,gifsauce.com,hentai2read.com,hotpornfile.org,hpjav.com,imagebam.com,imgbox.com,imgtaxi.com,motherless.com,myporn.club,pandamovies.pw,planetsuzy.org,pussyspace.com,redgifs.com,sendvid.com,sexgalaxy.net,sextvx.com,sexuria.com,thefappeningblog.com,vintage-erotica-forum.com,vipergirls.to,waxtube.com,xfantazy.com,yeapornpls.com##a[href*="theporndude.com"]
 advancedrenamer.com,alliptvlinks.com,android-doc.com,androidrepublic.org,anonymousemail.me,anydebrid.com,apk.tw,apkmirror.com,bedfix.wurstclient.net,cdromance.com,chaojizhibo.net,chtoen.com,copyseeker.net,cutty.app,demos.krajee.com,dizhishengcheng.com,doitwell.tw,domhouse.it,epicbundle.com,epinv.com,estudyme.com,ff14angler.com,fxpan.com,gergerhaber.net,haoweichi.com,karvitt.com,korail.pe.kr,logi.im,lspdfrcn.com,mcoc-guide.com,moa.tw,moe48.com,mohammedkhc.com,nextbigtrade.com,numberempire.com,okdebrid.com,phcorner.net,pixiz.com,playok.com,receive-a-sms.com,reh.tw,rjno1.com,safe.elektroupdate.com,shenfendaquan.com,sivadictionaries.com,skmedix.pl,sonixgvn.net,spoilertv.com,tamrieltradecentre.com,technoarabi.com,teemo.gg,vaptcha.com,willyoupressthebutton.com,yoykp.com,ytlarge.com,zefoy.com,znaki.edu.pl#@#ins.adsbygoogle[data-ad-slot]
 advancedrenamer.com,alliptvlinks.com,androidrepublic.org,anonymousemail.me,anydebrid.com,apkmirror.com,bedfix.wurstclient.net,cdromance.com,copyseeker.net,cutty.app,demos.krajee.com,download.mokeedev.com,epicbundle.com,estudyme.com,gergerhaber.net,karvitt.com,korail.pe.kr,mcoc-guide.com,mohammedkhc.com,nextbigtrade.com,okdebrid.com,phcorner.net,pixiz.com,receive-a-sms.com,rjno1.com,safe.elektroupdate.com,sivadictionaries.com,skmedix.pl,sonixgvn.net,spoilertv.com,tamrieltradecentre.com,teemo.gg,willyoupressthebutton.com,yoykp.com,ytlarge.com#@#ins.adsbygoogle[data-ad-client]
@@ -8618,6 +8621,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||adsession.exacdn.com^
 ||adsessionserv.com^$third-party
 ||adshares.net^
+||adsimage.*/*/*$third-party
 ||adspi.xyz^
 ||adspy.javrank.com^
 ||adsxtits.com^
@@ -9088,6 +9092,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||js.*tu*.com/sa/*.js
 ||js.123ylk3q.cc^
 ||js.2509js.sbs^
+||js.aiqiyi*.com^
+||js.aiqiyi123.com^
 ||js.allporncomic.com^
 ||js.bninocerossrhino.com^
 ||js.cabnnr.com^
