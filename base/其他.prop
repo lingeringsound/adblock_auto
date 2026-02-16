@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 1fYomP5WdKm7MEHRNs0r2Q
+! Checksum: uCOu26G1ZwXgTV8ynQViFA
 ! Title: 自用去广告Adblock规则
-! Version: 20260216075811
-! Last modified: 2026-02-16 07:58:11
-! Total Count: 9773
+! Version: 20260216135915
+! Last modified: 2026-02-16 13:59:16
+! Total Count: 9780
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1146,6 +1146,7 @@
 ##.center-ad
 ##.center-div.sponsor
 ##.chapter-appads
+##.clickadu-container
 ##.colBoxAdframe
 ##.commentads
 ##.commercial-unit-mobile-bottom
@@ -6616,6 +6617,9 @@ buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.
 buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.search-box ~ div:not([class]):not([id]):not([style])
 buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.search-form + br + div[class]
 buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##.search-form ~ div:not([class]):not([id]):not([style])
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##div.search-form ~ div:not([cstyle]):not([id]):has(.adsbyexoclick)
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##div:not([class]):not([id]):not([style]):has(div[class^="b"] > .adsbyexoclick)
+buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##div:not([class]):not([id]):not([style]):has(div[class^="i"] > .adsbyexoclick)
 buondua.com,buondua.us,kiutaku.com,kostaku.art,kostaku.com,kostaku.live,kostaku.us##div:not([class]):not([id]):not([style]):has(iframe[src*="://creative."])
 bz80.com##button.btn-download
 cambro.*,cambro.company,cambro.wtf##div.rltdsldr.box
@@ -7184,8 +7188,8 @@ kmh007.com##a[href*="/ad/"]
 kmh007.com##a[href*="/ads/"]
 kmh007.com##div.sticky:has(a[href*="//ad"])
 kmh007.com##picture:has(img[src*="/ad/"])
-knit.bid##.clickadu-container
 knit.bid##^script:has-text(killads)
+knit.bid,lovecutes.com##.clickadu-container
 koreaporn.net##div.bb_mobile
 ktmukmx.com##.container > div[style] > div.row > .col-sm-3 > a[target="_blank"]
 kwoo50.icu,kwuu83.icu##div.float-app
@@ -9068,6 +9072,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||jewruta.top^
 ||jianpian.vip/ad*.js
 ||jianpian.vip^
+||jiansuo.xuecan.net^
 ||jievf.cn^
 ||jiexi.zuixindy.top^$third-party
 ||jijozdrg.xyz^$third-party
@@ -9154,6 +9159,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||kanyingv.com/statics/js/ky*.js
 ||kcieo.xyz^$third-party
 ||keiow.xyz^$third-party
+||kettledroopingcontinuation.com^
 ||keymp4.cc/js/foot.js
 ||keymp4.com/js/foot.js
 ||kkjhgfds.top^
@@ -9344,6 +9350,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ppdod.com^$third-party
 ||ppfannypp.com^$third-party
 ||profitablegatetocontent.com^
+||programmesheadstoneconsult.com^
 ||pssy.xyz^$third-party
 ||pstatp.com^*/push.js
 ||puabvo.com^
