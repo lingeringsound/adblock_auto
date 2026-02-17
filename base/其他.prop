@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: GTV8az+hNS1qfS+uX7nMXw
+! Checksum: aNaKqYaFERJ6CpdISga3Fg
 ! Title: 自用去广告Adblock规则
-! Version: 20260217115825
-! Last modified: 2026-02-17 11:58:25
-! Total Count: 9786
+! Version: 20260217141714
+! Last modified: 2026-02-17 14:17:14
+! Total Count: 9803
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -495,6 +495,7 @@
 ###modalAdblock
 ###myads
 ###novel_mark_template + #popup_box
+###nr + div.traffic-box
 ###nr + div[style="margin:0;padding:0;outline:0"]
 ###nr + script:not([src]) ~ div[id]:not([class])
 ###playerJsvLayer.jsv-layer
@@ -3760,6 +3761,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:13320/js/*.js?v=9$third-party
 .com:18*/*.js?v=17$third-party
 .com:19819/js/*/f*.js?v=
+.com:22*/js/31*/*.js?v=$third-party
 .com:26579/*/*.json
 .com:28816/*js?v=17$third-party
 .com:30009/*t*/$third-party
@@ -3801,6 +3803,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:8010/cc/*?*=$third-party
 .com:8010/d/*?*=$third-party
 .com:8010/sc/*?*=$third-party
+.com:88*/vj*/*$third-party
+.com:88*/zj*/*$third-party
 .com:8891/vh3/
 .com:8891/vj3/
 .com:9*/d/*?t=*&$third-party
@@ -4099,6 +4103,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*_*_*_min.css?$third-party,domain=lfwx2.com
 /*_*_/bigREDcat.$third-party
 /*_*_/bigREDdog.$third-party
+/*fdjh/*f*ds*.php$~third-party
 /*script/pf.js
 /000/flink/click.php?
 /17mb/js/style.js$~third-party,script
@@ -4909,6 +4914,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/xia.js?
 /js/xiaxuanfu.js
 /js/xp.js
+/js/xt.js
+/js/xtc.js
 /js/zx.js
 /js/zx2.js
 /json/ads/*
@@ -5151,6 +5158,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static/js/play.c*.js
 /static/js/playcon*.js
 /static/js/top.js$domain=ciligui.org|ciligui.cc|ciligui.com|ciligui.live|ciligui.buzz|ciligui.cn|ciligui.xyz
+/static/js/xf.js
+/static/js/xt.js
+/static/js/xtc.js
 /static/js/yumitz.js
 /static/ks/*.js$domain=123684.com|123864.com|123865.com|123866.com|123912.com|123957.com|123pan.cn|123pan.com
 /static/m.js?
@@ -5919,6 +5929,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*tianxibook*/*/0*1.js$script,~third-party
 ://*tianxibook*/public/*.js
 ://*ting13.*/public/tingshu/foor.js$script
+://*tj*ads.com
 ://*tyler-brown*/view_booster.js?v=
 ://*ukdevilz*/view_booster.js?v=
 ://*vjav-com*/view_booster.js?v=
@@ -6095,6 +6106,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://xxsmad*.com
 ://yin*.zgpingshu.com
 ://yunyunyun$domain=hhh806.com
+:8887/zj*/$third-party
 =AdCode_$third-party
 =AdCode_sjdb$third-party
 =AdCode_sjtb&$third-party
@@ -6183,6 +6195,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||adtng.com/get/$subdocument,domain=hanime.tv
 @@||advertisertape.com^$domain=jav.rip|jav.red
 @@||b.scorecardresearch.com/beacon.js$domain=m.timesofindia.com
+@@||baode.cc/css/js/tools.js
 @@||bdad.123pan.cn^
 @@||bili96.co^$image
 @@||browser.sentry-cdn.com^$domain=acustica-audio.com|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
@@ -6582,6 +6595,7 @@ bing.com##li[class^="sa_sg"][stype="PN"]
 bing.com##li[data-idx]:has(#mm-ebad)
 bing.com##main[aria-label="Search Results"] > #b_pole:has(#cu_polebanner #cu_poleMSPromoText)
 biqq.cc##div[style="width: 100%; height: 120px;"]
+biquge365.app,biquge365.net,biquge365.wap##.baocuo
 biquge365.net,dandanzan.club,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc##^script:has-text(navigator.platform)
 biquge99.vip##div.content:has(script[src="/facaishen1.js"])
 blog.sina.cn###pl-ad-after-comments
@@ -8739,6 +8753,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||biqiuge*/mm.js
 ||biqiuge5.org/mm.js
 ||biqivge.cc/e*/*.js
+||biqu86.com/static/wap.js
 ||biqugezw.us/skin/js/mc.js
 ||biqugie.com/js/wap.js
 ||biquxs.com/js/detail.js
@@ -9539,6 +9554,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||tinghaolook.com/assets/publish/$script
 ||tj.shinpa.me^$third-party,script
 ||tjk3.com/static/*/*17mb.js
+||tjv251109ads.com^
 ||tk.fret9.cn^
 ||tonghuacun.com/js/nav.js
 ||tongji.click^
@@ -9663,6 +9679,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||wyol.*/m.js
 ||wyqaafplm.live^
 ||xadsmart.com^
+||xbocktxt.*/*/*ll*.js
 ||xbookcn.org/scripts/my_*.js
 ||xbqg06.com/*/*.php
 ||xcdn.vip^$third-party
