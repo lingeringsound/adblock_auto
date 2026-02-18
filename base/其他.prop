@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: aNaKqYaFERJ6CpdISga3Fg
+! Checksum: eZZ1Y0W8PG0c7LQFSTY/Eg
 ! Title: 自用去广告Adblock规则
-! Version: 20260217141714
-! Last modified: 2026-02-17 14:17:14
-! Total Count: 9803
+! Version: 20260218085401
+! Last modified: 2026-02-18 08:54:01
+! Total Count: 9811
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3606,6 +3606,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/2.js$script,~third-party
 .com/20*/*/*.txt$third-party
 .com/3/36524010?17$third-party
+.com/33*33*33*_06*06*06*.js$~third-party
 .com/5y*/31*.$other,~third-party
 .com/5y*/317.$~third-party
 .com/?channelCode=$~third-party
@@ -3809,6 +3810,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:8891/vj3/
 .com:9*/d/*?t=*&$third-party
 .com:9*/yc/c/*/GEBEF$third-party
+.com:90*/sc/*?n=$third-party
 .com:9179/*t*/$third-party
 .com:9302/d/*?t=*&$third-party
 .fun/$domain=123dua.com|qiqidu.net
@@ -3919,6 +3921,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .shop:*/i.js$third-party,script
 .shop:*/o.js$third-party,script
 .site:*/*/*.js
+.site:*/assetss/*.script?v=0.$third-party
 .site:28883/*/*$third-party
 .top/*.*.1639.json?17$third-party
 .top/*.*.1697.json?17$third-party
@@ -3929,6 +3932,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/*_*.apk$domain=bamxs.com
 .top/*_*_vw*sbjs?$third-party
 .top/*cx?17$third-party
+.top/*ngres*.jss?17*r=0
 .top/17*.*.*?17$third-party,~media,~stylesheet,~image
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
@@ -6106,7 +6110,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://xxsmad*.com
 ://yin*.zgpingshu.com
 ://yunyunyun$domain=hhh806.com
+:8080/sc/*?n=$third-party
 :8887/zj*/$third-party
+:9001/sc/*?n=$third-party
+:9001/zj*/$third-party
 =AdCode_$third-party
 =AdCode_sjdb$third-party
 =AdCode_sjtb&$third-party
@@ -8773,6 +8780,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||boost-next.co.jp^
 ||boot.bytecache.cn/static/*.js?t=$script,third-party
 ||bpacihfabm.com^
+||bqvvxg*.*/*/*ll*.js
 ||bsplh.cn^
 ||btds.zog.link^$third-party
 ||bto.tooopen.com^$third-party
