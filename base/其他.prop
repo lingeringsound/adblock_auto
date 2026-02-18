@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JooMDwQI3gOxZ2SZFcHI/A
+! Checksum: aLMOT+on5tUzC4saV+4U8g
 ! Title: 自用去广告Adblock规则
-! Version: 20260218110454
-! Last modified: 2026-02-18 11:04:54
-! Total Count: 9822
+! Version: 20260218142041
+! Last modified: 2026-02-18 14:20:41
+! Total Count: 9831
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -433,6 +433,8 @@
 ###gpt-mpu
 ###gpt-poster
 ###gpt-sticky
+###gridAdvContent
+###gridAdvoOerlay
 ###happy-place
 ###header + #shang
 ###hfad
@@ -1995,6 +1997,7 @@
 ##.txtguanggao
 ##.under-player-ad-mobile
 ##.under_player > div[class*="lg:hidden"]
+##.vBox > #vd-box + #videoPauseBox
 ##.van-tab__panel > .noTop.main-content > .group-content
 ##.van_taboola
 ##.van_vid_carousel
@@ -2560,7 +2563,6 @@
 ##a[onclick^="gtag"][onclick*="广告"]
 ##a[onclick^="visitReport("][target="_blank"]
 ##a[onclick^="window"] > img[id][width="1"]
-##a[ref*="sponsored"][onclick]
 ##a[referrerpolicy="unsafe-url"][target="_blank"]
 ##a[rel*="sponsored"][onclick]
 ##a[rel="nofollow"][href][target="_blank"] > div[class^="q-responsive"]
@@ -3310,6 +3312,10 @@
 ##li[class="dataic"] > a[href*="/?channelCode="][target]
 ##li[class="dataic"] > div > a[href][name="点击播放"]
 ##li[id^="dataic"] > div > a[href][name="点击播放"]
+##link[href*="Adv.css"] ~ .overlay
+##link[href*="Adv.css"] ~ .specialCoverBox
+##link[href*="advPop.css"] ~ .overlay
+##link[href*="advPop.css"] ~ .popup
 ##main.main ~ #overlay.overlay.active
 ##p > a[class="content-file"][target="_blank"][href^="/"]
 ##p > a[href][title="CA情色小說"]
@@ -3379,6 +3385,7 @@
 ##ul[style="margin:0px; padding:0px;overflow:hidden;width:100%;"]
 ##video[poster^="https://code.yykalopyy.com/"]
 ##video[poster^="https://gimg0.baidu.com/gimg/"]
+#@#a[ref*="sponsored"][onclick]
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 &adZones$xmlhttprequest
 &ad_block=
@@ -5156,6 +5163,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static/ad03.js
 /static/ads/js/adm.js
 /static/blue/js/17mb.js
+/static/css/*Adv*.css
+/static/css/*adv*.css
 /static/float*.js
 /static/gd.js
 /static/gg.js
