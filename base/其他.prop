@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: EDT1/h0EVZPHfGfwUUvNyw
+! Checksum: ZwNnid+0LQU/EVNGevyY+A
 ! Title: 自用去广告Adblock规则
-! Version: 20260222150715
-! Last modified: 2026-02-22 15:07:15
-! Total Count: 9864
+! Version: 20260222151213
+! Last modified: 2026-02-22 15:12:13
+! Total Count: 9867
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3779,8 +3779,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:26579/*/*.json
 .com:28816/*js?v=17$third-party
 .com:30009/*t*/$third-party
+.com:8*/*j1/$third-party,~image,~stylesheet,~media
 .com:8*/d/*?c=*&$third-party
-.com:8*/mj*/$third-party
+.com:8*/mj*/$third-party,~image,~stylesheet,~media
 .com:80*/cc/*?is_not=$third-party
 .com:80*/d/*?*=$third-party
 .com:80*/d/*?c=*&$third-party,script
@@ -6132,6 +6133,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://yin*.zgpingshu.com
 ://yunyunyun$domain=hhh806.com
 :8080/sc/*?n=$third-party
+:8887/*j1/$third-party
+:8887/*j2/$third-party
+:8887/*j3/$third-party
 :8887/mj1/$third-party
 :8887/mj2/$third-party
 :8887/mj3/$third-party
@@ -6707,7 +6711,6 @@ colamanhua.com,colamanga.com#@#.ADInfo
 colamanhua.com,colamanga.com#@#.ADLeader
 colamanhua.com,colamanga.com#@#.gg_950
 colamanhua.com,ddgys.com,ddg66.com,ddg44.com,ddg33.com,dadagui.me,colamanga.com##[class$="i"][style*="bottom"],[class$="h"][style*="bottom"],[class$="_b"],[class$="c"][style*="bottom"]
-com:8*/mj*/$third-party,~image,~stylesheet,~media
 comgk.com,okdyy.com##a[ontouchstart],a[onclick],[class^="cvbcvxvb"],[href*="baidujkdjklvvsbvk.com"]
 cooing.cc,dm513.cc,zhuiju2.cc##[style*="129px"]
 cool18.com##.center:has([href*="touyi"])
