@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: EmUBYWGpVFvyRCttl2U6pQ
+! Checksum: iQym5VJsthI68fXe8nyx+A
 ! Title: 自用去广告Adblock规则
-! Version: 20260223112745
-! Last modified: 2026-02-23 11:27:45
-! Total Count: 9881
+! Version: 20260223163412
+! Last modified: 2026-02-23 16:34:13
+! Total Count: 9891
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -54,6 +54,7 @@
 ###ad-slot1
 ###ad-slot2
 ###ad-slot4
+###ad-swag
 ###ad-top-right-container
 ###ad-topper
 ###ad.slide
@@ -766,6 +767,8 @@
 ##.adTextList
 ##.adWrap
 ##.adWrapper
+##.ad[data-ad-slot]
+##.ad[data-slot]
 ##.ad__wrapper
 ##.ad_belowfirstpost_frame
 ##.ad_bot
@@ -8042,6 +8045,13 @@ sports.yahoo.com##div[id*="-AbPromo"]
 sports.yahoo.com##div[id^="mrt-node-"][id$="-Ad"]
 sports.yahoo.com##div[id^="sda-"]
 sqruitu.com##embed[id][src*="://"][src*=".z"][src$="="]
+sscomic.top###ad-swag
+sscomic.top###content-container > script[src*="cpa"] + *
+sscomic.top##.ad[data-ad-slot]
+sscomic.top##.ad[data-slot]
+sscomic.top##.rd-images + script[src*="cpa"] + *
+sscomic.top##.ss-ad
+sscomic.top##div[aria-label*="下载"][aria-label*="应用"]
 sspai.com###btn-call-app
 static.nfnews.com###z_box
 static.nfnews.com##.readmore_mask
