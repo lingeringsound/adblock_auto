@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: tg1UzvmD8wngcin73vOI1A
+! Checksum: GqcyCOo/Xna9xT4xLfHuVg
 ! Title: 自用去广告Adblock规则
-! Version: 20260223201156
-! Last modified: 2026-02-23 20:11:57
-! Total Count: 9897
+! Version: 20260225143244
+! Last modified: 2026-02-25 14:32:44
+! Total Count: 9903
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -443,6 +443,7 @@
 ###iframe-ad
 ###iframeAd_2
 ###iframe_ad_2
+###im-spot
 ###imPopup
 ###im_popupDiv
 ###ima_ads-2
@@ -1731,6 +1732,7 @@
 ##.mobile-leaderboard-fader
 ##.mobile-nav-ad-plus-banner
 ##.mobile-related-ad
+##.mobile-spot
 ##.mobileAd
 ##.mobileAdPos2And3
 ##.mobileAdWrap
@@ -1956,6 +1958,7 @@
 ##.sponsor_popup
 ##.sponsored-home-page-inner
 ##.sponsored-items
+##.spot-place
 ##.stky-ad-footer
 ##.story-ad
 ##.storyAd
@@ -7641,7 +7644,7 @@ pornboss.org###menu-menue-1 > li:has(> a[href^="http://toplist.raidrush.ws/"])
 porncide.com,porncide.net##script[src^="/themes/"] ~ div[style]:not([class]):not([id])
 pornclipsguru.com##.under_video
 porncloud.cc###spot-player
-porncloud.cc,xclub101.pro##.sp-holder
+porncloud.cc,sex-home.com,xclub101.pro##.sp-holder
 porndoe.com##[class^="-banner"],[href*="//ads"],[href^="/redirect"]
 porndoe.com##div.-ad-top-wrap
 porndrake.com##.sicce-300x250
@@ -7763,6 +7766,7 @@ rapidtai.com,taiav.com,taimadou.com,taisinba.com##.top-phonehome
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##a[href^="https://go."]
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##button[onclick*="this.parentNode.parentNode.removeChild"]
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##div.movie-card:has([data-full-title*="廣告"])
+rapidtai.com,taiav.com,taimadou.com,taisinba.com##div.movie-card:has(a[href*="//go."])
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##div.tai-wrapper-mobile
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##div[class*="uk-card"]:has(a[href^="https://go."])
 reddit.com##[data-faceplate-tracking-context*="\"promoted\":true"]
@@ -7825,6 +7829,8 @@ search.yahoo.com,yahoo.com##.searchCenterTopAds
 send-anywhere.com###gpt-container
 sesebooks.com##.exoAds
 sewen.buzz,sewen.com,sewen.life,sewen.net,sewen.top,sewen.xyz,sewen4.top,sewen7.com,sewen7.life,sewen7.top,sewen8.life,sewen8.net,sewen8.top##img[src*=".xyz/"][src*="16"],[style*="bottom: 0px; left: 0px; z-index:"][style*="100vw;"],.hotcmd-box,.links-top,table[border="1"]
+sex-home.com##.mobile-spot
+sex-home.com,xclub101.pro###im-spot
 sexmod.pw,md91av.top,twavbook999.cc,siaoredbook.cc,mitaonuhai.cc,gipinreba.cc,r18lumod.cc##[class*="topads"],[class*="tads"],[class*="bottomads"],[class*="bads"],[class*="leftd"],[class*="rightd"],a[target="_blank"][href][onclick]
 sexporn.hair##.constitute
 sexporn.hair##.growth.mineral
@@ -8299,7 +8305,6 @@ xbookcn.org##[class*="banner"]
 xbookcn.org##[class^="push-"]
 xbqg06.com##^script:has-text(kbbaidu)
 xbqg06.com##body > div[id^="a17"]:not([class]):not([style])
-xclub101.pro###im-spot
 xclub101.pro##[onmouseup="setRealHref(event)"][rel="nofollow"]
 xdf.cn##[class^="bottom_ad"]
 xfani.com##.ec-tutu
@@ -8633,6 +8638,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||5vkyqkc.cn^
 ||5wxw.com^$third-party
 ||705dm.com/color.js
+||7722wx.*/e*/*ll*.js
 ||88dus.win/sys.js
 ||8cmh.*/foot.php
 ||8se.*/scripts/push*.js
