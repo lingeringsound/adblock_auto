@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dzMmoWPLLU8lwOit1YCT4A
+! Checksum: b3tY4uws30XgppqCrwC6Ug
 ! Title: 自用去广告Adblock规则
-! Version: 20260303153847
-! Last modified: 2026-03-03 15:38:47
-! Total Count: 9939
+! Version: 20260304002623
+! Last modified: 2026-03-04 00:26:23
+! Total Count: 9945
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3788,6 +3788,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:*/wz/vod_shang.js?v=
 .com:*0*/d/*?c=*&$third-party
 .com:*0*/d/*?t=*&$third-party
+.com:*0*/js/31*.js?v=$third-party
 .com:*0*/wap_*_*_*$other,third-party
 .com:*0*/wap_*_*_*$~image,~stylesheet,third-party
 .com:*9*/*t*/$third-party,domain=xiurenbox.com
@@ -6502,6 +6503,11 @@ avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
 avtik.com###player > .player-wrapper + section
 ayjxcs.com,cqzuoer.com,fybys.com,hellorlgzf7sn.com,hskjjglo.com,jiabaide.cn,jmyts.com,jpyy2.com,qiqione.com,tjrongze.com,vv3nwjk.com,xdxtz4j3a.com##img.line_banner[src*="data:"]:upward(4)
 b.quark.cn##.video-info
+bachashuku.app,bachashuku.buzz,bachashuku.cc,bachashuku.com,bachashuku.wap,bachashuku.xyz###ccontent > a + br
+bachashuku.app,bachashuku.buzz,bachashuku.cc,bachashuku.com,bachashuku.wap,bachashuku.xyz###ccontent > a + br + br
+bachashuku.app,bachashuku.buzz,bachashuku.cc,bachashuku.com,bachashuku.wap,bachashuku.xyz###ccontent > a[href*=".php"]
+bachashuku.app,bachashuku.buzz,bachashuku.cc,bachashuku.com,bachashuku.wap,bachashuku.xyz###ccontent > script + br
+bachashuku.app,bachashuku.buzz,bachashuku.cc,bachashuku.com,bachashuku.wap,bachashuku.xyz###ccontent > script + br +br
 bad.news##.download-app-fixed
 bad.news##div[class]:has(> [href*="/app/download"])
 baidu.com###content_right > div > div[id^="m"]
