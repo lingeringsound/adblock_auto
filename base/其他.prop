@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: W4Ub905N1F4cFYSLFUUrzw
+! Checksum: QuQSFDdg/12EVoLa4oa+vw
 ! Title: 自用去广告Adblock规则
-! Version: 20260305153149
-! Last modified: 2026-03-05 15:31:49
-! Total Count: 9962
+! Version: 20260305230346
+! Last modified: 2026-03-05 23:03:47
+! Total Count: 9968
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2788,6 +2788,8 @@
 ##div[class$="d"] > span[class^="closebox"]
 ##div[class$="pic"] > span[class^="closebox"]
 ##div[class*="-grid"] > a[rel="nofollow"][target="_blank"][class*="track-click"]
+##div[class*="-spot"][style*="250"]
+##div[class*="-spot"][style*="300"]
 ##div[class*="_"][data-height="250"][data-show="ok"]:not([id])
 ##div[class*="_"][data-width="250"][data-show="ok"]:not([id])
 ##div[class*="_"][data-width="300"][data-show="ok"]:not([id])
@@ -2890,6 +2892,8 @@
 ##div[data-mini-ad-unit]
 ##div[data-native-ad]
 ##div[data-native_ad]
+##div[id*="-spot"][style*="250"]
+##div[id*="-spot"][style*="300"]
 ##div[id*="ScriptRootN"]
 ##div[id*="_"][classname$="_f"][class$="_f"]
 ##div[id*="clb-spot"] > iframe[id*="spot"]
@@ -7839,6 +7843,7 @@ rule34-videos.com##[class^="ad-"]
 rule34-videos.com##div.ad-banner
 rule34-videos.com##div.post-ad-wrapper
 rule34.tube##.fp-logo
+rule34.us,rule34.xxx##div[id*="-spot"]
 rule34gen.com##div.item.thumb:has(> iframe[id^="embed_"])
 rule34video.com##[class*="spot"]:has(script[src*="/lv/esnk"])
 rule34video.com##div.item.thumb:has(a[title="Advertisement"])
@@ -8936,6 +8941,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||camillecsa.com^
 ||candyai.love^
 ||capaciousdrewreligion.com^
+||cdn*biqu*/js/go*.js
 ||cdn-aousoce.org/*/musoapp.js$third-party
 ||cdn.6109.org/static/js/$third-party
 ||cdn.adur.top^$third-party
