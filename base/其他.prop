@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: b3tY4uws30XgppqCrwC6Ug
+! Checksum: UffvZ11J7HNsA3r5HnWltg
 ! Title: 自用去广告Adblock规则
-! Version: 20260304002623
-! Last modified: 2026-03-04 00:26:23
-! Total Count: 9945
+! Version: 20260305111545
+! Last modified: 2026-03-05 11:15:45
+! Total Count: 9960
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2019,6 +2019,8 @@
 ##.video-brs
 ##.video-img-box[class*="mb-"] > .img-box > a[href^="http"][target="_blank"]
 ##.video-inline-ads
+##.video-page__wrapper > div[class*="jg"]:not([id]):not([style])
+##.video-page__wrapper > section[style]:not([class]):not([id])
 ##.video.ad-w
 ##.videojs-hero-overlay
 ##.videos-ad
@@ -2740,6 +2742,7 @@
 ##div.da > a > img.lazyload
 ##div.down-list > ul > [href]
 ##div.down-list > ul > li > dt
+##div.entry-inner > div[style]:not([class]):not([id])
 ##div.fl-banner
 ##div.flex-1.order-first > div[style="display: flex;flex-wrap: wrap;margin: 5px auto; gap: 10px;justify-content: center; text-align: center"]
 ##div.flex.justify-center > ins[id]
@@ -3336,6 +3339,7 @@
 ##link[href*="advPop.css"] ~ .overlay
 ##link[href*="advPop.css"] ~ .popup
 ##main.main ~ #overlay.overlay.active
+##p + div.sponsor-block
 ##p > a[class="content-file"][target="_blank"][href^="/"]
 ##p > a[href][title="CA情色小說"]
 ##photo_center_div > div[class$="_b"][data-group][data-show="ok"]
@@ -3913,6 +3917,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .live:8891/vh*/$third-party
 .live:8891/vh3/
 .live:8891/vj3/
+.live:8891/vj4/$third-party
 .men/view_booster.js?v=
 .min.css$third-party,domain=bigboobsjapan.com|film-adult.com|film-adult.net|film-adult.top|tokyobombers.com|tokyocafe.org
 .min.js$third-party,domain=bigboobsjapan.com|film-adult.com|film-adult.net|film-adult.top|tokyobombers.com|tokyocafe.org
@@ -4923,6 +4928,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/htmlkb.js
 /js/htmlkc.js
 /js/indexbottom.js$~third-party
+/js/j*s*r*u*n*n*e*r.js$~third-party
 /js/jads.js$script
 /js/jads.js?
 /js/jquery.smartbanner.js
@@ -5183,6 +5189,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static*/gd.js
 /static*/pf.js?v=
 /static*js/ad*.js$script,~third-party
+/static/*dipiao*.js$~third-party
+/static/*dipiao.js$~third-party
+/static/*dipiao2.js$~third-party
 /static/*ds/ttss.js$script,~third-party
 /static/*nb/static.js
 /static/042*.js$~third-party,script
@@ -5226,6 +5235,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /staticjs/hm.js
 /staticjs/ls.js
 /staticjs/pf.js
+/staticm/*dipiao*.js$~third-party
 /statics/govv.js$~third-party
 /statics/js/*dihppplay*.js
 /statics/js/*guhppplay*.js
@@ -5331,6 +5341,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /vast.js$domain=mat6tube.com|noodlemagazine.com|ukdevilz.com
 /video-slider-ad/build.js
 /view_booster.js?v=$domain=99mh.men|99mh.one|99xmh.icu|99xmh.top|99xs.icu|99xs.one|actionviewphotography.com|exporntoons.net|hanime2.top|jable1.sbs|jable1.vip|javbest.icu|javbest.top|laoli88.icu|laoli88.men|laoli88.one|mat6tube.*|mat6tube.com|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf|noodlemagazine.com|rou2.icu|rou2.men|rou2.one|rou2.top|sibtok.com|tyler-brown.com|ukdevilz.com|whatisareverseauction.com|wnacg.men|wnacg.one|wnacg.vip
+/view_booster.js?v=20|$~third-party
 /vlcdn.tsyndicate.com/videos
 /vs.php?id=$third-party,xmlhttprequest
 /wcm/?sh=*&*=*&*=$third-party
@@ -5912,6 +5923,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*99xs*/view_booster.js?v=
 ://*abamh*/addnew.js
 ://*actionviewphotography*/view_booster.js?v=
+://*avjoy*/view_booster.js?v=$~third-party
 ://*avx.*/js/main.js?t=$~third-party
 ://*awomh*/addnew.js
 ://*banzhu*/js/cdn.js$script,~third-party
@@ -6052,6 +6064,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://cf*cdn.net^$domain=wuqiantz.top|wuqianvz.top
 ://chaturbate.com$third-party
 ://cmp-20*.top/*.php$third-party
+://cn.*.*/view_booster.js?v=20$~third-party
 ://cnzz*/code/$third-party
 ://creative.*.com/widgets/v4/Universal
 ://creative.*/widget*.js$third-party
@@ -6181,6 +6194,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 :8887/mj2/$third-party
 :8887/mj3/$third-party
 :8887/zj*/$third-party
+:8891/vj*/$third-party
 :9*/bug?i=$third-party
 :9001/sc/*?n=$third-party
 :9001/zj*/$third-party
@@ -9319,6 +9333,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||kanying.co/statics/js/$script
 ||kanyingv.com/statics/js/
 ||kanyingv.com/statics/js/ky*.js
+||kbook*/js/addons.js
 ||kcieo.xyz^$third-party
 ||keiow.xyz^$third-party
 ||kettledroopingcontinuation.com^
