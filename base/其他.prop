@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QuQSFDdg/12EVoLa4oa+vw
+! Checksum: YCZ/l3iRb3F/SV0xPYblqA
 ! Title: 自用去广告Adblock规则
-! Version: 20260305230346
-! Last modified: 2026-03-05 23:03:47
-! Total Count: 9968
+! Version: 20260305233741
+! Last modified: 2026-03-05 23:37:41
+! Total Count: 9975
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2883,12 +2883,14 @@
 ##div[data-adunit-path]
 ##div[data-adunit]
 ##div[data-adzone]
+##div[data-cl-spot]
 ##div[data-clickadilla-banner]
 ##div[data-e2e="advertisement"]
 ##div[data-element="empty"][data-izone="main"]
 ##div[data-google-query-id]
 ##div[data-id-advertdfpconf]
 ##div[data-insertion]
+##div[data-item-id="spot"]
 ##div[data-mini-ad-unit]
 ##div[data-native-ad]
 ##div[data-native_ad]
@@ -3289,6 +3291,7 @@
 ##img[src][style*="width:100%;height:auto;"][id^="hengfu"]
 ##img[src^="//"][src*="/safu/safu.php?"]
 ##img[src^="/6666/"][alt]
+##img[src^="/images/advert"]
 ##img[src^="/images/friend/"][loading="lazy"]
 ##img[src^="/scripts/ad/"]
 ##img[src^="/uploads/aidou/adlist/"]
@@ -3889,7 +3892,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/view_booster.js?v=
 .icu/vue?$third-party
 .icu:28883/*/*$third-party
-.in/*$third-party,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si|mat6tube.com|noodlemagazine.com|ukdevilz.com
+.in/*$third-party,domain=bunkr-albums.io|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si|mat6tube.com|noodlemagazine.com|nsfwr34.com|rule34.us|rule34.xxx|ukdevilz.com
 .info/bokan/bokan.js$script
 .js?type=adult&v=$domain=netflav.com
 .la/8WaadBLH/*.js
@@ -7843,8 +7846,12 @@ rule34-videos.com##[class^="ad-"]
 rule34-videos.com##div.ad-banner
 rule34-videos.com##div.post-ad-wrapper
 rule34.tube##.fp-logo
+rule34.us,rule34.xxx##[data-cl-spot]
 rule34.us,rule34.xxx##div[id*="-spot"]
+rule34gen.com##.search-ai-slot
+rule34gen.com##.spots
 rule34gen.com##div.item.thumb:has(> iframe[id^="embed_"])
+rule34gen.com##div[data-item-id="spot"]
 rule34video.com##[class*="spot"]:has(script[src*="/lv/esnk"])
 rule34video.com##div.item.thumb:has(a[title="Advertisement"])
 ruyigu.com##[id^="sgh-ad"]
