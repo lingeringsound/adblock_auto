@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QAx9GpPrk64eBh8MFGfKHw
+! Checksum: MOBY2Jeo8Llq9/zlGOmp/g
 ! Title: 自用去广告Adblock规则
-! Version: 20260307151327
-! Last modified: 2026-03-07 15:13:27
-! Total Count: 9991
+! Version: 20260309082749
+! Last modified: 2026-03-09 08:27:49
+! Total Count: 9997
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5199,6 +5199,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /source/*/production/*.js$script,third-party
 /source/*/source/*.js$script,third-party
 /splash.php?cat=&idzone=*
+/stati*/*cnzz.js
 /static*/gd.js
 /static*/pf.js?v=
 /static*js/ad*.js$script,~third-party
@@ -5222,6 +5223,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static/jietiandixs/jtd.js$~third-party
 /static/jp/js/ad*.js$~third-party
 /static/js/baidu_ad*.js
+/static/js/deny.js$~third-party
 /static/js/f7b73.*.js$third-party
 /static/js/fad.js$domain=ciligui.org|ciligui.cc|ciligui.com|ciligui.live|ciligui.buzz|ciligui.cn|ciligui.xyz
 /static/js/fad.js$script
@@ -5268,6 +5270,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /template/1/images/t2.gif
 /template/ad.
 /template/assets1/js/fk.js$~third-party
+/template/ban.js$~third-party
 /template/bingfeng/statics/js/pingbi.js
 /template/blank/yk/sdo.js
 /template/chiav/img/*.mp4
@@ -6043,6 +6046,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*yesporn*/view_booster.js?v=
 ://*yhdm*.*/js/*.js?ver=
 ://*yhdm*/piao/$script
+://*ying*/ban.js
+://*ying*/template/logoimg*.js
 ://*yinghua*/bar/$script
 ://*yydstxt*/js/cdn.js$script,~third-party
 ://*yydstxt*/js/html$script,~third-party
@@ -6651,6 +6656,7 @@ bilibili.com##div.ad-floor-cover
 bilibili.com##div.adcar-inner
 bilibili.com##div.vip-login-tip
 bilibili.com#@#.is-rcmd > div:only-child
+bilinovel.co.uk,bilinovel.com,bilinovel.de,bilinovel.net,bilinovel.org,linovelib.com###TextContent:style(display: block !important;)
 bilinovel.co.uk,bilinovel.com,bilinovel.de,bilinovel.net,bilinovel.org,linovelib.com###acontent:style(display: block !important;)
 bilinovel.co.uk,bilinovel.com,bilinovel.de,bilinovel.net,bilinovel.org,linovelib.com###adblock-dialog
 bilinovel.co.uk,bilinovel.com,bilinovel.de,bilinovel.net,bilinovel.org,linovelib.com###volumes:style(display: block !important;)
