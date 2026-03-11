@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ozjc2NOIrIqyvFMgRw0MOQ
+! Checksum: FYMQVjo95juu7Cc1Cb9ABw
 ! Title: 自用去广告Adblock规则
-! Version: 20260309182129
-! Last modified: 2026-03-09 18:21:29
-! Total Count: 10001
+! Version: 20260311115530
+! Last modified: 2026-03-11 11:55:30
+! Total Count: 10004
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2802,6 +2802,7 @@
 ##div[class*="clearfix-ads"]
 ##div[class*="col"] > a[rel="nofollow noopener noreferrer"][href][target="_blank"]
 ##div[class*="col"][clearfix] > a[target="_blank"][onclick][href]
+##div[class*="col-"] > div[class*="_"][class*="-"][data-show="ok"]
 ##div[class*="featherlight"]
 ##div[class*="ff-ads"]
 ##div[class*="invideo-native-adv_"]
@@ -5943,6 +5944,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*99xmh*/view_booster.js?v=
 ://*99xs*/view_booster.js?v=
 ://*abamh*/addnew.js
+://*acgmh.*/view_booster.js?v=
 ://*actionviewphotography*/view_booster.js?v=
 ://*avjoy*/view_booster.js?v=$~third-party
 ://*avx.*/js/main.js?t=$~third-party
@@ -6047,6 +6049,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*xsbiquge.*/js/detail.js
 ://*xsww.*/*/*ll*.js$~third-party
 ://*xvideos*/view_booster.js?v=
+://*xxxsporn*/view_booster.js?v=
 ://*yesporn*/view_booster.js?v=
 ://*yhdm*.*/js/*.js?ver=
 ://*yhdm*/piao/$script
