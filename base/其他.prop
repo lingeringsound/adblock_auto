@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: FYMQVjo95juu7Cc1Cb9ABw
+! Checksum: F59GGdxXKJGTVNG56DgUMw
 ! Title: 自用去广告Adblock规则
-! Version: 20260311115530
-! Last modified: 2026-03-11 11:55:30
-! Total Count: 10004
+! Version: 20260312221938
+! Last modified: 2026-03-12 22:19:39
+! Total Count: 10008
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3783,6 +3783,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:*/d/*?t=
 .com:*/effect.php?type=*=*&zoneid=*
 .com:*/jquery.js?v=$third-party
+.com:*/js/3*1*.js?v=2$third-party
 .com:*/js/3*1*.js?v=3$third-party
 .com:*/js/3*1*.js?v=4$third-party
 .com:*/js/3*1*.js?v=5$third-party
@@ -5171,6 +5172,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /script/float*.js
 /script/tj.js
 /scriptjs/float*.js
+/scripts/*ads.js
 /scripts/AdService_
 /scripts/ad/*
 /scripts/ad/ad*.js
@@ -6863,6 +6865,8 @@ dmzj.com,idmzj.com##[class$="close"][href="javascript:;"]
 dnaav.com##div[id^="dnaav_b"]
 docin.com##[class*="adv_"]
 docin.com##[id*="adv_"]
+docin.com##div.moneyBox
+docin.com##div[id^="docin_html"]:has(.remove_ad_btn)
 douban.com##iframe[src*="//at4.doubanio.com"]
 duckduckgo.com##.footer:has(a[href^="https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android"])
 duckduckgo.com##.module--carousel-products
