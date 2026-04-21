@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: S9sE6pLGMy7BPImDwgfhdg
+! Checksum: uTcPJ2aPMSPpFdCzuX/dbQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260418114133
-! Last modified: 2026-04-18 11:41:33
-! Total Count: 10178
+! Version: 20260421095931
+! Last modified: 2026-04-21 09:59:32
+! Total Count: 10185
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -5940,6 +5940,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 7itv.com##*[style*="display"][style*="block"],*[style*="position"][style*="fixed"],*[style*="bottom:"],[class$="_b"]
 7mmtv.sx,91porn.best,adultdeepfakes.com,cartoon18.com,jiujiu.one,kemono.su,missav.ai,missav.city,missav.com,missav.loan,missav.today,missav.wiki,missav.ws,missav123.com,missav789.com,missav888.com,pornbest.co,pornbest.com,pornbest.net,pornbest.org,porncam.cc,porncam.com,porncam.sex,pornfind.cc,pornfind.com,pornfind.net,pornfind.org,pornfind.sex,pornhk.org,pornlulu.com,pornlulu.net,ptt.co,ptt.com,ptt.net,ptt.sex,simplyhentai.org,thisav.com,yourlust.com##[class^="root--"]
 85tube.com,8se.me,camhub.cc,camhub.world,crxs.me,fuckit.cc,thothd.com,watchporn.to,xbookcn.org,xchina-cn.com,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.site,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site#@#.ads-iframe
+8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.*,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.ink,xchina.site,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##+js(set-constant, __ad_free, true)
 8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.*,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.ink,xchina.site,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##+js(set-cookie, __ss_pv_c, 0)
 8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.*,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.ink,xchina.site,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##+js(set-cookie, __ss_pv_done, 1)
 8se.me,crxs.me,xbookcn.org,xchina-cn.com,xchina.*,xchina.blog,xchina.co,xchina.com,xchina.fit,xchina.fun,xchina.ink,xchina.site,xchina.store,xchina.tv,xchina001.com,xchina001.site,xchina002.com,xchina002.comxchina.fun,xchina002.site,xchina003.com,xchina003.site##+js(set-cookie, clicked_cpt_*, 1)
@@ -6280,6 +6281,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://gg.*/*.js$third-party
 ://go.*.com/*=WidgetV4Universal
 ://go.*.com/smartpop/*?*=$third-party
+://go.*/*?campaignId=*&userId=$third-party
 ://gp.logicmind.*/*.dx$third-party
 ://haokan.*/mb.js$~third-party
 ://haokan.*/ml.js
@@ -7806,6 +7808,7 @@ nxnba.com##.bootom-fixed
 nypost.com##.ad-slot
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 old.reddit.com##.native-ad-container
+omofun.top,omofuns.buzz,omofuns.live,omofuns.top,txtduo.org,xtzgc.com##+js(aopr, navigator.platform)
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.ads_w + div[id][style]
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.module + div[id][style]
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.module-adslist + div[id]
@@ -7976,6 +7979,8 @@ pornwhite.com##.container-side:has(> b:first-child + div[data-banner]:last-child
 pornwhite.com##.items-container > div.items-holder:has(> div[data-banner])
 pornwhite.com,sleazyneasy.com##div[data-banner]
 pornxp.com##body > [style*="opacity: 0.01;"]
+ppp.porn##a[style][href*="http"][target="_blank"]
+ppp.porn##section > div:not([class]):has(a[style][href*="http"][target="_blank"])
 ppys66.com##a[title="成人深夜福利"]
 presearch.com###background-cover
 presearch.com##.items-center.bg-transparent
@@ -8468,6 +8473,7 @@ ukdevilz.com##div[style]:not([id]):not([class]):has(script[src*="ad-provider"])
 unfetish.com##body > .modal-mask
 up.taoseye.com##a[target="_blank"],[ontouchstart]
 userscript.zone##.searcad
+veryim.com##.row.visible-xs.visible-sm
 video.laxd.com##.ad_area_bottom
 video.laxd.com##.ad_area_top
 video.sina.cn##section.Card_Mb16
@@ -9836,6 +9842,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||shenluyu.com^$third-party
 ||shenyelook.com/assets/publish/$script
 ||shfsdvc.com^
+||shierbdz.cdn555.net^$third-party,script
 ||show.apiimg.com/*/*.php$third-party
 ||siduohua.top^
 ||sifenews.com^
