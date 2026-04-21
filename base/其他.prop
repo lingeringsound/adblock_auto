@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: uTcPJ2aPMSPpFdCzuX/dbQ
+! Checksum: E5AfxZkr78C50L+EZV/8Cw
 ! Title: 自用去广告Adblock规则
-! Version: 20260421095931
-! Last modified: 2026-04-21 09:59:32
-! Total Count: 10185
+! Version: 20260421222139
+! Last modified: 2026-04-21 22:21:39
+! Total Count: 10189
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -510,6 +510,8 @@
 ###nr + div.traffic-box
 ###nr + div[style="margin:0;padding:0;outline:0"]
 ###nr + script:not([src]) ~ div[id]:not([class])
+###nr1 > p#novel_down
+###nr1 > p#novel_down_m
 ###playerJsvLayer.jsv-layer
 ###playerad0
 ###playerad1
@@ -3660,6 +3662,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/*?*$third-party,script,domain=danryoku.com
 .com/*?*=*&*=*&*=*&*=*%*%*%*%*%*20*20*20*=$third-party,~media,~image,domain=99mh.men|99mh.one|99xmh.icu|99xmh.top|99xs.icu|99xs.one|actionviewphotography.com|exporntoons.net|hanime2.top|jable1.sbs|jable1.vip|javbest.icu|javbest.top|laoli88.icu|laoli88.men|laoli88.one|mat6tube.*|mat6tube.com|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf|noodlemagazine.com|rou2.icu|rou2.men|rou2.one|rou2.top|sibtok.com|tyler-brown.com|ukdevilz.com|whatisareverseauction.com|wnacg.men|wnacg.one|wnacg.vip
 .com/*bd*.js$script,domain=ifeng.com
+.com/*http*$third-party,domain=bigboobsjapan.com|tokyobombers.com|tokyocafe.org
 .com/*interstitial*.js$third-party,script
 .com/00*00*00*_*c*p*v*.js$~third-party
 .com/1.js$script,~third-party
@@ -7743,6 +7746,7 @@ mobile.baidu.com##div[class^="detail-banner-"]
 mobile.baidu.com,moonshot.cn,xzhao.vip#@#body > script + .app
 mocytys.xyz##div.banner_samll
 moegirl.org.cn##.n-button
+momovod.app##[href*="://go."]
 momxs.com##body > script + span
 momxs.com##div#inglestore
 motv.app##.mobile-only
