@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: E5AfxZkr78C50L+EZV/8Cw
+! Checksum: 5qlnNVEn2LUGFjB9Pb7tsQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260421222139
-! Last modified: 2026-04-21 22:21:39
-! Total Count: 10189
+! Version: 20260423141522
+! Last modified: 2026-04-23 14:15:23
+! Total Count: 10196
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -3490,6 +3490,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .ae/ads/
 .ai/ads.
 .app/5y*/31*.$other,~third-party
+.app/5y*/32*.$other,~third-party
 .app/bokan/bokan.js$script
 .app/gg.js$script
 .app/js/gg.js$script
@@ -3679,8 +3680,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/33*33*33*_*c*p*v*.js$~third-party
 .com/44*44*44*_*c*p*v*.js$~third-party
 .com/55*55*55*_*c*p*v*.js$~third-party
+.com/5y*/3*.*$script,~third-party
 .com/5y*/31*.$other,~third-party
 .com/5y*/317.$~third-party
+.com/5y*/32*.$other,~third-party
 .com/66*66*66*_*c*p*v*.js$~third-party
 .com/?channelCode=$~third-party
 .com/L7QQ.js$~third-party
@@ -3977,8 +3980,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .min.js$third-party,domain=bigboobsjapan.com|film-adult.com|film-adult.net|film-adult.top|tokyobombers.com|tokyocafe.org
 .net/20*/*/*.txt$third-party
 .net/5y*/31*.$other,~third-party
+.net/5y*/32*.$other,~third-party
 .one/view_booster.js?v=
 .org/5y*/31*.$other,~third-party
+.org/5y*/32*.$other,~third-party
 .org/bokan/bokan.js$script
 .org/gg.js$script
 .org/gu1ding.js$script,~third-party
@@ -5728,6 +5733,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##.ant-modal-mask
 123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##.baidu-banner-container
 123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##.banner-container-pc
+123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##.btn_reward
 123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##.tuia-modal-wrap
 123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##[class*="adv-container"]
 123684.com,123864.com,123865.com,123866.com,123912.com,123957.com,123pan.cn,123pan.com##div.ant-modal-root:has(.tuia-modal-wrap)
@@ -7745,6 +7751,7 @@ mobile.baidu.com##div[class*="card-recommend"]
 mobile.baidu.com##div[class^="detail-banner-"]
 mobile.baidu.com,moonshot.cn,xzhao.vip#@#body > script + .app
 mocytys.xyz##div.banner_samll
+modelnd.com###search-results > div.card:has(a[href^="http"])
 moegirl.org.cn##.n-button
 momovod.app##[href*="://go."]
 momxs.com##body > script + span
