@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 5LPeyIUgcZrmB1rqDzJdvQ
+! Checksum: Gat1T+YEhQ46vcS7kTqTnw
 ! Title: 自用去广告Adblock规则
-! Version: 20260427092950
-! Last modified: 2026-04-27 09:29:51
-! Total Count: 10207
+! Version: 20260427121838
+! Last modified: 2026-04-27 12:18:38
+! Total Count: 10210
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -8351,6 +8351,9 @@ static.nfnews.com##a[onclick*="openApp"]
 sthuojia.net##^script:has-text(myJs.)
 sthuojia.net##div[id]:not([class]):not([style])
 stopgame.ru#@#iframe[width="240"][height="400"]
+subtitlecat.com##a[href="plan.php"] > div[class*="banner"]
+subtitlecat.com##a[href="register.php"] > div[class*="banner"]
+subtitlecat.com##td > a[href^="subs/"]::after:style(content: "DOWNLOAD" !important; margin-left: 10px !important; display: inline-block !important; padding: 2px 8px !important; font-size: 11px !important; background-color: #ff8c00 !important; color: #fff !important; border-radius: 3px !important; vertical-align: middle !important; cursor: pointer !important;)
 sunshinewaay.cn##img[class$="BnImg"]
 supercloudsms.com###adb-mask
 supercloudsms.com##+js(acis, adsbygoogle)
