@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: SNA/JYiL08RkUPadeVxS+w
+! Checksum: W6ZZjTaRZrQhe1gWPKxTXg
 ! Title: 自用去广告Adblock规则
-! Version: 20260604094615
-! Last modified: 2026-06-04 09:46:15
-! Total Count: 10170
+! Version: 20260604160031
+! Last modified: 2026-06-04 16:00:31
+! Total Count: 10172
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2627,10 +2627,12 @@
 ##a[target="_blank"] > img[src$="/150x300.gif"]
 ##a[target="_blank"] > img[src^="//t4.wnacgimg.date/data"]
 ##a[target="_blank"] > img[src^="//t4.wnimg1.ru/data/"]
+##a[target="_blank"][data-ad-slot-name]
 ##a[target="_blank"][href*="//ads.traffichaus.com/"]
 ##a[target="_blank"][href*="/jump-"] > img[src][style]
 ##a[target="_blank"][href="/adjump/acg_show_right.html"]
 ##a[target="_blank"][href^="https://365fun.sng.link"]
+##a[target="_blank"][onclick^="trackAdvertClick("]
 ##a[title="51直播"]
 ##a[title="77直播"]
 ##a[title="908棋牌"]
