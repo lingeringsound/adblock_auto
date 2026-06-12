@@ -290,6 +290,28 @@ rm -rf "${target_file_tmp}" 2>/dev/null
 busybox sed -i 's/换行符正则表达式n/\\/g' "${target_file}"
 }
 
+
+#去重函数python版
+function sort_Css_Combine_python() {
+local target_file="${1}"
+local python_file="`pwd`/Adblock_sort.py"
+if [ -f "$target_file" ] && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "css" "$target_file"
+else
+	sort_Css_Combine "$target_file"
+fi
+}
+
+function sort_domain_Combine_python() {
+local target_file="${1}"
+local python_file="`pwd`/Adblock_sort.py"
+if [ -f "$target_file" ] && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "domain" "$target_file"
+else
+	sort_domain_Combine "$target_file"
+fi
+}
+
 #去除badfilter对应规则
 function wipe_badfilter(){
 local file="${1}"
@@ -307,7 +329,7 @@ function Running_sort_domain_Combine(){
 local IFS=$'\n'
 local target_adblock_file="${1}"
 test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_file} 规则文件不存在！！！" && return
-sort_domain_Combine "${target_adblock_file}"
+sort_domain_Combine_python "${target_adblock_file}"
 modtify_adblock_original_file "${target_adblock_file}"
 wipe_same_selector_fiter "${target_adblock_file}"
 modtify_adblock_original_file "${target_adblock_file}"
@@ -323,7 +345,7 @@ local target_adblock_file="${1}"
 test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_file} 规则文件不存在！！！" && return
 #记录通用的Css
 local css_common_record="$(cat ${target_adblock_file} 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | grep -E '^#' )"
-sort_Css_Combine "${target_adblock_file}"
+sort_Css_Combine_python "${target_adblock_file}"
 #写入通用的Css
 echo "${css_common_record}" >> "${target_adblock_file}"
 busybox sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
