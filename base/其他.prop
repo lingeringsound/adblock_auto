@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: DeM3pPViKl37izUaOBqkaA
+! Checksum: oZvBMd7/WgB7biWekGgqBA
 ! Title: 自用去广告Adblock规则
-! Version: 20260620111422
-! Last modified: 2026-06-20 11:14:22
-! Total Count: 10177
+! Version: 20260621182532
+! Last modified: 2026-06-21 18:25:32
+! Total Count: 10185
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1908,6 +1908,9 @@
 ##.phone-ads
 ##.phone-only:not([id])
 ##.placeholder-ad
+##.play-sponsor
+##.play-text-sponsor-list
+##.play-text-sponsor-wrap
 ##.play_list_adbox
 ##.player + .sponsor
 ##.player-ad
@@ -1985,6 +1988,9 @@
 ##.small-icon-container.is_mb
 ##.source_container.swiper-wrapper[id="bannerCtrl"]
 ##.special-ads
+##.sponsor-application-item
+##.sponsor-banner
+##.sponsor-bottom
 ##.sponsor-div
 ##.sponsor-popup
 ##.sponsor_popup
@@ -2529,6 +2535,8 @@
 ##a[href][title*="sponsor"][target="_blank"] > img[src$=".png"]
 ##a[href][title*="威尼斯人"] > img[alt]
 ##a[href^="//app.qingning"]
+##a[href^="/data/system/"][href*=".html?t=17"][target="_blank"]
+##a[href^="/data/system/ad"][href*=".html?"][target="_blank"]
 ##a[href^="/rss/button?from="]
 ##a[href^="/voddetail/"] + a[href^="https"]
 ##a[href^="advslog.php?advid="][target="_blank"]
