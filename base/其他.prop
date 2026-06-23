@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: oZvBMd7/WgB7biWekGgqBA
+! Checksum: UMQ1JRGFrDbtd3oHMWnw2w
 ! Title: 自用去广告Adblock规则
-! Version: 20260621182532
-! Last modified: 2026-06-21 18:25:32
-! Total Count: 10185
+! Version: 20260624023430
+! Last modified: 2026-06-24 02:34:30
+! Total Count: 10191
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1054,6 +1054,7 @@
 ##.article_inline_images_ad
 ##.articleads
 ##.artplayer-plugin-ads
+##.artplayer-plugin-overlay
 ##.assignment.do
 ##.av-apps
 ##.b-advertising__down-menu
@@ -1935,6 +1936,7 @@
 ##.post-content + .article-bottom-apps
 ##.post-content > .txt-apps
 ##.post-content > [class^="ads"]
+##.post-content > p > a[href="/game.html"]
 ##.post__article-top-ad-wrapper
 ##.pre-play-adv
 ##.primis-ad
@@ -2562,6 +2564,7 @@
 ##a[href^="https://bds82.top"]
 ##a[href^="https://cdn.yinghuazy.xyz/apk"]
 ##a[href^="https://dk2.me"]
+##a[href^="https://dy.pridrathrklivreotxnderonex.com"]
 ##a[href^="https://gg."]
 ##a[href^="https://i.vip.po18ad.com/"][target="_blank"]
 ##a[href^="https://igt17.net"]
@@ -2684,6 +2687,7 @@
 ##article[itemscope][itemtype] > a[href^="/archives"][target="_blank"]
 ##bkveng
 ##body > #app > .adv-frame
+##body > #float-ai-wrap
 ##body > #loading[style="display: none;"] + noscript + #app
 ##body > #overover[style="position:fixed;width:100%;height:100%;background:silver;z-index: 2;opacity: 0.1;"]
 ##body > #showcloneshengxiaon
@@ -8761,6 +8765,8 @@ yahoo.com##li[data-test-locator="stream-related-ad-item"]
 yahoo.com,search.yahoo.com#@#a[referrerpolicy="unsafe-url"][target="_blank"]
 yandex.com.tr##div.content__bottom
 ydm.life##[onclick*="surnum"][style],img[style*="z-index:2147483647"][onclick*="javascript:"]
+ydparty04.tv##.mid-wrap
+ydparty04.tv##.top-wrap
 yeduxiaoshuoo.com##div[class$="anye"][onclick$="anye()"]
 yeeach.com##.footer + div[id][class]:not([style])
 yeeach.com##^script:has-text(new RegExp)
