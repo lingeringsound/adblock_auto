@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: UMQ1JRGFrDbtd3oHMWnw2w
+! Checksum: 2rziDqmeXrmf/tWwAPexeA
 ! Title: 自用去广告Adblock规则
-! Version: 20260624023430
-! Last modified: 2026-06-24 02:34:30
-! Total Count: 10191
+! Version: 20260627201941
+! Last modified: 2026-06-27 20:19:41
+! Total Count: 10194
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -2042,6 +2042,7 @@
 ##.tp_advertising
 ##.trend-card-advert
 ##.trend-card-advert__title
+##.ttgg
 ##.txtguanggao
 ##.under-player-ad-mobile
 ##.under_player > div[class*="lg:hidden"]
@@ -6021,7 +6022,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 ://*.*.xn--*.com/*/1_2.xml$third-party
 ://*.*.xyz/*/*-*-*-*/$third-party,~media,~stylesheet,~image
 ://*.*.xyz:*/*/*-*-*-*/$third-party,~media,~stylesheet,~image
-://*.*/*$script,third-party,domain=porncide.com|porncide.net
+://*.*/*$script,third-party,domain=mp4porn.website|porncide.com|porncide.net
 ://*.*/*.js$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*.js?17$third-party,domain=123dua.com|bamxs.com|bisowu.com|bokanx.com|bqq999.cc|bqvvxg8.cc|laiksw.cc|rz2024b.com|wolaidu1.com
 ://*.*/*cx?ssid=$third-party
@@ -6584,6 +6585,7 @@ _ads_banner
 _clickunder&pb=$popup
 _popupunder.
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[id^="GGADIMG"][src],div[class][id]:has(img[src][alt="xxx"]),a[href^="https://fkxl.xyz"]
+aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##a[href][rel*="sponsored"]
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##body > div[style^="position: -webkit-sticky; position: sticky; top: 0;"]
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##center > iframe[scrolling="NO"][frameborder="NO"]
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##p[align="center"]
@@ -8159,6 +8161,7 @@ sm.cn##div[id^="dl-banner-"]
 sm.cn,yz.m.sm.cn##a[href*="sm.cn/adclick?"]
 sm.cn,yz.m.sm.cn##div[id*="_Shopping_Etao_"]
 sm.cn,yz.m.sm.cn##div[id^="ad_ele_"]
+smallwebtools.net##+js(rmnt, script, Adblock)
 smartapps.baidu.com##.swan-ad-render-container
 smartapps.baidu.com##[id^="swan-ad-render-"]
 smartapps.baidu.com##swan-swan-ad-render
