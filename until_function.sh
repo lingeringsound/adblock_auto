@@ -381,7 +381,7 @@ key
 }
 
 #剔除css规则冲突规则
-function fixed_css_white_conflict(){
+function fixed_css_white_conflict_shell(){
 local file="${1}"
 local white_list=`cat ${file} | grep -E '^#\@#' | busybox sed -E 's/#\@#/##/g' `
 for i in ${white_list}
@@ -393,7 +393,7 @@ done
 }
 
 #去除部分选择器
-function wipe_same_selector_fiter(){
+function wipe_same_selector_fiter_shell(){
 local file="${1}"
 local IFS=$'\n'
 test ! -f "${file}" && return
@@ -410,7 +410,7 @@ done
 }
 
 #去除重复的域名规则
-function clear_domain_white_list(){
+function clear_domain_white_list_shell(){
 local file="${1}"
 test ! -f "${file}" && return
 cat "${file}" | busybox sed '/^\!/d;/\#/d;/\$/d' | grep -E '^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(:[0-9]{1,5})?(/[^ ]*)?' | sort -u | while read line
@@ -421,7 +421,7 @@ done
 }
 
 #去除与白名单冲突的域名
-function clear_domain_white_Rules(){
+function clear_domain_white_Rules_shell(){
 local file="${1}"
 test ! -f "${file}" && return
 cat "${file}" | grep -E 'domain=~' | busybox sed '/#/d;s/\$.*//g' | while read line
@@ -429,6 +429,85 @@ do
 	transfer_Rules=`escape_special_chars ${line}`
 	busybox sed -i -E "/^${transfer_Rules}$/d" "${file}"
 done
+}
+
+#修复低级错误
+function fixed_Rules_error_shell(){
+	local file="${1}"
+	test ! -f "${file}" && return
+	sed -i -E -e '/\$app=/d' \
+	-e 's/=“/=\"/g' \
+	-e 's/^[[:space:][:cntrl:]]//g' \
+	-e 's/\*=“/\*=\"/g' \
+	-e 's/\^=“/\^=\"/g' \
+	-e 's/\$=“/\$=\"/g' \
+	-e 's/”\]/\"\]/g' \
+	-e 's/\]\]/\]/g' \
+	-e 's/\[\[/\[/g' \
+	-e 's/([^#])[[:cntrl:][:space:]./$]##/\1##/g' \
+	-e 's/([^#])##[[:cntrl:][:space:]/$]/\1##/g' \
+	-e 's/###[[:cntrl:][:space:].#/$]/###/g' \
+	-e 's/##([[:digit:]]+)/##\\\1/g' \
+	-e 's/##\.\[/##\[/g' \
+	-e 's/^##[[:cntrl:][:space:]/$]/##/g' \
+	-e 's/[[:space:]]\|/\|/g' \
+	-e 's/\|[[:space:]]/\|/g' \
+	-e 's/([^:])\:(after|before)/\1\:\:\2/g' "${file}"
+#sed -i -E -e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\])/\1="\2"\3/g' \
+#	-e 's/(\[[:alpha:]|[\*\^\$]=\")([^"]*)\]/\1\2\"\]/g' \
+#	-e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\"\])/\1="\2\3/g' "${file}"
+	gawk -i inplace '{ while (match($0, /^##[A-Z]+\[/)) { $0 = substr($0, 1, RSTART-1) tolower(substr($0, RSTART, RLENGTH)) substr($0, RSTART+RLENGTH) } print }' "${file}"
+}
+
+
+function fixed_css_white_conflict(){
+local file="${1}"
+test ! -f "${file}" && return
+if command -v python3 >/dev/null 2>&1 ;then
+	python3 "`pwd`/Adblock_sort_other.py" "css_conflict" "${file}"
+else
+	fixed_css_white_conflict_shell "${file}"
+fi
+}
+
+function wipe_same_selector_fiter(){
+local file="${1}"
+test ! -f "${file}" && return
+if command -v python3 >/dev/null 2>&1 ;then
+	python3 "`pwd`/Adblock_sort_other.py" "wipe_selector" "${file}"
+else
+	wipe_same_selector_fiter_shell "${file}"
+fi
+}
+
+function clear_domain_white_list(){
+local file="${1}"
+test ! -f "${file}" && return
+if command -v python3 >/dev/null 2>&1 ;then
+	python3 "`pwd`/Adblock_sort_other.py" "clear_white" "${file}"
+else
+	clear_domain_white_list_shell "${file}"
+fi
+}
+
+function clear_domain_white_Rules(){
+local file="${1}"
+test ! -f "${file}" && return
+if command -v python3 >/dev/null 2>&1 ;then
+	python3 "`pwd`/Adblock_sort_other.py" "clear_white_rules" "${file}"
+else
+	clear_domain_white_Rules_shell "${file}"
+fi
+}
+
+function fixed_Rules_error(){
+local file="${1}"
+test ! -f "${file}" && return
+if command -v python3 >/dev/null 2>&1 ;then
+    python3 "`pwd`/Adblock_sort_other.py" "fixed_error" "${file}"
+else
+	fixed_Rules_error_shell "${file}"
+fi
 }
 
 #精简规则，剔除Via不支持的规则
@@ -550,7 +629,6 @@ test ! -f "${file}" && return
 busybox sed -i -E '/\\\//d;/\\\./d;/\\\?/d' "${file}"
 }
 
-
 #精简规则 去除Ublock不支持的规则
 function lite_Uadblock_Rules(){
 local file="${1}"
@@ -565,34 +643,6 @@ local file="${1}"
 test ! -f "${file}" && return 
 busybox sed -i -E 's/\$popup$//g;s/\$popup,third-party$/\$third-party/g;s/\$third-party,popup$/\$third-party/g;s/\$popup,~third-party$/\$~third-party/g;s/\$~third-party,popup$/\$~third-party/g;s/\$document$//g;s/\$popup,document$//g;s/\$document,popup$//g;s/\$all$//g;s/\$popup,all$//g;s/\$all,popup$//g' "${file}"
 #busybox sed -i -E '/^\|\|[0-9]+\.[0-9]+\./d' "${file}"
-}
-
-#修复低级错误
-function fixed_Rules_error(){
-	local file="${1}"
-	test ! -f "${file}" && return
-	sed -i -E -e '/\$app=/d' \
-	-e 's/=“/=\"/g' \
-	-e 's/^[[:space:][:cntrl:]]//g' \
-	-e 's/\*=“/\*=\"/g' \
-	-e 's/\^=“/\^=\"/g' \
-	-e 's/\$=“/\$=\"/g' \
-	-e 's/”\]/\"\]/g' \
-	-e 's/\]\]/\]/g' \
-	-e 's/\[\[/\[/g' \
-	-e 's/([^#])[[:cntrl:][:space:]./$]##/\1##/g' \
-	-e 's/([^#])##[[:cntrl:][:space:]/$]/\1##/g' \
-	-e 's/###[[:cntrl:][:space:].#/$]/###/g' \
-	-e 's/##([[:digit:]]+)/##\\\1/g' \
-	-e 's/##\.\[/##\[/g' \
-	-e 's/^##[[:cntrl:][:space:]/$]/##/g' \
-	-e 's/[[:space:]]\|/\|/g' \
-	-e 's/\|[[:space:]]/\|/g' \
-	-e 's/([^:])\:(after|before)/\1\:\:\2/g' "${file}"
-#sed -i -E -e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\])/\1="\2"\3/g' \
-#	-e 's/(\[[:alpha:]|[\*\^\$]=\")([^"]*)\]/\1\2\"\]/g' \
-#	-e 's/(\[[:alpha:]|[\*\^\$])=([^"]*)(\"\])/\1="\2\3/g' "${file}"
-	gawk -i inplace '{ while (match($0, /^##[A-Z]+\[/)) { $0 = substr($0, 1, RSTART-1) tolower(substr($0, RSTART, RLENGTH)) substr($0, RSTART+RLENGTH) } print }' "${file}"
 }
 
 #更新README信息
