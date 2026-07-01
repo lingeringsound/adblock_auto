@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: bWGrXC6adEfvnCNAk4dGGw
+! Checksum: zJT4ouGmzxfWicggevQNkw
 ! Title: 自用去广告Adblock规则
-! Version: 20260630182931
-! Last modified: 2026-06-30 18:29:32
-! Total Count: 10204
+! Version: 20260701134634
+! Last modified: 2026-07-01 13:46:34
+! Total Count: 10212
 ###ADbox
 ###Ad-Container
 ###Ad-Content
@@ -1157,6 +1157,7 @@
 ##.button-mobile-ad
 ##.button_ads
 ##.buttonads
+##.bv__pause-ad
 ##.c-ad--header
 ##.c-adSkyBox
 ##.c_ad160
@@ -1905,6 +1906,7 @@
 ##.panel-body > .list-unstyled > li > a[target="_blank"]
 ##.parade-ad-container
 ##.pause-controls[id^="playerad"]
+##.pb-adv-under-video
 ##.pb-slot-container
 ##.phone-ads
 ##.phone-only:not([id])
@@ -7845,6 +7847,10 @@ perfectgirls.xxx,hentaihaven.xxx,hentai.tv,animeidhentai.com,hanime.tv##iframe[s
 perfectgirls24.com##[class^="bb_"]
 php?ad=
 picnob.com,pixwox.com##.ah-box
+pimpbunny.com##.row > .col:has(a[href*=".php?z"][target="_blank"])
+pimpbunny.com##.row > .col:has(a[href][rel*="sponsored"])
+pimpbunny.com##[class^="pages-view-video-wrapper"] > div.row ~ div[class^="components-promoted-wrapper"]
+pimpbunny.com##a[href][target="_blank"][rel*="sponsored"]
 ping0.cc##.toprow
 pixiv.net##._illust-upload + div[style*="968px;"][style*="170px;"]
 pixiv.net##._premium-lead-function-banner
@@ -9678,6 +9684,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||mrtoss03.com^
 ||ms-ads-monitoring-events.presage.io
 ||mt316.com/cm.js
+||mttzzxx.com/*/*.php$third-party
 ||mtu.hlkcowp.cn^
 ||musclesaskewfeeding.com^
 ||mvanee.xyz^
@@ -10057,6 +10064,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||wonder.xhamster.com^$popup
 ||woozooo.com/*/img/*.js$third-party
 ||wotmvdc.cn^
+||wp*.aggzzl.com/*.js$third-party
 ||wpadmngr.com^
 ||wpnsrv.com^
 ||wpshsdk.com^$third-party
