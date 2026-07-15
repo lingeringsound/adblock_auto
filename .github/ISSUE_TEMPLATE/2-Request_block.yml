@@ -1,0 +1,64 @@
+name: 拦截请求
+description: 反馈你想要拦截的网站或者内容。
+labels: ["拦截请求"]
+assignees: 
+  -  lingeringsound
+body:  
+  - type: input
+    id: targetbolckwebsite
+    attributes:
+      label: 网址
+      description: 输入要拦截的网址
+      placeholder: ……
+    validations:
+      required: true
+
+  - type: textarea
+    id: blockotheradd
+    attributes:
+      label: 补充说明
+      placeholder: 补充描述你的要求
+    validations:
+      required: false
+
+  - type: dropdown
+    id: blocklists
+    attributes:
+      label: 你使用的是那个规则?
+      options:
+        - 混合规则精简版
+        - 混合规则
+        - 其他
+    validations:
+      required: false
+
+  - type: dropdown
+    id: adblocker
+    attributes:
+      label: 使用的拦截器
+      description: |
+        就是你在什么应用或者拓展里使用规则
+      options:
+        - Via
+        - Xbrowser(X浏览器)
+        - 嗅觉浏览器
+        - B仔浏览器
+        - Rians浏览器
+        - AdGuard(拓展)
+        - uBlock(拓展)
+        - 其他(套壳无核浏览器)
+        - 其他(浏览器拓展/插件)
+    validations:
+      required: false
+
+  - type: textarea
+    id: userangnt
+    attributes:
+      label: User-Agent 信息(可选)
+      description: |
+        可访问 [User-Agent检测网站](https://useragent.wcode.net) 查看。
+        示例格式：Mozilla/5.0 (Linux; Android 10; SM-G965F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Mobile Safari/537.36
+      placeholder: 输入你的 User-Agent 信息，例如通过网站获取……
+    validations:
+      required: false
+      pattern: ^Mozilla\/.*$
