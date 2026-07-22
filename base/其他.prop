@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: M6JAIVgJdd7V3TPRSCDHNg
+! Checksum: EkUDB7zqrxjY5JQ+9fuuuA
 ! Title: 自用去广告Adblock规则
-! Version: 20260720151449
-! Expires: 12 hours (update frequency)
-! Last modified: 2026-07-20 15:14:49
-! Total Count: 10256
-! Blocked Filters: 10256
+! Version: 20260722192650
+! Expires: 7 days (update frequency)
+! Last modified: 2026-07-22 19:26:50
+! Total Count: 10306
+! Blocked Filters: 10306
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -2998,6 +2998,7 @@
 ##div[id^="advads_ad_"]
 ##div[id^="azwangye"][style*="z-index: 11000;"]
 ##div[id^="div-gpt-"]
+##div[id^="div-gpt-ad"]
 ##div[id^="google_dfp_"]
 ##div[id^="gpt_ad_"]
 ##div[id^="hengfu_"] > a[id^="hengfu_"]
@@ -3551,6 +3552,9 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 -takeover-ad-
 -template-ads/
 -text-ads.
+.728x90.
+.adsense.
+.adserver.
 .advertmarket.
 .advertrecycling.
 .adwolf.
@@ -3585,6 +3589,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .cc/5y*/317.$~third-party
 .cc/?channelCode=$~third-party
 .cc/ad/
+.cc/ads/
 .cc/api/getPos?jspath=/$~third-party
 .cc/bokan/bokan.js$script
 .cc/dog.js
@@ -3768,6 +3773,11 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/abc/foot.js$~third-party
 .com/abc/head.js$~third-party
 .com/ad-provider.js$third-party
+.com/ad1/
+.com/ads.
+.com/ads_
+.com/adv?
+.com/adx/
 .com/allin3d.js?17$third-party
 .com/api/getPos?jspath=/$~third-party
 .com/api/ipv4check?mark
@@ -3782,6 +3792,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/bn.js$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/bokan/bokan.js$script
 .com/bug/log/$third-party
+.com/c.gif?
 .com/candy*.js$third-party
 .com/click/object.js$~third-party
 .com/click/play.js$~third-party
@@ -3822,6 +3833,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/in/multy$third-party
 .com/j/*$script,third-party
 .com/jquery.min.js?*=*=$third-party,domain=junhun520.app|junhun520.com|junhun520.net
+.com/js.ng/
+.com/js/ads/
 .com/js/axd.js
 .com/js/gg.js$script
 .com/js/xuanfu.js$script
@@ -3837,6 +3850,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/on.js$third-party,~image,~media,~stylesheet,domain=jable1.sbs|jable1.vip|javbest.icu|javbest.top|missav.ds|missav.llc|missav.ooo|missav.vip|missav2.icu|missav2.lat|missav2.one|missav2.wtf
 .com/piao/*.js?$~third-party
 .com/pingbi.js$~third-party
+.com/pv.gif?
 .com/real?17$third-party
 .com/redirect-zone/
 .com/rr/*?rr=$third-party
@@ -3983,6 +3997,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com:90*/sc/*?n=$third-party
 .com:9179/*t*/$third-party
 .com:9302/d/*?t=*&$third-party
+.eu/ads/
 .fun/$domain=123dua.com|qiqidu.net
 .fun/*.jss?17*&r=0$third-party
 .fun/*/17*/*.css?r=0$third-party
@@ -3990,6 +4005,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .fun/by*.js?17$third-party
 .gif$domain=kpl037.com|yydy.cc
 .gif$third-party,domain=037hdmovie.com|kpl037.com|lfwx2.com|likeav2.buzz|likeav2.cc|likeav2.com|likeav2.live|likeav2.xyz|po18co.app|po18co.cn|po18co.com|po18wen.app|po18wen.cn|po18wen.com|www-xnxx-com.mom|yydy.cc
+.hk/ad2/
+.hk/ads/
+.hk/groupon/ads/
+.html?ad_
 .html?channelCode=$third-party
 .icu/$third-party,domain=fuxs1.com
 .icu/*/20*/*/16*.gif$image,third-party
@@ -4018,6 +4037,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .icu/vue?$third-party
 .icu:28883/*/*$third-party
 .in/*$third-party,domain=321av.cc|321av.cfd|321av.icu|321av.men|321av.one|321av.org|321av.sbs|321av.shop|321av.top|321av.vip|321av1.top|321av365.top|balbums.st|bunkr-albums.io|bunkr.ci|bunkr.cr|bunkr.fi|bunkr.ph|bunkr.si|bunkr.sk|hnmt.org|mat6tube.com|noodlemagazine.com|nsfwr34.com|rou123.one|rou123.org|rule34.tube|rule34.us|rule34.xxx|rule34vault.com|ukdevilz.com
+.info/ads/
 .info/bokan/bokan.js$script
 .js?type=adult&v=$domain=netflav.com
 .la/8WaadBLH/*.js
@@ -4051,15 +4071,21 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .live:8891/vh3/
 .live:8891/vj3/
 .live:8891/vj4/$third-party
+.me/ads/
 .men/view_booster.js?v=
 .min.css$third-party,domain=bigboobsjapan.com|film-adult.com|film-adult.net|film-adult.top|subtitlecat.com|tokyobombers.com|tokyocafe.org
 .min.js$third-party,domain=bigboobsjapan.com|film-adult.com|film-adult.net|film-adult.top|subtitlecat.com|tokyobombers.com|tokyocafe.org
 .net/20*/*/*.txt$third-party
 .net/5y*/31*.$other,~third-party
 .net/5y*/32*.$other,~third-party
+.net/ad-
+.net/ads/
+.net/adv/
+.one/ads/
 .one/view_booster.js?v=
 .org/5y*/31*.$other,~third-party
 .org/5y*/32*.$other,~third-party
+.org/ads/
 .org/bokan/bokan.js$script
 .org/gg.js$script
 .org/gu1ding.js$script,~third-party
@@ -4084,6 +4110,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .pk/ads/
 .pl/ads/
 .pro/eda437/*.js$third-party
+.pw/ads/
 .pw/blxn_*.js?
 .refit.ads.
 .refreshAds.
@@ -4134,6 +4161,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top:8891/vh3/
 .top:8891/vj3/
 .top:9956/js/*.js
+.tv/ads/
 .tw/bokan/bokan.js$script
 .us/bokan/bokan.js$script
 .vip/astyle/wap.js$script,~third-party
@@ -6421,6 +6449,12 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 =AdCode_$third-party
 =AdCode_sjdb$third-party
 =AdCode_sjtb&$third-party
+?ad_ids=
+?ad_type=
+?adunit_id=
+?adunitid=
+?adzone=
+?file=ads&
 @@.cn/j/*$script,third-party,domain=weather.com.cn
 @@.cn/k/*$script,third-party,domain=autohome.com.cn|qq.com
 @@.com/*interstitial*.js$domain=reddit.com
@@ -6618,8 +6652,24 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||ypncdn.com^$domain=you-porn.com|youporngay.com|youpornru.com|youporn.*|youporn.com|youporngay.com|you-porn.com|youpornru.com|youporn.fyi
 Banner-Ad
 Banner-Adv
+_300_250.
+_300_250_
+_468.gif
 _728x90_
+_ad.php?
+_ad01.
+_ad1.$~stylesheet
+_ad2.
+_ad3.
+_ad6.
+_ad_bottom.
+_ad_iframe.
+_ad_images/
+_ads.js?
 _ads_banner
+_advert.
+_bannerad.
+_box_ad_
 _clickunder&pb=$popup
 _popupunder.
 aabook.cyou,aabook.xyz,aaread.club,aastory.space,aavbook.cc,aavbook.cyou,fqbook.cc,fqbook.cyou##.footer > div[class][id][style],cloudflare-app,.mybook-game-ad,img[id^="GGADIMG"][src],div[class][id]:has(img[src][alt="xxx"]),a[href^="https://fkxl.xyz"]
