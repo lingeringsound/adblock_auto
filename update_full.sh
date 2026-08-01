@@ -46,7 +46,7 @@ echo "※`date +'%F %T'` 开始合并规则……"
 #Full
 Combine_adblock_original_file "${Combine_Folder}/adblock_combine.txt" "${Sort_Folder}"
 #复制补充规则
-cp -rf "${Base_Rules_Folder}/adblock" "${Combine_Folder}/adblock.txt"
+cp -rf "${Base_Rules_Folder}/adblock_base.txt" "${Combine_Folder}/adblock.txt"
 cp -rf "${Base_Rules_Folder}/其他.prop" "${Combine_Folder}/其他.txt"
 cp -rf "${Base_Rules_Folder}/去除小说广告.prop" "${Combine_Folder}/去除小说广告.txt"
 cp -rf "${Download_Folder}/antiadblockfilters.txt" "${Combine_Folder}/antiadblockfilters.txt"
