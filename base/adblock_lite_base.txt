@@ -1,15 +1,15 @@
 [Adblock Plus 2.0]
-! Checksum: D5GdfYyEGF5U2JSHyb39dQ
+! Checksum: Naf2u32PTchj/5t6ycLdcg
 ! Title: 混合规则精简版基础规则
-! Version: 20260801101434
+! Version: 20260802122715
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-08-01 10:14:34
-! Total Count: 27987
-! Blocked Filters: 27987
+! Last modified: 2026-08-02 12:27:15
+! Total Count: 27978
+! Blocked Filters: 27978
 ! Description: 混合规则精简版预合并基础规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 
-!<<<<<通配符规则>>>>>4908
+!<<<<<通配符规则>>>>>4907
 $domain=ads.adxadserv.com|adserver.juicyads.com|cs.adxpansion.com|olmsoneenh.info|static.javhd.com|syndication.exosrv.com
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
@@ -1132,7 +1132,6 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 .rolloverad.
 .ru/ads/$~xmlhttprequest,domain=~limehd.tv|~litehd.tv|~pervyi-tv.online|~russia-tv.online|~shadowcore.ru|~tvzvezda.ru
 .ru^$third-party,script,domain=muzmob.org
-.sbs/view_booster.js?v=20$~third-party
 .sexplaycam.com^
 .shop/$third-party,domain=1kans.net|97s1.com|97s3.com|97s8.com|applnn.cc|biquge100.net|btmovi.kim|btsj6.com|colamanhua.com|cppg.cc|cppg.com|cppg.xyz|cqjschungao.com|d53px.com|dm99.me|dydytt.net|eeexun.com|fuwen123.com|haitangdushu.com|heshang123.com|huang1111.cn|ijjxs.net|iyungong.com|junhun520.app|junhun520.com|junhun520.net|laiksw.cc|ledlmw.com|lengmen.org|lengmenbook.com|lengmenread.com|lookmht.com|mobidushu.com|myfeiyanqing.com|myhaitang.net|mylengmen.com|mylewen.com|myshenye.com|newhaitang.com|newpopo.com|nmddd.com|peakread.com|qianlimaerp.com|rourouwu.info|sadhub.org|shenyedushu.com|soosadfun.com|sqruitu.com|sthuojia.net|tangsanshu.info|tinghao8.com|tinghaodebook.com|toosadfun.com|txtduo.org|xhzysh.com|xiakexsw.app|xiakexsw.cc|xiakexsw.com|xiakexsw.info|xiakexsw.org|yhdmp.net|yhdmz.org|yhpdm.com|yinghua8.tv|yinghuacd.com|yinghuavideo.com|youwu.com|youwu.im|ziyungong.org|zongcai666.com|tangsanshu.la
 .shop/?token=*&screen_*=*&ref=$third-party
@@ -20979,7 +20978,7 @@ zyuken.net##.PaddingTop10Bottom10[style^="height: 250px;"]
 zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; position: relative; top: 0px; z-index: 9999;"]
 !<<<<<网站单独规则 结束>>>>>
 
-!<<<<<通用Css规则>>>>>5750
+!<<<<<通用Css规则>>>>>5742
 ###ADbox
 ###ADtip
 ###Ad-Container
@@ -21931,7 +21930,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ###novel_mark_template + #popup_box
 ###nr + div.traffic-box
 ###nr + div[style="margin:0;padding:0;outline:0"]
-###nr + script:not([src]) ~ div[id]:not([class])
 ###nr1 > p#novel_down
 ###nr1 > p#novel_down_m
 ###olfullad
@@ -22258,7 +22256,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ##.ad-adsense-block-250
 ##.ad-alert-message-text
 ##.ad-alert-wrapper
-##.ad-area:not(.text-ad):not([data-group])
 ##.ad-banner-leaderboard
 ##.ad-banner-placeholder
 ##.ad-banner-single
@@ -22378,7 +22375,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ##.ad-space
 ##.ad-space-mpu-box
 ##.ad-space-topbanner
-##.ad-space:not(.textads)
 ##.ad-spacing
 ##.ad-span
 ##.ad-speedbump
@@ -22393,15 +22389,12 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ##.ad-tabSplit
 ##.ad-title
 ##.ad-top
-##.ad-unit:not(.textads)
 ##.ad-warning
 ##.ad-wireframe
 ##.ad-wireframe-wrapper
-##.ad-wrap:not(#google_ads_iframe_checktag)
 ##.ad-wrap_wallpaper
 ##.ad-wrapp
 ##.ad-wrapper
-##.ad-zone:not(.textads)
 ##.ad.mi_btcon
 ##.ad.noadmo
 ##.ad.none
@@ -24405,7 +24398,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ##.pggd > .ng-star-inserted
 ##.pggf > .ng-star-inserted
 ##.phone-ads
-##.phone-only:not([id])
 ##.photo-ad
 ##.photo-two > a[onclick^="_czc."]
 ##.phpbb-ads-center
@@ -25084,7 +25076,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ##[class$="play-adv"]
 ##[class$="video-ads"]
 ##[class*="__ads"]
-##[class*="ads_"]:not([class*="reads_"]):not(.main_and_ads_block)
 ##[class*="ads_border"]
 ##[class*="advertises"] > .popup-form > *
 ##[class*="advertises"] > .van-overlay
