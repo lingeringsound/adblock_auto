@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: KYfQgSi9a/NxDQx4HcMUDg
+! Checksum: I/T39FdQq+yOyeyVnqqt1w
 ! Title: 自用去广告Adblock规则
-! Version: 20260804175639
+! Version: 20260805170837
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-08-04 17:56:39
-! Total Count: 10346
-! Blocked Filters: 10346
+! Last modified: 2026-08-05 17:08:37
+! Total Count: 10352
+! Blocked Filters: 10352
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -1712,6 +1712,7 @@
 ##.main-container > .van-grid:not([style])
 ##.main-container > div.ad-banners
 ##.main-container > div.tags-group
+##.main.warp > .app-list > a.app-item[target="_blank"]
 ##.main_promo_image_container
 ##.mainholder + div[id][class*=" "] > div[id][class*=" "]
 ##.maomi-content > #main-container > .row.mob40 + .row
@@ -6796,8 +6797,11 @@ autohome.com.cn##a[style*="app2.autoimg.cn/opscarddfs/"]
 autohome.com.cn##div.h5-pendant
 autohome.com.cn##ol
 autohome.com.cn##section.bbs-post-replay.operate-position
+av01.media##.banner-content-wrapper
+av01.media##div.group:has(.w-full.h-full > iframe)
 avgle.com##a[href*="/redirect"]
 avgle.com##img[src*=".php"]
+avjoy.me##.ad-content-bot
 avjoy.me##[class^="ad-content"]:has(script[src*="ad"])
 avple.tv##.MuiSkeleton-root
 avple.tv##.jss13
@@ -8130,7 +8134,9 @@ qbxs.com##a[href^="https://mobile.yangkeduo.com/"]
 qbxs.com##div.image-container
 qidiantu.com###ad-slot
 qinav.com##div[id^="qinav_b"]
+qinav.com,tasexy.com##.adb
 qinav.com,tasexy.com##.b300
+qinav.com,tasexy.com##ul:has(li.iframe)
 qingqingxs.top,txtduo.app,txtduo.cn,txtduo.com,txtduo.live,txtduo.org,xfreehd.com##^script:has-text(Math.random)
 quark.cn##.reflow-button
 quark.cn##.relfow-button
