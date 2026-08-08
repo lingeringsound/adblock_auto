@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 7MN91tF/53vQhxBASK1EJg
+! Checksum: DACMSyLYyDQv/rLFI+WGew
 ! Title: 自用去广告Adblock规则
-! Version: 20260808085602
+! Version: 20260808232511
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-08-08 08:56:02
-! Total Count: 10374
-! Blocked Filters: 10374
+! Last modified: 2026-08-08 23:25:11
+! Total Count: 10378
+! Blocked Filters: 10378
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -4157,8 +4157,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .top/17*.*.*?17$third-party,~media,~stylesheet,~image
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
+.top/YL/*0*/*.json$third-party
 .top/ad*/mobile.js$~third-party
 .top/ad*/show.js$~third-party
+.top/dh/*0*/*.json$third-party
 .top/foot.php?ver=17$~third-party
 .top/iis.*.1*.json?$third-party
 .top/j/*$script,third-party
@@ -6817,10 +6819,10 @@ avjoy.me##[class^="ad-content"]:has(script[src*="ad"])
 avple.tv##.MuiSkeleton-root
 avple.tv##.jss13
 avple.tv##.jss20
-avsubtitles.com##+js(rmnt, script, document.dispatch)
-avsubtitles.com##+js(rmnt, script, window.AdProvider)
 avsubtitles.com#@#.main_and_ads_block
 avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
+avsubtitles.com,x-video.tube##+js(rmnt, script, document.dispatchEvent)
+avsubtitles.com,x-video.tube##+js(rmnt, script, window.AdProvider)
 avtik.com###player > .player-wrapper + section
 ayjxcs.com,cqzuoer.com,fybys.com,hellorlgzf7sn.com,hskjjglo.com,jiabaide.cn,jmyts.com,jpyy2.com,qiqione.com,tjrongze.com,vv3nwjk.com,xdxtz4j3a.com##img.line_banner[src*="data:"]:upward(4)
 b.quark.cn##.video-info
@@ -7669,8 +7671,10 @@ last.fm##.tonefuze
 last.fm##[data-ads-placement]
 leakav.com##.fp-brand
 leakav.com##.▶
+leakedzone.com##.banner_after_player_view_post
 leakedzone.com##.item:has(img[alt="Premium Porn"])
 leakedzone.com##div:has(script[src$="ad-provider.js"])
+leakedzone.com##div[class^="koukoku"]
 leaks4fap.com##a[href*=".com/go.php?"]
 letsplayindex.com##.ad_side_box
 letsplayindex.com##.ad_wide_vertical
@@ -8196,7 +8200,7 @@ rule34-videos.com##[class*="-ad-"]
 rule34-videos.com##[class^="ad-"]
 rule34-videos.com##div.ad-banner
 rule34-videos.com##div.post-ad-wrapper
-rule34.tube##.fp-logo
+rule34.tube,x-video.tube##.fp-logo
 rule34.us,rule34.xxx##[data-cl-spot]
 rule34.us,rule34.xxx##div[id*="-spot"]
 rule34gen.com##.search-ai-slot
