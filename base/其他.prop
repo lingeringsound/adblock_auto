@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: p/fNjexQ20JdvIIa3kf41w
+! Checksum: NsF7Hmoa3t52EBt48pnyIA
 ! Title: 自用去广告Adblock规则
-! Version: 20260814074021
+! Version: 20260815212141
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-08-14 07:40:21
-! Total Count: 10409
-! Blocked Filters: 10409
+! Last modified: 2026-08-15 21:21:41
+! Total Count: 10413
+! Blocked Filters: 10413
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -3870,6 +3870,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/j/*$script,third-party
 .com/jquery.min.js?*=*=$third-party,domain=junhun520.app|junhun520.com|junhun520.net
 .com/js.ng/
+.com/js/ads.js?timestamp
 .com/js/ads/
 .com/js/axd.js
 .com/js/gg.js$script
@@ -6848,8 +6849,8 @@ avple.tv##.jss13
 avple.tv##.jss20
 avsubtitles.com#@#.main_and_ads_block
 avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
-avsubtitles.com,notfans.org,onlyzy.com,x-video.tube##+js(rmnt, script, document.dispatchEvent)
-avsubtitles.com,onlyzy.com,x-video.tube##+js(rmnt, script, window.AdProvider)
+avsubtitles.com,deluxtube.com,notfans.org,onlyzy.com,topvid.tv,x-video.tube##+js(rmnt, script, document.dispatchEvent)
+avsubtitles.com,deluxtube.com,onlyzy.com,topvid.tv,x-video.tube##+js(rmnt, script, window.AdProvider)
 avtik.com###player > .player-wrapper + section
 ayjxcs.com,cqzuoer.com,fybys.com,hellorlgzf7sn.com,hskjjglo.com,jiabaide.cn,jmyts.com,jpyy2.com,qiqione.com,tjrongze.com,vv3nwjk.com,xdxtz4j3a.com##img.line_banner[src*="data:"]:upward(4)
 b.quark.cn##.video-info
@@ -7699,6 +7700,9 @@ leakav.com##.fp-brand
 leakav.com##.▶
 leakedmodels.com##.azz_div
 leakedmodels.com##.promoz
+leakedzone.com###media-items-photos > a[href][class] ~ div:has(iframe[title="Advertisement"])
+leakedzone.com###media-items-shorts > a[href][class] ~ div:has(iframe[title="Advertisement"])
+leakedzone.com###media-items-videos > a[href][class] ~ div:has(iframe[title="Advertisement"])
 leakedzone.com##.banner_after_player_view_post
 leakedzone.com##.item:has(img[alt="Premium Porn"])
 leakedzone.com##div:has(script[src$="ad-provider.js"])
