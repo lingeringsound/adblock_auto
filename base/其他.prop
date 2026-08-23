@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: k2yIv3LeloFfo5pYdp9tMQ
+! Checksum: bOaomRd8dO3AOOnIGZduMw
 ! Title: 自用去广告Adblock规则
-! Version: 20260819220738
+! Version: 20260823081956
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-08-19 22:07:38
-! Total Count: 10418
-! Blocked Filters: 10418
+! Last modified: 2026-08-23 08:19:56
+! Total Count: 10427
+! Blocked Filters: 10427
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -1166,6 +1166,8 @@
 ##.box-bannerads
 ##.boxAd
 ##.breakout-ad
+##.bst-card--ad
+##.bst-top-banners > ul
 ##.button-ad
 ##.button-ads
 ##.button-ads-container
@@ -2106,6 +2108,8 @@
 ##.view-ads
 ##.view-video-advertisements
 ##.w-full > a[href*="://ad"][target="_blank"]
+##.w-full[_nk] > a[_nk][target="_blank"][rel="noopener noreferrer"]
+##.w-full[_nk] > a[target="_blank"][rel="noopener noreferrer"][_nk]
 ##.wc-adblock-wrap
 ##.wgAdBlockMessage
 ##.wide-ads-container
@@ -2332,7 +2336,9 @@
 ##[id^="wp_ads_gpt_widget"]
 ##[id^="xqad"]
 ##[name^="google_ads_iframe"]
+##[onclick*="'Ad Click'"]
 ##[onclick*="//xxl.skdvkslkdb.com"]
+##[onclick*="ad_slot"]
 ##[onclick*="content.ad/"]
 ##[onclick*="https://xxl."][onclick*=".com/bd-"]
 ##[onclick="window.open(this.url)"][src]
@@ -7408,6 +7414,7 @@ hanime1.cfdhanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.m
 hanime1.cfdhanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.men##^script:has-text(loadNewPopupAd)
 hanime1.cfdhanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.men##body > div[style*="9999"]:not([class]):not([id])
 hanime1.cfdhanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.men##div[style^="display: flex;"]:not([id]):not([class])
+hanime1.icu,hanime1.nl,hanime1.sbs,hanime1.vip,hanime12.top,hanime1365.top##div[style*="text-align: center;"]:has(> script + ins)
 hanyu.baidu.com###download-wrapper
 hanyu.baidu.com##.business-el-card
 hanyu.baidu.com##[id^="fengchao_els"]
@@ -9404,6 +9411,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||chinatimes.com/Scripts/bennerad.
 ||chinatimes.com/ads/
 ||chinatimes.com/analytics/
+||chisha.tssuy.cn^$third-party
 ||chnsrv.com^$third-party
 ||chpadblock.com^
 ||chushoushijian.cn^$third-party
@@ -9609,6 +9617,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||hanpian123.*/*tj*.js
 ||hanpian123.*/h*d.js
 ||haobax.com/ad*.php
+||hd.gkkqkq.com^$third-party
 ||hdmp4.cc/js/foot.js
 ||hdpornfree.xxx/sup/*.js
 ||hdyoushi.com/*/*.js?v=1.0
