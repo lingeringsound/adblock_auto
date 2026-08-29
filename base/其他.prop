@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 4DIO8nrgofB9wNbGdbJytA
+! Checksum: wT7XCvIlxg/xzYngjSHITw
 ! Title: 自用去广告Adblock规则
-! Version: 20260828154138
+! Version: 20260829105035
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-08-28 15:41:38
-! Total Count: 10437
-! Blocked Filters: 10437
+! Last modified: 2026-08-29 10:50:35
+! Total Count: 10439
+! Blocked Filters: 10439
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -6638,8 +6638,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@||dn0qt3r0xannq.cloudfront.net/*/default/prebid-load.js$domain=nationalreview.com
 @@||ecma.bdimg.com^$domain=3g.baidu.com|m.baidu.com|m5.baidu.com|m2.baidu.com|m3.baidu.com|www.baidu.com
 @@||ecmb.bdimg.com^$domain=3g.baidu.com|m.baidu.com|m5.baidu.com|m2.baidu.com|m3.baidu.com|www.baidu.com
-@@||eporner.com^$~third-party
-@@||fapcat.com^$~third-party
 @@||fusacq.com/javascript/advertising.js|$script
 @@||gimg*.baidu.com$domain=cz4k.com|czym.com|czzymovie.com
 @@||gimg*.baidu.com/*czzy*
@@ -7230,6 +7228,8 @@ enet.com.cn,fjsen.com,hupu.com,kdslife.com,mysteel.com,news.cnyes.com,olehd.com,
 eporner.com###admobilefoot
 eporner.com###admobileoutstream
 eporner.com###admobiletop
+eporner.com##+js(rmnt, script, setTrackerUrl)
+eporner.com##.vjs-docker
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
 eporner.com,exe.io,exnion.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,sendvid.com,thisav.com,vidguard.site,waaw.to##+js(nowoif)
@@ -9016,6 +9016,7 @@ yhdmw.com##div.container > iframe[src][rel="nofollow"]
 yinhuadm.xyz##^script:has-text(jsjiami.com.v4)
 yitongqinba.com##.visible-xs
 ymck.pro###appPromoFloat
+youcrazyx.com##center
 youku.com##.clipboard
 youngpornvideos.com##.sidebar div[class]:has(> a[href^="https://a.bestcontentoperation.top/"])
 youporn.com##.playWrapper > #videoWrapper + div[class*=" "]:has(> div[id]:only-child > .adsbytrafficjunky)
@@ -9536,6 +9537,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||elonreptiloid.com^$third-party
 ||elsynmlw.fun^
 ||energizeio.com^
+||eporner.com/*/piwik.js
 ||eporner.com/adblock
 ||eqwyym.com/js/dom.js$third-party
 ||erciyan.com/*/*0*0*.js
