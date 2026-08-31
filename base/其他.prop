@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: o8w7J1WJwjU94cZr2j5vcg
+! Checksum: HBaWfzqqfETuRk9h3L8zeg
 ! Title: 自用去广告Adblock规则
-! Version: 20260831030919
+! Version: 20260831144823
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-08-31 03:09:19
-! Total Count: 10452
-! Blocked Filters: 10452
+! Last modified: 2026-08-31 14:48:23
+! Total Count: 10468
+! Blocked Filters: 10468
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -515,6 +515,7 @@
 ###modal-adblocker
 ###modalAblockWrapper
 ###modalAdblock
+###movieplayer-box-adv
 ###myads
 ###novel_mark_template + #popup_box
 ###nr + div.traffic-box
@@ -1550,6 +1551,7 @@
 ##.horizontaltextadbox
 ##.horizsponsoredlinks
 ##.hortad
+##.hqb-ad-btn
 ##.htvad
 ##.hv3-alert-window
 ##.icon-ads
@@ -1934,6 +1936,7 @@
 ##.phone-ads
 ##.phone-only:not([id])
 ##.placeholder-ad
+##.plads
 ##.play-sponsor
 ##.play-text-sponsor-list
 ##.play-text-sponsor-wrap
@@ -2368,6 +2371,8 @@
 ##a.checkNum[target="_blank"] > img[data-src]
 ##a.copy[onclick] > picture
 ##a.downurl[target="_blank"][referrerpolicy="no-referrer"]
+##a.gncams
+##a.gngames
 ##a.poster[onclick="return false"][target="_blank"]
 ##a[alt="545新葡京"][target="_blank"]
 ##a[alt="91Pro"][target="_blank"]
@@ -4871,6 +4876,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /customAds.css
 /ddbd/*f.js$~third-party,script
 /ddbd/f1*.js$~third-party
+/devtools-detector/lib/
 /display/ads/*
 /diyidm.js$third-party
 /download/kwai$popup,domain=chenzhongtech.com
@@ -6859,8 +6865,8 @@ avple.tv##.jss13
 avple.tv##.jss20
 avsubtitles.com#@#.main_and_ads_block
 avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
-avsubtitles.com,bangerspis.xyz,deluxtube.com,linlinverse.com,notfans.org,onlyzy.com,pimpbunny.com,storyofthepast.xyz,taiav.com,taimadou.com,topjav.tv,topvid.tv,ukdevilz.com,viralxxxporn.com,x-video.tube,xasiat.com##+js(rmnt, script, document.dispatchEvent)
-avsubtitles.com,bangerspis.xyz,deluxtube.com,linlinverse.com,onlyzy.com,pimpbunny.com,storyofthepast.xyz,taiav.com,taimadou.com,topjav.tv,topvid.tv,ukdevilz.com,viralxxxporn.com,x-video.tube,xasiat.com##+js(rmnt, script, window.AdProvider)
+avsubtitles.com,bangerspis.xyz,deluxtube.com,linlinverse.com,notfans.org,onlyzy.com,pimpbunny.com,pornlore.com,storyofthepast.xyz,taiav.com,taimadou.com,topjav.tv,topvid.tv,ukdevilz.com,viralxxxporn.com,x-video.tube,xasiat.com##+js(rmnt, script, document.dispatchEvent)
+avsubtitles.com,bangerspis.xyz,deluxtube.com,linlinverse.com,onlyzy.com,pimpbunny.com,pornlore.com,storyofthepast.xyz,taiav.com,taimadou.com,topjav.tv,topvid.tv,ukdevilz.com,viralxxxporn.com,x-video.tube,xasiat.com##+js(rmnt, script, window.AdProvider)
 avtik.com###player > .player-wrapper + section
 ayjxcs.com,cqzuoer.com,fybys.com,hellorlgzf7sn.com,hskjjglo.com,jiabaide.cn,jmyts.com,jpyy2.com,qiqione.com,tjrongze.com,vv3nwjk.com,xdxtz4j3a.com##img.line_banner[src*="data:"]:upward(4)
 b.quark.cn##.video-info
@@ -6957,6 +6963,8 @@ beauty.yahoo.co.jp##.Banner
 bi-girl.net##[class^="adWrapper"]
 bi-girl.net##[class^="ad_sp_top"]
 bi-girl.net##div[id]:has(img[alt*="Ads"])
+bigtitslust.com##.mobile-small-nav
+bigtitslust.com,rainblow.xxx,thepornstar.com,youcrazyx.com##center
 biiz.cc,biiz.com,nsmm.cc##a[href*=".apk"]
 bilibili.com###b_app_link
 bilibili.com###fixed_app_download
@@ -7231,6 +7239,8 @@ enet.com.cn,fjsen.com,hupu.com,kdslife.com,mysteel.com,news.cnyes.com,olehd.com,
 eporner.com###admobilefoot
 eporner.com###admobileoutstream
 eporner.com###admobiletop
+eporner.com###movieplayer-box-adv
+eporner.com###pbwuvp
 eporner.com##+js(rmnt, script, setTrackerUrl)
 eporner.com##.vjs-docker
 eporner.com##[class^="admobile"]
@@ -8167,6 +8177,7 @@ pornhuber.love##div:not([id]):not([class]):not([style]):has(.adTextList)
 pornlib.com###spot_video_livecams
 pornlib.com##.spot:has(script[src*="/ad-provider.js"])
 pornmoviesuhd.com##.full-bns-block
+pornoxo.com##.content-block.js-quiet
 pornpics.com,pornpics.de##.ad-text
 pornpics.com,pornpics.de##.adss-mob
 pornpics.com,pornpics.de##.r-frame
@@ -8216,6 +8227,9 @@ quotes.sina.cn##.app-footer-sina
 quotes.sina.cn##.js-app-header
 quotes.sina.cn##[class*="callup"]
 quotes.sina.cn##[class*="wb-btn-wrap"]
+rainblow.xxx##.gncams
+rainblow.xxx##.gngames
+rainblow.xxx##.plads
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##.movie-card:has(img[alt*="廣告"])
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##.tai-box-mobile
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##.top-phonehome
@@ -8575,6 +8589,7 @@ thepaper.cn##div[class^="footer_banner"]
 theporn.cc##a[rel="nofollow"][href][target="_blank"]
 theporn.cc##div[id*="theporn"][style*="margin"] > div > span
 thepornbang.com##.video-strip
+thepornstar.com##.hqb-topbar__link
 theyarehuge.com##div[data-nosnippet]
 thicca.com##div.happy-inside-player
 thicca.com##div:not([class]):not([id]):has(.adsbyexoclick)
@@ -9026,7 +9041,6 @@ yhdmw.com##div.container > iframe[src][rel="nofollow"]
 yinhuadm.xyz##^script:has-text(jsjiami.com.v4)
 yitongqinba.com##.visible-xs
 ymck.pro###appPromoFloat
-youcrazyx.com##center
 youku.com##.clipboard
 youngpornvideos.com##.sidebar div[class]:has(> a[href^="https://a.bestcontentoperation.top/"])
 youporn.com##.playWrapper > #videoWrapper + div[class*=" "]:has(> div[id]:only-child > .adsbytrafficjunky)
@@ -9357,6 +9371,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||beergeneralization.com^
 ||beijing163.aliyunapi.org^$third-party,script
 ||bid.ssp.bance.jp^
+||bigtitslust.com/*.js?*=*&
 ||bihunekus.com^
 ||bilinovel.com/scripts/zation.js
 ||billion.kassitegamy.top^$other
@@ -9567,6 +9582,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||exrtbsrv.com^
 ||eypev.com^$third-party
 ||falawlaw.com/click/*.js
+||fapnado.com/ads/
 ||fitchpmsa.com^$third-party
 ||fivotv.*/static/foot.js
 ||fj*.baji*.com^$third-party
