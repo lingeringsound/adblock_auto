@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: MsckAP9KbMuvG3VeztMa4w
+! Checksum: 9nHC3rmUeYiZF+BA1oVGEg
 ! Title: 自用去广告Adblock规则
-! Version: 20260903161741
+! Version: 20260904075606
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-03 16:17:41
-! Total Count: 10487
-! Blocked Filters: 10487
+! Last modified: 2026-09-04 07:56:06
+! Total Count: 10492
+! Blocked Filters: 10492
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -4800,6 +4800,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /api/arrayid/alltongji.js
 /api/arrayid/chaptertj.js
 /api/models/vast?
+/api/postback/$third-party
 /api/postback?$third-party,domain=film-adult.com|film-adult.net|film-adult.top|sex-empire.org
 /api/s/s*d*.js$third-party
 /api/spots/*$domain=yomovies.*|speedostream.com|watchomovies.com|gofilms4u.pro|pornleech.io|hentaihand.com|filmlinks4u.pro|uniqueten.net|ultraten.net|topcryptoz.net|allcryptoz.net|analdin.com|supjav.com|crazyporn.xxx|hog.tv|porntry.com|love4porn.com|freeadultcomix.com|hog.mobi|sextb.net|pornpapa.com
@@ -8700,7 +8701,6 @@ twitter.com,x.com##div[data-testid="cellInnerDiv"]:has([data-testid="User-Name"]
 twitter.com,x.com##div[data-testid="cellInnerDiv"]:has([data-testid="tweetText"]:has-text(/比我骚|没我好看|我的福|我福不黑|sao货|入身体|sao的很|她主页能打|没她骚|比她骚|快手.*（.{4,8}）.*(?:牛[逼皮]|[像说是]AI|都忘了|审核|竟然|过审|[藏忍顶]不住|看[立爽]了|太[敢牛]了)|30\+.*(体制内|太[色瑟涩骚sao]).*(?:\@|顶不住)|(?:主人|爸爸)快来(?:领|找)我|(?:同城|附近).*(?:满足|草|操|艹|男大|女大|体育生|母狗)|喜欢我|颠勺|线下我就曰|线下骚货|(?:她好(瑟|色|骚|[Ss][Aa][Oo])|我不行了|刷了半天|就她的主页能打)|(?:小|母)狗(?:求|要|想|主人|爸爸|哥哥|抱抱|操|艹|草|抱走){2,}|推特\s*\@.+|法我|被法|滴滴|玩的就是[反|返]差\s*\@|刚(?:分手|被|操|做|完|艹|草)想被(?:操|艹|草|爱)|有?万达广场附近的吗|谁来当我(?:主人|爸爸|狗狗|小狗|骚母狗)|pan\.(?:quark\.cn|xunlei\.com)|drive\.uc\.cn|体制内[的得]?.{3,8}[的得]很\s*\@|她太.{1,6}了.*我真顶不住\s*\@|晚上开课.+|有没有离[得的]近[得的]|比她(?:骚|好看)的没/i))
 twitter.com,x.com##div[data-testid="trend"]:has(> div[class]:only-child svg + span)
 txtduo.org,txtduo.com,txtduo.app,txtduo.cn,txtduo.live##div[style*="margin:"]
-txxx.com##.gfpl-wrapper
 txxx.com##.jw-reset
 txxx.com##[class*="popup"]
 txxx.com##a[href][rel="nofollow"][target="_blank"]
@@ -8712,6 +8712,11 @@ txxx.com##div.video-videos-slider
 txxx.com##div[class$="xxn"]
 txxx.com##iframe[src*=".com/get?"]
 txxx.com,txxx.*##.video-content > div:first-child > div[class]:has(> div > a[href="#"])
+txxx.com,txxx.tube##.gfpl-wrapper
+txxx.tube##.gfpl-link
+txxx.tube##.listing-videos > div:not(a[href])
+txxx.tube##div:has(> .gfpl-content.gfpl-wrapper)
+txxx.tube##div[style]:has(#meiecg)
 txxxporn.tube##.sugggestion:nth-child(n+1)
 txxxporn.tube##.video-content > div[class] > div:has(> div.pplayer) + div[class]
 txxxporn.tube##.video-content > div[class]:has(> div[class] > div[id] > noscript > iframe[src^="https://syndication.realsrv.com"])
