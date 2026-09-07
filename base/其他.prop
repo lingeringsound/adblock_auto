@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 1j8PNhHQOlmn0m5U4YCydA
+! Checksum: r3Fx8/AjAJ4OQ/SwTo8vyg
 ! Title: 自用去广告Adblock规则
-! Version: 20260905215320
+! Version: 20260907125214
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-05 21:53:20
-! Total Count: 10498
-! Blocked Filters: 10498
+! Last modified: 2026-09-07 12:52:14
+! Total Count: 10503
+! Blocked Filters: 10503
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -7254,7 +7254,7 @@ eporner.com##+js(rmnt, script, setTrackerUrl)
 eporner.com##.vjs-docker
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
-eporner.com,exe.io,exnion.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,sendvid.com,thisav.com,vidguard.site,waaw.to##+js(nowoif)
+eporner.com,exe.io,exnion.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,pornwish.org,sendvid.com,thisav.com,vidguard.site,waaw.to##+js(nowoif)
 erciyan.com##^script:has-text(function xxS)
 eromanga-show.com,hentai-one.com,hentaipaw.com##+js(no-setTimeout-if, /[a-z]\(!0\)/, 800)
 eromanga-show.com,hentai-one.com,hentaipaw.com##div[id^="ts_ad_"]
@@ -8200,11 +8200,14 @@ pornpics.com,pornpics.de##.stamp-bn-1
 pornpics.com,pornpics.de##.thumbwook + li[class]:has(.ad-text)
 pornsitetest.com##div[id^="eroti-"]
 pornstarbyface.com##div[id^="sponcored-content-"]
+porntrex.com##+js(rmnt, script, /adblockURL|pop-adv/)
+porntrex.com##.bottomNav + div[style]:not([class]):not([id])
 porntrex.com##.content > div[class]:has(> div[style*="text-align"] > center > script)
 pornve.com##.video_ad_mob
 pornwhite.com##.container-side:has(> b:first-child + div[data-banner]:last-child)
 pornwhite.com##.items-container > div.items-holder:has(> div[data-banner])
 pornwhite.com,sleazyneasy.com##div[data-banner]
+pornwish.org##+js(rmnt, script, /ad-provider\.js|Adblocker|trackerID|window\.AdProvider/)
 pornxp.com##body > [style*="opacity: 0.01;"]
 ppp.porn##a[style][href*="http"][target="_blank"]
 ppp.porn##section > div:not([class]):has(a[style][href*="http"][target="_blank"])
@@ -8732,6 +8735,7 @@ uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##.search_comfi
 uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##.shortcut_box
 uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##div.dialog_mask
 uaa001.com,uaa002.com,uaa003.com,uaa004.com,uaa005.com,uaa006.com##div.login_box
+uiiumovie.fun,uiiumovie.to,uiiumovie.com##+js(rmnt, script, AdBlocker)
 ukdevilz.com##div[style]:not([id]):not([class]):has(script[src*="ad-provider"])
 unfetish.com##body > .modal-mask
 up.taoseye.com##a[target="_blank"],[ontouchstart]
@@ -10049,6 +10053,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||porncide.*/themes/p_1.js
 ||pornhd8k.me/pop?
 ||porntube.com/image/0/0/0/*/*/*/*/*/*/*_*x*.$image
+||pornwex.*/kvs.js
 ||ppdod.com^$third-party
 ||ppfannypp.com^$third-party
 ||profitablegatetocontent.com^
