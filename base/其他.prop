@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: yL5fFPovglRaNbeMUmqBzA
+! Checksum: GVjtt4KUHZrU6KBLz45j3Q
 ! Title: 自用去广告Adblock规则
-! Version: 20260912231140
+! Version: 20260913003559
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-12 23:11:40
-! Total Count: 10543
-! Blocked Filters: 10543
+! Last modified: 2026-09-13 00:35:59
+! Total Count: 10554
+! Blocked Filters: 10554
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -3926,6 +3926,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/sh/to/*$third-party
 .com/sn/*?*&*id=2032069$third-party
 .com/solid.gif?z=*=*=*=$third-party
+.com/static/foot.js$~third-party
 .com/static/js/foot.js$~third-party
 .com/static/js/head.js$~third-party
 .com/t1j.js$~third-party,script
@@ -4233,6 +4234,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .tw/bokan/bokan.js$script
 .us/bokan/bokan.js$script
 .vip/astyle/wap.js$script,~third-party
+.vip/ban.js$~third-party
 .vip/facaishang.js$script
 .vip/facaishen*.js$script,~third-party
 .vip/ggdi.js
@@ -5234,6 +5236,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /js/xp.js
 /js/xt.js
 /js/xtc.js
+/js/yihg*.js?17
 /js/zx.js
 /js/zx2.js
 /json/ads/*
@@ -5396,6 +5399,10 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /public/042*.js$~third-party,script
 /public/110110.js$~third-party
 /public/adf*.js?v=
+/public/fd_foot.js$~third-party
+/public/fd_top.js$~third-party
+/public/js/fd_foot.js$~third-party
+/public/js/fd_top.js$~third-party
 /qs_theme/biquge_m/js/tools.js
 /qzhf.js
 /qzxtb.js
@@ -5469,6 +5476,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static*/gd.js
 /static*/pf.js?v=
 /static*js/ad*.js$script,~third-party
+/static/*/jsgdhx*.js
 /static/*dipiao*.js$~third-party
 /static/*dipiao.js$~third-party
 /static/*dipiao2.js$~third-party
@@ -6561,6 +6569,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 @@.cn/j/*$script,third-party,domain=weather.com.cn
 @@.cn/k/*$script,third-party,domain=autohome.com.cn|qq.com
 @@.com/*interstitial*.js$domain=reddit.com
+@@.com/1.js$domain=xjujitv.com
 @@.com/o.js$third-party,script,domain=mpo18.com|xcupfox.com
 @@.cos.ap-guangzhou.myqcloud.com/jm/mxtheme
 @@.html?ad_$domain=jd.com|zol.com.cn
@@ -9347,6 +9356,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||aidu123.com/css/js/tools.js
 ||aiqu288.com/*/*.js$~third-party
 ||aiqu789.com/*/*.js$~third-party
+||aiyingtv.*/static/foot.js
 ||aj*.online^$third-party,script
 ||aj1987.online^$third-party,script
 ||aj2555.bid^$third-party
@@ -10383,6 +10393,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||vvmeirihd.feijied.xyz^
 ||vxinzheng.xyz^$third-party
 ||vzigttqgqx.com^
+||wangkaixin.com/t.js
 ||wap.gonb.org/qjlm_wap.js
 ||wbqqo.com^$third-party
 ||wdrpmu632.shop^
