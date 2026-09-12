@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: AFgZB6fbT/Dk3Nekd55DQA
+! Checksum: u+gHhGi22RSU0FuA3Qqr5A
 ! Title: 自用去广告Adblock规则
-! Version: 20260912101428
+! Version: 20260912101821
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-12 10:14:28
-! Total Count: 10529
-! Blocked Filters: 10529
+! Last modified: 2026-09-12 10:18:21
+! Total Count: 10530
+! Blocked Filters: 10530
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -4359,6 +4359,8 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .xyz:90*/d/*?t=$third-party
 .xyz:90*/js/*?x=$third-party
 /*.css?*r=0$third-party
+/*.js?*=http*utm_source*&*=%keywords%$~third-party
+/*.js?*utm_source*&*referrer_site=$~third-party
 /*.jss?*r=0$third-party
 /*.php?pid=*&n=$third-party
 /*/*/*.gif?bdSecret=*&DdTime=*$third-party
@@ -4382,7 +4384,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /*_*_/bigREDdog.$third-party
 /*fdjh/*f*ds*.php$~third-party
 /*imgix.js$third-party,domain=bigboobsjapan.com|tokyobombers.com|tokyocafe.org
-/*js?*utm_source*&*referrer_site=$~third-party
 /*script/pf.js
 /000/flink/click.php?
 /17mb/js/style.js$~third-party,script
