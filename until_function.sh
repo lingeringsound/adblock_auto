@@ -14,16 +14,6 @@ local file="$1"
 local output_file="${2:-$file}"
 [ -f "$file" ] || return
 local enc bom tmp_file ram_dir
-for _tmp_dir in /dev/tmp /tmp $TMPDIR $RUNNER_TEMP
-do
-	[ -n "$_tmp_dir" ] || continue
-	mkdir -p "$_tmp_dir/Adblock" 2>/dev/null
-	if [ -w "$_tmp_dir/Adblock" ]; then
-		ram_dir="$_tmp_dir/Adblock"
-		break
-	fi
-done
-[ -w "$ram_dir" ] || ram_dir="${0%/*}"
 bom=$(head -c 4 "$file" 2>/dev/null | od -A n -t x1 | tr -d ' \n')
 case "$bom" in
 	efbbbf*) enc=UTF-8-BOM ;;
@@ -53,10 +43,24 @@ do
 done
 fi
 [ -n "$enc" ] || { echo "无法识别编码: ${file##*/}" >&2; return 1; }
-echo "※转换${file##*/}编码: $enc --> UTF-8"
+if [ "$enc" = "UTF-8" ] && [ "$file" = "$output_file" ]; then
+	dos2unix "$file" >/dev/null 2>&1
+	return 0
+fi
+[ "$enc" = "UTF-8" ] || echo "※转换${file##*/}编码: $enc --> UTF-8"
+for _tmp_dir in /dev/tmp /tmp $TMPDIR $RUNNER_TEMP
+do
+	[ -n "$_tmp_dir" ] || continue
+	mkdir -p "$_tmp_dir/Adblock" 2>/dev/null
+	if [ -w "$_tmp_dir/Adblock" ]; then
+		ram_dir="$_tmp_dir/Adblock"
+		break
+	fi
+done
+[ -w "$ram_dir" ] || ram_dir="${0%/*}"
 tmp_file="${ram_dir}/tmp.${file##*/}"
 if [ "${enc}" = "UTF-8-BOM" ]; then
-	tail -c +4 "$file" | iconv -f UTF-8 -t UTF-8 > "$tmp_file"
+	tail -c +4 "$file" > "$tmp_file"
 else
 	iconv -f "${enc}" -t UTF-8 "$file" > "$tmp_file"
 fi
