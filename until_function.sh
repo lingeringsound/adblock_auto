@@ -8,6 +8,63 @@ test ! -f "${file}" && return
 busybox sed -i "/AWAvenue Ads Rule/,/^$/d" "${file}"
 }
 
+#转换文件为UTF-8编码
+function convert_enc_to_UTF() {
+local file="$1"
+local output_file="${2:-$file}"
+[ -f "$file" ] || return
+local enc bom tmp_file ram_dir
+for _tmp_dir in /dev/tmp /tmp $TMPDIR $RUNNER_TEMP
+do
+	[ -n "$_tmp_dir" ] || continue
+	mkdir -p "$_tmp_dir/Adblock" 2>/dev/null
+	if [ -w "$_tmp_dir/Adblock" ]; then
+		ram_dir="$_tmp_dir/Adblock"
+		break
+	fi
+done
+[ -w "$ram_dir" ] || ram_dir="${0%/*}"
+bom=$(head -c 4 "$file" 2>/dev/null | od -A n -t x1 | tr -d ' \n')
+case "$bom" in
+	efbbbf*) enc=UTF-8-BOM ;;
+	fffe0000*) enc=UTF-32LE ;;
+	0000feff*) enc=UTF-32BE ;;
+	fffe*) enc=UTF-16LE ;;
+	feff*) enc=UTF-16BE ;;
+esac
+if [ -z "$enc" ]; then
+	sample=$(LC_ALL=C head -c 32768 "$file")
+for e in UTF-8 \
+GB18030 GBK GB2312 \
+BIG5 BIG5-HKSCS CESU-8 \
+SHIFT_JIS EUC-JP ISO-2022-JP \
+EUC-KR ISO-2022-KR \
+IBM866 IBM850 KOI8-R KOI8-U \
+WINDOWS-1250 WINDOWS-1251 WINDOWS-1252 \
+WINDOWS-1253 WINDOWS-1254 WINDOWS-1255 \
+WINDOWS-1256 WINDOWS-1257 WINDOWS-1258 \
+ISO-8859-1 ISO-8859-2 ISO-8859-3 \
+ISO-8859-4 ISO-8859-5 ISO-8859-6 \
+ISO-8859-7 ISO-8859-8 ISO-8859-9 \
+ISO-8859-10 ISO-8859-13 ISO-8859-14 \
+ISO-8859-15
+do
+	printf '%s' "$sample" | iconv -f "$e" -t UTF-8 >/dev/null 2>&1 && { enc="$e"; break; }
+done
+fi
+[ -n "$enc" ] || { echo "无法识别编码: ${file##*/}" >&2; return 1; }
+echo "※转换${file##*/}编码: $enc --> UTF-8"
+tmp_file="${ram_dir}/tmp.${file##*/}"
+if [ "${enc}" = "UTF-8-BOM" ]; then
+	tail -c +4 "$file" | iconv -f UTF-8 -t UTF-8 > "$tmp_file"
+else
+	iconv -f "${enc}" -t UTF-8 "$file" > "$tmp_file"
+fi
+dos2unix "$tmp_file" >/dev/null 2>&1
+cat "$tmp_file" > "${output_file}"
+rm -f "$tmp_file"
+}
+
 #下载Adblock规则
 function download_link(){
 local IFS=$'\n'
@@ -35,7 +92,7 @@ test "$(echo "${i}" | grep -E '^#' )" && continue
 	test ! -f "${target_dir}/${name}" && curl -k -L -o "${target_dir}/${name}" "${URL}" >/dev/null 2>&1 && echo "※ `date +'%F %T'` ${name} 下载成功！"
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_dir}/${name}"
 test "${name}" = "Adguard_Chinese.txt" && remove_AWAvenue_Ads_Rule_Filter "${target_dir}/${name}"
-dos2unix "${target_dir}/${name}" >/dev/null 2>&1
+convert_enc_to_UTF "${target_dir}/${name}" >/dev/null 2>&1
 done
 }
 
@@ -194,7 +251,7 @@ local target_output_file="`pwd`/${target_file##*/}.temple"
 local count_Rules_all=`cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l`
 local a=0
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
-local new_file=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
+local new_file=$(cat "${target_file}" | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
 echo "${new_file}" > "${target_file}"
 for target_content in `cat "${target_file}" | grep '#'  | busybox sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | busybox sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
 do
@@ -242,7 +299,7 @@ local target_output_file="`pwd`/${target_file##*/}.temple"
 local count_Rules_all=`cat "${target_file}" | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d' | wc -l `
 local a=0
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
-local new_file=$(cat "${target_file}" | iconv -t 'utf-8' | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
+local new_file=$(cat "${target_file}" | sort -u | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
 echo "${new_file}" > "${target_file}"
 for target_content in `cat "${target_file}" | grep 'domain=' | busybox sed 's|domain=.*||g' | sort | uniq -d | busybox sed '/^[[:space:]]*$/d' `
 do
