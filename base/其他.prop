@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: UPXeM3XrM6yzZjtmxSDh2w
+! Checksum: xMruh8B+il7pqCslYsbS1g
 ! Title: 自用去广告Adblock规则
-! Version: 20260915151713
+! Version: 20260915205812
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-15 15:17:13
-! Total Count: 10560
-! Blocked Filters: 10560
+! Last modified: 2026-09-15 20:58:12
+! Total Count: 10562
+! Blocked Filters: 10562
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -7596,6 +7596,7 @@ ifeng.com##[class^="index_videoList"]
 ifeng.com##[id*="top_ad"]
 ifeng.com##a[href^="https://ishare.ifeng.com/loc/webdaoliu/index"]
 ifeng.com##div:not([class]):not([id]):not([style]) > div[class^="index_list"] + div[style]:not([class]):not([id])
+ifeng.com##img[src*=".ifengimg.com/feprod"]
 ifeng.com##section > [class^="index_toolbar"]
 ihuaben.com###openDeepLinkBtn
 ihuaben.com##.appdownload
@@ -9090,6 +9091,7 @@ yahoo.com##li[class^="Bgc(geminiBgc)"]
 yahoo.com##li[data-test-locator="stream-related-ad-item"]
 yahoo.com,search.yahoo.com#@#a[referrerpolicy="unsafe-url"][target="_blank"]
 yandex.com.tr##.content__bottom
+yc.ifeng.com##.app-hook
 ydm.life##[onclick*="surnum"][style],img[style*="z-index:2147483647"][onclick*="javascript:"]
 ydparty04.tv##.mid-wrap
 ydparty04.tv##.top-wrap
