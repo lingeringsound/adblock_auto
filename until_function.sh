@@ -593,10 +593,14 @@ function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
 local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed -e '/^\!/d;/^[[:space:]]*$/d' \
- -e 's/\$3p/\$third-party/g' \
- -e 's/\$1p/\$~third-party/g' \
- -e 's/\$~3p/\$~third-party/g' \
- -e 's/\$~1p/\$third-party/g' \
+ -e 's/\$3p$/\$third-party/g' \
+ -e 's/\$3p\,/\$third-party\,/g' \
+ -e 's/\$1p$/\$~third-party/g' \
+ -e 's/\$1p\,/\$~third-party\,/g' \
+ -e 's/\$~3p$/\$~third-party/g' \
+ -e 's/\$~3p\,/\$~third-party\,/g' \
+ -e 's/\$~1p$/\$third-party/g' \
+ -e 's/\$~1p\,/\$third-party\,/g' \
  -e 's/\,1p$/\,~third-party/g' \
  -e 's/\,1p\,/\,~third-party\,/g' \
  -e 's/\,3p$/\,third-party/g' \
@@ -605,16 +609,22 @@ local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#
  -e 's/\,~1p\,/\,third-party\,/g' \
  -e 's/\,~3p$/\,~third-party/g' \
  -e 's/\,~3p\,/\,~third-party\,/g' \
- -e 's/\,strict3p/\,third-party/g' \
- -e 's/\$strict3p/\$third-party/g' \
- -e 's/\$xhr/\$xmlhttprequest/g' \
- -e 's/\$~xhr/\$~xmlhttprequest/g' \
+ -e 's/\,strict3p$/\,third-party/g' \
+ -e 's/\,strict3p\,/\,third-party\,/g' \
+ -e 's/\$strict3p$/\$third-party/g' \
+ -e 's/\$strict3p\,/\$third-party\,/g' \
+ -e 's/\$xhr$/\$xmlhttprequest/g' \
+ -e 's/\$xhr\,/\$xmlhttprequest\,/g' \
+ -e 's/\$~xhr$/\$~xmlhttprequest/g' \
+ -e 's/\$~xhr\,/\$~xmlhttprequest\,/g' \
  -e 's/\,xhr\,/\,xmlhttprequest\,/g' \
  -e 's/\,xhr$/\,xmlhttprequest/g' \
  -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
  -e 's/\,~xhr$/\,~xmlhttprequest/g' \
- -e 's/\$css/\$stylesheet/g' \
- -e 's/\$~css/\$~stylesheet/g' \
+ -e 's/\$css$/\$stylesheet/g' \
+ -e 's/\$css\,/\$stylesheet\,/g' \
+ -e 's/\$~css$/\$~stylesheet/g' \
+ -e 's/\$~css\,/\$~stylesheet\,/g' \
  -e 's/\,css$/\,stylesheet/g' \
  -e 's/\,css\,/\,stylesheet\,/g' \
  -e 's/\,~css$/\,~stylesheet/g' \
@@ -667,10 +677,14 @@ function convert_abbreviations() {
 local file="${1}"
 test ! -f "${file}" && return 0
 local converted_content="$(cat "${file}" | busybox sed \
- -e 's/\$3p/\$third-party/g' \
- -e 's/\$1p/\$~third-party/g' \
- -e 's/\$~3p/\$~third-party/g' \
- -e 's/\$~1p/\$third-party/g' \
+ -e 's/\$3p$/\$third-party/g' \
+ -e 's/\$3p\,/\$third-party\,/g' \
+ -e 's/\$1p$/\$~third-party/g' \
+ -e 's/\$1p\,/\$~third-party\,/g' \
+ -e 's/\$~3p$/\$~third-party/g' \
+ -e 's/\$~3p\,/\$~third-party\,/g' \
+ -e 's/\$~1p$/\$third-party/g' \
+ -e 's/\$~1p\,/\$third-party\,/g' \
  -e 's/\,1p$/\,~third-party/g' \
  -e 's/\,1p\,/\,~third-party\,/g' \
  -e 's/\,3p$/\,third-party/g' \
@@ -679,20 +693,26 @@ local converted_content="$(cat "${file}" | busybox sed \
  -e 's/\,~1p\,/\,third-party\,/g' \
  -e 's/\,~3p$/\,~third-party/g' \
  -e 's/\,~3p\,/\,~third-party\,/g' \
- -e 's/\$xhr/\$xmlhttprequest/g' \
- -e 's/\$~xhr/\$~xmlhttprequest/g' \
+ -e 's/\$xhr$/\$xmlhttprequest/g' \
+ -e 's/\$xhr\,/\$xmlhttprequest\,/g' \
+ -e 's/\$~xhr$/\$~xmlhttprequest/g' \
+ -e 's/\$~xhr\,/\$~xmlhttprequest\,/g' \
  -e 's/\,xhr\,/\,xmlhttprequest\,/g' \
  -e 's/\,xhr$/\,xmlhttprequest/g' \
  -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
  -e 's/\,~xhr$/\,~xmlhttprequest/g' \
- -e 's/\$css/\$stylesheet/g' \
- -e 's/\$~css/\$~stylesheet/g' \
+ -e 's/\$css$/\$stylesheet/g' \
+ -e 's/\$css\,/\$stylesheet\,/g' \
+ -e 's/\$~css$/\$~stylesheet/g' \
+ -e 's/\$~css\,/\$~stylesheet\,/g' \
  -e 's/\,css$/\,stylesheet/g' \
  -e 's/\,css\,/\,stylesheet\,/g' \
  -e 's/\,~css$/\,~stylesheet/g' \
  -e 's/\,~css\,/\,~stylesheet\,/g' \
- -e 's/\$doc/\$document/g' \
- -e 's/\$~doc/\$~document/g' \
+ -e 's/\$doc$/\$document/g' \
+ -e 's/\$doc\,/\$document\,/g' \
+ -e 's/\$~doc$/\$~document/g' \
+ -e 's/\$~doc\,/\$~document\,/g' \
  -e 's/\,doc\,/\,document\,/g' \
  -e 's/\,doc$/\,document/g' \
  -e 's/\,~doc\,/\,~document\,/g' \
@@ -719,7 +739,21 @@ echo "${lite_content}" > "${file}"
 function wipe_fiter_popup_domain(){
 local file="${1}"
 test ! -f "${file}" && return 
-busybox sed -i -E 's/\$popup$//g;s/\$popup,third-party$/\$third-party/g;s/\$third-party,popup$/\$third-party/g;s/\$popup,~third-party$/\$~third-party/g;s/\$~third-party,popup$/\$~third-party/g;s/\$document$//g;s/\$popup,document$//g;s/\$document,popup$//g;s/\$all$//g;s/\$popup,all$//g;s/\$all,popup$//g' "${file}"
+busybox sed -i -E \
+  -e 's/\$popup,third-party$/\$third-party/g' \
+  -e 's/\$third-party,popup$/\$third-party/g' \
+  -e 's/\$popup,~third-party$/\$~third-party/g' \
+  -e 's/\$~third-party,popup$/\$~third-party/g' \
+  -e 's/\$popup,document$//g' \
+  -e 's/\$document,popup$//g' \
+  -e 's/\$popup,all$//g' \
+  -e 's/\$all,popup$//g' \
+  -e 's/\/\$popup$/\^/g' \
+  -e 's/\/\$document$/\^/g' \
+  -e 's/\/\$all$/\^/g' \
+  -e 's/\$popup$//g' \
+  -e 's/\$document$//g' \
+  -e 's/\$all$//g' "${file}"
 #busybox sed -i -E '/^\|\|[0-9]+\.[0-9]+\./d' "${file}"
 }
 
