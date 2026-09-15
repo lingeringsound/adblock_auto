@@ -134,16 +134,25 @@ def fixed_Rules_error(file_path):
         (re.compile(r'([^:])\:(after|before)'), r'\1::\2')
     ]
 
-    lower_pattern = re.compile(r'##[A-Z]+\[')
+    tag_pattern = re.compile(r'(##|#@#)(.*)')
+    upper_tag_pattern = re.compile(
+        r'(?<![a-zA-Z0-9_-])(A|ABBR|ARTICLE|ASIDE|AUDIO|B|BODY|BUTTON|CANVAS|DIV|EM|FOOTER|FORM|H1|H2|H3|H4|H5|H6|HEADER|IFRAME|IMG|INPUT|INS|LB|LI|MAIN|NAV|OL|OPTION|P|SECTION|SELECT|SPAN|STRONG|TABLE|TD|TR|UL|VIDEO)(?![a-zA-Z0-9_-])'
+    )
 
-    def lowercase_match(match):
-        return match.group(0).lower()
+    def lower_tags(match):
+        prefix = match.group(1)
+        selector = match.group(2)
+        parts = re.split(r'(\[[^\]]*\])', selector)
+        for i in range(0, len(parts), 2):
+            parts[i] = upper_tag_pattern.sub(lambda m: m.group(1).lower(), parts[i])
+        return prefix + ''.join(parts)
 
     new_lines = []
     for line in lines:
         for pat, rep in replacements:
             line = pat.sub(rep, line)
-        line = lower_pattern.sub(lowercase_match, line)
+        if '##' in line or '#@#' in line:
+            line = tag_pattern.sub(lower_tags, line)
         new_lines.append(line)
 
     with open(file_path, 'w', encoding='utf-8') as f:
