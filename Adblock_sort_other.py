@@ -2,6 +2,19 @@ import sys
 import re
 import os
 
+def print_help():
+    help_text = """使用方法: python3 Adblock_sort_other.py <action> <file_path>
+
+可用操作 (actions):
+  css_conflict       剔除与 #@# 白名单冲突的 ## CSS 规则
+  wipe_selector      清理带有相同限定符参数的重复 || 域名拦截规则
+  clear_white        清除已在 ||domain^ 拦截规则中存在的纯域名白名单
+  clear_white_rules  清除带有 domain=~ 的域名排除规则
+  fixed_error        修复规则语法中的常见错误（引号、空格、属性选择器等）
+  help, -h, --help   显示本帮助信息
+"""
+    print(help_text)
+
 def fixed_css_white_conflict(file_path):
     if not os.path.exists(file_path):
         return
@@ -24,24 +37,19 @@ def wipe_same_selector_fiter(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         lines = f.read().splitlines()
 
-    strip_patterns = [
-        r'\$third-party$', r'\$popup$', r'\$third-party,important$', 
-        r'\$popup,third-party$', r'\$third-party,popup$', r'\$script$', 
-        r'\$image$', r'\$image,third-party$', r'\$third-party,image$', 
-        r'\$script,third-party$', r'\$third-party,script$'
-    ]
+    strip_pat = re.compile(
+        r'\$(third-party|popup|third-party,important|popup,third-party|'
+        r'third-party,popup|script|image|image,third-party|third-party,image|'
+        r'script,third-party|third-party,script)$'
+    )
     
     counts = {}
-    domain_rules = []
     
     for line in lines:
         if line.startswith('||'):
-            cleaned = line
-            for pat in strip_patterns:
-                cleaned = re.sub(pat, '', cleaned)
+            cleaned = strip_pat.sub('', line)
             if 'domain=' in cleaned or cleaned.startswith('!') or not cleaned.strip():
                 continue
-            domain_rules.append((line, cleaned))
             counts[cleaned] = counts.get(cleaned, 0) + 1
 
     duplicates = {k for k, v in counts.items() if v > 1}
@@ -49,16 +57,8 @@ def wipe_same_selector_fiter(file_path):
     if not duplicates:
         return
 
-    new_lines = []
-    for line in lines:
-        is_deleted = False
-        for dup in duplicates:
-            escaped_dup = re.escape(dup).replace(r'\$', r'\\\$')
-            if re.match(f"^{escaped_dup}\\$", line):
-                is_deleted = True
-                break
-        if not is_deleted:
-            new_lines.append(line)
+    targets_prefix = tuple(f"{dup}$" for dup in duplicates)
+    new_lines = [line for line in lines if not line.startswith(targets_prefix)]
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines) + '\n')
@@ -98,9 +98,7 @@ def clear_domain_white_Rules(file_path):
 
     remove_set = set()
     for line in lines:
-        if 'domain=~' in line:
-            if '#' in line:
-                continue
+        if 'domain=~' in line and '#' not in line:
             cleaned = line.split('$')[0]
             remove_set.add(cleaned)
 
@@ -116,25 +114,27 @@ def fixed_Rules_error(file_path):
         lines = f.read().splitlines()
 
     replacements = [
-        (r'\$app=', ''),
-        (r'=“', '="'),
-        (r'^[ \t\r\n\x00-\x1f\x7f]', ''),
-        (r'\*=“', '*="'),
-        (r'\^=“', '^="'),
-        (r'\$=“', '$="'),
-        (r'”\]', '"]'),
-        (r'\]\]', ']'),
-        (r'\[\[', '['),
-        (r'([^#])[ \t\r\n\x00-\x1f\x7f\.\/\$]##', r'\1##'),
-        (r'([^#])##[ \t\r\n\x00-\x1f\x7f\$]', r'\1##'),
-        (r'###[ \t\r\n\x00-\x1f\x7f\.#\$]', '###'),
-        (r'##([0-9]+)', r'##\\\1'),
-        (r'##\.\[', '##['),
-        (r'^##[ \t\r\n\x00-\x1f\x7f\$]', '##'),
-        (r'[ \t]+\|', '|'),
-        (r'\|[ \t]+', '|'),
-        (r'([^:])\:(after|before)', r'\1::\2')
+        (re.compile(r'\$app='), ''),
+        (re.compile(r'=“'), '="'),
+        (re.compile(r'^[ \t\r\n\x00-\x1f\x7f]+'), ''),
+        (re.compile(r'\*=“'), '*="'),
+        (re.compile(r'\^=“'), '^="'),
+        (re.compile(r'\$=“'), '$="'),
+        (re.compile(r'”\]'), '"]'),
+        (re.compile(r'\]\]'), ']'),
+        (re.compile(r'\[\['), '['),
+        (re.compile(r'([^#])[ \t\r\n\x00-\x1f\x7f\.\/\$]##'), r'\1##'),
+        (re.compile(r'([^#])##[ \t\r\n\x00-\x1f\x7f\$]'), r'\1##'),
+        (re.compile(r'###[ \t\r\n\x00-\x1f\x7f\.#\$]'), '###'),
+        (re.compile(r'##([0-9]+)'), r'##\\\1'),
+        (re.compile(r'##\.\['), '##['),
+        (re.compile(r'^##[ \t\r\n\x00-\x1f\x7f\$]'), '##'),
+        (re.compile(r'[ \t]+\|'), '|'),
+        (re.compile(r'\|[ \t]+'), '|'),
+        (re.compile(r'([^:])\:(after|before)'), r'\1::\2')
     ]
+
+    lower_pattern = re.compile(r'##[A-Z]+\[')
 
     def lowercase_match(match):
         return match.group(0).lower()
@@ -142,19 +142,31 @@ def fixed_Rules_error(file_path):
     new_lines = []
     for line in lines:
         for pat, rep in replacements:
-            line = re.sub(pat, rep, line)
-        line = re.sub(r'##[A-Z]+\[', lowercase_match, line)
+            line = pat.sub(rep, line)
+        line = lower_pattern.sub(lowercase_match, line)
         new_lines.append(line)
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines) + '\n')
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 2:
+        print_help()
         sys.exit(1)
+
     action = sys.argv[1]
+
+    if action in ("help", "-h", "--help"):
+        print_help()
+        sys.exit(0)
+
+    if len(sys.argv) < 3:
+        print("错误: 缺少参数 <file_path>\n")
+        print_help()
+        sys.exit(1)
+
     target_file = sys.argv[2]
-    
+
     if action == "css_conflict":
         fixed_css_white_conflict(target_file)
     elif action == "wipe_selector":
@@ -165,3 +177,7 @@ if __name__ == "__main__":
         clear_domain_white_Rules(target_file)
     elif action == "fixed_error":
         fixed_Rules_error(target_file)
+    else:
+        print(f"错误: 未知的 action '{action}'\n")
+        print_help()
+        sys.exit(1)
