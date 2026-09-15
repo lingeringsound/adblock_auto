@@ -92,7 +92,7 @@ test "$(echo "${i}" | grep -E '^#' )" && continue
 	test ! -f "${target_dir}/${name}" && curl -k -L -o "${target_dir}/${name}" "${URL}" >/dev/null 2>&1 && echo "※ `date +'%F %T'` ${name} 下载成功！"
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_dir}/${name}"
 test "${name}" = "Adguard_Chinese.txt" && remove_AWAvenue_Ads_Rule_Filter "${target_dir}/${name}"
-convert_enc_to_UTF "${target_dir}/${name}" >/dev/null 2>&1
+convert_enc_to_UTF "${target_dir}/${name}"
 done
 }
 
