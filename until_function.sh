@@ -12,78 +12,13 @@ busybox sed -i "/AWAvenue Ads Rule/,/^$/d" "${file}"
 function convert_enc_to_UTF() {
 local file="$1"
 local output_file="${2:-$file}"
+local python_file="`pwd`/convert_enc.py"
 [ -f "$file" ] || return
-local enc bom tmp_file ram_dir
-bom=$(head -c 4 "$file" 2>/dev/null | od -A n -t x1 | tr -d ' \n')
-case "$bom" in
-	efbbbf*) enc=UTF-8-BOM ;;
-	fffe0000*) enc=UTF-32LE ;;
-	0000feff*) enc=UTF-32BE ;;
-	fffe*) enc=UTF-16LE ;;
-	feff*) enc=UTF-16BE ;;
-esac
-if [ -z "$enc" ]; then
-for e in UTF-8 \
-GB18030 GBK GB2312 CP936 GB_2312-80 HZ \
-BIG5 CP950 BIG5-HKSCS EUC-TW \
-SHIFT_JIS CP932 EUC-JP ISO-2022-JP \
-ISO-2022-JP-1 ISO-2022-JP-2 CP50221 \
-EUC-JP-2004 SHIFT_JIS-2004 ISO-2022-JP-2004 \
-EUC-KR CP949 ISO-2022-KR JOHAB KSC_5601 \
-WINDOWS-1252 ISO-8859-1 ISO-8859-15 \
-WINDOWS-1250 WINDOWS-1254 WINDOWS-1253 WINDOWS-1257 \
-WINDOWS-1251 KOI8-R KOI8-U KOI8-RU KOI8-T \
-IBM866 CP1131 IBM855 \
-WINDOWS-1255 WINDOWS-1256 WINDOWS-1258 \
-ISO-8859-2 ISO-8859-3 ISO-8859-4 \
-ISO-8859-5 ISO-8859-6 ISO-8859-7 \
-ISO-8859-8 ISO-8859-9 ISO-8859-10 \
-ISO-8859-11 ISO-8859-13 ISO-8859-14 ISO-8859-16 \
-CP874 TIS-620 VISCII TCVN \
-IBM850 IBM862 IBM869 \
-CP437 CP737 CP775 CP852 CP853 \
-CP855 CP857 CP858 CP860 CP861 \
-CP863 CP864 CP865 CP869 CP1125 \
-ARMSCII-8 GEORGIAN-ACADEMY GEORGIAN-PS \
-PT154 KZ-1048 MULELAO-1 CP1133 \
-MACINTOSH MACCENTRALEUROPE MACCROATIAN \
-MACROMANIA MACCYRILLIC MACUKRAINE \
-MACGREEK MACTURKISH MACHEBREW \
-MACARABIC MACTHAI MACICELAND \
-HP-ROMAN8 NEXTSTEP \
-CESU-8
-do
-	if head -c 32768 "$file" | iconv -f "$e" -t UTF-8 >/dev/null 2>&1 ;then
-		enc="$e"
-		break
-	fi
-done
-fi
-[ -n "$enc" ] || { echo "无法识别编码: ${file##*/}" >&2; return 1; }
-if [ "$enc" = "UTF-8" ] && [ "$file" = "$output_file" ]; then
-	dos2unix "$file" >/dev/null 2>&1
-	return 0
-fi
-[ "$enc" = "UTF-8" ] || echo "※转换${file##*/}编码: $enc --> UTF-8"
-for _tmp_dir in /dev/tmp /tmp $TMPDIR $RUNNER_TEMP
-do
-	[ -n "$_tmp_dir" ] || continue
-	mkdir -p "$_tmp_dir/Adblock" 2>/dev/null
-	if [ -w "$_tmp_dir/Adblock" ]; then
-		ram_dir="$_tmp_dir/Adblock"
-		break
-	fi
-done
-[ -w "$ram_dir" ] || ram_dir="${0%/*}"
-tmp_file="${ram_dir}/tmp.${file##*/}"
-if [ "${enc}" = "UTF-8-BOM" ]; then
-	tail -c +4 "$file" > "$tmp_file"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ]; then
+	[ "${file}" = "${output_file}" ] && python3 "${python_file}" "${file}" || python3 "${python_file}" "${file}" "${output_file}"
 else
-	iconv -f "${enc}" -t UTF-8 "$file" > "$tmp_file"
+	dos2unix "$file" >/dev/null 2>&1
 fi
-dos2unix "$tmp_file" >/dev/null 2>&1
-cat "$tmp_file" > "${output_file}"
-rm -f "$tmp_file"
 }
 
 #下载Adblock规则
