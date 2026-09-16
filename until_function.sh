@@ -430,7 +430,7 @@ busybox sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
 }
 
 #规则分类
-function sort_and_optimum_adblock(){
+function sort_and_optimum_adblock_shell(){
 local file="${1}"
 test ! -f "${file}" && return 
 cat << key > "${file}"
@@ -456,6 +456,17 @@ cat << key > "${file}"
 !<<<<<放行白名单 结束>>>>>
 
 key
+}
+
+function sort_and_optimum_adblock() {
+local file="${1}"
+test ! -f "${file}" && return 
+local python_file="`pwd`/sort_and_optimum_adblock.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "$file"
+else
+	sort_and_optimum_adblock_shell "$file"
+fi
 }
 
 #剔除css规则冲突规则
@@ -541,8 +552,9 @@ function fixed_Rules_error_shell(){
 function fixed_css_white_conflict(){
 local file="${1}"
 test ! -f "${file}" && return
-if command -v python3 >/dev/null 2>&1 ;then
-	python3 "`pwd`/Adblock_sort_other.py" "css_conflict" "${file}"
+local python_file="`pwd`/Adblock_sort_other.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "css_conflict" "${file}"
 else
 	fixed_css_white_conflict_shell "${file}"
 fi
@@ -551,8 +563,9 @@ fi
 function wipe_same_selector_fiter(){
 local file="${1}"
 test ! -f "${file}" && return
-if command -v python3 >/dev/null 2>&1 ;then
-	python3 "`pwd`/Adblock_sort_other.py" "wipe_selector" "${file}"
+local python_file="`pwd`/Adblock_sort_other.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "wipe_selector" "${file}"
 else
 	wipe_same_selector_fiter_shell "${file}"
 fi
@@ -561,8 +574,9 @@ fi
 function clear_domain_white_list(){
 local file="${1}"
 test ! -f "${file}" && return
-if command -v python3 >/dev/null 2>&1 ;then
-	python3 "`pwd`/Adblock_sort_other.py" "clear_white" "${file}"
+local python_file="`pwd`/Adblock_sort_other.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "clear_white" "${file}"
 else
 	clear_domain_white_list_shell "${file}"
 fi
@@ -571,8 +585,9 @@ fi
 function clear_domain_white_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-if command -v python3 >/dev/null 2>&1 ;then
-	python3 "`pwd`/Adblock_sort_other.py" "clear_white_rules" "${file}"
+local python_file="`pwd`/Adblock_sort_other.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "clear_white_rules" "${file}"
 else
 	clear_domain_white_Rules_shell "${file}"
 fi
@@ -581,8 +596,9 @@ fi
 function fixed_Rules_error(){
 local file="${1}"
 test ! -f "${file}" && return
-if command -v python3 >/dev/null 2>&1 ;then
-    python3 "`pwd`/Adblock_sort_other.py" "fixed_error" "${file}"
+local python_file="`pwd`/Adblock_sort_other.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+    python3 "${python_file}" "fixed_error" "${file}"
 else
 	fixed_Rules_error_shell "${file}"
 fi
