@@ -143,7 +143,12 @@ cat << key > "${file}"
 key
 echo "${original_file}" >> "${file}"
 busybox sed -i 's/换行符正则表达式n/\\/g' "${file}"
-perl "`pwd`/addchecksum.pl" "${file}"
+local checksum_file="`pwd`/addchecksum.py"
+if command -v python >/dev/null 2>&1 && [ -f "${checksum_file}" ]; then 
+	python "${checksum_file}" "${file}"
+elif command -v perl >/dev/null 2>&1 && [ -f "${checksum_file%%.*}.pl" ]; then
+	perl "${checksum_file%%.*}.pl" "${file}"
+fi
 }
 
 #净化规则
