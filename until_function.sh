@@ -748,9 +748,9 @@ busybox sed -i -E \
   -e 's/\$document,popup$//g' \
   -e 's/\$popup,all$//g' \
   -e 's/\$all,popup$//g' \
-  -e 's/\/\$popup$/\^/g' \
-  -e 's/\/\$document$/\^/g' \
-  -e 's/\/\$all$/\^/g' \
+  -e 's/\/\$popup$//g' \
+  -e 's/\/\$document$//g' \
+  -e 's/\/\$all$//g' \
   -e 's/\$popup$//g' \
   -e 's/\$document$//g' \
   -e 's/\$all$//g' "${file}"
