@@ -188,10 +188,12 @@ function Combine_adblock_original_file(){
 local file="${1}"
 local target_folder="${2}"
 test "${target_folder}" = "" && echo "※`date +'%F %T'` 请指定合并目录……" && exit
-for i in "${target_folder}"/*.txt
+: > "${file}"
+for i in "${target_folder}"/*.txt "${target_folder}"/*.prop
 do
+	[ -f "${i}" ] || continue
 	dos2unix "${i}" >/dev/null 2>&1
-	echo "`cat "${i}"`" >> "${file}"
+	cat "${i}" >> "${file}"
 done
 }
 
@@ -427,10 +429,10 @@ function Running_sort_Css_Combine(){
 local target_adblock_file="${1}"
 test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_file} 规则文件不存在！！！" && return
 #记录通用的Css
-local css_common_record="$(cat ${target_adblock_file} 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | grep -E '^#' )"
+#local css_common_record="$(cat ${target_adblock_file} 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' | grep -E '^#' )"
 sort_Css_Combine_python "${target_adblock_file}"
 #写入通用的Css
-echo "${css_common_record}" >> "${target_adblock_file}"
+#echo "${css_common_record}" >> "${target_adblock_file}"
 busybox sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
 }
 
