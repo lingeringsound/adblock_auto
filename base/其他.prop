@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: OVwL2F2yH/YXe9mCD9CKPg
+! Checksum: zAOv2vSzfZkna1ZZbX0pHw
 ! Title: 自用去广告Adblock规则
-! Version: 20260917131416
+! Version: 20260917194543
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-17 13:14:16
-! Total Count: 10564
-! Blocked Filters: 10564
+! Last modified: 2026-09-17 19:45:43
+! Total Count: 10569
+! Blocked Filters: 10569
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -1985,6 +1985,7 @@
 ##.pb-0:not(.section) > div.container:not([id]) > div:not([id])
 ##.pb-adv-under-video
 ##.pb-slot-container
+##.pgx-slot[data-pos*="ads"]:not([data-pos*="read"])
 ##.phone-ads
 ##.phone-only:not([id])
 ##.placeholder-ad
@@ -2139,12 +2140,15 @@
 ##.tonglanad
 ##.toolbar-gg
 ##.top-a2db[data-group]
+##.top-ad-buttons
 ##.top-ad-container ~ div[id^="remove"][style]
+##.top-ad-slot
 ##.top-ads-amp
 ##.top-ads-container
 ##.top-ads-content
 ##.top-ads-mobile
 ##.top-adv-app
+##.top-banner > .top-and-banners > .top-and-banners-cols
 ##.top-banners
 ##.top-header-ads-mobile
 ##.top-r-ads
@@ -3021,6 +3025,7 @@
 ##div[data-adunit-path]
 ##div[data-adunit]
 ##div[data-adzone]
+##div[data-archive-ad-overlay]
 ##div[data-cl-spot]
 ##div[data-clickadilla-banner]
 ##div[data-e2e="advertisement"]
