@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: kFBzGDEpzuoYUISgyvYWrg
+! Checksum: OVwL2F2yH/YXe9mCD9CKPg
 ! Title: 自用去广告Adblock规则
-! Version: 20260915234345
+! Version: 20260917131416
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-15 23:43:45
+! Last modified: 2026-09-17 13:14:16
 ! Total Count: 10564
 ! Blocked Filters: 10564
 ! Description: 自用adblock规则
@@ -1028,6 +1028,7 @@
 ##.adswarning
 ##.adthrive_custom_ad
 ##.adun
+##.adv-img
 ##.adv-overlay
 ##.adv1
 ##.adv2
@@ -2048,6 +2049,7 @@
 ##.right > .b300
 ##.right-advertisement
 ##.rm-one.rm-list > a
+##.rmadb-info
 ##.rmp-ad-container
 ##.row > .top-af-container
 ##.row > [class$="_b"][data-group][data-show="ok"]
@@ -2267,11 +2269,8 @@
 ##[class*="slick-"][style="display: flex;flex-wrap: wrap;margin-right: 5px;margin-left: 5px;"]
 ##[class*="tdads"]
 ##[class*="view-ads"]
-##[class="adv-img"]
 ##[class="bottommob"][id="bottommob"]
 ##[class="img"][style*="zhanlangimg.dingjiancdn.com"][style*=".gif"]
-##[class="pre-play-adv"]
-##[class="rmadb-info"]
 ##[class][onclick="goAppHtml();"]
 ##[class][style="display: flex;flex-wrap: wrap;margin-right: 5px;margin-left: 5px;"] > .photo-two
 ##[class^="ad-bottom"]
@@ -2908,6 +2907,7 @@
 ##div > iframe[src*="&width=300&height=100&"]
 ##div > span[style*="bottom:"][style*="30vh"][style*="position"][style*="fixed"]
 ##div > ul > li > a[href][title="APP下载"]
+##div.adv-layer[id*="playerAdvLayer"]
 ##div:not([class]):not([id]) > iframe[width="407"][scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][height][frameborder="0"]
 ##div:not([id]):not([class]):not([style]) > .ad-area-close
 ##div:not([id]):not([class]):not([style]) > .ad-area-close + div[style*="background-color:"]:not([class]):not([id])
@@ -3037,7 +3037,6 @@
 ##div[id*="ScriptRootN"]
 ##div[id*="_"][classname$="_f"][class$="_f"]
 ##div[id*="clb-spot"] > iframe[id*="spot"]
-##div[id*="playerAdvLayer"][class="adv-layer"]
 ##div[id*="po-s0"] > div > div[class^="jsv"] > div[class^="container-"] > .row > [class*="col-sm"] > a[rel="noopener nofollow"]
 ##div[id="alert_windows"][class*="q-dialog fullscreen"]
 ##div[id="showImages"][style*="z-index: 2147483647;"]
@@ -6984,8 +6983,8 @@ baike.baidu.com###J-superLayer-main
 baike.baidu.com##.J-brand-recommend-list-container
 baike.baidu.com##.brand-bottom-content-container
 baike.baidu.com##.invoke-baiduApp-img
+baike.baidu.com##.qtqy-container
 baike.baidu.com##.squareAni.square.super-layer-promote
-baike.baidu.com##[class="qtqy-container"]
 baike.baidu.com##[class^="relative-shop-"]
 baike.baidu.com##[class^="yitiao-"]
 baike.baidu.com##[onclick^="page.Mixedor.mixedOpen(this,"]
@@ -7572,8 +7571,8 @@ ibbs.pro##div[class][style]:has(ins[data-zoneid])
 ibbs.pro,iceporn.tv##.show
 iceporn.tv##div[class*="Hide"]:has(.adsbyexoclick)
 ifanr.com##.popup-download
+ifeng.com##.openapp
 ifeng.com##[class*="temp-ad"]
-ifeng.com##[class="openapp"]
 ifeng.com##[class^="ad_box"]
 ifeng.com##[class^="appRecommend"]
 ifeng.com##[class^="bottom_box"]
@@ -8191,7 +8190,7 @@ pornhub.com##.videoPremiumBlock
 pornhub.com##[data-event="header_paid_tabs"]
 pornhub.com##[srcset*="bloB:"]
 pornhub.com##a[href^="https://www.uviu.com"]
-pornhub.com##div[class="video-wrapper"] > .clear.hd:has(.adsbytrafficjunky)
+pornhub.com##div.video-wrapper > .clear.hd:has(.adsbytrafficjunky)
 pornhub.com##div[id^="customSkin"]
 pornhub.com##img[srcset]
 pornhub.com,pornhub.net,pornhub.org##.realsex
@@ -8591,9 +8590,9 @@ spankbang-com.zproxy.org,spankbang.com,spankbang.party###interstitial_div_v2
 spankbang-com.zproxy.org,spankbang.com,spankbang.party###interstitial_div_v3
 spankbang-com.zproxy.org,spankbang.com,spankbang.party###shorts-frame
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##.ptgncdn_holder
+spankbang-com.zproxy.org,spankbang.com,spankbang.party##.thumb.is_live
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##.video-inline-ads
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##[class*="_ad"]
-spankbang-com.zproxy.org,spankbang.com,spankbang.party##[class="thumb is_live"]
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##[class^="lv_cm_int_"]
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##div[class*="top"] > img[src][class*="cls"]
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##iframe[src*="deliver.ptgncdn.com"]
@@ -8647,6 +8646,7 @@ tecms.net##[class$="i"][style],[class$="h"][style],[class$="_b"],embed[src],canv
 teenpornfirst.cc##aside
 teenxy.com##.block-video > .table
 teenxy.com##.out_lnk
+telegra.ph##p .inline:empty:only-child
 the-boys.fandom.com##.cnx-main-container
 the-boys.fandom.com##.notifications-box
 theav.xyz##[class*="absolute-"]
