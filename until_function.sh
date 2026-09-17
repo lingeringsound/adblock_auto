@@ -715,6 +715,59 @@ busybox sed -i -E \
 #busybox sed -i -E '/^\|\|[0-9]+\.[0-9]+\./d' "${file}"
 }
 
+function count_filter_files() {
+local _cf_file _cf_n _cf_unit _cf_div _cf_int _cf_rem _cf_dec _cf_cunt_transfer
+for _cf_file in "$@"
+do
+	[ -f "$_cf_file" ] || continue
+	[ -r "$_cf_file" ] || continue
+
+	# 过滤后开销太大 所以放弃过滤
+	#	_cf_n=$(grep -vc -e '^!' -e '^[[:space:]]*$' -e '^\[' -e '^#[^#]' "$_cf_file" 2>/dev/null)
+	#	_cf_n=$(grep -Evc '^!|^\[|^[[:space:]]*$|^#[^#]' "$_cf_file" 2>/dev/null)
+	#	_cf_n=$(sed '/^!/d;/^[[:space:]]*$/d;/^\[/d;/^#[^#]/d' "$_cf_file" 2>/dev/null | sed -n '$=')
+	#	_cf_n=$(sed -n '$=' "$_cf_file" 2>/dev/null)
+	_cf_n=$(wc -l < "$_cf_file" 2>/dev/null)
+
+	case "$_cf_n" in ''|*[!0-9]*) continue ;; esac
+
+	[ "$_cf_n" = "0" ] && continue
+
+	if [ "$_cf_n" -ge "1000000" ]; then
+	    _cf_unit="m"
+	    _cf_div="1000000"
+	elif [ "$_cf_n" -ge "10000" ]; then
+	    _cf_unit="w"
+	    _cf_div="10000"
+	elif [ "$_cf_n" -ge "1000" ]; then
+	    _cf_unit="k"
+	    _cf_div="1000"
+	else
+	    _cf_unit=""
+	    _cf_div=1
+	fi
+
+	if [ -z "$_cf_unit" ]; then
+	    _cf_cunt_transfer="${_cf_n}"
+	else
+		_cf_int=$((_cf_n / _cf_div))
+		_cf_rem=$((_cf_n % _cf_div))
+	    if [ "$_cf_rem" -eq 0 ]; then
+			_cf_cunt_transfer="${_cf_int}${_cf_unit}"
+	    else
+			_cf_dec=$((_cf_rem * 10 / _cf_div))
+			_cf_cunt_transfer="${_cf_int}.${_cf_dec}${_cf_unit}"
+		fi
+	fi
+	if [ -n "${_cf_cunt_transfer}" ]; then
+		#echo -e "${_cf_file##*/}: ${_cf_cunt_transfer}"
+		echo "${_cf_cunt_transfer}"
+	else
+		echo "0"
+	fi
+done
+}
+
 #更新README信息
 function update_README_info(){
 local file="`pwd`/README.md"
@@ -724,10 +777,10 @@ cat << key > "${file}"
 ### 自动更新(`date +'%F %T'`)
 
 
-| 名称 | GIthub订阅链接 | Jsdelivrcdn缓存链接 | ~~GitCode订阅链接(死了)~~ | Gitlink订阅链接(竟然又活了) |
-| :-- | :-- | :-- | :-- | :-- |
-| 混合规则(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
-| 混合规则精简版(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
+| 名称 | 规则数量 | GIthub订阅链接 | Jsdelivrcdn缓存链接 | ~~GitCode订阅链接(死了)~~ | Gitlink订阅链接(竟然又活了) |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| 混合规则(自动更新) | $(count_filter_files `pwd`/Rules/adblock_auto.txt ) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
+| 混合规则精简版(自动更新) | $(count_filter_files `pwd`/Rules/adblock_auto_lite.txt ) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
 
 
 ### 拦截器说明
