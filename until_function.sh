@@ -1,6 +1,8 @@
 #!/bin/sh
 export PATH="`pwd`:${PATH}"
 
+Adblock_Tools_Plugin_Folder="$(pwd)/plugin"
+
 #移除Adguard_Chinese的秋风规则
 function remove_AWAvenue_Ads_Rule_Filter(){
 local file="${1}"
@@ -12,7 +14,7 @@ busybox sed -i "/AWAvenue Ads Rule/,/^$/d" "${file}"
 function convert_enc_to_UTF() {
 local file="$1"
 local output_file="${2:-$file}"
-local python_file="`pwd`/convert_enc.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/convert_enc.py"
 [ -f "$file" ] || return
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ]; then
 	[ "${file}" = "${output_file}" ] && python3 "${python_file}" "${file}" || python3 "${python_file}" "${file}" "${output_file}"
@@ -78,7 +80,7 @@ cat << key > "${file}"
 key
 echo "${original_file}" >> "${file}"
 busybox sed -i 's/换行符正则表达式n/\\/g' "${file}"
-local checksum_file="`pwd`/addchecksum.py"
+local checksum_file="${Adblock_Tools_Plugin_Folder}/addchecksum.py"
 if command -v python >/dev/null 2>&1 && [ -f "${checksum_file}" ]; then 
 	python "${checksum_file}" "${file}"
 elif command -v perl >/dev/null 2>&1 && [ -f "${checksum_file%%.*}.pl" ]; then
@@ -314,7 +316,7 @@ busybox sed -i 's/换行符正则表达式n/\\/g' "${target_file}"
 #去重函数python版
 function sort_Css_Combine_python() {
 local target_file="${1}"
-local python_file="`pwd`/Adblock_sort.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort.py"
 if [ -f "$target_file" ] && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "css" "$target_file"
 else
@@ -324,7 +326,7 @@ fi
 
 function sort_domain_Combine_python() {
 local target_file="${1}"
-local python_file="`pwd`/Adblock_sort.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort.py"
 if [ -f "$target_file" ] && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "domain" "$target_file"
 else
@@ -403,7 +405,7 @@ key
 function sort_and_optimum_adblock() {
 local file="${1}"
 test ! -f "${file}" && return 
-local python_file="`pwd`/sort_and_optimum_adblock.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/sort_and_optimum_adblock.py"
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "$file"
 else
@@ -494,7 +496,7 @@ function fixed_Rules_error_shell(){
 function fixed_css_white_conflict(){
 local file="${1}"
 test ! -f "${file}" && return
-local python_file="`pwd`/Adblock_sort_other.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort_other.py"
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "css_conflict" "${file}"
 else
@@ -505,7 +507,7 @@ fi
 function wipe_same_selector_fiter(){
 local file="${1}"
 test ! -f "${file}" && return
-local python_file="`pwd`/Adblock_sort_other.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort_other.py"
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "wipe_selector" "${file}"
 else
@@ -516,7 +518,7 @@ fi
 function clear_domain_white_list(){
 local file="${1}"
 test ! -f "${file}" && return
-local python_file="`pwd`/Adblock_sort_other.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort_other.py"
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "clear_white" "${file}"
 else
@@ -527,7 +529,7 @@ fi
 function clear_domain_white_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local python_file="`pwd`/Adblock_sort_other.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort_other.py"
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "clear_white_rules" "${file}"
 else
@@ -538,7 +540,7 @@ fi
 function fixed_Rules_error(){
 local file="${1}"
 test ! -f "${file}" && return
-local python_file="`pwd`/Adblock_sort_other.py"
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort_other.py"
 if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
     python3 "${python_file}" "fixed_error" "${file}"
 else
