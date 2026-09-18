@@ -60,7 +60,7 @@ function write_head(){
 local file="${1}"
 local Description="${3}"
 test "${Description}" = "" && Description="${2}"
-local count=`cat "${file}" | busybox sed '/^!/d;/^[[:space:]]*$/d' | wc -l ` 
+local count=`busybox sed '/^!/d;/^[[:space:]]*$/d' "${file}" | wc -l ` 
 local original_file=`cat "${file}"`
 cat << key > "${file}"
 [Adblock Plus 2.0]
@@ -94,11 +94,11 @@ function modtify_adblock_original_file() {
 local file="${1}"
 if test "${2}" = "" ;then
 	busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
-	local new=`cat "${file}" | iconv -t 'utf8' | grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' | busybox sed 's|^[[:space:]]@@|@@|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
+	local new=`grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' "${file}" | busybox sed 's|^[[:space:]]@@|@@|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
 	echo "$new" > "${file}"
 else
 	busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
-	local new=`cat "${file}" | iconv -t 'utf8' | grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' | grep -Ev "${2}" | busybox sed 's|^[[:space:]]@@|@@|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
+	local new=`grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' "${file}" | grep -Ev "${2}" | busybox sed 's|^[[:space:]]@@|@@|g' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
 	echo "$new" > "${file}"
 fi
 
@@ -108,7 +108,7 @@ function make_white_rules(){
 local file="${1}"
 local IFS=$'\n'
 local white_list_file="${2}"
-for o in `cat "${white_list_file}" 2>/dev/null | busybox sed '/^!/d;/^[[:space:]]*$/d' `
+for o in `busybox sed '/^!/d;/^[[:space:]]*$/d' "${white_list_file}" 2>/dev/null `
 do
 busybox sed -i -E "/${o}/d" "${file}"
 done
@@ -141,7 +141,7 @@ function wipe_white_list() {
 	local output_folder="${1}"
 	if test -f "${file}" ;then
 	local IFS=$'\n'
-	local new=$(cat "${file}" | grep -Ev "${3}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
+	local new=$(grep -Ev "${3}" "${file}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
 		mkdir -p "${output_folder}"
 		echo "$new" > "${output_folder}/${file##*/}"
 	fi
@@ -152,7 +152,7 @@ function sort_web_rules() {
 	local output_folder="${1}"
 	if test -f "${file}" ;then
 	local IFS=$'\n'
-	local new=$(cat "${file}" | grep -Ev '^\@\@|^[[:space:]]\@\@\|\||^<<|<<1023<<|^\@\@\|\||^\|\||^##|^###|^\/|\/ad\/|^:\/\/|^_|^\?|^\.|^-|^=|^:|^~|^,|^&|^#\$#|#\@#|^\$|^\||^\*|^#\%#' | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
+	local new=$(grep -Ev '^\@\@|^[[:space:]]\@\@\|\||^<<|<<1023<<|^\@\@\|\||^\|\||^##|^###|^\/|\/ad\/|^:\/\/|^_|^\?|^\.|^-|^=|^:|^~|^,|^&|^#\$#|#\@#|^\$|^\||^\*|^#\%#' "${file}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
 		mkdir -p "${output_folder}"
 		echo "$new" >> "${output_folder}/${file##*/}"
 	fi
@@ -163,7 +163,7 @@ function sort_adblock_Rules() {
 	local output_folder="${1}"
 	if test -f "${file}" ;then
 		local IFS=$'\n'
-		local new=$(cat "${file}" | grep -E "${3}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
+		local new=$(grep -E "${3}" "${file}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
 			mkdir -p "${output_folder}"
 		echo "$new" > "${output_folder}/${file##*/}"
 	fi
@@ -173,7 +173,7 @@ function add_rules_file() {
 	local file="${2}"
 	local output_folder="${1}"
 	local IFS=$'\n'
-	local new=$(cat "${file}" | grep -E "${3}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
+	local new=$(grep -E "${3}" "${file}" | sort | uniq | busybox sed '/^!/d;/^[[:space:]]*$/d' )
 	if test -f "${output_folder}/${file##*/}" ;then
 		mkdir -p "${output_folder}"
 				echo "$new" >> "${output_folder}/${file##*/}"
@@ -553,7 +553,7 @@ fi
 function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat ${file} | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed -e '/^\!/d;/^[[:space:]]*$/d' \
+local lite_content="$(cat "${file}" | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed -e '/^\!/d;/^[[:space:]]*$/d' \
  -e 's/\$3p$/\$third-party/g' \
  -e 's/\$3p\,/\$third-party\,/g' \
  -e 's/\$1p$/\$~third-party/g' \
@@ -692,7 +692,7 @@ busybox sed -i -E '/\\\//d;/\\\./d;/\\\?/d' "${file}"
 function lite_Uadblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat ${file} | grep -Ev '\$\$|\$@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\%#\/\/scriptlet|\$dnsrewrite=|\,replace=|:-abp-properties|:matches-attr|:matches-property|:nth-ancestor' | sort | uniq)"
+local lite_content="$(grep -Ev '\$\$|\$@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\%#\/\/scriptlet|\$dnsrewrite=|\,replace=|:-abp-properties|:matches-attr|:matches-property|:nth-ancestor' "${file}" | sort | uniq)"
 echo "${lite_content}" > "${file}"
 }
 
