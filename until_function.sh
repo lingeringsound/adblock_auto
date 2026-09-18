@@ -1,6 +1,7 @@
 #!/bin/sh
 export PATH="`pwd`:${PATH}"
 
+#定义 python 以及 Perl 插件的目录
 Adblock_Tools_Plugin_Folder="$(pwd)/plugin"
 
 #移除Adguard_Chinese的秋风规则
