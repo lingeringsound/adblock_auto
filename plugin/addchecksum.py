@@ -32,16 +32,17 @@ def process_file(file_path):
         flags=re.MULTILINE | re.IGNORECASE
     )
 
-    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    now = time.localtime()
-    todaysdate = f"{now.tm_mday} {months[now.tm_mon - 1]} {now.tm_year}".encode('ascii')
+# 2026.09.18 废弃，只做Checksum修改这一件事
+#    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+#    now = time.localtime()
+#    todaysdate = f"{now.tm_mday} {months[now.tm_mon - 1]} {now.tm_year}".encode('ascii')
 
-    data = re.sub(
-        rb'^(.*!.*Updated:\s*)(.*?)(\r?\n|$)',
-        lambda m: m.group(1) + todaysdate + m.group(3),
-        data,
-        flags=re.MULTILINE | re.IGNORECASE
-    )
+#    data = re.sub(
+#        rb'^(.*!.*Updated:\s*)(.*?)(\r?\n|$)',
+#        lambda m: m.group(1) + todaysdate + m.group(3),
+#        data,
+#        flags=re.MULTILINE | re.IGNORECASE
+#    )
 
     checksum = calc_checksum(data)
 
