@@ -159,7 +159,7 @@ def sort_domain_Combine(target_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("用法: python script.py [css|domain] <规则文件路径>")
+        print(f"用法: python {sys.argv[0]} [css|domain] <规则文件路径>")
         sys.exit(1)
     mode = sys.argv[1]
     target = sys.argv[2]

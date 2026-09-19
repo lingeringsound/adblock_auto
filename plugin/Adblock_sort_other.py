@@ -3,7 +3,7 @@ import re
 import os
 
 def print_help():
-    help_text = """使用方法: python3 Adblock_sort_other.py <action> <file_path>
+    help_text = f"""使用方法: python {sys.argv[0]} <action> <file_path>
 
 可用操作 (actions):
   css_conflict       剔除与 #@# 白名单冲突的 ## CSS 规则

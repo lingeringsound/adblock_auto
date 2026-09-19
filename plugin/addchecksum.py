@@ -57,7 +57,7 @@ def process_file(file_path):
 
 def main():
     if len(sys.argv) < 2:
-        print(f"Usage: {sys.executable} {sys.argv[0]} subscription.txt", file=sys.stderr)
+        print(f"Usage: python {sys.argv[0]} subscription.txt", file=sys.stderr)
         sys.exit(1)
 
     for file_path in sys.argv[1:]:

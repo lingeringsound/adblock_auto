@@ -91,4 +91,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         categorize_adblock_rules(sys.argv[1])
     else:
-        print("用法: python sort_and_optimum_adblock.py <规则文件路径>")
+        print(f"用法: python {sys.argv[0]} <规则文件路径>")

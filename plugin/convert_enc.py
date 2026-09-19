@@ -83,8 +83,8 @@ def convert_enc_to_UTF(file_path: str, output_path: str = None) -> bool:
         return False
 
 def show_help():
-    help_text = """用法:
-  python convert_enc.py <源文件路径> [输出文件路径]
+    help_text = f"""用法:
+  python {sys.argv[0]} <源文件路径> [输出文件路径]
 
 参数说明:
   源文件路径    指定要转换编码的目标文本文件路径。
@@ -96,7 +96,6 @@ def show_help():
   将其统一转换为不带 BOM 的 UTF-8 格式，同时将 Windows 换行符 (CRLF) 规范化为 LF。
 """
     print(help_text)
-
 
 if __name__ == "__main__":
     args = sys.argv[1:]
