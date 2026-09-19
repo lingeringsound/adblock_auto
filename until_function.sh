@@ -550,10 +550,29 @@ fi
 }
 
 #精简规则，剔除Via不支持的规则
+#2026.09.19 grep 加入了正则移除 -e '^/(\^|\\|\[|\(\?)' 
+#该规则和 Remove_regex_Rules_for_via 相似 是粗略过滤
 function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
-local lite_content="$(cat "${file}" | grep -Ev '#\@\?#|\$\@\$|#\%#|#\@\%#|#\@\$\?#|#\$\?#|#\$#|#\?#|##\+js\(|#\%#\/\/scriptlet|##\^|redirect=|removeparam=|\,replace=|redirect-rule=|\$removeparam|\$badfilter|\$empty|\$generichide|\$match-case|\$object|\$object-subrequest|\$~badfilter|\$~empty|\$~generichide|\$~removeparam|\$~match-case|\$~object|\$~object-subrequest|\,badfilter$|\,badfilter\,|\,empty$|\,empty\,|\,generichide$|\,generichide\,|\,match-case$|\,match-case\,|\,object$|\,object-subrequest$|\,object-subrequest\,|\,object\,|\,~badfilter$|\,~badfilter\,|\,~empty$|\,~empty\,|\,~generichide$|\,~generichide\,|\,~match-case$|\,~match-case\,|\,~object$|\,~object-subrequest$|\,~object-subrequest\,|\,~object\,|\$csp|\,csp=|\,denyallow=|permissions=|\:(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr)' | busybox sed -e '/^\!/d;/^[[:space:]]*$/d' \
+local lite_content="$(grep -Ev \
+ -e '#(@?[%$?]+)#' \
+ -e '#@?#\+js\(' \
+ -e '#@?#\^' \
+ -e '\$@\$' \
+ -e '(\$|,)~?(badfilter|empty|generichide|match-case|object|object-subrequest|removeparam)(,|$)' \
+ -e '(\$|,)~?csp(,|=|$)' \
+ -e '(\$|,)~?(cname|frame|ghide|elemhide|ping|popunder)(,|$)' \
+ -e '(\$|,)(redirect|removeparam|redirect-rule|header|replace|urlskip|uritransform|ipaddress|method|csp|denyallow|permissions|to)=' \
+ -e ':(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr|matches-attr|matches-property|min-text-length)' \
+ -e ':others\(|:shadow\(' \
+ -e '^/(\^|\\|\[|\(\?)' \
+ -e '^\*$' \
+ "${file}" | busybox sed \
+ -e '/^\!/d' \
+ -e '/^[[:space:]]*$/d' \
+ -e 's/\$from=/\$domain=/g' \
+ -e 's/,from=/,domain=/g' \
  -e 's/\$3p$/\$third-party/g' \
  -e 's/\$3p\,/\$third-party\,/g' \
  -e 's/\$1p$/\$~third-party/g' \
