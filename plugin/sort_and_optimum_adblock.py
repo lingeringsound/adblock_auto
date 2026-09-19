@@ -2,6 +2,15 @@ import sys
 import re
 from pathlib import Path
 
+def fmt_short(n):
+    if n >= 1_000_000:
+        return f'{n / 1_000_000:.1f}m ({n})'
+    if n >= 10_000:
+        return f'{n / 10_000:.1f}w ({n})'
+    if n >= 1_000:
+        return f'{n / 1_000:.1f}k ({n})'
+    return f'{n}'
+
 def categorize_adblock_rules(file_path: str):
     path = Path(file_path)
     if not path.is_file():
@@ -56,20 +65,24 @@ def categorize_adblock_rules(file_path: str):
                 categories["wildcard"].append(rule)
 
     sections = [
-        ("!<<<<<通配符规则>>>>>", categories["wildcard"], "!<<<<<通配符规则 结束>>>>>"),
-        ("!<<<<<域名规则>>>>>", categories["domain"], "!<<<<<域名规则 结束>>>>>"),
-        ("!<<<<<网站单独规则>>>>>", categories["site_specific"], "!<<<<<网站单独规则 结束>>>>>"),
-        ("!<<<<<通用Css规则>>>>>", categories["css"], "!<<<<<通用Css规则 结束>>>>>"),
-        ("!<<<<<放行白名单>>>>>", categories["whitelist"], "!<<<<<放行白名单 结束>>>>>"),
-        ("!<<<<<Badfilter 废弃规则>>>>>", categories["badfilter"], "!<<<<<Badfilter 废弃规则 结束>>>>>"),
+        ("通配符规则", categories["wildcard"]),
+        ("域名规则", categories["domain"]),
+        ("网站单独规则", categories["site_specific"]),
+        ("通用Css规则", categories["css"]),
+        ("放行白名单", categories["whitelist"]),
+        ("Badfilter 废弃规则", categories["badfilter"]),
     ]
 
     output_lines = [""]
-    for header, rules, footer in sections:
+    for name, rules in sections:
         if len(rules) > 0:
-            output_lines.append(f"{header}{len(rules)}")
+             # 旧版本格式，暂时先用这个
+            output_lines.append(f"! >>>>>> {name} · {fmt_short(len(rules))} <<<<<<")
             output_lines.extend(rules)
-            output_lines.append(f"{footer}\n")
+            output_lines.append(f"! >>>>>> {name} 结束 <<<<<<\n")
+#            output_lines.append(f"! [{name}] ====> {fmt_short(len(rules))}")
+#            output_lines.extend(rules)
+#            output_lines.append(f"! [{name} 结束] <==== \n")
 
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(output_lines))
