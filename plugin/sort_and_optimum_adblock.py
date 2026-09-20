@@ -3,8 +3,6 @@ import re
 from pathlib import Path
 
 def fmt_short(n):
-    if n >= 1_000_000:
-        return f'{n / 1_000_000:.1f}m ({n})'
     if n >= 10_000:
         return f'{n / 10_000:.1f}w ({n})'
     if n >= 1_000:
