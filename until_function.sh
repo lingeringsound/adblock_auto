@@ -155,12 +155,8 @@ function sort_web_rules() {
 	if test -f "${file}" ;then
 		local IFS=$'\n'
 		local new=$(grep -Ev '^@@|^[[:space:]]@@\|\||^<<|<<1023<<|^\|\||^##|^[?_./=&:~,$|*-]|/ad/|^#\$#|#@#|^#%#|^!|^[[:space:]]*$' "${file}" | sort -u )
-		mkdir -p "${output_folder}"
-		if [ -f "${output_file}" ] ;then
-			echo "$new" >> "${output_file}"
-		else
-			echo "$new" > "${output_file}"
-		fi
+			mkdir -p "${output_folder}"
+		echo "$new" >> "${output_file}"
 	fi
 }
 
