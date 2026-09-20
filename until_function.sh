@@ -563,7 +563,7 @@ local lite_content="$(grep -Ev \
  -e '\$@\$' \
  -e '(\$|,)~?(badfilter|empty|generichide|match-case|object|object-subrequest|removeparam)(,|$)' \
  -e '(\$|,)~?(csp|redirect-rule)(,|=|$)' \
- -e '(\$|,)~?(cname|frame|genericblock|ghide|elemhide|ping|popunder)(,|$)' \
+ -e '(\$|,)~?(cname|genericblock|ghide|elemhide|ping|popunder)(,|$)' \
  -e '(\$|,)(redirect|removeparam|header|replace|urlskip|uritransform|ipaddress|method|csp|denyallow|permissions|to)=' \
  -e ':(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr|matches-attr|matches-property|min-text-length)' \
  -e ':others\(|:shadow\(' \
@@ -597,6 +597,7 @@ local converted_content="$(busybox sed -E \
   -e 's/(\$|,)(~?)xhr(,|$)/\1\2xmlhttprequest\3/g' \
   -e 's/(\$|,)(~?)css(,|$)/\1\2stylesheet\3/g' \
   -e 's/(\$|,)(~?)doc(,|$)/\1\2document\3/g' \
+  -e 's/(\$|,)(~?)i?frame(,|$)/\1\2subdocument\3/g' \
   -e 's/(\$|,)~1p(,|$)/\1third-party\2/g' \
   -e 's/(\$|,)1p(,|$)/\1~third-party\2/g' "${file}" )"
 echo "${converted_content}" > "${file}"
