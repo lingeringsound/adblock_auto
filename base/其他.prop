@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: rwMA7J8GqFm0Uypo6T0nkA
+! Checksum: atXKASo4dWQJ8wzRgG+s1g
 ! Title: 自用去广告Adblock规则
-! Version: 20260920090848
+! Version: 20260920094752
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-20 09:08:48
-! Total Count: 10564
-! Blocked Filters: 10564
+! Last modified: 2026-09-20 09:47:52
+! Total Count: 10573
+! Blocked Filters: 10573
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -2314,6 +2314,7 @@
 ##[data*="advertising"][data*="banner"]
 ##[data-ad-module]
 ##[data-ad-name]
+##[data-ad-slot]
 ##[data-ad-width]
 ##[data-adblockkey]
 ##[data-adbridg-ad-class]
@@ -2921,6 +2922,7 @@
 ##div[class$="_b"][style^="bottom:"][style$="display: block;"]
 ##div[class$="d"] > span[class^="closebox"]
 ##div[class$="pic"] > span[class^="closebox"]
+##div[class$="top-banner"] > div[class$="top-and-banners"] > [class$="top-and-banners-cols"]
 ##div[class*="-grid"] > a[rel="nofollow"][target="_blank"][class*="track-click"]
 ##div[class*="-spot"][style*="250"]
 ##div[class*="-spot"][style*="300"]
@@ -3189,6 +3191,7 @@
 ##iframe[src*="/resource?zones="]
 ##iframe[src*="/s/s/su.php?t="][width="300"][height="100"]
 ##iframe[src*="/smartpop/"]
+##iframe[src*="/static/js/load.html?aid="][src*="click"]
 ##iframe[src*="adxserve.com"]
 ##iframe[src*="colorlessrush.com"]
 ##iframe[src*="d000d.com/"]
@@ -3880,6 +3883,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/float_down.js?17$third-party
 .com/foot.php?ver=17$~third-party
 .com/footmenu.js$~third-party
+.com/g.js$third-party
 .com/get/*?*&*id=20*&*=*=$third-party,~media,~image,~stylesheet
 .com/get/*?*&*id=2032069$third-party
 .com/get/*?*id=20*&*=*=0$third-party,~image,~media,~stylesheet
@@ -3935,6 +3939,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 .com/static/js/head.js$~third-party
 .com/t1j.js$~third-party,script
 .com/tj.js
+.com/tj/tongji
 .com/tj?p=*zh-CN$~third-party
 .com/tong*ji.js$script
 .com/tongji/*.js
@@ -5506,6 +5511,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /static/js/f7b73.*.js$third-party
 /static/js/fad.js$domain=ciligui.org|ciligui.cc|ciligui.com|ciligui.live|ciligui.buzz|ciligui.cn|ciligui.xyz
 /static/js/fad.js$script
+/static/js/load.html?aid=*&click=$third-party
 /static/js/main.js$third-party,domain=soulian.cyou|soulian.pro|soulian.com
 /static/js/play.c*.js
 /static/js/playcon*.js
@@ -5906,7 +5912,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 131400.best,141312.best,vikacg.com,vikacg.eueu.lol,vikacg.icu,vikacg.moe.mov,vikacg.xyz##div[class*="fixed"][class*="bottom"]
 131400.best,141312.best,vikacg.com,vikacg.eueu.lol,vikacg.icu,vikacg.moe.mov,vikacg.xyz##div[data-element="overlay"]
 131400.best,141312.best,vikacg.com,vikacg.eueu.lol,vikacg.icu,vikacg.moe.mov,vikacg.xyz#?#.arco-overlay:contains(/广告|客户端/)
-13xsw.com,1dm9.cc,1qxs.com,295yhw.com,58xs.io,adm11.com,biquge365.net,biquge77.net,bisowu.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,chelianjiaogui.com,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dadagui.me,dandanzandy.com,ddg33.com,ddg44.com,ddg66.com,ddgys.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,dongmandaquan.live,dongmandaquan.vip,douluo.cc,drmh2.com,fcdem.cc,fcdm77.cc,fcfan.cc,fcmv.cc,fofo11.com,fofo22.com,fofoyy.com,hahays.com,hantv8.com,hemayi.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,huade315.com,huaduys.cc,huaduzy.org,huangsexiaoshuo.net,i3book.com,ifana.buzz,ifana.cc,ifana.com,ifana.live,ifana.xyz,jpbqg6.com,judywatt.com,kanshuzhan.com,kanxis.com,kanxiwa.com,klast.org,koweer.com,lxqzh.cc,mhds8.com,mjtt1.cc,myg66.com,naicha14110.sbs,nnyy.pro,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,ore-sama.net,oswram.com,renqixiaoshuo.net,shenma.cc,shenma4.cc,smxiaoshuo.net,txtduo.org,vssdy.com,wedm3.com,wokanxi.com,wumtt.org,xcmv.cc,xddxsw.app,xddxsw.com,xddxsw.net,xl01.com.de,xl02.com.de,xl03.com.de,xl05.com.de,xlys.ltd.buzz,xlys.ltd.live,xlys.ltd.ua,xlys.me,xlys02.com,xlys03.com,xlys05.com,yh-dm.com,yhdm28.com,yhdm9.cc,yhta.cc,yhta.com,yhtg.cc,yhtg.live,yinghua.im,yinghua14.com,yinghua228.com,yinghuadm.cn,yinghuadongman.one,zhaobiquge.com,zhenbuka.ccokdm.top##+js(rmnt, script, new Function)
+13xsw.com,1dm9.cc,1qxs.com,295yhw.com,58xs.io,adm11.com,biquge365.net,biquge77.net,bisowu.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,chelianjiaogui.com,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dadagui.me,dandanzandy.com,ddg33.com,ddg44.com,ddg66.com,ddgys.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,dmyfa.com,dongmandaquan.live,dongmandaquan.vip,douluo.cc,drmh2.com,fcdem.cc,fcdm77.cc,fcfan.cc,fcmv.cc,fofo11.com,fofo22.com,fofoyy.com,hahays.com,hantv8.com,hemayi.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,huade315.com,huaduys.cc,huaduzy.org,huangsexiaoshuo.net,i3book.com,ifana.buzz,ifana.cc,ifana.com,ifana.live,ifana.xyz,jpbqg6.com,judywatt.com,kanshuzhan.com,kanxis.com,kanxiwa.com,klast.org,koweer.com,lxqzh.cc,mhds8.com,mjtt1.cc,myg66.com,naicha14110.sbs,nnyy.pro,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,ore-sama.net,oswram.com,renqixiaoshuo.net,shenma.cc,shenma4.cc,smxiaoshuo.net,txtduo.org,vssdy.com,wedm3.com,wokanxi.com,wumtt.org,xcmv.cc,xddxsw.app,xddxsw.com,xddxsw.net,xl01.com.de,xl02.com.de,xl03.com.de,xl05.com.de,xlys.ltd.buzz,xlys.ltd.live,xlys.ltd.ua,xlys.me,xlys02.com,xlys03.com,xlys05.com,yh-dm.com,yhdm28.com,yhdm9.cc,yhmd.cc,yhmi.cc,yhta.cc,yhta.com,yhtg.cc,yhtg.live,yinghua.im,yinghua14.com,yinghua228.com,yinghuadm.cn,yinghuadongman.one,yinghuadongman1.com,zhaobiquge.com,zhenbuka.ccokdm.top##+js(rmnt, script, new Function)
 13xsw.com,1dm9.cc,1qxs.com,295yhw.com,58xs.io,adm11.com,biquge365.net,biquge77.net,bisowu.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,chelianjiaogui.com,cooing2.xyz,cooing3.xyz,cooingc.cc,cqshuda.com,dandanzandy.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,dm789.com,dongmandaquan.live,dongmandaquan.vip,douluo.cc,drmh2.com,fcdem.cc,fcdm77.cc,fcfan.cc,fcmv.cc,fofo11.com,fofo22.com,fofoyy.com,hahays.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,huade315.com,huaduzy.org,huangsexiaoshuo.net,i3book.com,ifana.buzz,ifana.cc,ifana.com,ifana.live,ifana.xyz,jpbqg6.com,judywatt.com,kanshuzhan.com,klast.org,koweer.com,lxqzh.cc,mhds8.com,mjtt1.cc,myg66.com,naicha14110.sbs,nnyy.pro,okdm.cc,okdm.top,okdm2.cc,okdm2.top,okdm3.cc,okdm3.top,okdm4.cc,okdm4.top,okdm5.cc,okdm5.top,okdm6.cc,okdm6.top,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,ore-sama.net,oswram.com,renqixiaoshuo.net,shenma.cc,shenma4.cc,smxiaoshuo.net,txtduo.org,wedm3.com,wokanxi.com,wumtt.org,xcmv.cc,xddxsw.app,xddxsw.com,xddxsw.net,xl01.com.de,xl02.com.de,xl03.com.de,xl05.com.de,xlys.ltd.buzz,xlys.ltd.live,xlys.ltd.ua,xlys.me,xlys02.com,xlys03.com,xlys05.com,yh-dm.com,yhdm28.com,yhdm9.cc,yhta.cc,yhta.com,yhtg.cc,yhtg.live,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhaobiquge.com,zhenbuka.cc##+js(acis, Function, new Function)
 13xsw.com,1dm9.cc,1qxs.com,295yhw.com,58xs.io,adm11.com,biquge77.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,dm789.com,dongmandaquan.vip,drmh2.com,fcdem.cc,fcdm77.cc,fcfan.cc,fcmv.cc,fofo11.com,fofo22.com,hahays.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,huaduzy.org,ifana.buzz,ifana.cc,ifana.com,ifana.live,ifana.xyz,judywatt.com,koweer.com,lxqzh.cc,mjtt1.cc,nnyy.pro,ore-sama.net,renqixiaoshuo.net,shenma.cc,shenma4.cc,smxiaoshuo.net,speechhearing.net,wedm3.com,wokanxi.com,wumtt.org,xcmv.cc,xddxsw.app,xddxsw.com,xddxsw.net,xl01.com.de,xl02.com.de,xl03.com.de,xl05.com.de,xlys.ltd.ua,xlys.me,xlys02.com,xlys03.com,xlys05.com,yh-dm.com,yhdm28.com,yhta.cc,yhta.com,yhtg.cc,yhtg.live,yinghua.im,yinghuadm.cn,yinghuadongman.one,zhenbuka.cc##+js(acis, Date, Date.parse(new Date())
 13xsw.com,1dm9.cc,1qxs.com,295yhw.com,58xs.io,adm11.com,biquge77.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,dm789.com,dongmandaquan.vip,drmh2.com,fcdem.cc,fcdm77.cc,fcfan.cc,fcmv.cc,hahays.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,huaduys.cc,huaduzy.org,ifana.buzz,ifana.cc,ifana.com,ifana.live,ifana.xyz,judywatt.com,kanxiwa.com,koweer.com,mjtt1.cc,nnyy.pro,ore-sama.net,renqixiaoshuo.net,shenma.cc,shenma4.cc,smxiaoshuo.net,speechhearing.net,wedm3.com,wokanxi.com,wumtt.org,xcmv.cc,xddxsw.app,xddxsw.com,xddxsw.net,xl01.com.de,xl02.com.de,xl03.com.de,xl05.com.de,xlys.me,xlys02.com,xlys03.com,xlys05.com,yh-dm.com,yhdm28.com,yhta.cc,yhta.com,yhtg.cc,yhtg.live,yinghua.im,yinghua14.com,yinghuadm.cn,yinghuadongman.one,zhenbuka.cc##+js(rmnt, script, Date.parse\(new Date\(\))
@@ -7113,7 +7119,7 @@ bing.com##main[aria-label="Search Results"] > #b_pole:has(#cu_polebanner #cu_pol
 bing.com,zhenlang.cc###banner
 biqq.cc##div[style="width: 100%; height: 120px;"]
 biquge365.app,biquge365.net,biquge365.wap##.baocuo
-biquge365.net,dandanzan.club,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc##+js(rmnt, script, navigator.platform)
+biquge365.net,dandanzan.club,dmyfa.com,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc,yhmd.cc,yhmi.cc,yinghuadongman1.com##+js(rmnt, script, navigator.platform)
 biquge99.vip##.content:has(script[src="/facaishen1.js"])
 blog.sina.cn###pl-ad-after-comments
 blog.sina.cn###pl-adtop-bar
@@ -8063,6 +8069,7 @@ nuvid.com##.vpn-li
 nuvid.com,vivatube.com##.player_premium_bar
 nxnba.com##.bootom-fixed
 nypost.com##.ad-slot
+officialyinghua.co##[data-ad-slot]
 okdyy.com##[style*="width:"][style*="100%"],p[style*="display: block;"]
 old.reddit.com##.native-ad-container
 omofuns.link,omofuns.top,omofuns.top,omofuns.live,omofuns.buzz,omofun.link,omofun.top,omofun.live,omofun.buzz##.ads_w + div[id][style]
@@ -9117,6 +9124,7 @@ yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(set, Object.autoCopy, noopFunc)
 yh-dm.com##+js(rmnt, script, function a)
 yh-dm.com##+js(rmnt, script, pc.stgowan.com)
 yhdm6go.top##div[style$="background: #000;opacity:0.01;"]
+yhdmfan.cc##+js(rmnt, script, /new Function|navigator\.platform|disableDebugger/)
 yhdmw.com##.container > iframe[src][rel="nofollow"]
 yinhuadm.xyz##+js(rmnt, script, jsjiami.com.v4)
 yitongqinba.com##.visible-xs
@@ -9843,6 +9851,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||js*.iislm.com^$third-party
 ||js-agent.newrelic.com^$third-party
 ||js-dy.top^$third-party
+||js.*.*/g.js
 ||js.*/baidu*.js$third-party,domain=mahuadianying.com
 ||js.*mei*.com/sa/*.js
 ||js.*mz*.com/sa/*.js
