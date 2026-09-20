@@ -552,6 +552,7 @@ fi
 #精简规则，剔除Via不支持的规则
 #2026.09.19 grep 加入了正则移除 -e '^/(\^|\\|\[|\(\?)' 
 #该规则和 Remove_regex_Rules_for_via 相似 是粗略过滤
+#2026.09.20 sed 改为 sed -E 使用正则来缩短行数和方便维护，不要除去-E选项，不然无法过滤
 function lite_Adblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
@@ -562,93 +563,28 @@ local lite_content="$(grep -Ev \
  -e '\$@\$' \
  -e '(\$|,)~?(badfilter|empty|generichide|match-case|object|object-subrequest|removeparam)(,|$)' \
  -e '(\$|,)~?(csp|redirect-rule)(,|=|$)' \
- -e '(\$|,)~?(cname|frame|ghide|elemhide|ping|popunder)(,|$)' \
+ -e '(\$|,)~?(cname|frame|genericblock|ghide|elemhide|ping|popunder)(,|$)' \
  -e '(\$|,)(redirect|removeparam|header|replace|urlskip|uritransform|ipaddress|method|csp|denyallow|permissions|to)=' \
  -e ':(matches-path|-abp-contains|-abp-properties|contains|has-text|matches-css|matches-css-before|matches-css-after|xpath|nth-ancestor|upward|remove|style|watch-attr|matches-attr|matches-property|min-text-length)' \
  -e ':others\(|:shadow\(' \
  -e '^/(\^|\\|\[|\(\?)' \
  -e '^\*$' \
- "${file}" | busybox sed \
- -e '/^\!/d' \
- -e '/^[[:space:]]*$/d' \
- -e 's/\$from=/\$domain=/g' \
- -e 's/,from=/,domain=/g' \
- -e 's/\$3p$/\$third-party/g' \
- -e 's/\$3p\,/\$third-party\,/g' \
- -e 's/\$1p$/\$~third-party/g' \
- -e 's/\$1p\,/\$~third-party\,/g' \
- -e 's/\$~3p$/\$~third-party/g' \
- -e 's/\$~3p\,/\$~third-party\,/g' \
- -e 's/\$~1p$/\$third-party/g' \
- -e 's/\$~1p\,/\$third-party\,/g' \
- -e 's/\,1p$/\,~third-party/g' \
- -e 's/\,1p\,/\,~third-party\,/g' \
- -e 's/\,3p$/\,third-party/g' \
- -e 's/\,3p\,/\,third-party\,/g' \
- -e 's/\,~1p$/\,third-party/g' \
- -e 's/\,~1p\,/\,third-party\,/g' \
- -e 's/\,~3p$/\,~third-party/g' \
- -e 's/\,~3p\,/\,~third-party\,/g' \
- -e 's/\,strict3p$/\,third-party/g' \
- -e 's/\,strict3p\,/\,third-party\,/g' \
- -e 's/\$strict3p$/\$third-party/g' \
- -e 's/\$strict3p\,/\$third-party\,/g' \
- -e 's/\$xhr$/\$xmlhttprequest/g' \
- -e 's/\$xhr\,/\$xmlhttprequest\,/g' \
- -e 's/\$~xhr$/\$~xmlhttprequest/g' \
- -e 's/\$~xhr\,/\$~xmlhttprequest\,/g' \
- -e 's/\,xhr\,/\,xmlhttprequest\,/g' \
- -e 's/\,xhr$/\,xmlhttprequest/g' \
- -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
- -e 's/\,~xhr$/\,~xmlhttprequest/g' \
- -e 's/\$css$/\$stylesheet/g' \
- -e 's/\$css\,/\$stylesheet\,/g' \
- -e 's/\$~css$/\$~stylesheet/g' \
- -e 's/\$~css\,/\$~stylesheet\,/g' \
- -e 's/\,css$/\,stylesheet/g' \
- -e 's/\,css\,/\,stylesheet\,/g' \
- -e 's/\,~css$/\,~stylesheet/g' \
- -e 's/\,~css\,/\,~stylesheet\,/g' \
- -e 's/\$important$//g' \
- -e 's/\$important,/\$/g' \
- -e 's/\,important\,/\,/g' \
- -e 's/\,important$//g' \
- -e 's/\$~important$//g' \
- -e 's/\$~important,/\$/g' \
- -e 's/\,~important\,/\,/g' \
- -e 's/\,~important$//g' \
- -e 's/\$popup$//g' \
- -e 's/\$popup,/\$/g' \
- -e 's/\,popup\,//g' \
- -e 's/\,popup$//g' \
- -e 's/\$~popup$//g' \
- -e 's/\$~popup,/\$/g' \
- -e 's/\,~popup\,//g' \
- -e 's/\,~popup$//g' \
- -e 's/\$document$//g' \
- -e 's/\$document,/\$/g' \
- -e 's/\,document\,//g' \
- -e 's/\,document$//g' \
- -e 's/\$~document$//g' \
- -e 's/\$~document,/\$/g' \
- -e 's/\,~document\,//g' \
- -e 's/\,~document$//g' \
- -e 's/\$all$//g' \
- -e 's/\$all,/\$/g' \
- -e 's/\,all\,//g' \
- -e 's/\,all$//g' \
- -e 's/\$~all$//g' \
- -e 's/\$~all,/\$/g' \
- -e 's/\,~all\,//g' \
- -e 's/\,~all$//g' \
- -e 's/\$doc$//g' \
- -e 's/\$doc,/\$/g' \
- -e 's/\,doc\,//g' \
- -e 's/\,doc$//g' \
- -e 's/\$~doc$//g' \
- -e 's/\$~doc,/\$/g' \
- -e 's/\,~doc\,//g' \
- -e 's/\,~doc$//g' | sort -u )"
+ "${file}" | busybox sed -E \
+  -e '/^\!/d' \
+  -e '/^[[:space:]]*$/d' \
+  -e 's/(\$|,)from=/\1domain=/g' \
+  -e 's/(\$|,)strict3p(,|$)/\1third-party\2/g' \
+  -e 's/(\$|,)(~?)3p(,|$)/\1\2third-party\3/g' \
+  -e 's/(\$|,)~1p(,|$)/\1third-party\2/g' \
+  -e 's/(\$|,)1p(,|$)/\1~third-party\2/g' \
+  -e 's/(\$|,)(~?)xhr(,|$)/\1\2xmlhttprequest\3/g' \
+  -e 's/(\$|,)(~?)css(,|$)/\1\2stylesheet\3/g' \
+  -e 's/(\$|,)(~?)i?frame(,|$)/\1\2subdocument\3/g' \
+  -e 's/\$~?(important|popup|document|all|doc)(,|$)/$\2/g' \
+  -e 's/,~?(important|popup|document|all|doc)(,|$)/\2/g' \
+  -e 's/\$,/$/g' \
+  -e 's/,,/,/g' \
+  -e 's/\$$//' | sort -u )"
 echo "${lite_content}" > "${file}"
 }
 
@@ -656,47 +592,13 @@ echo "${lite_content}" > "${file}"
 function convert_abbreviations() {
 local file="${1}"
 test ! -f "${file}" && return 0
-local converted_content="$(cat "${file}" | busybox sed \
- -e 's/\$3p$/\$third-party/g' \
- -e 's/\$3p\,/\$third-party\,/g' \
- -e 's/\$1p$/\$~third-party/g' \
- -e 's/\$1p\,/\$~third-party\,/g' \
- -e 's/\$~3p$/\$~third-party/g' \
- -e 's/\$~3p\,/\$~third-party\,/g' \
- -e 's/\$~1p$/\$third-party/g' \
- -e 's/\$~1p\,/\$third-party\,/g' \
- -e 's/\,1p$/\,~third-party/g' \
- -e 's/\,1p\,/\,~third-party\,/g' \
- -e 's/\,3p$/\,third-party/g' \
- -e 's/\,3p\,/\,third-party\,/g' \
- -e 's/\,~1p$/\,third-party/g' \
- -e 's/\,~1p\,/\,third-party\,/g' \
- -e 's/\,~3p$/\,~third-party/g' \
- -e 's/\,~3p\,/\,~third-party\,/g' \
- -e 's/\$xhr$/\$xmlhttprequest/g' \
- -e 's/\$xhr\,/\$xmlhttprequest\,/g' \
- -e 's/\$~xhr$/\$~xmlhttprequest/g' \
- -e 's/\$~xhr\,/\$~xmlhttprequest\,/g' \
- -e 's/\,xhr\,/\,xmlhttprequest\,/g' \
- -e 's/\,xhr$/\,xmlhttprequest/g' \
- -e 's/\,~xhr\,/\,~xmlhttprequest\,/g' \
- -e 's/\,~xhr$/\,~xmlhttprequest/g' \
- -e 's/\$css$/\$stylesheet/g' \
- -e 's/\$css\,/\$stylesheet\,/g' \
- -e 's/\$~css$/\$~stylesheet/g' \
- -e 's/\$~css\,/\$~stylesheet\,/g' \
- -e 's/\,css$/\,stylesheet/g' \
- -e 's/\,css\,/\,stylesheet\,/g' \
- -e 's/\,~css$/\,~stylesheet/g' \
- -e 's/\,~css\,/\,~stylesheet\,/g' \
- -e 's/\$doc$/\$document/g' \
- -e 's/\$doc\,/\$document\,/g' \
- -e 's/\$~doc$/\$~document/g' \
- -e 's/\$~doc\,/\$~document\,/g' \
- -e 's/\,doc\,/\,document\,/g' \
- -e 's/\,doc$/\,document/g' \
- -e 's/\,~doc\,/\,~document\,/g' \
- -e 's/\,~doc$/\,~document/g' )"
+local converted_content="$(busybox sed -E \
+  -e 's/(\$|,)(~?)3p(,|$)/\1\2third-party\3/g' \
+  -e 's/(\$|,)(~?)xhr(,|$)/\1\2xmlhttprequest\3/g' \
+  -e 's/(\$|,)(~?)css(,|$)/\1\2stylesheet\3/g' \
+  -e 's/(\$|,)(~?)doc(,|$)/\1\2document\3/g' \
+  -e 's/(\$|,)~1p(,|$)/\1third-party\2/g' \
+  -e 's/(\$|,)1p(,|$)/\1~third-party\2/g' "${file}" )"
 echo "${converted_content}" > "${file}"
 }
 
@@ -722,25 +624,18 @@ local lite_content="$(grep -Ev \
 echo "${lite_content}" > "${file}"
 }
 
-#去除转换popup选定器，直接改用||域名^的形式。
+#去除popup选定器，直接改用||域名^的形式。
 function wipe_fiter_popup_domain(){
 local file="${1}"
-test ! -f "${file}" && return 
+test ! -f "${file}" && return
 busybox sed -i -E \
-  -e 's/\$popup,third-party$/\$third-party/g' \
-  -e 's/\$third-party,popup$/\$third-party/g' \
-  -e 's/\$popup,~third-party$/\$~third-party/g' \
-  -e 's/\$~third-party,popup$/\$~third-party/g' \
-  -e 's/\$popup,document$//g' \
-  -e 's/\$document,popup$//g' \
-  -e 's/\$popup,all$//g' \
-  -e 's/\$all,popup$//g' \
-  -e 's/\/\$popup$//g' \
-  -e 's/\/\$document$//g' \
-  -e 's/\/\$all$//g' \
-  -e 's/\$popup$//g' \
-  -e 's/\$document$//g' \
-  -e 's/\$all$//g' "${file}"
+  -e 's/\$popup,(~?third-party)$/\$\1/g' \
+  -e 's/\$(~?third-party),popup$/\$\1/g' \
+  -e 's/\$popup,(document|all)$//g' \
+  -e 's/\$(document|all),popup$//g' \
+  -e 's/\/\$(popup|document|all)$//g' \
+  -e 's/\$(popup|document|all)$//g' \
+  "${file}"
 #busybox sed -i -E '/^\|\|[0-9]+\.[0-9]+\./d' "${file}"
 }
 
