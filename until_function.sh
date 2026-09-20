@@ -92,16 +92,17 @@ fi
 #净化规则
 function modtify_adblock_original_file() {
 local file="${1}"
+local exclude_re='^#(@(\?|%|\$\?)#|(%|\$\?)#)|^\$@\$|^<<|<<1023<<'
+local new
+[ -f "$file" ] || return
+busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
 if test "${2}" = "" ;then
-	busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
-	local new=`grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' "${file}" | busybox sed 's|^[[:space:]]@@|@@|g' | sort -u | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
+	new=`grep -Ev "${exclude_re}" "${file}" | busybox sed 's|^[[:space:]]@@|@@|g;/^!/d;/^\[.*\]$/d;/^[[:space:]]*$/d' | sort -u `
 	echo "$new" > "${file}"
 else
-	busybox sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
-	local new=`grep -Ev '^#\@\?#|^\$\@\$|^#\%#|^#\@\%#|^#\@\$\?#|^#\$\?#|^<<|<<1023<<' "${file}" | grep -Ev "${2}" | busybox sed 's|^[[:space:]]@@|@@|g' | sort -u | busybox sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' `
+	new=`grep -Ev "${exclude_re}|${2}" "${file}" | busybox sed 's|^[[:space:]]@@|@@|g;/^!/d;/^\[.*\]$/d;/^[[:space:]]*$/d' | sort -u `
 	echo "$new" > "${file}"
 fi
-
 }
 
 function make_white_rules(){
@@ -150,11 +151,16 @@ function wipe_white_list() {
 function sort_web_rules() {
 	local file="${2}"
 	local output_folder="${1}"
+	local output_file="${output_folder}/${file##*/}"
 	if test -f "${file}" ;then
-	local IFS=$'\n'
-	local new=$(grep -Ev '^\@\@|^[[:space:]]\@\@\|\||^<<|<<1023<<|^\@\@\|\||^\|\||^##|^###|^\/|\/ad\/|^:\/\/|^_|^\?|^\.|^-|^=|^:|^~|^,|^&|^#\$#|#\@#|^\$|^\||^\*|^#\%#' "${file}" | sort -u | busybox sed '/^!/d;/^[[:space:]]*$/d' )
+		local IFS=$'\n'
+		local new=$(grep -Ev '^@@|^[[:space:]]@@\|\||^<<|<<1023<<|^\|\||^##|^[?_./=&:~,$|*-]|/ad/|^#\$#|#@#|^#%#|^!|^[[:space:]]*$' "${file}" | sort -u )
 		mkdir -p "${output_folder}"
-		echo "$new" >> "${output_folder}/${file##*/}"
+		if [ -f "${output_file}" ] ;then
+			echo "$new" >> "${output_file}"
+		else
+			echo "$new" > "${output_file}"
+		fi
 	fi
 }
 
