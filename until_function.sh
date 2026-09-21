@@ -626,12 +626,13 @@ function lite_Uadblock_Rules(){
 local file="${1}"
 test ! -f "${file}" && return
 local lite_content="$(grep -Ev \
+ -e '^\/.*##' \
  -e '\$@?\$' \
  -e '#(@?%#)' \
  -e '#(@?\$\?)#' \
  -e '#\%#\/\/scriptlet' \
  -e '(\$|,)~?(dnsrewrite|replace)(,|=|$)' \
- -e ':(matches-attr|matches-property|nth-ancestor|-abp-properties)' \
+ -e ':(matches-property|nth-ancestor|-abp-properties)' \
  "${file}" | sort -u )"
 echo "${lite_content}" > "${file}"
 }
