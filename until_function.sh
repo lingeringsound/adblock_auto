@@ -115,7 +115,7 @@ local IFS=$'\n'
 local white_list_file="${2}"
 for o in `sed '/^!/d;/^[[:space:]]*$/d' "${white_list_file}" 2>/dev/null `
 do
-sed -i -E "/${o}/d" "${file}"
+	sed -i -E "/${o}/d" "${file}"
 done
 }
 
@@ -220,39 +220,39 @@ local IFS=$'\n'
 local target_file="${1}"
 local target_file_tmp="`pwd`/${target_file##*/}.tmp"
 local target_output_file="`pwd`/${target_file##*/}.temple"
-local count_Rules_all=`cat "${target_file}" | grep '#'  | sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l`
+local count_Rules_all=`grep '#' "${target_file}" | sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d | wc -l`
 local a=0
 sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
-local new_file=$(cat "${target_file}" | sort -u | uniq | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
+local new_file=$(sort -u "${target_file}" | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
 echo "${new_file}" > "${target_file}"
-for target_content in `cat "${target_file}" | grep '#'  | sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
+for target_content in `grep '#' "${target_file}" | sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
 do
 a=$(($a + 1))
 target_content="#${target_content}"
 transfer_content=$(escape_special_chars ${target_content})
 grep -E "${transfer_content}$" "${target_file}" > "${target_file_tmp}" && echo "※处理重复Css规则( $count_Rules_all → $(($count_Rules_all - ${a})) ): ${transfer_content}$"
-if test "$(cat "${target_file_tmp}" 2>/dev/null | sed 's|#.*||g' | grep -E ',')" != "" ;then
+if test "$(sed 's|#.*||g' "${target_file_tmp}" 2>/dev/null | grep -E ',')" != "" ;then
 	sed -i 's|#.*||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | sed '/^[[:space:]]*$/d' | sort  | uniq )
+	local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | sed '/^[[:space:]]*$/d' | sort -u )
 	echo "${before_tmp}" > "${target_file_tmp}"
 	sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null )" != "" ;then 
 		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
-cat << key >> "${target_output_file}" 
+cat >> "${target_output_file}" << key
 `cat "${target_file_tmp}"`${target_content}
 key
 		mv -f "${target_output_file}" "${target_file}"
 	fi
 else
 	sed -i 's|#.*||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | sed '/^[[:space:]]*$/d' | sort -u)
+	local before_tmp=$(sed '/^[[:space:]]*$/d' "${target_file_tmp}" | sort -u)
 	echo "${before_tmp}" > "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
+	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null | wc -l)" -gt "1" ;then
 		sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
 	fi
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null )" != "" ;then 
 		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
-cat << key >> "${target_output_file}" 
+cat >> "${target_output_file}" << key
 `cat "${target_file_tmp}"`${target_content}
 key
 		mv -f "${target_output_file}" "${target_file}"
@@ -268,47 +268,47 @@ local IFS=$'\n'
 local target_file="${1}"
 local target_file_tmp="`pwd`/${target_file##*/}.tmp"
 local target_output_file="`pwd`/${target_file##*/}.temple"
-local count_Rules_all=`cat "${target_file}" | sed 's|domain=.*||g' | sort | uniq -d | sed '/^[[:space:]]*$/d' | wc -l `
+local count_Rules_all=`sed 's|domain=.*||g' "${target_file}" | sort | uniq -d | sed '/^[[:space:]]*$/d' | wc -l `
 local a=0
 sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
-local new_file=$(cat "${target_file}" | sort -u | uniq | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
+local new_file=$(sort -u "${target_file}" | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
 echo "${new_file}" > "${target_file}"
-for target_content in `cat "${target_file}" | grep 'domain=' | sed 's|domain=.*||g' | sort | uniq -d | sed '/^[[:space:]]*$/d' `
+for target_content in `grep 'domain=' "${target_file}" | sed 's|domain=.*||g' | sort | uniq -d | sed '/^[[:space:]]*$/d' `
 do
 a=$(($a + 1))
 target_content="${target_content}domain="
 transfer_content=$(escape_special_chars ${target_content} )
 grep -E "^${transfer_content}" "${target_file}" > "${target_file_tmp}" && echo "※处理重复作用域名规则( $count_Rules_all → $(($count_Rules_all - ${a} )) ): ^${transfer_content}"
-if test "$(cat "${target_file_tmp}" 2>/dev/null | sed 's|.*domain=||g' | grep -E ',' )" != "" ;then
+if test "$(sed 's|.*domain=||g' "${target_file_tmp}" 2>/dev/null | grep -E ',' )" != "" ;then
 	echo "※规则 ${target_content} 包含其他限定器！"
-	local fixed_tmp=$(cat "${target_file_tmp}" | sed 's/[[:space:]]$//g' | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' | sed '/^[[:space:]]*$/d' | sort -u)
+	local fixed_tmp=$(sed 's/[[:space:]]$//g' "${target_file_tmp}" | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' | sed '/^[[:space:]]*$/d' | sort -u)
 	echo "${fixed_tmp}" > "${target_file_tmp}"
 	echo "※尝试修复中……"
-	local Rules_juggle=`cat "${target_file_tmp}" | sort -u | sed '/^[[:space:]]*$/d' | wc -l`
+	local Rules_juggle=`sort -u "${target_file_tmp}" | sed '/^[[:space:]]*$/d' | wc -l`
 	test "${Rules_juggle}" -le "1" && echo "※无法合并，已跳过！" && continue
 fi
-if test "$(cat "${target_file_tmp}" 2>/dev/null | sed 's|.*domain=||g' | grep -E '\|')" != "" ;then
+if test "$(sed 's|.*domain=||g' "${target_file_tmp}" 2>/dev/null | grep -E '\|')" != "" ;then
 	sed -i 's|.*domain=||g' "${target_file_tmp}"
 	local before_tmp=$(cat "${target_file_tmp}" | tr '|' '\n' | sed '/^[[:space:]]*$/d' | sort  | uniq)
 	echo "${before_tmp}" > "${target_file_tmp}"
 	sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null )" != "" ;then 
 		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}" 
-cat << key >> "${target_output_file}" 
+cat >> "${target_output_file}" << key
 ${target_content}`cat "${target_file_tmp}"`
 key
 		mv -f "${target_output_file}" "${target_file}"
 	fi
 else
 	sed -i 's|.*domain=||g' "${target_file_tmp}"
-	local before_tmp=$(cat "${target_file_tmp}" | sed '/^[[:space:]]*$/d' | sort  | uniq)
+	local before_tmp=$(sed '/^[[:space:]]*$/d' "${target_file_tmp}" | sort -u )
 	echo "${before_tmp}" > "${target_file_tmp}"
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' | wc -l)" -gt "1" ;then
+	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null | wc -l)" -gt "1" ;then
 		sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
 	fi
-	if test "$(cat "${target_file_tmp}" 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' )" != "" ;then 
+	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null )" != "" ;then 
 		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}"
-cat << key >> "${target_output_file}" 
+cat >> "${target_output_file}" << key
 ${target_content}`cat "${target_file_tmp}"`
 key
 		mv -f "${target_output_file}" "${target_file}"
@@ -383,27 +383,32 @@ sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
 #规则分类
 function sort_and_optimum_adblock_shell(){
 local file="${1}"
-test ! -f "${file}" && return 
-cat << key > "${file}"
+test ! -f "${file}" && return
+local common_Rules="`sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' "${file}" | grep -Ev '^\|\||^\|http|##|#\?#|#\%#|#\@#|##\[|##\.|[#][$][#]|[#][$][?][#]|[#][@][?][#]|^#' | sort -u `"
+local domain_Rules="`sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' "${file}" | grep -E '^\|\||^\|http' | sort -u `"
+local single_website_Rules="`sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' "${file}" | grep -Ev '^\@\@|^\|\||^\|http|^#|^\/|^:\/\/|^_|^\?|^\.|^-|^=|^:|^~|^,|^&|^\$|^\||^\*' | sort -u `"
+local comm_Css_Rules="`sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' "${file}" | grep -E '^#|^~.*#' | sort -u `"
+local white_List_Rules="`sed '/^!/d;/^\[/d;/^[[:space:]]*$/d' "${file}" | grep -E '^\@\@|#\@#' | sort -u `"
+cat > "${file}" << key
 
-!<<<<<通配符规则>>>>>`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -Ev '^\|\||^\|http|##|#\?#|#\%#|#\@#|##\[|##\.|[#][$][#]|[#][$][?][#]|[#][@][?][#]|^#' | sort -u | wc -l `
-`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -Ev '^\|\||^\|http|##|#\?#|#\%#|#\@#|##\[|##\.|[#][$][#]|[#][$][?][#]|[#][@][?][#]|^#' | sort -u `
+!<<<<<通配符规则>>>>>`echo "${common_Rules}" | wc -l `
+${common_Rules}
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<域名规则>>>>>`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -E '^\|\||^\|http' | sort -u | wc -l `
-`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -E '^\|\||^\|http' | sort -u `
+!<<<<<域名规则>>>>>`echo "$domain_Rules" | wc -l `
+${domain_Rules}
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -Ev '^\@\@|^\|\||^\|http|^#|^\/|^:\/\/|^_|^\?|^\.|^-|^=|^:|^~|^,|^&|^\$|^\||^\*' | sort -u | wc -l`
-`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -Ev '^\@\@|^\|\||^\|http|^#|^\/|^:\/\/|^_|^\?|^\.|^-|^=|^:|^~|^,|^&|^\$|^\||^\*' | sort -u `
+!<<<<<网站单独规则>>>>>`echo "$single_website_Rules" | wc -l`
+${single_website_Rules}
 !<<<<<网站单独规则 结束>>>>>
 
-!<<<<<通用Css规则>>>>>`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -E '^#|^~.*#' | sort -u | wc -l`
-`cat "${file}" | sed '/^!/d;/^\@\@/d;/#\@#/d;/^\[/d;/^[[:space:]]*$/d' | grep -E '^#|^~.*#' | sort -u `
+!<<<<<通用Css规则>>>>>`echo "$comm_Css_Rules" | wc -l`
+${comm_Css_Rules}
 !<<<<<通用Css规则 结束>>>>>
 
-!<<<<<放行白名单>>>>>`cat "${file}" | sed '/^!/d;/^\[/d;/^[[:space:]]*$/d' | grep -E '^\@\@|#\@#' | sort -u | wc -l`
-`cat "${file}" | sed '/^!/d;/^\[/d;/^[[:space:]]*$/d' | grep -E '^\@\@|#\@#' | sort -u `
+!<<<<<放行白名单>>>>>`echo "$white_List_Rules" | wc -l`
+${white_List_Rules}
 !<<<<<放行白名单 结束>>>>>
 
 key
@@ -423,7 +428,7 @@ fi
 #剔除css规则冲突规则
 function fixed_css_white_conflict_shell(){
 local file="${1}"
-local white_list=`cat ${file} | grep -E '^#\@#' | sed -E 's/#\@#/##/g' `
+local white_list=`grep -E '^#\@#' "${file}" | sed -E 's/#\@#/##/g' `
 for i in ${white_list}
 do
 	echo "剔除冲突规则 ${i}"
@@ -453,7 +458,7 @@ done
 function clear_domain_white_list_shell(){
 local file="${1}"
 test ! -f "${file}" && return
-cat "${file}" | sed '/^\!/d;/\#/d;/\$/d' | grep -E '^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(:[0-9]{1,5})?(/[^ ]*)?' | sort -u | while read line
+sed '/^\!/d;/\#/d;/\$/d' "${file}" | grep -E '^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(:[0-9]{1,5})?(/[^ ]*)?' | sort -u | while read line
 do
 	transfer_content=`escape_special_chars ${line}`
 	grep -E "^\|\|${transfer_content}\^" "${file}" && sed -i -E "/^${transfer_content}$/d" "${file}"
@@ -464,7 +469,7 @@ done
 function clear_domain_white_Rules_shell(){
 local file="${1}"
 test ! -f "${file}" && return
-cat "${file}" | grep -E 'domain=~' | sed '/#/d;s/\$.*//g' | while read line
+grep -E 'domain=~' "${file}" | sed '/#/d;s/\$.*//g' | while read line
 do
 	transfer_Rules=`escape_special_chars ${line}`
 	sed -i -E "/^${transfer_Rules}$/d" "${file}"
