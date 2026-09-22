@@ -41,6 +41,9 @@ sort_adblock_Rules "${Sort_Folder}/lite" "${Download_Folder}/AdGuard_Base_filter
 #去除转换popup选定器，直接改用||域名^的形式。
 wipe_fiter_popup_domain "${Sort_Folder}/lite/easylist_adservers_popup.txt"
 wipe_fiter_popup_domain "${Sort_Folder}/lite/AdGuard_Base_filter_dns.txt"
+#高级has语法合并
+add_has_fiter "${Download_Folder}/Adguard_Chinese.txt" "${Sort_Folder}/lite"
+add_has_fiter "${Download_Folder}/easylistchina.txt" "${Sort_Folder}/lite"
 
 #合并规则
 echo "※`date +'%F %T'` 开始合并规则……"
@@ -64,13 +67,12 @@ sed -Ei '/\$document/d' "${Combine_Folder}/lite/拦截H转跳.txt"
 Combine_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt" "${Combine_Folder}/lite"
 
 #规则小修
-fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '\$popup,domain=racaty\.io,0123movie\.ru' '\$popup,domain=racaty\.io\|0123movie\.ru'
-fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '##aside:-abp-has' '#\?#aside:-abp-has'
-fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '##tr:-abp-has' '#\?#tr:-abp-has'
-fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '\$~media,~subdocument,third-party,domain=mixdrp\.co,123movies\.tw\|' '\$~media,~subdocument,third-party,domain=mixdrp\.co\|123movies\.tw\|'
-fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '\$third-party,script,_____,domain=' '\$third-party,script,domain='
-fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" ',_____,domain=' ',domain='
-
+#fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '\$popup,domain=racaty\.io,0123movie\.ru' '\$popup,domain=racaty\.io\|0123movie\.ru'
+#fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '##aside:-abp-has' '#\?#aside:-abp-has'
+#fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '##tr:-abp-has' '#\?#tr:-abp-has'
+#fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '\$~media,~subdocument,third-party,domain=mixdrp\.co,123movies\.tw\|' '\$~media,~subdocument,third-party,domain=mixdrp\.co\|123movies\.tw\|'
+#fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" '\$third-party,script,_____,domain=' '\$third-party,script,domain='
+#fix_Rules "${Rules_Folder}/adblock_auto_lite.txt" ',_____,domain=' ',domain='
 
 #净化去重规则
 modtify_adblock_original_file "${Rules_Folder}/adblock_auto_lite.txt"

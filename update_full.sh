@@ -63,12 +63,12 @@ sed -Ei '/\$~third-party/d' "${Combine_Folder}/拦截H转跳.txt"
 Combine_adblock_original_file "${Rules_Folder}/adblock_auto.txt" "${Combine_Folder}"
 
 #规则小修
-fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$popup,domain=racaty\.io,0123movie\.ru' '\$popup,domain=racaty\.io\|0123movie\.ru'
-fix_Rules "${Rules_Folder}/adblock_auto.txt" '##aside:-abp-has' '#\?#aside:-abp-has'
-fix_Rules "${Rules_Folder}/adblock_auto.txt" '##tr:-abp-has' '#\?#tr:-abp-has'
-fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$~media,~subdocument,third-party,domain=mixdrp\.co,123movies\.tw\|' '\$~media,~subdocument,third-party,domain=mixdrp\.co\|123movies\.tw\|'
-fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$third-party,script,_____,domain=' '\$third-party,script,domain='
-fix_Rules "${Rules_Folder}/adblock_auto.txt" ',_____,domain=' ',domain='
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$popup,domain=racaty\.io,0123movie\.ru' '\$popup,domain=racaty\.io\|0123movie\.ru'
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" '##aside:-abp-has' '#\?#aside:-abp-has'
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" '##tr:-abp-has' '#\?#tr:-abp-has'
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$~media,~subdocument,third-party,domain=mixdrp\.co,123movies\.tw\|' '\$~media,~subdocument,third-party,domain=mixdrp\.co\|123movies\.tw\|'
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" '\$third-party,script,_____,domain=' '\$third-party,script,domain='
+#fix_Rules "${Rules_Folder}/adblock_auto.txt" ',_____,domain=' ',domain='
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-has(' ':has('
 #fix_Rules "${Rules_Folder}/adblock_auto.txt" ' { remove: true; }' ':remove()'
 fix_Rules "${Rules_Folder}/adblock_auto.txt" ':-abp-contains(' ':has-text('

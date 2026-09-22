@@ -188,6 +188,28 @@ function add_rules_file() {
 	fi
 }
 
+# 转换成原生 has 规则
+function add_has_fiter() {
+local file="${1}"
+local target_folder="${2}"
+local target_website="${3}"
+test ! -f "${file}" -o ! -d "${target_folder}" && return
+local exclude=':-abp-contains|:-abp-properties|:contains|:has-text'
+exclude="${exclude}|:matches-attr|:matches-css|:matches-css-after|:matches-css-before"
+exclude="${exclude}|:matches-path|:matches-property|:min-text-length|:nth-ancestor"
+exclude="${exclude}|:remove|:style|:upward|:watch-attr|:xpath"
+exclude="${exclude}|[[:space:]]\{[[:space:]]remove:[[:space:]]true;[[:space:]]\}"
+exclude="${exclude}|^#|^!|^\[|\*#"
+local site_filter='^'
+test -n "${target_website}" && site_filter="${target_website}"
+local has_fiter="$(grep -E ':-abp-has|:has' "${file}" \
+ | grep -E "${site_filter}" \
+ | grep -Ev "${exclude}" \
+ | sed -E 's/#(#|[@?]#)?/##/g;s/:-abp-has/:has/g' \
+ | sort -u)"
+echo "${has_fiter}" > "${target_folder}/${file##*/}_has.txt"
+}
+
 #测试github 加速的链接
 function Get_Download_github_raw_link(){
 local download_target="${1}"
