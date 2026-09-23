@@ -47,23 +47,37 @@ def wipe_same_selector_fiter(file_path):
     bare_rules = set()
     
     for line in lines:
-        if line.startswith('||'):
-            if 'domain=' in line or line.startswith('!') or not line.strip():
+        sline = line.strip()
+        if not sline or sline.startswith('!'):
+            continue
+        if '$' not in sline:
+            bare_rules.add(sline)
+        if sline.startswith('||'):
+            if 'domain=' in sline:
                 continue
-            cleaned = strip_pat.sub('', line)
-            if cleaned == line and '$' not in line:
+            cleaned = strip_pat.sub('', sline)
+            if cleaned == sline and '$' not in sline:
                 bare_rules.add(cleaned)
             counts[cleaned] = counts.get(cleaned, 0) + 1
 
     duplicates = {k for k, v in counts.items() if v > 1}
-    
-    if not duplicates:
-        return
+    targets_prefix = tuple(f"{dup}$" for dup in duplicates) if duplicates else ()
 
-    targets_prefix = tuple(f"{dup}$" for dup in duplicates)
     new_lines = []
     for line in lines:
-        if line.startswith(targets_prefix):
+        sline = line.strip()
+        if not sline or sline.startswith('!'):
+            new_lines.append(line)
+            continue
+
+        if '$domain=' in sline and '$domain=~' not in sline:
+            prefix, opts = sline.split('$domain=', 1)
+            domain_val = opts.split(',')[0]
+            reconstructed = f"{prefix}$domain={domain_val}"
+            if reconstructed == sline and prefix in bare_rules:
+                continue
+
+        if targets_prefix and line.startswith(targets_prefix):
             if 'redirect-rule=' in line or 'domain=' in line or 'redirect=' in line:
                 new_lines.append(line)
                 continue
