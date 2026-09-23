@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: AoTy7ZkFHHh8vm14cvAanQ
+! Checksum: 1OD2wwS/8iyGPMyKOkWU7g
 ! Title: 自用去广告Adblock规则
-! Version: 20260923211929
+! Version: 20260923214252
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-23 21:19:29
-! Total Count: 10583
-! Blocked Filters: 10583
+! Last modified: 2026-09-23 21:42:52
+! Total Count: 10584
+! Blocked Filters: 10584
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -8647,11 +8647,11 @@ sydneytoday.com##.weui-dialog
 sydneytoday.com##.weui-mask
 taotu.org##img[src*="/adimages/"]
 tap4porn.cc##+js(set, window.adsbyjuicy, noopfunc)
-tap4porn.cc##.vp-mobile-ad
 tap4porn.cc#@#.ad-slot:not(.adsbox):not(.adsbygoogle)
 tap4porn.cc#@#.ad-zone
 tap4porn.cc#@#.ad-zone:not(.textads)
 tap4porn.cc#@#.sponsor-block
+tap4porn.cc#@#.vp-mobile-ad
 tap4porn.cc#@#script[src$="/js/jads.js"] + ins[id]
 tasexy.com##[id^="sexy_a"]
 tasexy.com##[id^="sexy_b"]
@@ -10357,6 +10357,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ts.venum.top^$third-party
 ||ts.ykkbwdf.cn^$third-party
 ||tsyndicate.com^
+||tsyndicate.com^$script,redirect=noopjs,domain=tap4porn.cc
 ||ttketang.com/static/js/foot.js
 ||ttketang.com/static/js/play.er.js
 ||ttketang.com/static/js/top.js
