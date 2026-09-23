@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: odX5WySEvXPMsK7/PAUdmQ
+! Checksum: AoTy7ZkFHHh8vm14cvAanQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260923170320
+! Version: 20260923211929
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-23 17:03:20
+! Last modified: 2026-09-23 21:19:29
 ! Total Count: 10583
 ! Blocked Filters: 10583
 ! Description: 自用adblock规则
@@ -6978,8 +6978,6 @@ baidu.com##[class^="sfc-video-page"] > [class="mask"]
 baidu.com##[srcid*="_ad"]
 baidu.com##[srcid="mkt_main_hotbrand"]
 baidu.com##div[class^="sfc-video-page-list"]
-baidu.com#@#.ad-wrapper
-baidu.com#@#[class$="-ad"]
 baidu.com,bdimg.com###aside-ad
 baidu.com,bdimg.com,tieba.com##.l_post:has(div[class*=" fc-"])
 baidu.com,bdimg.com,tieba.com##.thread_item_box:has(div[class*=" fc-"])
@@ -7720,8 +7718,8 @@ jingyanlib.com##.admorecon
 jingyanlib.com##.adsign
 jingyanlib.com##.article-adcon
 jingyanlib.com##[adtemplate]
+jingyanlib.com##[class$="-ad"]
 jingyanlib.com##div[id^="adIndex"]
-jingyanlib.com,xvideos.com##[class$="-ad"]
 jinse.cn##.download
 jinse.cn##.jinse_app
 jinse.cn##.js-read-full__open
@@ -8965,7 +8963,9 @@ xtube.com##.wrapper > .container:has(> [class] > .adContainer)
 xtube.com,tktube.com,mat6tube.com##.container > div[style*="100%"]:not([class]):not([id])
 xuecan.net###promotion-container
 xunleisou.pro##.rststat > font[color="red"]
+xvideos.com##.ad-placeholder
 xvideos.com##.thumb-inside:has(.adsbyexoclick)
+xvideos.com##[class$="-ad"]:not(#related-videos):not([class*="related"])
 xvideos.com,xvideos.es##.player-video.xv-cams-block
 xvideos.name###publicidad-video
 xvideos2.com.se##.mobile-show
