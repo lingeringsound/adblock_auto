@@ -44,12 +44,15 @@ def wipe_same_selector_fiter(file_path):
     )
     
     counts = {}
+    bare_rules = set()
     
     for line in lines:
         if line.startswith('||'):
-            cleaned = strip_pat.sub('', line)
-            if 'domain=' in cleaned or cleaned.startswith('!') or not cleaned.strip():
+            if 'domain=' in line or line.startswith('!') or not line.strip():
                 continue
+            cleaned = strip_pat.sub('', line)
+            if cleaned == line and '$' not in line:
+                bare_rules.add(cleaned)
             counts[cleaned] = counts.get(cleaned, 0) + 1
 
     duplicates = {k for k, v in counts.items() if v > 1}
@@ -63,6 +66,11 @@ def wipe_same_selector_fiter(file_path):
         if line.startswith(targets_prefix):
             if 'redirect-rule=' in line or 'domain=' in line or 'redirect=' in line:
                 new_lines.append(line)
+                continue
+            cleaned = strip_pat.sub('', line)
+            if cleaned in bare_rules and cleaned in duplicates:
+                continue
+            new_lines.append(line)
         else:
             new_lines.append(line)
 
@@ -105,10 +113,14 @@ def clear_domain_white_Rules(file_path):
     remove_set = set()
     for line in lines:
         if 'domain=~' in line and '#' not in line:
-            cleaned = line.split('$')[0]
-            remove_set.add(cleaned)
+            cleaned = line.split('$')[0].strip()
+            if cleaned:
+                remove_set.add(cleaned)
 
-    new_lines = [line for line in lines if line not in remove_set]
+    if not remove_set:
+        return
+
+    new_lines = [line for line in lines if line.strip() not in remove_set]
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines) + '\n')
