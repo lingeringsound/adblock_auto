@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: uL1PeHngF1+gMzTmEhBlIQ
+! Checksum: odX5WySEvXPMsK7/PAUdmQ
 ! Title: 自用去广告Adblock规则
-! Version: 20260922134524
+! Version: 20260923170320
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-22 13:45:24
-! Total Count: 10575
-! Blocked Filters: 10575
+! Last modified: 2026-09-23 17:03:20
+! Total Count: 10583
+! Blocked Filters: 10583
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -6919,7 +6919,7 @@ avple.tv##.jss13
 avple.tv##.jss20
 avsubtitles.com#@#.main_and_ads_block
 avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
-avsubtitles.com,bangerspis.xyz,deluxtube.com,linlinverse.com,notfans.org,onlyzy.com,pimpbunny.com,pornlore.com,storyofthepast.xyz,taiav.com,taimadou.com,topjav.tv,topvid.tv,ukdevilz.com,viralxxxporn.com,x-video.tube,xasiat.com##+js(rmnt, script, document.dispatchEvent)
+avsubtitles.com,bangerspis.xyz,deluxtube.com,linlinverse.com,notfans.org,onlyzy.com,pimpbunny.com,pornlore.com,storyofthepast.xyz,taiav.com,taimadou.com,topjav.tv,topvid.tv,ukdevilz.com,viralxxxporn.com,watchporn.to,x-video.tube,xasiat.com##+js(rmnt, script, document.dispatchEvent)
 avtik.com###player > .player-wrapper + section
 ayjxcs.com,cqzuoer.com,fybys.com,hellorlgzf7sn.com,hskjjglo.com,jiabaide.cn,jmyts.com,jpyy2.com,qiqione.com,tjrongze.com,vv3nwjk.com,xdxtz4j3a.com##img.line_banner[src*="data:"]:upward(4)
 b.quark.cn##.video-info
@@ -7479,6 +7479,7 @@ hanime.tv##div[class^="htvnad"]
 hanime.tv##iframe[src^="https://ads.trafficjunky.net/"]
 hanime.tv#@#.ad-content-area
 hanime.tv#@#.vertical-ad
+hanime.tv,inbox.io,pbs.org,tap4porn.cc#@#.banner-ad
 hanime1.cfd,hanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.men##+js(acis, addImageAd)
 hanime1.cfd,hanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.men##+js(acis, loadNewPopupAd)
 hanime1.cfdhanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.me,hanime1.men##.search-rows-wrapper > .content-padding-new > .row > .multiple-link-wrapper:has(> a[href*=".labsda.com"])
@@ -7615,7 +7616,6 @@ ilengmen.com,newpopo.com,soosadfun.com,mylewen.com,haitangdushu.com,sadhub.org,m
 image.so.com##.waterfall > li[data-imgid] > a[href^="https://e.so.com/search/mclick?"]
 imginn.com##.block-timeline-sulvo
 imginn.com##div[class]:has(>[data-ad])
-inbox.io,hanime.tv,pbs.org#@#.banner-ad
 inky.dk,inky.fi,inky.no,inky.se#@#iframe[width="200"][height="240"]
 iookd.cc##[class="ads"] > img,img[src*="jiongnet.cn"]
 iplark.com##+js(addEventListener-defuser, DOMContentLoaded, localStorage)
@@ -8648,6 +8648,13 @@ sxyprn.net##.tbd,.cbd
 sydneytoday.com##.weui-dialog
 sydneytoday.com##.weui-mask
 taotu.org##img[src*="/adimages/"]
+tap4porn.cc##+js(set, window.adsbyjuicy, noopfunc)
+tap4porn.cc##.vp-mobile-ad
+tap4porn.cc#@#.ad-slot:not(.adsbox):not(.adsbygoogle)
+tap4porn.cc#@#.ad-zone
+tap4porn.cc#@#.ad-zone:not(.textads)
+tap4porn.cc#@#.sponsor-block
+tap4porn.cc#@#script[src$="/js/jads.js"] + ins[id]
 tasexy.com##[id^="sexy_a"]
 tasexy.com##[id^="sexy_b"]
 tbssp66.top##.app,a[rel="external nofollow noopener"][target="_blank"][data-original]
@@ -9819,6 +9826,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||ixsw.org/*/*.js
 ||iyxdm.one/js/bottom_dk.js
 ||izhongwen.cc/staticjs/hm.js
+||jads.co^$script,redirect=noopjs,domain=2th.me|litomi.in|tap4porn.cc
 ||jads.co^$third-party
 ||jakxs.net/themes/jieqi/wap/js/*fix
 ||jakxs.net/themes/jieqi/wap/js/test.js
