@@ -400,6 +400,7 @@ sort_Css_Combine_python "${target_adblock_file}"
 #写入通用的Css
 #echo "${css_common_record}" >> "${target_adblock_file}"
 sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
+fixed_css_selector_not_clean "${target_adblock_file}"
 }
 
 #规则分类
@@ -535,6 +536,15 @@ if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "css_conflict" "${file}"
 else
 	fixed_css_white_conflict_shell "${file}"
+fi
+}
+
+function fixed_css_selector_not_clean(){
+local file="${1}"
+test ! -f "${file}" && return
+local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort_other.py"
+if command -v python3 >/dev/null 2>&1 && [ -f "${python_file}" ] ;then
+	python3 "${python_file}" "css_selector_not_clean" "${file}"
 fi
 }
 
