@@ -172,8 +172,8 @@ def clear_domain_white_Rules(file_path):
             return None
         return '|'.join(neg_domains)
 
-    white_prefixes = set()
-    specific_prefixes = set()
+    white_exact_signatures = set()
+    white_prefixes_has_neg_domain = set()
 
     for line in lines:
         sline = line.strip()
@@ -181,11 +181,11 @@ def clear_domain_white_Rules(file_path):
             continue
         prefix, other_opts, domain_opt = parse_rule_info(sline)
         if domain_opt and '~' in domain_opt:
-            white_prefixes.add(prefix)
-            if other_opts:
-                specific_prefixes.add(prefix)
+            white_prefixes_has_neg_domain.add(prefix)
+            sig = f"{prefix}${','.join(other_opts)}" if other_opts else prefix
+            white_exact_signatures.add(sig)
 
-    if not white_prefixes:
+    if not white_exact_signatures:
         return
 
     new_lines = []
@@ -199,8 +199,6 @@ def clear_domain_white_Rules(file_path):
 
         if domain_opt:
             if '~' in domain_opt:
-                if not other_opts and prefix in specific_prefixes:
-                    continue
                 cleaned_domain = sanitize_domain_opt(domain_opt)
                 opts = list(other_opts)
                 if cleaned_domain:
@@ -208,10 +206,18 @@ def clear_domain_white_Rules(file_path):
                 reconstructed = f"{prefix}${','.join(opts)}" if opts else prefix
                 new_lines.append(reconstructed)
             else:
-                continue
+                sig = f"{prefix}${','.join(other_opts)}" if other_opts else prefix
+                if sig in white_exact_signatures:
+                    continue
+                new_lines.append(line)
         else:
-            if prefix in white_prefixes:
-                continue
+            if not other_opts:
+                if prefix in white_prefixes_has_neg_domain:
+                    continue
+            else:
+                sig = f"{prefix}${','.join(other_opts)}"
+                if sig in white_exact_signatures:
+                    continue
             new_lines.append(line)
 
     with open(file_path, 'w', encoding='utf-8') as f:
