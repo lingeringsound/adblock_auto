@@ -148,33 +148,69 @@ def clear_domain_white_Rules(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         lines = f.read().splitlines()
 
-    white_rules_prefix = set()
+    def parse_rule_signature(sline):
+        if '$' not in sline:
+            return sline, [], None
+        prefix, opts_str = sline.split('$', 1)
+        opts = opts_str.split(',')
+        other_opts = []
+        domain_opt = None
+        for opt in opts:
+            if opt.startswith('domain='):
+                domain_opt = opt[7:]
+            else:
+                other_opts.append(opt)
+        other_opts.sort()
+        sig = f"{prefix}${','.join(other_opts)}" if other_opts else prefix
+        return sig, other_opts, domain_opt
+
+    def sanitize_domain_opt(domain_str):
+        if not domain_str:
+            return None
+        parts = domain_str.split('|')
+        neg_domains = sorted(list(set(p for p in parts if p.startswith('~'))))
+        if not neg_domains:
+            return None
+        return '|'.join(neg_domains)
+
+    white_signatures = set()
     for line in lines:
         sline = line.strip()
-        if 'domain=~' in sline and '#' not in sline:
-            prefix = sline.split('$')[0].strip()
-            if prefix:
-                white_rules_prefix.add(prefix)
+        if not sline or sline.startswith('!') or '#' in sline:
+            continue
+        sig, _, domain_opt = parse_rule_signature(sline)
+        if domain_opt and '~' in domain_opt:
+            white_signatures.add(sig)
 
-    if not white_rules_prefix:
+    if not white_signatures:
         return
 
     new_lines = []
     for line in lines:
         sline = line.strip()
-        if not sline or sline.startswith('!'):
+        if not sline or sline.startswith('!') or '#' in sline:
             new_lines.append(line)
             continue
 
-        if 'domain=~' in sline:
+        sig, other_opts, domain_opt = parse_rule_signature(sline)
+
+        if domain_opt:
+            if '~' in domain_opt:
+                cleaned_domain = sanitize_domain_opt(domain_opt)
+                prefix = sline.split('$')[0]
+                opts = list(other_opts)
+                if cleaned_domain:
+                    opts.append(f"domain={cleaned_domain}")
+                reconstructed = f"{prefix}${','.join(opts)}" if opts else prefix
+                new_lines.append(reconstructed)
+            else:
+                if sig in white_signatures:
+                    continue
+                new_lines.append(line)
+        else:
+            if sig in white_signatures:
+                continue
             new_lines.append(line)
-            continue
-
-        prefix = sline.split('$')[0].strip()
-        if prefix in white_rules_prefix:
-            continue
-
-        new_lines.append(line)
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines) + '\n')
