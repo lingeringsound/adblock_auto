@@ -163,15 +163,6 @@ def clear_domain_white_Rules(file_path):
         other_opts.sort()
         return prefix, other_opts, domain_opt
 
-    def sanitize_domain_opt(domain_str):
-        if not domain_str:
-            return None
-        parts = domain_str.split('|')
-        neg_domains = sorted(list(set(p for p in parts if p.startswith('~'))))
-        if not neg_domains:
-            return None
-        return '|'.join(neg_domains)
-
     white_exact_signatures = set()
     white_prefixes_has_neg_domain = set()
 
@@ -199,12 +190,7 @@ def clear_domain_white_Rules(file_path):
 
         if domain_opt:
             if '~' in domain_opt:
-                cleaned_domain = sanitize_domain_opt(domain_opt)
-                opts = list(other_opts)
-                if cleaned_domain:
-                    opts.append(f"domain={cleaned_domain}")
-                reconstructed = f"{prefix}${','.join(opts)}" if opts else prefix
-                new_lines.append(reconstructed)
+                new_lines.append(line)
             else:
                 sig = f"{prefix}${','.join(other_opts)}" if other_opts else prefix
                 if sig in white_exact_signatures:
