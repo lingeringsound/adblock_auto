@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: oSUCrYasr/z8A42TiTDj3A
-! Title: 混合规则(更新日期2026-09-24 10:37:54)
-! Version: 20260924103755
+! Checksum: josLADCFEaMHEW9emTdGgA
+! Title: 混合规则(更新日期2026-09-24 14:30:05)
+! Version: 20260924143006
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-09-24 10:37:55
-! Total Count: 264639
-! Blocked Filters: 264639
+! Last modified: 2026-09-24 14:30:06
+! Total Count: 264684
+! Blocked Filters: 264684
 ! Description: 合并于各种知名的Adblock规则,适用于 Adguard / Ublock Origin / Adblock Plus(用Adblock Plus源码编译的软件也支持，例如嗅觉浏览器 ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 X浏览器
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ! GitHub Homepage: https://github.com/lingeringsound/adblock_auto
@@ -15,7 +15,7 @@
 ! Github Raw CDN Link: https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt
 
 
-! >>>>>> 通配符规则 · 1.3w (12773) <<<<<<
+! >>>>>> 通配符规则 · 1.3w (12769) <<<<<<
 $csp=script-src 'self' * 'unsafe-inline',domain=13xsw.com|156xsbb.com|1ingatlan.net|1qxs.com|4hrz.net|56xiaoshuo.net|59xs.com|5book.cc|666biquge.com|69shumi.com|7zhens.com|8181zw.vip|aidu123.com|bbiquge.cc|beianxs.com|bijiyd.com|biqudd.com|biquge2345.com|biquge345.com|biqugeks.org|biqugen.com|biqugequ.org|biqul.com|biquluo.info|biquwx.cc|bisowu.net|bogeks.com|bowoxs.com|boxue8.cc|bqgh.com|bqug8.com|buhesw.com|caimozw.com|candoug.com|chahuax.com|cipubook.com|cuaizw.cc|cule9.com|dbrxs.org|dingdian911.com|diyibanzhu44444.com|efuxs.com|enbusw.com|erciyan.com|erzuwk.com|feiguaks.com|fxxs3.com|gaofuwu.org|genbiquge.com|girlsoncam.net|guashuge.com|guwoxs.com|hadu520.com|haduks.com|haduzw.com|haijiaobooksw.top|haitangsoshu.org|hanziwen.com|haxu8.com|heciwk.com|hshfm.com|hunshuge.com|i3book.com|iqmxs.cc|japonfilmleri.com|jinduxs.com|jinmusb.com|jiufuzw.com|jiutusw.com|jmshuwu.net|jpbqg7.com|jvbiquge.com|kaaiwk.com|kaixindu.net|kbook8.com|kunnu.com|ltbook.net|luenbook.cc|m.6666xsw.com|m.niupizhi.net|mafusw.com|maxshuku.com|meisibook.com|minaeast.net|modaoshu.com|mudanxs.com|mzbook.cc|nipubook.com|novelser.com|nuoshuge.com|oldtimeswx.org|piaotianxiaoshuo.com|pinshu.org|product44.com|pucixs.com|puquz.com|puyewk.com|quanbiqu.com|qubosw.com|quhesw.com|ququsk.cc|riquzw.com|ruyisw.com|scmmxs.com|shanhuxs.com|shuhaige.net|shukuge.com|shumi.la|shuying6.com|smsonline.cloud|snxsw.com|softtechsolution.org|sthuojia.net|taobiquge.com|tetservices.net|tuqisw.com|tvyun07.com|vipbiquge.com|waguwk.cc|wamuku.cc|wodexiaoshuoh.com|wuwusk.com|x33yq.org|xbiqige.cc|xddxsw.net|xiakezw.com|xianguke.net|xiexinde.net|xingksw.com|xueyisw.com|yawoxs.com|yemancomic.com|ygshu.com|yiyezao.com|ykxs.cc|yourbiquge.com|yswxs.com|yushuwu.cloud|zaaizw.com|zahubook.com|zk01.net|zlobin.net|zuizhong.net|zuxiku.com|zuye8.com|zyywenxue.com
 $csp=script-src 'self' *,domain=90shuyuan.com|akexs.com|biquge678.com|biqugezw.us|hunhunxs.com|qimiaoxiaoshuo.com|qimiaoxs.cc|qqmmxs.com|sswwxs.com|wuwxs.com|yebiquge.com|zduxs.com
 $csp=script-src 'self' data: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval',domain=thumbs.pro
@@ -1064,7 +1064,7 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 .com/abc/head.js$~third-party
 .com/ad-provider.js$third-party
 .com/ad.$~script,domain=~ad-tuning.de
-.com/ad/$~image,third-party,domain=~espn.com|~mediaplex.com|~warpwire.com|~wsj.com
+.com/ad/$third-party,~image,domain=~espn.com|~mediaplex.com|~warpwire.com|~wsj.com
 .com/ad/$~third-party,domain=~blogs.technet.microsoft.com|~channel4.com|~mediaplex.com
 .com/ad1/
 .com/ad2/
@@ -1080,7 +1080,6 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 .com/ads.
 .com/ads.$~script,~xmlhttprequest
 .com/ads/$domain=hdbraze.com|livelive24.com
-.com/ads/$image,object,subdocument
 .com/ads/$image,object,subdocument,domain=~developers.google.com|~sabotage-films.com
 .com/ads/ada.js
 .com/ads/adb.js
@@ -2352,7 +2351,7 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 /300_250_
 /300x150_
 /300x250-
-/300x250.$image,domain=~manwa1.vip|~manwa2.vip|~manwa3.vip|~manwa4.vip|~manwa5.vip|~manwa6.vip|~manwa7.vip|~manwa8.vip|~manwa9.vip|~manwa10.vip|~manwa.vip|~manwa1.site|~manwa2.site|~manwa3.site|~manwa4.site|~manwa5.site|~manwa6.site|~manwa7.site|~manwa8.site|~manwa9.site|~manwa10.site|~manwa.site|~manwa1.me|~manwa2.me|~manwa3.me|~manwa4.me|~manwa5.me|~manwa6.me|~manwa7.me|~manwa8.me|~manwa9.me|~manwa10.me|~manwa.me|~mwcomic1.cc|~mwcomic2.cc|~mwcomic3.cc|~mwcomic4.cc|~mwcomic5.cc|~mwcomic6.cc|~mwcomic7.cc|~mwcomic8.cc|~mwcomic9.cc|~mwcomic10.cc|~mwcomic.cc|~mwcomic1.biz|~mwcomic2.biz|~mwcomic3.biz|~mwcomic4.biz|~mwcomic5.biz|~mwcomic6.biz|~mwcomic7.biz|~mwcomic8.biz|~mwcomic9.biz|~mwcomic10.biz|~mwcomic.biz|~mwcomic1.xyz|~mwcomic2.xyz|~mwcomic3.xyz|~mwcomic4.xyz|~mwcomic5.xyz|~mwcomic6.xyz|~mwcomic7.xyz|~mwcomic8.xyz|~mwcomic9.xyz|~mwcomic10.xyz|~mwcomic.xyz|~mwcomic1.top|~mwcomic2.top|~mwcomic3.top|~mwcomic4.top|~mwcomic5.top|~mwcomic6.top|~mwcomic7.top|~mwcomic8.top|~mwcomic9.top|~mwcomic10.top|~mwcomic.top|~manwa1.xyz|~manwa2.xyz|~manwa3.xyz|~manwa4.xyz|~manwa5.xyz|~manwa6.xyz|~manwa7.xyz|~manwa8.xyz|~manwa9.xyz|~manwa10.xyz|~manwa.xyz|~mwcomic1.co|~mwcomic2.co|~mwcomic3.co|~mwcomic4.co|~mwcomic5.co|~mwcomic6.co|~mwcomic7.co|~mwcomic8.co|~mwcomic9.co|~mwcomic10.co|~mwcomic.co|~mwcomic1.online|~mwcomic2.online|~mwcomic3.online|~mwcomic4.online|~mwcomic5.online|~mwcomic6.online|~mwcomic7.online|~mwcomic8.online|~mwcomic9.online|~mwcomic10.online|~mwcomic.online|~manwafei1.cc|~manwafei2.cc|~manwafei3.cc|~manwafei4.cc|~manwafei5.cc|~manwafei6.cc|~manwafei7.cc|~manwafei8.cc|~manwafei9.cc|~manwafei10.cc|~manwafei.cc|~manwafei1.com|~manwafei2.com|~manwafei3.com|~manwafei4.com|~manwafei5.com|~manwafei6.com|~manwafei7.com|~manwafei8.com|~manwafei9.com|~manwafei10.com|~manwafei.com|~manwafei1.xyz|~manwafei2.xyz|~manwafei3.xyz|~manwafei4.xyz|~manwafei5.xyz|~manwafei6.xyz|~manwafei7.xyz|~manwafei8.xyz|~manwafei9.xyz|~manwafei10.xyz|~manwafei.xyz|~manwafei1.top|~manwafei2.top|~manwafei3.top|~manwafei4.top|~manwafei5.top|~manwafei6.top|~manwafei7.top|~manwafei8.top|~manwafei9.top|~manwafei10.top|~manwafei.top|~manwafei1.me|~manwafei2.me|~manwafei3.me|~manwafei4.me|~manwafei5.me|~manwafei6.me|~manwafei7.me|~manwafei8.me|~manwafei9.me|~manwafei10.me|~manwafei.me|~manwafei1.site|~manwafei2.site|~manwafei3.site|~manwafei4.site|~manwafei5.site|~manwafei6.site|~manwafei7.site|~manwafei8.site|~manwafei9.site|~manwafei10.site|~manwafei.site|~manwafei1.biz|~manwafei2.biz|~manwafei3.biz|~manwafei4.biz|~manwafei5.biz|~manwafei6.biz|~manwafei7.biz|~manwafei8.biz|~manwafei9.biz|~manwafei10.biz|~manwafei.biz|~manwafei1.online|~manwafei2.online|~manwafei3.online|~manwafei4.online|~manwafei5.online|~manwafei6.online|~manwafei7.online|~manwafei8.online|~manwafei9.online|~manwafei10.online|~manwafei.online|~manwaq1.vip|~manwaq2.vip|~manwaq3.vip|~manwaq4.vip|~manwaq5.vip|~manwaq6.vip|~manwaq7.vip|~manwaq8.vip|~manwaq9.vip|~manwaq10.vip|~manwaq.vip|~manwaqq1.vip|~manwaqq2.vip|~manwaqq3.vip|~manwaqq4.vip|~manwaqq5.vip|~manwaqq6.vip|~manwaqq7.vip|~manwaqq8.vip|~manwaqq9.vip|~manwaqq10.vip|~manwaqq.vip|~manwadb1.xyz|~manwadb2.xyz|~manwadb3.xyz|~manwadb4.xyz|~manwadb5.xyz|~manwadb6.xyz|~manwadb7.xyz|~manwadb8.xyz|~manwadb9.xyz|~manwadb10.xyz|~manwadb.xyz
+/300x250.$image,domain=~manwa.me|~manwa.site|~manwa.vip|~manwa.xyz|~manwa1.me|~manwa1.site|~manwa1.vip|~manwa1.xyz|~manwa10.me|~manwa10.site|~manwa10.vip|~manwa10.xyz|~manwa2.me|~manwa2.site|~manwa2.vip|~manwa2.xyz|~manwa3.me|~manwa3.site|~manwa3.vip|~manwa3.xyz|~manwa4.me|~manwa4.site|~manwa4.vip|~manwa4.xyz|~manwa5.me|~manwa5.site|~manwa5.vip|~manwa5.xyz|~manwa6.me|~manwa6.site|~manwa6.vip|~manwa6.xyz|~manwa7.me|~manwa7.site|~manwa7.vip|~manwa7.xyz|~manwa8.me|~manwa8.site|~manwa8.vip|~manwa8.xyz|~manwa9.me|~manwa9.site|~manwa9.vip|~manwa9.xyz|~manwadb.xyz|~manwadb1.xyz|~manwadb10.xyz|~manwadb2.xyz|~manwadb3.xyz|~manwadb4.xyz|~manwadb5.xyz|~manwadb6.xyz|~manwadb7.xyz|~manwadb8.xyz|~manwadb9.xyz|~manwafei.biz|~manwafei.cc|~manwafei.com|~manwafei.me|~manwafei.online|~manwafei.site|~manwafei.top|~manwafei.xyz|~manwafei1.biz|~manwafei1.cc|~manwafei1.com|~manwafei1.me|~manwafei1.online|~manwafei1.site|~manwafei1.top|~manwafei1.xyz|~manwafei10.biz|~manwafei10.cc|~manwafei10.com|~manwafei10.me|~manwafei10.online|~manwafei10.site|~manwafei10.top|~manwafei10.xyz|~manwafei2.biz|~manwafei2.cc|~manwafei2.com|~manwafei2.me|~manwafei2.online|~manwafei2.site|~manwafei2.top|~manwafei2.xyz|~manwafei3.biz|~manwafei3.cc|~manwafei3.com|~manwafei3.me|~manwafei3.online|~manwafei3.site|~manwafei3.top|~manwafei3.xyz|~manwafei4.biz|~manwafei4.cc|~manwafei4.com|~manwafei4.me|~manwafei4.online|~manwafei4.site|~manwafei4.top|~manwafei4.xyz|~manwafei5.biz|~manwafei5.cc|~manwafei5.com|~manwafei5.me|~manwafei5.online|~manwafei5.site|~manwafei5.top|~manwafei5.xyz|~manwafei6.biz|~manwafei6.cc|~manwafei6.com|~manwafei6.me|~manwafei6.online|~manwafei6.site|~manwafei6.top|~manwafei6.xyz|~manwafei7.biz|~manwafei7.cc|~manwafei7.com|~manwafei7.me|~manwafei7.online|~manwafei7.site|~manwafei7.top|~manwafei7.xyz|~manwafei8.biz|~manwafei8.cc|~manwafei8.com|~manwafei8.me|~manwafei8.online|~manwafei8.site|~manwafei8.top|~manwafei8.xyz|~manwafei9.biz|~manwafei9.cc|~manwafei9.com|~manwafei9.me|~manwafei9.online|~manwafei9.site|~manwafei9.top|~manwafei9.xyz|~manwaq.vip|~manwaq1.vip|~manwaq10.vip|~manwaq2.vip|~manwaq3.vip|~manwaq4.vip|~manwaq5.vip|~manwaq6.vip|~manwaq7.vip|~manwaq8.vip|~manwaq9.vip|~manwaqq.vip|~manwaqq1.vip|~manwaqq10.vip|~manwaqq2.vip|~manwaqq3.vip|~manwaqq4.vip|~manwaqq5.vip|~manwaqq6.vip|~manwaqq7.vip|~manwaqq8.vip|~manwaqq9.vip|~mwcomic.biz|~mwcomic.cc|~mwcomic.co|~mwcomic.online|~mwcomic.top|~mwcomic.xyz|~mwcomic1.biz|~mwcomic1.cc|~mwcomic1.co|~mwcomic1.online|~mwcomic1.top|~mwcomic1.xyz|~mwcomic10.biz|~mwcomic10.cc|~mwcomic10.co|~mwcomic10.online|~mwcomic10.top|~mwcomic10.xyz|~mwcomic2.biz|~mwcomic2.cc|~mwcomic2.co|~mwcomic2.online|~mwcomic2.top|~mwcomic2.xyz|~mwcomic3.biz|~mwcomic3.cc|~mwcomic3.co|~mwcomic3.online|~mwcomic3.top|~mwcomic3.xyz|~mwcomic4.biz|~mwcomic4.cc|~mwcomic4.co|~mwcomic4.online|~mwcomic4.top|~mwcomic4.xyz|~mwcomic5.biz|~mwcomic5.cc|~mwcomic5.co|~mwcomic5.online|~mwcomic5.top|~mwcomic5.xyz|~mwcomic6.biz|~mwcomic6.cc|~mwcomic6.co|~mwcomic6.online|~mwcomic6.top|~mwcomic6.xyz|~mwcomic7.biz|~mwcomic7.cc|~mwcomic7.co|~mwcomic7.online|~mwcomic7.top|~mwcomic7.xyz|~mwcomic8.biz|~mwcomic8.cc|~mwcomic8.co|~mwcomic8.online|~mwcomic8.top|~mwcomic8.xyz|~mwcomic9.biz|~mwcomic9.cc|~mwcomic9.co|~mwcomic9.online|~mwcomic9.top|~mwcomic9.xyz
 /300x250_
 /300x250b.
 /300x300.gif$domain=922tp.com
@@ -5131,7 +5130,6 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 /adserve_
 /adserver-
 /adserver.$popup
-/adserver.$~stylesheet,~xmlhttprequest
 /adserver.$~stylesheet,~xmlhttprequest,domain=~konograma.com
 /adserver.$~xmlhttprequest,domain=~konograma.com
 /adserver/*
@@ -8614,7 +8612,6 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 /mdzzxttss.php?s=
 /meas.ad.pr.
 /media/ad/*
-/media/ads/*$image
 /media/ads/*$image,domain=~puzzler.com
 /media/adv/*
 /media/fitad/*
@@ -10665,7 +10662,7 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 /up/ads/*
 /update_ads/*
 /uplimg/ads/*
-/upload/ad/*$image,domain=~manwa1.vip|~manwa2.vip|~manwa3.vip|~manwa4.vip|~manwa5.vip|~manwa6.vip|~manwa7.vip|~manwa8.vip|~manwa9.vip|~manwa10.vip|~manwa.vip|~manwa1.site|~manwa2.site|~manwa3.site|~manwa4.site|~manwa5.site|~manwa6.site|~manwa7.site|~manwa8.site|~manwa9.site|~manwa10.site|~manwa.site|~manwa1.me|~manwa2.me|~manwa3.me|~manwa4.me|~manwa5.me|~manwa6.me|~manwa7.me|~manwa8.me|~manwa9.me|~manwa10.me|~manwa.me|~mwcomic1.cc|~mwcomic2.cc|~mwcomic3.cc|~mwcomic4.cc|~mwcomic5.cc|~mwcomic6.cc|~mwcomic7.cc|~mwcomic8.cc|~mwcomic9.cc|~mwcomic10.cc|~mwcomic.cc|~mwcomic1.biz|~mwcomic2.biz|~mwcomic3.biz|~mwcomic4.biz|~mwcomic5.biz|~mwcomic6.biz|~mwcomic7.biz|~mwcomic8.biz|~mwcomic9.biz|~mwcomic10.biz|~mwcomic.biz|~mwcomic1.xyz|~mwcomic2.xyz|~mwcomic3.xyz|~mwcomic4.xyz|~mwcomic5.xyz|~mwcomic6.xyz|~mwcomic7.xyz|~mwcomic8.xyz|~mwcomic9.xyz|~mwcomic10.xyz|~mwcomic.xyz|~mwcomic1.top|~mwcomic2.top|~mwcomic3.top|~mwcomic4.top|~mwcomic5.top|~mwcomic6.top|~mwcomic7.top|~mwcomic8.top|~mwcomic9.top|~mwcomic10.top|~mwcomic.top|~manwa1.xyz|~manwa2.xyz|~manwa3.xyz|~manwa4.xyz|~manwa5.xyz|~manwa6.xyz|~manwa7.xyz|~manwa8.xyz|~manwa9.xyz|~manwa10.xyz|~manwa.xyz|~mwcomic1.co|~mwcomic2.co|~mwcomic3.co|~mwcomic4.co|~mwcomic5.co|~mwcomic6.co|~mwcomic7.co|~mwcomic8.co|~mwcomic9.co|~mwcomic10.co|~mwcomic.co|~mwcomic1.online|~mwcomic2.online|~mwcomic3.online|~mwcomic4.online|~mwcomic5.online|~mwcomic6.online|~mwcomic7.online|~mwcomic8.online|~mwcomic9.online|~mwcomic10.online|~mwcomic.online|~manwafei1.cc|~manwafei2.cc|~manwafei3.cc|~manwafei4.cc|~manwafei5.cc|~manwafei6.cc|~manwafei7.cc|~manwafei8.cc|~manwafei9.cc|~manwafei10.cc|~manwafei.cc|~manwafei1.com|~manwafei2.com|~manwafei3.com|~manwafei4.com|~manwafei5.com|~manwafei6.com|~manwafei7.com|~manwafei8.com|~manwafei9.com|~manwafei10.com|~manwafei.com|~manwafei1.xyz|~manwafei2.xyz|~manwafei3.xyz|~manwafei4.xyz|~manwafei5.xyz|~manwafei6.xyz|~manwafei7.xyz|~manwafei8.xyz|~manwafei9.xyz|~manwafei10.xyz|~manwafei.xyz|~manwafei1.top|~manwafei2.top|~manwafei3.top|~manwafei4.top|~manwafei5.top|~manwafei6.top|~manwafei7.top|~manwafei8.top|~manwafei9.top|~manwafei10.top|~manwafei.top|~manwafei1.me|~manwafei2.me|~manwafei3.me|~manwafei4.me|~manwafei5.me|~manwafei6.me|~manwafei7.me|~manwafei8.me|~manwafei9.me|~manwafei10.me|~manwafei.me|~manwafei1.site|~manwafei2.site|~manwafei3.site|~manwafei4.site|~manwafei5.site|~manwafei6.site|~manwafei7.site|~manwafei8.site|~manwafei9.site|~manwafei10.site|~manwafei.site|~manwafei1.biz|~manwafei2.biz|~manwafei3.biz|~manwafei4.biz|~manwafei5.biz|~manwafei6.biz|~manwafei7.biz|~manwafei8.biz|~manwafei9.biz|~manwafei10.biz|~manwafei.biz|~manwafei1.online|~manwafei2.online|~manwafei3.online|~manwafei4.online|~manwafei5.online|~manwafei6.online|~manwafei7.online|~manwafei8.online|~manwafei9.online|~manwafei10.online|~manwafei.online|~manwaq1.vip|~manwaq2.vip|~manwaq3.vip|~manwaq4.vip|~manwaq5.vip|~manwaq6.vip|~manwaq7.vip|~manwaq8.vip|~manwaq9.vip|~manwaq10.vip|~manwaq.vip|~manwaqq1.vip|~manwaqq2.vip|~manwaqq3.vip|~manwaqq4.vip|~manwaqq5.vip|~manwaqq6.vip|~manwaqq7.vip|~manwaqq8.vip|~manwaqq9.vip|~manwaqq10.vip|~manwaqq.vip|~manwadb1.xyz|~manwadb2.xyz|~manwadb3.xyz|~manwadb4.xyz|~manwadb5.xyz|~manwadb6.xyz|~manwadb7.xyz|~manwadb8.xyz|~manwadb9.xyz|~manwadb10.xyz|~manwadb.xyz
+/upload/ad/*$image,domain=~manwa.me|~manwa.site|~manwa.vip|~manwa.xyz|~manwa1.me|~manwa1.site|~manwa1.vip|~manwa1.xyz|~manwa10.me|~manwa10.site|~manwa10.vip|~manwa10.xyz|~manwa2.me|~manwa2.site|~manwa2.vip|~manwa2.xyz|~manwa3.me|~manwa3.site|~manwa3.vip|~manwa3.xyz|~manwa4.me|~manwa4.site|~manwa4.vip|~manwa4.xyz|~manwa5.me|~manwa5.site|~manwa5.vip|~manwa5.xyz|~manwa6.me|~manwa6.site|~manwa6.vip|~manwa6.xyz|~manwa7.me|~manwa7.site|~manwa7.vip|~manwa7.xyz|~manwa8.me|~manwa8.site|~manwa8.vip|~manwa8.xyz|~manwa9.me|~manwa9.site|~manwa9.vip|~manwa9.xyz|~manwadb.xyz|~manwadb1.xyz|~manwadb10.xyz|~manwadb2.xyz|~manwadb3.xyz|~manwadb4.xyz|~manwadb5.xyz|~manwadb6.xyz|~manwadb7.xyz|~manwadb8.xyz|~manwadb9.xyz|~manwafei.biz|~manwafei.cc|~manwafei.com|~manwafei.me|~manwafei.online|~manwafei.site|~manwafei.top|~manwafei.xyz|~manwafei1.biz|~manwafei1.cc|~manwafei1.com|~manwafei1.me|~manwafei1.online|~manwafei1.site|~manwafei1.top|~manwafei1.xyz|~manwafei10.biz|~manwafei10.cc|~manwafei10.com|~manwafei10.me|~manwafei10.online|~manwafei10.site|~manwafei10.top|~manwafei10.xyz|~manwafei2.biz|~manwafei2.cc|~manwafei2.com|~manwafei2.me|~manwafei2.online|~manwafei2.site|~manwafei2.top|~manwafei2.xyz|~manwafei3.biz|~manwafei3.cc|~manwafei3.com|~manwafei3.me|~manwafei3.online|~manwafei3.site|~manwafei3.top|~manwafei3.xyz|~manwafei4.biz|~manwafei4.cc|~manwafei4.com|~manwafei4.me|~manwafei4.online|~manwafei4.site|~manwafei4.top|~manwafei4.xyz|~manwafei5.biz|~manwafei5.cc|~manwafei5.com|~manwafei5.me|~manwafei5.online|~manwafei5.site|~manwafei5.top|~manwafei5.xyz|~manwafei6.biz|~manwafei6.cc|~manwafei6.com|~manwafei6.me|~manwafei6.online|~manwafei6.site|~manwafei6.top|~manwafei6.xyz|~manwafei7.biz|~manwafei7.cc|~manwafei7.com|~manwafei7.me|~manwafei7.online|~manwafei7.site|~manwafei7.top|~manwafei7.xyz|~manwafei8.biz|~manwafei8.cc|~manwafei8.com|~manwafei8.me|~manwafei8.online|~manwafei8.site|~manwafei8.top|~manwafei8.xyz|~manwafei9.biz|~manwafei9.cc|~manwafei9.com|~manwafei9.me|~manwafei9.online|~manwafei9.site|~manwafei9.top|~manwafei9.xyz|~manwaq.vip|~manwaq1.vip|~manwaq10.vip|~manwaq2.vip|~manwaq3.vip|~manwaq4.vip|~manwaq5.vip|~manwaq6.vip|~manwaq7.vip|~manwaq8.vip|~manwaq9.vip|~manwaqq.vip|~manwaqq1.vip|~manwaqq10.vip|~manwaqq2.vip|~manwaqq3.vip|~manwaqq4.vip|~manwaqq5.vip|~manwaqq6.vip|~manwaqq7.vip|~manwaqq8.vip|~manwaqq9.vip|~mwcomic.biz|~mwcomic.cc|~mwcomic.co|~mwcomic.online|~mwcomic.top|~mwcomic.xyz|~mwcomic1.biz|~mwcomic1.cc|~mwcomic1.co|~mwcomic1.online|~mwcomic1.top|~mwcomic1.xyz|~mwcomic10.biz|~mwcomic10.cc|~mwcomic10.co|~mwcomic10.online|~mwcomic10.top|~mwcomic10.xyz|~mwcomic2.biz|~mwcomic2.cc|~mwcomic2.co|~mwcomic2.online|~mwcomic2.top|~mwcomic2.xyz|~mwcomic3.biz|~mwcomic3.cc|~mwcomic3.co|~mwcomic3.online|~mwcomic3.top|~mwcomic3.xyz|~mwcomic4.biz|~mwcomic4.cc|~mwcomic4.co|~mwcomic4.online|~mwcomic4.top|~mwcomic4.xyz|~mwcomic5.biz|~mwcomic5.cc|~mwcomic5.co|~mwcomic5.online|~mwcomic5.top|~mwcomic5.xyz|~mwcomic6.biz|~mwcomic6.cc|~mwcomic6.co|~mwcomic6.online|~mwcomic6.top|~mwcomic6.xyz|~mwcomic7.biz|~mwcomic7.cc|~mwcomic7.co|~mwcomic7.online|~mwcomic7.top|~mwcomic7.xyz|~mwcomic8.biz|~mwcomic8.cc|~mwcomic8.co|~mwcomic8.online|~mwcomic8.top|~mwcomic8.xyz|~mwcomic9.biz|~mwcomic9.cc|~mwcomic9.co|~mwcomic9.online|~mwcomic9.top|~mwcomic9.xyz
 /upload/ads/*$domain=~ads.ae|~manwa.me|~manwa.site|~manwa.vip|~manwa.xyz|~manwa1.me|~manwa1.site|~manwa1.vip|~manwa1.xyz|~manwa10.me|~manwa10.site|~manwa10.vip|~manwa10.xyz|~manwa2.me|~manwa2.site|~manwa2.vip|~manwa2.xyz|~manwa3.me|~manwa3.site|~manwa3.vip|~manwa3.xyz|~manwa4.me|~manwa4.site|~manwa4.vip|~manwa4.xyz|~manwa5.me|~manwa5.site|~manwa5.vip|~manwa5.xyz|~manwa6.me|~manwa6.site|~manwa6.vip|~manwa6.xyz|~manwa7.me|~manwa7.site|~manwa7.vip|~manwa7.xyz|~manwa8.me|~manwa8.site|~manwa8.vip|~manwa8.xyz|~manwa9.me|~manwa9.site|~manwa9.vip|~manwa9.xyz|~manwadb.xyz|~manwadb1.xyz|~manwadb10.xyz|~manwadb2.xyz|~manwadb3.xyz|~manwadb4.xyz|~manwadb5.xyz|~manwadb6.xyz|~manwadb7.xyz|~manwadb8.xyz|~manwadb9.xyz|~manwafei.biz|~manwafei.cc|~manwafei.com|~manwafei.me|~manwafei.online|~manwafei.site|~manwafei.top|~manwafei.xyz|~manwafei1.biz|~manwafei1.cc|~manwafei1.com|~manwafei1.me|~manwafei1.online|~manwafei1.site|~manwafei1.top|~manwafei1.xyz|~manwafei10.biz|~manwafei10.cc|~manwafei10.com|~manwafei10.me|~manwafei10.online|~manwafei10.site|~manwafei10.top|~manwafei10.xyz|~manwafei2.biz|~manwafei2.cc|~manwafei2.com|~manwafei2.me|~manwafei2.online|~manwafei2.site|~manwafei2.top|~manwafei2.xyz|~manwafei3.biz|~manwafei3.cc|~manwafei3.com|~manwafei3.me|~manwafei3.online|~manwafei3.site|~manwafei3.top|~manwafei3.xyz|~manwafei4.biz|~manwafei4.cc|~manwafei4.com|~manwafei4.me|~manwafei4.online|~manwafei4.site|~manwafei4.top|~manwafei4.xyz|~manwafei5.biz|~manwafei5.cc|~manwafei5.com|~manwafei5.me|~manwafei5.online|~manwafei5.site|~manwafei5.top|~manwafei5.xyz|~manwafei6.biz|~manwafei6.cc|~manwafei6.com|~manwafei6.me|~manwafei6.online|~manwafei6.site|~manwafei6.top|~manwafei6.xyz|~manwafei7.biz|~manwafei7.cc|~manwafei7.com|~manwafei7.me|~manwafei7.online|~manwafei7.site|~manwafei7.top|~manwafei7.xyz|~manwafei8.biz|~manwafei8.cc|~manwafei8.com|~manwafei8.me|~manwafei8.online|~manwafei8.site|~manwafei8.top|~manwafei8.xyz|~manwafei9.biz|~manwafei9.cc|~manwafei9.com|~manwafei9.me|~manwafei9.online|~manwafei9.site|~manwafei9.top|~manwafei9.xyz|~manwaq.vip|~manwaq1.vip|~manwaq10.vip|~manwaq2.vip|~manwaq3.vip|~manwaq4.vip|~manwaq5.vip|~manwaq6.vip|~manwaq7.vip|~manwaq8.vip|~manwaq9.vip|~manwaqq.vip|~manwaqq1.vip|~manwaqq10.vip|~manwaqq2.vip|~manwaqq3.vip|~manwaqq4.vip|~manwaqq5.vip|~manwaqq6.vip|~manwaqq7.vip|~manwaqq8.vip|~manwaqq9.vip|~mwcomic.biz|~mwcomic.cc|~mwcomic.co|~mwcomic.online|~mwcomic.top|~mwcomic.xyz|~mwcomic1.biz|~mwcomic1.cc|~mwcomic1.co|~mwcomic1.online|~mwcomic1.top|~mwcomic1.xyz|~mwcomic10.biz|~mwcomic10.cc|~mwcomic10.co|~mwcomic10.online|~mwcomic10.top|~mwcomic10.xyz|~mwcomic2.biz|~mwcomic2.cc|~mwcomic2.co|~mwcomic2.online|~mwcomic2.top|~mwcomic2.xyz|~mwcomic3.biz|~mwcomic3.cc|~mwcomic3.co|~mwcomic3.online|~mwcomic3.top|~mwcomic3.xyz|~mwcomic4.biz|~mwcomic4.cc|~mwcomic4.co|~mwcomic4.online|~mwcomic4.top|~mwcomic4.xyz|~mwcomic5.biz|~mwcomic5.cc|~mwcomic5.co|~mwcomic5.online|~mwcomic5.top|~mwcomic5.xyz|~mwcomic6.biz|~mwcomic6.cc|~mwcomic6.co|~mwcomic6.online|~mwcomic6.top|~mwcomic6.xyz|~mwcomic7.biz|~mwcomic7.cc|~mwcomic7.co|~mwcomic7.online|~mwcomic7.top|~mwcomic7.xyz|~mwcomic8.biz|~mwcomic8.cc|~mwcomic8.co|~mwcomic8.online|~mwcomic8.top|~mwcomic8.xyz|~mwcomic9.biz|~mwcomic9.cc|~mwcomic9.co|~mwcomic9.online|~mwcomic9.top|~mwcomic9.xyz
 /upload/site/tbgg/*.gif
 /upload/vod/2018-08-05/201808051533458526.png
@@ -11658,7 +11655,7 @@ $xmlhttprequest,third-party,redirect-rule=noop.js,domain=bizjournals.com,script
 ://pic.*.cn/*/*.js$third-party,script
 ://pic.*.com/*.txt$third-party
 ://promo.$third-party,domain=~myshopify.com|~promo.com|~shopifycloud.com|~slidely.com
-://promo.$~media,third-party,domain=~myshopify.com|~promo.com|~shopifycloud.com|~slidely.com
+://promo.$third-party,~media,domain=~myshopify.com|~promo.com|~shopifycloud.com|~slidely.com
 ://pt.*?psid=$third-party
 ://r.*/s1/$other,subdocument,third-party
 ://r.i.ua^
@@ -12137,7 +12134,6 @@ _ad/public/
 _ad/section_
 _ad/show/
 _ad01.$domain=~adv.asahi.com
-_ad1.$~stylesheet
 _ad1.$~stylesheet,domain=~messenger.com
 _ad103.
 _ad120x120_
@@ -12791,7 +12787,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ~Prebid.js
 ! >>>>>> 通配符规则 结束 <<<<<<
 
-! >>>>>> 域名规则 · 19.0w (190041) <<<<<<
+! >>>>>> 域名规则 · 19.0w (190097) <<<<<<
 |http*://$script,third-party,xmlhttprequest,domain=23wxx.com|lwxiaoshuo.com|m.1200ksw.com|m.16kxsw.com|m.23sw.net|m.37zw.net|m.50zw.co|m.52biquge.com|m.58xs.tw|m.5ccc.net|m.630book.la|m.67shu.com|m.69shu.org|m.80txt.com|m.83zw.com|m.88106.com|m.88dus.com|m.98xiaoshuo.com|m.aiquxs.com|m.aszw.org|m.b5200.net|m.baishulou8.com|m.baoliny.com|m.beijingaishu.net|m.bichi.me|m.biqudu.com|m.biquge.com.tw|m.biquge.info|m.biqugego.com|m.biqugexsw.com|m.biqumo.com|m.biquwu.cc|m.boluoxs.com|m.book9.net|m.booktxt.net|m.bqg5.cc|m.bqg5200.com|m.daizhuzai.com|m.dashubao.cc|m.ddxsw.net|m.dhzw.org|m.dpcq1.net|m.gsdaquan.com|m.gulizw.com|m.haotxt.com|m.heiyanwang.com|m.hkslg.net|m.jjxsw.org|m.kxs7.com|m.lanseshuba.com|m.lbxs.com|m.lewenxiaoshuo.com|m.liewen.cc|m.liushuba.com|m.lkshu.com|m.longtanxs.com|m.luoqiu.com|m.lwtxt.net|m.miaobige.com|m.miaoshufang.com|m.mishug.com|m.panqis.cn|m.qianrenge.cc|m.qu.la|m.ranwena.com|m.sanjiangge.com|m.shuanshu.com|m.shuketxt.net|m.shumil.com|m.shuqu8.com|m.shuquge.com|m.shushu8.com|m.silukeke.com|m.sjtxt.la|m.sosoxiaoshuo.cc|m.sqsxs.com|m.suimeng.la|m.tingshuge.com|m.tsxsw.com|m.ttzw.com|m.txt2017.com|m.txtduo.com|m.tywxw.la|m.vodtw.com|m.wanjuanba.com|m.wantxt.com|m.wenxuem.com|m.wenxuemi.com|m.wodeshucheng.com|m.x81zw.com|m.xiaoxiaoshuwu.net|m.xinshula.com|m.xs222.tw|m.yawenb.com|m.ybdu.com|m.yssm.org|m.yunlaige.com|m.yuyouge.com|m.zhenben.cc|m.zhuaji.org|qihaoqihao.com|wap.yb3.cc|yfxiaoshuoa.com|zwdu.com
 |http:$script,subdocument,third-party,domain=dlkoo.cc
 |http://*.cn/ad/
@@ -14874,6 +14870,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||42jdbcb.de^
 ||42vaywaovr.com^
 ||430a045945.com^
+||430e3e7989.com^
 ||430tovision.net^
 ||431kls9qsf.com^
 ||43290662000156.bsmultas.com.br^
@@ -15195,7 +15192,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||52.87.215.72/oapi/getAd
 ||520call.me/ad/ad_
 ||520cc.tw/AD/
-||520click.com/ad.$domain=~video.520cc.cc|~surirt.com
+||520click.com/ad.$domain=~surirt.com|~video.520cc.cc
 ||520outresource.net^
 ||520xingyun.com/images/*.gif$domain=mcpcourse.com
 ||520xingyun.com/images/188*.gif
@@ -15509,6 +15506,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||5vs7i3cuc.com^
 ||5vszw5ab2.com^
 ||5w31xv1a2.com^
+||5wk6gvt164hxbuep.cfd^
 ||5wkni37mso.com^
 ||5wt390pvwz.com^
 ||5wv0y42ub.com^
@@ -22887,6 +22885,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||aenstuwyu.com^
 ||aentcj.kingarthurflour.com^
 ||aeoldjkiutpwj.site^
+||aeoliacommon.qpon^
 ||aeonmedia.matomo.cloud^
 ||aeonoizq67.com^
 ||aeoonmail.com^
@@ -27558,6 +27557,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||aphid.thyself.me^
 ||aphidsleslievenetes.cfd^
 ||aphjor.welovepuzzle.ro^
+||aphoriathatll.cfd^
 ||aphoticclo.qpon^
 ||aphtn.dsw.ca^
 ||aphxav.green-acres.it^
@@ -30105,6 +30105,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||asgclick.com^
 ||asgclickpp.com^
 ||asgg.ghostbin.me^
+||asgmgcwwqxrg.com^
 ||asgukrpapiiyp.online^
 ||ashamed-diamond.com^
 ||ashamed-employer.com^
@@ -36665,6 +36666,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||budgeshaspsclaims.cfd^
 ||budgypeas.shop^
 ||budibu.saksfifthavenue.com^
+||budlesstimish.cfd^
 ||budletscaffyungrown.qpon^
 ||budsminepatent.com^
 ||budtawney.com^
@@ -36807,6 +36809,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||bunksniff.com^
 ||bunningscapple.com^
 ||bunnyassetsworn.com^
+||bunrakuinnet.cfd^
 ||bunsenavoyer.qpon^
 ||buntedalive.shop^
 ||bunth.net^
@@ -37607,6 +37610,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||c526b6ac88.com^
 ||c55d4b9929.com^
 ||c5acd666f8.com^
+||c5krw17gn0.com^
 ||c5mwwyqfvi.com^
 ||c6.friok.com^
 ||c607b31b1a.com^
@@ -46108,6 +46112,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||curiaradiazole.cfd^
 ||curiaraewery.cfd^
 ||curiarawolfkin.com^
+||curiodaedal.shop^
 ||curiosity-seven.vercel.app^
 ||curiositycognition.com^
 ||curiouschalk.com^
@@ -46280,6 +46285,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||cuttingvibioid.qpon^
 ||cuttlefly.com^
 ||cuttytktplrlsi.com^
+||cutwater39.com^
 ||cutweedgarn.qpon^
 ||cutzl.authorsuccess.com^
 ||cuuasgouqbvse.site^
@@ -47400,6 +47406,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||d1e28xq8vu3baf.cloudfront.net^
 ||d1e3vw6pz2ty1m.cloudfront.net^
 ||d1e51ovcxdu97v.cloudfront.net^
+||d1e65c72ee.com^
 ||d1e9rtdi67kart.cloudfront.net^
 ||d1ebha2k07asm5.cloudfront.net^
 ||d1eeht7p8f5lpk.cloudfront.net^
@@ -55273,6 +55280,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||dfvyqgwkermwj.online^
 ||dfw.bakerbrothersplumbing.com^
 ||dfwbfr2blhmr5.cloudfront.net^
+||dfwdlxwvuhqlj.space^
 ||dfwjcksuusdzf.site^
 ||dfwp6qatulz0p.cloudfront.net^
 ||dfxryfuvthtfx.space^
@@ -66604,6 +66612,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||fjkjaj.peterhahn.nl^
 ||fjlmcp.bajielm.com^$third-party
 ||fjlqqc.com/common/api/v1.0/slot-code/
+||fjnikpsggpfxo.site^
 ||fjnrh.period.co^
 ||fjoofakmynihn.site^
 ||fjordsand.com^
@@ -68505,6 +68514,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||fufflegloealawed.cyou^
 ||fufmlgpnqzafv.site^
 ||fufoir.aif.ru^
+||fufrbtjgadkncr.com^
 ||fufstxtytywhx.website^
 ||fufxdectssarx.site^
 ||fugacyslatted.cfd^
@@ -69444,6 +69454,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||ganalytics.live^
 ||gandb.emma.fr^
 ||gandrad.org^
+||gangavaenergidtipburn.cyou^
 ||ganggeneticallypartially.com^
 ||gangismdisard.shop^
 ||gangjuw.com/style/lmjs/
@@ -71420,6 +71431,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||gmcztlbk9zu5negv6bxi.cfd^
 ||gmdcft.vsemayki.ru^
 ||gmdci.pastease.com^
+||gmdsvoauigfkf.website^
 ||gmemkuflmihes.online^
 ||gmfcfejaqmkma.online^
 ||gmfddfrtsmjym.space^
@@ -79737,6 +79749,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||hafmxlyyenean.site^
 ||hafqflsjvhnmc.space^
 ||haftersunglory.cyou^
+||haftneti.qpon^
 ||hagbornflioma.com^
 ||hagdenrept.shop^
 ||hagdonsredue.cfd^
@@ -80220,6 +80233,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||hawk.mjsarfatti.com^
 ||hawkerystrand.shop^
 ||hawkeysalconde.cfd^
+||hawkinsrattly.com^
 ||hawklactyl.cyou^
 ||hawsehole52.top^
 ||hawserseuryon.cyou^
@@ -83058,6 +83072,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||hycpllawmosiu.online^
 ||hycpyd.efpfanfic.net^
 ||hycywj.akkushop.de^
+||hydagepedicle.com^
 ||hydorrxacolif.website^
 ||hydra.bullcasino.com^
 ||hydra.bullcasino24.com^
@@ -90563,6 +90578,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||juratsjiao.cfd^
 ||juris.pedroburak.com^
 ||jurishammy.cyou^
+||jurorslard.shop^
 ||jursp.com^
 ||juryolympicsspookily.com^
 ||juryprefacereproach.com^
@@ -90806,6 +90822,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||jymswcocmpteo.space^
 ||jymxse.baeulhak.com^
 ||jynmirqnknupr.space^
+||jynrmyqfnlfzg.website^
 ||jynv.cn^
 ||jynwlg.veromoda.com^
 ||jyozavobzrekb.top^
@@ -93333,6 +93350,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||kz2oq0xm6ie7gn5dkswlpv6mfgci8yoe3xlqp12gjotp5fdjxs5ckztb8rzn.codes^
 ||kzagvdulumvgl.site^
 ||kzcsv.ehplabs.sg^
+||kzcueqsoyrjhy.online^
 ||kzdlxsnbeeugv.space^
 ||kzdmci.masku.com^
 ||kzeqmlxnqft8f1x66k.cfd^
@@ -95725,6 +95743,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||lkigekxdsgzkz.online^
 ||lkijvrrofszzz.online^
 ||lkiqkq.mumzworld.com^
+||lkiwfqiv.com^
 ||lkixslmthwwdf.online^
 ||lkjcem.cna.com.br^
 ||lkjrzvglcdaqo.space^
@@ -102730,6 +102749,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||ltrkecmxdrvfjh.com^
 ||ltrrw.pakaapparel.com^
 ||ltruhowa.com^
+||ltrwikxkje.com^
 ||ltsmt.italic.com^
 ||ltssbgqqrivtk.online^
 ||ltst.boardcompany.com^
@@ -102818,6 +102838,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||lugansk-info.ru^
 ||lugencycsot.qpon^
 ||luggagesynchronize.com^
+||luggedzabeta.com^
 ||lugingbirthed.shop^
 ||lugirsbhpifnl.store^
 ||luhbnpeabgeqf.online^
@@ -104076,6 +104097,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||mandrill.castingcollective.net^
 ||mandrill.hamptonbeach.live^
 ||mandrill.yellowfruit.co^
+||manehprizes.com^
 ||manfys.com^
 ||mang.marinmazda.net^
 ||mangaapi.manhuaren.com/*/public/getRecommendedGame^
@@ -110364,6 +110386,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||mfbmc.shopmilano.com^
 ||mfbvstxfenjrh.site^
 ||mfccjjkexkzuw.site^
+||mfceixqmtysce.online^
 ||mfcewkrob.com^
 ||mfcyy.revelationhealth.com^
 ||mfdagitsgxwqx.site^
@@ -112067,6 +112090,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||moonmanwhample.cfd^
 ||moonoafy.net^
 ||moonpollution.com^
+||moonratsnow.shop^
 ||moonrocketaffiliates.com^
 ||moonshine.nieucabinetdoors.com^
 ||moonsifyonder.cyou^
@@ -116400,6 +116424,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||nogsdjlayhgfl.online^
 ||nogxjk.dackonline.se^
 ||nohaxn.damattween.com^
+||nohenmfvbfcrf.website^
 ||nohowsankhya.com^
 ||noibu.com^
 ||noilycompoer.qpon^
@@ -117519,6 +117544,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||nzbhg.gelblaster.com^
 ||nzbmsyjqojdmn.space^
 ||nzbvrrsljmhfr.space^
+||nzearbniqkgha.online^
 ||nzeikrar.com^
 ||nzexaxmpiqu.in^
 ||nzezezqjwortv.website^
@@ -124175,6 +124201,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||pjqchcfwtw.com^
 ||pjqrr.agapexoxo.com^
 ||pjqxcofghpevi.site^
+||pjrkspcllfpji.online^
 ||pjrtamlmqaaoe.space^
 ||pjsao.thegivenget.com^
 ||pjscidzcdxxzo.website^
@@ -127895,6 +127922,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||q752l299q4zlp7w.rest^
 ||q770.whittierdailynews.com^
 ||q777.sfchronicle.com^
+||q7vnwa1ma7.com^
 ||q81il7qzbjterqz.vwx8fjh26vfntmu.cyou^
 ||q866i226chv3oxmeoy321fuo.rest^
 ||q88z1s3.com^
@@ -128270,6 +128298,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||qfxwqa.lens-smile.com^
 ||qfzsogrsoxiue.site^
 ||qfzuwd.alexandnova.com^
+||qg84tve2ne8w36ommc1r5y.rest^
 ||qgabsbnqjtljg.online^
 ||qgbhjzjoduaqe.site^
 ||qgbnjd.coches.net^
@@ -129125,6 +129154,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||qtgge.darngoodyarn.com^
 ||qtgoiasqfgbgb.space^
 ||qthij.naturalizer.com^
+||qtibjurprwjbb.space^
 ||qtj0.destinia.pl^
 ||qtkxbm.danguitar.dk^
 ||qtljl.hopwtr.com^
@@ -129713,6 +129743,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||qyun.vip/pic/*.gif
 ||qyuzwd.maskworld.com^
 ||qyvhjpwkyxlsp.website^
+||qyvklvjwzelaz.top^
 ||qyvklvjwzeooo.top^
 ||qyvnic.footshop.cz^
 ||qywjep.miniinthebox.com^
@@ -133205,6 +133236,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||rousedobjectsfunds.com^
 ||rousedvalses.cfd^
 ||rousingdoodlesupsup.qpon^
+||rousingitselftrias.cfd^
 ||route.atlasbus.com.ua^
 ||route.finelook.com^
 ||route.foto-groep.nl^
@@ -134435,6 +134467,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||rundlequinoyl.cfd^
 ||runetki.co^
 ||rungbeacon.com^
+||rungthanage.com^
 ||runhaamzvkarj.website^
 ||runmang.vip/img/
 ||runnerabnegate.com^
@@ -136409,6 +136442,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||same.zkb.ch^
 ||same.zkb.co.uk^
 ||same.zueriperlen.ch^
+||samekhsscaups.shop^
 ||samelpatens.com^
 ||samen.antwerpoutlanders.be^
 ||samenceltspumicer.qpon^
@@ -142700,6 +142734,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||sfdekzpycnfhl.website^
 ||sfeedback.equa.cz^
 ||sfewgzxnxvroe.space^
+||sfexjufhmu.com^
 ||sffctn.bimago.it^
 ||sffqoyx.bescher.com.au^
 ||sffsdvc.com^
@@ -145429,6 +145464,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||shakenyodeled.shop^
 ||shakepersianrehearse.com^
 ||shaker.toz24.com^
+||shakerswarnel.qpon^
 ||shakeson.ru^
 ||shakeupitonama.shop^
 ||shakil.per-la.com^
@@ -153377,6 +153413,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||sorrhs.nescafe.com.tr^
 ||sorrilylivyershape.cyou^
 ||sorrowdefinedasterisk.com^
+||sorrowful-comment.pro^
 ||sorrowful-control.pro^
 ||sorryfearknockout.com^
 ||sorteslocatio.cyou^
@@ -153872,6 +153909,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||spgtm.jogodeouro.bet.br^
 ||sphc.caring4cancer.com^
 ||sphdigital.com.sg/_plat/$domain=zaobao.com.sg
+||spheeneehscvt.site^
 ||spherehomeown.qpon^
 ||spherepsoai.com^
 ||spheretownish.cfd^
@@ -163694,6 +163732,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||sstnd.pprimbd.com^
 ||sstof.bilforny.dk^
 ||sstood.propelrr.com^
+||sstortorus.com^
 ||sstp.proscaenia.com^
 ||sstpo.boothpop.com^
 ||sstqtjqzyrppq.space^
@@ -171682,6 +171721,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||swniihebhwxip.site^
 ||swnr0b7c.xyz^
 ||swollenbasis.com^
+||swomfare.shop^
 ||swonswksodcbc.website^
 ||swoole.com/_images/kundian
 ||swoole.com/_images/w7.jpg
@@ -173938,6 +173978,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||tallcoconutencounter.com^
 ||talldoubted.com^
 ||tallertorn.com^
+||talleslowelloologic.qpon^
 ||tallishkoshare.cyou^
 ||tallmentally.com^
 ||tallthirsty.com^
@@ -177617,6 +177658,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||tombacsmimir.cfd^
 ||tombaksungum.cfd^
 ||tombgenemajor.com^
+||tomboylabors.qpon^
 ||tombshaying.cyou^
 ||tombsspinner.com^
 ||tomecards.com^
@@ -177669,6 +177711,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||tonngmhhvemqr.space^
 ||tonnn.com/promotion2/*.js
 ||tonsilsuggestedtortoise.com^
+||tonsurerykingperkin.cyou^
 ||tonsvewbbofzi.site^
 ||tontent.powv1deo.cc^
 ||tontrinevengre.com^
@@ -185449,6 +185492,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||uflfhl.mercci22.com^
 ||ufloom.ijiwork.com^
 ||uflvaqq.com^
+||ufmurcmspyziw.site^
 ||ufnbeo.rudiastory.co.kr^
 ||ufnbgh.meierq.com^
 ||ufnkti.belleetbio.com^
@@ -193358,6 +193402,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||weekheadlong.com^
 ||weeklybanner.com^
 ||weem.weemco.com^
+||weemenmilpas.qpon^
 ||weeniesgieing.qpon^
 ||weeoffer.com^
 ||weephostessscissors.com^
@@ -198552,6 +198597,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||xvlnewayd.net^
 ||xvlu.morql32ex5yq67j8ecg.cyou^
 ||xvmzbkpppasoe.online^
+||xvndpbjwhhvnfu.com^
 ||xvnitu.com^
 ||xvoqhsefm.net^
 ||xvpqmcgf.com^
@@ -200318,6 +200364,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||ytixci.kodin1.com^
 ||ytjcvmneiltuz.space^
 ||ytjyfovtkbraq.space^
+||ytlgqbhoj.com^
 ||ytluqctugedmm.site^
 ||ytmwqfftkvood.store^
 ||ytnxtglixelp.com^
@@ -200799,6 +200846,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||z14.echo258.com^$document
 ||z198vxfuy3.com^
 ||z1e2vp1gw.com^
+||z1e78qjd2q.com^
 ||z1el6lgol.com^
 ||z1fl848ft.com^
 ||z1hihu.xmcimg.com^
@@ -201127,6 +201175,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||zddfupohzurso.website^
 ||zddipepgvdwfp.online^
 ||zddsnuxow.icu^
+||zdekcjqkbktfh.website^
 ||zdfwmkfxwrlht.online^
 ||zdg2g7v5xe.com^
 ||zdgxde.b2bpartner.sk^
@@ -201799,6 +201848,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||zkthg.spoutwater.com^
 ||zkttr.vestibularpt.com^
 ||zktxan.unitrailer.fr^
+||zkurncormodqp.space^
 ||zkutu.theguitarinstitute.co^
 ||zkvqdf.icu^
 ||zkvsavwzcbfaj.online^
@@ -201902,6 +201952,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||zmdjt.nkuku.com^
 ||zmdttx.icu^
 ||zmdwrtzsnzpzq.site^
+||zmeilrgkwdsgv.website^
 ||zmetgzbibxtpa.site^
 ||zmetrics.boston.com^
 ||zmetrics.msn.com^
@@ -202798,6 +202849,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||zzoostbkvfpoy.online^
 ||zzpgiredutflq.space^
 ||zzpmu.writualplanner.com^
+||zzpxknprnbspz.com^
 ||zzqct.heinnie.com^
 ||zzqolojazoawq.top^
 ||zzqyxd.smartpozyczka.pl^
@@ -202835,7 +202887,7 @@ zhaotianbao1.cn/*/ywy*.apk$document
 ||zzzyk.com/js/
 ! >>>>>> 域名规则 结束 <<<<<<
 
-! >>>>>> 网站单独规则 · 4.0w (40468) <<<<<<
+! >>>>>> 网站单独规则 · 4.0w (40469) <<<<<<
 000webhost.com###bottom-banner-with-counter-holder-desktop
 000webhost.com,4x4magazin.hu,8tracks.com,aan.com,aarp.org,additudemag.com,agbi.com,ahentaitv.com,aicoin.net.cn,al-monitor.com,animax-asia.com,annapurnapost.com,apkcombo.com,apkforpc.com,aporntv.com,araratadvertiser.com.au,areanews.com.au,armidaleexpress.com.au,ashemaletv.com,audioxpress.com,axn-asia.com,batemansbaypost.com.au,bccn.net,begadistrictnews.com.au,bendigoadvertiser.com.au,benfergusonshow.com,blavity.com,blayneychronicle.com.au,blog.floorp.app,bluemountainsgazette.com.au,boorowanewsonline.com.au,bordermail.com.au,braidwoodtimes.com.au,bravotv.com,bunburymail.com.au,busseltonmail.com.au,camdenadvertiser.com.au,camdencourier.com.au,canowindranews.com.au,cargurus.com,centralwesterndaily.com.au,cessnockadvertiser.com.au,cinestaan.com,citiblog.co.uk,cnbctv18.com,cnn59.com,conservativeradio.com,controleng.com,cootamundraherald.com.au,cowraguardian.com.au,cumlouder.com,curiosmos.com,dailyadvertiser.com.au,dailyliberal.com.au,dcfever.com,digiday-com.cdn.ampproject.org,discordemoji.com,douyuex.com,downzen.com,dungogchronicle.com.au,dw.com,dwturkce.com,easternriverinachronicle.com.au,eastmoney.com,edenmagnet.com.au,elcorreogallego.es,enikos.gr,escapeatx.com,esperanceexpress.com.au,examiner.com.au,faceitstats.com,fairfieldchampion.com.au,flyingjizz.com,fodors.com,foodsforbetterhealth.com,forbesadvocate.com.au,gaodun.com,gemtvasia.com,generatorlinkpremium.com,gleninnesexaminer.com.au,gloucesteradvocate.com.au,goondiwindiargus.com.au,gotporn.com,goulburnpost.com.au,gramfile.com,greatlakesadvocate.com.au,grenfellrecord.com.au,hardenexpress.com.au,hawkesburygazette.com.au,hcn.org,hepburnadvocate.com.au,hkepc.com,hotdeals.com,hotdogwater.dog,huffingtonpost.co.uk,huffpost.com,huntervalleynews.net.au,ichgcp.net,indaily.com.au,inqld.com.au,inspiredminds.de,internationalnewsandviews.com,inverelltimes.com.au,investmentnews.com,ipaomtk.com,iviewui.com,jagonews24.com,japan-whores.com,jewishworldreview.com,juejin.cn,juneesoutherncross.com.au,katherinetimes.com.au,katitube.com,legia.net,legion.org,lifezette.com,lithgowmercury.com.au,liverpoolchampion.com.au,livestly.com,m.haberturk.com,m.huffingtonpost.jp,macarthuradvertiser.com.au,macleayargus.com.au,magtheweekly.com,mailtimes.com.au,maitlandmercury.com.au,mandurahmail.com.au,manningrivertimes.com.au,margaretrivermail.com.au,martechadvisor.com,mathopenref.com,moneyland.ch,moreechampion.com.au,motoroctane.com,mudgeeguardian.com.au,murrayvalleystandard.com.au,muswellbrookchronicle.com.au,naroomanewsonline.com.au,narrominenewsonline.com.au,nhentai.net,northerndailyleader.com.au,northweststar.com.au,nuvid.*,nvi.com.au,oann.com,oberonreview.com.au,offshore-energy.biz,oloygeia.gr,onetvasia.com,operanews.com,outlookindia.com,oxygen.com,oydir.com,parkeschampionpost.com.au,pch.com,perfectgirls.net,philosophynow.org,playlive.pw,porntube.com,portlincolntimes.com.au,portnews.com.au,portpirierecorder.com.au,portstephensexaminer.com.au,prospectmagazine.co.uk,prothomalo.com,readamericanfootball.com,readarsenal.com,readastonvilla.com,readbasketball.com,readbetting.com,readbournemouth.com,readboxing.com,readbrighton.com,readbundesliga.com,readburnley.com,readcars.co,readceltic.com,readchampionship.com,readchelsea.com,readcricket.com,readcrystalpalace.com,readersdigest.ca,readeverton.com,readeverything.co,readfashion.co,readfilm.co,readfood.co,readfootball.co,readgaming.co,readgolf.com,readhorseracing.com,readhuddersfield.com,readhull.com,readinternationalfootball.com,readlaliga.com,readleicester.com,readliverpoolfc.com,readmancity.com,readmanutd.com,readmiddlesbrough.com,readmma.com,readmotorsport.com,readmusic.co,readnewcastle.com,readnorwich.com,readnottinghamforest.com,readolympics.com,readpl.com,readrangers.com,readrugbyunion.com,readseriea.com,readshowbiz.co,readsouthampton.com,readsport.co,readstoke.com,readsunderland.com,readswansea.com,readtech.co,readtennis.co,readtottenham.com,readtv.co,readussoccer.com,readwatford.com,readwestbrom.com,readwestham.com,readwsl.com,real.gr,reason.com,redvoicemedia.com,revolver.news,rogerebert.com,salife.com.au,sconeadvocate.com.au,serverhunter.com,sify.com,singletonargus.com.au,smithsonianmag.com,soft112.com,southcoastregister.com.au,southernhighlandnews.com.au,standard.net.au,stawelltimes.com.au,stockandland.com.au,streamingmedia.com,tasteofhome.com,tenterfieldstar.com.au,the-scientist.com,theadvocate.com.au,thecars.gr,thecatholicthing.org,thecourier.com.au,thecrimson.com,thecurrent.org,thedirect.com,theflindersnews.com.au,theislanderonline.com.au,theland.com.au,theleader.com.au,therighthairstyles.com,therural.com.au,topsmerch.com,townandcountrymagazine.com.au,transcontinental.com.au,transfery.info,ulladullatimes.com.au,victorharbortimes.com.au,video.fc2.com,vip-front.video.g.fc2.com,weatherwatch.co.nz,wellingtontimes.com.au,westernadvocate.com.au,westernmagazine.com.au,wheels.ca,whichcar.com.au,whyallanewsonline.com.au,wollondillyadvertiser.com.au,woot.com,worldofbitco.in,yasstribune.com.au,youngwitness.com.au##.advertisement
 001go.com,0855yx.com,dgyunxinwl.com,feilao.space,lookjq.com,ndzszxw.com,sjfaze.com,ttwfw.com,xtdltc.com##*[style*="z-index: 214748"]
@@ -221995,6 +222047,7 @@ japan-whores.com##center:has(> iframe[data-link^="https://r.trwl1.com/"])
 japanese-sex-porn.com##.bierlien > .lieviev:first-child + .lieviev > .bovie > .goagil > .title
 japanese-sex-porn.com##.lieviev > .ohuayo
 japanesekorean.aliendictionary.com###adblock-engelleyici
+japanmetal.com##.sp-kohwa-banner
 japannews.yomiuri.co.jp###tpModal
 japanporn.tv##.tox-body-inner
 japantimes.co.jp##.supplements-binder
@@ -243306,7 +243359,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 zzzyk.com###Tinfo
 ! >>>>>> 网站单独规则 结束 <<<<<<
 
-! >>>>>> 通用Css规则 · 1.8w (18268) <<<<<<
+! >>>>>> 通用Css规则 · 1.8w (18260) <<<<<<
 ###AC_ad
 ###AD_160
 ###AD_300
@@ -244905,7 +244958,6 @@ zzzyk.com###Tinfo
 ###ads_text
 ###ads_textlinks
 ###ads_title
-###ads_top
 ###ads_top2
 ###ads_top:not(a)
 ###ads_top_banner
@@ -247031,7 +247083,6 @@ zzzyk.com###Tinfo
 ###mm-player-placeholder-large-screen
 ###mobile-ad
 ###mobile-ad-container
-###mobile-adhesion
 ###mobile-adhesion:not(#style_important)
 ###mobile-ads-ad
 ###mobile-footer-ad-wrapper
@@ -248401,7 +248452,6 @@ zzzyk.com###Tinfo
 ##.Ad--presenter
 ##.Ad--sidebar
 ##.Ad-Advert_Container
-##.Ad-Container
 ##.Ad-Container:not(.adsbygoogle)
 ##.Ad-Header
 ##.Ad-Inner
@@ -250025,7 +250075,6 @@ zzzyk.com###Tinfo
 ##.ad-wrapper-with-text
 ##.ad-wrapper__ad-slug
 ##.ad-xs-title
-##.ad-zone
 ##.ad-zone-ajax
 ##.ad-zone-container
 ##.ad-zone:not(.textads)
@@ -250724,7 +250773,6 @@ zzzyk.com###Tinfo
 ##.ad_bottom_left
 ##.ad_bottom_mpu
 ##.ad_bottom_space
-##.ad_box
 ##.ad_box1
 ##.ad_box2
 ##.ad_box:not(.text-ad)
@@ -251910,7 +251958,6 @@ zzzyk.com###Tinfo
 ##.ads_center
 ##.ads_code
 ##.ads_column
-##.ads_container
 ##.ads_container:not(.text-ad)
 ##.ads_container_top
 ##.ads_content
@@ -257544,7 +257591,6 @@ zzzyk.com###Tinfo
 ##.sideadtable
 ##.sideadvert
 ##.sideadverts
-##.sidebar-ad
 ##.sidebar-ad-area
 ##.sidebar-ad-b
 ##.sidebar-ad-box
@@ -259063,7 +259109,6 @@ zzzyk.com###Tinfo
 ##[class^="bdads"]
 ##[class^="bfad"]
 ##[class^="book"] > img[src="/images/vipok.png"]
-##[class^="div-gpt-ad"]
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px;"], .div-gpt-ad_adblock_test)
 ##[class^="footer-ad"]
 ##[class^="m-hm-ad"]
@@ -263239,7 +263284,7 @@ zzzyk.com###Tinfo
 @@||sinaimg.cn/tech/https_index/share.
 @@||sinaimg.cn/unipro/pub/suda_m_v629.js$domain=video.sina.com.cn
 @@||sinaimg.cn^*/deco/*/sinaObj.js
-@@||sinajs.cn/open/analytics/js/suda.js$domain=weibo.com|~widget.weibo.com
+@@||sinajs.cn/open/analytics/js/suda.js$domain=~widget.weibo.com
 @@||sinajs.cn/open/api/js/wb.js$domain=sc.sina.com.cn
 @@||sinopac.com/applyweb/OpenAccount/js/oas.
 @@||sjsmitaa.org/bin/showads.
