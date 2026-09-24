@@ -6,14 +6,38 @@ def print_help():
     help_text = f"""使用方法: python {sys.argv[0]} <action> <file_path>
 
 可用操作 (actions):
-  css_conflict       剔除与 #@# 白名单冲突的 ## CSS 规则
-  wipe_selector      清理带有相同限定符参数的重复 || 域名拦截规则
-  clear_white        清除已在 ||domain^ 拦截规则中存在的纯域名白名单
-  clear_white_rules  清除带有 domain=~ 的域名排除规则
-  fixed_error        修复规则语法中的常见错误（引号、空格、属性选择器等）
-  help, -h, --help   显示本帮助信息
+  css_conflict           剔除与 #@# 白名单冲突的 ## CSS 规则
+  wipe_selector          清理带有相同限定符参数的重复 || 域名拦截规则
+  clear_white            清除已在 ||domain^ 拦截规则中存在的纯域名白名单
+  clear_white_rules      清除和domain=~ 冲突的规则
+  css_selector_not_clean 清除与带有 :not() 的 CSS 规则相冲突的通用 CSS 隐藏规则
+  fixed_error            修复规则语法中的常见错误（引号、空格、属性选择器等）
+  help, -h, --help       显示本帮助信息
 """
     print(help_text)
+
+def clear_css_selector_not_conflict(file_path):
+    if not os.path.exists(file_path):
+        return
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+        lines = f.read().splitlines()
+
+    not_pattern = re.compile(r'^(##)(.+)(:not\(.*\))$')
+    conflict_targets = set()
+
+    for line in lines:
+        sline = line.strip()
+        match = not_pattern.match(sline)
+        if match:
+            conflict_targets.add(match.group(1) + match.group(2))
+
+    if not conflict_targets:
+        return
+
+    new_lines = [line for line in lines if line.strip() not in conflict_targets]
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(new_lines) + '\n')
 
 def fixed_css_white_conflict(file_path):
     if not os.path.exists(file_path):
@@ -124,17 +148,33 @@ def clear_domain_white_Rules(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         lines = f.read().splitlines()
 
-    remove_set = set()
+    white_rules_prefix = set()
     for line in lines:
-        if 'domain=~' in line and '#' not in line:
-            cleaned = line.split('$')[0].strip()
-            if cleaned:
-                remove_set.add(cleaned)
+        sline = line.strip()
+        if 'domain=~' in sline and '#' not in sline:
+            prefix = sline.split('$')[0].strip()
+            if prefix:
+                white_rules_prefix.add(prefix)
 
-    if not remove_set:
+    if not white_rules_prefix:
         return
 
-    new_lines = [line for line in lines if line.strip() not in remove_set]
+    new_lines = []
+    for line in lines:
+        sline = line.strip()
+        if not sline or sline.startswith('!'):
+            new_lines.append(line)
+            continue
+
+        if 'domain=~' in sline:
+            new_lines.append(line)
+            continue
+
+        prefix = sline.split('$')[0].strip()
+        if prefix in white_rules_prefix:
+            continue
+
+        new_lines.append(line)
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines) + '\n')
@@ -216,6 +256,8 @@ if __name__ == "__main__":
         clear_domain_white_list(target_file)
     elif action == "clear_white_rules":
         clear_domain_white_Rules(target_file)
+    elif action == "css_selector_not_clean":
+        clear_css_selector_not_conflict(target_file)
     elif action == "fixed_error":
         fixed_Rules_error(target_file)
     else:
