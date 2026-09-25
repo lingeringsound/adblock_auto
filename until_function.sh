@@ -66,7 +66,7 @@ local Description="${3}"
 test "${Description}" = "" && Description="${2}"
 local count=`sed '/^!/d;/^[[:space:]]*$/d' "${file}" | wc -l ` 
 local original_file=`cat "${file}"`
-cat << key > "${file}"
+cat > "${file}" << key
 [Adblock Plus 2.0]
 ! Title: ${2}
 ! Version: `date +'%Y%m%d%H%M%S'`
@@ -82,8 +82,8 @@ cat << key > "${file}"
 ! Gitlink Raw Link: https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/${file##*/}?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335
 ! Github Raw CDN Link: https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/${file##*/}
 
+${original_file}
 key
-echo "${original_file}" >> "${file}"
 sed -i 's/换行符正则表达式n/\\/g' "${file}"
 local checksum_file="${Adblock_Tools_Plugin_Folder}/addchecksum.py"
 if command -v python >/dev/null 2>&1 && [ -f "${checksum_file}" ]; then 
