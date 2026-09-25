@@ -88,15 +88,22 @@ def sort_domain_Combine(target_file):
             seen.add(line)
             unique_lines.append(line)
 
-    prefixes_pool = []
+    def get_canonical_prefix(prefix_str):
+        if '$' in prefix_str:
+            base, opts = prefix_str.split('$', 1)
+            opt_list = [o.strip() for o in opts.split(',') if o.strip()]
+            return (base, frozen_set(opt_list)) if 'frozen_set' in globals() else (base, tuple(sorted(opt_list)))
+        return (prefix_str, ())
+
+    prefix_groups = {}
     for line in unique_lines:
         if 'domain=' in line:
             prefix = line.split('domain=')[0]
             if prefix.strip() != '':
-                prefixes_pool.append(prefix)
-
-    counter = Counter(prefixes_pool)
-    duplicated_prefixes = [p for p, count in counter.items() if count > 1]
+                key = get_canonical_prefix(prefix)
+                if key not in prefix_groups:
+                    prefix_groups[key] = []
+                prefix_groups[key].append(prefix)
 
     option_keywords = re.compile(
         r',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|'
@@ -106,14 +113,21 @@ def sort_domain_Combine(target_file):
         r'~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$'
     )
 
-    for target_prefix in duplicated_prefixes:
-        search_str = target_prefix + "domain="
-        matched_lines = [l for l in unique_lines if l.startswith(search_str)]
-        if not matched_lines:
+    for key, prefixes in prefix_groups.items():
+        matched_lines = []
+        for p in set(prefixes):
+            search_str = p + "domain="
+            matched_lines.extend([l for l in unique_lines if l.startswith(search_str)])
+
+        if len(matched_lines) <= 1:
             continue
+
+        chosen_prefix = prefixes[0]
+        search_str = chosen_prefix + "domain="
+
         tails = [l.split('domain=', 1)[1] for l in matched_lines]
         has_comma = any(',' in t for t in tails)
-        
+
         if has_comma:
             cleaned_tails = []
             for t in tails:
@@ -121,7 +135,7 @@ def sort_domain_Combine(target_file):
                 if option_keywords.search(t_rstrip):
                     continue
                 cleaned_tails.append(t_rstrip)
-            
+
             cleaned_tails = sorted(list(set([ct for ct in cleaned_tails if ct.strip()])))
             if len(cleaned_tails) <= 1:
                 continue
@@ -148,14 +162,14 @@ def sort_domain_Combine(target_file):
 
         if merged_tail:
             new_rule = search_str + merged_tail
-            unique_lines = [l for l in unique_lines if not l.startswith(search_str)]
+            matched_set = set(matched_lines)
+            unique_lines = [l for l in unique_lines if l not in matched_set]
             unique_lines.append(new_rule)
 
     final_lines = [l.replace('换行符正则表达式n', '\\') for l in unique_lines]
 
     with open(target_file, 'w', encoding='utf-8') as f:
         f.write("\n".join(final_lines) + "\n")
-
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
