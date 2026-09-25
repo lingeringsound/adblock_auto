@@ -66,7 +66,6 @@ def sort_Css_Combine(target_file):
     with open(target_file, 'w', encoding='utf-8') as f:
         f.write("\n".join(final_lines) + "\n")
 
-
 def sort_domain_Combine(target_file):
     if not os.path.isfile(target_file):
         return
@@ -88,83 +87,158 @@ def sort_domain_Combine(target_file):
             seen.add(line)
             unique_lines.append(line)
 
-    def get_canonical_prefix(prefix_str):
-        if '$' in prefix_str:
-            base, opts = prefix_str.split('$', 1)
-            opt_list = [o.strip() for o in opts.split(',') if o.strip()]
-            return (base, frozen_set(opt_list)) if 'frozen_set' in globals() else (base, tuple(sorted(opt_list)))
-        return (prefix_str, ())
+    def get_domain_signature(line):
+        if '$' not in line or 'domain=' not in line:
+            return None, None
+        
+        base, opts_str = line.split('$', 1)
+        opts = [o.strip() for o in opts_str.split(',') if o.strip()]
 
-    prefix_groups = {}
+        if 'badfilter' in opts:
+            return None, None
+
+        domain_val = None
+        other_opts = []
+        for opt in opts:
+            if opt.startswith('domain='):
+                domain_val = opt.split('domain=', 1)[1]
+            elif opt.startswith('denyallow='):
+                da_val = opt.split('denyallow=', 1)[1]
+                sorted_da = "|".join(sorted(list(set([d.strip() for d in da_val.split('|') if d.strip()]))))
+                other_opts.append(f"denyallow={sorted_da}")
+            else:
+                other_opts.append(opt)
+        if not domain_val:
+            return None, None
+        sorted_other = ",".join(sorted(other_opts))
+        sig = f"{base}${sorted_other}" if sorted_other else f"{base}$"
+        return sig, domain_val
+
+    sig_groups = {}
     for line in unique_lines:
-        if 'domain=' in line:
-            prefix = line.split('domain=')[0]
-            if prefix.strip() != '':
-                key = get_canonical_prefix(prefix)
-                if key not in prefix_groups:
-                    prefix_groups[key] = []
-                prefix_groups[key].append(prefix)
+        sig, d_val = get_domain_signature(line)
+        if sig:
+            if sig not in sig_groups:
+                sig_groups[sig] = []
+            sig_groups[sig].append((d_val, line))
 
-    option_keywords = re.compile(
-        r',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|'
-        r'image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|'
-        r'elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|'
-        r'~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|'
-        r'~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$'
-    )
-
-    for key, prefixes in prefix_groups.items():
-        matched_lines = []
-        for p in set(prefixes):
-            search_str = p + "domain="
-            matched_lines.extend([l for l in unique_lines if l.startswith(search_str)])
-
-        if len(matched_lines) <= 1:
+    for sig, items in sig_groups.items():
+        if len(items) <= 1:
             continue
+        all_domains = []
+        matched_lines = []
+        for d_val, raw_line in items:
+            matched_lines.append(raw_line)
+            all_domains.extend(d_val.split('|'))
+        unique_domains = sorted(list(set([d.strip() for d in all_domains if d.strip()])))
+        merged_tail = "|".join(unique_domains)
 
-        chosen_prefix = prefixes[0]
-        search_str = chosen_prefix + "domain="
-
-        tails = [l.split('domain=', 1)[1] for l in matched_lines]
-        has_comma = any(',' in t for t in tails)
-
-        if has_comma:
-            cleaned_tails = []
-            for t in tails:
-                t_rstrip = t.rstrip()
-                if option_keywords.search(t_rstrip):
-                    continue
-                cleaned_tails.append(t_rstrip)
-
-            cleaned_tails = sorted(list(set([ct for ct in cleaned_tails if ct.strip()])))
-            if len(cleaned_tails) <= 1:
-                continue
-
-            if any('|' in t for t in cleaned_tails):
-                domains = []
-                for t in cleaned_tails:
-                    domains.extend(t.split('|'))
-                unique_domains = sorted(list(set([d.strip() for d in domains if d.strip()])))
-                merged_tail = "|".join(unique_domains)
-            else:
-                unique_domains = sorted(list(set([t.strip() for t in cleaned_tails if t.strip()])))
-                merged_tail = "|".join(unique_domains)
+        base, opts_part = sig.split('$', 1)
+        if opts_part:
+            new_rule = f"{base}${opts_part},domain={merged_tail}"
         else:
-            if any('|' in t for t in tails):
-                domains = []
-                for t in tails:
-                    domains.extend(t.split('|'))
-                unique_domains = sorted(list(set([d.strip() for d in domains if d.strip()])))
-                merged_tail = "|".join(unique_domains)
-            else:
-                unique_domains = sorted(list(set([t.strip() for t in tails if t.strip()])))
-                merged_tail = "|".join(unique_domains)
+            new_rule = f"{base}$domain={merged_tail}"
 
-        if merged_tail:
-            new_rule = search_str + merged_tail
-            matched_set = set(matched_lines)
-            unique_lines = [l for l in unique_lines if l not in matched_set]
-            unique_lines.append(new_rule)
+        matched_set = set(matched_lines)
+        unique_lines = [l for l in unique_lines if l not in matched_set]
+        unique_lines.append(new_rule)
+
+    final_lines = [l.replace('换行符正则表达式n', '\\') for l in unique_lines]
+
+    with open(target_file, 'w', encoding='utf-8') as f:
+        f.write("\n".join(final_lines) + "\n")
+
+def sort_denyallow_Combine(target_file):
+    if not os.path.isfile(target_file):
+        return
+
+    with open(target_file, 'r', encoding='utf-8', errors='ignore') as f:
+        raw_lines = f.readlines()
+
+    content = "".join(raw_lines)
+    content = content.replace('\\n', '换行符正则表达式nn')
+    
+    lines = content.splitlines()
+    unique_lines = []
+    seen = set()
+    for line in lines:
+        s_line = line.strip()
+        if not s_line or s_line.startswith('!') or (s_line.startswith('[') and s_line.endswith(']')):
+            continue
+        if line not in seen:
+            seen.add(line)
+            unique_lines.append(line)
+
+    def get_denyallow_signature(line):
+        if '$' not in line or 'denyallow=' not in line:
+            return None, None, None
+        base, opts_str = line.split('$', 1)
+        opts = [o.strip() for o in opts_str.split(',') if o.strip()]
+
+        if 'badfilter' in opts:
+            return None, None, None
+
+        denyallow_val = None
+        domain_val = None
+        other_opts = []
+        for opt in opts:
+            if opt.startswith('denyallow='):
+                denyallow_val = opt.split('denyallow=', 1)[1]
+            elif opt.startswith('domain='):
+                domain_val = opt.split('domain=', 1)[1]
+            else:
+                other_opts.append(opt)
+        if not denyallow_val:
+            return None, None, None
+        
+        if domain_val is not None and denyallow_val == domain_val:
+            sorted_other = ",".join(sorted(other_opts))
+            sig = f"{base}${sorted_other}#SAME_DOMAIN_DENYALLOW"
+        else:
+            if domain_val is not None:
+                sorted_d = "|".join(sorted(list(set([d.strip() for d in domain_val.split('|') if d.strip()]))))
+                other_opts.append(f"domain={sorted_d}")
+            sorted_other = ",".join(sorted(other_opts))
+            sig = f"{base}${sorted_other}" if sorted_other else f"{base}$"
+            
+        return sig, denyallow_val, domain_val
+
+    sig_groups = {}
+    for line in unique_lines:
+        sig, da_val, d_val = get_denyallow_signature(line)
+        if sig:
+            if sig not in sig_groups:
+                sig_groups[sig] = []
+            sig_groups[sig].append((da_val, d_val, line))
+
+    for sig, items in sig_groups.items():
+        if len(items) <= 1:
+            continue
+        
+        matched_lines = [item[2] for item in items]
+        all_vals = []
+        for item in items:
+            all_vals.extend(item[0].split('|'))
+        unique_vals = sorted(list(set([v.strip() for v in all_vals if v.strip()])))
+        merged_val = "|".join(unique_vals)
+
+        if sig.endswith("#SAME_DOMAIN_DENYALLOW"):
+            base_sig = sig.replace("#SAME_DOMAIN_DENYALLOW", "")
+            base, opts_part = base_sig.split('$', 1)
+            if opts_part:
+                new_rule = f"{base}${opts_part},denyallow={merged_val},domain={merged_val}"
+            else:
+                new_rule = f"{base}$denyallow={merged_val},domain={merged_val}"
+        else:
+            base, opts_part = sig.split('$', 1)
+            if opts_part:
+                new_rule = f"{base}${opts_part},denyallow={merged_val}"
+            else:
+                new_rule = f"{base}$denyallow={merged_val}"
+
+        matched_set = set(matched_lines)
+        unique_lines = [l for l in unique_lines if l not in matched_set]
+        unique_lines.append(new_rule)
 
     final_lines = [l.replace('换行符正则表达式n', '\\') for l in unique_lines]
 
@@ -173,7 +247,7 @@ def sort_domain_Combine(target_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print(f"用法: python {sys.argv[0]} [css|domain] <规则文件路径>")
+        print(f"用法: python {sys.argv[0]} [css|domain|denyallow] <规则文件路径>")
         sys.exit(1)
     mode = sys.argv[1]
     target = sys.argv[2]
@@ -181,6 +255,8 @@ if __name__ == "__main__":
         sort_Css_Combine(target)
     elif mode == "domain":
         sort_domain_Combine(target)
+    elif mode == "denyallow":
+        sort_denyallow_Combine(target)
     else:
-        print("模式错误，请使用 'css' 或 'domain'")
+        print("模式错误，请使用 'css'、'domain' 或 'denyallow'")
         sys.exit(1)
