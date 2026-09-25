@@ -358,6 +358,7 @@ local target_file="${1}"
 local python_file="${Adblock_Tools_Plugin_Folder}/Adblock_sort.py"
 if [ -f "$target_file" ] && [ -f "${python_file}" ] ;then
 	python3 "${python_file}" "domain" "$target_file"
+	python3 "${python_file}" "denyallow" "$target_file"
 else
 	sort_domain_Combine "$target_file"
 fi
@@ -399,8 +400,8 @@ test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_
 sort_Css_Combine_python "${target_adblock_file}"
 #写入通用的Css
 #echo "${css_common_record}" >> "${target_adblock_file}"
-sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
 fixed_css_selector_not_clean "${target_adblock_file}"
+sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
 }
 
 #规则分类
