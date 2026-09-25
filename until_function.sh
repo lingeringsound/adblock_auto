@@ -8,6 +8,38 @@ command -v busybox >/dev/null 2>&1 && sed() { busybox sed "${@}"; }
 #定义 python 以及 Perl 插件的目录
 Adblock_Tools_Plugin_Folder="$(pwd)/plugin"
 
+#安全写入文件，避免转换\\ 和 Unicode字符
+function write_notran_file() {
+local content="${1}"
+local file="${2}"
+local flag="${3}"
+[ -z "${file}" ] && return
+[ -z "${flag}" ] && flag=">"
+if [ "$(command -v printf)" = "printf" ]; then
+	if [ "${flag}" = ">>" ]; then
+		printf '%s\n' "${content}" >> "$file"
+	else
+		printf '%s\n' "${content}" > "$file"
+	fi
+elif [ "$(command -v print)" = "print" ]; then
+	if [ "${flag}" = ">>" ]; then
+		print -r -- "${content}" >> "$file"
+	else
+		print -r -- "${content}" > "$file"
+	fi
+else
+	if [ "${flag}" = ">>" ]; then
+cat >> "$file" << EOF
+${content}
+EOF
+	else
+cat > "$file" << EOF
+${content}
+EOF
+	fi
+fi
+}
+
 #移除Adguard_Chinese的秋风规则
 function remove_AWAvenue_Ads_Rule_Filter(){
 local file="${1}"
@@ -102,10 +134,10 @@ local new
 sed -i 's/\\n/换行符正则表达式nn/g' "${file}"
 if test "${2}" = "" ;then
 	new=`grep -Ev "${exclude_re}" "${file}" | sed 's|^[[:space:]]@@|@@|g;/^!/d;/^\[.*\]$/d;/^[[:space:]]*$/d' | sort -u `
-	echo "$new" > "${file}"
+	write_notran_file "$new" "${file}"
 else
 	new=`grep -Ev "${exclude_re}|${2}" "${file}" | sed 's|^[[:space:]]@@|@@|g;/^!/d;/^\[.*\]$/d;/^[[:space:]]*$/d' | sort -u `
-	echo "$new" > "${file}"
+	write_notran_file "$new" "${file}"
 fi
 }
 
@@ -148,7 +180,7 @@ function wipe_white_list() {
 	local IFS=$'\n'
 	local new=$(grep -Ev "${3}" "${file}" | sort -u | sed '/^!/d;/^[[:space:]]*$/d' )
 		mkdir -p "${output_folder}"
-		echo "$new" > "${output_folder}/${file##*/}"
+		write_notran_file "$new" "${output_folder}/${file##*/}"
 	fi
 }
 
@@ -160,7 +192,7 @@ function sort_web_rules() {
 		local IFS=$'\n'
 		local new=$(grep -Ev '^@@|^[[:space:]]@@\|\||^<<|<<1023<<|^\|\||^##|^[?_./=&:~,$|*-]|/ad/|^#\$#|#@#|^#%#|^!|^[[:space:]]*$' "${file}" | sort -u )
 			mkdir -p "${output_folder}"
-		echo "$new" >> "${output_file}"
+		write_notran_file "$new" "${output_file}" ">>"
 	fi
 }
 
@@ -171,7 +203,7 @@ function sort_adblock_Rules() {
 		local IFS=$'\n'
 		local new=$(grep -E "${3}" "${file}" | sort -u | sed '/^!/d;/^[[:space:]]*$/d' )
 			mkdir -p "${output_folder}"
-		echo "$new" > "${output_folder}/${file##*/}"
+		write_notran_file "$new" "${output_folder}/${file##*/}"
 	fi
 }
 
@@ -182,9 +214,9 @@ function add_rules_file() {
 	local new=$(grep -E "${3}" "${file}" | sort -u | sed '/^!/d;/^[[:space:]]*$/d' )
 	if test -f "${output_folder}/${file##*/}" ;then
 		mkdir -p "${output_folder}"
-				echo "$new" >> "${output_folder}/${file##*/}"
+				write_notran_file "$new" "${output_folder}/${file##*/}" ">>"
 			local sort_file=`cat "${output_folder}/${file##*/}" | sort -u | sed '/^!/d;/^[[:space:]]*$/d' `
-		echo "${sort_file}" > "${output_folder}/${file##*/}"
+		write_notran_file "${sort_file}" "${output_folder}/${file##*/}"
 	fi
 }
 
@@ -207,7 +239,7 @@ local has_fiter="$(grep -E ':-abp-has|:has' "${file}" \
  | grep -Ev "${exclude}" \
  | sed -E 's/#(#|[@?]#)?/##/g;s/:-abp-has/:has/g' \
  | sort -u)"
-echo "${has_fiter}" > "${target_folder}/${file##*/}_has.txt"
+write_notran_file "${has_fiter}" "${target_folder}/${file##*/}_has.txt"
 }
 
 #测试github 加速的链接
@@ -246,7 +278,7 @@ local count_Rules_all=`grep '#' "${target_file}" | sed '/^#/d;/^!/d;/^\|\|/d;/^\
 local a=0
 sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
 local new_file=$(sort -u "${target_file}" | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
-echo "${new_file}" > "${target_file}"
+write_notran_file "${new_file}" "${target_file}"
 for target_content in `grep '#' "${target_file}" | sed '/^#/d;/^!/d;/^\|\|/d;/^\//d' | sed -E 's/.*\.[A-Za-z]{2,8}#{1,1}//g' | sort | uniq -d `
 do
 a=$(($a + 1))
@@ -256,7 +288,7 @@ grep -E "${transfer_content}$" "${target_file}" > "${target_file_tmp}" && echo "
 if test "$(sed 's|#.*||g' "${target_file_tmp}" 2>/dev/null | grep -E ',')" != "" ;then
 	sed -i 's|#.*||g' "${target_file_tmp}"
 	local before_tmp=$(cat "${target_file_tmp}" | tr ',' '\n' | sed '/^[[:space:]]*$/d' | sort -u )
-	echo "${before_tmp}" > "${target_file_tmp}"
+	write_notran_file "${before_tmp}" "${target_file_tmp}"
 	sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
 	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null )" != "" ;then 
 		grep -Ev "${transfer_content}$" "${target_file}" >> "${target_output_file}" 
@@ -268,7 +300,7 @@ key
 else
 	sed -i 's|#.*||g' "${target_file_tmp}"
 	local before_tmp=$(sed '/^[[:space:]]*$/d' "${target_file_tmp}" | sort -u)
-	echo "${before_tmp}" > "${target_file_tmp}"
+	write_notran_file "${before_tmp}" "${target_file_tmp}"
 	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null | wc -l)" -gt "1" ;then
 		sed -i ":a;N;\$!ba;s#\n#,#g" "${target_file_tmp}"
 	fi
@@ -294,7 +326,7 @@ local count_Rules_all=`sed 's|domain=.*||g' "${target_file}" | sort | uniq -d | 
 local a=0
 sed -i 's/\\n/换行符正则表达式nn/g' "${target_file}"
 local new_file=$(sort -u "${target_file}" | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' )
-echo "${new_file}" > "${target_file}"
+write_notran_file "${new_file}" "${target_file}"
 for target_content in `grep 'domain=' "${target_file}" | sed 's|domain=.*||g' | sort | uniq -d | sed '/^[[:space:]]*$/d' `
 do
 a=$(($a + 1))
@@ -304,7 +336,7 @@ grep -E "^${transfer_content}" "${target_file}" > "${target_file_tmp}" && echo "
 if test "$(sed 's|.*domain=||g' "${target_file_tmp}" 2>/dev/null | grep -E ',' )" != "" ;then
 	echo "※规则 ${target_content} 包含其他限定器！"
 	local fixed_tmp=$(sed 's/[[:space:]]$//g' "${target_file_tmp}" | grep -Ev ',(important|third-party|script|media|subdocument|document|xmlhttprequest|other|stealth|image|stylesheet|content|match-case|font|sitekey|popup|xhr|object|generichide|genericblock|elemhide|all|badfilter|websocket|~important|~third-party|~script|~media|~subdocument|~document|~xmlhttprequest|~other|~stealth|~image|~stylesheet|~content|~match-case|~font|~sitekey|~popup|~xhr|~object|~generichide|~genericblock|~elemhide|~all|~badfilter|~websocket)$' | sed '/^[[:space:]]*$/d' | sort -u)
-	echo "${fixed_tmp}" > "${target_file_tmp}"
+	write_notran_file "${fixed_tmp}" "${target_file_tmp}"
 	echo "※尝试修复中……"
 	local Rules_juggle=`sort -u "${target_file_tmp}" | sed '/^[[:space:]]*$/d' | wc -l`
 	test "${Rules_juggle}" -le "1" && echo "※无法合并，已跳过！" && continue
@@ -312,7 +344,7 @@ fi
 if test "$(sed 's|.*domain=||g' "${target_file_tmp}" 2>/dev/null | grep -E '\|')" != "" ;then
 	sed -i 's|.*domain=||g' "${target_file_tmp}"
 	local before_tmp=$(cat "${target_file_tmp}" | tr '|' '\n' | sed '/^[[:space:]]*$/d' | sort  | uniq)
-	echo "${before_tmp}" > "${target_file_tmp}"
+	write_notran_file "${before_tmp}" "${target_file_tmp}"
 	sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
 	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null )" != "" ;then 
 		grep -Ev "^${transfer_content}" "${target_file}" >> "${target_output_file}" 
@@ -324,7 +356,7 @@ key
 else
 	sed -i 's|.*domain=||g' "${target_file_tmp}"
 	local before_tmp=$(sed '/^[[:space:]]*$/d' "${target_file_tmp}" | sort -u )
-	echo "${before_tmp}" > "${target_file_tmp}"
+	write_notran_file "${before_tmp}" "${target_file_tmp}"
 	if test "$(sed '/^!/d;/^[[:space:]]*$/d' "${target_file_tmp}" 2>/dev/null | wc -l)" -gt "1" ;then
 		sed -i ":a;N;\$!ba;s#\n#\|#g" "${target_file_tmp}"
 	fi
@@ -399,7 +431,7 @@ test ! -f "${target_adblock_file}" && echo "※`date +'%F %T'` ${target_adblock_
 #local css_common_record="$(cat ${target_adblock_file} 2>/dev/null | sed '/^!/d;/^[[:space:]]*$/d' | grep -E '^#' )"
 sort_Css_Combine_python "${target_adblock_file}"
 #写入通用的Css
-#echo "${css_common_record}" >> "${target_adblock_file}"
+#write_notran_file "${css_common_record}" "${target_adblock_file}" ">>"
 fixed_css_selector_not_clean "${target_adblock_file}"
 sed -i 's/换行符正则表达式n/\\/g' "${target_adblock_file}"
 }
@@ -629,7 +661,7 @@ local lite_content="$(grep -Ev \
   -e 's/\$,/$/g' \
   -e 's/,,/,/g' \
   -e 's/\$$//' | sort -u )"
-echo "${lite_content}" > "${file}"
+write_notran_file "${lite_content}" "${file}"
 }
 
 #adblock限定器缩写转换，将特定缩写转换为完整形式
@@ -644,7 +676,7 @@ local converted_content="$(sed -E \
   -e 's/(\$|,)(~?)i?frame(,|$)/\1\2subdocument\3/g' \
   -e 's/(\$|,)~1p(,|$)/\1third-party\2/g' \
   -e 's/(\$|,)1p(,|$)/\1~third-party\2/g' "${file}" )"
-echo "${converted_content}" > "${file}"
+write_notran_file "${converted_content}" "${file}"
 }
 
 #在Via支持正则表达式前先移除正则表达式，减少报错和资源占用。
@@ -667,7 +699,7 @@ local lite_content="$(grep -Ev \
  -e '(\$|,)~?(dnsrewrite|replace)(,|=|$)' \
  -e ':(matches-property|nth-ancestor|-abp-properties)' \
  "${file}" | sort -u )"
-echo "${lite_content}" > "${file}"
+write_notran_file "${lite_content}" "${file}"
 }
 
 #去除popup选定器，直接改用||域名^的形式。
