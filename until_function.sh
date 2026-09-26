@@ -104,7 +104,7 @@ cat > "${file}" << key
 ! Version: `date +'%Y%m%d%H%M%S'`
 ! Expires: 12 hours (update frequency)
 ! Last modified: `date +'%F %T'`
-! Total Count: ${count}
+! Human Count: $(count_filter_files "${count}")
 ! Blocked Filters: ${count}
 ! Description: ${Description}
 ! Homepage: https://lingeringsound.github.io/adblock_auto
@@ -721,12 +721,14 @@ function count_filter_files() {
 local _cf_file _cf_n _cf_div _cf_s _cf_q _cf_r
 for _cf_file in "$@"
 do
-	[ -f "$_cf_file" ] && [ -r "$_cf_file" ] || continue
-	_cf_n=$(wc -l < "$_cf_file" 2>/dev/null)
+	case "$_cf_file" in [0-9]*) _cf_n="$_cf_file" ;; *) [ -f "$_cf_file" ] && [ -r "$_cf_file" ] || continue; _cf_n=$(wc -l < "$_cf_file" 2>/dev/null) ;; esac
 	case "$_cf_n" in ''|*[!0-9]*|0) continue ;; esac
-	_cf_div="10000"; _cf_s="w"
-	[ "$_cf_n" -lt "10000" ] && { _cf_div="1000"; _cf_s="k"; }
 	[ "$_cf_n" -lt "1000" ] && { echo "$_cf_n"; continue; }
+	if [ "$_cf_n" -lt "10000" ]; then
+		_cf_div="1000"; _cf_s="k"
+	else
+		_cf_div="10000"; _cf_s="w"
+	fi
 	_cf_q=$((_cf_n / _cf_div)); _cf_r=$((_cf_n % _cf_div))
 	[ "$_cf_r" = "0" ] && echo "${_cf_q}${_cf_s}" || echo "${_cf_q}.$((_cf_r * 10 / _cf_div))${_cf_s}"
 done
