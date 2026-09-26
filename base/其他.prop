@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 4WiMaGtmLax4FE5GMLEOjA
+! Checksum: kBpH9AygtGxsQq4ZMXT3eA
 ! Title: 自用去广告Adblock规则
-! Version: 20260926100437
+! Version: 20260926120020
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-26 10:04:37
+! Last modified: 2026-09-26 12:00:20
 ! Human Count: 1.0w
-! Blocked Filters: 10589
+! Blocked Filters: 10593
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -7126,6 +7126,7 @@ blogdoiphone.com,gizchina.com,gizmobolt.com,moroccoworldnews.com,westseattleblog
 blogdoiphone.com,gizmobolt.com,moroccoworldnews.com,westseattleblog.com#@#.custom-ad
 boaibao.com,eyanzi.com,fjxtour.com,haolaidi.com,kuaizufang.com,niannianli.com,qiankangyi.com,ynfxfloor.com,zhixiaoqu.com##+js(rmnt, script, td.getDay().toString())
 book18.org,pornbest.org,pornfind.org,pornlulu.com,ptt.sex##[id^="bottom-ads"]
+bornstar.*,bornstar.co,bornstar.com,bornstar.us,eporner.com,exe.io,exnion.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,pornwish.org,sendvid.com,thisav.com,vidguard.site,waaw.to##+js(nowoif)
 bornstar.co,bornstar.com,bornstar.us##.swipe-cta
 bornstar.co,bornstar.com,bornstar.us##.v-card[data-ad="true"]
 boylov.xyz,boylove.cc,boylove.mobi,boylove.today,boylove1.cc,boylove3.cc,boylove5.cc,boyloves.fun##.stui-pannel__bd > div[class]:has(> div[class] > div[class] > a[href][target="_blank"][rel="nofollow"] > img[src^="/bookimages/img/"][src$=".gif"])
@@ -7296,7 +7297,6 @@ eporner.com##+js(rmnt, script, setTrackerUrl)
 eporner.com##.vjs-docker
 eporner.com##[class^="admobile"]
 eporner.com##[id^="admobile"]
-eporner.com,exe.io,exnion.com,missav.ai,missav.com,missav.ws,missav123.com,missav789.com,missav888.com,myav.com,pornwish.org,sendvid.com,thisav.com,vidguard.site,waaw.to##+js(nowoif)
 erciyan.com##+js(rmnt, script, function xxS)
 eromanga-show.com,hentai-one.com,hentaipaw.com##+js(no-setTimeout-if, /[a-z]\(!0\)/, 800)
 eromanga-show.com,hentai-one.com,hentaipaw.com##div[id^="ts_ad_"]
@@ -7792,6 +7792,8 @@ leakedzone.com##.item:has(img[alt="Premium Porn"])
 leakedzone.com##div:has(script[src$="ad-provider.js"])
 leakedzone.com##div[class^="koukoku"]
 leaks4fap.com##a[href*=".com/go.php?"]
+leakyourporn.com###adwall-overlay:remove()
+leakyourporn.com##+js(abort-current-script, document.getElementById, adwall-overlay)
 letsplayindex.com##.ad_side_box
 letsplayindex.com##.ad_wide_vertical
 libvio.lat##.app-download-guide
@@ -9506,6 +9508,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||boot.bytecache.cn/static/*.js?t=$script,third-party
 ||bornstar.*/ad-config.json
 ||bornstar.*/hl-pop.js
+||bornstar.*/tg-config.json
 ||bpacihfabm.com^
 ||bqge9.com/static/common.js
 ||bqvvxg*.*/*/*ll*.js
@@ -9536,6 +9539,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||cdn.6109.org/static/js/$third-party
 ||cdn.adur.top^$third-party
 ||cdn.bdstatistics.com/send
+||cdn.bornstar.*/candy$media
 ||cdn.sgvafs.*/resource/*Aw.js$third-party
 ||cdn.sgvafs.com/resource/aHR*8x*/dD0xL*=.js
 ||cdn.sgvafs.top/resource/*Aw.js$third-party
