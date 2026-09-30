@@ -1,0 +1,147 @@
+[Adblock Plus 2.0]
+! Checksum: uJm2BhBJ7k44YWPihUt5iA
+! Title: YouTube 广告拦截
+! Version: 20250219004349
+! Last modified: 2025-02-19 00:43:49
+! Total Count: 141
+*_ad_$media,third-party,domain=youtube.com
+@@||ad.doubleclick.net/*/adi/com.ytbc/$domain=youtube.com
+@@||pubads.g.doubleclick.net/gampad/ads?ad_rule=0&d_imp=1&gdfp_req=1&impl=ifr$domain=youtube.com
+@@||pubads.g.doubleclick.net/gampad/ads?ad_rule=0&d_imp=1&gdfp_req=1&iu=%2F6762%2Fmkt.ythome_1x1$domain=youtube.com
+@@||youtube.com/ads/preferences/$popup
+@@||youtube.com/embed/$domain=masterani.me
+@@||youtube.com/get_video_info*&el=editpage
+@@||youtube.com/get_video_info?$xmlhttprequest,domain=music.youtube.com|tv.youtube.com
+@@||youtube.com/get_video_info?*embedded$~third-party
+@@||youtube.com/my_video_ad$document
+@@||youtube.com/yts/jsbin/*$script,domain=breathecast.com|classicalite.com|crossmap.com|hallels.com|newseveryday.com|returnofkings.com
+@@||ytimg.com^*_banner$domain=youtube.com
+_rectangle_ads.
+_reklama_$domain=~youtube.com
+filmvilag.me,liderendeportes.com,serieskao.tv,freefilm.to,ac24.cz,nsfwyoutube.com,jpblow.info,hesgoal.com,filmisub.com,igg-games.com,ruwhite.info,slones.info,ukhello.info,uaclips.com,thodkyaat.com,kzclip.com,onlymen.cz,ultimasnoticias.com.ve,freeserial.to,ibb.co##pp
+m.youtube.com##.is-extra-compact:has(.yt-mini-game-card-view-model)
+nsfwyoutube.com##.ads
+nsfwyoutube.com##img[src*="data"]
+youtube.com###YtKevlarVisibilityIdentifier
+youtube.com###YtSparklesVisibilityIdentifier
+youtube.com###__ffYoutube1
+youtube.com###__ffYoutube2
+youtube.com###__ffYoutube3
+youtube.com###__ffYoutube4
+youtube.com###contents > ytd-rich-item-renderer:has( > #content > ytd-ad-slot-renderer)
+youtube.com###feed-pyv-container
+youtube.com###masthead-ad
+youtube.com###merch-shelf
+youtube.com###offer-module
+youtube.com###pla-shelf
+youtube.com###player-ads
+youtube.com###premium-yva
+youtube.com###promo-info
+youtube.com###promo-list
+youtube.com###promotion-shelf
+youtube.com###search-pva
+youtube.com###shelf-pyv-container
+youtube.com###shorts-inner-container > .ytd-shorts:has(> .ytd-reel-video-renderer > ytd-ad-slot-renderer)
+youtube.com###video-masthead
+youtube.com###watch-buy-urls
+youtube.com###watch7-branded-banner
+youtube.com##+js(adjust-setTimeout, [native code], 17000, 0.001)
+youtube.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
+youtube.com##+js(set-constant, google_ad_status, 1)
+youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
+youtube.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com##+js(set-constant, ytInitialPlayerResponse.adSlots, undefined)
+youtube.com##+js(set-constant, ytInitialPlayerResponse.playerAds, undefined)
+youtube.com##.GoogleActiveViewElement
+youtube.com##.ad-showing > .html5-video-container
+youtube.com##.banner-promo-style-type-masthead-v2
+youtube.com##.companion-ad-container
+youtube.com##.list-view[style="margin: 7px 0pt;"]
+youtube.com##.promoted-sparkles-text-search-root-container
+youtube.com##.promoted-videos
+youtube.com##.searchView.list-view
+youtube.com##.sparkles-light-cta
+youtube.com##.statement-banner-foreground-content
+youtube.com##.ytd-action-companion-ad-renderer
+youtube.com##.ytd-ad-slot-renderer
+youtube.com##.ytd-carousel-ad-renderer
+youtube.com##.ytd-compact-promoted-video-renderer
+youtube.com##.ytd-companion-slot-renderer
+youtube.com##.ytd-in-feed-ad-layout-renderer
+youtube.com##.ytd-merch-shelf-renderer
+youtube.com##.ytd-player-legacy-desktop-watch-ads-renderer
+youtube.com##.ytd-promoted-sparkles-text-search-renderer
+youtube.com##.ytd-promoted-video-renderer
+youtube.com##.ytd-rich-item-renderer > ytd-ad-slot-renderer
+youtube.com##.ytd-search-pyv-renderer
+youtube.com##.ytd-video-masthead-ad-primary-video-overlay-renderer
+youtube.com##.ytd-video-masthead-ad-v3-renderer
+youtube.com##.ytlr-horizontal-list-renderer__items > .yt-virtual-list__container > .yt-virtual-list__item--visible.yt-virtual-list__item--selected.yt-virtual-list__item:has-text(Ad)
+youtube.com##.ytp-ad-action-interstitial-background-container
+youtube.com##.ytp-ad-action-interstitial-slot
+youtube.com##.ytp-ad-button
+youtube.com##.ytp-ad-overlay-container
+youtube.com##.ytp-ad-player-overlay-flyout-cta
+youtube.com##.ytp-ad-progress
+youtube.com##.ytp-ad-progress-list
+youtube.com##YTM-PROMOTED-VIDEO-RENDERER
+youtube.com##[aria-label*="广告"]
+youtube.com##[class^="ytd-display-ad-"]
+youtube.com##[layout*="display-ad-"]
+youtube.com##a[href^="http://www.youtube.com/cthru?"]
+youtube.com##a[href^="https://www.youtube.com/cthru?"]
+youtube.com##ad-slot-renderer
+youtube.com##body > ytd-app > #content.ytd-app.style-scope > ytd-page-manager#page-manager.ytd-app.style-scope > ytd-browse.ytd-page-manager.style-scope > ytd-two-column-browse-results-renderer.grid-disabled.grid.ytd-browse.style-scope > #primary.ytd-two-column-browse-results-renderer.style-scope > ytd-rich-grid-renderer.ytd-two-column-browse-results-renderer.style-scope > #contents.ytd-rich-grid-renderer.style-scope > ytd-rich-grid-row.ytd-rich-grid-renderer.style-scope > #contents.ytd-rich-grid-row.style-scope > ytd-rich-item-renderer.ytd-rich-grid-row.style-scope:has(> #content.ytd-rich-item-renderer.style-scope > ytd-ad-slot-renderer.ytd-rich-item-renderer.style-scope)
+youtube.com##div#masthead-ad
+youtube.com##ytd-ad-slot-renderer
+youtube.com##ytd-banner-promo-renderer
+youtube.com##ytd-compact-promoted-video-renderer
+youtube.com##ytd-companion-slot-renderer
+youtube.com##ytd-display-ad-renderer
+youtube.com##ytd-promoted-sparkles-text-search-renderer
+youtube.com##ytd-promoted-sparkles-web-renderer
+youtube.com##ytd-rich-grid-row > #contents > ytd-rich-item-renderer:has(> #content > ytd-display-ad-renderer)
+youtube.com##ytd-rich-item-renderer:has(> #content > ytd-ad-slot-renderer)
+youtube.com##ytd-rich-item-renderer:has(ytd-display-ad-renderer)
+youtube.com##ytd-search-pyv-renderer
+youtube.com##ytd-single-option-survey-renderer
+youtube.com##ytd-video-masthead-ad-advertiser-info-renderer
+youtube.com##ytd-video-masthead-ad-v3-renderer
+youtube.com##ytm-companion-slot
+youtube.com##ytm-promoted-sparkles-text-search-renderer
+youtube.com##ytm-promoted-sparkles-web-renderer
+youtube.com#?#ytd-rich-grid-renderer ytd-rich-item-renderer div > ytd-display-ad-renderer:upward(2)
+youtube.com#@#.overlay-ads
+youtube.com#@#.video-ads
+||ads.youtube.com^$domain=~ads.youtube.com
+||ads.youtube.com^$xmlhttprequest,redirect-rule=noop.txt
+||doubleclick.net^
+||google.com/pagead/
+||googlevideo.com/initplayback?source=youtube*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
+||googlevideo.com/videoplayback*&ctier=L&*%2Cctier%2C$xmlhttprequest,third-party,domain=m.youtube.com|music.youtube.com|www.youtube.com
+||m.youtube.com/*/ad.js
+||www.youtube.com/@Channel-Links/
+||www.youtube.com/@DOWNLOAD-LINKK/
+||www.youtube.com/channel/UCCmzcphyrH6Br5eNUnQR2mw/
+||www.youtube.com/channel/UCS9ql1ylQmDx7o_6v15X7mw/
+||www.youtube.com/channel/UCq4LVl85fFC88_G5pT54dbw/
+||www.youtube.com/channel/UCuHeiORKwgjZ5-n8xoq_zVA/
+||www.youtube.com/channel/UCwmnsubfOCTN_xMhg4czo5A/
+||www.youtube.com/pagead/
+||youtube.com/*&yt_ad
+||youtube.com/*/ad.js$script
+||youtube.com/*=adunit&
+||youtube.com/_get_ads?
+||youtube.com/ad_companion
+||youtube.com/api/stats/ads
+||youtube.com/embed/*$domain=1shortlink.com
+||youtube.com/embed/wqLWTeNBEEQ?
+||youtube.com/get_midroll_
+||youtube.com/get_midroll_$domain=youtube.com
+||youtube.com/get_midroll_info?
+||youtube.com/get_video_info?*=adunit&$important
+||youtube.com/get_video_info?*adunit$~third-party
+||youtube.com/pagead/
+||youtube.com/ptracking?
+||youtube.com^$domain=1link.vip
+||youtube.com^$domain=tejtime24.com|thevouz.in
