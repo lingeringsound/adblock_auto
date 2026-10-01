@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: qN+52DG88guA3EA8iMyfSg
+! Checksum: Sptd6H4th+kAuS/G9wWlCA
 ! Title: 自用去广告Adblock规则
-! Version: 20260930231349
+! Version: 20261001175412
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-09-30 23:13:49
+! Last modified: 2026-10-01 17:54:12
 ! Human Count: 1.0w
-! Blocked Filters: 10601
+! Blocked Filters: 10603
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -2744,6 +2744,7 @@
 ##a[id^="hudie_"][target="_blank"][width="100%"]
 ##a[name="miao"] ~ style[type="text/css"] + div[class]:not([id]):not([style])
 ##a[onclick*="91黄播"]
+##a[onclick*="ad_slot"] + img.lazy
 ##a[onclick*="openAuc();"]
 ##a[onclick*="博彩"]
 ##a[onclick*="同城"]
@@ -7748,6 +7749,7 @@ justdial.com###gptAdsDiv
 jvidcm.xyz##.stui_md
 jwdyw.com##body > [class][classname],div[class^="show-app"],table
 jyshare.com#@#script + script + style + div[id]
+kaiyuanbang.cn##.ornav-ad-band
 kaizty.com##.mobiletop
 kanliao.com,kanliao.cyou,kanliao.org,kanliao12.cyou,kanliao13.org,kanliao18.com###index[role="main"] > article:has(meta[content="今日看料"])
 kanxig.com##+js(rmnt, script, |Android)
