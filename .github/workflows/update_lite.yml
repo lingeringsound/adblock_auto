@@ -8,6 +8,10 @@ on:
   watch:
     types: [started]
 
+concurrency:
+  group: rules-update-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
    master:
     runs-on: ubuntu-latest
@@ -35,9 +39,10 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add .
         git commit -a -m "Lite Rules update" || echo "No changes to commit"
-        git pull --rebase origin ${{ github.ref_name }}
     - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+      run: |
+        for i in 1 2 3 4 5; do
+          git pull --rebase origin ${{ github.ref_name }} && \
+          git push origin HEAD:${{ github.ref_name }} && break
+          sleep 5
+        done
