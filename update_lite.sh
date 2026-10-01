@@ -103,6 +103,6 @@ write_head "${Rules_Folder}/adblock_auto_lite.txt" "混合规则精简版(更新
 
 rm -rf "$Temple_base_Folder"
 #更新README信息
-update_README_info && echo "※`date +'%F %T'` 完成信息更新！"
+update_README_info "lite" && echo "※`date +'%F %T'` 完成信息更新！"
 
 exit 0

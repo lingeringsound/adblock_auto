@@ -100,6 +100,6 @@ write_head "${Rules_Folder}/adblock_auto.txt" "混合规则(更新日期`date '+
 
 rm -rf "$Temple_base_Folder"
 #更新README信息
-update_README_info && echo "※`date +'%F %T'` 完成信息更新！"
+update_README_info "full" && echo "※`date +'%F %T'` 完成信息更新！"
 
 exit 0

@@ -747,18 +747,32 @@ done
 
 #更新README信息
 function update_README_info(){
+local type="${1:-lite}"
 local file="`pwd`/README.md"
-test -f "${file}" && rm -rf "${file}"
+local start_tag="LITE_INFO_START"
+local end_tag="LITE_INFO_END"
+local rules_file="`pwd`/Rules/adblock_auto_lite.txt"
+if [ "${type}" = "full" ] ;then
+	start_tag="FULL_INFO_START"
+	end_tag="FULL_INFO_END"
+	rules_file="`pwd`/Rules/adblock_auto.txt"
+fi
+
+rm -f "`pwd`/.README_${type}_block.tmp" "`pwd`/.README.tmp"
+
+if [ -f "${file}" ] && ! grep -q "<!-- ${start_tag} -->" "${file}" ;then
+	rm -f "${file}"
+fi
+
+if [ ! -f "${file}" ] ;then
 cat << key > "${file}"
 # 混合规则
-### 自动更新(`date +'%F %T'`)
 
+<!-- LITE_INFO_START -->
+<!-- LITE_INFO_END -->
 
-| 名称 | 规则数量 | GIthub订阅链接 | Jsdelivrcdn缓存链接 | ~~GitCode订阅链接(死了)~~ | Gitlink订阅链接(竟然又活了) |
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| 混合规则(自动更新) | $(count_filter_files `pwd`/Rules/adblock_auto.txt ) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
-| 混合规则精简版(自动更新) | $(count_filter_files `pwd`/Rules/adblock_auto_lite.txt ) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
-
+<!-- FULL_INFO_START -->
+<!-- FULL_INFO_END -->
 
 ### 拦截器说明
 > #### [混合规则(自动更新)](https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto.txt) 适用于 \`Adguard\` / \`Ublock Origin\` / \`Adblock Plus\`(用Adblock Plus源码编译的软件也支持，例如[嗅觉浏览器](https://www.coolapk.com/apk/com.hiker.youtoo) ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 [X浏览器](https://www.coolapk.com/apk/com.mmbox.xbrowser)
@@ -787,4 +801,40 @@ cat << key > "${file}"
 [![Star History Chart](https://api.star-history.com/svg?repos=lingeringsound/adblock_auto&type=Date)](https://star-history.com/#lingeringsound/adblock_auto&Date)
 
 key
+fi
+
+local block_file="`pwd`/.README_${type}_block.tmp"
+local block_count=$(count_filter_files "${rules_file}")
+if [ "${type}" = "full" ] ;then
+cat > "${block_file}" << key 
+### 完整版 · 自动更新(`date +'%F %T'`)
+
+| 名称 | 规则数量 | GIthub订阅链接 | Jsdelivrcdn缓存链接 | ~~GitCode订阅链接(死了)~~ | Gitlink订阅链接(竟然又活了) |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| 混合规则(自动更新) | ${block_count} | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
+key
+else
+cat > "${block_file}" << key 
+### 精简版 · 自动更新(`date +'%F %T'`)
+
+| 名称 | 规则数量 | GIthub订阅链接 | Jsdelivrcdn缓存链接 | ~~GitCode订阅链接(死了)~~ | Gitlink订阅链接(竟然又活了) |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| 混合规则精简版(自动更新) | ${block_count} | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://cdn.jsdelivr.net/gh/lingeringsound/adblock_auto@main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | [订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335) |
+key
+fi
+
+local start_line=$(grep -n "<!-- ${start_tag} -->" "${file}" | head -1 | cut -d: -f1)
+local end_line=$(grep -n "<!-- ${end_tag} -->" "${file}" | head -1 | cut -d: -f1)
+if [ -z "${start_line}" ] || [ -z "${end_line}" ] || [ "${start_line}" -ge "${end_line}" ] ;then
+	echo "※`date +'%F %T'` 未找到 ${start_tag}/${end_tag} 区块，跳过 README 更新！"
+	rm -f "${block_file}"
+	return
+fi
+
+local tmp_file="`pwd`/.README.tmp"
+head -n "${start_line}" "${file}" > "${tmp_file}"
+cat "${block_file}" >> "${tmp_file}"
+tail -n +"${end_line}" "${file}" >> "${tmp_file}"
+mv -f "${tmp_file}" "${file}"
+rm -f "${block_file}"
 }
