@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: X/vzi5dc0LymNQphCAX0gQ
+! Checksum: 5BB6+MSXhyurk+0q59khyg
 ! Title: 自用去广告Adblock规则
-! Version: 20261002174719
+! Version: 20261002195734
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-02 17:47:19
+! Last modified: 2026-10-02 19:57:34
 ! Human Count: 1.0w
-! Blocked Filters: 10601
+! Blocked Filters: 10603
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -2915,6 +2915,7 @@
 ##div:not([id]):not([class]):not([style]) > .ad-area-close + div[style*="background-color:"]:not([class]):not([id])
 ##div:not([id]):not([class]):not([style]) > li[style="list-style: none;"]
 ##div[\:class][class] > #myblock2
+##div[aria-label="广告"]
 ##div[class$="_b"][style^="bottom:"][style$="display: block;"]
 ##div[class$="d"] > span[class^="closebox"]
 ##div[class$="pic"] > span[class^="closebox"]
@@ -7556,6 +7557,7 @@ hsg003.com##img[src^="data:"][data-original$=".gif"]
 http*://*/resolve?$domain=junhun520.app|junhun520.com|junhun520.net|kanshuzhan.com|kanshuzhan.live|kanshuzhan.net
 http*://*/resolve?type=*&short=*&name=$third-party
 huangdoudj.com,huangdouhui.tv##.dm-float
+huangdoudj.com,huangdouhui.tv##[aria-label*="广告"]
 huangguo.video##.hg-exo-slot
 huaren.us##.ad-page-setting
 huaren.us##.article_title_ad_img
