@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 5BB6+MSXhyurk+0q59khyg
+! Checksum: Q4OQHYlexzJndIQYWGO4wg
 ! Title: 自用去广告Adblock规则
-! Version: 20261002195734
+! Version: 20261002211229
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-02 19:57:34
+! Last modified: 2026-10-02 21:12:29
 ! Human Count: 1.0w
-! Blocked Filters: 10603
+! Blocked Filters: 10607
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -2038,6 +2038,7 @@
 ##.r34-overlay
 ##.reader-main > center > [style^="color: red;"]
 ##.readtj
+##.rec-row > a[target="_blank"][rel*="sponsored"]
 ##.reclamTable
 ##.rectangle_ad
 ##.remove-ads
@@ -9150,6 +9151,9 @@ yfvod.*,yfvod.com,zjdog.*,zjdog.cc##+js(set, Object.autoCopy, noopFunc)
 yh-dm.com##+js(rmnt, script, function a)
 yh-dm.com##+js(rmnt, script, pc.stgowan.com)
 yhdm6go.top##div[style$="background: #000;opacity:0.01;"]
+yhdmanime.com##[class^="home-icon-ad-section"]
+yhdmanime.com##div[class*="download-app"]
+yhdmanime.com##div[class^="floating-ad-widget"]
 yhdmw.com##.container > iframe[src][rel="nofollow"]
 yinhuadm.xyz##+js(rmnt, script, jsjiami.com.v4)
 yitongqinba.com##.visible-xs
