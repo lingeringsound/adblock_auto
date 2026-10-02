@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: Sptd6H4th+kAuS/G9wWlCA
+! Checksum: eoxkKSD4IIKialABiBDiAg
 ! Title: 自用去广告Adblock规则
-! Version: 20261001175412
+! Version: 20261002122441
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-01 17:54:12
+! Last modified: 2026-10-02 12:24:41
 ! Human Count: 1.0w
-! Blocked Filters: 10603
+! Blocked Filters: 10610
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -1247,6 +1247,7 @@
 ##.dbhf
 ##.detail-box ~ div[class][style*="z-index: 9999;"]
 ##.detail-list-title > a.text_span.gotoclick
+##.df1-card--ad
 ##.dfpAdspot
 ##.dfp_ATF_wrapper
 ##.dfp_frame
@@ -1263,6 +1264,7 @@
 ##.dx-ad
 ##.dx-recommend-icons
 ##.ec-ad-img
+##.entry-ad-art
 ##.entry-inner > div[style]:not([class]):not([id])
 ##.ep-overlay
 ##.ep-row.navIcons
@@ -2137,6 +2139,7 @@
 ##.top-ad-buttons
 ##.top-ad-container ~ div[id^="remove"][style]
 ##.top-ad-slot
+##.top-ad-slot-btn
 ##.top-ads-amp
 ##.top-ads-container
 ##.top-ads-content
@@ -6059,6 +6062,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 51cg1.com,91cg1.com,h3tgz1.eoxdcmkg.cc,h3tgz1.ytorthjii.com,h3tgz2.ytorthjii.com,h3tgz3.woqrzdwcl.org,h3tgz3.ytorthjii.com,h3tgz4.uysdpthc.com,h3tgz4.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz7.ytorthjii.com,h3tgz8.ytorthjii.com,h5frz2.cmenjkk.com,h5frz3.cmenjkk.com,h5frz4.cmenjkk.com,h5frz5.cmenjkk.com,h5frz6.cmenjkk.com,h5frz7.cmenjkk.com,h5frz8.cmenjkk.com,h5fsz1.eoxdcmkg.cc,h5fsz2.eoxdcmkg.cc,h5fsz3.eoxdcmkg.cc,hyduz1.cmenjkk.com##a[href]:has(> img[src^="data:image/horizontal-banner"])
 51cg1.com,91cg1.com,h3tgz1.eoxdcmkg.cc,h3tgz1.ytorthjii.com,h3tgz2.ytorthjii.com,h3tgz3.woqrzdwcl.org,h3tgz3.ytorthjii.com,h3tgz4.uysdpthc.com,h3tgz4.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz7.ytorthjii.com,h3tgz8.ytorthjii.com,h5frz2.cmenjkk.com,h5frz3.cmenjkk.com,h5frz4.cmenjkk.com,h5frz5.cmenjkk.com,h5frz6.cmenjkk.com,h5frz7.cmenjkk.com,h5frz8.cmenjkk.com,h5fsz1.eoxdcmkg.cc,h5fsz2.eoxdcmkg.cc,h5fsz3.eoxdcmkg.cc,hyduz1.cmenjkk.com##article[itemscope]:has(meta[content="广告"])
 51cg1.com,91cg1.com,h3tgz1.eoxdcmkg.cc,h3tgz1.ytorthjii.com,h3tgz2.ytorthjii.com,h3tgz3.woqrzdwcl.org,h3tgz3.ytorthjii.com,h3tgz4.uysdpthc.com,h3tgz4.ytorthjii.com,h3tgz5.ytorthjii.com,h3tgz6.ytorthjii.com,h3tgz7.ytorthjii.com,h3tgz8.ytorthjii.com,h5frz2.cmenjkk.com,h5frz3.cmenjkk.com,h5frz4.cmenjkk.com,h5frz5.cmenjkk.com,h5frz6.cmenjkk.com,h5frz7.cmenjkk.com,h5frz8.cmenjkk.com,h5fsz1.eoxdcmkg.cc,h5fsz2.eoxdcmkg.cc,h5fsz3.eoxdcmkg.cc,hyduz1.cmenjkk.com##img[id][src^="data:"]
+51dmdm.me#@#[data-ad-slot]
 51shucheng.app,51shucheng.net,51shucheng.wap##.reading-ad-bottom
 51shucheng.app,51shucheng.net,51shucheng.wap##.reading-ad-top
 520cc.cc,520cc.com,afterellen.com,boston.com,calgarysun.com,cattime.com,cbssports.com,celebuzz.com,cnet.com,comingsoon.net,computershopper.com,ctnow.com,cycleworld.com,edmunds.com,everydayhealth.com,foxsports.com.au,gamespot.com,hanime1.cfdhanime1.icu,hanime1.fit,hanime1.fun,hanime1.icu,hanime1.ink,hanime1.me,hanime1.men,metacritic.com,msn.com,popphoto.com,popsci.com,ranker.com,saveur.com,sfgate.com,sportingnews.com,thoughtcatalog.com,tv.com,tvguide.com,washingtonpost.com,webmd.com,windowscentral.com#@#iframe[width="300"][height="250"]
@@ -7553,6 +7557,8 @@ hsg001.com,hsg003.com,hsg004.com##div[style*="center"]:has(.lazy-load)
 hsg003.com##img[src^="data:"][data-original$=".gif"]
 http*://*/resolve?$domain=junhun520.app|junhun520.com|junhun520.net|kanshuzhan.com|kanshuzhan.live|kanshuzhan.net
 http*://*/resolve?type=*&short=*&name=$third-party
+huangdoudj.com##.dm-float
+huangguo.video##.hg-exo-slot
 huangsexiaoshuo.net##div[id]:not([class]):has(div[id]:not([class]):not([styles]))
 huangsexiaoshuo.net##div[id]:not([class]):not([style]):has(img[src*=".xyz"])
 huaren.us##.ad-page-setting
@@ -9129,6 +9135,7 @@ yahoo.com##li[class="first"]:has([data-ylk*="affiliate_link"])
 yahoo.com##li[class^="Bgc(geminiBgc)"]
 yahoo.com##li[data-test-locator="stream-related-ad-item"]
 yahoo.com,search.yahoo.com#@#a[referrerpolicy="unsafe-url"][target="_blank"]
+yandex.com.tr##.IntYandexAIPromo
 yandex.com.tr##.content__bottom
 yc.ifeng.com##.app-hook
 ydm.life##[onclick*="surnum"][style],img[style*="z-index:2147483647"][onclick*="javascript:"]
