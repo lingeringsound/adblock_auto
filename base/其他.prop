@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: Q4OQHYlexzJndIQYWGO4wg
+! Checksum: +QM4B7bZaxiNCy1x40go4g
 ! Title: 自用去广告Adblock规则
-! Version: 20261002211229
+! Version: 20261003110431
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-02 21:12:29
+! Last modified: 2026-10-03 11:04:31
 ! Human Count: 1.0w
-! Blocked Filters: 10607
+! Blocked Filters: 10608
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -4817,6 +4817,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /aj*.php?pid=*&n=$third-party
 /ane-popup-1/ane-popup.js$script
 /ane-popup-banner.js$script
+/api.php/api/*/adsAll
 /api.php/timming/index?t=
 /api/*/g?kyurl=http*&refer=&pid=*=*&callback=$third-party
 /api/LM/*placeUUID=$third-party
@@ -7559,7 +7560,7 @@ http*://*/resolve?$domain=junhun520.app|junhun520.com|junhun520.net|kanshuzhan.c
 http*://*/resolve?type=*&short=*&name=$third-party
 huangdoudj.com,huangdouhui.tv##.dm-float
 huangdoudj.com,huangdouhui.tv##[aria-label*="广告"]
-huangguo.video##.hg-exo-slot
+huangguo.video##[class^="hg-exo"]
 huaren.us##.ad-page-setting
 huaren.us##.article_title_ad_img
 hupu.com###HCFull
