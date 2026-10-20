@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: OXSlWy9ZPBcUNEmJ9+PgdQ
+! Checksum: U9LiMoi2q8nwF/D4ukP/tQ
 ! Title: 自用去广告Adblock规则
-! Version: 20261015133040
+! Version: 20261020205506
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-15 13:30:40
+! Last modified: 2026-10-20 20:55:06
 ! Human Count: 1.0w
-! Blocked Filters: 10619
+! Blocked Filters: 10621
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -5649,6 +5649,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /toprightads.
 /tops.ads.
 /torget_ads.
+/tpl*/bqgm/js/style.js?v=
 /tr?id=*&tk=$popup
 /ts_as.html?as=$third-party
 /tuan/kik*17*.js$~third-party
@@ -8313,6 +8314,8 @@ qinav.com##div[id^="qinav_b"]
 qinav.com,tasexy.com##.adb
 qinav.com,tasexy.com##.b300
 qinav.com,tasexy.com##ul:has(li.iframe)
+qingheks.com,shuyingks.com###chapter-content > p:has([href])
+qingheks.com,shuyingks.com###chapter-content > p:has([style])
 qingqingxs.top,txtduo.app,txtduo.cn,txtduo.com,txtduo.live,txtduo.org,xfreehd.com##+js(rmnt, script, Math.random)
 quark.cn##.reflow-button
 quark.cn##.relfow-button
@@ -8429,8 +8432,6 @@ sexygirl.cc##.overflow-auto:has(script[src*="jads"])
 shenmavod.net##.fetch-image:not(.cover)
 shenmavod.net##.my-2.grid
 shushudu.com##[style*="width:"][style*="100%"],[style*="width:"][style*="99%"],[width*="99%"],[width*="100%"],div[class][style*="display: block;"][style*="131px;"],div[class][style*="width: 100%;"][style*="131px;"],div[class][style*="z-index: 2147483646;"][style*="131px"],div[class][style*="position: fixed;"][style*="131px"]
-shuyingks.com###chapter-content > p:has([href])
-shuyingks.com###chapter-content > p:has([style])
 shzsmy.net##div[style="margin:0 auto;"] 
 shzsmy.net,jjdy8.cc##.tp_advertising
 siguyy.tv##+js(rmnt, script, data:)
@@ -8850,6 +8851,7 @@ vk.com,vk.ru###system_msg
 vod2046.fun##[style]:not([class]):has(a[href*="/c.php?s"])
 voflix.com##[class*="module-adslist"]
 voflix.com##img[importance="low"][onclick*="window.open"][src][lazyload]
+vtt6.com##+js(rmnt, script, adbyunion)
 vxxx.com###player-1 > div[style="display:flex !important"] > div
 vxxx.com##.video-page-content + div[class]
 vxxx.com##.video-page-content-left + div[class]:last-child
