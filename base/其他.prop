@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: CazbkzVCiFmxurb2H/m4Xw
+! Checksum: U5YEoHvRh1eqbfq9Xeh8Vw
 ! Title: 自用去广告Adblock规则
-! Version: 20261027140313
+! Version: 20261027182723
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-27 14:03:13
+! Last modified: 2026-10-27 18:27:23
 ! Human Count: 1.0w
-! Blocked Filters: 10639
+! Blocked Filters: 10640
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -33,6 +33,7 @@
 ###_links > #links.row.no-gutters
 ###ad-B1-ATF
 ###ad-after
+###ad-banner-slot
 ###ad-container
 ###ad-content
 ###ad-fullbanner2-billboard-outer
@@ -4842,6 +4843,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /api/postback/$third-party
 /api/postback?$third-party,domain=film-adult.com|film-adult.net|film-adult.top|sex-empire.org
 /api/s/s*d*.js$third-party
+/api/sdk/ad/request$third-party
 /api/spots/*$domain=yomovies.*|speedostream.com|watchomovies.com|gofilms4u.pro|pornleech.io|hentaihand.com|filmlinks4u.pro|uniqueten.net|ultraten.net|topcryptoz.net|allcryptoz.net|analdin.com|supjav.com|crazyporn.xxx|hog.tv|porntry.com|love4porn.com|freeadultcomix.com|hog.mobi|sextb.net|pornpapa.com
 /api/spots/*?*=$third-party
 /apijs/lunbo/$script
@@ -7237,7 +7239,8 @@ cupfox.app###outer-container > .model:has(> .model-content > a[href*=".jd.com"])
 cupfox.app##.model:has(> .model-content > a[href*=".jd.com"])
 cupfox.app##[class^="jsx-"] > img[src$=".gif"]
 cupfoxappp.com##table:has(.cvbcvxvb)
-cuxu8.com,oumobook.com###chapter-content > p:has([style^="color:"])
+cuxu8.com,oumobook.com,qingheks.com,shuyingks.com,ziyunks.com###chapter-content > p:has([href])
+cuxu8.com,oumobook.com,qingheks.com,shuyingks.com,ziyunks.com###chapter-content > p:has([style])
 czzytv77.com##.stui-pannel + table
 d1bzw.com##[id="appurl"],[id="bbsurl"]
 daftsex.com,pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,spankbang.party,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com##a[href*="?ats="]
@@ -8327,8 +8330,6 @@ qinav.com##div[id^="qinav_b"]
 qinav.com,tasexy.com##.adb
 qinav.com,tasexy.com##.b300
 qinav.com,tasexy.com##ul:has(li.iframe)
-qingheks.com,shuyingks.com###chapter-content > p:has([href])
-qingheks.com,shuyingks.com###chapter-content > p:has([style])
 qingqingxs.top,txtduo.app,txtduo.cn,txtduo.com,txtduo.live,txtduo.org,xfreehd.com##+js(rmnt, script, Math.random)
 quark.cn##.reflow-button
 quark.cn##.relfow-button
