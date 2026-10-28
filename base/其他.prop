@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 8kbdhQczMpBH3tPQMoWK/g
+! Checksum: HzUIxjZPOVJPuGWQNe3xXw
 ! Title: 自用去广告Adblock规则
-! Version: 20261028083722
+! Version: 20261028090010
 ! Expires: 7 days (update frequency)
-! Last modified: 2026-10-28 08:37:22
+! Last modified: 2026-10-28 09:00:10
 ! Human Count: 1.0w
-! Blocked Filters: 10646
+! Blocked Filters: 10648
 ! Description: 自用adblock规则
 ! Homepage: https://lingeringsound.github.io/adblock_auto
 ###ADbox
@@ -4892,7 +4892,6 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /blsx_*_*_*.$third-party
 /blsx_*_*js?
 /blxn_*.js?
-/btm/zhuan.js?v=$~third-party
 /bultykh/ipp24/7/*$third-party
 /ccqqgg/*.js$script
 /cimp.php?data$third-party
@@ -5627,7 +5626,7 @@ $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.
 /top-ad/*
 /top-ad_
 /top-ads.
-/top/apollowebmaster.js?v=$~third-party
+/top/apollowebmaster.js?v=$third-party
 /top_ad.
 /top_ad/*
 /top_ad_
@@ -9860,7 +9859,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||i.hao61.net^
 ||i8tq.com/*/*news_ad*.js
 ||i8tq.com/e_index/main_news_noAd.js
-||iet123.*/btm/zhuan.js
 ||ifengimg.com^*/sta_collection
 ||ihanmi.com/static/miao/yy.js
 ||image.hxgmcml.cn^
@@ -10300,6 +10298,8 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||shenyelook.com/assets/publish/$script
 ||shfsdvc.com^
 ||shierbdz.cdn555.net^$third-party,script
+||shijiahe.*/site-runtime.js?v=
+||shijiahe.*/site.json?controller=
 ||show.apiimg.com/*/*.php$third-party
 ||siduohua.top^
 ||sifenews.com^
@@ -10460,8 +10460,10 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ||v.vgbhujklp.xyz^
 ||vcvbnmto.xyz^$third-party
 ||video.sacdnssedge.com/video/*mp4$domain=homejav.com
+||viet123.*/*t*/*.js$third-party
+||viet123.*/btm/hxx.js
+||viet123.*/btm/zhuan.js
 ||viet123.*/top/apollowebmaster.js
-||viet123.tv/btm/hxx.js
 ||vikiporn.com/js/license.*.js
 ||vikiporn.com/plugin.js
 ||vindexmesode.com^
